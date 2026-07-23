@@ -2,6 +2,7 @@
 
 import html
 import re
+from collections import Counter
 from datetime import datetime
 from typing import Dict, List, Optional
 from urllib.parse import quote, urlsplit
@@ -19,7 +20,7 @@ _URL_SAFE_CHARS = ":/?#[]@!$&'*,;=~%+"
 
 def _escape_markdown(value: object) -> str:
     """Render untrusted text literally while retaining its readable content."""
-    escaped = html.escape(str(value), quote=True)
+    escaped = html.escape(html.unescape(str(value)), quote=True)
     escaped = _MARKDOWN_SPECIAL.sub(r"\\\1", escaped)
     return _MARKDOWN_BLOCK_START.sub(r"\1\\\2", escaped)
 
@@ -78,14 +79,13 @@ LABELS = {
         "selected_items": "从 {total} 条内容中筛选出 {selected} 条重要资讯。",
         "empty_analyzed": "已分析 {total} 条内容，但没有达到重要性阈值的条目。",
         "empty_body": (
-            "今日暂无重要动态，可能原因：\n"
-            "- 今天关注的信息源较平静\n"
-            "- AI 评分阈值设置过高\n"
-            "- 信息源种类有待扩充\n\n"
-            "建议：\n"
-            "1. 在 config.json 中降低 `ai_score_threshold`\n"
-            "2. 添加更多多样化的信息源\n"
-            "3. 检查 AI 模型是否正常工作\n"
+            "本次运行没有产出日报条目，这不等于今天没有 AI 新闻。\n\n"
+            "请按运行日志依次确认：\n"
+            "1. `Fetched` 是否大于 0：为 0 说明来源抓取失败或时间窗口内无内容\n"
+            "2. `Prefilter statistics` 的 `kept` 是否大于 0：为 0 说明规则预筛过严\n"
+            "3. `Analyzed` 和 Kimi 请求数是否大于 0：为 0 说明模型未实际调用\n"
+            "4. `items scored` 是否大于 0：为 0 才考虑调整评分提示词或阈值\n\n"
+            "工作流会在 Kimi 配置或全部来源异常时直接失败，不会把故障静默写成“今日平静”。\n"
         ),
     },
 }
@@ -161,15 +161,15 @@ class DailySummarizer:
         trend_overview: List[str],
         labels: dict,
     ) -> str:
-        """Render the research-brief layout used by GitHub Pages."""
+        """Render the personalized AI product-intelligence layout."""
         updated = datetime.now(ZoneInfo("Asia/Shanghai")).strftime("%Y-%m-%d %H:%M 北京时间")
         scarcity = (
             "\n> 今日高质量增量有限，因此未使用低质量内容补足数量。\n"
-            if len(items) < 10
+            if len(items) < 8
             else ""
         )
         lines = [
-            "# Horizon AI Daily",
+            "# AI 产品机会与 Builder 情报",
             "",
             f"**日期**：{_escape_markdown(date)}　 **更新时间**：{updated}",
             "",
@@ -177,81 +177,129 @@ class DailySummarizer:
             scarcity.rstrip(),
             "",
             '<nav class="daily-toc">',
-            '<a href="#trend-overview">今日趋势概览</a> · '
-            '<a href="#top-five">今日必读 Top 5</a> · '
-            '<a href="#tech-frontier">模型与技术前沿</a> · '
-            '<a href="#product-business">AI 产品与商业动态</a> · '
-            '<a href="#github-trends">GitHub 开源趋势</a> · '
-            '<a href="#watch-next">继续关注</a> · '
-            '<a href="#methodology">数据与筛选说明</a> · '
+            '<a href="#product-top-three">最值得拆解的 3 个产品</a> · '
+            '<a href="#builder-radar">Builder 与关键人物</a> · '
+            '<a href="#model-opportunities">新能力可以做什么产品</a> · '
+            '<a href="#market-validation">市场验证与失败案例</a> · '
+            '<a href="#career-radar">AI 产品经理技能雷达</a> · '
+            '<a href="{{ \'/products/\' | relative_url }}">产品情报数据库</a> · '
             '<a href="#archives">历史日报</a>',
             "</nav>",
             "",
-            '<a id="trend-overview"></a>',
-            "## 今日趋势概览",
+            '<div class="daily-signals">',
+            "<strong>今天先看什么</strong>",
             "",
         ]
         trends = trend_overview or [
-            f"今日从 {total_fetched} 条候选中保留 {len(items)} 条高价值 AI 增量。"
+            f"今天从 {total_fetched} 条公开信息中保留 {len(items)} 条可用于产品判断的增量。"
         ]
         lines.extend(f"- {_pangu(_escape_markdown(trend))}" for trend in trends[:5])
+        lines.extend(["</div>", ""])
 
-        lines.extend(["", '<a id="top-five"></a>', "## 今日必读 Top 5", ""])
-        for index, item in enumerate(items[:5], start=1):
-            lines.append(self._format_item(item, labels, "zh", index).rstrip())
+        top_items = items[:3]
+        remainder = items[3:]
+        lines.extend(
+            [
+                '<a id="product-top-three"></a>',
+                "## 今日最值得拆解的 3 个 AI 产品",
+                "",
+            ]
+        )
+        for index, item in enumerate(top_items, start=1):
+            lines.append(self._product_teardown(item, index).rstrip())
 
-        remainder = items[5:]
-        github_items = [
-            item
-            for item in items
-            if item.source_type.value in {"github", "ossinsight"}
-            or str(item.metadata.get("category", "")).startswith("github")
-        ]
-        tech_items = [
-            item
-            for item in remainder
-            if item.metadata.get("category") == "tech" and item not in github_items
-        ]
-        product_items = [
+        builder_items = [
             item
             for item in remainder
-            if item.metadata.get("category") == "product" and item not in github_items
+            if item.metadata.get("intelligence_type")
+            in {"builder_insight", "early_signal"}
         ]
-
-        lines.extend(["", '<a id="tech-frontier"></a>', "## 模型与技术前沿", ""])
-        lines.extend(self._compact_item(item) for item in tech_items)
-        if not tech_items:
-            lines.append("_今日没有额外达到阈值的技术条目。_")
-
-        lines.extend(["", '<a id="product-business"></a>', "## AI 产品与商业动态", ""])
-        lines.extend(self._compact_item(item) for item in product_items)
-        if not product_items:
-            lines.append("_今日没有额外达到阈值的产品与商业条目。_")
-
-        lines.extend(["", '<a id="github-trends"></a>', "## GitHub 开源趋势", ""])
-        lines.extend(self._github_item(item) for item in github_items[:3])
-        if not github_items:
-            lines.append("_今日没有达到入选标准的 GitHub 项目。_")
-
-        follow_up = [item for item in items if str(item.metadata.get("follow_up", "")).strip()]
-        lines.extend(["", '<a id="watch-next"></a>', "## 继续关注", ""])
-        for item in follow_up[:5]:
-            title = _pangu(_escape_markdown(item.metadata.get("title_zh") or item.title))
-            note = _pangu(_escape_markdown(item.metadata.get("follow_up", "")))
-            lines.append(f"- **{title}**：{note}")
-        if not follow_up:
-            lines.append("_暂无需要单独列出的后续观察点。_")
+        model_items = [
+            item
+            for item in remainder
+            if item.metadata.get("intelligence_type") == "model_capability"
+        ]
+        used_ids = {item.id for item in [*builder_items, *model_items]}
+        market_items = [item for item in remainder if item.id not in used_ids]
 
         lines.extend(
             [
                 "",
-                '<a id="methodology"></a>',
+                '<a id="builder-radar"></a>',
+                "## Builder 与关键人物的一手方法",
+                "",
+            ]
+        )
+        lines.extend(self._intelligence_item(item) for item in builder_items)
+        if not builder_items:
+            lines.append("_今天没有达到标准的一手 Builder 方法；不会用二手观点补位。_")
+
+        lines.extend(
+            [
+                "",
+                '<a id="model-opportunities"></a>',
+                "## 新模型能力可以做成什么产品",
+                "",
+            ]
+        )
+        lines.extend(self._intelligence_item(item) for item in model_items)
+        if not model_items:
+            lines.append("_今天没有能够明确映射到产品机会的新模型能力。_")
+
+        lines.extend(
+            [
+                "",
+                '<a id="market-validation"></a>',
+                "## 市场验证、商业化与失败案例",
+                "",
+            ]
+        )
+        lines.extend(self._intelligence_item(item) for item in market_items)
+        if not market_items:
+            lines.append("_今天没有足够可靠的市场验证或失败信号。_")
+
+        lines.extend(
+            [
+                "",
+                '<a id="career-radar"></a>',
+                "## AI 产品经理职业与技能雷达",
+                "",
+            ]
+        )
+        skill_counts = Counter(
+            skill
+            for item in items
+            for skill in item.metadata.get("skill_signals", [])
+            if str(skill).strip()
+        )
+        if skill_counts:
+            lines.append("今天最值得补的能力：")
+            for skill, count in skill_counts.most_common(6):
+                lines.append(f"- **{_pangu(_escape_markdown(skill))}**：在 {count} 条情报中出现")
+        else:
+            lines.append("_今天的公开信息不足以提炼可靠的技能信号。_")
+
+        mvp_lessons = []
+        for item in top_items:
+            mvp_lessons.extend(item.metadata.get("mvp_path", [])[:1])
+        if mvp_lessons:
+            lines.extend(["", "今天可以立即执行的验证动作："])
+            lines.extend(f"- {_pangu(_escape_markdown(step))}" for step in mvp_lessons[:3])
+
+        lines.extend(
+            [
+                "",
                 "## 数据与筛选说明",
                 "",
-                "- 仅处理最近 24 小时的稳定公开来源；先程序预筛选，再由 Kimi 评分。",
-                "- 默认阈值为 7.5；质量优先于数量和比例，高质量不足时允许少于 10 条。",
-                "- 技术/产品、中国/海外均采用软配额；同一事件执行语义去重和最近 7 天历史去重。",
-                "- Top 5 使用背景搜索与深度分析，其余条目保留简要摘要。",
+                "- 每天 09:00（北京时间）处理最近 24 小时的公开来源；先程序预筛选，再由 Kimi 评分。",
+                "- 产品案例 30%、Builder 方法 25%、产品化新能力 15%、市场验证 15%、商业政策 10%、弱信号 5%。",
+                "- 纯算力、GPU、底层推理优化和学术论文默认降权，除非能直接解释新的产品机会。",
+                "- Top 3 做产品拆解；公开信息没有说明的字段统一写“未公开”，不会推测补齐。",
+                "- 同一事件执行语义去重和最近 7 天历史去重；产品记录同步到 JSON、CSV 和可筛选数据库页面。",
+                "",
+                "[打开产品情报数据库]({{ '/products/' | relative_url }}) · "
+                "[下载 JSON]({{ '/data/product-intelligence.json' | relative_url }}) · "
+                "[下载 CSV]({{ '/data/product-intelligence.csv' | relative_url }})",
                 "",
                 '<a id="archives"></a>',
                 "## 历史日报",
@@ -260,6 +308,133 @@ class DailySummarizer:
             ]
         )
         return "\n".join(line for line in lines if line is not None).strip() + "\n"
+
+    @staticmethod
+    def _metadata_list(item: ContentItem, key: str) -> list[str]:
+        value = item.metadata.get(key)
+        if not isinstance(value, list):
+            return []
+        return [str(entry).strip() for entry in value if str(entry).strip()]
+
+    def _product_teardown(self, item: ContentItem, index: int) -> str:
+        meta = item.metadata
+        title = _pangu(_escape_markdown(meta.get("title_zh") or item.title))
+        url = _safe_url(item.url)
+        title_link = (
+            f'[{title}]({url}){{:target="_blank" rel="noopener noreferrer"}}'
+            if url
+            else title
+        )
+        stage_labels = {
+            "validated": "已有市场验证",
+            "early_growth": "早期增长",
+            "proof_of_concept": "原型 / Demo",
+            "not_applicable": "阶段未公开",
+        }
+        evidence_labels = {
+            "first_party": "一手信息",
+            "verified": "已核验",
+            "reported": "媒体报道",
+            "early_signal": "早期信号",
+        }
+        lines = [
+            f"### {index}. {title_link}",
+            "",
+            f"**一句话看懂**：{_pangu(_escape_markdown(item.ai_summary or '未公开'))}",
+            "",
+            f"**评分**：{item.ai_score or '?'} / 10　 "
+            f"**阶段**：{stage_labels.get(str(meta.get('product_stage')), '未公开')}　 "
+            f"**证据**：{evidence_labels.get(str(meta.get('evidence_status')), '未公开')}",
+            "",
+            f"**产品 / 团队**：{_pangu(_escape_markdown(meta.get('product_name') or '未公开'))} / "
+            f"{_pangu(_escape_markdown(meta.get('builder_name') or item.author or '未公开'))}",
+            "",
+            f"**目标用户**：{_pangu(_escape_markdown(meta.get('target_user') or '未公开'))}",
+            "",
+            f"**用户原来的问题**：{_pangu(_escape_markdown(meta.get('user_problem') or '未公开'))}",
+        ]
+        self._append_steps(lines, "原来的工作流", self._metadata_list(item, "original_workflow"))
+        self._append_steps(lines, "产品带来的新工作流", self._metadata_list(item, "product_workflow"))
+
+        ipo = meta.get("input_process_output")
+        if isinstance(ipo, dict):
+            ipo_text = " → ".join(
+                _pangu(_escape_markdown(ipo.get(key) or "未公开"))
+                for key in ("input", "process", "output")
+            )
+        else:
+            ipo_text = "未公开"
+        lines.extend(["", f"**输入 → 处理 → 输出**：{ipo_text}"])
+        self._append_steps(lines, "模型、工具、数据与渠道", self._metadata_list(item, "tool_stack"))
+        lines.extend(
+            [
+                "",
+                f"**市场反响与验证**：{_pangu(_escape_markdown(meta.get('market_reaction') or meta.get('market_signal') or '未公开'))}",
+                "",
+                f"**商业模式 / 获客**：{_pangu(_escape_markdown(meta.get('business_model') or '未公开'))}",
+            ]
+        )
+        self._append_steps(lines, "可以迁移的产品方法", self._metadata_list(item, "transferable_lessons"))
+        self._append_steps(lines, "如果自己做，最小 MVP 路径", self._metadata_list(item, "mvp_path"))
+        self._append_steps(lines, "需要补的技能", self._metadata_list(item, "skill_signals"))
+        follow_up = str(meta.get("what_to_watch_next") or meta.get("follow_up") or "未公开")
+        lines.extend(["", f"**接下来观察**：{_pangu(_escape_markdown(follow_up))}"])
+        lines.extend(["", self._source_links(item), "", "---", ""])
+        return "\n".join(lines)
+
+    @staticmethod
+    def _append_steps(lines: list[str], label: str, values: list[str]) -> None:
+        lines.extend(["", f"**{label}**："])
+        if not values:
+            lines.append("- 未公开")
+            return
+        lines.extend(
+            f"{index}. {_pangu(_escape_markdown(value))}"
+            for index, value in enumerate(values, start=1)
+        )
+
+    def _intelligence_item(self, item: ContentItem) -> str:
+        meta = item.metadata
+        title = _pangu(_escape_markdown(meta.get("title_zh") or item.title))
+        url = _safe_url(item.url)
+        link = (
+            f'[{title}]({url}){{:target="_blank" rel="noopener noreferrer"}}'
+            if url
+            else title
+        )
+        insight = (
+            meta.get("builder_insight")
+            or meta.get("product_signal")
+            or meta.get("market_signal")
+            or item.ai_reason
+            or "未公开"
+        )
+        follow_up = meta.get("follow_up")
+        result = [
+            f"### {link} ⭐️ {item.ai_score or '?'}/10",
+            "",
+            _pangu(_escape_markdown(item.ai_summary or "未公开")),
+            "",
+            f"**对做产品的启发**：{_pangu(_escape_markdown(insight))}",
+        ]
+        if follow_up:
+            result.extend(["", f"**继续验证**：{_pangu(_escape_markdown(follow_up))}"])
+        result.extend(["", self._source_links(item), ""])
+        return "\n".join(result)
+
+    @staticmethod
+    def _source_links(item: ContentItem) -> str:
+        safe_url = _safe_url(item.url)
+        author = _pangu(_escape_markdown(item.author or item.source_type.value))
+        published = item.published_at.astimezone(ZoneInfo("Asia/Shanghai"))
+        source = f"{_escape_markdown(item.source_type.value)} · {author} · "
+        source += f"{published.month}月{published.day}日 {published:%H:%M} 北京时间"
+        if safe_url:
+            source += (
+                f' · [打开原文]({safe_url})'
+                '{:target="_blank" rel="noopener noreferrer"}'
+            )
+        return f"**原始来源**：{source}"
 
     def _compact_item(self, item: ContentItem) -> str:
         title = _pangu(_escape_markdown(item.metadata.get("title_zh") or item.title))

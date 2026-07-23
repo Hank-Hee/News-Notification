@@ -1,5 +1,5 @@
 {
-  "version": "1.0",
+  "version": "1.1",
   "ai": {
     "provider": "openai",
     "model": "${KIMI_MODEL_ID}",
@@ -11,221 +11,131 @@
       "type": "disabled"
     },
     "throttle_sec": 0.2,
-    "languages": [
-      "zh"
-    ],
+    "languages": ["zh"],
     "analysis_concurrency": 1,
     "analysis_batch_size": 10,
     "enrichment_concurrency": 1
   },
   "sources": {
     "github": [
-      {
-        "type": "repo_releases",
-        "owner": "openai",
-        "repo": "openai-python",
-        "enabled": true,
-        "category": "github-open-source"
-      },
-      {
-        "type": "repo_releases",
-        "owner": "anthropics",
-        "repo": "anthropic-sdk-python",
-        "enabled": true,
-        "category": "github-open-source"
-      },
-      {
-        "type": "repo_releases",
-        "owner": "huggingface",
-        "repo": "transformers",
-        "enabled": true,
-        "category": "github-open-source"
-      },
-      {
-        "type": "repo_releases",
-        "owner": "vllm-project",
-        "repo": "vllm",
-        "enabled": true,
-        "category": "github-open-source"
-      },
-      {
-        "type": "repo_releases",
-        "owner": "microsoft",
-        "repo": "autogen",
-        "enabled": true,
-        "category": "github-open-source"
-      },
-      {
-        "type": "repo_releases",
-        "owner": "microsoft",
-        "repo": "semantic-kernel",
-        "enabled": true,
-        "category": "github-open-source"
-      },
-      {
-        "type": "repo_releases",
-        "owner": "QwenLM",
-        "repo": "Qwen3",
-        "enabled": true,
-        "category": "github-open-source"
-      },
-      {
-        "type": "repo_releases",
-        "owner": "deepseek-ai",
-        "repo": "DeepSeek-V3",
-        "enabled": true,
-        "category": "github-open-source"
-      },
-      {
-        "type": "repo_releases",
-        "owner": "THUDM",
-        "repo": "GLM-4",
-        "enabled": true,
-        "category": "github-open-source"
-      },
-      {
-        "type": "repo_releases",
-        "owner": "MoonshotAI",
-        "repo": "Kimi-K2",
-        "enabled": true,
-        "category": "github-open-source"
-      }
+      {"type": "repo_releases", "owner": "openai", "repo": "openai-agents-python", "enabled": true, "category": "builder-tool"},
+      {"type": "repo_releases", "owner": "anthropics", "repo": "claude-code", "enabled": true, "category": "builder-tool"},
+      {"type": "repo_releases", "owner": "vercel", "repo": "ai", "enabled": true, "category": "builder-tool"},
+      {"type": "repo_releases", "owner": "langchain-ai", "repo": "langchain", "enabled": true, "category": "builder-tool"},
+      {"type": "repo_releases", "owner": "run-llama", "repo": "llama_index", "enabled": true, "category": "builder-tool"},
+      {"type": "repo_releases", "owner": "browser-use", "repo": "browser-use", "enabled": true, "category": "builder-tool"},
+      {"type": "repo_releases", "owner": "microsoft", "repo": "autogen", "enabled": true, "category": "builder-tool"},
+      {"type": "repo_releases", "owner": "crewAIInc", "repo": "crewAI", "enabled": true, "category": "builder-tool"},
+      {"type": "repo_releases", "owner": "langgenius", "repo": "dify", "enabled": true, "category": "builder-tool"},
+      {"type": "repo_releases", "owner": "n8n-io", "repo": "n8n", "enabled": true, "category": "builder-tool"}
     ],
     "hackernews": {
       "enabled": true,
-      "fetch_top_stories": 40,
-      "min_score": 80,
-      "category": "community"
+      "fetch_top_stories": 60,
+      "min_score": 30,
+      "category": "product-community"
     },
     "rss": [
-      {
-        "name": "OpenAI News",
-        "url": "https://openai.com/news/rss.xml",
-        "enabled": true,
-        "category": "official-global"
-      },
-      {
-        "name": "Google DeepMind",
-        "url": "https://deepmind.google/blog/rss.xml",
-        "enabled": true,
-        "category": "official-global"
-      },
-      {
-        "name": "Google AI",
-        "url": "https://blog.google/innovation-and-ai/technology/ai/rss/",
-        "enabled": true,
-        "category": "official-global"
-      },
-      {
-        "name": "Hugging Face",
-        "url": "https://huggingface.co/blog/feed.xml",
-        "enabled": true,
-        "category": "official-global"
-      },
-      {
-        "name": "Product Hunt",
-        "url": "https://www.producthunt.com/feed",
-        "enabled": true,
-        "category": "product-global"
-      },
-      {
-        "name": "ArXiv cs.AI",
-        "url": "https://export.arxiv.org/rss/cs.AI",
-        "enabled": true,
-        "category": "research-global"
-      },
-      {
-        "name": "ArXiv cs.CL",
-        "url": "https://export.arxiv.org/rss/cs.CL",
-        "enabled": true,
-        "category": "research-global"
-      },
-      {
-        "name": "Simon Willison",
-        "url": "https://simonwillison.net/atom/everything/",
-        "enabled": true,
-        "category": "expert-global"
-      }
+      {"name": "OpenAI News", "url": "https://openai.com/news/rss.xml", "enabled": true, "category": "official-global"},
+      {"name": "Google DeepMind", "url": "https://deepmind.google/blog/rss.xml", "enabled": true, "category": "official-global"},
+      {"name": "Google AI", "url": "https://blog.google/innovation-and-ai/technology/ai/rss/", "enabled": true, "category": "official-global"},
+      {"name": "Microsoft Foundry", "url": "https://devblogs.microsoft.com/foundry/feed/", "enabled": true, "category": "builder-global"},
+      {"name": "GitHub AI", "url": "https://github.blog/ai-and-ml/feed/", "enabled": true, "category": "builder-global"},
+      {"name": "Hugging Face", "url": "https://huggingface.co/blog/feed.xml", "enabled": true, "category": "builder-global"},
+      {"name": "Product Hunt", "url": "https://www.producthunt.com/feed", "enabled": true, "category": "product-global"},
+      {"name": "TechCrunch AI", "url": "https://techcrunch.com/category/artificial-intelligence/feed/", "enabled": true, "category": "product-media"},
+      {"name": "VentureBeat AI", "url": "https://venturebeat.com/category/ai/feed/", "enabled": true, "category": "product-media"},
+      {"name": "The Verge AI", "url": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml", "enabled": true, "category": "product-media"},
+      {"name": "Simon Willison", "url": "https://simonwillison.net/atom/everything/", "enabled": true, "category": "builder-global"},
+      {"name": "One Useful Thing", "url": "https://www.oneusefulthing.org/feed", "enabled": true, "category": "builder-global"},
+      {"name": "Latent Space", "url": "https://www.latent.space/feed", "enabled": true, "category": "builder-global"},
+      {"name": "Lenny's Newsletter", "url": "https://www.lennysnewsletter.com/feed", "enabled": true, "category": "product-management"}
     ],
     "reddit": {
-      "enabled": false,
-      "subreddits": [],
+      "enabled": true,
+      "subreddits": [
+        {"subreddit": "SideProject", "sort": "new", "fetch_limit": 15, "min_score": 2, "category": "builder-community"},
+        {"subreddit": "startups", "sort": "new", "fetch_limit": 12, "min_score": 5, "category": "builder-community"},
+        {"subreddit": "SaaS", "sort": "new", "fetch_limit": 12, "min_score": 3, "category": "product-community"},
+        {"subreddit": "ChatGPT", "sort": "new", "fetch_limit": 12, "min_score": 10, "category": "product-community"},
+        {"subreddit": "ClaudeAI", "sort": "new", "fetch_limit": 12, "min_score": 5, "category": "product-community"}
+      ],
       "users": [],
-      "fetch_comments": 0
+      "fetch_comments": 3
     },
-    "telegram": {
-      "enabled": false,
-      "channels": []
-    },
+    "telegram": {"enabled": false, "channels": []},
     "twitter": {
-      "enabled": false,
-      "users": []
-    },
-    "ossinsight": {
       "enabled": true,
-      "period": "past_24_hours",
-      "languages": [
-        "All",
-        "Python",
-        "TypeScript"
-      ],
-      "keywords": [
-        "ai",
-        "agent",
-        "llm",
-        "model",
-        "rag",
-        "mcp",
-        "inference"
-      ],
-      "min_stars": 10,
-      "max_items": 15,
-      "category": "github-open-source"
+      "mode": "apify",
+      "apify_token_env": "APIFY_TOKEN",
+      "actor_id": "altimis~scweet",
+      "fetch_limit": 50,
+      "category": "first-party-builder",
+      "fetch_reply_text": true,
+      "max_replies_per_tweet": 3,
+      "max_tweets_to_expand": 3,
+      "reply_min_likes": 3,
+      "users": [
+        "OpenAI", "OpenAIDevs", "sama", "gdb", "kevinweil",
+        "AnthropicAI", "alexalbert__", "claudeai",
+        "GoogleDeepMind", "GoogleAI", "demishassabis", "JeffDean", "OfficialLoganK",
+        "MetaAI", "AIatMeta", "ylecun", "MicrosoftAI", "mustafasuleyman",
+        "GitHub", "githubcopilot", "thomasdohmke",
+        "cursor_ai", "michaeltruell", "windsurf", "varun_mohan",
+        "Replit", "amasad", "lovable_dev", "antonosika", "vercel", "v0", "leeerob",
+        "huggingface", "ClementDelangue", "Thom_Wolf",
+        "LangChainAI", "hwchase17", "llama_index", "jerryjliu0", "browser_use", "crewAIInc", "dify_ai", "n8n_io",
+        "perplexity_ai", "AravSrinivas", "MistralAI", "cohere", "elevenlabsio", "runwayml", "LumaLabsAI", "HeyGen_Official",
+        "karpathy", "simonw", "swyx", "levelsio", "gregisenberg", "danshipper", "lennysan", "AndrewYNg", "emollick",
+        "HippocraticAI", "AbridgeHQ", "NablaTech", "AmbienceHealth", "OpenEvidence"
+      ]
     },
-    "gdelt": {
-      "enabled": true,
-      "query": "(artificial intelligence OR large language model OR AI agent)",
-      "mode": "ArtList",
-      "max_records": 40,
-      "timespan": "24h",
-      "category": "news-global"
-    },
+    "ossinsight": {"enabled": false},
+    "gdelt": {"enabled": false},
     "google_news": {
       "enabled": true,
-      "query": "(人工智能 OR 大模型 OR AI Agent OR AI Coding OR Kimi OR DeepSeek OR 通义 OR 豆包 OR 文心 OR 混元 OR 智谱 OR MiniMax OR 阶跃星辰 OR 零一万物)",
+      "query": "(AI产品 OR 人工智能应用 OR AI创业 OR 智能体产品 OR AI工作流 OR AI医疗 OR AI医药 OR 中医人工智能 OR Kimi OR DeepSeek OR 通义 OR 豆包 OR 智谱 OR MiniMax)",
       "language": "zh-CN",
       "country": "CN",
       "ceid": "CN:zh-Hans",
       "max_results": 80,
-      "category": "news-china"
+      "category": "product-china"
     }
   },
   "filtering": {
     "rule_prefilter_enabled": true,
     "time_window_hours": 24,
-    "ai_score_threshold": 7.5,
-    "candidate_limit": 80,
+    "ai_score_threshold": 7.0,
+    "candidate_limit": 100,
     "per_source_limit": 15,
+    "source_priority": ["twitter", "rss", "github", "hackernews", "reddit", "google_news", "gdelt"],
     "min_content_chars": 40,
-    "community_min_score": 50,
-    "final_min_items": 10,
+    "community_min_score": 5,
+    "final_min_items": 8,
     "final_max_items": 12,
-    "deep_analysis_limit": 5,
+    "deep_analysis_limit": 3,
     "history_dedup_days": 7,
-    "max_items": null,
+    "max_items": 12,
     "category_groups": {},
     "default_group": "other",
     "default_group_limit": null
   },
   "balance": {
+    "enabled": false,
     "tech_target_ratio": 0.5,
     "product_target_ratio": 0.5,
     "china_target_ratio": 0.5,
     "global_target_ratio": 0.5,
     "strict": false
   },
+  "product_intelligence": {
+    "enabled": true,
+    "json_path": "data/product-intelligence.json",
+    "csv_path": "data/product-intelligence.csv",
+    "publish_directory": "docs/data",
+    "max_records": 2000,
+    "max_updates_per_product": 20
+  },
   "email": null,
-  "webhook": {
-    "enabled": false
-  }
+  "webhook": {"enabled": false}
 }

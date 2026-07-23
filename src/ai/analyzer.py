@@ -45,6 +45,28 @@ class AnalysisResult(BaseModel):
     summary: Optional[str] = None
     tags: list[str]
     follow_up: str = ""
+    intelligence_type: Literal[
+        "product_case",
+        "builder_insight",
+        "model_capability",
+        "market_signal",
+        "business_policy",
+        "early_signal",
+    ] = "early_signal"
+    evidence_status: Literal[
+        "first_party", "verified", "reported", "early_signal"
+    ] = "reported"
+    product_stage: Literal[
+        "validated", "early_growth", "proof_of_concept", "not_applicable"
+    ] = "not_applicable"
+    product_name: str = ""
+    builder_name: str = ""
+    target_user: str = ""
+    product_signal: str = ""
+    market_signal: str = ""
+    builder_insight: str = ""
+    skill_signals: list[str] = Field(default_factory=list)
+    verticals: list[str] = Field(default_factory=list)
     github_project: Optional[dict] = None
 
     @model_validator(mode="after")
@@ -278,6 +300,17 @@ class ContentAnalyzer:
                 "event_key": result.event_key or item.id,
                 "follow_up": result.follow_up,
                 "summary_zh": result.summary_zh or result.summary or item.title,
+                "intelligence_type": result.intelligence_type,
+                "evidence_status": result.evidence_status,
+                "product_stage": result.product_stage,
+                "product_name": result.product_name,
+                "builder_name": result.builder_name,
+                "target_user": result.target_user,
+                "product_signal": result.product_signal,
+                "market_signal": result.market_signal,
+                "builder_insight": result.builder_insight,
+                "skill_signals": result.skill_signals,
+                "verticals": result.verticals,
             }
         )
         if result.github_project:

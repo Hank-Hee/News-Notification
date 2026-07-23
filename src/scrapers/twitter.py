@@ -3,7 +3,7 @@
 import asyncio
 import logging
 import os
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from html import unescape
 from typing import List, Optional
 
@@ -45,7 +45,7 @@ class TwitterScraper(BaseScraper):
 
         logger.info(f"Fetching Twitter (Apify) for users: {users}")
 
-        run_id, dataset_id = await self._start_run(token, users)
+        run_id, dataset_id = await self._start_run(token, users, since)
         if not run_id:
             return []
 
@@ -62,16 +62,32 @@ class TwitterScraper(BaseScraper):
             if parsed:
                 items.append(parsed)
 
-        logger.info(f"Fetched {len(items)} tweets via Apify.")
+        items.sort(
+            key=lambda item: (
+                int(item.metadata.get("favorite_count") or 0)
+                + int(item.metadata.get("retweet_count") or 0) * 2
+                + int(item.metadata.get("reply_count") or 0),
+                item.published_at,
+            ),
+            reverse=True,
+        )
+        items = items[: self.config.fetch_limit]
+        logger.info(f"Fetched {len(items)} recent tweets via Apify.")
         return items
 
     async def _start_run(
-        self, token: str, users: List[str]
+        self, token: str, users: List[str], since: datetime
     ) -> tuple[Optional[str], Optional[str]]:
+        if since.tzinfo is None:
+            since = since.replace(tzinfo=timezone.utc)
+        until = datetime.now(timezone.utc) + timedelta(days=1)
         payload = {
             "source_mode": "profiles",
-            "profile_urls": users,
+            "profile_urls": [f"@{user}" for user in users],
             "search_sort": "Latest",
+            "tweet_type": "exclude_retweets",
+            "since": since.astimezone(timezone.utc).strftime("%Y-%m-%d"),
+            "until": until.strftime("%Y-%m-%d"),
             "max_items": max(100, self.config.fetch_limit),
         }
         url = f"{_APIFY_BASE}/acts/{self.config.actor_id}/runs?token={token}"
@@ -299,6 +315,7 @@ class TwitterScraper(BaseScraper):
                 metadata={
                     "tweet_id": numeric_id,
                     "conversation_id": conversation_id,
+                    "twitter_handle": str(screen_name).lstrip("@").casefold(),
                     "favorite_count": item.get("favorite_count", 0),
                     "retweet_count": item.get("retweet_count", 0),
                     "reply_count": item.get("reply_count", 0),

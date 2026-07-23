@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Horizon AI Daily
+title: AI 产品机会与 Builder 情报
 ---
 
 {% assign zh_posts = site.posts | where: "lang", "zh" %}
@@ -11,10 +11,14 @@ title: Horizon AI Daily
 {{ latest.content }}
 </div>
 {% else %}
-# Horizon AI Daily
+# AI 产品机会与 Builder 情报
 
 首份中文 AI 日报将在 GitHub Actions 成功运行后显示在这里。
 {% endif %}
+
+## 产品情报数据库
+
+[打开可搜索、可筛选的产品数据库]({{ '/products/' | relative_url }})，或直接下载 [JSON]({{ '/data/product-intelligence.json' | relative_url }}) / [CSV]({{ '/data/product-intelligence.csv' | relative_url }})。
 
 ## 历史日报
 
