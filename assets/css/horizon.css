@@ -60,6 +60,70 @@ body {
   line-height: 2;
 }
 
+.daily-signals {
+  margin: 1.25rem 0 2rem;
+  padding: 1rem 1.2rem;
+  border-left: 4px solid var(--success);
+  background: #f2fbf7;
+  border-radius: 6px;
+}
+
+.product-filters {
+  display: grid;
+  grid-template-columns: minmax(220px, 2fr) repeat(4, minmax(130px, 1fr));
+  gap: .8rem;
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background: var(--accent-soft);
+  border: 1px solid #d8e5ff;
+  border-radius: 8px;
+}
+
+.product-filters label {
+  display: grid;
+  gap: .3rem;
+  color: var(--muted);
+  font-size: .84rem;
+  font-weight: 600;
+}
+
+.product-filters input,
+.product-filters select {
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 2.45rem;
+  padding: .45rem .6rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  background: #fff;
+  color: var(--ink);
+}
+
+.product-status { color: var(--muted); }
+.product-results { display: grid; gap: 1rem; }
+
+.product-card {
+  padding: 1.2rem 1.35rem;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background: var(--surface);
+  box-shadow: 0 3px 14px rgba(20, 33, 61, .05);
+}
+
+.product-card h2 { margin-top: 0 !important; }
+.product-card p { margin: .55rem 0; }
+.product-card small { display: block; margin-top: 1rem; color: var(--muted); }
+
+.product-badges { display: flex; flex-wrap: wrap; gap: .45rem; margin-bottom: 1rem; }
+.product-badges span {
+  padding: .18rem .55rem;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: .78rem;
+  font-weight: 600;
+}
+
 .score-badge {
   display: inline-block;
   margin-left: .35rem;
@@ -116,4 +180,5 @@ code {
     box-shadow: none;
   }
   .daily-toc { font-size: .92rem; }
+  .product-filters { grid-template-columns: 1fr; }
 }
