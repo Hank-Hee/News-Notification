@@ -54,7 +54,9 @@ GitHub 自动生成的 `GITHUB_TOKEN` 用于读取公开 GitHub 数据和发布 
 4. `Name` 准确填写：`APIFY_TOKEN`。
 5. `Secret` 粘贴 Apify Token 并保存。
 
-工作流会先调用 Apify 用户接口验证 Token，再启动 X/Twitter Actor。Token 缺失或无效时任务明确失败，不会静默跳过 X 来源。覆盖 Token 后需要手动重跑一次。
+6. 打开 [Scweet Twitter/X Scraper](https://console.apify.com/actors/EvFXOhwR6wsOWmdSK)，点击运行或权限审批入口，阅读权限范围并批准。Apify 规定需要完整权限的 Actor 必须由用户在 Console 人工批准，API 和 GitHub Actions 不能代替这一步。
+
+工作流会先调用 Apify 用户接口验证 Token、确认 Actor 可见，再启动 X/Twitter Actor。Token 缺失或无效时任务明确失败；权限未批准时会显示 `full-permission-actor-not-approved` 和审批链接，不会静默跳过 X 来源。覆盖 Token 或完成审批后需要手动重跑一次。
 
 ## 5. 手动验证工作流
 
@@ -100,10 +102,11 @@ GitHub Pages 站点默认可被互联网上任何人访问；即使把源仓库�
 - `sources.twitter`：约 65 个全球官方、Builder、产品和医疗 AI 账号，通过 Apify 抓取；
 - `sources.rss`：官方产品、产品媒体、Builder 和产品经理方法来源；
 - `sources.github`：Agent、AI SDK、自动化和工作流产品构建工具 Release；
-- `sources.hackernews` / `sources.reddit`：产品发布、Builder 讨论、市场反馈和失败案例；
+- `sources.hackernews`：产品发布、Builder 讨论、市场反馈和失败案例；Reddit 配置暂时关闭，因为 GitHub runner 上抓取不稳定；
 - `sources.google_news`：中国 AI 产品、创业、医疗、医药和中医相关补充入口；
 - ArXiv、OSS Insight 和泛 GDELT 当前关闭；
 - `filtering.ai_score_threshold`：默认 `7.0`；
+- `filtering.candidate_limit`：最多 `60` 条进入 Kimi 初筛；
 - `filtering.final_min_items` / `final_max_items`：目标 `8` / `12`；
 - `filtering.deep_analysis_limit`：默认 `3`，对应 Top 3 产品拆解；
 - `filtering.history_dedup_days`：默认 `7`；
@@ -129,6 +132,7 @@ GitHub Pages 站点默认可被互联网上任何人访问；即使把源仓库�
 - **Webhook URL is empty**：说明运行的是合并前的旧版默认分支工作流；合并本 PR 后，新配置不会启用 Webhook，也不会读取 `HORIZON_WEBHOOK_URL`。
 - **401 / authentication / invalid API key**：在 Kimi Platform 检查 Key 状态，然后覆盖 `MOONSHOT_API_KEY` Secret。
 - **Missing repository secret: APIFY_TOKEN / Apify API preflight failed**：确认 Token 来自 Apify、Secret 名字完全一致，并覆盖更新。
+- **`full-permission-actor-not-approved` / 403**：Token 本身有效，但 Scweet Actor 权限还没有在 Apify Console 人工批准；打开日志中的审批链接，批准后重新运行。
 - **Twitter 抓取为 0**：检查 Apify Actor run；可能是最近 24 小时账号无更新、账号名失效或 Actor 返回空结果。
 - **quota / billing / 额度不足**：在 Kimi Platform 检查余额与配额。此类错误会让工作流明确失败，不会发布误导性空日报。
 - **429 / rate limit**：稍后手动重跑；当前分析与增强并发均已设为 `1`，若仍持续限流，应检查账户配额或缩小候选数量。

@@ -250,7 +250,7 @@ flowchart LR
 - 独立 Builder、产品作者和 AI 研究/教育者；
 - Hippocratic AI、Abridge、Nabla、Ambience Health、OpenEvidence 等医疗 AI 产品。
 
-采集范围被限制为最近 24 小时，排除转推，Actor 每日主抓取最多取回 100 条，进入 Horizon 后再按互动和时效保留最多 50 条。高价值 X 条目最多扩展 3 条回复，用来观察真实用户反应，同时控制 Apify 运行次数和成本。
+采集范围被限制为最近 24 小时并排除转推。Actor 单次最多取回 100 条，进入 Horizon 后按互动和时效保留最多 30 条；每次运行另设 0.40 美元硬性费用上限。回复二次抓取目前关闭，避免一次日报额外启动多个付费 Actor；市场反应优先从原帖互动、媒体和其他公开来源交叉判断。
 
 ### RSS
 
@@ -267,7 +267,7 @@ RSS 分为四类：
 
 - GitHub：只追踪更接近产品构建的 Agent、AI SDK、工作流和自动化工具 Release；
 - Hacker News：发现 Show HN、新产品和工程师讨论；
-- Reddit：补充 SideProject、startups、SaaS、ChatGPT 和 ClaudeAI 社区中的产品与失败反馈；
+- Reddit：配置保留但当前关闭，因为 GitHub runner 上连续出现 403/429，内容也不够稳定；
 - Google News：补充中国 AI 产品、创业、医疗、医药和中医相关信息。
 
 ArXiv、OSS Insight 和泛 GDELT 当前关闭，因为它们容易带来论文、基础设施和重复媒体噪声。
@@ -322,7 +322,7 @@ Actions 拉取目标分支，安装 Python 3.12 和 uv，再安装锁定依赖�
 
 ### Apify 预检
 
-工作流确认 `APIFY_TOKEN` 非空，并调用 Apify 用户接口验证 Token。失败时不会静默跳过 X，而是让任务在采集前明确失败。
+工作流确认 `APIFY_TOKEN` 非空，调用 Apify 用户接口验证 Token，并确认 `altimis/scweet` Actor 可见。Actor 第一次使用还必须在 Apify Console 人工批准权限；这是 Apify 的安全要求，无法通过 API 绕过。若未批准，抓取日志会输出 `full-permission-actor-not-approved` 和审批链接，不会把 403 误报成“今天没有推文”。
 
 ## 15. 步骤 3：恢复跨天状态
 
@@ -348,13 +348,13 @@ Actions 拉取目标分支，安装 Python 3.12 和 uv，再安装锁定依赖�
 2. 是否在 24 小时窗口；
 3. 标题和正文是否达到最低信息量；
 4. 是否与 AI 产品、Agent、模型或自动化相关；
-5. HN/Reddit 是否达到最低互动；
+5. HN（以及以后重新启用的 Reddit）是否达到最低互动；
 6. 规范化 URL 是否重复；
 7. 规范化标题是否重复；
 8. 单一子来源是否超过 15 条；
-9. 总候选是否超过 100 条。
+9. 总候选是否超过 60 条。
 
-来源优先顺序是 X、RSS、GitHub、Hacker News、Reddit、Google News。X 的限流按账号计算，不会让 65 个账号被当成同一个来源只留下 15 条。
+来源优先顺序是 X、RSS、GitHub、Hacker News、Reddit、Google News；当前 Reddit 关闭。X 的限流按账号计算，不会让约 65 个账号被当成同一个来源只留下 15 条。
 
 日志中的 `Prefilter statistics` 会显示每种淘汰原因，方便判断是来源、规则还是模型阶段出了问题。
 
@@ -364,7 +364,7 @@ Actions 拉取目标分支，安装 Python 3.12 和 uv，再安装锁定依赖�
 
 ## 19. 步骤 7：Kimi 个性化评分与结构化标注
 
-候选以每批最多 10 条发送给 `kimi-k2.6`。模型只做评分、分类、事件判断、中文摘要和字段抽取，不需要深度推理。
+候选以每批最多 5 条发送给 `kimi-k2.6`。模型只做评分、分类、事件判断、中文摘要和字段抽取，不需要深度推理。5 条批次是在真实运行中根据结构化输出稳定性和总耗时收紧后的值。
 
 调用约束：
 
@@ -396,9 +396,9 @@ Actions 拉取目标分支，安装 Python 3.12 和 uv，再安装锁定依赖�
 
 排序首先确保尽可能有 3 个 `product_case` 进入 Top 3；不足时按 Builder 方法、可产品化模型能力和其他高分信号补齐。剩余条目仍按兴趣类型和分数组织。
 
-## 22. 步骤 10：X 回复扩展
+## 22. 步骤 10：X 回复扩展（当前关闭）
 
-如果最终高分条目来自 X，系统最多为 3 条推文额外抓取高互动回复，并把回复作为用户反应证据重新分析。
+系统保留为高分 X 条目抓取回复并重新分析的能力，但生产配置当前设为 `fetch_reply_text=false`。待主流程稳定并确认每日成本后，可再小范围开启，最多扩展 3 条推文。
 
 这一步不是把评论当事实，而是帮助判断：
 
@@ -463,7 +463,7 @@ Top 3 先抽取需要核验的产品、团队、工作流或指标，再进行�
 - 输入、输出和总 Token；
 - 产品数据库更新数量。
 
-这些数据用来判断成本异常。例如候选长期顶到 100、输出 Token 明显增长或 Apify 每日运行次数异常时，应先收紧来源和回复扩展，而不是直接降低内容质量。
+这些数据用来判断成本异常。例如候选长期顶到 60、输出 Token 明显增长或 Apify 每日运行次数异常时，应先收紧来源和批次，而不是直接降低内容质量。
 
 ---
 
@@ -526,6 +526,7 @@ Kimi 配置错误、Apify Token 错误、全部来源失败或全部 AI 解析�
 | 模型不可用 | Variable 不是 `kimi-k2.6` 或 Key 无权限 | 修正 Variable，确认模型权限 |
 | Thinking disablement incompatible | SDK/模型不接受关闭 Thinking | 查看明确错误，升级兼容版本；不要删参数 |
 | Missing/invalid `APIFY_TOKEN` | Secret 未设置或 Token 无效 | 在 Apify 创建 Token，覆盖 Secret 后重跑 |
+| `full-permission-actor-not-approved` / 403 | Token 有效，但 Actor 权限尚未人工批准 | 打开日志给出的 Apify Console 链接，审核并批准后重跑 |
 | Twitter 抓取 0 条 | 最近 24 小时账号平静、Actor 返回为空或账号名失效 | 看 Apify run 与来源统计，更新账号列表 |
 | 单一 RSS 失败 | Feed 改址或临时不可用 | 验证 URL；其他来源仍会继续 |
 | 全部来源失败 | 网络或配置系统性故障 | 任务会失败，修复后重跑 |
@@ -539,7 +540,7 @@ Kimi 配置错误、Apify Token 错误、全部来源失败或全部 AI 解析�
 1. Actions 中当天运行是否成功；
 2. Kimi 与 Apify 预检是否通过；
 3. X、RSS、GitHub、社区和中文来源是否有合理抓取量；
-4. 候选是否长期顶到 100；
+4. 候选是否长期顶到 60；
 5. 入选是否以产品案例、Builder 方法和市场信号为主；
 6. Top 3 是否真正回答用户、工作流、验证和 MVP；
 7. 页面中是否出现把“未公开”强行补成事实的内容；
