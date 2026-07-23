@@ -31,6 +31,8 @@ title: Horizon AI Daily 部署与密钥配置 SOP
 
 Secret 保存后不能在 GitHub 页面再次查看明文，只能覆盖更新。工作流通过 `${{ secrets.MOONSHOT_API_KEY }}` 注入运行时环境；代码只读取环境变量 `MOONSHOT_API_KEY`。
 
+Secret 或 Variable 只会在任务启动时读取。覆盖 `MOONSHOT_API_KEY`、`KIMI_BASE_URL` 或 `KIMI_MODEL_ID` 后，需要重新运行一次工作流；已经结束或正在运行的旧任务不会自动使用新值。
+
 ## 3. 添加 Kimi Variables
 
 仍在 **Settings → Secrets and variables → Actions**，切换到 **Variables** 标签页，分别创建：
@@ -51,7 +53,7 @@ GitHub 自动生成的 `GITHUB_TOKEN` 用于读取公开 GitHub 数据和发布 
 3. 点击 **Run workflow**，选择默认分支后再次点击 **Run workflow**。
 4. 打开本次运行，确认 `Validate Kimi configuration`、`Generate Chinese AI daily` 和 `Deploy to GitHub Pages` 均成功。
 
-日志会显示输入 Token、输出 Token、总 Token、AI 请求次数、分析阶段请求次数和深度分析阶段请求次数。若 Provider 没有返回 usage，会明确显示“Provider 未返回 Token 用量”。日志不会输出 API Key。
+`Validate Kimi configuration` 会通过 `/models` 验证 Secret、国内 API 地址和 `kimi-k2.6` 权限；它成功就说明变量与 Key 的组合真实可用。日志还会显示输入 Token、输出 Token、总 Token、AI 请求次数、分析阶段请求次数和深度分析阶段请求次数。若 Provider 没有返回 usage，会明确显示“Provider 未返回 Token 用量”。日志不会输出 API Key。
 
 ## 5. 启用 GitHub Pages
 
@@ -63,6 +65,19 @@ GitHub 自动生成的 `GITHUB_TOKEN` 用于读取公开 GitHub 数据和发布 
 4. 点击 **Save**，等待 GitHub 显示站点地址。
 
 本仓库的默认地址通常为：`https://hank-hee.github.io/News-Notification/`。首页展示最新日报，文章按日期保留历史归档。
+
+### 5.1 隐私说明：Pages 默认不是私人网页
+
+GitHub Pages 站点默认可被互联网上任何人访问；即使把源仓库改成 Private，普通 Pages 站点仍然公开。只是不主动分享链接，不能视为访问控制。
+
+真正把 Pages 设为仅仓库读者可见，需要由组织所有的 Private/Internal 仓库，并使用 GitHub Enterprise Cloud 的 Pages Access Control。个人账号或普通套餐没有同等的私有 Pages 开关。
+
+如果日报只供自己查看，推荐路径是：先在 **Settings → Pages** 取消发布，不再把 `gh-pages` 当公开网站；再把工作流改为上传仅登录后可下载的 Actions Artifact，或改用带身份认证的私有托管。当前工作流仍按公开 Pages 发布，本 SOP 只说明选择，不会替你自动关闭现有站点。
+
+官方说明：
+
+- [GitHub Pages 发布源与公开性说明](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)
+- [GitHub Enterprise Cloud 私有 Pages 访问控制](https://docs.github.com/en/enterprise-cloud@latest/pages/getting-started-with-github-pages/changing-the-visibility-of-your-github-pages-site)
 
 ## 6. 自动运行时间
 
@@ -89,11 +104,13 @@ GitHub 自动生成的 `GITHUB_TOKEN` 用于读取公开 GitHub 数据和发布 
 
 - **Missing repository secret: MOONSHOT_API_KEY**：Secret 名称拼写错误、未创建或创建在 Environment 而非 Repository。
 - **Kimi Thinking disablement is incompatible**：当前 SDK 或模型不能确认关闭 Thinking；系统会安全停止，不会切换到思考模式。确认模型为 `kimi-k2.6`，并检查 Kimi API 的兼容性公告。
+- **Kimi API preflight failed**：优先检查 `MOONSHOT_API_KEY` Secret、`KIMI_BASE_URL=https://api.moonshot.cn/v1` 和 `KIMI_MODEL_ID=kimi-k2.6`；修改后必须新开一次运行。
 - **Webhook URL is empty**：说明运行的是合并前的旧版默认分支工作流；合并本 PR 后，新配置不会启用 Webhook，也不会读取 `HORIZON_WEBHOOK_URL`。
 - **401 / authentication / invalid API key**：在 Kimi Platform 检查 Key 状态，然后覆盖 `MOONSHOT_API_KEY` Secret。
 - **quota / billing / 额度不足**：在 Kimi Platform 检查余额与配额。此类错误会让工作流明确失败，不会发布误导性空日报。
-- **429 / rate limit**：稍后手动重跑；也可降低 `analysis_concurrency` 和 `enrichment_concurrency`。
-- **JSON 解析失败**：系统会自动缩小批次，最终降级为单条分析；持续失败时检查所选模型是否稳定支持 JSON 输出。
+- **429 / rate limit**：稍后手动重跑；当前分析与增强并发均已设为 `1`，若仍持续限流，应检查账户配额或缩小候选数量。
+- **JSON 解析失败**：只有 Provider 已成功返回、但内容结构不合规时，系统才自动缩小批次并最终降级为单条分析；API、认证、额度与限流错误不会触发拆分重试。
+- **AI analysis produced no valid results**：任务会停止且不发布空日报；这表示模型调用或结构化输出整体异常，不代表当天没有重要新闻。
 - **单一 RSS 或搜索失败**：其他来源会继续运行；所有来源均失败时工作流失败。
 - **Pages 404**：确认工作流已生成 `gh-pages` 分支，且 Pages 来源为 `gh-pages` 的 `/(root)`。
 
