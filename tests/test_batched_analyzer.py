@@ -3,6 +3,8 @@ import json
 from datetime import datetime, timezone
 from types import SimpleNamespace
 
+import pytest
+
 from src.ai.analyzer import ContentAnalyzer
 from src.models import ContentItem, SourceType
 
@@ -75,3 +77,40 @@ def test_batch_parse_failure_recursively_falls_back_to_smaller_batches():
 
     assert len(calls) == 3
     assert [item.ai_score for item in items] == [8.0, 8.0]
+
+
+def test_batch_api_error_aborts_without_recursive_retry_storm():
+    items = [_item(1), _item(2)]
+    calls = 0
+
+    async def complete(**kwargs):
+        nonlocal calls
+        calls += 1
+        raise RuntimeError("Error code: 400 - invalid temperature")
+
+    client = SimpleNamespace(
+        config=SimpleNamespace(analysis_batch_size=10, analysis_concurrency=1),
+        complete=complete,
+    )
+
+    with pytest.raises(RuntimeError, match="invalid temperature"):
+        asyncio.run(ContentAnalyzer(client).analyze_batch(items))
+
+    assert calls == 1
+
+
+def test_all_invalid_ai_responses_abort_instead_of_publishing_empty_digest():
+    items = [_item(1), _item(2)]
+
+    async def complete(**kwargs):
+        return "not-json"
+
+    client = SimpleNamespace(
+        config=SimpleNamespace(analysis_batch_size=10, analysis_concurrency=1),
+        complete=complete,
+    )
+
+    with pytest.raises(RuntimeError, match="no valid results"):
+        asyncio.run(ContentAnalyzer(client).analyze_batch(items))
+
+    assert [item.ai_score for item in items] == [0.0, 0.0]

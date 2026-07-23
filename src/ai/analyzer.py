@@ -8,8 +8,6 @@ from typing import List, Literal, Optional
 
 from pydantic import BaseModel, Field, ValidationError, model_validator
 from rich.progress import BarColumn, MofNCompleteColumn, Progress, SpinnerColumn, TextColumn
-from tenacity import retry, stop_after_attempt, wait_exponential
-
 from .client import AIClient
 from .prompts import (
     BATCH_CONTENT_ANALYSIS_USER,
@@ -19,10 +17,14 @@ from .prompts import (
 from .tokens import usage_stage
 from .utils import parse_json_response
 from ..models import ContentItem
-from ..redaction import is_fatal_ai_error, redact_secrets
+from ..redaction import redact_secrets
 
 
 DEFAULT_THROTTLE_SEC = 0.0
+
+
+class AnalysisResponseError(ValueError):
+    """The provider responded, but its structured analysis was unusable."""
 
 
 class AnalysisResult(BaseModel):
@@ -79,7 +81,9 @@ class ContentAnalyzer:
             return []
         batch_size = self._get_batch_size()
         if batch_size <= 1:
-            return await self._analyze_singly(items)
+            analyzed_items = await self._analyze_singly(items)
+            self._require_at_least_one_valid_result(analyzed_items)
+            return analyzed_items
 
         chunks = [items[index : index + batch_size] for index in range(0, len(items), batch_size)]
         semaphore = asyncio.Semaphore(self._get_concurrency())
@@ -98,6 +102,7 @@ class ContentAnalyzer:
         ) as progress:
             task = progress.add_task("Analyzing", total=len(items))
             await asyncio.gather(*(process(chunk, task) for chunk in chunks))
+        self._require_at_least_one_valid_result(items)
         return items
 
     async def _analyze_singly(self, items: List[ContentItem]) -> List[ContentItem]:
@@ -108,9 +113,7 @@ class ContentAnalyzer:
             async with semaphore:
                 try:
                     await self._analyze_item(item)
-                except Exception as error:
-                    if is_fatal_ai_error(error):
-                        raise
+                except AnalysisResponseError as error:
                     print(f"Error analyzing item {item.id}: {redact_secrets(error)}")
                     self._apply_fallback(item)
                 if throttle_sec > 0 and index < len(items) - 1:
@@ -134,15 +137,11 @@ class ContentAnalyzer:
         try:
             await self._analyze_chunk(items)
             return
-        except Exception as error:
-            if is_fatal_ai_error(error):
-                raise
+        except AnalysisResponseError:
             if len(items) == 1:
                 try:
                     await self._analyze_item(items[0])
-                except Exception as single_error:
-                    if is_fatal_ai_error(single_error):
-                        raise
+                except AnalysisResponseError as single_error:
                     print(
                         f"Error analyzing item {items[0].id}: "
                         f"{redact_secrets(single_error)}"
@@ -162,31 +161,43 @@ class ContentAnalyzer:
                 user=BATCH_CONTENT_ANALYSIS_USER.format(
                     items=json.dumps(blocks, ensure_ascii=False, indent=2)
                 ),
+                max_tokens=6144,
             )
         parsed = self._parse_json_response(response)
         raw_results = parsed.get("items") if isinstance(parsed, dict) else None
         if not isinstance(raw_results, list):
-            raise ValueError("Batch analysis response did not contain an items list")
+            raise AnalysisResponseError(
+                "Batch analysis response did not contain an items list"
+            )
 
         expected = {item.id: item for item in items}
         validated: dict[str, AnalysisResult] = {}
-        for raw in raw_results:
-            result = AnalysisResult.model_validate(raw)
-            if not result.id or result.id not in expected or result.id in validated:
-                raise ValueError("Batch analysis returned an unknown or duplicate item ID")
-            validated[result.id] = result
+        try:
+            for raw in raw_results:
+                result = AnalysisResult.model_validate(raw)
+                if not result.id or result.id not in expected or result.id in validated:
+                    raise AnalysisResponseError(
+                        "Batch analysis returned an unknown or duplicate item ID"
+                    )
+                validated[result.id] = result
+        except ValidationError as error:
+            raise AnalysisResponseError(
+                "Batch analysis response failed schema validation"
+            ) from error
         if set(validated) != set(expected):
-            raise ValueError("Batch analysis response did not map every input item ID")
+            raise AnalysisResponseError(
+                "Batch analysis response did not map every input item ID"
+            )
         for item_id, result in validated.items():
             self._apply_result(expected[item_id], result)
 
-    @retry(stop=stop_after_attempt(3), wait=wait_exponential(min=2, max=10))
     async def _analyze_item(self, item: ContentItem) -> None:
         payload = self._item_payload(item)
         with usage_stage("analysis"):
             response = await self.client.complete(
                 system=CONTENT_ANALYSIS_SYSTEM,
                 user=CONTENT_ANALYSIS_USER.format(**payload),
+                max_tokens=2048,
             )
         parsed = self._parse_json_response(response)
         try:
@@ -198,8 +209,29 @@ class ContentAnalyzer:
             self._apply_fallback(item)
             return
         if result.id and result.id != item.id:
-            raise ValueError("Single-item analysis returned the wrong item ID")
+            raise AnalysisResponseError(
+                "Single-item analysis returned the wrong item ID"
+            )
         self._apply_result(item, result)
+
+    @staticmethod
+    def _require_at_least_one_valid_result(items: List[ContentItem]) -> None:
+        valid_count = sum(
+            item.ai_score is not None
+            and item.ai_reason != "Analysis response parse failed"
+            for item in items
+        )
+        failed_count = len(items) - valid_count
+        if valid_count == 0:
+            raise RuntimeError(
+                "AI analysis produced no valid results for any candidate; "
+                "refusing to publish a misleading empty digest."
+            )
+        if failed_count:
+            print(
+                f"Warning: AI analysis failed for {failed_count}/{len(items)} "
+                "candidates; continuing with valid results."
+            )
 
     @staticmethod
     def _item_payload(item: ContentItem) -> dict[str, str]:

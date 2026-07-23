@@ -5,7 +5,7 @@
     "model": "${KIMI_MODEL_ID}",
     "base_url": "${KIMI_BASE_URL}",
     "api_key_env": "MOONSHOT_API_KEY",
-    "temperature": 0.2,
+    "temperature": 0.6,
     "max_completion_tokens": 8192,
     "thinking": {
       "type": "disabled"
@@ -14,9 +14,9 @@
     "languages": [
       "zh"
     ],
-    "analysis_concurrency": 2,
+    "analysis_concurrency": 1,
     "analysis_batch_size": 10,
-    "enrichment_concurrency": 2
+    "enrichment_concurrency": 1
   },
   "sources": {
     "github": [

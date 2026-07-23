@@ -11,7 +11,7 @@ from typing import List
 from ddgs import DDGS
 from pydantic import BaseModel, Field, ValidationError
 from rich.progress import BarColumn, MofNCompleteColumn, Progress, SpinnerColumn, TextColumn
-from tenacity import retry, stop_after_attempt, wait_exponential
+from tenacity import retry, retry_if_exception_type, stop_after_attempt, wait_exponential
 
 from .client import AIClient
 from .prompts import (
@@ -111,6 +111,7 @@ class ContentEnricher:
                         tags=", ".join(item.ai_tags),
                         content=content_text[:1200],
                     ),
+                    max_tokens=512,
                 )
             parsed = parse_json_response(response) or {}
             queries = parsed.get("queries", [])
@@ -120,7 +121,12 @@ class ContentEnricher:
                 raise
             return []
 
-    @retry(stop=stop_after_attempt(3), wait=wait_exponential(min=2, max=10))
+    @retry(
+        retry=retry_if_exception_type(ValueError),
+        stop=stop_after_attempt(3),
+        wait=wait_exponential(min=2, max=10),
+        reraise=True,
+    )
     async def _enrich_item(self, item: ContentItem) -> None:
         content_text = item.content or ""
         comments_text = ""
@@ -156,6 +162,7 @@ class ContentEnricher:
                     ),
                     web_context=web_context,
                 ),
+                max_tokens=4096,
             )
         parsed = parse_json_response(response)
         try:
@@ -201,6 +208,7 @@ class ContentEnricher:
                     user=TREND_OVERVIEW_USER.format(
                         items=json.dumps(payload, ensure_ascii=False, indent=2)
                     ),
+                    max_tokens=1024,
                 )
             result = TrendOverviewResult.model_validate(parse_json_response(response))
             return result.trends

@@ -72,6 +72,7 @@ def test_analyze_batch_concurrent_processing(monkeypatch):
         active_count += 1
         max_active = max(max_active, active_count)
         await asyncio.sleep(0.05)  # Small delay to allow overlap
+        item.ai_score = 8.0
         active_count -= 1
 
     monkeypatch.setattr(analyzer, "_analyze_item", fake_analyze_item)
@@ -79,7 +80,7 @@ def test_analyze_batch_concurrent_processing(monkeypatch):
     asyncio.run(analyzer.analyze_batch(items))
 
     assert max_active == 3
-    assert all(item.ai_score is None for item in items)  # None because fake_analyze_item doesn't set it
+    assert all(item.ai_score == 8.0 for item in items)
 
 
 def test_analyze_batch_concurrent_preserves_order(monkeypatch):
