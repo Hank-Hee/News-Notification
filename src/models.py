@@ -272,6 +272,7 @@ class TwitterConfig(BaseModel):
     """
 
     enabled: bool = True
+    required: bool = False
     mode: str = "apify"  # "apify" or "playwright"
     users: List[str] = Field(default_factory=list)
     fetch_limit: int = 10

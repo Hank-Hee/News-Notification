@@ -22,6 +22,10 @@ def _escape_markdown(value: object) -> str:
     """Render untrusted text literally while retaining its readable content."""
     escaped = html.escape(html.unescape(str(value)), quote=True)
     escaped = _MARKDOWN_SPECIAL.sub(r"\\\1", escaped)
+    # html.escape represents apostrophes as ``&#x27;``. Markdown escaping must
+    # not insert a backslash into that numeric entity (``&\#x27;``), otherwise
+    # Jekyll renders the entity literally instead of showing an apostrophe.
+    escaped = re.sub(r"&\\#([xX]?[0-9A-Fa-f]+);", r"&#\1;", escaped)
     return _MARKDOWN_BLOCK_START.sub(r"\1\\\2", escaped)
 
 

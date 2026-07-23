@@ -5,6 +5,7 @@ import json
 from datetime import datetime, timedelta, timezone
 
 import httpx
+import pytest
 
 from src.models import TwitterConfig
 from src.scrapers.twitter import TwitterScraper
@@ -306,6 +307,29 @@ def test_start_run_permission_error_logs_approval_url(monkeypatch, caplog):
     assert "test_token" not in caplog.text
 
 
+def test_required_twitter_permission_error_raises(monkeypatch):
+    monkeypatch.setenv("APIFY_TOKEN", "test_token")
+    payload = {
+        "error": {
+            "type": "full-permission-actor-not-approved",
+            "message": "Approve this Actor before running it.",
+            "data": {"approvalUrl": "https://console.apify.com/actors/example"},
+        }
+    }
+    transport = httpx.MockTransport(
+        lambda request: httpx.Response(403, json=payload, request=request)
+    )
+    client = httpx.AsyncClient(transport=transport)
+
+    with pytest.raises(RuntimeError, match="full-permission-actor-not-approved"):
+        asyncio.run(
+            TwitterScraper(_make_config(required=True), client).fetch(
+                datetime.now(timezone.utc) - timedelta(hours=1)
+            )
+        )
+    asyncio.run(client.aclose())
+
+
 def test_no_results_item_skipped(monkeypatch):
     monkeypatch.setenv("APIFY_TOKEN", "test_token")
     since = datetime.now(timezone.utc) - timedelta(hours=1)
@@ -503,4 +527,3 @@ def test_fetch_replies_no_conversation_id_returns_empty(monkeypatch):
     result = asyncio.run(scraper.fetch_replies_for_item(item))
     asyncio.run(client.aclose())
     assert result == []
-

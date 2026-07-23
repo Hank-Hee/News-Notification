@@ -66,6 +66,7 @@
     "telegram": {"enabled": false, "channels": []},
     "twitter": {
       "enabled": true,
+      "required": true,
       "mode": "apify",
       "apify_token_env": "APIFY_TOKEN",
       "actor_id": "altimis~scweet",

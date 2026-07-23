@@ -4,6 +4,7 @@ from types import SimpleNamespace
 
 import src.orchestrator as orchestrator_module
 from src.ai.summarizer import DailySummarizer
+from src.ai.prompts import CONTENT_ENRICHMENT_USER
 from src.models import (
     AIConfig,
     BalanceConfig,
@@ -153,3 +154,19 @@ def test_github_pages_post_generation_is_atomic_and_has_front_matter(tmp_path, m
     assert "lang: zh" in content
     assert "日报正文" in content
     assert "# Horizon AI Daily" not in content
+
+
+def test_product_enrichment_prompt_formats_nested_json_example():
+    prompt = CONTENT_ENRICHMENT_USER.format(
+        title="Acme AI",
+        url="https://example.com/acme",
+        summary="Acme AI 发布了产品。",
+        score=9.0,
+        reason="有真实用户工作流。",
+        tags="AI 产品",
+        content="原文内容",
+        comments_section="",
+        web_context="没有可用的背景搜索结果。",
+    )
+
+    assert '"input_process_output": {"input": "输入"' in prompt

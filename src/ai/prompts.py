@@ -164,7 +164,7 @@ CONTENT_ENRICHMENT_USER = """新闻条目：
   "user_problem": "用户原来遇到的具体问题",
   "original_workflow": ["原工作流步骤；未公开时只写未公开"],
   "product_workflow": ["使用该产品后的新工作流步骤；未公开时只写未公开"],
-  "input_process_output": {"input": "输入", "process": "处理过程", "output": "输出"},
+  "input_process_output": {{"input": "输入", "process": "处理过程", "output": "输出"}},
   "tool_stack": ["模型、工具、数据、渠道或关键技能；未公开的不猜"],
   "business_model": "收费、获客与商业模式；未公开时写未公开",
   "product_stage": "validated|early_growth|proof_of_concept|not_applicable",

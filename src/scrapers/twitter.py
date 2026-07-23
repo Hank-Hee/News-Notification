@@ -33,11 +33,18 @@ class TwitterScraper(BaseScraper):
 
         users = [u.strip().lstrip("@") for u in self.config.users if u.strip()]
         if not users:
+            if self.config.required:
+                raise RuntimeError("Required Twitter source has no configured users")
             logger.debug("No Twitter users configured, skipping.")
             return []
 
         token = os.environ.get(self.config.apify_token_env)
         if not token:
+            if self.config.required:
+                raise RuntimeError(
+                    f"Required Twitter source is missing env var "
+                    f"'{self.config.apify_token_env}'"
+                )
             logger.warning(
                 f"Apify token not found in env var '{self.config.apify_token_env}'. Skipping Twitter."
             )
@@ -51,9 +58,15 @@ class TwitterScraper(BaseScraper):
 
         succeeded = await self._wait_for_run(token, run_id)
         if not succeeded:
+            if self.config.required:
+                raise RuntimeError("Required Twitter Apify run did not succeed")
             return []
 
         raw_items = await self._fetch_dataset(token, dataset_id)
+        if raw_items is None:
+            if self.config.required:
+                raise RuntimeError("Required Twitter Apify dataset could not be fetched")
+            return []
         items = []
         for raw in raw_items:
             if isinstance(raw, dict) and raw.get("noResults"):
@@ -106,9 +119,14 @@ class TwitterScraper(BaseScraper):
             logger.debug(f"Started Apify run {run_id}, dataset {dataset_id}")
             return run_id, dataset_id
         except httpx.HTTPStatusError as exc:
-            logger.error("Failed to start Apify run: %s", self._api_error(exc.response))
+            detail = self._api_error(exc.response)
+            if self.config.required:
+                raise RuntimeError(f"Required Twitter source failed: {detail}") from exc
+            logger.error("Failed to start Apify run: %s", detail)
             return None, None
         except Exception as exc:
+            if self.config.required:
+                raise RuntimeError(f"Required Twitter source failed: {exc}") from exc
             logger.error("Failed to start Apify run: %s", exc)
             return None, None
 
@@ -134,7 +152,7 @@ class TwitterScraper(BaseScraper):
         logger.warning(f"Apify run {run_id} timed out after {_MAX_WAIT}s.")
         return False
 
-    async def _fetch_dataset(self, token: str, dataset_id: str) -> list:
+    async def _fetch_dataset(self, token: str, dataset_id: str) -> Optional[list]:
         url = f"{_APIFY_BASE}/datasets/{dataset_id}/items"
         try:
             resp = await self.client.get(
@@ -144,7 +162,7 @@ class TwitterScraper(BaseScraper):
             return resp.json()
         except Exception as exc:
             logger.error(f"Failed to fetch Apify dataset {dataset_id}: {exc}")
-            return []
+            return None
 
     async def fetch_replies_for_item(self, item: ContentItem) -> List[str]:
         """Fetch reply texts for one tweet using scweet search mode."""

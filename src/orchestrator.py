@@ -222,6 +222,29 @@ class HorizonOrchestrator:
             if self.last_fetch_report and self.last_fetch_report.all_failed:
                 raise RuntimeError(self.last_fetch_report.failure_message())
 
+            twitter_config = getattr(
+                getattr(self.config, "sources", None), "twitter", None
+            )
+            if (
+                self.last_fetch_report
+                and twitter_config
+                and twitter_config.enabled
+                and twitter_config.required
+            ):
+                twitter_outcome = next(
+                    (
+                        outcome
+                        for outcome in self.last_fetch_report.outcomes
+                        if outcome.source_name == "Twitter"
+                    ),
+                    None,
+                )
+                if twitter_outcome and twitter_outcome.status == "failure":
+                    raise RuntimeError(
+                        "Required source Twitter failed; refusing to publish a digest "
+                        f"without first-party X intelligence. {twitter_outcome.error}"
+                    )
+
             if not all_items:
                 self.console.print("[yellow]No new content found. Exiting.[/yellow]")
                 return
