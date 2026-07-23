@@ -1,4 +1,101 @@
 {
-  "events": {},
+  "events": {
+    "adarope-adaptive-head-specific-rope": {
+      "event_key": "adarope-adaptive-head-specific-rope",
+      "first_seen": "2026-07-24",
+      "last_seen": "2026-07-24",
+      "latest_update": "AdaRoPE为每个注意力头学习自适应旋转频率和缩放因子，在长上下文扩展中超越统一RoPE变体并保护短上下文性能。",
+      "title": "AdaRoPE: Not All Attention Heads Should Rotate and Scale Equally",
+      "url": "https://arxiv.org/abs/2607.19363"
+    },
+    "confidential-gpu-h100-tdx-benchmark": {
+      "event_key": "confidential-gpu-h100-tdx-benchmark",
+      "first_seen": "2026-07-24",
+      "last_seen": "2026-07-24",
+      "latest_update": "首个 NVIDIA H100 在 Intel TDX 机密计算模式下的 LLM 推理基准测试，量化机密模式对延迟、吞吐及饱和拐点的性能损耗，为敏感场景部署提供容量规划依据。",
+      "title": "Benchmarking Confidential GPU Inference on NVIDIA H100 under Intel TDX",
+      "url": "https://arxiv.org/abs/2607.19353"
+    },
+    "fineserve-dataset-release": {
+      "event_key": "fineserve-dataset-release",
+      "first_seen": "2026-07-24",
+      "last_seen": "2026-07-24",
+      "latest_update": "FineServe：首个来自全球商业平台的多模型 LLM 服务细粒度负载数据集，已开源，可支撑服务系统优化研究。",
+      "title": "FineServe: A Fine-Grained Dataset and Characterization of Global LLM Serving Workloads",
+      "url": "https://arxiv.org/abs/2607.19349"
+    },
+    "hypernetwork-scaling-laws-knowledge-injection": {
+      "event_key": "hypernetwork-scaling-laws-knowledge-injection",
+      "first_seen": "2026-07-24",
+      "last_seen": "2026-07-24",
+      "latest_update": "首次建立超网络知识注入的扩展律，发布MegaWikiQA数据集，发现超网络在OOD泛化上优于LoRA和全量微调。",
+      "title": "Scaling Laws for Hypernetwork-Based Knowledge Injection in Large Language Models",
+      "url": "https://arxiv.org/abs/2607.19604"
+    },
+    "lisa-linear-indexed-sparse-attention": {
+      "event_key": "lisa-linear-indexed-sparse-attention",
+      "first_seen": "2026-07-24",
+      "last_seen": "2026-07-24",
+      "latest_update": "LISA通过线性注意力与动态稀疏索引的并行融合，实现长上下文推理50%加速且提升推理性能5.6%，无需预训练。",
+      "title": "LISA: Linear-Indexed Sparse Attention for Efficient Long-Context Reasoning",
+      "url": "https://arxiv.org/abs/2607.19358"
+    },
+    "llm-information-discernment-l2d": {
+      "event_key": "llm-information-discernment-l2d",
+      "first_seen": "2026-07-24",
+      "last_seen": "2026-07-24",
+      "latest_update": "研究发现当前LLM在辨别信息来源可靠性和真实性方面表现接近随机水平，提出Learn2Discern基准测试框架和推理时改进方法。",
+      "title": "Information Discernment in Large Language Models",
+      "url": "https://arxiv.org/abs/2607.19355"
+    },
+    "multimdm-multi-mask-diffusion-language-model": {
+      "event_key": "multimdm-multi-mask-diffusion-language-model",
+      "first_seen": "2026-07-24",
+      "last_seen": "2026-07-24",
+      "latest_update": "提出多掩码扩散语言模型MultiMDM，通过保留掩码结构实现高质量少步生成，支持从预训练MDM持续训练。",
+      "title": "Multi-Mask Diffusion Language Models for Few-Step Generation",
+      "url": "https://arxiv.org/abs/2607.19686"
+    },
+    "openevoshield-defense-framework": {
+      "event_key": "openevoshield-defense-framework",
+      "first_seen": "2026-07-24",
+      "last_seen": "2026-07-24",
+      "latest_update": "OpenEvoShield：面向 LLM 多智能体系统的协同进化持续防御框架，通过非对称学习率和多粒度检测应对攻击演化与正常行为漂移的双重非平稳性。",
+      "title": "OpenEvoShield: Dual Non-Stationary Continual Defense for Open-World Multi-Agent System Attacks",
+      "url": "https://arxiv.org/abs/2607.19351"
+    },
+    "slpo-latent-reasoning-rl": {
+      "event_key": "slpo-latent-reasoning-rl",
+      "first_seen": "2026-07-24",
+      "last_seen": "2026-07-24",
+      "latest_update": "提出SLPO算法首次实现基于结果奖励的隐式推理强化学习，通过替代策略和自适应停止头实现可变长度latent reasoning。",
+      "title": "SLPO: Scaling Latent Reasoning via a Surrogate Policy",
+      "url": "https://arxiv.org/abs/2607.19691"
+    },
+    "stochastic-primal-dual-decoding-recommender": {
+      "event_key": "stochastic-primal-dual-decoding-recommender",
+      "first_seen": "2026-07-24",
+      "last_seen": "2026-07-24",
+      "latest_update": "通过随机原始-对偶近似解码层，在无需重训练的情况下实现多目标生成式推荐，大规模在线A/B实验验证辅助目标提升1.8%。",
+      "title": "Stochastic Primal-Dual Decoding for Multiobjective Generative Recommender Systems",
+      "url": "https://arxiv.org/abs/2607.19357"
+    },
+    "transformer-nc1-tc0-structural-generalization": {
+      "event_key": "transformer-nc1-tc0-structural-generalization",
+      "first_seen": "2026-07-24",
+      "last_seen": "2026-07-24",
+      "latest_update": "形式化定义结构泛化，证明在TC^0≠NC^1假设下纯Transformer无法学习结构泛化，揭示神经符号系统高分的机制局限。",
+      "title": "On the Computational Complexity of Structural Generalization",
+      "url": "https://arxiv.org/abs/2607.19573"
+    },
+    "triagent-financial-sentiment-multi-agent": {
+      "event_key": "triagent-financial-sentiment-multi-agent",
+      "first_seen": "2026-07-24",
+      "last_seen": "2026-07-24",
+      "latest_update": "TriAgent通过分层多智能体委员会与语义分歧指数路由，实现金融情感分析成本优化：LLM作为批评者F1达0.87且与规模无关，千万用户年省930万美元，Sharpe比率3.50。",
+      "title": "TriAgent: Divergence-Aware Multi-Agent Committees for Cost-Efficient Financial Sentiment Analysis",
+      "url": "https://arxiv.org/abs/2607.19794"
+    }
+  },
   "version": 1
 }
