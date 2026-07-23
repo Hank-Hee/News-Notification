@@ -90,25 +90,36 @@ class TwitterScraper(BaseScraper):
             "until": until.strftime("%Y-%m-%d"),
             "max_items": max(100, self.config.fetch_limit),
         }
-        url = f"{_APIFY_BASE}/acts/{self.config.actor_id}/runs?token={token}"
+        url = f"{_APIFY_BASE}/acts/{self.config.actor_id}/runs"
         try:
-            resp = await self.client.post(url, json=payload, timeout=30.0)
+            resp = await self.client.post(
+                url,
+                json=payload,
+                params={"maxTotalChargeUsd": self.config.max_total_charge_usd},
+                headers=self._auth_headers(token),
+                timeout=30.0,
+            )
             resp.raise_for_status()
             data = resp.json()["data"]
             run_id = data["id"]
             dataset_id = data["defaultDatasetId"]
             logger.debug(f"Started Apify run {run_id}, dataset {dataset_id}")
             return run_id, dataset_id
+        except httpx.HTTPStatusError as exc:
+            logger.error("Failed to start Apify run: %s", self._api_error(exc.response))
+            return None, None
         except Exception as exc:
-            logger.error(f"Failed to start Apify run: {exc}")
+            logger.error("Failed to start Apify run: %s", exc)
             return None, None
 
     async def _wait_for_run(self, token: str, run_id: str) -> bool:
-        url = f"{_APIFY_BASE}/actor-runs/{run_id}?token={token}"
+        url = f"{_APIFY_BASE}/actor-runs/{run_id}"
         elapsed = 0.0
         while elapsed < _MAX_WAIT:
             try:
-                resp = await self.client.get(url, timeout=10.0)
+                resp = await self.client.get(
+                    url, headers=self._auth_headers(token), timeout=10.0
+                )
                 resp.raise_for_status()
                 status = resp.json()["data"]["status"]
                 if status == "SUCCEEDED":
@@ -124,9 +135,11 @@ class TwitterScraper(BaseScraper):
         return False
 
     async def _fetch_dataset(self, token: str, dataset_id: str) -> list:
-        url = f"{_APIFY_BASE}/datasets/{dataset_id}/items?token={token}"
+        url = f"{_APIFY_BASE}/datasets/{dataset_id}/items"
         try:
-            resp = await self.client.get(url, timeout=30.0)
+            resp = await self.client.get(
+                url, headers=self._auth_headers(token), timeout=30.0
+            )
             resp.raise_for_status()
             return resp.json()
         except Exception as exc:
@@ -158,9 +171,15 @@ class TwitterScraper(BaseScraper):
             "max_items": max_items,
         }
 
-        url = f"{_APIFY_BASE}/acts/{self.config.actor_id}/runs?token={token}"
+        url = f"{_APIFY_BASE}/acts/{self.config.actor_id}/runs"
         try:
-            resp = await self.client.post(url, json=payload, timeout=30.0)
+            resp = await self.client.post(
+                url,
+                json=payload,
+                params={"maxTotalChargeUsd": self.config.max_total_charge_usd},
+                headers=self._auth_headers(token),
+                timeout=30.0,
+            )
             resp.raise_for_status()
             data = resp.json()["data"]
             run_id = data["id"]
@@ -174,6 +193,30 @@ class TwitterScraper(BaseScraper):
 
         rows = await self._fetch_dataset(token, dataset_id)
         return self._extract_reply_lines(item, rows, max_replies)
+
+    @staticmethod
+    def _auth_headers(token: str) -> dict[str, str]:
+        """Keep the Apify token out of request URLs and logs."""
+        return {"Authorization": f"Bearer {token}"}
+
+    @staticmethod
+    def _api_error(response: httpx.Response) -> str:
+        """Return a safe, actionable Apify error without exposing credentials."""
+        error_type = "unknown_error"
+        message = response.reason_phrase or "request rejected"
+        approval_url = ""
+        try:
+            error = response.json().get("error") or {}
+            error_type = str(error.get("type") or error_type)
+            message = str(error.get("message") or message)
+            approval_url = str((error.get("data") or {}).get("approvalUrl") or "")
+        except (ValueError, AttributeError):
+            pass
+
+        detail = f"HTTP {response.status_code} ({error_type}): {message}"
+        if approval_url:
+            detail += f" Approval required in Apify Console: {approval_url}"
+        return detail
 
     def _extract_reply_lines(self, item: ContentItem, rows: list, max_replies: int) -> List[str]:
         """Convert scweet rows into compact reply lines."""

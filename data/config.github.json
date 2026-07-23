@@ -13,7 +13,7 @@
     "throttle_sec": 0.2,
     "languages": ["zh"],
     "analysis_concurrency": 1,
-    "analysis_batch_size": 10,
+    "analysis_batch_size": 5,
     "enrichment_concurrency": 1
   },
   "sources": {
@@ -52,7 +52,7 @@
       {"name": "Lenny's Newsletter", "url": "https://www.lennysnewsletter.com/feed", "enabled": true, "category": "product-management"}
     ],
     "reddit": {
-      "enabled": true,
+      "enabled": false,
       "subreddits": [
         {"subreddit": "SideProject", "sort": "new", "fetch_limit": 15, "min_score": 2, "category": "builder-community"},
         {"subreddit": "startups", "sort": "new", "fetch_limit": 12, "min_score": 5, "category": "builder-community"},
@@ -69,9 +69,10 @@
       "mode": "apify",
       "apify_token_env": "APIFY_TOKEN",
       "actor_id": "altimis~scweet",
-      "fetch_limit": 50,
+      "max_total_charge_usd": 0.4,
+      "fetch_limit": 30,
       "category": "first-party-builder",
-      "fetch_reply_text": true,
+      "fetch_reply_text": false,
       "max_replies_per_tweet": 3,
       "max_tweets_to_expand": 3,
       "reply_min_likes": 3,
@@ -106,7 +107,7 @@
     "rule_prefilter_enabled": true,
     "time_window_hours": 24,
     "ai_score_threshold": 7.0,
-    "candidate_limit": 100,
+    "candidate_limit": 60,
     "per_source_limit": 15,
     "source_priority": ["twitter", "rss", "github", "hackernews", "reddit", "google_news", "gdelt"],
     "min_content_chars": 40,
