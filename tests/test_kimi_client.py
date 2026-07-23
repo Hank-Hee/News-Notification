@@ -115,6 +115,20 @@ def test_kimi_request_disables_thinking_and_uses_modern_json_parameters(monkeypa
     assert request["response_format"] == {"type": "json_object"}
     assert request["max_completion_tokens"] == 8192
     assert "max_tokens" not in request
+    assert "temperature" not in request
+
+
+def test_kimi_omits_temperature_even_when_caller_requests_override(monkeypatch):
+    monkeypatch.setenv("MOONSHOT_API_KEY", "moonshot-test-secret")
+    client = OpenAIClient(_config(temperature=0.2))
+    create = AsyncMock(return_value=_response('{"ok": true}'))
+    client.client = SimpleNamespace(
+        chat=SimpleNamespace(completions=SimpleNamespace(create=create))
+    )
+
+    asyncio.run(client.complete("Return JSON.", "Classify.", temperature=0.2))
+
+    assert "temperature" not in create.call_args.kwargs
 
 
 def test_kimi_thinking_incompatibility_fails_closed(monkeypatch, caplog):
@@ -165,11 +179,17 @@ def test_personal_config_and_workflow_pin_kimi_and_node24_actions():
     )
 
     assert config["ai"]["thinking"] == {"type": "disabled"}
+    assert config["ai"]["temperature"] == 0.6
     assert config["ai"]["max_completion_tokens"] == 8192
+    assert config["ai"]["analysis_concurrency"] == 1
+    assert config["ai"]["enrichment_concurrency"] == 1
     assert "max_tokens" not in config["ai"]
     assert "kimi-k2.6" in workflow
     assert "actions/setup-python@v7" in workflow
     assert "astral-sh/setup-uv@v9.0.0" in workflow
+    assert '"${KIMI_BASE_URL%/}/models"' in workflow
+    assert "Kimi API preflight passed" in workflow
+    assert 'paths:\n      - ".github/workflows/daily-summary.yml"' in workflow
     assert "HORIZON_WEBHOOK_URL" not in workflow
 
 

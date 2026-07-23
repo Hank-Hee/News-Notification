@@ -245,16 +245,18 @@ class OpenAIClient(AIClient):
         self.max_tokens = config.max_completion_tokens or config.max_tokens
         self.provider = config.provider.value
         self.thinking = config.thinking.model_dump() if config.thinking else None
+        self._strict_kimi_k26 = config.model == "kimi-k2.6"
         # Some newer models (e.g. Claude Opus 4.7 on Bedrock Converse) reject
         # `temperature`. We learn this on first 400 and stop sending it.
-        self._supports_temperature = True
+        # Kimi K2.6 uses a fixed temperature (0.6 in non-thinking mode) and its
+        # API documentation recommends omitting the parameter entirely.
+        self._supports_temperature = not self._strict_kimi_k26
         self._supports_response_format = self.provider not in self._NO_RESPONSE_FORMAT
         self._supports_token_limit = True
         self._use_max_completion_tokens = any(
             config.model.startswith(prefix)
             for prefix in self._MODELS_REQUIRING_MAX_COMPLETION_TOKENS
         ) or config.max_completion_tokens is not None
-        self._strict_kimi_k26 = config.model == "kimi-k2.6"
 
     @classmethod
     def _resolve_base_url(cls, config: AIConfig) -> Optional[str]:
@@ -415,6 +417,9 @@ class OpenAIClient(AIClient):
             "deprecated" in lowered
             or "not support" in lowered
             or "unsupported" in lowered
+            or "invalid" in lowered
+            or "fixed" in lowered
+            or "must be" in lowered
         )
 
     @staticmethod

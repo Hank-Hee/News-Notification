@@ -655,6 +655,7 @@ class HorizonOrchestrator:
                 response = await ai_client.complete(
                     system=TOPIC_DEDUP_SYSTEM,
                     user=TOPIC_DEDUP_USER.format(items=items_text),
+                    max_tokens=2048,
                 )
             result = parse_json_response(response)
             if result is None:
