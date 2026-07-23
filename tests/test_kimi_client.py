@@ -189,6 +189,7 @@ def test_personal_config_and_workflow_pin_kimi_and_node24_actions():
     assert "astral-sh/setup-uv@v9.0.0" in workflow
     assert '"${KIMI_BASE_URL%/}/models"' in workflow
     assert "Kimi API preflight passed" in workflow
+    assert 'paths:\n      - ".github/workflows/daily-summary.yml"' in workflow
     assert "HORIZON_WEBHOOK_URL" not in workflow
 
 

@@ -1,6 +1,11 @@
 name: Daily Horizon AI Summary
 
 on:
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/daily-summary.yml"
   schedule:
     # UTC 23:30 = next day 07:30 Asia/Shanghai, leaving deployment time before 08:00.
     - cron: "30 23 * * *"
