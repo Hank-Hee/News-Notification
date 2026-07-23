@@ -4,7 +4,7 @@ from datetime import datetime, timezone
 from enum import Enum
 import re
 from typing import Annotated, Literal, Optional, List, Dict, Any, NamedTuple, Union
-from pydantic import BaseModel, HttpUrl, Field, field_validator
+from pydantic import BaseModel, HttpUrl, Field, field_validator, model_validator
 
 
 class SourceType(str, Enum):
@@ -142,6 +142,7 @@ class AIConfig(BaseModel):
     max_tokens: int = 4096
     throttle_sec: float = 0.0
     analysis_concurrency: int = 1
+    analysis_batch_size: int = Field(default=1, ge=1, le=20)
     enrichment_concurrency: int = 1
     languages: List[str] = Field(default_factory=lambda: ["en"])
     # Azure OpenAI specific; required when provider == AZURE
@@ -483,10 +484,35 @@ class FilteringConfig(BaseModel):
 
     ai_score_threshold: float = 7.0
     time_window_hours: int = 24
+    rule_prefilter_enabled: bool = False
+    candidate_limit: int = Field(default=80, gt=0)
+    per_source_limit: int = Field(default=20, gt=0)
+    min_content_chars: int = Field(default=40, ge=0)
+    community_min_score: int = Field(default=10, ge=0)
+    final_min_items: int = Field(default=10, gt=0)
+    final_max_items: int = Field(default=12, gt=0)
+    deep_analysis_limit: int = Field(default=5, ge=0)
+    history_dedup_days: int = Field(default=7, ge=0)
     max_items: Optional[int] = Field(default=None, gt=0)
     category_groups: Dict[str, CategoryGroupConfig] = Field(default_factory=dict)
     default_group: str = "other"
     default_group_limit: Optional[int] = Field(default=None, gt=0)
+
+    @model_validator(mode="after")
+    def validate_final_item_bounds(self) -> "FilteringConfig":
+        if self.final_min_items > self.final_max_items:
+            raise ValueError("filtering.final_min_items cannot exceed final_max_items")
+        return self
+
+
+class BalanceConfig(BaseModel):
+    """Soft content-mix targets used after quality filtering."""
+
+    tech_target_ratio: float = Field(default=0.5, ge=0, le=1)
+    product_target_ratio: float = Field(default=0.5, ge=0, le=1)
+    china_target_ratio: float = Field(default=0.5, ge=0, le=1)
+    global_target_ratio: float = Field(default=0.5, ge=0, le=1)
+    strict: bool = False
 
 
 class Config(BaseModel):
@@ -496,6 +522,7 @@ class Config(BaseModel):
     ai: AIConfig
     sources: SourcesConfig
     filtering: FilteringConfig
+    balance: BalanceConfig = Field(default_factory=BalanceConfig)
     extractors: Dict[str, ExtractorConfig] = Field(default_factory=dict)
     email: Optional[EmailConfig] = None
     webhook: Optional[WebhookConfig] = None

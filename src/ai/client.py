@@ -12,7 +12,7 @@ from google.genai import types
 
 from ..models import AIConfig, AIProvider, AI_PROVIDER_DEFAULTS
 from rich import print as rich_print
-from .tokens import record_usage
+from .tokens import record_request
 
 
 _ENV_VAR_RE = re.compile(r"^[A-Za-z_][A-Za-z0-9_]*$")
@@ -86,6 +86,17 @@ def _normalize_ollama_base_url(base_url: str) -> str:
     return f"{normalized}/v1"
 
 
+def _require_resolved(value: Optional[str], field_name: str) -> None:
+    """Fail clearly when a required AI setting still contains an unset ${VAR}."""
+    if not value:
+        return
+    match = re.search(r"\$\{([A-Za-z_][A-Za-z0-9_]*)\}", value)
+    if match:
+        raise ValueError(
+            f"Missing environment variable {match.group(1)} required by ai.{field_name}"
+        )
+
+
 class AIClient(ABC):
     """Abstract base class for AI clients."""
 
@@ -154,20 +165,26 @@ class AnthropicClient(AIClient):
         temperature = self.temperature if temperature is None else temperature
         max_tokens = self.max_tokens if max_tokens is None else max_tokens
 
-        message = await self.client.messages.create(
-            model=self.model,
-            max_tokens=max_tokens,
-            temperature=temperature,
-            system=system,
-            messages=[{"role": "user", "content": user}]
-        )
+        try:
+            message = await self.client.messages.create(
+                model=self.model,
+                max_tokens=max_tokens,
+                temperature=temperature,
+                system=system,
+                messages=[{"role": "user", "content": user}]
+            )
+        except Exception:
+            record_request(self.config.provider.value)
+            raise
         usage = getattr(message, "usage", None)
         if usage is not None:
-            record_usage(
+            record_request(
                 self.config.provider.value,
                 input_tokens=getattr(usage, "input_tokens", 0),
                 output_tokens=getattr(usage, "output_tokens", 0),
             )
+        else:
+            record_request(self.config.provider.value)
         return message.content[0].text
 
 
@@ -200,6 +217,9 @@ class OpenAIClient(AIClient):
         """
         self.config = config
 
+        _require_resolved(config.model, "model")
+        _require_resolved(config.base_url, "base_url")
+
         fallback = "no_key" if config.provider == AIProvider.OLLAMA else None
         api_key = _resolve_api_key(config, fallback=fallback)
 
@@ -216,6 +236,8 @@ class OpenAIClient(AIClient):
         # Some newer models (e.g. Claude Opus 4.7 on Bedrock Converse) reject
         # `temperature`. We learn this on first 400 and stop sending it.
         self._supports_temperature = True
+        self._supports_response_format = self.provider not in self._NO_RESPONSE_FORMAT
+        self._supports_token_limit = True
         self._use_max_completion_tokens = any(
             config.model.startswith(prefix)
             for prefix in self._MODELS_REQUIRING_MAX_COMPLETION_TOKENS
@@ -261,45 +283,40 @@ class OpenAIClient(AIClient):
         if self.provider in self._TEMP_CLAMP and temperature <= 0:
             temperature = 0.01
 
-        try:
-            response = await self._do_request(
-                system=system,
-                user=user,
-                temperature=temperature,
-                max_tokens=max_tokens,
-                include_temperature=self._supports_temperature,
-                use_max_completion_tokens=self._use_max_completion_tokens,
-            )
-        except Exception as exc:
-            if self._supports_temperature and self._is_temperature_unsupported(str(exc)):
-                self._supports_temperature = False
-                response = await self._do_request(
-                    system=system,
-                    user=user,
-                    temperature=temperature,
-                    max_tokens=max_tokens,
-                    include_temperature=False,
-                    use_max_completion_tokens=self._use_max_completion_tokens,
-                )
-            elif not self._use_max_completion_tokens and self._is_max_tokens_unsupported(str(exc)):
-                self._use_max_completion_tokens = True
+        for _ in range(6):
+            try:
                 response = await self._do_request(
                     system=system,
                     user=user,
                     temperature=temperature,
                     max_tokens=max_tokens,
                     include_temperature=self._supports_temperature,
-                    use_max_completion_tokens=True,
+                    include_response_format=self._supports_response_format,
+                    include_token_limit=self._supports_token_limit,
+                    use_max_completion_tokens=self._use_max_completion_tokens,
                 )
-            else:
+                break
+            except Exception as exc:
+                message = str(exc)
+                if (
+                    self._supports_response_format
+                    and self._is_response_format_unsupported(message)
+                ):
+                    self._supports_response_format = False
+                    continue
+                if self._supports_temperature and self._is_temperature_unsupported(message):
+                    self._supports_temperature = False
+                    continue
+                token_fallback = self._token_fallback_mode(message)
+                if self._supports_token_limit and token_fallback is not None:
+                    if token_fallback == self._use_max_completion_tokens:
+                        self._supports_token_limit = False
+                    else:
+                        self._use_max_completion_tokens = token_fallback
+                    continue
                 raise
-        usage = getattr(response, "usage", None)
-        if usage is not None:
-            record_usage(
-                self.provider,
-                input_tokens=getattr(usage, "prompt_tokens", 0),
-                output_tokens=getattr(usage, "completion_tokens", 0),
-            )
+        else:  # pragma: no cover - all supported fallbacks converge before this
+            raise RuntimeError("AI optional-parameter compatibility fallback did not converge")
         return response.choices[0].message.content
 
     async def _do_request(
@@ -310,6 +327,8 @@ class OpenAIClient(AIClient):
         temperature: float,
         max_tokens: int,
         include_temperature: bool,
+        include_response_format: bool,
+        include_token_limit: bool,
         use_max_completion_tokens: bool,
     ):
         request_kwargs = {
@@ -319,13 +338,38 @@ class OpenAIClient(AIClient):
                 {"role": "user", "content": user},
             ],
         }
-        token_param = "max_completion_tokens" if use_max_completion_tokens else "max_tokens"
-        request_kwargs[token_param] = max_tokens
+        if include_token_limit:
+            token_param = "max_completion_tokens" if use_max_completion_tokens else "max_tokens"
+            request_kwargs[token_param] = max_tokens
         if include_temperature:
             request_kwargs["temperature"] = temperature
-        if self.provider not in self._NO_RESPONSE_FORMAT:
+        if include_response_format:
             request_kwargs["response_format"] = {"type": "json_object"}
-        return await self.client.chat.completions.create(**request_kwargs)
+        try:
+            response = await self.client.chat.completions.create(**request_kwargs)
+        except Exception:
+            record_request(self.provider)
+            raise
+        usage = getattr(response, "usage", None)
+        if usage is None:
+            record_request(self.provider)
+        else:
+            record_request(
+                self.provider,
+                input_tokens=getattr(usage, "prompt_tokens", 0),
+                output_tokens=getattr(usage, "completion_tokens", 0),
+            )
+        return response
+
+    @staticmethod
+    def _is_response_format_unsupported(message: str) -> bool:
+        lowered = message.lower()
+        return (
+            "response_format" in lowered or "json mode" in lowered
+        ) and any(
+            marker in lowered
+            for marker in ("not support", "unsupported", "unknown", "unrecognized", "invalid")
+        )
 
     @staticmethod
     def _is_temperature_unsupported(message: str) -> bool:
@@ -340,6 +384,28 @@ class OpenAIClient(AIClient):
     def _is_max_tokens_unsupported(message: str) -> bool:
         lowered = message.lower()
         return "max_tokens" in lowered and "max_completion_tokens" in lowered
+
+    @staticmethod
+    def _token_fallback_mode(message: str) -> Optional[bool]:
+        """Return desired token parameter, or the current mode when it should be omitted."""
+        lowered = message.lower()
+        rejection = any(
+            marker in lowered
+            for marker in ("not support", "unsupported", "unknown", "unrecognized", "invalid")
+        )
+        if "max_tokens" in lowered and "max_completion_tokens" in lowered:
+            if "max_completion_tokens" in lowered and (
+                "use max_completion_tokens" in lowered or "instead" in lowered
+            ):
+                return True
+            if "use max_tokens" in lowered:
+                return False
+            return True
+        if "max_completion_tokens" in lowered and rejection:
+            return True
+        if "max_tokens" in lowered and rejection:
+            return False
+        return None
 
 
 class AzureOpenAIClient(AIClient):
@@ -430,11 +496,13 @@ class AzureOpenAIClient(AIClient):
 
         usage = getattr(response, "usage", None)
         if usage is not None:
-            record_usage(
+            record_request(
                 "openai",
                 input_tokens=getattr(usage, "prompt_tokens", 0),
                 output_tokens=getattr(usage, "completion_tokens", 0),
             )
+        else:
+            record_request("openai")
         return response.choices[0].message.content
 
     async def _create_completion(
@@ -526,7 +594,9 @@ class GeminiClient(AIClient):
             total = getattr(usage, "total_token_count", 0) or 0
             prompt = getattr(usage, "prompt_token_count", 0) or 0
             completion = max(0, total - prompt)
-            record_usage("gemini", input_tokens=prompt, output_tokens=completion)
+            record_request("gemini", input_tokens=prompt, output_tokens=completion)
+        else:
+            record_request("gemini")
         return response.text
 
 

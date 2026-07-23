@@ -1,57 +1,73 @@
-"""Content enrichment using AI (second-pass analysis).
+"""Grounded Chinese deep analysis for the highest-ranked daily items."""
 
-For items that pass the score threshold, this module:
-1. Searches the web for relevant context (via DuckDuckGo)
-2. Feeds search results + item content to AI to generate grounded background knowledge
-"""
+from __future__ import annotations
 
 import asyncio
 import json
-import re
-import sys
 import os
-from typing import List, Optional
-from tenacity import retry, stop_after_attempt, wait_exponential
-from rich.progress import Progress, SpinnerColumn, BarColumn, TextColumn, MofNCompleteColumn
+import sys
+from typing import List
+
 from ddgs import DDGS
+from pydantic import BaseModel, Field, ValidationError
+from rich.progress import BarColumn, MofNCompleteColumn, Progress, SpinnerColumn, TextColumn
+from tenacity import retry, stop_after_attempt, wait_exponential
 
 from .client import AIClient
 from .prompts import (
-    CONCEPT_EXTRACTION_SYSTEM, CONCEPT_EXTRACTION_USER,
-    CONTENT_ENRICHMENT_SYSTEM, CONTENT_ENRICHMENT_USER,
+    CONCEPT_EXTRACTION_SYSTEM,
+    CONCEPT_EXTRACTION_USER,
+    CONTENT_ENRICHMENT_SYSTEM,
+    CONTENT_ENRICHMENT_USER,
+    TREND_OVERVIEW_SYSTEM,
+    TREND_OVERVIEW_USER,
 )
+from .tokens import usage_stage
 from .utils import parse_json_response
 from ..models import ContentItem
+from ..redaction import is_fatal_ai_error, redact_secrets
+
+
+class DeepAnalysisResult(BaseModel):
+    title_zh: str
+    what_happened: str
+    why_it_matters: str
+    key_details: str
+    industry_or_product_impact: str
+    limitations_or_uncertainties: str
+    what_to_watch_next: str
+    community_view: str = ""
+    sources: list[str] = Field(default_factory=list)
+
+
+class TrendOverviewResult(BaseModel):
+    trends: list[str] = Field(min_length=3, max_length=5)
 
 
 class ContentEnricher:
-    """Enriches high-scoring content items with background knowledge."""
+    """Enriches selected Top items while degrading safely when search fails."""
 
     def __init__(self, ai_client: AIClient):
         self.client = ai_client
 
     def _get_concurrency(self) -> int:
-        """Return the configured enrichment concurrency, clamped to 1 or above."""
         config = getattr(self.client, "config", None)
-        concurrency = getattr(config, "enrichment_concurrency", 1)
-        return max(concurrency, 1)
+        return max(getattr(config, "enrichment_concurrency", 1), 1)
 
     async def enrich_batch(self, items: List[ContentItem]) -> None:
-        """Enrich items in-place with background knowledge.
+        semaphore = asyncio.Semaphore(self._get_concurrency())
 
-        Args:
-            items: Content items to enrich (modified in-place)
-        """
-        concurrency = self._get_concurrency()
-        semaphore = asyncio.Semaphore(concurrency)
-
-        async def _process(item: ContentItem, progress_task) -> None:
+        async def process(item: ContentItem, progress_task: int) -> None:
             async with semaphore:
                 try:
                     await self._enrich_item(item)
-                except Exception as e:
-                    print(f"Error enriching item {item.id}: {e}, falling back to translation")
-                    await self._translate_item(item)
+                except Exception as error:
+                    if is_fatal_ai_error(error):
+                        raise
+                    print(
+                        f"Error enriching item {item.id}: {redact_secrets(error)}; "
+                        "keeping the scored Chinese summary"
+                    )
             progress.advance(progress_task)
 
         with Progress(
@@ -61,199 +77,147 @@ class ContentEnricher:
             MofNCompleteColumn(),
             transient=True,
         ) as progress:
-            task = progress.add_task("Enriching", total=len(items))
-            coros = [
-                _process(item, task) for item in items
-            ]
-            await asyncio.gather(*coros)
+            task = progress.add_task("Enriching Top items", total=len(items))
+            await asyncio.gather(*(process(item, task) for item in items))
 
-    async def _web_search(self, query: str, max_results: int = 3) -> list:
-        """Search the web for context via DuckDuckGo.
-
-        Returns:
-            List of dicts with keys: title, url, body
-        """
+    async def _web_search(self, query: str, max_results: int = 3) -> list[dict[str, str]]:
         try:
-            # Suppress primp "Impersonate ... does not exist" stderr warning
             stderr = sys.stderr
             sys.stderr = open(os.devnull, "w")
             try:
-                ddgs = DDGS()
-                results = await asyncio.to_thread(ddgs.text, query, max_results=max_results)
+                results = await asyncio.to_thread(DDGS().text, query, max_results=max_results)
             finally:
                 sys.stderr.close()
                 sys.stderr = stderr
         except Exception:
             return []
-
         return [
-            {"title": r.get("title", ""), "url": r.get("href", ""), "body": r.get("body", "")}
-            for r in (results or [])
+            {
+                "title": str(result.get("title", "")),
+                "url": str(result.get("href", "")),
+                "body": str(result.get("body", "")),
+            }
+            for result in (results or [])
         ]
 
-    @staticmethod
-    def _parse_json_response(response: str) -> Optional[dict]:
-        """Try multiple strategies to extract a JSON object from an AI response.
-
-        Returns the parsed dict, or None if all strategies fail.
-        """
-        return parse_json_response(response)
-
-    async def _extract_concepts(self, item: ContentItem, content_text: str) -> List[str]:
-        """Ask AI to identify concepts that need explanation.
-
-        Args:
-            item: Content item
-            content_text: Extracted content text
-
-        Returns:
-            List of search queries for concepts that need explanation
-        """
-        user_prompt = CONCEPT_EXTRACTION_USER.format(
-            title=item.title,
-            summary=item.ai_summary or item.title,
-            tags=", ".join(item.ai_tags) if item.ai_tags else "",
-            content=content_text[:1000],
-        )
-
+    async def _extract_concepts(self, item: ContentItem, content_text: str) -> list[str]:
         try:
-            response = await self.client.complete(
-                system=CONCEPT_EXTRACTION_SYSTEM,
-                user=user_prompt,
-            )
-            result = self._parse_json_response(response)
-            if result is None:
-                return []
-            queries = result.get("queries", [])
-            return queries[:3]
-        except Exception:
+            with usage_stage("deep_analysis"):
+                response = await self.client.complete(
+                    system=CONCEPT_EXTRACTION_SYSTEM,
+                    user=CONCEPT_EXTRACTION_USER.format(
+                        title=item.title,
+                        summary=item.ai_summary or item.title,
+                        tags=", ".join(item.ai_tags),
+                        content=content_text[:1200],
+                    ),
+                )
+            parsed = parse_json_response(response) or {}
+            queries = parsed.get("queries", [])
+            return [str(query) for query in queries[:3] if str(query).strip()]
+        except Exception as error:
+            if is_fatal_ai_error(error):
+                raise
             return []
 
-    @retry(
-        stop=stop_after_attempt(3),
-        wait=wait_exponential(min=2, max=10)
-    )
+    @retry(stop=stop_after_attempt(3), wait=wait_exponential(min=2, max=10))
     async def _enrich_item(self, item: ContentItem) -> None:
-        """Enrich a single item with background knowledge.
-
-        Steps:
-        1. Ask AI which concepts in the news need explanation
-        2. Search the web for those concepts
-        3. Ask AI to generate background based on search results
-
-        Args:
-            item: Content item to enrich (modified in-place via metadata)
-        """
-        # Extract content text and comments separately
-        content_text = ""
+        content_text = item.content or ""
         comments_text = ""
-        if item.content:
-            if "--- Top Comments ---" in item.content:
-                main, comments_part = item.content.split("--- Top Comments ---", 1)
-                content_text = main.strip()[:4000]
-                comments_text = comments_part.strip()[:2000]
-            else:
-                content_text = item.content[:4000]
+        if "--- Top Comments ---" in content_text:
+            content_text, comments_text = content_text.split("--- Top Comments ---", 1)
+        content_text = content_text.strip()[:5000]
+        comments_text = comments_text.strip()[:2000]
 
-        # Step 1: AI identifies concepts to explain
-        queries = await self._extract_concepts(item, content_text)
-
-        # Step 2: Search web for each concept
-        all_results = []
-        web_sections = []
-        for query in queries:
-            results = await self._web_search(query)
-            all_results.extend(results)
-            if results:
-                lines = [f"- [{r['title']}]({r['url']}): {r['body']}" for r in results]
-                web_sections.append(f"**{query}:**\n" + "\n".join(lines))
-        web_context = "\n\n".join(web_sections) if web_sections else ""
-
-        # Index of available URLs for citation validation
-        available_urls = {r["url"]: r["title"] for r in all_results if r.get("url")}
-
-        # Step 3: AI generates background grounded in search results
-        user_prompt = CONTENT_ENRICHMENT_USER.format(
-            title=item.title,
-            url=str(item.url),
-            summary=item.ai_summary or item.title,
-            score=item.ai_score or 0,
-            reason=item.ai_reason or "",
-            tags=", ".join(item.ai_tags) if item.ai_tags else "",
-            content=content_text,
-            comments_section=f"\n**Community Comments:**\n{comments_text}" if comments_text else "",
-            web_context=web_context or "No web search results available.",
+        results: list[dict[str, str]] = []
+        for query in await self._extract_concepts(item, content_text):
+            results.extend(await self._web_search(query))
+        web_context = "\n".join(
+            f"- {result['title']} | {result['url']} | {result['body']}" for result in results
+        ) or "没有可用的背景搜索结果。"
+        available_urls = {str(item.url): item.title}
+        available_urls.update(
+            {result["url"]: result["title"] for result in results if result["url"]}
         )
 
-        response = await self.client.complete(
-            system=CONTENT_ENRICHMENT_SYSTEM,
-            user=user_prompt,
-        )
-
-        # Parse JSON response with robust fallback
-        result = self._parse_json_response(response)
-        if result is None:
-            # Gracefully degrade: fall back to a lightweight translation
-            # instead of dropping the item untranslated.
-            print(f"Warning: could not parse enrichment response for {item.id}, falling back to translation")
-            await self._translate_item(item)
-            return
-
-        # Combine structured sub-fields into per-language detailed_summary
-        for lang in ("en", "zh"):
-            if result.get(f"title_{lang}"):
-                val = result[f"title_{lang}"]
-                item.metadata[f"title_{lang}"] = val.get("text") or str(val) if isinstance(val, dict) else str(val)
-
-            parts = []
-            for field in ("whats_new", "why_it_matters", "key_details"):
-                text = result.get(f"{field}_{lang}", "").strip()
-                if text:
-                    parts.append(text)
-            if parts:
-                item.metadata[f"detailed_summary_{lang}"] = " ".join(parts)
-
-            if result.get(f"background_{lang}"):
-                val = result[f"background_{lang}"]
-                item.metadata[f"background_{lang}"] = val.get("text") or str(val) if isinstance(val, dict) else str(val)
-
-            if result.get(f"community_discussion_{lang}"):
-                val = result[f"community_discussion_{lang}"]
-                item.metadata[f"community_discussion_{lang}"] = val.get("text") or str(val) if isinstance(val, dict) else str(val)
-
-        # Store citation sources — only URLs that actually came from our search results
-        if result.get("sources") and available_urls:
-            valid = [
-                {"url": u, "title": available_urls[u]}
-                for u in result["sources"]
-                if u in available_urls
-            ]
-            if valid:
-                item.metadata["sources"] = valid
-
-        # Backward-compatible fallback fields (English as default)
-        item.metadata["detailed_summary"] = item.metadata.get("detailed_summary_en", "")
-        item.metadata["background"] = item.metadata.get("background_en", "")
-        item.metadata["community_discussion"] = item.metadata.get("community_discussion_en", "")
-
-    async def _translate_item(self, item: ContentItem) -> None:
-        """Lightweight translation fallback: when full enrichment fails, at least
-        translate the title and summary to Chinese so the item is not dropped."""
-        try:
+        with usage_stage("deep_analysis"):
             response = await self.client.complete(
-                system="You are a translator. Translate to Simplified Chinese. Return only valid JSON, no other text.",
-                user=(
-                    f'Title: {item.title}\n'
-                    f'Summary: {item.ai_summary or item.title}\n\n'
-                    'Return JSON:\n'
-                    '{"title_zh": "<中文标题>", "summary_zh": "<用中文写1-2句摘要>"}'
+                system=CONTENT_ENRICHMENT_SYSTEM,
+                user=CONTENT_ENRICHMENT_USER.format(
+                    title=item.title,
+                    url=str(item.url),
+                    summary=item.ai_summary or item.title,
+                    score=item.ai_score or 0,
+                    reason=item.ai_reason or "",
+                    tags=", ".join(item.ai_tags),
+                    content=content_text or "目前没有抓取到正文。",
+                    comments_section=(
+                        f"\n社区讨论：\n{comments_text}" if comments_text else ""
+                    ),
+                    web_context=web_context,
                 ),
             )
-            result = self._parse_json_response(response)
-            if result:
-                if result.get("title_zh"):
-                    item.metadata["title_zh"] = result["title_zh"]
-                if result.get("summary_zh"):
-                    item.metadata["detailed_summary_zh"] = result["summary_zh"]
-        except Exception:
-            pass
+        parsed = parse_json_response(response)
+        try:
+            result = DeepAnalysisResult.model_validate(parsed)
+        except ValidationError as error:
+            raise ValueError("Deep analysis response failed validation") from error
+
+        item.metadata.update(
+            {
+                "title_zh": result.title_zh,
+                "what_happened": result.what_happened,
+                "why_it_matters": result.why_it_matters,
+                "key_details": result.key_details,
+                "industry_or_product_impact": result.industry_or_product_impact,
+                "limitations_or_uncertainties": result.limitations_or_uncertainties,
+                "what_to_watch_next": result.what_to_watch_next,
+                "community_view": result.community_view,
+                "deep_analysis": True,
+            }
+        )
+        valid_sources = [url for url in result.sources if url in available_urls][:3]
+        item.metadata["sources"] = [
+            {"url": url, "title": available_urls[url]} for url in valid_sources
+        ]
+
+    async def generate_trend_overview(self, items: list[ContentItem]) -> list[str]:
+        if not items:
+            return []
+        payload = [
+            {
+                "title": item.metadata.get("title_zh") or item.title,
+                "summary": item.ai_summary,
+                "category": item.metadata.get("category"),
+                "region": item.metadata.get("region"),
+                "score": item.ai_score,
+            }
+            for item in items
+        ]
+        try:
+            with usage_stage("trend_overview"):
+                response = await self.client.complete(
+                    system=TREND_OVERVIEW_SYSTEM,
+                    user=TREND_OVERVIEW_USER.format(
+                        items=json.dumps(payload, ensure_ascii=False, indent=2)
+                    ),
+                )
+            result = TrendOverviewResult.model_validate(parse_json_response(response))
+            return result.trends
+        except Exception as error:
+            if is_fatal_ai_error(error):
+                raise
+            return self._fallback_trends(items)
+
+    @staticmethod
+    def _fallback_trends(items: list[ContentItem]) -> list[str]:
+        categories = {str(item.metadata.get("category", "")) for item in items}
+        regions = {str(item.metadata.get("region", "")) for item in items}
+        trends = [f"今日共筛选出 {len(items)} 条高价值 AI 增量，按综合价值排序。"]
+        if "tech" in categories:
+            trends.append("技术侧重点覆盖模型、Agent、AI Coding 与基础设施的实质更新。")
+        if "product" in categories:
+            trends.append("产品侧关注新发布、重要功能变化和可验证的企业落地。")
+        if {"china", "global"}.issubset(regions):
+            trends.append("中国与海外动态均有入选，便于观察两地产品和技术节奏。")
+        return trends[:5]

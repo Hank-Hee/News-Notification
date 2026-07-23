@@ -4,13 +4,20 @@ import asyncio
 from collections import defaultdict
 from dataclasses import dataclass, field
 from datetime import datetime, timedelta, timezone
+import json
+from pathlib import Path
 from typing import Dict, List, Literal, Optional
 from urllib.parse import unquote_plus, urlsplit
+from zoneinfo import ZoneInfo
 import httpx
 from rich.console import Console
 
 from .models import Config, ContentItem
 from .storage.manager import StorageManager, safe_output_path
+from ._file_utils import _atomic_write_text
+from .history import EventHistoryIndex
+from .prefilter import prefilter_items
+from .redaction import is_fatal_ai_error, redact_secrets
 from .services.email import EmailManager
 from .services.webhook import WebhookNotifier
 from .scrapers.github import GitHubScraper
@@ -28,7 +35,7 @@ from .ai.client import create_ai_client
 from .ai.analyzer import ContentAnalyzer
 from .ai.summarizer import DailySummarizer
 from .ai.enricher import ContentEnricher
-from .ai.tokens import get_usage_snapshot
+from .ai.tokens import get_usage_snapshot, reset_usage, usage_stage
 
 
 _TRACKING_QUERY_PARAMETERS = {
@@ -181,6 +188,7 @@ class HorizonOrchestrator:
             else None
         )
         self.last_fetch_report: Optional[FetchReport] = None
+        self.history_index = EventHistoryIndex().load()
 
     async def run(self, force_hours: int = None) -> None:
         """Execute the complete workflow.
@@ -188,6 +196,7 @@ class HorizonOrchestrator:
         Args:
             force_hours: Optional override for time window in hours
         """
+        reset_usage()
         self.console.print("[bold cyan]🌅 Horizon - Starting aggregation...[/bold cyan]\n")
 
         # Check email subscriptions if configured
@@ -216,24 +225,55 @@ class HorizonOrchestrator:
                 self.console.print("[yellow]No new content found. Exiting.[/yellow]")
                 return
 
-            # 3. Merge cross-source duplicates (same URL from different sources)
-            merged_items = self.merge_cross_source_duplicates(all_items)
-            if len(merged_items) < len(all_items):
+            # 3. Deterministic prefilter before spending any model tokens.
+            if self.config.filtering.rule_prefilter_enabled:
+                prefilter_result = prefilter_items(
+                    all_items,
+                    since=since,
+                    config=self.config.filtering,
+                )
                 self.console.print(
-                    f"🔗 Merged {len(all_items) - len(merged_items)} cross-source duplicates "
+                    "🧹 Prefilter statistics: "
+                    + json.dumps(prefilter_result.stats.to_dict(), ensure_ascii=False)
+                    + "\n"
+                )
+                if not prefilter_result.items:
+                    self.console.print(
+                        "[yellow]No candidates survived the deterministic prefilter.[/yellow]"
+                    )
+                    return
+                prefiltered_items = prefilter_result.items
+            else:
+                prefiltered_items = all_items
+
+            # 4. Merge any remaining cross-source duplicates.
+            merged_items = self.merge_cross_source_duplicates(prefiltered_items)
+            if len(merged_items) < len(prefiltered_items):
+                self.console.print(
+                    f"🔗 Merged {len(prefiltered_items) - len(merged_items)} cross-source duplicates "
                     f"→ {len(merged_items)} unique items\n"
                 )
 
-            # 4. Analyze with AI
+            # 5. Batch-score with Kimi.
             analyzed_items = await self._analyze_content(merged_items)
             self.console.print(f"🤖 Analyzed {len(analyzed_items)} items with AI\n")
 
-            # 5. Filter, deduplicate, and balance the digest
+            # 6. Threshold and semantic deduplication.
             filtering_result = await self.filter_items(
                 analyzed_items,
                 apply_balance=False,
             )
             important_items = filtering_result.items
+
+            history_result = self.history_index.filter_recent(
+                important_items,
+                days=self.config.filtering.history_dedup_days,
+            )
+            important_items = history_result.items
+            self.console.print(
+                f"🗓️ History dedup excluded {history_result.excluded}; "
+                f"allowed substantive updates {history_result.allowed_updates}\n"
+            )
 
             # 5.5 Optional second-stage Twitter reply expansion + targeted re-analysis
             await self._expand_twitter_discussion(important_items)
@@ -250,53 +290,29 @@ class HorizonOrchestrator:
                 self.console.print(f"      • {source_key}: {count}")
             self.console.print("")
 
-            # 6. Search related stories + enrich with background knowledge (2nd AI pass)
-            await self._enrich_important_items(important_items)
+            # 7. Search and deep-analyze Top N only, then summarize daily trends once.
+            trend_overview = await self._enrich_important_items(important_items)
 
-            # 7. Generate and save daily summaries for each configured language
-            today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+            # 8. Generate and save the Chinese daily.
+            today = datetime.now(ZoneInfo("Asia/Shanghai")).strftime("%Y-%m-%d")
             for lang in self.config.ai.languages:
                 summarizer = DailySummarizer()
-                summary = await summarizer.generate_summary(important_items, today, len(all_items), language=lang)
+                summary = await summarizer.generate_summary(
+                    important_items,
+                    today,
+                    len(all_items),
+                    language=lang,
+                    trend_overview=trend_overview,
+                )
 
                 # Save to data/summaries/
                 summary_path = self.storage.save_daily_summary(today, summary, language=lang)
                 self.console.print(f"💾 Saved {lang.upper()} summary to: {summary_path}\n")
 
-                # Copy to docs/ for GitHub Pages
-                try:
-                    from pathlib import Path
-
-                    post_filename = f"{today}-summary-{lang}.md"
-                    posts_dir = Path("docs/_posts")
-                    posts_dir.mkdir(parents=True, exist_ok=True)
-
-                    dest_path = safe_output_path(posts_dir, post_filename)
-
-                    # Add Jekyll front matter
-                    front_matter = (
-                        "---\n"
-                        "layout: default\n"
-                        f"title: \"Horizon Summary: {today} ({lang.upper()})\"\n"
-                        f"date: {today}\n"
-                        f"lang: {lang}\n"
-                        "---\n\n"
-                    )
-
-                    # Strip leading H1 header to avoid duplication with Jekyll title
-                    summary_content = summary
-                    first_line = summary_content.strip().split("\n")[0]
-                    if first_line.startswith("# "):
-                        parts = summary_content.split("\n", 1)
-                        if len(parts) > 1:
-                            summary_content = parts[1].strip()
-
-                    with open(dest_path, "w", encoding="utf-8") as f:
-                        f.write(front_matter + summary_content)
-
-                    self.console.print(f"📄 Copied {lang.upper()} summary to GitHub Pages: {dest_path}\n")
-                except Exception as e:
-                    self.console.print(f"[yellow]⚠️  Failed to copy {lang.upper()} summary to docs/: {e}[/yellow]\n")
+                dest_path = self._write_pages_post(today, summary, lang)
+                self.console.print(
+                    f"📄 Copied {lang.upper()} summary to GitHub Pages: {dest_path}\n"
+                )
 
                 # Send email if configured
                 if self.email_manager and self.config.email and self.config.email.enabled:
@@ -316,33 +332,78 @@ class HorizonOrchestrator:
                         summarizer=summarizer,
                     )
 
+            self.history_index.update(
+                important_items,
+                today=datetime.strptime(today, "%Y-%m-%d").date(),
+            )
+            self.history_index.save()
+            self._copy_history_for_pages()
+
             self.console.print("[bold green]✅ Horizon completed successfully![/bold green]")
             usage = get_usage_snapshot()
-            if usage.total_tokens > 0:
+            self.console.print(
+                f"\n🧮 AI requests: {usage.total_requests} "
+                f"(analysis: {usage.requests_by_stage.get('analysis', 0)}, "
+                f"deep analysis: {usage.requests_by_stage.get('deep_analysis', 0)})"
+            )
+            self.console.print(
+                f"   Token usage: input {usage.total_input_tokens}, "
+                f"output {usage.total_output_tokens}, total {usage.total_tokens}"
+            )
+            if usage.usage_reported_requests < usage.total_requests:
+                self.console.print("   Provider 未返回 Token 用量（部分或全部请求）")
+            for provider, provider_usage in sorted(usage.per_provider.items()):
                 self.console.print(
-                    f"\n🧮 Token usage this run: "
-                    f"{usage.total_tokens} tokens "
-                    f"(input: {usage.total_input_tokens}, output: {usage.total_output_tokens})"
+                    f"   • {provider}: {provider_usage.requests} requests, "
+                    f"{provider_usage.total} tokens"
                 )
-                for provider, u in sorted(usage.per_provider.items()):
-                    if u.total <= 0:
-                        continue
-                    self.console.print(
-                        f"   • {provider}: {u.total} tokens "
-                        f"(in: {u.input_tokens}, out: {u.output_tokens})"
-                    )
 
         except Exception as e:
-            self.console.print(f"[bold red]❌ Error: {e}[/bold red]")
+            safe_error = redact_secrets(e)
+            self.console.print(f"[bold red]❌ Error: {safe_error}[/bold red]")
 
             # Send webhook failure notification if configured
             if self.webhook_notifier:
                 await self.webhook_notifier.send_failure(
                     date=datetime.now(timezone.utc).strftime("%Y-%m-%d"),
-                    error_message=str(e),
+                    error_message=safe_error,
                 )
 
             raise
+
+    @staticmethod
+    def _write_pages_post(today: str, summary: str, language: str) -> Path:
+        """Write a Jekyll post atomically and return its path."""
+        posts_dir = Path("docs/_posts")
+        posts_dir.mkdir(parents=True, exist_ok=True)
+        destination = safe_output_path(
+            posts_dir,
+            f"{today}-summary-{language}.md",
+        )
+        front_matter = (
+            "---\n"
+            "layout: default\n"
+            f'title: "Horizon AI Daily · {today}"\n'
+            f"date: {today}\n"
+            f"lang: {language}\n"
+            "---\n\n"
+        )
+        summary_content = summary
+        first_line = summary_content.strip().split("\n")[0]
+        if first_line.startswith("# "):
+            parts = summary_content.split("\n", 1)
+            summary_content = parts[1].strip() if len(parts) > 1 else ""
+        _atomic_write_text(destination, front_matter + summary_content + "\n")
+        return destination
+
+    def _copy_history_for_pages(self) -> Path:
+        """Publish the history index with the static site for the next Action run."""
+        destination_dir = Path("docs/data/history")
+        destination_dir.mkdir(parents=True, exist_ok=True)
+        destination = safe_output_path(destination_dir, "event_index.json")
+        content = self.history_index.path.read_text(encoding="utf-8")
+        _atomic_write_text(destination, content)
+        return destination
 
     def _determine_time_window(self, force_hours: int = None) -> datetime:
         if force_hours:
@@ -454,7 +515,7 @@ class HorizonOrchestrator:
         try:
             items = await scraper.fetch(since)
         except Exception as exc:
-            error = f"{type(exc).__name__}: {exc}"
+            error = redact_secrets(f"{type(exc).__name__}: {exc}")
             self.console.print(f"[red]   Failed to fetch {name}: {error}[/red]")
             return SourceFetchOutcome(
                 source_name=name,
@@ -574,63 +635,90 @@ class HorizonOrchestrator:
         from .ai.prompts import TOPIC_DEDUP_SYSTEM, TOPIC_DEDUP_USER
         from .ai.utils import parse_json_response
 
-        # Build the item list for the prompt
+        # Build the item list for the prompt using stable IDs.
         lines = []
-        for i, item in enumerate(items):
+        for item in items:
             tags = ", ".join(item.ai_tags) if item.ai_tags else "—"
             summary = item.ai_summary or "—"
-            lines.append(f"[{i}] {item.title}\n    Tags: {tags}\n    Summary: {summary}")
+            lines.append(
+                f"ID: {item.id}\n"
+                f"Title: {item.title}\n"
+                f"Tier: {item.metadata.get('source_tier', 5)}; "
+                f"First party: {item.metadata.get('is_first_party', False)}\n"
+                f"Tags: {tags}\nSummary: {summary}"
+            )
         items_text = "\n\n".join(lines)
 
         try:
             ai_client = create_ai_client(self.config.ai)
-            response = await ai_client.complete(
-                system=TOPIC_DEDUP_SYSTEM,
-                user=TOPIC_DEDUP_USER.format(items=items_text),
-            )
+            with usage_stage("semantic_dedup"):
+                response = await ai_client.complete(
+                    system=TOPIC_DEDUP_SYSTEM,
+                    user=TOPIC_DEDUP_USER.format(items=items_text),
+                )
             result = parse_json_response(response)
             if result is None:
                 if log:
                     self.console.print("[yellow]  dedup: could not parse AI response, skipping[/yellow]")
                 return items
 
-            duplicate_groups = result.get("duplicates", [])
+            duplicate_groups = result.get("groups", [])
         except Exception as e:
+            if is_fatal_ai_error(e):
+                raise
             if log:
-                self.console.print(f"[yellow]  dedup: AI call failed ({e}), skipping[/yellow]")
+                self.console.print(
+                    f"[yellow]  dedup: AI call failed ({redact_secrets(e)}), skipping[/yellow]"
+                )
             return items
 
         if not duplicate_groups:
             return items
 
-        # Build a set of indices to drop (all non-primary duplicates)
-        drop_indices: set[int] = set()
+        by_id = {item.id: item for item in items}
+        drop_ids: set[str] = set()
         for group in duplicate_groups:
-            if not isinstance(group, list) or len(group) < 2:
+            if not isinstance(group, dict):
                 continue
-            primary_idx = group[0]
-            if primary_idx < 0 or primary_idx >= len(items):
+            candidate_ids = [group.get("primary_id"), *(group.get("duplicate_ids") or [])]
+            candidate_ids = [candidate_id for candidate_id in candidate_ids if candidate_id in by_id]
+            if len(candidate_ids) < 2:
                 continue
-            primary = items[primary_idx]
-            for dup_idx in group[1:]:
-                if not isinstance(dup_idx, int) or dup_idx < 0 or dup_idx >= len(items):
+            primary_id = max(
+                candidate_ids,
+                key=lambda candidate_id: (
+                    bool(by_id[candidate_id].metadata.get("is_first_party")),
+                    -int(by_id[candidate_id].metadata.get("source_tier", 5)),
+                    len(by_id[candidate_id].content or ""),
+                    by_id[candidate_id].ai_score or 0,
+                ),
+            )
+            primary = by_id[primary_id]
+            supplemental = list(primary.metadata.get("supplemental_sources") or [])
+            for duplicate_id in candidate_ids:
+                if duplicate_id == primary_id:
                     continue
-                if dup_idx == primary_idx:
-                    continue
-                dup = items[dup_idx]
-                # Merge comments/content from the duplicate into the primary
+                dup = by_id[duplicate_id]
                 if dup.content:
                     if not primary.content or dup.content not in primary.content:
                         label = dup.source_type.value
                         primary.content = (primary.content or "") + f"\n\n--- From {label} ---\n{dup.content}"
+                supplemental.append(
+                    {
+                        "title": dup.title,
+                        "url": str(dup.url),
+                        "source_tier": dup.metadata.get("source_tier", 5),
+                    }
+                )
                 if log:
                     self.console.print(
-                        f"   [dim]dedup: keep [{primary_idx}] {primary.title}[/dim]\n"
-                        f"   [dim]       drop [{dup_idx}] {dup.title}[/dim]"
+                        f"   [dim]dedup: keep {primary.id} {primary.title}[/dim]\n"
+                        f"   [dim]       drop {dup.id} {dup.title}[/dim]"
                     )
-                drop_indices.add(dup_idx)
+                drop_ids.add(duplicate_id)
+            primary.metadata["supplemental_sources"] = supplemental
 
-        return [item for i, item in enumerate(items) if i not in drop_indices]
+        return [item for item in items if item.id not in drop_ids]
 
     async def filter_items(
         self,
@@ -697,9 +785,12 @@ class HorizonOrchestrator:
         """
         filtering = self.config.filtering
         groups = filtering.category_groups
+        balance = getattr(self.config, "balance", None)
         max_items = filtering.max_items
+        if max_items is None and balance is not None:
+            max_items = filtering.final_max_items
 
-        if not groups and max_items is None:
+        if not groups and max_items is None and balance is None:
             return BalancedDigestResult(items=items)
 
         sorted_items = sorted(
@@ -750,7 +841,10 @@ class HorizonOrchestrator:
             group_counts[group_key] += 1
 
         if max_items is not None:
-            selected = selected[:max_items]
+            if balance is not None:
+                selected = self._select_soft_balanced(selected, max_items, balance)
+            else:
+                selected = selected[:max_items]
 
         final_counts: Dict[str, int] = defaultdict(int)
         for _, group_key in selected:
@@ -792,6 +886,61 @@ class HorizonOrchestrator:
             group_limits=group_limits,
             duplicate_categories=sorted(set(duplicate_categories)),
         )
+
+    @staticmethod
+    def _select_soft_balanced(selected, max_items: int, balance):
+        """Prefer the requested mix without adding anything below the score threshold."""
+        remaining = list(selected)
+        if len(remaining) <= max_items:
+            return remaining
+
+        target = {
+            "tech": round(max_items * balance.tech_target_ratio),
+            "product": round(max_items * balance.product_target_ratio),
+            "china": round(max_items * balance.china_target_ratio),
+            "global": round(max_items * balance.global_target_ratio),
+        }
+        available_github = sum(
+            item.source_type.value in {"github", "ossinsight"}
+            for item, _ in remaining
+        )
+        github_target = min(2, available_github, max_items)
+        counts: Dict[str, int] = defaultdict(int)
+        result = []
+
+        while remaining and len(result) < max_items:
+            def priority(entry):
+                item, _ = entry
+                category = item.metadata.get("category")
+                region = item.metadata.get("region")
+                deficit_matches = int(
+                    category in {"tech", "product"}
+                    and counts[category] < target[category]
+                )
+                deficit_matches += int(
+                    region in {"china", "global"}
+                    and counts[region] < target[region]
+                )
+                if (
+                    item.source_type.value in {"github", "ossinsight"}
+                    and counts["github"] < github_target
+                ):
+                    deficit_matches += 1
+                return deficit_matches, item.ai_score or 0
+
+            best = max(remaining, key=priority)
+            remaining.remove(best)
+            item, _ = best
+            category = item.metadata.get("category")
+            region = item.metadata.get("region")
+            if category in {"tech", "product"}:
+                counts[category] += 1
+            if region in {"china", "global"}:
+                counts[region] += 1
+            if item.source_type.value in {"github", "ossinsight"}:
+                counts["github"] += 1
+            result.append(best)
+        return result
 
     async def _expand_twitter_discussion(self, items: List[ContentItem]) -> None:
         """Second-stage: fetch reply text for important Twitter items and re-analyze.
@@ -848,7 +997,7 @@ class HorizonOrchestrator:
         analyzer = ContentAnalyzer(ai_client)
         await analyzer.analyze_batch(expanded)
 
-    async def _enrich_important_items(self, items: List[ContentItem]) -> None:
+    async def _enrich_important_items(self, items: List[ContentItem]) -> List[str]:
         """Enrich items with background knowledge (2nd AI pass).
 
         For each item that passed the score threshold, call AI to generate
@@ -858,13 +1007,16 @@ class HorizonOrchestrator:
             items: Important items to enrich (modified in-place)
         """
         if not items:
-            return
+            return []
 
-        self.console.print("📚 Enriching with background knowledge...")
+        deep_limit = self.config.filtering.deep_analysis_limit
+        deep_items = items[:deep_limit]
+        self.console.print(f"📚 Deep-analyzing Top {len(deep_items)} items...")
         ai_client = create_ai_client(self.config.ai)
         enricher = ContentEnricher(ai_client)
-        await enricher.enrich_batch(items)
-        self.console.print(f"   Enriched {len(items)} items\n")
+        await enricher.enrich_batch(deep_items)
+        self.console.print(f"   Deep-analyzed {len(deep_items)} items\n")
+        return await enricher.generate_trend_overview(items)
 
     async def _analyze_content(self, items: List[ContentItem]) -> List[ContentItem]:
         """Analyze content items with AI.
