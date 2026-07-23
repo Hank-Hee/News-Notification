@@ -10,6 +10,7 @@ from rich.console import Console
 
 from .storage.manager import ConfigError, StorageManager
 from .orchestrator import HorizonOrchestrator
+from .redaction import redact_secrets
 
 
 console = Console()
@@ -80,9 +81,9 @@ def main():
         console.print("\n[yellow]⚠️  Interrupted by user[/yellow]")
         sys.exit(0)
     except Exception as e:
-        console.print(f"\n[bold red]❌ Fatal error: {e}[/bold red]")
+        console.print(f"\n[bold red]❌ Fatal error: {redact_secrets(e)}[/bold red]")
         import traceback
-        traceback.print_exc()
+        console.print(redact_secrets(traceback.format_exc()))
         sys.exit(1)
 
 

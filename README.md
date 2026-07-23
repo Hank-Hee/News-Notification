@@ -31,6 +31,8 @@
 
 </div>
 
+> This fork includes a personal Chinese AI frontier and product daily powered by Kimi Platform. See the [deployment and GitHub Secret SOP](docs/personal-ai-daily-setup.md).
+
 ## Screenshots
 
 <table>

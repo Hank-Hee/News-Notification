@@ -1,150 +1,231 @@
 {
   "version": "1.0",
   "ai": {
-    "provider": "deepseek",
-    "model": "deepseek-v4-flash",
-    "base_url": "https://api.deepseek.com",
-    "api_key_env": "DEEPSEEK_API_KEY",
-    "temperature": 0.3,
-    "max_tokens": 8192,
-    "throttle_sec": 1,
+    "provider": "openai",
+    "model": "${KIMI_MODEL_ID}",
+    "base_url": "${KIMI_BASE_URL}",
+    "api_key_env": "MOONSHOT_API_KEY",
+    "temperature": 0.2,
+    "max_completion_tokens": 8192,
+    "thinking": {
+      "type": "disabled"
+    },
+    "throttle_sec": 0.2,
     "languages": [
-      "zh",
-      "en"
+      "zh"
     ],
-    "analysis_concurrency": 5,
-    "enrichment_concurrency": 5
+    "analysis_concurrency": 2,
+    "analysis_batch_size": 10,
+    "enrichment_concurrency": 2
   },
   "sources": {
     "github": [
       {
-        "type": "user_events",
-        "username": "karpathy",
-        "enabled": true
+        "type": "repo_releases",
+        "owner": "openai",
+        "repo": "openai-python",
+        "enabled": true,
+        "category": "github-open-source"
+      },
+      {
+        "type": "repo_releases",
+        "owner": "anthropics",
+        "repo": "anthropic-sdk-python",
+        "enabled": true,
+        "category": "github-open-source"
+      },
+      {
+        "type": "repo_releases",
+        "owner": "huggingface",
+        "repo": "transformers",
+        "enabled": true,
+        "category": "github-open-source"
       },
       {
         "type": "repo_releases",
         "owner": "vllm-project",
         "repo": "vllm",
-        "enabled": true
+        "enabled": true,
+        "category": "github-open-source"
       },
       {
         "type": "repo_releases",
-        "owner": "sgl-project",
-        "repo": "sglang",
-        "enabled": true
+        "owner": "microsoft",
+        "repo": "autogen",
+        "enabled": true,
+        "category": "github-open-source"
       },
       {
         "type": "repo_releases",
-        "owner": "triton-lang",
-        "repo": "triton",
-        "enabled": true
+        "owner": "microsoft",
+        "repo": "semantic-kernel",
+        "enabled": true,
+        "category": "github-open-source"
+      },
+      {
+        "type": "repo_releases",
+        "owner": "QwenLM",
+        "repo": "Qwen3",
+        "enabled": true,
+        "category": "github-open-source"
+      },
+      {
+        "type": "repo_releases",
+        "owner": "deepseek-ai",
+        "repo": "DeepSeek-V3",
+        "enabled": true,
+        "category": "github-open-source"
+      },
+      {
+        "type": "repo_releases",
+        "owner": "THUDM",
+        "repo": "GLM-4",
+        "enabled": true,
+        "category": "github-open-source"
+      },
+      {
+        "type": "repo_releases",
+        "owner": "MoonshotAI",
+        "repo": "Kimi-K2",
+        "enabled": true,
+        "category": "github-open-source"
       }
     ],
     "hackernews": {
       "enabled": true,
-      "fetch_top_stories": 30,
-      "min_score": 150
+      "fetch_top_stories": 40,
+      "min_score": 80,
+      "category": "community"
     },
     "rss": [
+      {
+        "name": "OpenAI News",
+        "url": "https://openai.com/news/rss.xml",
+        "enabled": true,
+        "category": "official-global"
+      },
+      {
+        "name": "Google DeepMind",
+        "url": "https://deepmind.google/blog/rss.xml",
+        "enabled": true,
+        "category": "official-global"
+      },
+      {
+        "name": "Google AI",
+        "url": "https://blog.google/innovation-and-ai/technology/ai/rss/",
+        "enabled": true,
+        "category": "official-global"
+      },
+      {
+        "name": "Hugging Face",
+        "url": "https://huggingface.co/blog/feed.xml",
+        "enabled": true,
+        "category": "official-global"
+      },
+      {
+        "name": "Product Hunt",
+        "url": "https://www.producthunt.com/feed",
+        "enabled": true,
+        "category": "product-global"
+      },
+      {
+        "name": "ArXiv cs.AI",
+        "url": "https://export.arxiv.org/rss/cs.AI",
+        "enabled": true,
+        "category": "research-global"
+      },
+      {
+        "name": "ArXiv cs.CL",
+        "url": "https://export.arxiv.org/rss/cs.CL",
+        "enabled": true,
+        "category": "research-global"
+      },
       {
         "name": "Simon Willison",
         "url": "https://simonwillison.net/atom/everything/",
         "enabled": true,
-        "category": "ai-tools"
-      },
-      {
-        "name": "GitHub Trending - Daily",
-        "url": "https://mshibanami.github.io/GitHubTrendingRSS/daily/all.xml",
-        "enabled": true,
-        "category": "github-trending"
-      },
-      {
-        "name": "Semianalysis",
-        "url": "https://newsletter.semianalysis.com/feed",
-        "enabled": true,
-        "category": "semiconductors"
-      },
-      {
-        "name": "LWN.net",
-        "url": "https://lwn.net/headlines/full_text?key=${LWN_KEY}",
-        "enabled": true,
-        "category": "linux-kernel"
+        "category": "expert-global"
       }
     ],
     "reddit": {
-      "enabled": true,
-      "subreddits": [
-        {
-          "subreddit": "MachineLearning",
-          "enabled": true,
-          "sort": "hot",
-          "time_filter": "day",
-          "fetch_limit": 10,
-          "min_score": 60
-        },
-        {
-          "subreddit": "LocalLLaMA",
-          "enabled": true,
-          "sort": "hot",
-          "time_filter": "day",
-          "fetch_limit": 10,
-          "min_score": 60
-        }
-      ],
+      "enabled": false,
+      "subreddits": [],
       "users": [],
-      "fetch_comments": 10
+      "fetch_comments": 0
     },
     "telegram": {
+      "enabled": false,
+      "channels": []
+    },
+    "twitter": {
+      "enabled": false,
+      "users": []
+    },
+    "ossinsight": {
       "enabled": true,
-      "channels": [
-        {
-          "channel": "zaihuapd",
-          "enabled": true,
-          "fetch_limit": 20
-        }
-      ]
+      "period": "past_24_hours",
+      "languages": [
+        "All",
+        "Python",
+        "TypeScript"
+      ],
+      "keywords": [
+        "ai",
+        "agent",
+        "llm",
+        "model",
+        "rag",
+        "mcp",
+        "inference"
+      ],
+      "min_stars": 10,
+      "max_items": 15,
+      "category": "github-open-source"
+    },
+    "gdelt": {
+      "enabled": true,
+      "query": "(artificial intelligence OR large language model OR AI agent)",
+      "mode": "ArtList",
+      "max_records": 40,
+      "timespan": "24h",
+      "category": "news-global"
+    },
+    "google_news": {
+      "enabled": true,
+      "query": "(人工智能 OR 大模型 OR AI Agent OR AI Coding OR Kimi OR DeepSeek OR 通义 OR 豆包 OR 文心 OR 混元 OR 智谱 OR MiniMax OR 阶跃星辰 OR 零一万物)",
+      "language": "zh-CN",
+      "country": "CN",
+      "ceid": "CN:zh-Hans",
+      "max_results": 80,
+      "category": "news-china"
     }
   },
   "filtering": {
-    "ai_score_threshold": 8.0,
-    "time_window_hours": 24
+    "rule_prefilter_enabled": true,
+    "time_window_hours": 24,
+    "ai_score_threshold": 7.5,
+    "candidate_limit": 80,
+    "per_source_limit": 15,
+    "min_content_chars": 40,
+    "community_min_score": 50,
+    "final_min_items": 10,
+    "final_max_items": 12,
+    "deep_analysis_limit": 5,
+    "history_dedup_days": 7,
+    "max_items": null,
+    "category_groups": {},
+    "default_group": "other",
+    "default_group_limit": null
   },
+  "balance": {
+    "tech_target_ratio": 0.5,
+    "product_target_ratio": 0.5,
+    "china_target_ratio": 0.5,
+    "global_target_ratio": 0.5,
+    "strict": false
+  },
+  "email": null,
   "webhook": {
-    "enabled": true,
-    "url_env": "HORIZON_WEBHOOK_URL",
-    "delivery": "summary_and_items",
-    "overview_position": "last",
-    "platform": "feishu",
-    "layout": "collapsible",
-    "fallback_layout": "markdown",
-    "languages": [
-      "zh"
-    ],
-    "request_body": {
-      "msg_type": "interactive",
-      "card": {
-        "schema": "2.0",
-        "config": {
-          "wide_screen_mode": true
-        },
-        "header": {
-          "title": {
-            "tag": "plain_text",
-            "content": "#{message_title}"
-          },
-          "template": "blue"
-        },
-        "body": {
-          "elements": [
-            {
-              "tag": "markdown",
-              "content": "#{summary}"
-            }
-          ]
-        }
-      }
-    },
-    "headers": ""
+    "enabled": false
   }
 }

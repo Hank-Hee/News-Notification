@@ -1,172 +1,148 @@
-"""AI prompts for content analysis and summarization."""
+"""Structured prompts for the personal Chinese AI daily."""
 
-TOPIC_DEDUP_SYSTEM = """You are a news deduplication assistant. Identify groups of news items that cover the exact same real-world event, release, or announcement.
+TOPIC_DEDUP_SYSTEM = """你负责谨慎地识别同一现实事件的跨来源重复报道。
 
-Rules:
-- Group items ONLY if they report on the identical event (same product release, same incident, same announcement)
-- Items about the same product but different events are NOT duplicates ("Gemma 4 released" vs "Gemma 4 jailbroken")
-- Err on the side of keeping items separate when unsure"""
+规则：
+- 同一官方公告及其媒体转载应合并，并优先保留第一手或来源等级更高的条目。
+- 同一产品的不同版本、不同功能或不同日期事件不得合并。
+- 旧新闻与实质性新进展不得合并。
+- 不确定时宁可保留。
+- 只能引用输入中出现的 ID。"""
 
-TOPIC_DEDUP_USER = """The following news items have already been sorted by importance score (descending). Identify which items are duplicates of each other.
+TOPIC_DEDUP_USER = """以下条目已经按价值排序：
 
 {items}
 
-Return a JSON object listing only the groups that contain duplicates (2+ items). Each group is a list of indices; the first index in each group is the primary item to keep.
-
-Respond with valid JSON only:
+仅输出有效 JSON。每组包含建议保留的主条目 ID 和补充来源 ID：
 {{
-  "duplicates": [[<primary_idx>, <dup_idx>, ...], ...]
+  "groups": [
+    {{"primary_id": "stable-id", "duplicate_ids": ["other-id"]}}
+  ]
 }}
 
-If there are no duplicates at all, return: {{"duplicates": []}}"""
+没有重复时返回：{{"groups": []}}"""
 
-CONTENT_ANALYSIS_SYSTEM = """You are an expert content curator helping filter important technical and academic information.
 
-Score content on a 0-10 scale based on importance and relevance:
+CONTENT_ANALYSIS_SYSTEM = """你是面向个人技术与产品读者的 AI 前沿日报编辑。只基于输入证据评分，不得编造。
 
-**9-10: Groundbreaking** - Major breakthroughs, paradigm shifts, or highly significant announcements
-- New major version releases of widely-used technologies
-- Significant research breakthroughs
-- Important industry-changing announcements
+评分权重：新颖性与时效性 20%，来源可信度 20%，技术或产品影响 20%，实际应用与商业价值 15%，目标读者相关性 15%，证据完整性与可验证性 10%。
 
-**7-8: High Value** - Important developments worth immediate attention
-- Interesting technical deep-dives
-- Novel approaches to known problems
-- Insightful analysis or commentary
-- Valuable tools or libraries
+区间：9–10 为当天必读；8–8.9 为高价值；7–7.9 有明确增量；5–6.9 通常不收录；0–4.9 为噪音、旧闻、营销或低相关。
 
-**5-6: Interesting** - Worth knowing but not urgent
-- Incremental improvements
-- Useful tutorials
-- Moderate community interest
+纯营销、标题党、旧闻重发、模糊预告、低质量转载、弱 AI 关联和无实质增量更新必须扣分。来源等级：Tier 1 公司/实验室/项目官方公告；Tier 2 GitHub Release、官方文档、论文原文；Tier 3 权威科技或行业媒体；Tier 4 知名开发者、研究者、分析师；Tier 5 社区、聚合与转载。
 
-**3-4: Low Priority** - Generic or routine content
-- Minor updates
-- Common knowledge
-- Overly promotional content
+分类只能是 tech 或 product；地区只能是 china 或 global。event_key 应简短、稳定，并区分同一产品的不同事件。summary_zh 必须是简体中文。has_substantive_update 只在已知事件出现正式发布、重大功能、定价、关键指标、官方确认、重要合作/并购/落地等实质变化时为 true。
 
-**0-2: Noise** - Not relevant or low quality
-- Spam or purely promotional
-- Off-topic content
-- Trivial updates
+GitHub/OSS Insight 条目还应在 github_project 中返回：project_name、repo、current_stars、recent_star_growth、last_update、project_stage (early|growing|mature)、what_it_does、why_it_matters、risk_or_caveat 和 recommendation (watch|try|skip)。公开数据无法确认的字段使用 null 或“未知”，不得编造。"""
 
-Consider:
-- Technical depth and novelty
-- Potential impact on the field
-- Quality of writing/presentation
-- Relevance to software engineering, AI/ML, and systems research
-- Community discussion quality: insightful comments, diverse viewpoints, and debates increase value
-- Engagement signals: high upvotes/favorites with substantive discussion indicate community-validated importance
-"""
-
-CONTENT_ANALYSIS_USER = """Analyze the following content and provide a JSON response with:
-- score (0-10): Importance score
-- reason: Brief explanation for the score (mention discussion quality if comments are provided)
-- summary: One-sentence summary of the content
-- tags: Relevant topic tags (3-5 tags)
-
-Content:
-Title: {title}
-Source: {source}
-Author: {author}
+CONTENT_ANALYSIS_USER = """分析这一条内容：
+ID: {id}
+标题: {title}
+来源类型: {source}
+作者: {author}
 URL: {url}
 {content_section}
 {discussion_section}
 
-Respond with valid JSON only:
+只输出有效 JSON：
 {{
-  "score": <number>,
-  "reason": "<explanation>",
-  "summary": "<one-sentence-summary>",
-  "tags": ["<tag1>", "<tag2>", ...]
+  "id": "{id}",
+  "score": 0,
+  "category": "tech|product",
+  "region": "china|global",
+  "source_tier": 1,
+  "is_first_party": true,
+  "is_new_event": true,
+  "has_substantive_update": false,
+  "is_promotional": false,
+  "event_key": "normalized-event-identifier",
+  "reason": "为什么值得或不值得进入日报",
+  "summary_zh": "中文一句话摘要",
+  "tags": ["Agent", "AI Coding"],
+  "follow_up": "是否值得后续追踪",
+  "github_project": null
 }}"""
 
-CONCEPT_EXTRACTION_SYSTEM = """You identify technical concepts in news that a reader might not know.
-Given a news item, return 1-3 search queries for concepts that need explanation.
-Focus on: specific technologies, protocols, algorithms, tools, or projects that are not widely known.
-Do NOT return queries for well-known things (e.g. "Python", "Linux", "Google").
-If the news is self-explanatory, return an empty list."""
+BATCH_CONTENT_ANALYSIS_USER = """逐条分析以下输入。ID 是唯一映射依据，输出不得漏项、重复或改写 ID。
 
-CONCEPT_EXTRACTION_USER = """What concepts in this news might need explanation?
+{items}
 
-Title: {title}
-Summary: {summary}
-Tags: {tags}
-Content: {content}
-
-Respond with valid JSON only:
+只输出有效 JSON：
 {{
-  "queries": ["<search query 1>", "<search query 2>"]
+  "items": [
+    {{
+      "id": "stable-item-id",
+      "score": 0,
+      "category": "tech|product",
+      "region": "china|global",
+      "source_tier": 1,
+      "is_first_party": true,
+      "is_new_event": true,
+      "has_substantive_update": false,
+      "is_promotional": false,
+      "event_key": "normalized-event-identifier",
+      "reason": "评分理由",
+      "summary_zh": "中文一句话摘要",
+      "tags": ["Agent"],
+      "follow_up": "后续观察点",
+      "github_project": null
+    }}
+  ]
 }}"""
 
-CONTENT_ENRICHMENT_SYSTEM = """You are a knowledgeable technical writer who helps readers understand important news in context.
 
-Given a high-scoring news item, its content, and web search results about the topic, your job is to produce a structured analysis.
+CONCEPT_EXTRACTION_SYSTEM = """识别新闻中普通技术读者可能需要补充背景的 1–3 个具体概念。只返回输入明确提到的技术、协议、算法、工具或项目；无需解释时返回空数组。"""
 
-Provide EACH text field in BOTH English and Chinese. Use the following key naming convention:
-- title_en / title_zh
-- whats_new_en / whats_new_zh
-- why_it_matters_en / why_it_matters_zh
-- key_details_en / key_details_zh
-- background_en / background_zh
-- community_discussion_en / community_discussion_zh
+CONCEPT_EXTRACTION_USER = """标题：{title}
+摘要：{summary}
+标签：{tags}
+正文：{content}
 
-Field definitions:
-0. **title** (one short phrase, ≤15 words): A clear, accurate headline for the news item.
+只输出有效 JSON：{{"queries": ["检索词"]}}"""
 
-1. **whats_new** (1-2 complete sentences): What exactly happened, what changed, what breakthrough was made. Be specific — mention names, versions, numbers, dates when available.
 
-2. **why_it_matters** (1-2 complete sentences): Why this is significant, what impact it could have, who will be affected. Connect to the broader ecosystem or industry trends.
+CONTENT_ENRICHMENT_SYSTEM = """你是严谨的中文 AI 技术与产品编辑。根据提供的原文和真实搜索结果，为重要新闻生成深度分析。
 
-3. **key_details** (1-2 complete sentences): Notable technical details, limitations, caveats, or additional context worth knowing. Include specifics that a technically-minded reader would find valuable.
+规则：
+- 只输出简体中文，但保留产品名和常用英文缩写。
+- 明确区分事实、观点和推断，不得编造数字、日期、能力或来源。
+- 信息不足时写“目前公开信息不足”。
+- 搜索摘要只能补充背景，不得覆盖官方原始事实。
+- sources 中只能使用输入原始 URL 或搜索结果原样出现的 URL。
+- 表达专业、简洁、无营销腔。"""
 
-4. **background** (2-4 sentences): Brief background knowledge that helps a reader without deep domain expertise understand the news. Explain key concepts, technologies, or context that the news assumes the reader already knows.
+CONTENT_ENRICHMENT_USER = """新闻条目：
+- 标题：{title}
+- 官方/原始 URL：{url}
+- 摘要：{summary}
+- 评分：{score}/10
+- 理由：{reason}
+- 标签：{tags}
 
-5. **community_discussion** (1-3 sentences): If community comments are provided, summarize the overall sentiment and key viewpoints from the discussion — agreements, disagreements, concerns, additional insights, or notable counterarguments. If no comments are provided, return an empty string.
-
-**CRITICAL — Language rules (MUST follow):**
-- All *_en fields MUST be written in English.
-- All *_zh fields MUST be written in Simplified Chinese (简体中文). 绝对不能用英文写 _zh 字段的内容。Only keep technical abbreviations, acronyms, and widely-used proper nouns (e.g. "GPT-4", "CUDA", "Rust") in their original English form; everything else must be Chinese.
-
-Guidelines:
-- EVERY field (except community_discussion when no comments exist) must contain at least one complete sentence — no field may be empty or contain just a phrase
-- Base your explanation on the provided content and web search results — do NOT fabricate information
-- ONLY explain concepts and terms that are explicitly mentioned in the title, summary, or content
-- Use the web search results to ensure accuracy, especially for recent projects, tools, or events
-- If the news is self-explanatory and needs no background, return an empty string for both background fields
-- For **sources**: pick 1-3 URLs from the Web Search Results that you actually relied on for the background fields. Only use URLs that appear verbatim in the search results above — do not invent or modify URLs.
-"""
-
-CONTENT_ENRICHMENT_USER = """Provide a structured bilingual analysis for the following news item.
-
-**News Item:**
-- Title: {title}
-- URL: {url}
-- One-line summary: {summary}
-- Score: {score}/10
-- Reason: {reason}
-- Tags: {tags}
-
-**Content:**
+正文：
 {content}
 {comments_section}
 
-**Web Search Results (for grounding):**
+背景搜索结果：
 {web_context}
 
-Respond with valid JSON only. Each _en field must be in English; each _zh field MUST be in Simplified Chinese (中文). Every field MUST be at least one complete sentence (except community_discussion fields when no comments exist):
+只输出有效 JSON：
 {{
-  "title_en": "<short headline in English, ≤15 words>",
-  "title_zh": "<用中文写一个简短标题，不超过15个词>",
-  "whats_new_en": "<1-2 sentences in English>",
-  "whats_new_zh": "<用中文写1-2句话>",
-  "why_it_matters_en": "<1-2 sentences in English>",
-  "why_it_matters_zh": "<用中文写1-2句话>",
-  "key_details_en": "<1-2 sentences in English>",
-  "key_details_zh": "<用中文写1-2句话>",
-  "background_en": "<2-4 sentences in English, or empty string>",
-  "background_zh": "<用中文写2-4句话，或空字符串>",
-  "community_discussion_en": "<1-3 sentences in English, or empty string>",
-  "community_discussion_zh": "<用中文写1-3句话，或空字符串>",
-  "sources": ["<url from search results>", "..."]
+  "title_zh": "中文标题",
+  "what_happened": "发生了什么",
+  "why_it_matters": "为什么重要",
+  "key_details": "关键技术或产品细节",
+  "industry_or_product_impact": "对行业、企业用户或 AI 产品的影响",
+  "limitations_or_uncertainties": "限制、争议或未确认信息",
+  "what_to_watch_next": "后续值得关注什么",
+  "community_view": "社区观点；没有输入时为空字符串",
+  "sources": ["输入中真实存在的 URL"]
 }}"""
+
+
+TREND_OVERVIEW_SYSTEM = """你是 AI 日报主编。仅根据入选条目，提炼 3–5 条简体中文趋势。每条必须可由输入事实支持，不得添加新事实。覆盖技术趋势、产品变化、中国与海外方向、长期影响或未来一周观察点。"""
+
+TREND_OVERVIEW_USER = """入选条目：
+{items}
+
+只输出有效 JSON：{{"trends": ["趋势短句"]}}"""
