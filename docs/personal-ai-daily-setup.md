@@ -93,15 +93,19 @@ GitHub 自动生成的 `GITHUB_TOKEN` 用于读取公开 GitHub 数据和发布 
 
 ## 9. 同步上游 Horizon
 
+`Hank-Hee/News-Notification` 创建时是普通空仓库，不属于 GitHub 的 Fork 网络。本次导入的上游基线为 `Thysrael/Horizon@1e2fdc7ccb177f33c59aef2082c4093e1e82b22c`。为避免无共同历史导致整仓冲突，后续应把“上次同步点到最新上游”的差异应用到单独分支：
+
 ```bash
 git remote add upstream https://github.com/Thysrael/Horizon.git  # 仅首次需要
 git fetch upstream
-git switch main
-git merge upstream/main
-git push origin main
+git switch -c codex/sync-upstream main
+git diff --binary 1e2fdc7ccb177f33c59aef2082c4093e1e82b22c..upstream/main | git apply -3
+git add -A
+git commit -m "sync Horizon upstream"
+git push -u origin codex/sync-upstream
 ```
 
-同步前建议先确认当前日报分支已合并，并在单独分支处理冲突。重点检查 `src/orchestrator.py`、`src/ai/`、`data/config.github.json`、工作流和 `docs/`。
+随后为该分支创建 PR。下一次同步时，把命令中的旧 SHA 替换为本次实际同步到的最新上游 SHA。重点检查 `src/orchestrator.py`、`src/ai/`、`data/config.github.json`、工作流和 `docs/` 的冲突。
 
 ## 10. 本地运行（可选）
 
