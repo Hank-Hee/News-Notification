@@ -20,6 +20,8 @@ title: AI 产品机会与 Builder 情报
 
 [打开可搜索、可筛选的产品数据库]({{ '/products/' | relative_url }})，或直接下载 [JSON]({{ '/data/product-intelligence.json' | relative_url }}) / [CSV]({{ '/data/product-intelligence.csv' | relative_url }})。
 
+[阅读产品 PRD 与完整工作流]({{ '/workflow-product-guide.html' | relative_url }}) · [部署与密钥配置 SOP]({{ '/personal-ai-daily-setup.html' | relative_url }})
+
 ## 历史日报
 
 <div class="archive-grid">
