@@ -322,7 +322,7 @@ Actions 拉取目标分支，安装 Python 3.12 和 uv，再安装锁定依赖�
 
 ### Apify 预检
 
-工作流确认 `APIFY_TOKEN` 非空，调用 Apify 用户接口验证 Token，并确认 `altimis/scweet` Actor 可见。Actor 第一次使用还必须在 Apify Console 人工批准权限；这是 Apify 的安全要求，无法通过 API 绕过。若未批准，抓取日志会输出 `full-permission-actor-not-approved` 和审批链接，不会把 403 误报成“今天没有推文”。
+工作流确认 `APIFY_TOKEN` 非空，调用 Apify 用户接口验证 Token，并确认 `altimis/scweet` Actor 可见。Actor 第一次使用还必须在 Apify Console 人工批准权限；这是 Apify 的安全要求，无法通过 API 绕过。若未批准，抓取日志会输出 `full-permission-actor-not-approved` 和审批链接，并在调用 Kimi 前终止，不会发布一份缺少 X 的“成功日报”。
 
 ## 15. 步骤 3：恢复跨天状态
 
@@ -336,7 +336,7 @@ Actions 拉取目标分支，安装 Python 3.12 和 uv，再安装锁定依赖�
 
 ## 16. 步骤 4：并发采集
 
-所有启用来源并发运行。单个来源失败会写入日志，但其他来源继续；如果全部来源失败，任务终止，不发布空日报。
+所有启用来源并发运行。普通补充来源失败会写入日志，但其他来源继续；X 是本项目的一手情报核心，被标记为必需来源，因此 X 的 Actor、权限或数据集请求失败会让任务终止。如果全部来源失败，同样不发布空日报。
 
 每条内容必须在最近 24 小时窗口内。X 的日期范围同时下推给 Apify，避免先付费抓取大量旧内容再在本地丢弃。
 

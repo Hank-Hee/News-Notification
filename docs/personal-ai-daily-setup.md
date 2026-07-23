@@ -56,7 +56,7 @@ GitHub 自动生成的 `GITHUB_TOKEN` 用于读取公开 GitHub 数据和发布 
 
 6. 打开 [Scweet Twitter/X Scraper](https://console.apify.com/actors/EvFXOhwR6wsOWmdSK)，点击运行或权限审批入口，阅读权限范围并批准。Apify 规定需要完整权限的 Actor 必须由用户在 Console 人工批准，API 和 GitHub Actions 不能代替这一步。
 
-工作流会先调用 Apify 用户接口验证 Token、确认 Actor 可见，再启动 X/Twitter Actor。Token 缺失或无效时任务明确失败；权限未批准时会显示 `full-permission-actor-not-approved` 和审批链接，不会静默跳过 X 来源。覆盖 Token 或完成审批后需要手动重跑一次。
+工作流会先调用 Apify 用户接口验证 Token、确认 Actor 可见，再启动 X/Twitter Actor。X 被设为生产必需来源：Token 缺失或无效时任务明确失败；权限未批准时会显示 `full-permission-actor-not-approved` 和审批链接，并在调用 Kimi 前停止，不会静默发布缺少 X 的日报。覆盖 Token 或完成审批后需要手动重跑一次。
 
 ## 5. 手动验证工作流
 
