@@ -42,5 +42,8 @@ def is_fatal_ai_error(error: BaseException) -> bool:
         "quota exceeded",
         "billing",
         "payment required",
+        "kimi thinking disablement",
+        "kimi json mode was rejected",
+        "kimi rejected max_completion_tokens",
     )
     return any(marker in message for marker in fatal_markers)

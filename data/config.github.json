@@ -6,7 +6,10 @@
     "base_url": "${KIMI_BASE_URL}",
     "api_key_env": "MOONSHOT_API_KEY",
     "temperature": 0.2,
-    "max_tokens": 8192,
+    "max_completion_tokens": 8192,
+    "thinking": {
+      "type": "disabled"
+    },
     "throttle_sec": 0.2,
     "languages": [
       "zh"

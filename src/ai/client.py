@@ -1,5 +1,6 @@
 """AI client abstraction supporting multiple providers."""
 
+import logging
 import os
 import re
 from abc import ABC, abstractmethod
@@ -11,8 +12,12 @@ from google.genai import types
 
 
 from ..models import AIConfig, AIProvider, AI_PROVIDER_DEFAULTS
+from ..redaction import redact_secrets
 from rich import print as rich_print
 from .tokens import record_request
+
+
+logger = logging.getLogger(__name__)
 
 
 _ENV_VAR_RE = re.compile(r"^[A-Za-z_][A-Za-z0-9_]*$")
@@ -207,7 +212,13 @@ class OpenAIClient(AIClient):
 
     # Newer reasoning-series / GPT-5 family models reject legacy `max_tokens`
     # and require `max_completion_tokens` instead.
-    _MODELS_REQUIRING_MAX_COMPLETION_TOKENS = ("o1", "o3", "o4", "gpt-5")
+    _MODELS_REQUIRING_MAX_COMPLETION_TOKENS = (
+        "o1",
+        "o3",
+        "o4",
+        "gpt-5",
+        "kimi-k2.6",
+    )
 
     def __init__(self, config: AIConfig):
         """Initialize OpenAI-compatible client.
@@ -231,8 +242,9 @@ class OpenAIClient(AIClient):
         self.client = AsyncOpenAI(**kwargs)
         self.model = config.model
         self.temperature = config.temperature
-        self.max_tokens = config.max_tokens
+        self.max_tokens = config.max_completion_tokens or config.max_tokens
         self.provider = config.provider.value
+        self.thinking = config.thinking.model_dump() if config.thinking else None
         # Some newer models (e.g. Claude Opus 4.7 on Bedrock Converse) reject
         # `temperature`. We learn this on first 400 and stop sending it.
         self._supports_temperature = True
@@ -241,7 +253,8 @@ class OpenAIClient(AIClient):
         self._use_max_completion_tokens = any(
             config.model.startswith(prefix)
             for prefix in self._MODELS_REQUIRING_MAX_COMPLETION_TOKENS
-        )
+        ) or config.max_completion_tokens is not None
+        self._strict_kimi_k26 = config.model == "kimi-k2.6"
 
     @classmethod
     def _resolve_base_url(cls, config: AIConfig) -> Optional[str]:
@@ -298,10 +311,26 @@ class OpenAIClient(AIClient):
                 break
             except Exception as exc:
                 message = str(exc)
+                if self.thinking and self._is_thinking_control_unsupported(message):
+                    logger.error(
+                        "Cannot guarantee that Kimi Thinking is disabled; "
+                        "refusing to retry without the thinking control: %s",
+                        redact_secrets(message),
+                    )
+                    raise RuntimeError(
+                        "Kimi Thinking disablement is incompatible with the current "
+                        "model or SDK. The request was stopped instead of retrying "
+                        "with Thinking enabled."
+                    ) from exc
                 if (
                     self._supports_response_format
                     and self._is_response_format_unsupported(message)
                 ):
+                    if self._strict_kimi_k26:
+                        raise RuntimeError(
+                            "Kimi JSON mode was rejected for kimi-k2.6; the request "
+                            "was stopped instead of dropping response_format."
+                        ) from exc
                     self._supports_response_format = False
                     continue
                 if self._supports_temperature and self._is_temperature_unsupported(message):
@@ -309,6 +338,12 @@ class OpenAIClient(AIClient):
                     continue
                 token_fallback = self._token_fallback_mode(message)
                 if self._supports_token_limit and token_fallback is not None:
+                    if self._strict_kimi_k26:
+                        raise RuntimeError(
+                            "Kimi rejected max_completion_tokens for kimi-k2.6; "
+                            "the request was stopped instead of using deprecated "
+                            "max_tokens or omitting the completion limit."
+                        ) from exc
                     if token_fallback == self._use_max_completion_tokens:
                         self._supports_token_limit = False
                     else:
@@ -345,6 +380,8 @@ class OpenAIClient(AIClient):
             request_kwargs["temperature"] = temperature
         if include_response_format:
             request_kwargs["response_format"] = {"type": "json_object"}
+        if self.thinking:
+            request_kwargs["extra_body"] = {"thinking": dict(self.thinking)}
         try:
             response = await self.client.chat.completions.create(**request_kwargs)
         except Exception:
@@ -379,6 +416,23 @@ class OpenAIClient(AIClient):
             or "not support" in lowered
             or "unsupported" in lowered
         )
+
+    @staticmethod
+    def _is_thinking_control_unsupported(message: str) -> bool:
+        lowered = message.lower()
+        mentions_control = "extra_body" in lowered or "thinking" in lowered
+        incompatibility = any(
+            marker in lowered
+            for marker in (
+                "unexpected keyword",
+                "not support",
+                "unsupported",
+                "unknown",
+                "unrecognized",
+                "invalid",
+            )
+        )
+        return mentions_control and incompatibility
 
     @staticmethod
     def _is_max_tokens_unsupported(message: str) -> bool:

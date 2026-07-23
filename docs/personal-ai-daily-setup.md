@@ -33,9 +33,9 @@ Secret 保存后不能在 GitHub 页面再次查看明文，只能覆盖更新�
 | Name | Value |
 |---|---|
 | `KIMI_BASE_URL` | `https://api.moonshot.cn/v1` |
-| `KIMI_MODEL_ID` | Kimi Platform 控制台显示的真实模型 ID |
+| `KIMI_MODEL_ID` | `kimi-k2.6` |
 
-模型 ID 不应猜测。请从 Kimi Platform 控制台复制当前账号可用的准确 ID。`KIMI_BASE_URL` 和 `KIMI_MODEL_ID` 不是密钥，使用 Repository Variables 即可。
+工作流在 Variable 缺失时也会默认使用 `kimi-k2.6`；保留该 Variable 是为了以后显式升级模型。当前调用固定发送 `thinking.type=disabled`、`response_format={"type":"json_object"}` 和 `max_completion_tokens`。如果 SDK 或模型拒绝禁用 Thinking，任务会明确失败，不会删除该参数后静默进入思考模式。`KIMI_BASE_URL` 和 `KIMI_MODEL_ID` 不是密钥，使用 Repository Variables 即可。
 
 GitHub 自动生成的 `GITHUB_TOKEN` 用于读取公开 GitHub 数据和发布 Pages，无需手动创建。
 
@@ -83,7 +83,8 @@ GitHub 自动生成的 `GITHUB_TOKEN` 用于读取公开 GitHub 数据和发布 
 ## 8. 常见故障排查
 
 - **Missing repository secret: MOONSHOT_API_KEY**：Secret 名称拼写错误、未创建或创建在 Environment 而非 Repository。
-- **Missing repository variable: KIMI_MODEL_ID**：未创建同名 Repository Variable，或值为空。
+- **Kimi Thinking disablement is incompatible**：当前 SDK 或模型不能确认关闭 Thinking；系统会安全停止，不会切换到思考模式。确认模型为 `kimi-k2.6`，并检查 Kimi API 的兼容性公告。
+- **Webhook URL is empty**：说明运行的是合并前的旧版默认分支工作流；合并本 PR 后，新配置不会启用 Webhook，也不会读取 `HORIZON_WEBHOOK_URL`。
 - **401 / authentication / invalid API key**：在 Kimi Platform 检查 Key 状态，然后覆盖 `MOONSHOT_API_KEY` Secret。
 - **quota / billing / 额度不足**：在 Kimi Platform 检查余额与配额。此类错误会让工作流明确失败，不会发布误导性空日报。
 - **429 / rate limit**：稍后手动重跑；也可降低 `analysis_concurrency` 和 `enrichment_concurrency`。

@@ -130,6 +130,12 @@ AI_PROVIDER_DEFAULTS = {
 }
 
 
+class ThinkingConfig(BaseModel):
+    """Thinking-mode control for OpenAI-compatible providers that expose it."""
+
+    type: Literal["enabled", "disabled"]
+
+
 class AIConfig(BaseModel):
     """AI client configuration."""
 
@@ -140,6 +146,8 @@ class AIConfig(BaseModel):
     api_key_env: str
     temperature: float = 0.3
     max_tokens: int = 4096
+    max_completion_tokens: Optional[int] = Field(default=None, ge=1)
+    thinking: Optional[ThinkingConfig] = None
     throttle_sec: float = 0.0
     analysis_concurrency: int = 1
     analysis_batch_size: int = Field(default=1, ge=1, le=20)
