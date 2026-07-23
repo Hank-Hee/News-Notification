@@ -25,3 +25,8 @@ title: Horizon AI Daily
   <span>暂无归档</span>
 {% endfor %}
 </div>
+
+## 项目说明
+
+- [产品需求与完整工作流讲解]({{ '/workflow-product-guide.html' | relative_url }})
+- [部署与密钥配置 SOP]({{ '/personal-ai-daily-setup.html' | relative_url }})

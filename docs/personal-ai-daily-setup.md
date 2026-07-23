@@ -1,3 +1,8 @@
+---
+layout: default
+title: Horizon AI Daily 部署与密钥配置 SOP
+---
+
 # Horizon AI Daily 部署与密钥配置 SOP
 
 这套配置每天在 GitHub Actions 中运行，使用 Kimi Platform 的 OpenAI-compatible API，生成中文静态日报并部署到 GitHub Pages。本机无需保持开机。
