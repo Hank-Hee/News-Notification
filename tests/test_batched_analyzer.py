@@ -114,3 +114,34 @@ def test_all_invalid_ai_responses_abort_instead_of_publishing_empty_digest():
         asyncio.run(ContentAnalyzer(client).analyze_batch(items))
 
     assert [item.ai_score for item in items] == [0.0, 0.0]
+
+
+def test_null_optional_fields_do_not_discard_valid_analysis():
+    item = _item(1)
+    payload = _result(item.id, 8.4)
+    payload.update(
+        {
+            "product_name": None,
+            "builder_name": None,
+            "target_user": None,
+            "market_signal": None,
+            "skill_signals": None,
+            "verticals": None,
+            "github_project": [],
+        }
+    )
+
+    async def complete(**kwargs):
+        return json.dumps({"items": [payload]})
+
+    client = SimpleNamespace(
+        config=SimpleNamespace(analysis_batch_size=5, analysis_concurrency=1),
+        complete=complete,
+    )
+
+    asyncio.run(ContentAnalyzer(client).analyze_batch([item]))
+
+    assert item.ai_score == 8.4
+    assert item.metadata["product_name"] == ""
+    assert item.metadata["skill_signals"] == []
+    assert "github_project" not in item.metadata

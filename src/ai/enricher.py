@@ -6,7 +6,7 @@ import asyncio
 import json
 import os
 import sys
-from typing import List
+from typing import List, Literal
 
 from ddgs import DDGS
 from pydantic import BaseModel, Field, ValidationError
@@ -37,6 +37,25 @@ class DeepAnalysisResult(BaseModel):
     limitations_or_uncertainties: str
     what_to_watch_next: str
     community_view: str = ""
+    product_name: str = "未公开"
+    target_users: str = "未公开"
+    user_problem: str = "未公开"
+    original_workflow: list[str] = Field(default_factory=list)
+    product_workflow: list[str] = Field(default_factory=list)
+    input_process_output: dict[str, str] = Field(default_factory=dict)
+    tool_stack: list[str] = Field(default_factory=list)
+    business_model: str = "未公开"
+    product_stage: Literal[
+        "validated", "early_growth", "proof_of_concept", "not_applicable"
+    ] = "not_applicable"
+    traction_evidence: list[str] = Field(default_factory=list)
+    market_reaction: str = "未公开"
+    transferable_lessons: list[str] = Field(default_factory=list)
+    mvp_path: list[str] = Field(default_factory=list)
+    skill_signals: list[str] = Field(default_factory=list)
+    evidence_status: Literal[
+        "first_party", "verified", "reported", "early_signal"
+    ] = "reported"
     sources: list[str] = Field(default_factory=list)
 
 
@@ -180,6 +199,21 @@ class ContentEnricher:
                 "limitations_or_uncertainties": result.limitations_or_uncertainties,
                 "what_to_watch_next": result.what_to_watch_next,
                 "community_view": result.community_view,
+                "product_name": result.product_name,
+                "target_user": result.target_users,
+                "user_problem": result.user_problem,
+                "original_workflow": result.original_workflow,
+                "product_workflow": result.product_workflow,
+                "input_process_output": result.input_process_output,
+                "tool_stack": result.tool_stack,
+                "business_model": result.business_model,
+                "product_stage": result.product_stage,
+                "traction_evidence": result.traction_evidence,
+                "market_reaction": result.market_reaction,
+                "transferable_lessons": result.transferable_lessons,
+                "mvp_path": result.mvp_path,
+                "skill_signals": result.skill_signals,
+                "evidence_status": result.evidence_status,
                 "deep_analysis": True,
             }
         )
@@ -196,6 +230,13 @@ class ContentEnricher:
                 "title": item.metadata.get("title_zh") or item.title,
                 "summary": item.ai_summary,
                 "category": item.metadata.get("category"),
+                "intelligence_type": item.metadata.get("intelligence_type"),
+                "product_name": item.metadata.get("product_name"),
+                "target_user": item.metadata.get("target_user"),
+                "product_signal": item.metadata.get("product_signal"),
+                "market_signal": item.metadata.get("market_signal"),
+                "builder_insight": item.metadata.get("builder_insight"),
+                "skill_signals": item.metadata.get("skill_signals", []),
                 "region": item.metadata.get("region"),
                 "score": item.ai_score,
             }
@@ -219,13 +260,14 @@ class ContentEnricher:
 
     @staticmethod
     def _fallback_trends(items: list[ContentItem]) -> list[str]:
-        categories = {str(item.metadata.get("category", "")) for item in items}
-        regions = {str(item.metadata.get("region", "")) for item in items}
-        trends = [f"今日共筛选出 {len(items)} 条高价值 AI 增量，按综合价值排序。"]
-        if "tech" in categories:
-            trends.append("技术侧重点覆盖模型、Agent、AI Coding 与基础设施的实质更新。")
-        if "product" in categories:
-            trends.append("产品侧关注新发布、重要功能变化和可验证的企业落地。")
-        if {"china", "global"}.issubset(regions):
-            trends.append("中国与海外动态均有入选，便于观察两地产品和技术节奏。")
+        types = {str(item.metadata.get("intelligence_type", "")) for item in items}
+        trends = [f"今日筛选出 {len(items)} 条可用于产品判断的 AI 情报。"]
+        if "product_case" in types:
+            trends.append("今日有可进一步拆解的 AI 产品或真实工作流案例。")
+        if "builder_insight" in types:
+            trends.append("Builder 的一手方法提供了可以迁移到个人产品的实现路径。")
+        if "market_signal" in types:
+            trends.append("用户反馈与商业信号可用于判断哪些方向已经得到市场验证。")
+        if "model_capability" in types:
+            trends.append("新模型能力的重点是它能解锁怎样的新产品体验。")
         return trends[:5]

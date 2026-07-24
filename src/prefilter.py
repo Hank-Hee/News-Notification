@@ -21,11 +21,14 @@ _AI_TERMS = {
     "machine learning", "deep learning", "neural", "transformer", "reasoning",
     "multimodal", "rag", "mcp", "inference", "embedding", "computer vision",
     "speech model", "language model", "openai", "anthropic", "deepmind", "gemini",
+    "chatgpt", "claude", "copilot", "generative ai", "ai-powered", "ai product",
+    "automation", "voice agent", "vibe coding", "computer use",
     "meta ai", "llama", "mistral", "hugging face", "huggingface", "kimi",
     "moonshot", "deepseek", "qwen", "glm", "autogen", "semantic kernel", "vllm",
     "transformers", "通义", "千问", "豆包", "文心", "混元", "智谱",
     "minimax", "阶跃星辰", "零一万物", "人工智能", "大模型", "智能体",
     "机器学习", "深度学习", "推理模型", "多模态", "知识库", "具身智能",
+    "智能产品", "智能助手", "工作流自动化", "生成式", "人工智能产品",
 }
 _TITLE_TOKEN_RE = re.compile(r"[^\w\u3400-\u9fff]+", re.UNICODE)
 
@@ -110,6 +113,7 @@ def _source_key(item: ContentItem) -> str:
     subsource = (
         metadata.get("feed_name")
         or metadata.get("source_name")
+        or metadata.get("twitter_handle")
         or metadata.get("subreddit")
         or metadata.get("repo")
         or metadata.get("domain")
@@ -133,7 +137,17 @@ def prefilter_items(
     if since.tzinfo is None:
         since = since.replace(tzinfo=timezone.utc)
 
-    for original in items:
+    ordered_items = list(items)
+    if config.source_priority:
+        priority = {
+            source_name: index
+            for index, source_name in enumerate(config.source_priority)
+        }
+        ordered_items.sort(
+            key=lambda item: priority.get(item.source_type.value, len(priority))
+        )
+
+    for original in ordered_items:
         stats.total += 1
         title = (original.title or "").strip()
         url = str(original.url).strip() if original.url else ""

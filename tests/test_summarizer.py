@@ -119,7 +119,7 @@ def test_generate_summary_zh_uses_localized_selection_header_and_numeric_date():
     )
 
     assert "> 从 10 条内容中筛选出 1 条重要资讯。" in result
-    assert "rss · tester · 4月25日 08:00" in result
+    assert "rss · tester · 4月25日 16:00 北京时间" in result
     assert "From 10 items" not in result
     assert "Apr 25, 08:00" not in result
 
@@ -207,3 +207,14 @@ def test_generate_summary_preserves_normal_http_links():
     assert "[Important Item 1](https://example.com/items/1)" in result
     assert "[Discussion](https://example.com/discuss?id=1#comments)" in result
     assert 'href="https://docs.example.com/path?q=one&amp;lang=en"' in result
+
+
+def test_generate_summary_preserves_apostrophes_as_valid_html_entities():
+    summarizer = DailySummarizer()
+    item = _make_item(1)
+    item.ai_summary = "Builder's workflow"
+
+    result = _run_async(summarizer.generate_summary([item], "2026-04-25", 1))
+
+    assert "Builder&#x27;s workflow" in result
+    assert "&\\#x27;" not in result

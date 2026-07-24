@@ -189,6 +189,13 @@ def test_personal_config_and_workflow_pin_kimi_and_node24_actions():
     assert "astral-sh/setup-uv@v9.0.0" in workflow
     assert '"${KIMI_BASE_URL%/}/models"' in workflow
     assert "Kimi API preflight passed" in workflow
+    assert "APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}" in workflow
+    assert "Apify API preflight passed" in workflow
+    assert 'cron: "0 1 * * *"' in workflow
+    assert config["filtering"]["deep_analysis_limit"] == 3
+    assert config["filtering"]["source_priority"][0] == "twitter"
+    assert config["sources"]["twitter"]["enabled"] is True
+    assert config["product_intelligence"]["enabled"] is True
     assert 'paths:\n      - ".github/workflows/daily-summary.yml"' in workflow
     assert "HORIZON_WEBHOOK_URL" not in workflow
 

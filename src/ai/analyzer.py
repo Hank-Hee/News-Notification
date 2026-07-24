@@ -45,7 +45,89 @@ class AnalysisResult(BaseModel):
     summary: Optional[str] = None
     tags: list[str]
     follow_up: str = ""
+    intelligence_type: Literal[
+        "product_case",
+        "builder_insight",
+        "model_capability",
+        "market_signal",
+        "business_policy",
+        "early_signal",
+    ] = "early_signal"
+    evidence_status: Literal[
+        "first_party", "verified", "reported", "early_signal"
+    ] = "reported"
+    product_stage: Literal[
+        "validated", "early_growth", "proof_of_concept", "not_applicable"
+    ] = "not_applicable"
+    product_name: str = ""
+    builder_name: str = ""
+    target_user: str = ""
+    product_signal: str = ""
+    market_signal: str = ""
+    builder_insight: str = ""
+    skill_signals: list[str] = Field(default_factory=list)
+    verticals: list[str] = Field(default_factory=list)
     github_project: Optional[dict] = None
+
+    @model_validator(mode="before")
+    @classmethod
+    def normalize_sparse_provider_output(cls, value):
+        """Accept explicit nulls for optional intelligence fields.
+
+        JSON-mode providers sometimes return ``null`` for information that the
+        prompt asks them to leave blank. Those nulls should not discard an
+        otherwise valid score and summary.
+        """
+        if not isinstance(value, dict):
+            return value
+
+        normalized = dict(value)
+        for field in (
+            "reason",
+            "event_key",
+            "follow_up",
+            "product_name",
+            "builder_name",
+            "target_user",
+            "product_signal",
+            "market_signal",
+            "builder_insight",
+        ):
+            if normalized.get(field) is None:
+                normalized[field] = ""
+        for field in ("tags", "skill_signals", "verticals"):
+            if normalized.get(field) is None:
+                normalized[field] = []
+
+        defaults = {
+            "category": ("tech", {"tech", "product"}),
+            "region": ("global", {"china", "global"}),
+            "intelligence_type": (
+                "early_signal",
+                {
+                    "product_case",
+                    "builder_insight",
+                    "model_capability",
+                    "market_signal",
+                    "business_policy",
+                    "early_signal",
+                },
+            ),
+            "evidence_status": (
+                "reported",
+                {"first_party", "verified", "reported", "early_signal"},
+            ),
+            "product_stage": (
+                "not_applicable",
+                {"validated", "early_growth", "proof_of_concept", "not_applicable"},
+            ),
+        }
+        for field, (default, allowed) in defaults.items():
+            if normalized.get(field) not in allowed:
+                normalized[field] = default
+        if not isinstance(normalized.get("github_project"), dict):
+            normalized["github_project"] = None
+        return normalized
 
     @model_validator(mode="after")
     def require_summary(self) -> "AnalysisResult":
@@ -181,8 +263,12 @@ class ContentAnalyzer:
                     )
                 validated[result.id] = result
         except ValidationError as error:
+            details = ", ".join(
+                f"{'.'.join(map(str, item['loc']))}: {item['type']}"
+                for item in error.errors(include_input=False)[:3]
+            )
             raise AnalysisResponseError(
-                "Batch analysis response failed schema validation"
+                f"Batch analysis response failed schema validation ({details})"
             ) from error
         if set(validated) != set(expected):
             raise AnalysisResponseError(
@@ -202,7 +288,12 @@ class ContentAnalyzer:
         parsed = self._parse_json_response(response)
         try:
             result = AnalysisResult.model_validate(parsed) if parsed is not None else None
-        except ValidationError:
+        except ValidationError as error:
+            details = ", ".join(
+                f"{'.'.join(map(str, item['loc']))}: {item['type']}"
+                for item in error.errors(include_input=False)[:3]
+            )
+            print(f"Warning: analysis schema validation failed for {item.id}: {details}")
             result = None
         if result is None:
             print(f"Warning: could not parse analysis response for {item.id}, using defaults")
@@ -278,6 +369,17 @@ class ContentAnalyzer:
                 "event_key": result.event_key or item.id,
                 "follow_up": result.follow_up,
                 "summary_zh": result.summary_zh or result.summary or item.title,
+                "intelligence_type": result.intelligence_type,
+                "evidence_status": result.evidence_status,
+                "product_stage": result.product_stage,
+                "product_name": result.product_name,
+                "builder_name": result.builder_name,
+                "target_user": result.target_user,
+                "product_signal": result.product_signal,
+                "market_signal": result.market_signal,
+                "builder_insight": result.builder_insight,
+                "skill_signals": result.skill_signals,
+                "verticals": result.verticals,
             }
         )
         if result.github_project:

@@ -3,7 +3,7 @@
 import asyncio
 import logging
 import os
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from html import unescape
 from typing import List, Optional
 
@@ -33,11 +33,18 @@ class TwitterScraper(BaseScraper):
 
         users = [u.strip().lstrip("@") for u in self.config.users if u.strip()]
         if not users:
+            if self.config.required:
+                raise RuntimeError("Required Twitter source has no configured users")
             logger.debug("No Twitter users configured, skipping.")
             return []
 
         token = os.environ.get(self.config.apify_token_env)
         if not token:
+            if self.config.required:
+                raise RuntimeError(
+                    f"Required Twitter source is missing env var "
+                    f"'{self.config.apify_token_env}'"
+                )
             logger.warning(
                 f"Apify token not found in env var '{self.config.apify_token_env}'. Skipping Twitter."
             )
@@ -45,15 +52,21 @@ class TwitterScraper(BaseScraper):
 
         logger.info(f"Fetching Twitter (Apify) for users: {users}")
 
-        run_id, dataset_id = await self._start_run(token, users)
+        run_id, dataset_id = await self._start_run(token, users, since)
         if not run_id:
             return []
 
         succeeded = await self._wait_for_run(token, run_id)
         if not succeeded:
+            if self.config.required:
+                raise RuntimeError("Required Twitter Apify run did not succeed")
             return []
 
         raw_items = await self._fetch_dataset(token, dataset_id)
+        if raw_items is None:
+            if self.config.required:
+                raise RuntimeError("Required Twitter Apify dataset could not be fetched")
+            return []
         items = []
         for raw in raw_items:
             if isinstance(raw, dict) and raw.get("noResults"):
@@ -62,37 +75,69 @@ class TwitterScraper(BaseScraper):
             if parsed:
                 items.append(parsed)
 
-        logger.info(f"Fetched {len(items)} tweets via Apify.")
+        items.sort(
+            key=lambda item: (
+                int(item.metadata.get("favorite_count") or 0)
+                + int(item.metadata.get("retweet_count") or 0) * 2
+                + int(item.metadata.get("reply_count") or 0),
+                item.published_at,
+            ),
+            reverse=True,
+        )
+        items = items[: self.config.fetch_limit]
+        logger.info(f"Fetched {len(items)} recent tweets via Apify.")
         return items
 
     async def _start_run(
-        self, token: str, users: List[str]
+        self, token: str, users: List[str], since: datetime
     ) -> tuple[Optional[str], Optional[str]]:
+        if since.tzinfo is None:
+            since = since.replace(tzinfo=timezone.utc)
+        until = datetime.now(timezone.utc) + timedelta(days=1)
         payload = {
             "source_mode": "profiles",
-            "profile_urls": users,
+            "profile_urls": [f"@{user}" for user in users],
             "search_sort": "Latest",
+            "tweet_type": "exclude_retweets",
+            "since": since.astimezone(timezone.utc).strftime("%Y-%m-%d"),
+            "until": until.strftime("%Y-%m-%d"),
             "max_items": max(100, self.config.fetch_limit),
         }
-        url = f"{_APIFY_BASE}/acts/{self.config.actor_id}/runs?token={token}"
+        url = f"{_APIFY_BASE}/acts/{self.config.actor_id}/runs"
         try:
-            resp = await self.client.post(url, json=payload, timeout=30.0)
+            resp = await self.client.post(
+                url,
+                json=payload,
+                params={"maxTotalChargeUsd": self.config.max_total_charge_usd},
+                headers=self._auth_headers(token),
+                timeout=30.0,
+            )
             resp.raise_for_status()
             data = resp.json()["data"]
             run_id = data["id"]
             dataset_id = data["defaultDatasetId"]
             logger.debug(f"Started Apify run {run_id}, dataset {dataset_id}")
             return run_id, dataset_id
+        except httpx.HTTPStatusError as exc:
+            detail = self._api_error(exc.response)
+            if self.config.required:
+                raise RuntimeError(f"Required Twitter source failed: {detail}") from exc
+            logger.error("Failed to start Apify run: %s", detail)
+            return None, None
         except Exception as exc:
-            logger.error(f"Failed to start Apify run: {exc}")
+            if self.config.required:
+                raise RuntimeError(f"Required Twitter source failed: {exc}") from exc
+            logger.error("Failed to start Apify run: %s", exc)
             return None, None
 
     async def _wait_for_run(self, token: str, run_id: str) -> bool:
-        url = f"{_APIFY_BASE}/actor-runs/{run_id}?token={token}"
+        url = f"{_APIFY_BASE}/actor-runs/{run_id}"
         elapsed = 0.0
         while elapsed < _MAX_WAIT:
             try:
-                resp = await self.client.get(url, timeout=10.0)
+                resp = await self.client.get(
+                    url, headers=self._auth_headers(token), timeout=10.0
+                )
                 resp.raise_for_status()
                 status = resp.json()["data"]["status"]
                 if status == "SUCCEEDED":
@@ -107,15 +152,17 @@ class TwitterScraper(BaseScraper):
         logger.warning(f"Apify run {run_id} timed out after {_MAX_WAIT}s.")
         return False
 
-    async def _fetch_dataset(self, token: str, dataset_id: str) -> list:
-        url = f"{_APIFY_BASE}/datasets/{dataset_id}/items?token={token}"
+    async def _fetch_dataset(self, token: str, dataset_id: str) -> Optional[list]:
+        url = f"{_APIFY_BASE}/datasets/{dataset_id}/items"
         try:
-            resp = await self.client.get(url, timeout=30.0)
+            resp = await self.client.get(
+                url, headers=self._auth_headers(token), timeout=30.0
+            )
             resp.raise_for_status()
             return resp.json()
         except Exception as exc:
             logger.error(f"Failed to fetch Apify dataset {dataset_id}: {exc}")
-            return []
+            return None
 
     async def fetch_replies_for_item(self, item: ContentItem) -> List[str]:
         """Fetch reply texts for one tweet using scweet search mode."""
@@ -142,9 +189,15 @@ class TwitterScraper(BaseScraper):
             "max_items": max_items,
         }
 
-        url = f"{_APIFY_BASE}/acts/{self.config.actor_id}/runs?token={token}"
+        url = f"{_APIFY_BASE}/acts/{self.config.actor_id}/runs"
         try:
-            resp = await self.client.post(url, json=payload, timeout=30.0)
+            resp = await self.client.post(
+                url,
+                json=payload,
+                params={"maxTotalChargeUsd": self.config.max_total_charge_usd},
+                headers=self._auth_headers(token),
+                timeout=30.0,
+            )
             resp.raise_for_status()
             data = resp.json()["data"]
             run_id = data["id"]
@@ -158,6 +211,30 @@ class TwitterScraper(BaseScraper):
 
         rows = await self._fetch_dataset(token, dataset_id)
         return self._extract_reply_lines(item, rows, max_replies)
+
+    @staticmethod
+    def _auth_headers(token: str) -> dict[str, str]:
+        """Keep the Apify token out of request URLs and logs."""
+        return {"Authorization": f"Bearer {token}"}
+
+    @staticmethod
+    def _api_error(response: httpx.Response) -> str:
+        """Return a safe, actionable Apify error without exposing credentials."""
+        error_type = "unknown_error"
+        message = response.reason_phrase or "request rejected"
+        approval_url = ""
+        try:
+            error = response.json().get("error") or {}
+            error_type = str(error.get("type") or error_type)
+            message = str(error.get("message") or message)
+            approval_url = str((error.get("data") or {}).get("approvalUrl") or "")
+        except (ValueError, AttributeError):
+            pass
+
+        detail = f"HTTP {response.status_code} ({error_type}): {message}"
+        if approval_url:
+            detail += f" Approval required in Apify Console: {approval_url}"
+        return detail
 
     def _extract_reply_lines(self, item: ContentItem, rows: list, max_replies: int) -> List[str]:
         """Convert scweet rows into compact reply lines."""
@@ -299,6 +376,7 @@ class TwitterScraper(BaseScraper):
                 metadata={
                     "tweet_id": numeric_id,
                     "conversation_id": conversation_id,
+                    "twitter_handle": str(screen_name).lstrip("@").casefold(),
                     "favorite_count": item.get("favorite_count", 0),
                     "retweet_count": item.get("retweet_count", 0),
                     "reply_count": item.get("reply_count", 0),

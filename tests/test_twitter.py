@@ -1,9 +1,11 @@
 """Tests for TwitterScraper."""
 
 import asyncio
+import json
 from datetime import datetime, timedelta, timezone
 
 import httpx
+import pytest
 
 from src.models import TwitterConfig
 from src.scrapers.twitter import TwitterScraper
@@ -132,6 +134,67 @@ def test_successful_fetch_returns_items(monkeypatch):
     assert len(result) == 2
     assert result[0].source_type.value == "twitter"
     assert result[0].metadata["favorite_count"] == 10
+    assert result[0].metadata["twitter_handle"] == "karpathy"
+
+
+def test_profile_run_is_bounded_to_date_window_and_excludes_retweets(monkeypatch):
+    monkeypatch.setenv("APIFY_TOKEN", "test_token")
+    since = datetime(2026, 7, 23, 1, 0, tzinfo=timezone.utc)
+    captured = {}
+    request_details = {}
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        if "/runs" in request.url.path and request.method == "POST":
+            captured.update(json.loads(request.content))
+            request_details["authorization"] = request.headers.get("Authorization")
+            request_details["max_total_charge"] = request.url.params.get(
+                "maxTotalChargeUsd"
+            )
+            request_details["token_in_url"] = "token" in request.url.params
+            return httpx.Response(200, json=_run_resp())
+        if "/actor-runs/" in request.url.path:
+            return httpx.Response(200, json=_status_resp())
+        if "/datasets/" in request.url.path:
+            return httpx.Response(200, json=[])
+        raise AssertionError(f"Unexpected: {request.url}")
+
+    client = httpx.AsyncClient(transport=httpx.MockTransport(handler))
+    asyncio.run(TwitterScraper(_make_config(users=["@OpenAI"]), client).fetch(since))
+    asyncio.run(client.aclose())
+
+    assert captured["profile_urls"] == ["@OpenAI"]
+    assert captured["since"] == "2026-07-23"
+    assert captured["tweet_type"] == "exclude_retweets"
+    assert captured["max_items"] == 100
+    assert request_details == {
+        "authorization": "Bearer test_token",
+        "max_total_charge": "0.4",
+        "token_in_url": False,
+    }
+
+
+def test_fetch_caps_results_after_engagement_sort(monkeypatch):
+    monkeypatch.setenv("APIFY_TOKEN", "test_token")
+    since = datetime.now(timezone.utc) - timedelta(hours=1)
+    tweets = [
+        _tweet(str(index), text=f"AI product {index}", favorite_count=index)
+        for index in range(6)
+    ]
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        if "/runs" in request.url.path and request.method == "POST":
+            return httpx.Response(200, json=_run_resp())
+        if "/actor-runs/" in request.url.path:
+            return httpx.Response(200, json=_status_resp())
+        if "/datasets/" in request.url.path:
+            return httpx.Response(200, json=tweets)
+        raise AssertionError(f"Unexpected: {request.url}")
+
+    client = httpx.AsyncClient(transport=httpx.MockTransport(handler))
+    result = asyncio.run(TwitterScraper(_make_config(fetch_limit=3), client).fetch(since))
+    asyncio.run(client.aclose())
+
+    assert [item.metadata["favorite_count"] for item in result] == [5, 4, 3]
 
 
 def test_metadata_keys_aligned_for_analyzer(monkeypatch):
@@ -216,6 +279,55 @@ def test_start_run_http_error_returns_empty(monkeypatch):
     )
     asyncio.run(client.aclose())
     assert result == []
+
+
+def test_start_run_permission_error_logs_approval_url(monkeypatch, caplog):
+    monkeypatch.setenv("APIFY_TOKEN", "test_token")
+    payload = {
+        "error": {
+            "type": "full-permission-actor-not-approved",
+            "message": "Approve this Actor before running it.",
+            "data": {"approvalUrl": "https://console.apify.com/actors/example"},
+        }
+    }
+    transport = httpx.MockTransport(
+        lambda request: httpx.Response(403, json=payload, request=request)
+    )
+    client = httpx.AsyncClient(transport=transport)
+    result = asyncio.run(
+        TwitterScraper(_make_config(), client).fetch(
+            datetime.now(timezone.utc) - timedelta(hours=1)
+        )
+    )
+    asyncio.run(client.aclose())
+
+    assert result == []
+    assert "full-permission-actor-not-approved" in caplog.text
+    assert "https://console.apify.com/actors/example" in caplog.text
+    assert "test_token" not in caplog.text
+
+
+def test_required_twitter_permission_error_raises(monkeypatch):
+    monkeypatch.setenv("APIFY_TOKEN", "test_token")
+    payload = {
+        "error": {
+            "type": "full-permission-actor-not-approved",
+            "message": "Approve this Actor before running it.",
+            "data": {"approvalUrl": "https://console.apify.com/actors/example"},
+        }
+    }
+    transport = httpx.MockTransport(
+        lambda request: httpx.Response(403, json=payload, request=request)
+    )
+    client = httpx.AsyncClient(transport=transport)
+
+    with pytest.raises(RuntimeError, match="full-permission-actor-not-approved"):
+        asyncio.run(
+            TwitterScraper(_make_config(required=True), client).fetch(
+                datetime.now(timezone.utc) - timedelta(hours=1)
+            )
+        )
+    asyncio.run(client.aclose())
 
 
 def test_no_results_item_skipped(monkeypatch):
@@ -415,6 +527,3 @@ def test_fetch_replies_no_conversation_id_returns_empty(monkeypatch):
     result = asyncio.run(scraper.fetch_replies_for_item(item))
     asyncio.run(client.aclose())
     assert result == []
-
-
-

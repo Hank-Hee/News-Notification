@@ -17,6 +17,7 @@ from .storage.manager import StorageManager, safe_output_path
 from ._file_utils import _atomic_write_text
 from .history import EventHistoryIndex
 from .prefilter import prefilter_items
+from .product_intelligence import ProductIntelligenceDatabase
 from .redaction import is_fatal_ai_error, redact_secrets
 from .services.email import EmailManager
 from .services.webhook import WebhookNotifier
@@ -221,6 +222,29 @@ class HorizonOrchestrator:
             if self.last_fetch_report and self.last_fetch_report.all_failed:
                 raise RuntimeError(self.last_fetch_report.failure_message())
 
+            twitter_config = getattr(
+                getattr(self.config, "sources", None), "twitter", None
+            )
+            if (
+                self.last_fetch_report
+                and twitter_config
+                and twitter_config.enabled
+                and twitter_config.required
+            ):
+                twitter_outcome = next(
+                    (
+                        outcome
+                        for outcome in self.last_fetch_report.outcomes
+                        if outcome.source_name == "Twitter"
+                    ),
+                    None,
+                )
+                if twitter_outcome and twitter_outcome.status == "failure":
+                    raise RuntimeError(
+                        "Required source Twitter failed; refusing to publish a digest "
+                        f"without first-party X intelligence. {twitter_outcome.error}"
+                    )
+
             if not all_items:
                 self.console.print("[yellow]No new content found. Exiting.[/yellow]")
                 return
@@ -280,6 +304,7 @@ class HorizonOrchestrator:
 
             # 5.6 Apply digest limits after any targeted re-analysis changes scores.
             important_items = self.apply_balanced_digest(important_items).items
+            important_items = self._prioritize_product_intelligence(important_items)
 
             # Show per-sub-source selection breakdown
             selected_counts: Dict[str, int] = defaultdict(int)
@@ -332,6 +357,20 @@ class HorizonOrchestrator:
                         summarizer=summarizer,
                     )
 
+            if self.config.product_intelligence.enabled:
+                database = ProductIntelligenceDatabase(
+                    self.config.product_intelligence
+                ).load()
+                changed = database.upsert(
+                    important_items,
+                    observed_on=datetime.strptime(today, "%Y-%m-%d").date(),
+                )
+                published_json, published_csv = database.save_and_publish()
+                self.console.print(
+                    f"🗂️ Updated {changed} product intelligence records: "
+                    f"{published_json}, {published_csv}\n"
+                )
+
             self.history_index.update(
                 important_items,
                 today=datetime.strptime(today, "%Y-%m-%d").date(),
@@ -383,7 +422,7 @@ class HorizonOrchestrator:
         front_matter = (
             "---\n"
             "layout: default\n"
-            f'title: "Horizon AI Daily · {today}"\n'
+            f'title: "AI 产品机会与 Builder 情报 · {today}"\n'
             f"date: {today}\n"
             f"lang: {language}\n"
             "---\n\n"
@@ -557,6 +596,8 @@ class HorizonOrchestrator:
             return meta["watchlist"]
         if meta.get("source_name"):
             return meta["source_name"]
+        if meta.get("twitter_handle"):
+            return f"@{meta['twitter_handle']}"
         if meta.get("gn_query"):
             return f"google_news:{meta['gn_query']}"
         if meta.get("domain"):
@@ -787,6 +828,8 @@ class HorizonOrchestrator:
         filtering = self.config.filtering
         groups = filtering.category_groups
         balance = getattr(self.config, "balance", None)
+        if balance is not None and not getattr(balance, "enabled", True):
+            balance = None
         max_items = filtering.max_items
         if max_items is None and balance is not None:
             max_items = filtering.final_max_items
@@ -887,6 +930,48 @@ class HorizonOrchestrator:
             group_limits=group_limits,
             duplicate_categories=sorted(set(duplicate_categories)),
         )
+
+    @staticmethod
+    def _prioritize_product_intelligence(
+        items: List[ContentItem],
+    ) -> List[ContentItem]:
+        """Put product cases first, followed by builders and productizable capabilities."""
+        sorted_items = sorted(items, key=lambda item: item.ai_score or 0, reverse=True)
+        type_priority = {
+            "product_case": 0,
+            "builder_insight": 1,
+            "model_capability": 2,
+            "market_signal": 3,
+            "business_policy": 4,
+            "early_signal": 5,
+        }
+        product_cases = [
+            item
+            for item in sorted_items
+            if item.metadata.get("intelligence_type") == "product_case"
+        ][:3]
+        top_ids = {item.id for item in product_cases}
+        fillers = [item for item in sorted_items if item.id not in top_ids]
+        fillers.sort(
+            key=lambda item: (
+                type_priority.get(
+                    str(item.metadata.get("intelligence_type")), 99
+                ),
+                -(item.ai_score or 0),
+            )
+        )
+        top_items = [*product_cases, *fillers[: max(0, 3 - len(product_cases))]]
+        top_ids = {item.id for item in top_items}
+        remainder = [item for item in sorted_items if item.id not in top_ids]
+        remainder.sort(
+            key=lambda item: (
+                type_priority.get(
+                    str(item.metadata.get("intelligence_type")), 99
+                ),
+                -(item.ai_score or 0),
+            )
+        )
+        return [*top_items, *remainder]
 
     @staticmethod
     def _select_soft_balanced(selected, max_items: int, balance):

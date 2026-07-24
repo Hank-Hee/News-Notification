@@ -272,6 +272,7 @@ class TwitterConfig(BaseModel):
     """
 
     enabled: bool = True
+    required: bool = False
     mode: str = "apify"  # "apify" or "playwright"
     users: List[str] = Field(default_factory=list)
     fetch_limit: int = 10
@@ -283,6 +284,7 @@ class TwitterConfig(BaseModel):
     # Apify settings (used when mode == "apify")
     apify_token_env: str = "APIFY_TOKEN"
     actor_id: str = "altimis~scweet"
+    max_total_charge_usd: float = Field(default=0.4, gt=0)
     # Playwright settings (used when mode == "playwright")
     cookie_dir: str = "data"
     cookie_file_pattern: str = "x_cookies_*.json"
@@ -502,6 +504,7 @@ class FilteringConfig(BaseModel):
     deep_analysis_limit: int = Field(default=5, ge=0)
     history_dedup_days: int = Field(default=7, ge=0)
     max_items: Optional[int] = Field(default=None, gt=0)
+    source_priority: List[str] = Field(default_factory=list)
     category_groups: Dict[str, CategoryGroupConfig] = Field(default_factory=dict)
     default_group: str = "other"
     default_group_limit: Optional[int] = Field(default=None, gt=0)
@@ -516,11 +519,23 @@ class FilteringConfig(BaseModel):
 class BalanceConfig(BaseModel):
     """Soft content-mix targets used after quality filtering."""
 
+    enabled: bool = True
     tech_target_ratio: float = Field(default=0.5, ge=0, le=1)
     product_target_ratio: float = Field(default=0.5, ge=0, le=1)
     china_target_ratio: float = Field(default=0.5, ge=0, le=1)
     global_target_ratio: float = Field(default=0.5, ge=0, le=1)
     strict: bool = False
+
+
+class ProductIntelligenceConfig(BaseModel):
+    """Persistent product-intelligence database published with the daily site."""
+
+    enabled: bool = False
+    json_path: str = "data/product_intelligence.json"
+    csv_path: str = "data/product_intelligence.csv"
+    publish_directory: str = "docs/data"
+    max_records: int = Field(default=2000, gt=0)
+    max_updates_per_product: int = Field(default=20, gt=0)
 
 
 class Config(BaseModel):
@@ -531,6 +546,9 @@ class Config(BaseModel):
     sources: SourcesConfig
     filtering: FilteringConfig
     balance: BalanceConfig = Field(default_factory=BalanceConfig)
+    product_intelligence: ProductIntelligenceConfig = Field(
+        default_factory=ProductIntelligenceConfig
+    )
     extractors: Dict[str, ExtractorConfig] = Field(default_factory=dict)
     email: Optional[EmailConfig] = None
     webhook: Optional[WebhookConfig] = None

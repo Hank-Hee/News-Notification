@@ -4,6 +4,7 @@ from types import SimpleNamespace
 
 import src.orchestrator as orchestrator_module
 from src.ai.summarizer import DailySummarizer
+from src.ai.prompts import CONTENT_ENRICHMENT_USER
 from src.models import (
     AIConfig,
     BalanceConfig,
@@ -104,7 +105,7 @@ def test_only_top_five_receive_deep_analysis(monkeypatch):
     assert trends == ["趋势一", "趋势二", "趋势三"]
 
 
-def test_chinese_daily_renders_research_sections_and_shortage_notice():
+def test_chinese_daily_renders_product_intelligence_sections_and_shortage_notice():
     items = [_item(i, "tech" if i % 2 == 0 else "product", "china" if i % 2 else "global", 8.5) for i in range(7)]
     items[0].metadata.update(
         {
@@ -128,13 +129,14 @@ def test_chinese_daily_renders_research_sections_and_shortage_notice():
         )
     )
 
-    assert "# Horizon AI Daily" in result
+    assert "# AI 产品机会与 Builder 情报" in result
     assert "今日高质量增量有限" in result
-    assert "## 今日必读 Top 5" in result
-    assert "## 模型与技术前沿" in result
-    assert "## AI 产品与商业动态" in result
-    assert "## GitHub 开源趋势" in result
-    assert "**限制与不确定性**" in result
+    assert "## 今日最值得拆解的 3 个 AI 产品" in result
+    assert "## Builder 与关键人物的一手方法" in result
+    assert "## 新模型能力可以做成什么产品" in result
+    assert "## 市场验证、商业化与失败案例" in result
+    assert "## AI 产品经理职业与技能雷达" in result
+    assert "**用户原来的问题**" in result
 
 
 def test_github_pages_post_generation_is_atomic_and_has_front_matter(tmp_path, monkeypatch):
@@ -148,7 +150,23 @@ def test_github_pages_post_generation_is_atomic_and_has_front_matter(tmp_path, m
 
     content = path.read_text(encoding="utf-8")
     assert path == tmp_path / "docs/_posts/2026-07-23-summary-zh.md"
-    assert 'title: "Horizon AI Daily · 2026-07-23"' in content
+    assert 'title: "AI 产品机会与 Builder 情报 · 2026-07-23"' in content
     assert "lang: zh" in content
     assert "日报正文" in content
     assert "# Horizon AI Daily" not in content
+
+
+def test_product_enrichment_prompt_formats_nested_json_example():
+    prompt = CONTENT_ENRICHMENT_USER.format(
+        title="Acme AI",
+        url="https://example.com/acme",
+        summary="Acme AI 发布了产品。",
+        score=9.0,
+        reason="有真实用户工作流。",
+        tags="AI 产品",
+        content="原文内容",
+        comments_section="",
+        web_context="没有可用的背景搜索结果。",
+    )
+
+    assert '"input_process_output": {"input": "输入"' in prompt

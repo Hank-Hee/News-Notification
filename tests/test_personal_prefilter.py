@@ -57,3 +57,57 @@ def test_title_and_tracking_url_duplicates_are_removed():
     assert result.stats.duplicate_title == 1
     assert clean_url("https://example.com/story?utm_source=x") == "https://example.com/story"
     assert normalize_title(items[0].title) == normalize_title(items[2].title)
+
+
+def test_source_priority_keeps_twitter_before_candidate_limit():
+    config = FilteringConfig(
+        rule_prefilter_enabled=True,
+        min_content_chars=0,
+        candidate_limit=1,
+        source_priority=["twitter", "rss"],
+    )
+    rss = _item(
+        "rss",
+        "AI product story from a media feed",
+        "https://example.com/rss",
+        content="AI product details",
+    )
+    tweet = _item(
+        "tweet",
+        "OpenAI builder shares a new AI workflow",
+        "https://x.com/openai/status/1",
+        content="AI workflow details",
+        source=SourceType.TWITTER,
+    )
+
+    result = prefilter_items([rss, tweet], since=NOW - timedelta(hours=24), config=config)
+
+    assert [item.id for item in result.items] == ["tweet"]
+
+
+def test_twitter_per_source_limit_is_applied_per_handle():
+    config = FilteringConfig(
+        rule_prefilter_enabled=True,
+        min_content_chars=0,
+        per_source_limit=1,
+    )
+    first = _item(
+        "first",
+        "OpenAI builder shares an AI product launch",
+        "https://x.com/openai/status/1",
+        content="AI product details",
+        source=SourceType.TWITTER,
+    )
+    first.metadata["twitter_handle"] = "openai"
+    second = _item(
+        "second",
+        "Anthropic builder shares an AI product launch",
+        "https://x.com/anthropic/status/2",
+        content="AI product details",
+        source=SourceType.TWITTER,
+    )
+    second.metadata["twitter_handle"] = "anthropicai"
+
+    result = prefilter_items([first, second], since=NOW - timedelta(hours=24), config=config)
+
+    assert [item.id for item in result.items] == ["first", "second"]
