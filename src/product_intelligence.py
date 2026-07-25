@@ -18,16 +18,27 @@ from .models import ContentItem, ProductIntelligenceConfig
 
 _UNKNOWN = {"", "未公开", "未知", "不适用", "none", "null", "n/a"}
 _LIST_FIELDS = (
-    "original_workflow",
-    "product_workflow",
-    "tool_stack",
-    "traction_evidence",
-    "transferable_lessons",
-    "mvp_path",
-    "skill_signals",
+    "usage_flow",
+    "learning_points",
     "verticals",
     "tags",
 )
+_LEGACY_FIELDS_TO_DROP = {
+    "original_workflow",
+    "product_workflow",
+    "input_process_output",
+    "tool_stack",
+    "business_model",
+    "product_stage",
+    "traction_evidence",
+    "market_reaction",
+    "transferable_lessons",
+    "mvp_path",
+    "skill_signals",
+    "product_signal",
+    "market_signal",
+    "builder_insight",
+}
 _CSV_FIELDS = (
     "product_id",
     "product_name",
@@ -36,21 +47,16 @@ _CSV_FIELDS = (
     "last_seen",
     "occurrence_count",
     "intelligence_type",
-    "product_stage",
     "evidence_status",
     "target_user",
     "user_problem",
-    "product_signal",
-    "market_signal",
-    "business_model",
-    "market_reaction",
-    "original_workflow",
-    "product_workflow",
-    "tool_stack",
-    "traction_evidence",
-    "transferable_lessons",
-    "mvp_path",
-    "skill_signals",
+    "what_it_is",
+    "usage_flow",
+    "ai_role",
+    "implementation_idea",
+    "learning_points",
+    "hands_on_exercise",
+    "limitations_or_uncertainties",
     "verticals",
     "region",
     "score",
@@ -100,6 +106,10 @@ class ProductIntelligenceDatabase:
         except (OSError, json.JSONDecodeError):
             return self
         if isinstance(raw, dict) and isinstance(raw.get("products"), list):
+            for record in raw["products"]:
+                if isinstance(record, dict):
+                    for field in _LEGACY_FIELDS_TO_DROP:
+                        record.pop(field, None)
             self.payload = raw
         return self
 
@@ -205,15 +215,16 @@ class ProductIntelligenceDatabase:
             "last_seen": observed,
             "occurrence_count": 1,
             "intelligence_type": intelligence_type,
-            "product_stage": metadata.get("product_stage", "not_applicable"),
             "evidence_status": metadata.get("evidence_status", "reported"),
             "target_user": metadata.get("target_user") or "未公开",
             "user_problem": metadata.get("user_problem") or "未公开",
-            "product_signal": metadata.get("product_signal") or item.ai_summary or "",
-            "market_signal": metadata.get("market_signal") or "未公开",
-            "business_model": metadata.get("business_model") or "未公开",
-            "market_reaction": metadata.get("market_reaction") or "未公开",
-            "input_process_output": metadata.get("input_process_output") or {},
+            "what_it_is": metadata.get("what_it_is") or item.ai_summary or "",
+            "ai_role": metadata.get("ai_role") or "未公开",
+            "implementation_idea": metadata.get("implementation_idea") or "未公开",
+            "hands_on_exercise": metadata.get("hands_on_exercise") or "未公开",
+            "limitations_or_uncertainties": (
+                metadata.get("limitations_or_uncertainties") or "未公开"
+            ),
             "region": metadata.get("region", "global"),
             "score": item.ai_score,
             "summary": item.ai_summary or "",

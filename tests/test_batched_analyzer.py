@@ -57,7 +57,7 @@ def test_batch_results_map_by_stable_item_id_not_response_order():
     assert result[0].metadata["event_key"] == f"event-{items[0].id}"
 
 
-def test_batch_parse_failure_recursively_falls_back_to_smaller_batches():
+def test_batch_parse_failure_compensates_each_missing_item_once():
     items = [_item(1), _item(2)]
     calls = []
 
@@ -66,7 +66,7 @@ def test_batch_parse_failure_recursively_falls_back_to_smaller_batches():
         if len(calls) == 1:
             return "not-json"
         item = items[len(calls) - 2]
-        return json.dumps({"items": [_result(item.id, 8.0)]})
+        return json.dumps(_result(item.id, 8.0))
 
     client = SimpleNamespace(
         config=SimpleNamespace(analysis_batch_size=10, analysis_concurrency=1),
@@ -77,6 +77,30 @@ def test_batch_parse_failure_recursively_falls_back_to_smaller_batches():
 
     assert len(calls) == 3
     assert [item.ai_score for item in items] == [8.0, 8.0]
+
+
+def test_partial_batch_failure_keeps_valid_results_and_retries_only_two_items():
+    items = [_item(index) for index in range(10)]
+    calls = []
+
+    async def complete(**kwargs):
+        calls.append(kwargs["user"])
+        if len(calls) == 1:
+            return json.dumps(
+                {"items": [_result(item.id, 8.0) for item in items[:8]]}
+            )
+        failed_item = items[6 + len(calls)]
+        return json.dumps(_result(failed_item.id, 7.8))
+
+    client = SimpleNamespace(
+        config=SimpleNamespace(analysis_batch_size=10, analysis_concurrency=1),
+        complete=complete,
+    )
+
+    asyncio.run(ContentAnalyzer(client).analyze_batch(items))
+
+    assert len(calls) == 3
+    assert all(item.ai_score is not None for item in items)
 
 
 def test_batch_api_error_aborts_without_recursive_retry_storm():

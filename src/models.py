@@ -20,6 +20,7 @@ class SourceType(str, Enum):
     OSSINSIGHT = "ossinsight"
     GDELT = "gdelt"
     GOOGLE_NEWS = "google_news"
+    NEWSLETTER = "newsletter"
 
 
 class SourceDefinition(NamedTuple):
@@ -41,6 +42,7 @@ SOURCE_REGISTRY = {
     SourceType.OSSINSIGHT.value: SourceDefinition("ossinsight"),
     SourceType.GDELT.value: SourceDefinition("gdelt"),
     SourceType.GOOGLE_NEWS.value: SourceDefinition("google_news"),
+    SourceType.NEWSLETTER.value: SourceDefinition("newsletter", item_fields=("sources",)),
 }
 
 
@@ -118,7 +120,7 @@ AI_PROVIDER_DEFAULTS = {
         "base_url": "https://api.minimax.io/v1",
     },
     AIProvider.DEEPSEEK: {
-        "model": "deepseek-chat",
+        "model": "deepseek-v4-flash",
         "api_key_env": "DEEPSEEK_API_KEY",
         "base_url": "https://api.deepseek.com",
     },
@@ -156,6 +158,8 @@ class AIConfig(BaseModel):
     # Azure OpenAI specific; required when provider == AZURE
     azure_endpoint_env: Optional[str] = None
     api_version: Optional[str] = None
+    input_cost_per_million_cny: float = Field(default=0.0, ge=0)
+    output_cost_per_million_cny: float = Field(default=0.0, ge=0)
 
     @field_validator("languages")
     @classmethod
@@ -166,6 +170,35 @@ class AIConfig(BaseModel):
         if invalid:
             raise ValueError(f"invalid language code: {invalid[0]!r}")
         return languages
+
+
+class AIRoutingConfig(BaseModel):
+    """Fixed per-stage AI routing for the production intelligence pipeline."""
+
+    candidate_analysis: AIConfig
+    semantic_dedup: AIConfig
+    deep_analysis: AIConfig
+    deep_analysis_fallback: AIConfig
+
+    @property
+    def languages(self) -> List[str]:
+        """Keep language access compatible with the former single-model config."""
+        return self.deep_analysis.languages
+
+
+AIStage = Literal[
+    "candidate_analysis",
+    "semantic_dedup",
+    "deep_analysis",
+    "deep_analysis_fallback",
+]
+
+
+def stage_ai_config(ai: Union[AIConfig, AIRoutingConfig], stage: AIStage) -> AIConfig:
+    """Resolve one stage while retaining compatibility with legacy flat configs."""
+    if isinstance(ai, AIRoutingConfig):
+        return getattr(ai, stage)
+    return ai
 
 
 class GitHubSourceConfig(BaseModel):
@@ -290,6 +323,29 @@ class TwitterConfig(BaseModel):
     cookie_file_pattern: str = "x_cookies_*.json"
 
 
+class NewsletterSourceConfig(BaseModel):
+    """One publicly accessible newsletter archive monitored by Apify."""
+
+    name: str
+    start_url: HttpUrl
+    include_url_globs: List[str] = Field(default_factory=list)
+    enabled: bool = True
+    category: str = "newsletter"
+
+
+class NewsletterConfig(BaseModel):
+    """Bounded Apify crawl of free newsletter archive pages."""
+
+    enabled: bool = False
+    required: bool = False
+    apify_token_env: str = "APIFY_TOKEN"
+    actor_id: str = "apify~website-content-crawler"
+    max_total_charge_usd: float = Field(default=0.3, gt=0)
+    max_crawl_pages: int = Field(default=15, gt=0, le=50)
+    max_crawl_depth: int = Field(default=1, ge=0, le=2)
+    sources: List[NewsletterSourceConfig] = Field(default_factory=list)
+
+
 class OpenBBWatchlist(BaseModel):
     """A named watchlist of tickers fetched from one OpenBB provider.
 
@@ -395,6 +451,7 @@ class SourcesConfig(BaseModel):
     ossinsight: OSSInsightConfig = Field(default_factory=OSSInsightConfig)
     gdelt: Optional[GDELTConfig] = None
     google_news: Optional[GoogleNewsConfig] = None
+    newsletter: Optional[NewsletterConfig] = None
 
 
 class WebhookConfig(BaseModel):
@@ -538,17 +595,29 @@ class ProductIntelligenceConfig(BaseModel):
     max_updates_per_product: int = Field(default=20, gt=0)
 
 
+class CostControlConfig(BaseModel):
+    """Bound AI work and configure persistent analysis caching."""
+
+    max_ai_requests_per_run: int = Field(default=12, gt=0)
+    max_daily_cost_cny: float = Field(default=2.0, gt=0)
+    max_retries_per_stage: int = Field(default=1, ge=0, le=3)
+    analysis_cache_enabled: bool = True
+    analysis_cache_path: str = "data/history/analysis_cache.json"
+    analysis_cache_max_records: int = Field(default=5000, gt=0)
+
+
 class Config(BaseModel):
     """Main configuration model."""
 
     version: str = "1.0"
-    ai: AIConfig
+    ai: Union[AIConfig, AIRoutingConfig]
     sources: SourcesConfig
     filtering: FilteringConfig
     balance: BalanceConfig = Field(default_factory=BalanceConfig)
     product_intelligence: ProductIntelligenceConfig = Field(
         default_factory=ProductIntelligenceConfig
     )
+    cost_control: CostControlConfig = Field(default_factory=CostControlConfig)
     extractors: Dict[str, ExtractorConfig] = Field(default_factory=dict)
     email: Optional[EmailConfig] = None
     webhook: Optional[WebhookConfig] = None

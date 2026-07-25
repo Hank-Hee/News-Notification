@@ -43,6 +43,7 @@ def make_sources(**overrides):  # type: ignore[no-untyped-def]
         "reddit": SimpleNamespace(enabled=False),
         "telegram": SimpleNamespace(enabled=False),
         "twitter": None,
+        "newsletter": None,
         "openbb": None,
         "ossinsight": SimpleNamespace(enabled=False),
         "gdelt": None,
