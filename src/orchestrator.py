@@ -12,7 +12,7 @@ from zoneinfo import ZoneInfo
 import httpx
 from rich.console import Console
 
-from .models import Config, ContentItem
+from .models import Config, ContentItem, stage_ai_config
 from .storage.manager import StorageManager, safe_output_path
 from ._file_utils import _atomic_write_text
 from .history import EventHistoryIndex
@@ -32,11 +32,18 @@ from .scrapers.openbb import OpenBBScraper
 from .scrapers.ossinsight import OSSInsightScraper
 from .scrapers.gdelt import GDELTScraper
 from .scrapers.google_news import GoogleNewsScraper
+from .scrapers.newsletter import NewsletterScraper
 from .ai.client import create_ai_client
+from .ai.cache import AnalysisCache
 from .ai.analyzer import ContentAnalyzer
 from .ai.summarizer import DailySummarizer
 from .ai.enricher import ContentEnricher
-from .ai.tokens import get_usage_snapshot, reset_usage, usage_stage
+from .ai.tokens import (
+    configure_usage_limits,
+    get_usage_snapshot,
+    reset_usage,
+    usage_stage,
+)
 
 
 _TRACKING_QUERY_PARAMETERS = {
@@ -190,6 +197,11 @@ class HorizonOrchestrator:
         )
         self.last_fetch_report: Optional[FetchReport] = None
         self.history_index = EventHistoryIndex().load()
+        self.analysis_cache = AnalysisCache(
+            config.cost_control.analysis_cache_path,
+            enabled=config.cost_control.analysis_cache_enabled,
+            max_records=config.cost_control.analysis_cache_max_records,
+        ).load()
 
     async def run(self, force_hours: int = None) -> None:
         """Execute the complete workflow.
@@ -198,6 +210,12 @@ class HorizonOrchestrator:
             force_hours: Optional override for time window in hours
         """
         reset_usage()
+        cost_control = getattr(self.config, "cost_control", None)
+        if cost_control is not None:
+            configure_usage_limits(
+                max_requests=cost_control.max_ai_requests_per_run,
+                max_cost_cny=cost_control.max_daily_cost_cny,
+            )
         self.console.print("[bold cyan]🌅 Horizon - Starting aggregation...[/bold cyan]\n")
 
         # Check email subscriptions if configured
@@ -278,28 +296,34 @@ class HorizonOrchestrator:
                     f"→ {len(merged_items)} unique items\n"
                 )
 
-            # 5. Batch-score with Kimi.
-            analyzed_items = await self._analyze_content(merged_items)
+            # 5. Exclude recent exact repeats before spending any model tokens.
+            history_result = self.history_index.filter_recent(
+                merged_items,
+                days=self.config.filtering.history_dedup_days,
+            )
+            candidates = history_result.items
+            self.console.print(
+                f"🗓️ History prefilter excluded {history_result.excluded}; "
+                f"allowed changed content {history_result.allowed_updates}\n"
+            )
+            if not candidates:
+                self.console.print(
+                    "[yellow]No new candidates remain after history filtering.[/yellow]"
+                )
+                return
+
+            # 6. Batch-score with the candidate-analysis model.
+            analyzed_items = await self._analyze_content(candidates)
             self.console.print(f"🤖 Analyzed {len(analyzed_items)} items with AI\n")
 
-            # 6. Threshold and semantic deduplication.
+            # 7. Threshold and semantic deduplication.
             filtering_result = await self.filter_items(
                 analyzed_items,
                 apply_balance=False,
             )
             important_items = filtering_result.items
 
-            history_result = self.history_index.filter_recent(
-                important_items,
-                days=self.config.filtering.history_dedup_days,
-            )
-            important_items = history_result.items
-            self.console.print(
-                f"🗓️ History dedup excluded {history_result.excluded}; "
-                f"allowed substantive updates {history_result.allowed_updates}\n"
-            )
-
-            # 5.5 Optional second-stage Twitter reply expansion + targeted re-analysis
+            # Optional second-stage Twitter reply expansion + targeted re-analysis.
             await self._expand_twitter_discussion(important_items)
 
             # 5.6 Apply digest limits after any targeted re-analysis changes scores.
@@ -377,14 +401,12 @@ class HorizonOrchestrator:
             )
             self.history_index.save()
             self._copy_history_for_pages()
+            self.analysis_cache.save()
+            self._copy_analysis_cache_for_pages()
 
             self.console.print("[bold green]✅ Horizon completed successfully![/bold green]")
             usage = get_usage_snapshot()
-            self.console.print(
-                f"\n🧮 AI requests: {usage.total_requests} "
-                f"(analysis: {usage.requests_by_stage.get('analysis', 0)}, "
-                f"deep analysis: {usage.requests_by_stage.get('deep_analysis', 0)})"
-            )
+            self.console.print(f"\n🧮 AI requests: {usage.total_requests}")
             self.console.print(
                 f"   Token usage: input {usage.total_input_tokens}, "
                 f"output {usage.total_output_tokens}, total {usage.total_tokens}"
@@ -396,6 +418,20 @@ class HorizonOrchestrator:
                     f"   • {provider}: {provider_usage.requests} requests, "
                     f"{provider_usage.total} tokens"
                 )
+            for route, route_usage in sorted(usage.per_route.items()):
+                self.console.print(
+                    f"   • {route}: {route_usage.requests} requests, "
+                    f"input {route_usage.input_tokens}, output {route_usage.output_tokens}, "
+                    f"cache tokens {route_usage.cached_tokens}, "
+                    f"estimated ¥{route_usage.estimated_cost_cny:.4f}"
+                )
+            self.console.print(
+                f"   Estimated cost: ¥{usage.estimated_cost_cny:.4f}; "
+                f"cache hits: {usage.total_cache_hits}; "
+                f"retries: {sum(usage.retries_by_stage.values())}; "
+                "validation failures: "
+                f"{sum(usage.validation_failures_by_stage.values())}"
+            )
 
         except Exception as e:
             safe_error = redact_secrets(e)
@@ -422,7 +458,7 @@ class HorizonOrchestrator:
         front_matter = (
             "---\n"
             "layout: default\n"
-            f'title: "AI 产品机会与 Builder 情报 · {today}"\n'
+            f'title: "AI产品情报 · {today}"\n'
             f"date: {today}\n"
             f"lang: {language}\n"
             "---\n\n"
@@ -441,6 +477,18 @@ class HorizonOrchestrator:
         destination_dir.mkdir(parents=True, exist_ok=True)
         destination = safe_output_path(destination_dir, "event_index.json")
         content = self.history_index.path.read_text(encoding="utf-8")
+        _atomic_write_text(destination, content)
+        return destination
+
+    def _copy_analysis_cache_for_pages(self) -> Path:
+        """Publish the validated AI cache for restoration by the next run."""
+        destination_dir = Path("docs/data/history")
+        destination_dir.mkdir(parents=True, exist_ok=True)
+        destination = safe_output_path(destination_dir, "analysis_cache.json")
+        if self.analysis_cache.path.exists():
+            content = self.analysis_cache.path.read_text(encoding="utf-8")
+        else:
+            content = '{"version": 1, "entries": {}}\n'
         _atomic_write_text(destination, content)
         return destination
 
@@ -505,6 +553,20 @@ class HorizonOrchestrator:
                 else:
                     twitter_scraper = TwitterScraper(tw_cfg, client)
                 tasks.append(self._fetch_with_progress("Twitter", twitter_scraper, since))
+
+            # Public newsletter archives through one bounded Apify crawl
+            if (
+                self.config.sources.newsletter
+                and self.config.sources.newsletter.enabled
+            ):
+                newsletter_scraper = NewsletterScraper(
+                    self.config.sources.newsletter, client
+                )
+                tasks.append(
+                    self._fetch_with_progress(
+                        "Newsletters", newsletter_scraper, since
+                    )
+                )
 
             # OpenBB (financial news / filings via the OpenBB Platform SDK)
             if self.config.sources.openbb and self.config.sources.openbb.enabled:
@@ -691,12 +753,14 @@ class HorizonOrchestrator:
         items_text = "\n\n".join(lines)
 
         try:
-            ai_client = create_ai_client(self.config.ai)
+            ai_client = create_ai_client(
+                stage_ai_config(self.config.ai, "semantic_dedup")
+            )
             with usage_stage("semantic_dedup"):
                 response = await ai_client.complete(
                     system=TOPIC_DEDUP_SYSTEM,
                     user=TOPIC_DEDUP_USER.format(items=items_text),
-                    max_tokens=2048,
+                    max_tokens=1536,
                 )
             result = parse_json_response(response)
             if result is None:
@@ -1079,8 +1143,14 @@ class HorizonOrchestrator:
         self.console.print(
             f"   Re-analyzing {len(expanded)} Twitter items with reply context...\n"
         )
-        ai_client = create_ai_client(self.config.ai)
-        analyzer = ContentAnalyzer(ai_client)
+        ai_client = create_ai_client(
+            stage_ai_config(self.config.ai, "candidate_analysis")
+        )
+        analyzer = ContentAnalyzer(
+            ai_client,
+            cache=self.analysis_cache,
+            max_retries=self.config.cost_control.max_retries_per_stage,
+        )
         await analyzer.analyze_batch(expanded)
 
     async def _enrich_important_items(self, items: List[ContentItem]) -> List[str]:
@@ -1098,8 +1168,16 @@ class HorizonOrchestrator:
         deep_limit = self.config.filtering.deep_analysis_limit
         deep_items = items[:deep_limit]
         self.console.print(f"📚 Deep-analyzing Top {len(deep_items)} items...")
-        ai_client = create_ai_client(self.config.ai)
-        enricher = ContentEnricher(ai_client)
+        ai_client = create_ai_client(stage_ai_config(self.config.ai, "deep_analysis"))
+        fallback_client = create_ai_client(
+            stage_ai_config(self.config.ai, "deep_analysis_fallback")
+        )
+        enricher = ContentEnricher(
+            ai_client,
+            fallback_client=fallback_client,
+            cache=self.analysis_cache,
+            max_retries=self.config.cost_control.max_retries_per_stage,
+        )
         await enricher.enrich_batch(deep_items)
         self.console.print(f"   Deep-analyzed {len(deep_items)} items\n")
         return await enricher.generate_trend_overview(items)
@@ -1115,8 +1193,14 @@ class HorizonOrchestrator:
         """
         self.console.print("🤖 Analyzing content with AI...")
 
-        ai_client = create_ai_client(self.config.ai)
-        analyzer = ContentAnalyzer(ai_client)
+        ai_client = create_ai_client(
+            stage_ai_config(self.config.ai, "candidate_analysis")
+        )
+        analyzer = ContentAnalyzer(
+            ai_client,
+            cache=self.analysis_cache,
+            max_retries=self.config.cost_control.max_retries_per_stage,
+        )
 
         return await analyzer.analyze_batch(items)
 

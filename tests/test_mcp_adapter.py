@@ -127,6 +127,15 @@ def test_mcp_filter_and_reporting_support_every_registered_source() -> None:
                 "reddit": {"enabled": True, "subreddits": [{"subreddit": "python"}]},
                 "telegram": {"enabled": True, "channels": [{"channel": "updates"}]},
                 "twitter": {"enabled": True, "users": ["openai"]},
+                "newsletter": {
+                    "enabled": True,
+                    "sources": [
+                        {
+                            "name": "Example Letter",
+                            "start_url": "https://example.com/archive",
+                        }
+                    ],
+                },
                 "openbb": {"enabled": True, "watchlists": [{"name": "tech", "symbols": ["NVDA"]}]},
                 "ossinsight": {"enabled": True},
                 "gdelt": {"enabled": True},

@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import hashlib
 from dataclasses import dataclass
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
@@ -10,6 +11,15 @@ from pathlib import Path
 from ._file_utils import _atomic_write_text
 from .models import ContentItem
 from .prefilter import normalize_title
+
+
+def _normalize_url(value: object) -> str:
+    return str(value or "").strip().rstrip("/").casefold()
+
+
+def _content_hash(item: ContentItem) -> str:
+    normalized = " ".join(str(item.content or "").split()).casefold()
+    return hashlib.sha256(normalized.encode("utf-8")).hexdigest() if normalized else ""
 
 
 @dataclass
@@ -62,7 +72,21 @@ class EventHistoryIndex:
 
         for item in items:
             key = self.event_key(item)
+            normalized_title = normalize_title(item.title)
+            normalized_url = _normalize_url(item.url)
             record = self.records.get(key)
+            if not record:
+                record = next(
+                    (
+                        candidate
+                        for candidate_key, candidate in self.records.items()
+                        if candidate_key == normalized_title
+                        or str(candidate.get("normalized_title") or "") == normalized_title
+                        or str(candidate.get("normalized_url") or "") == normalized_url
+                        or str(candidate.get("source_id") or "") == item.id
+                    ),
+                    None,
+                )
             if not record:
                 kept.append(item)
                 continue
@@ -74,8 +98,13 @@ class EventHistoryIndex:
             if last_seen < cutoff:
                 kept.append(item)
                 continue
-            if bool(item.metadata.get("has_substantive_update")):
+            previous_hash = str(record.get("content_hash") or "")
+            current_hash = _content_hash(item)
+            if bool(item.metadata.get("has_substantive_update")) or (
+                previous_hash and current_hash and previous_hash != current_hash
+            ):
                 allowed_updates += 1
+                item.metadata["has_substantive_update"] = True
                 kept.append(item)
                 continue
             excluded += 1
@@ -101,6 +130,10 @@ class EventHistoryIndex:
                 "first_seen": first_seen,
                 "last_seen": today_text,
                 "url": str(item.url),
+                "normalized_url": _normalize_url(item.url),
+                "normalized_title": normalize_title(item.title),
+                "source_id": item.id,
+                "content_hash": _content_hash(item),
                 "latest_update": item.ai_summary or item.title,
             }
 

@@ -1,20 +1,62 @@
 {
   "version": "1.1",
   "ai": {
-    "provider": "openai",
-    "model": "${KIMI_MODEL_ID}",
-    "base_url": "${KIMI_BASE_URL}",
-    "api_key_env": "MOONSHOT_API_KEY",
-    "temperature": 0.6,
-    "max_completion_tokens": 8192,
-    "thinking": {
-      "type": "disabled"
+    "candidate_analysis": {
+      "provider": "deepseek",
+      "model": "${DEEPSEEK_CANDIDATE_MODEL}",
+      "base_url": "${DEEPSEEK_BASE_URL}",
+      "api_key_env": "DEEPSEEK_API_KEY",
+      "temperature": 0.1,
+      "max_completion_tokens": 4096,
+      "thinking": {"type": "disabled"},
+      "throttle_sec": 0.2,
+      "languages": ["zh"],
+      "analysis_concurrency": 1,
+      "analysis_batch_size": 10,
+      "input_cost_per_million_cny": 1.0,
+      "output_cost_per_million_cny": 2.0
     },
-    "throttle_sec": 0.2,
-    "languages": ["zh"],
-    "analysis_concurrency": 1,
-    "analysis_batch_size": 5,
-    "enrichment_concurrency": 1
+    "semantic_dedup": {
+      "provider": "deepseek",
+      "model": "${DEEPSEEK_CANDIDATE_MODEL}",
+      "base_url": "${DEEPSEEK_BASE_URL}",
+      "api_key_env": "DEEPSEEK_API_KEY",
+      "temperature": 0.0,
+      "max_completion_tokens": 2048,
+      "thinking": {"type": "disabled"},
+      "throttle_sec": 0.2,
+      "languages": ["zh"],
+      "analysis_concurrency": 1,
+      "analysis_batch_size": 10,
+      "input_cost_per_million_cny": 1.0,
+      "output_cost_per_million_cny": 2.0
+    },
+    "deep_analysis": {
+      "provider": "openai",
+      "model": "${KIMI_MODEL_ID}",
+      "base_url": "${KIMI_BASE_URL}",
+      "api_key_env": "MOONSHOT_API_KEY",
+      "temperature": 0.6,
+      "max_completion_tokens": 4096,
+      "thinking": {"type": "disabled"},
+      "languages": ["zh"],
+      "enrichment_concurrency": 1,
+      "input_cost_per_million_cny": 6.5,
+      "output_cost_per_million_cny": 27.0
+    },
+    "deep_analysis_fallback": {
+      "provider": "deepseek",
+      "model": "${DEEPSEEK_FALLBACK_MODEL}",
+      "base_url": "${DEEPSEEK_BASE_URL}",
+      "api_key_env": "DEEPSEEK_API_KEY",
+      "temperature": 0.1,
+      "max_completion_tokens": 4096,
+      "thinking": {"type": "disabled"},
+      "languages": ["zh"],
+      "enrichment_concurrency": 1,
+      "input_cost_per_million_cny": 3.0,
+      "output_cost_per_million_cny": 6.0
+    }
   },
   "sources": {
     "github": [
@@ -22,10 +64,7 @@
       {"type": "repo_releases", "owner": "anthropics", "repo": "claude-code", "enabled": true, "category": "builder-tool"},
       {"type": "repo_releases", "owner": "vercel", "repo": "ai", "enabled": true, "category": "builder-tool"},
       {"type": "repo_releases", "owner": "langchain-ai", "repo": "langchain", "enabled": true, "category": "builder-tool"},
-      {"type": "repo_releases", "owner": "run-llama", "repo": "llama_index", "enabled": true, "category": "builder-tool"},
       {"type": "repo_releases", "owner": "browser-use", "repo": "browser-use", "enabled": true, "category": "builder-tool"},
-      {"type": "repo_releases", "owner": "microsoft", "repo": "autogen", "enabled": true, "category": "builder-tool"},
-      {"type": "repo_releases", "owner": "crewAIInc", "repo": "crewAI", "enabled": true, "category": "builder-tool"},
       {"type": "repo_releases", "owner": "langgenius", "repo": "dify", "enabled": true, "category": "builder-tool"},
       {"type": "repo_releases", "owner": "n8n-io", "repo": "n8n", "enabled": true, "category": "builder-tool"}
     ],
@@ -48,8 +87,7 @@
       {"name": "The Verge AI", "url": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml", "enabled": true, "category": "product-media"},
       {"name": "Simon Willison", "url": "https://simonwillison.net/atom/everything/", "enabled": true, "category": "builder-global"},
       {"name": "One Useful Thing", "url": "https://www.oneusefulthing.org/feed", "enabled": true, "category": "builder-global"},
-      {"name": "Latent Space", "url": "https://www.latent.space/feed", "enabled": true, "category": "builder-global"},
-      {"name": "Lenny's Newsletter", "url": "https://www.lennysnewsletter.com/feed", "enabled": true, "category": "product-management"}
+      {"name": "Latent Space", "url": "https://www.latent.space/feed", "enabled": true, "category": "builder-global"}
     ],
     "reddit": {
       "enabled": false,
@@ -78,25 +116,54 @@
       "max_tweets_to_expand": 3,
       "reply_min_likes": 3,
       "users": [
-        "OpenAI", "OpenAIDevs", "sama", "gdb", "kevinweil",
-        "AnthropicAI", "alexalbert__", "claudeai",
-        "GoogleDeepMind", "GoogleAI", "demishassabis", "JeffDean", "OfficialLoganK",
-        "MetaAI", "AIatMeta", "ylecun", "MicrosoftAI", "mustafasuleyman",
-        "GitHub", "githubcopilot", "thomasdohmke",
-        "cursor_ai", "michaeltruell", "windsurf", "varun_mohan",
-        "Replit", "amasad", "lovable_dev", "antonosika", "vercel", "v0", "leeerob",
-        "huggingface", "ClementDelangue", "Thom_Wolf",
-        "LangChainAI", "hwchase17", "llama_index", "jerryjliu0", "browser_use", "crewAIInc", "dify_ai", "n8n_io",
-        "perplexity_ai", "AravSrinivas", "MistralAI", "cohere", "elevenlabsio", "runwayml", "LumaLabsAI", "HeyGen_Official",
-        "karpathy", "simonw", "swyx", "levelsio", "gregisenberg", "danshipper", "lennysan", "AndrewYNg", "emollick",
-        "HippocraticAI", "AbridgeHQ", "NablaTech", "AmbienceHealth", "OpenEvidence"
+        "OpenAI", "OpenAIDevs", "sama", "gdb", "kevinweil", "markchen90",
+        "AnthropicAI", "claudeai", "DarioAmodei", "jackclarkSF", "alexalbert__", "AmandaAskell",
+        "GoogleDeepMind", "GoogleAI", "demishassabis", "JeffDean", "OfficialLoganK", "OriolVinyalsML",
+        "AIatMeta", "ylecun", "Ahmad_Al_Dahle", "xai", "MistralAI", "arthurmensch", "GuillaumeLample",
+        "deepseek_ai", "Kimi_Moonshot", "Alibaba_Qwen",
+        "cursor_ai", "michaeltruell", "Replit", "amasad", "lovable_dev", "antonosika",
+        "vercel", "rauchg", "leeerob", "v0", "dify_ai", "n8n_io", "LangChainAI", "hwchase17", "browser_use",
+        "simonw", "karpathy", "levelsio", "dharmesh", "danshipper", "mattshumer_",
+        "swyx", "lennysan", "saranormous", "eladgil"
+      ]
+    },
+    "newsletter": {
+      "enabled": true,
+      "required": false,
+      "apify_token_env": "APIFY_TOKEN",
+      "actor_id": "apify~website-content-crawler",
+      "max_total_charge_usd": 0.3,
+      "max_crawl_pages": 15,
+      "max_crawl_depth": 1,
+      "sources": [
+        {
+          "name": "Lenny's Newsletter",
+          "start_url": "https://www.lennysnewsletter.com/archive",
+          "include_url_globs": ["https://www.lennysnewsletter.com/p/**"],
+          "enabled": true,
+          "category": "product-management"
+        },
+        {
+          "name": "Simple.ai by Dharmesh",
+          "start_url": "https://simple.ai/archive",
+          "include_url_globs": ["https://simple.ai/p/**"],
+          "enabled": true,
+          "category": "builder-newsletter"
+        },
+        {
+          "name": "AlphaSignal",
+          "start_url": "https://alphasignalai.substack.com/archive",
+          "include_url_globs": ["https://alphasignalai.substack.com/p/**"],
+          "enabled": true,
+          "category": "ai-newsletter"
+        }
       ]
     },
     "ossinsight": {"enabled": false},
     "gdelt": {"enabled": false},
     "google_news": {
       "enabled": true,
-      "query": "(AI产品 OR 人工智能应用 OR AI创业 OR 智能体产品 OR AI工作流 OR AI医疗 OR AI医药 OR 中医人工智能 OR Kimi OR DeepSeek OR 通义 OR 豆包 OR 智谱 OR MiniMax)",
+      "query": "(AI产品发布 OR AI应用上线 OR AI创业产品 OR 智能体产品 OR AI工作流案例 OR AI产品复盘 OR AI医疗产品 OR AI医药产品 OR 中医AI产品 OR Kimi产品 OR DeepSeek产品 OR 通义产品 OR 豆包产品)",
       "language": "zh-CN",
       "country": "CN",
       "ceid": "CN:zh-Hans",
@@ -108,14 +175,14 @@
     "rule_prefilter_enabled": true,
     "time_window_hours": 24,
     "ai_score_threshold": 7.0,
-    "candidate_limit": 60,
-    "per_source_limit": 15,
-    "source_priority": ["twitter", "rss", "github", "hackernews", "reddit", "google_news", "gdelt"],
+    "candidate_limit": 40,
+    "per_source_limit": 8,
+    "source_priority": ["twitter", "newsletter", "rss", "github", "hackernews", "reddit", "google_news", "gdelt"],
     "min_content_chars": 40,
     "community_min_score": 5,
     "final_min_items": 8,
     "final_max_items": 12,
-    "deep_analysis_limit": 3,
+    "deep_analysis_limit": 2,
     "history_dedup_days": 7,
     "max_items": 12,
     "category_groups": {},
@@ -137,6 +204,14 @@
     "publish_directory": "docs/data",
     "max_records": 2000,
     "max_updates_per_product": 20
+  },
+  "cost_control": {
+    "max_ai_requests_per_run": 12,
+    "max_daily_cost_cny": 2.0,
+    "max_retries_per_stage": 1,
+    "analysis_cache_enabled": true,
+    "analysis_cache_path": "data/history/analysis_cache.json",
+    "analysis_cache_max_records": 5000
   },
   "email": null,
   "webhook": {"enabled": false}

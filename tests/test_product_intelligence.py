@@ -20,18 +20,16 @@ def _item(event_key: str = "product-launch") -> ContentItem:
             "intelligence_type": "product_case",
             "product_name": "Acme AI",
             "builder_name": "Acme Team",
-            "product_stage": "early_growth",
             "evidence_status": "first_party",
             "target_user": "市场研究员",
             "user_problem": "手工整理情报耗时",
-            "product_signal": "把采集、分类与交付串成工作流",
-            "market_signal": "已有首批付费用户",
-            "original_workflow": ["手工搜索", "复制到表格"],
-            "product_workflow": ["输入关注主题", "自动生成结构化记录"],
-            "tool_stack": ["LLM", "RSS"],
-            "transferable_lessons": ["先验证单一角色的高频任务"],
-            "mvp_path": ["访谈 5 名研究员"],
-            "skill_signals": ["用户研究", "工作流设计"],
+            "what_it_is": "自动整理 AI 情报的产品",
+            "usage_flow": ["输入关注主题", "自动生成结构化记录"],
+            "ai_role": "把新闻分类并生成摘要",
+            "implementation_idea": "先抓取 RSS，再让模型输出固定 JSON",
+            "learning_points": ["结构化输出", "提示词"],
+            "hands_on_exercise": "用 5 条 RSS 新闻生成 JSON",
+            "limitations_or_uncertainties": "还没有长期稳定性数据",
             "verticals": ["知识管理"],
             "region": "global",
         },
@@ -63,11 +61,11 @@ def test_database_upserts_stable_product_and_publishes_json_csv(tmp_path):
     product = payload["products"][0]
     assert product["product_name"] == "Acme AI"
     assert product["target_user"] == "市场研究员"
-    assert product["mvp_path"] == ["访谈 5 名研究员"]
+    assert product["hands_on_exercise"] == "用 5 条 RSS 新闻生成 JSON"
 
     rows = list(csv.DictReader(published_csv.open(encoding="utf-8")))
     assert rows[0]["product_name"] == "Acme AI"
-    assert rows[0]["skill_signals"] == "用户研究 | 工作流设计"
+    assert rows[0]["learning_points"] == "结构化输出 | 提示词"
 
 
 def test_database_rerun_does_not_duplicate_same_event(tmp_path):
@@ -95,3 +93,41 @@ def test_database_keeps_distinct_product_updates(tmp_path):
         "launch",
         "pricing",
     ]
+
+
+def test_database_load_removes_retired_deep_analysis_fields(tmp_path):
+    database = _database(tmp_path)
+    database.json_path.parent.mkdir(parents=True)
+    database.json_path.write_text(
+        json.dumps(
+            {
+                "version": 1,
+                "products": [
+                    {
+                        "product_id": "product-old",
+                        "product_name": "Old Product",
+                        "tool_stack": ["legacy"],
+                        "business_model": "legacy",
+                        "market_reaction": "legacy",
+                        "transferable_lessons": ["legacy"],
+                        "mvp_path": ["legacy"],
+                    }
+                ],
+            },
+            ensure_ascii=False,
+        ),
+        encoding="utf-8",
+    )
+
+    restored = database.load()
+
+    product = restored.products[0]
+    assert product["product_name"] == "Old Product"
+    for retired in (
+        "tool_stack",
+        "business_model",
+        "market_reaction",
+        "transferable_lessons",
+        "mvp_path",
+    ):
+        assert retired not in product

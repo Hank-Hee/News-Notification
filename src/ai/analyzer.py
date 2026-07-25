@@ -9,12 +9,18 @@ from typing import List, Literal, Optional
 from pydantic import BaseModel, Field, ValidationError, model_validator
 from rich.progress import BarColumn, MofNCompleteColumn, Progress, SpinnerColumn, TextColumn
 from .client import AIClient
+from .cache import AnalysisCache
 from .prompts import (
     BATCH_CONTENT_ANALYSIS_USER,
     CONTENT_ANALYSIS_SYSTEM,
     CONTENT_ANALYSIS_USER,
 )
-from .tokens import usage_stage
+from .tokens import (
+    record_cache_hit,
+    record_retry,
+    record_validation_failure,
+    usage_stage,
+)
 from .utils import parse_json_response
 from ..models import ContentItem
 from ..redaction import redact_secrets
@@ -137,10 +143,21 @@ class AnalysisResult(BaseModel):
 
 
 class ContentAnalyzer:
-    """Scores items in validated batches with recursive parsing fallback."""
+    """Scores items in validated batches with one bounded compensation pass."""
 
-    def __init__(self, ai_client: AIClient):
+    def __init__(
+        self,
+        ai_client: AIClient,
+        *,
+        cache: Optional[AnalysisCache] = None,
+        prompt_version: str = "candidate-v2",
+        max_retries: int = 1,
+    ):
         self.client = ai_client
+        self.cache = cache
+        self.prompt_version = prompt_version
+        self.model_id = str(getattr(ai_client, "model", "unknown"))
+        self.max_retries = max(0, max_retries)
 
     @staticmethod
     def _parse_json_response(response: str) -> Optional[dict]:
@@ -161,13 +178,25 @@ class ContentAnalyzer:
     async def analyze_batch(self, items: List[ContentItem]) -> List[ContentItem]:
         if not items:
             return []
+        pending: list[ContentItem] = []
+        for item in items:
+            cached = self._cached_result(item)
+            if cached is None:
+                pending.append(item)
+                continue
+            self._apply_result(item, cached)
+            record_cache_hit("candidate_analysis")
+
+        if not pending:
+            return items
+
         batch_size = self._get_batch_size()
         if batch_size <= 1:
-            analyzed_items = await self._analyze_singly(items)
-            self._require_at_least_one_valid_result(analyzed_items)
-            return analyzed_items
+            await self._analyze_singly(pending)
+            self._require_at_least_one_valid_result(items)
+            return items
 
-        chunks = [items[index : index + batch_size] for index in range(0, len(items), batch_size)]
+        chunks = [pending[index : index + batch_size] for index in range(0, len(pending), batch_size)]
         semaphore = asyncio.Semaphore(self._get_concurrency())
 
         async def process(chunk: list[ContentItem], progress_task: int) -> None:
@@ -182,10 +211,38 @@ class ContentAnalyzer:
             MofNCompleteColumn(),
             transient=True,
         ) as progress:
-            task = progress.add_task("Analyzing", total=len(items))
+            task = progress.add_task("Analyzing", total=len(pending))
             await asyncio.gather(*(process(chunk, task) for chunk in chunks))
         self._require_at_least_one_valid_result(items)
         return items
+
+    def _cached_result(self, item: ContentItem) -> Optional[AnalysisResult]:
+        if self.cache is None:
+            return None
+        payload = self.cache.get(
+            item,
+            stage="candidate_analysis",
+            model_id=self.model_id,
+            prompt_version=self.prompt_version,
+        )
+        if payload is None:
+            return None
+        try:
+            return AnalysisResult.model_validate(payload)
+        except ValidationError:
+            record_validation_failure("candidate_analysis")
+            return None
+
+    def _cache_result(self, item: ContentItem, result: AnalysisResult) -> None:
+        if self.cache is None:
+            return
+        self.cache.put(
+            item,
+            result.model_dump(mode="json"),
+            stage="candidate_analysis",
+            model_id=self.model_id,
+            prompt_version=self.prompt_version,
+        )
 
     async def _analyze_singly(self, items: List[ContentItem]) -> List[ContentItem]:
         throttle_sec = self._get_throttle_sec()
@@ -216,79 +273,69 @@ class ContentAnalyzer:
             )
 
     async def _analyze_with_fallback(self, items: list[ContentItem]) -> None:
-        try:
-            await self._analyze_chunk(items)
-            return
-        except AnalysisResponseError:
-            if len(items) == 1:
-                try:
-                    await self._analyze_item(items[0])
-                except AnalysisResponseError as single_error:
-                    print(
-                        f"Error analyzing item {items[0].id}: "
-                        f"{redact_secrets(single_error)}"
-                    )
-                    self._apply_fallback(items[0])
-                return
+        """Keep valid batch members and retry only missing/invalid IDs once."""
+        failed = await self._analyze_chunk(items)
+        for item in failed:
+            if self.max_retries == 0:
+                self._apply_fallback(item)
+                continue
+            record_retry("candidate_analysis")
+            try:
+                await self._analyze_item(item, raise_on_invalid=True)
+            except AnalysisResponseError as error:
+                print(f"Error analyzing item {item.id}: {redact_secrets(error)}")
+                self._apply_fallback(item)
 
-        midpoint = len(items) // 2
-        await self._analyze_with_fallback(items[:midpoint])
-        await self._analyze_with_fallback(items[midpoint:])
-
-    async def _analyze_chunk(self, items: list[ContentItem]) -> None:
+    async def _analyze_chunk(self, items: list[ContentItem]) -> list[ContentItem]:
         blocks = [self._item_payload(item) for item in items]
-        with usage_stage("analysis"):
+        with usage_stage("candidate_analysis"):
             response = await self.client.complete(
                 system=CONTENT_ANALYSIS_SYSTEM,
                 user=BATCH_CONTENT_ANALYSIS_USER.format(
                     items=json.dumps(blocks, ensure_ascii=False, indent=2)
                 ),
-                max_tokens=6144,
+                max_tokens=4096,
             )
         parsed = self._parse_json_response(response)
         raw_results = parsed.get("items") if isinstance(parsed, dict) else None
         if not isinstance(raw_results, list):
-            raise AnalysisResponseError(
-                "Batch analysis response did not contain an items list"
-            )
+            record_validation_failure("candidate_analysis")
+            return list(items)
 
         expected = {item.id: item for item in items}
         validated: dict[str, AnalysisResult] = {}
-        try:
-            for raw in raw_results:
+        for raw in raw_results:
+            try:
                 result = AnalysisResult.model_validate(raw)
                 if not result.id or result.id not in expected or result.id in validated:
-                    raise AnalysisResponseError(
-                        "Batch analysis returned an unknown or duplicate item ID"
-                    )
+                    record_validation_failure("candidate_analysis")
+                    continue
                 validated[result.id] = result
-        except ValidationError as error:
-            details = ", ".join(
-                f"{'.'.join(map(str, item['loc']))}: {item['type']}"
-                for item in error.errors(include_input=False)[:3]
-            )
-            raise AnalysisResponseError(
-                f"Batch analysis response failed schema validation ({details})"
-            ) from error
-        if set(validated) != set(expected):
-            raise AnalysisResponseError(
-                "Batch analysis response did not map every input item ID"
-            )
+            except ValidationError:
+                record_validation_failure("candidate_analysis")
+                continue
         for item_id, result in validated.items():
             self._apply_result(expected[item_id], result)
+            self._cache_result(expected[item_id], result)
+        return [item for item in items if item.id not in validated]
 
-    async def _analyze_item(self, item: ContentItem) -> None:
+    async def _analyze_item(
+        self, item: ContentItem, *, raise_on_invalid: bool = False
+    ) -> None:
         payload = self._item_payload(item)
-        with usage_stage("analysis"):
+        with usage_stage("candidate_analysis"):
             response = await self.client.complete(
                 system=CONTENT_ANALYSIS_SYSTEM,
                 user=CONTENT_ANALYSIS_USER.format(**payload),
-                max_tokens=2048,
+                max_tokens=1024,
             )
         parsed = self._parse_json_response(response)
+        validation_recorded = False
         try:
             result = AnalysisResult.model_validate(parsed) if parsed is not None else None
         except ValidationError as error:
+            record_validation_failure("candidate_analysis")
+            validation_recorded = True
             details = ", ".join(
                 f"{'.'.join(map(str, item['loc']))}: {item['type']}"
                 for item in error.errors(include_input=False)[:3]
@@ -296,7 +343,13 @@ class ContentAnalyzer:
             print(f"Warning: analysis schema validation failed for {item.id}: {details}")
             result = None
         if result is None:
+            if not validation_recorded:
+                record_validation_failure("candidate_analysis")
             print(f"Warning: could not parse analysis response for {item.id}, using defaults")
+            if raise_on_invalid:
+                raise AnalysisResponseError(
+                    f"Single-item analysis response was invalid for {item.id}"
+                )
             self._apply_fallback(item)
             return
         if result.id and result.id != item.id:
@@ -304,6 +357,7 @@ class ContentAnalyzer:
                 "Single-item analysis returned the wrong item ID"
             )
         self._apply_result(item, result)
+        self._cache_result(item, result)
 
     @staticmethod
     def _require_at_least_one_valid_result(items: List[ContentItem]) -> None:
@@ -327,7 +381,7 @@ class ContentAnalyzer:
     @staticmethod
     def _item_payload(item: ContentItem) -> dict[str, str]:
         content_text = item.content or ""
-        content_section = f"正文: {content_text[:2500]}" if content_text else "正文: 无"
+        content_section = f"正文: {content_text[:1200]}" if content_text else "正文: 无"
         engagement = {
             key: item.metadata[key]
             for key in (

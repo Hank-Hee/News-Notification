@@ -1,6 +1,6 @@
 ---
 layout: default
-title: AI 产品机会与 Builder 情报
+title: AI产品情报
 ---
 
 {% assign zh_posts = site.posts | where: "lang", "zh" %}
@@ -11,7 +11,7 @@ title: AI 产品机会与 Builder 情报
 {{ latest.content }}
 </div>
 {% else %}
-# AI 产品机会与 Builder 情报
+# AI产品情报
 
 首份中文 AI 日报将在 GitHub Actions 成功运行后显示在这里。
 {% endif %}

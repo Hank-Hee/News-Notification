@@ -25,6 +25,7 @@ from .horizon_adapter import (
     resolve_horizon_path,
 )
 from .run_store import RunStore
+from ..models import AIRoutingConfig, stage_ai_config
 from ..services.webhook import WebhookNotifier
 
 
@@ -243,7 +244,21 @@ class HorizonPipelineService:
         missing_env: list[str] = []
 
         if check_env:
-            required = [ctx.config.ai.api_key_env]
+            if isinstance(ctx.config.ai, AIRoutingConfig):
+                required = list(
+                    dict.fromkeys(
+                        route.api_key_env
+                        for route in (
+                            ctx.config.ai.candidate_analysis,
+                            ctx.config.ai.semantic_dedup,
+                            ctx.config.ai.deep_analysis,
+                            ctx.config.ai.deep_analysis_fallback,
+                        )
+                        if route.api_key_env
+                    )
+                )
+            else:
+                required = [ctx.config.ai.api_key_env]
             for key in required:
                 if not os.getenv(key):
                     missing_env.append(key)
@@ -260,14 +275,20 @@ class HorizonPipelineService:
                 if ctx.config.webhook.url_env and not os.getenv(ctx.config.webhook.url_env):
                     missing_env.append(ctx.config.webhook.url_env)
 
+        candidate_config = stage_ai_config(ctx.config.ai, "candidate_analysis")
         return {
             "horizon_path": str(ctx.horizon_path),
             "config_path": str(ctx.config_path),
             "ai": {
-                "provider": ctx.config.ai.provider.value,
-                "model": ctx.config.ai.model,
+                "provider": candidate_config.provider.value,
+                "model": candidate_config.model,
                 "languages": list(ctx.config.ai.languages),
-                "api_key_env": ctx.config.ai.api_key_env,
+                "api_key_env": candidate_config.api_key_env,
+                "routes": (
+                    ctx.config.ai.model_dump(mode="json")
+                    if isinstance(ctx.config.ai, AIRoutingConfig)
+                    else None
+                ),
             },
             "filtering": {
                 "ai_score_threshold": ctx.config.filtering.ai_score_threshold,
@@ -360,7 +381,9 @@ class HorizonPipelineService:
         if not items:
             raise HorizonMcpError(code="HZ_EMPTY_INPUT", message="No items available for scoring.")
 
-        ai_client = ctx.runtime.create_ai_client(ctx.config.ai)
+        ai_client = ctx.runtime.create_ai_client(
+            stage_ai_config(ctx.config.ai, "candidate_analysis")
+        )
         analyzer = ctx.runtime.ContentAnalyzer(ai_client)
         scored_items = await analyzer.analyze_batch(items)
 
@@ -468,8 +491,15 @@ class HorizonPipelineService:
         if not items:
             raise HorizonMcpError(code="HZ_EMPTY_INPUT", message="No items available for enrichment.")
 
-        ai_client = ctx.runtime.create_ai_client(ctx.config.ai)
-        enricher = ctx.runtime.ContentEnricher(ai_client)
+        ai_client = ctx.runtime.create_ai_client(
+            stage_ai_config(ctx.config.ai, "deep_analysis")
+        )
+        fallback_client = ctx.runtime.create_ai_client(
+            stage_ai_config(ctx.config.ai, "deep_analysis_fallback")
+        )
+        enricher = ctx.runtime.ContentEnricher(
+            ai_client, fallback_client=fallback_client
+        )
         await enricher.enrich_batch(items)
 
         self.run_store.save_items(run_id, "enriched", items_to_dicts(items))

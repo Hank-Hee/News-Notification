@@ -2,7 +2,6 @@
 
 import html
 import re
-from collections import Counter
 from datetime import datetime
 from typing import Dict, List, Optional
 from urllib.parse import quote, urlsplit
@@ -173,7 +172,7 @@ class DailySummarizer:
             else ""
         )
         lines = [
-            "# AI 产品机会与 Builder 情报",
+            "# AI产品情报",
             "",
             f"**日期**：{_escape_markdown(date)}　 **更新时间**：{updated}",
             "",
@@ -181,31 +180,31 @@ class DailySummarizer:
             scarcity.rstrip(),
             "",
             '<nav class="daily-toc">',
-            '<a href="#product-top-three">最值得拆解的 3 个产品</a> · '
-            '<a href="#builder-radar">Builder 与关键人物</a> · '
-            '<a href="#model-opportunities">新能力可以做什么产品</a> · '
-            '<a href="#market-validation">市场验证与失败案例</a> · '
-            '<a href="#career-radar">AI 产品经理技能雷达</a> · '
-            '<a href="{{ \'/products/\' | relative_url }}">产品情报数据库</a> · '
+            '<a href="#daily-focus">今日重点</a> · '
+            '<a href="#product-teardown">产品拆解</a> · '
+            '<a href="#how-they-build">他们怎么做</a> · '
+            '<a href="#model-company-news">模型公司动态</a> · '
+            '<a href="#learn-today">今天学什么</a> · '
+            '<a href="{{ \'/products/\' | relative_url }}">产品情报库</a> · '
             '<a href="#archives">历史日报</a>',
             "</nav>",
             "",
-            '<div class="daily-signals">',
-            "<strong>今天先看什么</strong>",
+            '<a id="daily-focus"></a>',
+            "## 今日重点",
             "",
         ]
         trends = trend_overview or [
             f"今天从 {total_fetched} 条公开信息中保留 {len(items)} 条可用于产品判断的增量。"
         ]
         lines.extend(f"- {_pangu(_escape_markdown(trend))}" for trend in trends[:5])
-        lines.extend(["</div>", ""])
+        lines.append("")
 
-        top_items = items[:3]
-        remainder = items[3:]
+        top_items = items[:2]
+        remainder = items[2:]
         lines.extend(
             [
-                '<a id="product-top-three"></a>',
-                "## 今日最值得拆解的 3 个 AI 产品",
+                '<a id="product-teardown"></a>',
+                "## 产品拆解",
                 "",
             ]
         )
@@ -215,8 +214,7 @@ class DailySummarizer:
         builder_items = [
             item
             for item in remainder
-            if item.metadata.get("intelligence_type")
-            in {"builder_insight", "early_signal"}
+            if item.metadata.get("intelligence_type") == "builder_insight"
         ]
         model_items = [
             item
@@ -229,77 +227,71 @@ class DailySummarizer:
         lines.extend(
             [
                 "",
-                '<a id="builder-radar"></a>',
-                "## Builder 与关键人物的一手方法",
+                '<a id="how-they-build"></a>',
+                "## 他们怎么做",
                 "",
             ]
         )
         lines.extend(self._intelligence_item(item) for item in builder_items)
         if not builder_items:
-            lines.append("_今天没有达到标准的一手 Builder 方法；不会用二手观点补位。_")
+            lines.append("_今天没有达到标准的一线构建实践；不会用泛泛观点补位。_")
 
         lines.extend(
             [
                 "",
-                '<a id="model-opportunities"></a>',
-                "## 新模型能力可以做成什么产品",
+                '<a id="model-company-news"></a>',
+                "## 模型公司动态",
                 "",
             ]
         )
         lines.extend(self._intelligence_item(item) for item in model_items)
         if not model_items:
-            lines.append("_今天没有能够明确映射到产品机会的新模型能力。_")
+            lines.append("_今天没有值得单独展开的模型公司一手动态。_")
+
+        if market_items:
+            lines.extend(["", "### 其他值得留意", ""])
+            lines.extend(self._intelligence_item(item) for item in market_items)
 
         lines.extend(
             [
                 "",
-                '<a id="market-validation"></a>',
-                "## 市场验证、商业化与失败案例",
+                '<a id="learn-today"></a>',
+                "## 今天学什么",
                 "",
             ]
         )
-        lines.extend(self._intelligence_item(item) for item in market_items)
-        if not market_items:
-            lines.append("_今天没有足够可靠的市场验证或失败信号。_")
-
-        lines.extend(
-            [
-                "",
-                '<a id="career-radar"></a>',
-                "## AI 产品经理职业与技能雷达",
-                "",
-            ]
-        )
-        skill_counts = Counter(
-            skill
-            for item in items
-            for skill in item.metadata.get("skill_signals", [])
-            if str(skill).strip()
-        )
-        if skill_counts:
-            lines.append("今天最值得补的能力：")
-            for skill, count in skill_counts.most_common(6):
-                lines.append(f"- **{_pangu(_escape_markdown(skill))}**：在 {count} 条情报中出现")
-        else:
-            lines.append("_今天的公开信息不足以提炼可靠的技能信号。_")
-
-        mvp_lessons = []
+        learning_points: list[str] = []
+        exercises: list[str] = []
         for item in top_items:
-            mvp_lessons.extend(item.metadata.get("mvp_path", [])[:1])
-        if mvp_lessons:
-            lines.extend(["", "今天可以立即执行的验证动作："])
-            lines.extend(f"- {_pangu(_escape_markdown(step))}" for step in mvp_lessons[:3])
+            learning_points.extend(self._metadata_list(item, "learning_points"))
+            exercise = str(item.metadata.get("hands_on_exercise") or "").strip()
+            if exercise and exercise != "未公开":
+                exercises.append(exercise)
+        learning_points = list(dict.fromkeys(learning_points))[:4]
+        exercises = list(dict.fromkeys(exercises))[:2]
+        if learning_points:
+            lines.extend(
+                f"- **知识点**：{_pangu(_escape_markdown(point))}"
+                for point in learning_points
+            )
+        if exercises:
+            lines.extend(
+                f"- **动手练习**：{_pangu(_escape_markdown(exercise))}"
+                for exercise in exercises
+            )
+        if not learning_points and not exercises:
+            lines.append("_今天没有足够信息生成可靠的学习任务。_")
 
         lines.extend(
             [
                 "",
                 "## 数据与筛选说明",
                 "",
-                "- 每天 09:00（北京时间）处理最近 24 小时的公开来源；先程序预筛选，再由 Kimi 评分。",
-                "- 产品案例 30%、Builder 方法 25%、产品化新能力 15%、市场验证 15%、商业政策 10%、弱信号 5%。",
+                "- 每天 08:30（北京时间）处理最近 24 小时的公开来源；先程序预筛和历史去重，再由 DeepSeek 批量评分。",
+                "- 优先级依次为：真实 AI 产品、构建实践、模型公司核心人员、新能力、精选 Newsletter。",
                 "- 纯算力、GPU、底层推理优化和学术论文默认降权，除非能直接解释新的产品机会。",
-                "- Top 3 做产品拆解；公开信息没有说明的字段统一写“未公开”，不会推测补齐。",
-                "- 同一事件执行语义去重和最近 7 天历史去重；产品记录同步到 JSON、CSV 和可筛选数据库页面。",
+                "- Top 2 由 Kimi 做初学者版产品拆解；失败时只对该条使用 DeepSeek Pro，所有模型均关闭思考。",
+                "- 同一事件执行语义去重和最近 7 天历史去重；结果缓存并同步到 JSON、CSV 和可筛选数据库页面。",
                 "",
                 "[打开产品情报数据库]({{ '/products/' | relative_url }}) · "
                 "[下载 JSON]({{ '/data/product-intelligence.json' | relative_url }}) · "
@@ -329,12 +321,6 @@ class DailySummarizer:
             if url
             else title
         )
-        stage_labels = {
-            "validated": "已有市场验证",
-            "early_growth": "早期增长",
-            "proof_of_concept": "原型 / Demo",
-            "not_applicable": "阶段未公开",
-        }
         evidence_labels = {
             "first_party": "一手信息",
             "verified": "已核验",
@@ -347,7 +333,6 @@ class DailySummarizer:
             f"**一句话看懂**：{_pangu(_escape_markdown(item.ai_summary or '未公开'))}",
             "",
             f"**评分**：{item.ai_score or '?'} / 10　 "
-            f"**阶段**：{stage_labels.get(str(meta.get('product_stage')), '未公开')}　 "
             f"**证据**：{evidence_labels.get(str(meta.get('evidence_status')), '未公开')}",
             "",
             f"**产品 / 团队**：{_pangu(_escape_markdown(meta.get('product_name') or '未公开'))} / "
@@ -355,34 +340,28 @@ class DailySummarizer:
             "",
             f"**目标用户**：{_pangu(_escape_markdown(meta.get('target_user') or '未公开'))}",
             "",
-            f"**用户原来的问题**：{_pangu(_escape_markdown(meta.get('user_problem') or '未公开'))}",
+            f"**它是什么**：{_pangu(_escape_markdown(meta.get('what_it_is') or item.ai_summary or '未公开'))}",
+            "",
+            f"**用户问题**：{_pangu(_escape_markdown(meta.get('user_problem') or '未公开'))}",
         ]
-        self._append_steps(lines, "原来的工作流", self._metadata_list(item, "original_workflow"))
-        self._append_steps(lines, "产品带来的新工作流", self._metadata_list(item, "product_workflow"))
-
-        ipo = meta.get("input_process_output")
-        if isinstance(ipo, dict):
-            ipo_text = " → ".join(
-                _pangu(_escape_markdown(ipo.get(key) or "未公开"))
-                for key in ("input", "process", "output")
-            )
-        else:
-            ipo_text = "未公开"
-        lines.extend(["", f"**输入 → 处理 → 输出**：{ipo_text}"])
-        self._append_steps(lines, "模型、工具、数据与渠道", self._metadata_list(item, "tool_stack"))
+        self._append_steps(lines, "使用流程", self._metadata_list(item, "usage_flow"))
         lines.extend(
             [
                 "",
-                f"**市场反响与验证**：{_pangu(_escape_markdown(meta.get('market_reaction') or meta.get('market_signal') or '未公开'))}",
+                f"**AI 在做什么**：{_pangu(_escape_markdown(meta.get('ai_role') or '未公开'))}",
                 "",
-                f"**商业模式 / 获客**：{_pangu(_escape_markdown(meta.get('business_model') or '未公开'))}",
+                f"**怎么实现**：{_pangu(_escape_markdown(meta.get('implementation_idea') or '未公开'))}",
             ]
         )
-        self._append_steps(lines, "可以迁移的产品方法", self._metadata_list(item, "transferable_lessons"))
-        self._append_steps(lines, "如果自己做，最小 MVP 路径", self._metadata_list(item, "mvp_path"))
-        self._append_steps(lines, "需要补的技能", self._metadata_list(item, "skill_signals"))
-        follow_up = str(meta.get("what_to_watch_next") or meta.get("follow_up") or "未公开")
-        lines.extend(["", f"**接下来观察**：{_pangu(_escape_markdown(follow_up))}"])
+        self._append_steps(lines, "需要理解的知识点", self._metadata_list(item, "learning_points"))
+        lines.extend(
+            [
+                "",
+                f"**动手练习**：{_pangu(_escape_markdown(meta.get('hands_on_exercise') or '未公开'))}",
+                "",
+                f"**已知限制**：{_pangu(_escape_markdown(meta.get('limitations_or_uncertainties') or '未公开'))}",
+            ]
+        )
         lines.extend(["", self._source_links(item), "", "---", ""])
         return "\n".join(lines)
 
@@ -612,11 +591,11 @@ class DailySummarizer:
             )
             if meta.get("deep_analysis"):
                 for label, key in (
-                    ("为什么重要", "why_it_matters"),
-                    ("关键细节", "key_details"),
-                    ("行业与产品影响", "industry_or_product_impact"),
+                    ("它是什么", "what_it_is"),
+                    ("AI 在做什么", "ai_role"),
+                    ("怎么实现", "implementation_idea"),
+                    ("动手练习", "hands_on_exercise"),
                     ("限制与不确定性", "limitations_or_uncertainties"),
-                    ("后续观察", "what_to_watch_next"),
                 ):
                     value = meta.get(key)
                     if value:

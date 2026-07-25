@@ -23,6 +23,7 @@ body {
 
 .project-name { font-size: clamp(1.75rem, 4vw, 2.5rem) !important; }
 .project-tagline { opacity: .82; }
+.page-header .btn { display: none !important; }
 
 .main-content {
   max-width: 980px !important;
@@ -70,7 +71,7 @@ body {
 
 .product-filters {
   display: grid;
-  grid-template-columns: minmax(220px, 2fr) repeat(4, minmax(130px, 1fr));
+  grid-template-columns: minmax(220px, 2fr) repeat(3, minmax(130px, 1fr));
   gap: .8rem;
   margin: 1.5rem 0;
   padding: 1rem;

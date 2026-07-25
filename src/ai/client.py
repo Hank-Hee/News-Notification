@@ -14,7 +14,7 @@ from google.genai import types
 from ..models import AIConfig, AIProvider, AI_PROVIDER_DEFAULTS
 from ..redaction import redact_secrets
 from rich import print as rich_print
-from .tokens import record_request
+from .tokens import ensure_request_allowed, record_request
 
 
 logger = logging.getLogger(__name__)
@@ -171,6 +171,7 @@ class AnthropicClient(AIClient):
         max_tokens = self.max_tokens if max_tokens is None else max_tokens
 
         try:
+            ensure_request_allowed()
             message = await self.client.messages.create(
                 model=self.model,
                 max_tokens=max_tokens,
@@ -179,7 +180,7 @@ class AnthropicClient(AIClient):
                 messages=[{"role": "user", "content": user}]
             )
         except Exception:
-            record_request(self.config.provider.value)
+            record_request(self.config.provider.value, model=self.model)
             raise
         usage = getattr(message, "usage", None)
         if usage is not None:
@@ -187,9 +188,13 @@ class AnthropicClient(AIClient):
                 self.config.provider.value,
                 input_tokens=getattr(usage, "input_tokens", 0),
                 output_tokens=getattr(usage, "output_tokens", 0),
+                model=self.model,
+                cached_tokens=getattr(usage, "cache_read_input_tokens", 0),
+                input_cost_per_million_cny=self.config.input_cost_per_million_cny,
+                output_cost_per_million_cny=self.config.output_cost_per_million_cny,
             )
         else:
-            record_request(self.config.provider.value)
+            record_request(self.config.provider.value, model=self.model)
         return message.content[0].text
 
 
@@ -315,14 +320,15 @@ class OpenAIClient(AIClient):
                 message = str(exc)
                 if self.thinking and self._is_thinking_control_unsupported(message):
                     logger.error(
-                        "Cannot guarantee that Kimi Thinking is disabled; "
+                        "Cannot guarantee that Thinking is disabled for %s; "
                         "refusing to retry without the thinking control: %s",
+                        self.model,
                         redact_secrets(message),
                     )
                     raise RuntimeError(
-                        "Kimi Thinking disablement is incompatible with the current "
-                        "model or SDK. The request was stopped instead of retrying "
-                        "with Thinking enabled."
+                        f"Thinking disablement is incompatible with {self.model} or "
+                        "the current SDK. The request was stopped instead of "
+                        "retrying with Thinking enabled."
                     ) from exc
                 if (
                     self._supports_response_format
@@ -385,18 +391,24 @@ class OpenAIClient(AIClient):
         if self.thinking:
             request_kwargs["extra_body"] = {"thinking": dict(self.thinking)}
         try:
+            ensure_request_allowed()
             response = await self.client.chat.completions.create(**request_kwargs)
         except Exception:
-            record_request(self.provider)
+            record_request(self.provider, model=self.model)
             raise
         usage = getattr(response, "usage", None)
         if usage is None:
-            record_request(self.provider)
+            record_request(self.provider, model=self.model)
         else:
+            details = getattr(usage, "prompt_tokens_details", None)
             record_request(
                 self.provider,
                 input_tokens=getattr(usage, "prompt_tokens", 0),
                 output_tokens=getattr(usage, "completion_tokens", 0),
+                model=self.model,
+                cached_tokens=getattr(details, "cached_tokens", 0) if details else 0,
+                input_cost_per_million_cny=self.config.input_cost_per_million_cny,
+                output_cost_per_million_cny=self.config.output_cost_per_million_cny,
             )
         return response
 
@@ -559,9 +571,12 @@ class AzureOpenAIClient(AIClient):
                 "openai",
                 input_tokens=getattr(usage, "prompt_tokens", 0),
                 output_tokens=getattr(usage, "completion_tokens", 0),
+                model=self.model,
+                input_cost_per_million_cny=self.config.input_cost_per_million_cny,
+                output_cost_per_million_cny=self.config.output_cost_per_million_cny,
             )
         else:
-            record_request("openai")
+            record_request("openai", model=self.model)
         return response.choices[0].message.content
 
     async def _create_completion(
@@ -578,6 +593,7 @@ class AzureOpenAIClient(AIClient):
             if use_max_completion_tokens
             else {"max_tokens": max_tokens}
         )
+        ensure_request_allowed()
         return await self.client.chat.completions.create(
             model=self.model,
             messages=[
@@ -638,6 +654,7 @@ class GeminiClient(AIClient):
         temperature = self.temperature if temperature is None else temperature
         max_tokens = self.max_tokens if max_tokens is None else max_tokens
 
+        ensure_request_allowed()
         response = await self.client.aio.models.generate_content(
             model=self.model,
             contents=user,
@@ -653,9 +670,16 @@ class GeminiClient(AIClient):
             total = getattr(usage, "total_token_count", 0) or 0
             prompt = getattr(usage, "prompt_token_count", 0) or 0
             completion = max(0, total - prompt)
-            record_request("gemini", input_tokens=prompt, output_tokens=completion)
+            record_request(
+                "gemini",
+                input_tokens=prompt,
+                output_tokens=completion,
+                model=self.model,
+                input_cost_per_million_cny=self.config.input_cost_per_million_cny,
+                output_cost_per_million_cny=self.config.output_cost_per_million_cny,
+            )
         else:
-            record_request("gemini")
+            record_request("gemini", model=self.model)
         return response.text
 
 

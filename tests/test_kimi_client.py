@@ -178,23 +178,29 @@ def test_personal_config_and_workflow_pin_kimi_and_node24_actions():
         encoding="utf-8"
     )
 
-    assert config["ai"]["thinking"] == {"type": "disabled"}
-    assert config["ai"]["temperature"] == 0.6
-    assert config["ai"]["max_completion_tokens"] == 8192
-    assert config["ai"]["analysis_concurrency"] == 1
-    assert config["ai"]["enrichment_concurrency"] == 1
-    assert "max_tokens" not in config["ai"]
+    assert config["ai"]["candidate_analysis"]["provider"] == "deepseek"
+    assert config["ai"]["candidate_analysis"]["thinking"] == {"type": "disabled"}
+    assert config["ai"]["candidate_analysis"]["analysis_batch_size"] == 10
+    assert config["ai"]["deep_analysis"]["thinking"] == {"type": "disabled"}
+    assert config["ai"]["deep_analysis"]["temperature"] == 0.6
+    assert config["ai"]["deep_analysis"]["max_completion_tokens"] == 4096
+    assert config["ai"]["deep_analysis_fallback"]["provider"] == "deepseek"
+    assert all("max_tokens" not in route for route in config["ai"].values())
     assert "kimi-k2.6" in workflow
     assert "actions/setup-python@v7" in workflow
     assert "astral-sh/setup-uv@v9.0.0" in workflow
     assert '"${KIMI_BASE_URL%/}/models"' in workflow
     assert "Kimi API preflight passed" in workflow
+    assert "DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}" in workflow
+    assert "DeepSeek API preflight passed" in workflow
     assert "APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}" in workflow
     assert "Apify API preflight passed" in workflow
-    assert 'cron: "0 1 * * *"' in workflow
-    assert config["filtering"]["deep_analysis_limit"] == 3
+    assert 'cron: "30 0 * * *"' in workflow
+    assert config["filtering"]["deep_analysis_limit"] == 2
     assert config["filtering"]["source_priority"][0] == "twitter"
     assert config["sources"]["twitter"]["enabled"] is True
+    assert config["sources"]["newsletter"]["enabled"] is True
+    assert len(config["sources"]["newsletter"]["sources"]) == 3
     assert config["product_intelligence"]["enabled"] is True
     assert 'paths:\n      - ".github/workflows/daily-summary.yml"' in workflow
     assert "HORIZON_WEBHOOK_URL" not in workflow

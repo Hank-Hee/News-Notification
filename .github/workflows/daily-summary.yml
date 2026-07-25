@@ -7,8 +7,8 @@ on:
     paths:
       - ".github/workflows/daily-summary.yml"
   schedule:
-    # UTC 01:00 = 09:00 Asia/Shanghai.
-    - cron: "0 1 * * *"
+    # UTC 00:30 = 08:30 Asia/Shanghai.
+    - cron: "30 0 * * *"
   workflow_dispatch:
 
 jobs:
@@ -19,9 +19,13 @@ jobs:
       contents: write
     env:
       MOONSHOT_API_KEY: ${{ secrets.MOONSHOT_API_KEY }}
+      DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
       APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}
-      KIMI_BASE_URL: ${{ vars.KIMI_BASE_URL }}
+      KIMI_BASE_URL: ${{ vars.KIMI_BASE_URL || 'https://api.moonshot.cn/v1' }}
       KIMI_MODEL_ID: ${{ vars.KIMI_MODEL_ID || 'kimi-k2.6' }}
+      DEEPSEEK_BASE_URL: ${{ vars.DEEPSEEK_BASE_URL || 'https://api.deepseek.com' }}
+      DEEPSEEK_CANDIDATE_MODEL: ${{ vars.DEEPSEEK_CANDIDATE_MODEL || 'deepseek-v4-flash' }}
+      DEEPSEEK_FALLBACK_MODEL: ${{ vars.DEEPSEEK_FALLBACK_MODEL || 'deepseek-v4-pro' }}
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     steps:
@@ -70,6 +74,43 @@ jobs:
             }
           echo "Kimi API preflight passed for $KIMI_MODEL_ID"
 
+      - name: Validate DeepSeek configuration
+        shell: bash
+        run: |
+          test -n "$DEEPSEEK_API_KEY" || { echo "Missing repository secret: DEEPSEEK_API_KEY"; exit 1; }
+          test "$DEEPSEEK_BASE_URL" = "https://api.deepseek.com" || {
+            echo "DEEPSEEK_BASE_URL must use the official China API: https://api.deepseek.com"
+            exit 1
+          }
+          test "$DEEPSEEK_CANDIDATE_MODEL" = "deepseek-v4-flash" || {
+            echo "DEEPSEEK_CANDIDATE_MODEL must be deepseek-v4-flash"
+            exit 1
+          }
+          test "$DEEPSEEK_FALLBACK_MODEL" = "deepseek-v4-pro" || {
+            echo "DEEPSEEK_FALLBACK_MODEL must be deepseek-v4-pro"
+            exit 1
+          }
+
+          response_file="$RUNNER_TEMP/deepseek-models.json"
+          http_status=$(curl --silent --show-error \
+            --connect-timeout 15 --max-time 30 \
+            --output "$response_file" --write-out "%{http_code}" \
+            --header "Authorization: Bearer $DEEPSEEK_API_KEY" \
+            "${DEEPSEEK_BASE_URL%/}/models")
+          if [ "$http_status" != "200" ]; then
+            error_type=$(jq -r '.error.type // "unknown_error"' "$response_file" 2>/dev/null || true)
+            echo "DeepSeek API preflight failed: HTTP $http_status ($error_type)"
+            exit 1
+          fi
+          for model in "$DEEPSEEK_CANDIDATE_MODEL" "$DEEPSEEK_FALLBACK_MODEL"; do
+            jq -e --arg model "$model" '.data[] | select(.id == $model)' \
+              "$response_file" >/dev/null || {
+                echo "DeepSeek API preflight failed: model $model is unavailable to this key"
+                exit 1
+              }
+          done
+          echo "DeepSeek API preflight passed for $DEEPSEEK_CANDIDATE_MODEL and $DEEPSEEK_FALLBACK_MODEL"
+
       - name: Validate Apify configuration
         shell: bash
         run: |
@@ -84,18 +125,21 @@ jobs:
             echo "Apify API preflight failed: HTTP $http_status"
             exit 1
           fi
-          actor_file="$RUNNER_TEMP/apify-actor.json"
-          actor_status=$(curl --silent --show-error \
-            --connect-timeout 15 --max-time 30 \
-            --output "$actor_file" --write-out "%{http_code}" \
-            --header "Authorization: Bearer $APIFY_TOKEN" \
-            "https://api.apify.com/v2/acts/altimis~scweet")
-          if [ "$actor_status" != "200" ]; then
-            error_type=$(jq -r '.error.type // "unknown_error"' "$actor_file" 2>/dev/null || true)
-            echo "Apify Actor preflight failed: HTTP $actor_status ($error_type)"
-            exit 1
-          fi
-          echo "Apify API preflight passed for altimis/scweet"
+          for actor in "altimis~scweet" "apify~website-content-crawler"; do
+            safe_actor_name=${actor//~/_}
+            actor_file="$RUNNER_TEMP/apify-actor-$safe_actor_name.json"
+            actor_status=$(curl --silent --show-error \
+              --connect-timeout 15 --max-time 30 \
+              --output "$actor_file" --write-out "%{http_code}" \
+              --header "Authorization: Bearer $APIFY_TOKEN" \
+              "https://api.apify.com/v2/acts/$actor")
+            if [ "$actor_status" != "200" ]; then
+              error_type=$(jq -r '.error.type // "unknown_error"' "$actor_file" 2>/dev/null || true)
+              echo "Apify Actor $actor preflight failed: HTTP $actor_status ($error_type)"
+              exit 1
+            fi
+          done
+          echo "Apify API preflight passed for X and newsletter actors"
 
       - name: Prepare runtime configuration
         run: cp data/config.github.json data/config.json
@@ -106,6 +150,7 @@ jobs:
           mkdir -p data/history
           git fetch origin gh-pages --depth=1 || true
           git show origin/gh-pages:data/history/event_index.json > data/history/event_index.json || true
+          git show origin/gh-pages:data/history/analysis_cache.json > data/history/analysis_cache.json || true
           git show origin/gh-pages:data/product-intelligence.json > data/product-intelligence.json || true
           git show origin/gh-pages:data/product-intelligence.csv > data/product-intelligence.csv || true
 
