@@ -3,19 +3,12 @@
 
   const typeLabels = {
     product_case: "产品案例",
-    builder_insight: "Builder 方法",
+    builder_insight: "他们怎么做",
     model_capability: "模型能力",
     market_signal: "市场信号",
     business_policy: "商业与政策",
     early_signal: "早期信号"
   };
-  const stageLabels = {
-    validated: "已有市场验证",
-    early_growth: "早期增长",
-    proof_of_concept: "原型 / Demo",
-    not_applicable: "阶段未公开"
-  };
-
   function text(value, fallback) {
     const normalized = String(value || "").trim();
     return normalized || fallback || "未公开";
@@ -80,7 +73,6 @@
     badges.className = "product-badges";
     [
       typeLabels[product.intelligence_type] || product.intelligence_type,
-      stageLabels[product.product_stage] || product.product_stage,
       product.region === "china" ? "中国" : "全球",
       product.score ? product.score + "/10" : ""
     ].filter(Boolean).forEach((value) => {
@@ -90,17 +82,16 @@
     });
     card.appendChild(badges);
 
-    field(card, "团队 / Builder", product.builder_name);
+    field(card, "产品 / 团队", product.builder_name);
     field(card, "目标用户", product.target_user);
     field(card, "用户问题", product.user_problem);
-    field(card, "产品信号", product.product_signal || product.summary);
-    field(card, "市场验证", product.market_reaction || product.market_signal);
-    field(card, "商业模式", product.business_model);
-    listField(card, "新工作流", product.product_workflow);
-    listField(card, "工具与数据", product.tool_stack);
-    listField(card, "可迁移方法", product.transferable_lessons);
-    listField(card, "最小 MVP 路径", product.mvp_path);
-    listField(card, "技能信号", product.skill_signals);
+    field(card, "它是什么", product.what_it_is || product.summary);
+    listField(card, "使用流程", product.usage_flow);
+    field(card, "AI 在做什么", product.ai_role);
+    field(card, "怎么实现", product.implementation_idea);
+    listField(card, "需要理解的知识点", product.learning_points);
+    field(card, "动手练习", product.hands_on_exercise);
+    field(card, "已知限制", product.limitations_or_uncertainties);
 
     const footer = document.createElement("small");
     footer.textContent = "首次发现 " + text(product.first_seen) + " · 最近更新 " + text(product.last_seen);
@@ -115,7 +106,6 @@
     const results = document.getElementById("product-results");
     const search = document.getElementById("product-search");
     const type = document.getElementById("product-type");
-    const stage = document.getElementById("product-stage");
     const region = document.getElementById("product-region");
     const vertical = document.getElementById("product-vertical");
 
@@ -131,7 +121,6 @@
     }
 
     unique(products, "intelligence_type").forEach((value) => option(type, value, typeLabels[value] || value));
-    unique(products, "product_stage").forEach((value) => option(stage, value, stageLabels[value] || value));
     unique(products, "region").forEach((value) => option(region, value, value === "china" ? "中国" : "全球"));
     unique(products, "verticals").forEach((value) => option(vertical, value, value));
 
@@ -141,7 +130,6 @@
         const haystack = JSON.stringify(product).toLocaleLowerCase("zh-CN");
         return (!query || haystack.includes(query)) &&
           (!type.value || product.intelligence_type === type.value) &&
-          (!stage.value || product.product_stage === stage.value) &&
           (!region.value || product.region === region.value) &&
           (!vertical.value || list(product.verticals).includes(vertical.value));
       });
@@ -149,7 +137,7 @@
       status.textContent = "共 " + products.length + " 个产品记录，当前显示 " + filtered.length + " 个。";
     }
 
-    [search, type, stage, region, vertical].forEach((control) => {
+    [search, type, region, vertical].forEach((control) => {
       control.addEventListener(control === search ? "input" : "change", render);
     });
     render();
