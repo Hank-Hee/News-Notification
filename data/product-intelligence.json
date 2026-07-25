@@ -1,7 +1,555 @@
 {
   "version": 1,
-  "updated_at": "2026-07-25T04:36:28.217167+00:00",
+  "updated_at": "2026-07-25T16:39:51.809040+00:00",
   "products": [
+    {
+      "product_id": "product-f7405f4becbf49ae",
+      "product_name": "ChatGPT Work",
+      "builder_name": "OpenAI Developers",
+      "first_seen": "2026-07-26",
+      "last_seen": "2026-07-26",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "企业团队、需要让 AI 处理涉及登录网站的工作流的用户",
+      "user_problem": "以前 AI agent 遇到需要登录的网站就卡住了，用户要么自己手动操作完再交给 AI，要么干脆用不了这类网站；每次新开对话还得重新登录，很麻烦。",
+      "what_it_is": "OpenAI 给企业团队用的 ChatGPT Work 产品里，AI agent（智能体，能自主执行多步骤任务的 AI）新增了一项能力：可以像真人一样登录需要用户名密码的网站，而且只需登录一次，之后跨会话都能保持登录状态。",
+      "ai_role": "agent 负责在登录前后执行主要任务；遇到登录障碍时暂停并通知用户接管；登录完成后自动恢复任务流",
+      "implementation_idea": "OpenAI 在云端给每个用户运行了一个浏览器（类似远程控制的 Chrome），用户和 agent 轮流操作这个浏览器。用户登录时，cookie 和登录凭证存在云端，所以下次开新会话还能用。",
+      "hands_on_exercise": "找一个你日常需要登录的网站（比如公司内部系统或某个数据分析平台），手动记录完成一个重复任务需要点击几次、输入什么；然后对比：如果 AI 能自动登录并执行，哪些步骤可以省掉？写下 3 个你最想让 agent 自动化的登录后任务。",
+      "limitations_or_uncertainties": "未公开支持哪些具体网站类型（是否支持 SSO、企业内网、两步验证等）；未说明登录凭证的加密存储细节和安全审计情况；未公开该功能是否额外收费或仅限特定套餐。",
+      "region": "global",
+      "score": 8.5,
+      "summary": "OpenAI宣布ChatGPT Work agent现在可以登录需要认证的网站，用户接管云浏览器登录后agent可继续任务，登录状态跨会话保持。",
+      "title": "ChatGPT Work agent 现在能登录需要账号的网站了",
+      "url": "https://twitter.com/OpenAIDevs/status/tweet-2080707685448847418",
+      "sources": [
+        {
+          "url": "https://twitter.com/OpenAIDevs/status/tweet-2080707685448847418",
+          "title": "@OpenAIDevs: Your ChatGPT Work agent can now use websites that...",
+          "source_type": "twitter",
+          "published_at": "2026-07-24T17:32:24+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "chatgpt-work-agent-login",
+          "date": "2026-07-26",
+          "title": "ChatGPT Work agent 现在能登录需要账号的网站了",
+          "summary": "OpenAI宣布ChatGPT Work agent现在可以登录需要认证的网站，用户接管云浏览器登录后agent可继续任务，登录状态跨会话保持。",
+          "score": 8.5,
+          "url": "https://twitter.com/OpenAIDevs/status/tweet-2080707685448847418"
+        }
+      ],
+      "usage_flow": [
+        "用户在 ChatGPT Work 里给 agent 布置任务，agent 遇到需要登录的网站时暂停",
+        "用户接管云浏览器，自己输入账号密码完成登录",
+        "用户把控制权交还给 agent，agent 继续执行后续任务",
+        "下次再用时，登录状态还在，不用重新登录"
+      ],
+      "learning_points": [
+        "Agent：不只是回答问题，还能自主决定步骤、调用工具、执行多步任务的 AI 系统",
+        "云浏览器/远程浏览器：AI 在云端开的真实浏览器，让 AI 能操作网页就像真人一样",
+        "会话持久化：把登录状态存下来，打破'每次对话从零开始'的限制"
+      ],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "ChatGPT",
+        "Work"
+      ]
+    },
+    {
+      "product_id": "product-7f7811de59626bc9",
+      "product_name": "Claude Code",
+      "builder_name": "ashwin-ant",
+      "first_seen": "2026-07-26",
+      "last_seen": "2026-07-26",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "需要在终端/命令行环境下编写、修改、调试代码的开发者",
+      "user_problem": "开发者想直接用自然语言指挥 AI 改代码、跑测试，但担心 AI 自动执行命令时连到不该连的网络地址，或模型能力不够处理大代码库",
+      "what_it_is": "Anthropic 出品的命令行 AI 编程助手，能在终端里理解代码库、改文件、跑命令",
+      "ai_role": "理解代码库结构 → 生成修改方案 → 执行文件编辑和终端命令 → 汇报结果",
+      "implementation_idea": "把大语言模型包进命令行工具，通过 MCP（Model Context Protocol，一种让 AI 调用外部工具的通用接口）连接文件系统、代码库和外部服务；用沙箱限制 AI 执行命令时的网络访问，白名单机制让管理员预先批准可信域名",
+      "hands_on_exercise": "30 分钟练习：安装 Claude Code，找一个自己的 Python 项目，用 /add-dir 把项目根目录加进去，然后问'这个项目的依赖结构有什么风险'，观察它如何分析；接着在设置里打开 sandbox.network.strictAllowlist，尝试让 AI 访问一个未白名单的 URL，看是否被拦截",
+      "limitations_or_uncertainties": "Opus 5 的 '$10/$50 per Mtok' 具体指输入/输出哪端定价未在 release note 中明示；'fast mode' 的具体速度提升幅度未公开；嵌套 subagent 的 depth-3 限制是否会导致复杂任务中的上下文爆炸需用户自行验证",
+      "region": "global",
+      "score": 8.0,
+      "summary": "Claude Code v2.1.219新增Opus 5模型支持、网络沙箱白名单等多项功能。",
+      "title": "Claude Code v2.1.219：新增 Opus 5 模型支持与网络沙箱白名单",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.219",
+      "sources": [
+        {
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.219",
+          "title": "anthropics/claude-code released v2.1.219",
+          "source_type": "github",
+          "published_at": "2026-07-24T17:14:23+00:00"
+        },
+        {
+          "url": "https://claude.com/product/claude-code",
+          "title": "Claude Code by Anthropic | AI Coding Agent, Terminal, IDE",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "claude-code-v2.1.219",
+          "date": "2026-07-26",
+          "title": "Claude Code v2.1.219：新增 Opus 5 模型支持与网络沙箱白名单",
+          "summary": "Claude Code v2.1.219新增Opus 5模型支持、网络沙箱白名单等多项功能。",
+          "score": 8.0,
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.219"
+        }
+      ],
+      "usage_flow": [
+        "在终端安装并启动 claude，用自然语言描述需求（如'给这个项目加登录功能'）",
+        "AI 自动分析代码库，必要时用 /add-dir 添加更多目录到上下文",
+        "AI 提出修改方案，经确认后自动编辑文件、运行命令",
+        "开发者检查 git diff，确认无误后提交代码"
+      ],
+      "learning_points": [
+        "Context window（上下文窗口）：模型一次能'看'多少字，Opus 5 的 1M 约等于能塞进整本《三体》第一部，让 AI 分析大型代码库不丢线索",
+        "Agent（智能体）：不只是聊天回复，而是能自主决定'我要先读哪个文件、再改哪行、然后跑测试'的 AI 系统",
+        "Function calling（函数调用）：模型不直接生成答案，而是输出结构化指令（如'调用 read_file 工具'），由外部程序执行后再把结果喂回模型"
+      ],
+      "verticals": [],
+      "tags": [
+        "工具更新",
+        "Claude Code",
+        "Opus 5"
+      ]
+    },
+    {
+      "product_id": "product-4c264b3bd1bb5ec6",
+      "product_name": "Claude Opus 5",
+      "builder_name": "Simon Willison",
+      "first_seen": "2026-07-26",
+      "last_seen": "2026-07-26",
+      "occurrence_count": 2,
+      "intelligence_type": "model_capability",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Claude Opus 5发布，性能接近Fable 5，价格减半，在Artificial Analysis排行榜领先。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.0,
+      "summary": "Claude Opus 5发布，性能接近Fable 5，价格减半，在Artificial Analysis排行榜领先。",
+      "title": "Introducing Claude Opus 5",
+      "url": "https://simonwillison.net/2026/Jul/24/introducing-claude-opus-5/#atom-everything",
+      "sources": [
+        {
+          "url": "https://simonwillison.net/2026/Jul/25/boris-cherny/#atom-everything",
+          "title": "Quoting Boris Cherny",
+          "source_type": "rss",
+          "published_at": "2026-07-25T00:42:59+00:00"
+        },
+        {
+          "url": "https://simonwillison.net/2026/Jul/24/introducing-claude-opus-5/#atom-everything",
+          "title": "Introducing Claude Opus 5",
+          "source_type": "rss",
+          "published_at": "2026-07-24T23:48:50+00:00"
+        },
+        {
+          "url": "https://techcrunch.com/2026/07/24/anthropic-launches-opus-5/",
+          "title": "Anthropic launches Opus 5",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://www.theverge.com/ai-artificial-intelligence/970105/claude-opus-5-announced-anthropic-ai-model-release",
+          "title": "Anthropic releases Opus 5 with ‘close’ to Fable 5’s capabilities",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://www.latent.space/p/ainews-claude-opus-5-fable-level",
+          "title": "[AINews] Claude Opus 5: Fable-level performance at Opus price (half Fable)",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "anthropic-opus-5-prompt-injection",
+          "date": "2026-07-26",
+          "title": "Quoting Boris Cherny",
+          "summary": "Anthropic工程师称Opus 5是最难被提示注入的模型，安全性显著提升。",
+          "score": 8.0,
+          "url": "https://simonwillison.net/2026/Jul/25/boris-cherny/#atom-everything"
+        },
+        {
+          "update_id": "anthropic-opus-5-launch",
+          "date": "2026-07-26",
+          "title": "Introducing Claude Opus 5",
+          "summary": "Claude Opus 5发布，性能接近Fable 5，价格减半，在Artificial Analysis排行榜领先。",
+          "score": 8.0,
+          "url": "https://simonwillison.net/2026/Jul/24/introducing-claude-opus-5/#atom-everything"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "模型安全",
+        "提示注入",
+        "Anthropic",
+        "模型发布",
+        "Claude"
+      ]
+    },
+    {
+      "product_id": "product-f72e709087406552",
+      "product_name": "Vercel AI SDK",
+      "builder_name": "github-actions[bot]",
+      "first_seen": "2026-07-26",
+      "last_seen": "2026-07-26",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Vercel AI SDK 的 Anthropic 包 v4.0.20 新增 Claude Opus 5 模型、安全回退和对话中工具变更支持。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.0,
+      "summary": "Vercel AI SDK 的 Anthropic 包 v4.0.20 新增 Claude Opus 5 模型、安全回退和对话中工具变更支持。",
+      "title": "vercel/ai released @ai-sdk/anthropic@4.0.20",
+      "url": "https://github.com/vercel/ai/releases/tag/%40ai-sdk/anthropic%404.0.20",
+      "sources": [
+        {
+          "url": "https://github.com/vercel/ai/releases/tag/%40ai-sdk/anthropic%404.0.20",
+          "title": "vercel/ai released @ai-sdk/anthropic@4.0.20",
+          "source_type": "github",
+          "published_at": "2026-07-24T17:25:31+00:00"
+        },
+        {
+          "url": "https://github.com/vercel/ai/releases/tag/%40ai-sdk/anthropic%403.0.102",
+          "title": "vercel/ai released @ai-sdk/anthropic@3.0.102",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://github.com/vercel/ai/releases/tag/%40ai-sdk/anthropic%402.0.91",
+          "title": "vercel/ai released @ai-sdk/anthropic@2.0.91",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "vercel-ai-sdk-anthropic-4.0.20-features",
+          "date": "2026-07-26",
+          "title": "vercel/ai released @ai-sdk/anthropic@4.0.20",
+          "summary": "Vercel AI SDK 的 Anthropic 包 v4.0.20 新增 Claude Opus 5 模型、安全回退和对话中工具变更支持。",
+          "score": 8.0,
+          "url": "https://github.com/vercel/ai/releases/tag/%40ai-sdk/anthropic%404.0.20"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "AI SDK",
+        "Vercel",
+        "Anthropic",
+        "Claude Opus 5"
+      ]
+    },
+    {
+      "product_id": "product-dfa01f579da992e9",
+      "product_name": "ChatGPT",
+      "builder_name": "OpenAI Developers",
+      "first_seen": "2026-07-26",
+      "last_seen": "2026-07-26",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "OpenAI宣布ChatGPT自定义宠物现在支持分享链接，用户可创建链接让朋友领养宠物。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.5,
+      "summary": "OpenAI宣布ChatGPT自定义宠物现在支持分享链接，用户可创建链接让朋友领养宠物。",
+      "title": "@OpenAIDevs: Your Pet is ready to meet other builders.  On Chat...",
+      "url": "https://twitter.com/OpenAIDevs/status/tweet-2080747505474736162",
+      "sources": [
+        {
+          "url": "https://twitter.com/OpenAIDevs/status/tweet-2080747505474736162",
+          "title": "@OpenAIDevs: Your Pet is ready to meet other builders.  On Chat...",
+          "source_type": "twitter",
+          "published_at": "2026-07-24T20:10:38+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "chatgpt-pet-sharing",
+          "date": "2026-07-26",
+          "title": "@OpenAIDevs: Your Pet is ready to meet other builders.  On Chat...",
+          "summary": "OpenAI宣布ChatGPT自定义宠物现在支持分享链接，用户可创建链接让朋友领养宠物。",
+          "score": 7.5,
+          "url": "https://twitter.com/OpenAIDevs/status/tweet-2080747505474736162"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "ChatGPT",
+        "Personalization",
+        "Social"
+      ]
+    },
+    {
+      "product_id": "product-cfb157f59a4054e1",
+      "product_name": "ChatGPT",
+      "builder_name": "Justin Jincaid",
+      "first_seen": "2026-07-26",
+      "last_seen": "2026-07-26",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "OpenAI在ChatGPT中推出个人健康伴侣功能，提供健康相关对话支持。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.0,
+      "summary": "OpenAI在ChatGPT中推出个人健康伴侣功能，提供健康相关对话支持。",
+      "title": "Health in ChatGPT",
+      "url": "https://www.producthunt.com/products/openai",
+      "sources": [
+        {
+          "url": "https://www.producthunt.com/products/openai",
+          "title": "Health in ChatGPT",
+          "source_type": "rss",
+          "published_at": "2026-07-25T00:38:36+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "openai-health-chatgpt",
+          "date": "2026-07-26",
+          "title": "Health in ChatGPT",
+          "summary": "OpenAI在ChatGPT中推出个人健康伴侣功能，提供健康相关对话支持。",
+          "score": 7.0,
+          "url": "https://www.producthunt.com/products/openai"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Health",
+        "ChatGPT"
+      ]
+    },
+    {
+      "product_id": "product-7cd28a17c83737cd",
+      "product_name": "OpenComputer",
+      "builder_name": "Utpal Nadiger 👋📈",
+      "first_seen": "2026-07-26",
+      "last_seen": "2026-07-26",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "OpenComputer发布托管代理部署服务，简化AI代理的部署流程。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.0,
+      "summary": "OpenComputer发布托管代理部署服务，简化AI代理的部署流程。",
+      "title": "OpenComputer",
+      "url": "https://www.producthunt.com/products/opencomputer",
+      "sources": [
+        {
+          "url": "https://www.producthunt.com/products/opencomputer",
+          "title": "OpenComputer",
+          "source_type": "rss",
+          "published_at": "2026-07-25T01:43:15+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "opencomputer-managed-agent",
+          "date": "2026-07-26",
+          "title": "OpenComputer",
+          "summary": "OpenComputer发布托管代理部署服务，简化AI代理的部署流程。",
+          "score": 7.0,
+          "url": "https://www.producthunt.com/products/opencomputer"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "Deployment"
+      ]
+    },
+    {
+      "product_id": "product-1eea3b7ca649b5bd",
+      "product_name": "OpenAI AI Keypad",
+      "builder_name": "Lucas Ropek",
+      "first_seen": "2026-07-26",
+      "last_seen": "2026-07-26",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "TechCrunch试用OpenAI新AI键盘，认为对程序员有趣但对其他人可能神秘。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.0,
+      "summary": "TechCrunch试用OpenAI新AI键盘，认为对程序员有趣但对其他人可能神秘。",
+      "title": "I tried out OpenAI’s new AI keypad — which will be fun for some coders and slightly mystifying to everyone else",
+      "url": "https://techcrunch.com/2026/07/24/i-tried-out-openais-new-ai-keypad-which-will-be-fun-for-coders-and-slightly-mystifying-to-everyone-else/",
+      "sources": [
+        {
+          "url": "https://techcrunch.com/2026/07/24/i-tried-out-openais-new-ai-keypad-which-will-be-fun-for-coders-and-slightly-mystifying-to-everyone-else/",
+          "title": "I tried out OpenAI’s new AI keypad — which will be fun for some coders and slightly mystifying to everyone else",
+          "source_type": "rss",
+          "published_at": "2026-07-25T00:23:11+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "openai-ai-keypad",
+          "date": "2026-07-26",
+          "title": "I tried out OpenAI’s new AI keypad — which will be fun for some coders and slightly mystifying to everyone else",
+          "summary": "TechCrunch试用OpenAI新AI键盘，认为对程序员有趣但对其他人可能神秘。",
+          "score": 7.0,
+          "url": "https://techcrunch.com/2026/07/24/i-tried-out-openais-new-ai-keypad-which-will-be-fun-for-coders-and-slightly-mystifying-to-everyone-else/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Hardware",
+        "OpenAI"
+      ]
+    },
+    {
+      "product_id": "product-9c2cb5d34b8c0178",
+      "product_name": "ChatGPT Work",
+      "builder_name": "Sam Altman",
+      "first_seen": "2026-07-26",
+      "last_seen": "2026-07-26",
+      "occurrence_count": 1,
+      "intelligence_type": "market_signal",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Sam Altman转发称10亿用户现在可以用ChatGPT Work从手机创建和发布网站。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.0,
+      "summary": "Sam Altman转发称10亿用户现在可以用ChatGPT Work从手机创建和发布网站。",
+      "title": "@sama: RT @pashmerepat: A billion users can now create an...",
+      "url": "https://twitter.com/sama/status/tweet-2080713767122591863",
+      "sources": [
+        {
+          "url": "https://twitter.com/sama/status/tweet-2080713767122591863",
+          "title": "@sama: RT @pashmerepat: A billion users can now create an...",
+          "source_type": "twitter",
+          "published_at": "2026-07-24T17:56:34+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "chatgpt-work-website-creation",
+          "date": "2026-07-26",
+          "title": "@sama: RT @pashmerepat: A billion users can now create an...",
+          "summary": "Sam Altman转发称10亿用户现在可以用ChatGPT Work从手机创建和发布网站。",
+          "score": 7.0,
+          "url": "https://twitter.com/sama/status/tweet-2080713767122591863"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "ChatGPT",
+        "Work",
+        "Website"
+      ]
+    },
+    {
+      "product_id": "product-e0c5af6eb1eddd48",
+      "product_name": "Devin",
+      "builder_name": "Sarah Perez",
+      "first_seen": "2026-07-26",
+      "last_seen": "2026-07-26",
+      "occurrence_count": 1,
+      "intelligence_type": "market_signal",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Cognition收购Poke，将对话风格融入编程代理Devin，提升AI交互体验。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.0,
+      "summary": "Cognition收购Poke，将对话风格融入编程代理Devin，提升AI交互体验。",
+      "title": "Why Cognition bought Poke: AI personality is becoming a competitive advantage",
+      "url": "https://techcrunch.com/2026/07/24/why-cognition-bought-poke-ai-personality-is-becoming-a-competitive-advantage/",
+      "sources": [
+        {
+          "url": "https://techcrunch.com/2026/07/24/why-cognition-bought-poke-ai-personality-is-becoming-a-competitive-advantage/",
+          "title": "Why Cognition bought Poke: AI personality is becoming a competitive advantage",
+          "source_type": "rss",
+          "published_at": "2026-07-24T18:07:32+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "cognition-acquires-poke",
+          "date": "2026-07-26",
+          "title": "Why Cognition bought Poke: AI personality is becoming a competitive advantage",
+          "summary": "Cognition收购Poke，将对话风格融入编程代理Devin，提升AI交互体验。",
+          "score": 7.0,
+          "url": "https://techcrunch.com/2026/07/24/why-cognition-bought-poke-ai-personality-is-becoming-a-competitive-advantage/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "AI Agent",
+        "产品收购",
+        "交互设计"
+      ]
+    },
     {
       "product_id": "product-4e7f64c0383832df",
       "product_name": "Claude Opus 5",
@@ -10,15 +558,9 @@
       "last_seen": "2026-07-25",
       "occurrence_count": 1,
       "intelligence_type": "builder_insight",
-      "product_stage": "not_applicable",
       "evidence_status": "verified",
       "target_user": "需要高安全 agent 场景的企业开发者",
       "user_problem": "未公开",
-      "product_signal": "模型层安全能力突破，降低 agent 产品化的核心风险",
-      "market_signal": "未公开",
-      "business_model": "未公开",
-      "market_reaction": "未公开",
-      "input_process_output": {},
       "region": "global",
       "score": 8.5,
       "summary": "Anthropic Opus 5 成为目前最难被 prompt injection 攻击的模型，这一安全突破让 agent 自动执行和敏感场景产品化更可行。",
@@ -42,17 +584,6 @@
           "url": "https://simonwillison.net/2026/Jul/25/boris-cherny/#atom-everything"
         }
       ],
-      "original_workflow": [],
-      "product_workflow": [],
-      "tool_stack": [],
-      "traction_evidence": [],
-      "transferable_lessons": [],
-      "mvp_path": [],
-      "skill_signals": [
-        "AI 安全设计",
-        "Agent 风险评估",
-        "模型选型"
-      ],
       "verticals": [
         "AI 产品",
         "企业安全"
@@ -72,15 +603,9 @@
       "last_seen": "2026-07-25",
       "occurrence_count": 1,
       "intelligence_type": "model_capability",
-      "product_stage": "validated",
       "evidence_status": "verified",
       "target_user": "企业开发者、需要长上下文和自主 Agent 能力的专业用户",
       "user_problem": "未公开",
-      "product_signal": "模型在受限环境下主动创造工具链（自写 CV pipeline）完成任务，体现「relentlessly proactive」特性，可转化为 Agent 产品的自主补全能力设计",
-      "market_signal": "Artificial Analysis leaderboard 领先 Fable 5；定价与 Opus 4.8 持平，fast mode 2x 溢价",
-      "business_model": "未公开",
-      "market_reaction": "未公开",
-      "input_process_output": {},
       "region": "global",
       "score": 8.5,
       "summary": "Anthropic 发布 Claude Opus 5，定价不变但具备更强的自主主动性，能主动编写计算机视觉 pipeline 解决被故意限制条件的 3D 建模任务，对 Agent 产品如何设计「主动补全能力缺口」有启发。",
@@ -122,17 +647,6 @@
           "url": "https://simonwillison.net/2026/Jul/24/introducing-claude-opus-5/#atom-everything"
         }
       ],
-      "original_workflow": [],
-      "product_workflow": [],
-      "tool_stack": [],
-      "traction_evidence": [],
-      "transferable_lessons": [],
-      "mvp_path": [],
-      "skill_signals": [
-        "上下文工程",
-        "Agent 设计",
-        "定价策略"
-      ],
       "verticals": [
         "AI 产品"
       ],
@@ -152,19 +666,9 @@
       "last_seen": "2026-07-25",
       "occurrence_count": 1,
       "intelligence_type": "product_case",
-      "product_stage": "validated",
       "evidence_status": "first_party",
       "target_user": "ChatGPT Enterprise 和 ChatGPT Business 用户；需管理员启用 Workspace agents 功能",
       "user_problem": "AI agent 无法访问需要身份验证的网站和内部系统，导致自动化工作流在认证环节中断，用户被迫手动完成登录后再切换回 agent，或完全放弃自动化方案",
-      "product_signal": "云浏览器持久登录让 agent 能操作需要身份验证的 SaaS 和内部系统，突破 agent 无法访问认证壁垒的限制",
-      "market_signal": "2727 点赞，企业级 agent 自动化需求验证",
-      "business_model": "未公开具体定价；ChatGPT Work 属于 ChatGPT Enterprise/Business 订阅体系，需联系销售",
-      "market_reaction": "未公开",
-      "input_process_output": {
-        "input": "用户指令（涉及需身份验证的网站任务）+ 用户手动完成的登录凭证",
-        "process": "agent 调用云浏览器 → 检测需登录 → 用户接管完成认证 → 会话持久化 → agent 在已认证环境中执行网页操作/数据提取/表单填写等",
-        "output": "任务完成结果（如数据报告、系统状态更新、确认信息等）"
-      },
       "region": "global",
       "score": 8.2,
       "summary": "OpenAI 让企业版 ChatGPT agent 能接管云浏览器完成网站登录并持久保存会话，解决了 agent 访问认证系统的关键瓶颈。",
@@ -200,51 +704,6 @@
           "url": "https://twitter.com/OpenAIDevs/status/tweet-2080707685448847418"
         }
       ],
-      "original_workflow": [
-        "用户识别需要 agent 处理的受保护网站任务",
-        "用户手动打开浏览器，独立登录目标网站",
-        "用户复制所需信息或截图，提供给 agent",
-        "agent 基于用户提供的信息执行后续分析或操作",
-        "下次使用时重复上述手动登录步骤"
-      ],
-      "product_workflow": [
-        "用户在 ChatGPT Work 中向 agent 指派涉及受保护网站的任务",
-        "系统提示需要登录，用户接管云浏览器控制权",
-        "用户在云浏览器中完成网站登录（输入凭证、通过 MFA 等）",
-        "用户释放控制权，agent 基于已认证会话继续执行任务",
-        "后续会话中，agent 自动复用持久化登录状态，无需用户再次操作"
-      ],
-      "tool_stack": [
-        "Codex（Workspace agents 底层模型，据 OpenAI 官方文档）",
-        "云浏览器（cloud browser，具体技术栈未公开）",
-        "会话持久化机制（具体实现未公开）"
-      ],
-      "traction_evidence": [
-        "官方已发布功能声明（2025年6月，基于推文时间推断）",
-        "Workspace agents 功能在 ChatGPT Enterprise 中已上线，默认关闭，管理员可启用",
-        "OpenAI 官方文档和帮助中心已建立配套说明页面"
-      ],
-      "transferable_lessons": [
-        "人机协作认证（human-in-the-loop authentication）可作为 enterprise agent 绕过敏感凭证直接托管的安全设计模式",
-        "会话持久化（session persistence）是提升 agent 多步骤任务完成率的关键基础设施，值得在产品设计初期纳入",
-        "云浏览器架构可实现 agent 执行环境与企业本地网络的隔离，降低安全合规门槛",
-        "默认关闭 + 管理员启用（opt-in by admin）是企业功能发布的标准风控策略"
-      ],
-      "mvp_path": [
-        "用 Playwright/Selenium 搭建基础云浏览器原型，部署在隔离容器或虚拟机中",
-        "实现简单网站的手动登录接管流程（WebSocket 或 VNC 转发浏览器界面给用户）",
-        "登录后导出并存储 Cookie/LocalStorage，设计加密存储方案",
-        "在后续 agent 调用中自动注入存储的会话凭证",
-        "邀请 3-5 个企业用户测试典型场景（如 GitHub、Notion、某内部后台）",
-        "收集登录失败率、会话有效期、安全顾虑等反馈，迭代持久化机制"
-      ],
-      "skill_signals": [
-        "浏览器自动化（Playwright/Puppeteer/Selenium）",
-        "会话管理与安全存储（Cookie/Token 生命周期、加密、轮换）",
-        "企业身份认证协议（OAuth 2.0、SAML、OIDC、SSO 集成）",
-        "云原生隔离架构（容器/VM 沙箱、VNC/WebRTC 远程桌面）",
-        "企业安全合规（SOC 2、数据驻留、最小权限原则）"
-      ],
       "verticals": [
         "AI 产品",
         "企业自动化"
@@ -265,19 +724,9 @@
       "last_seen": "2026-07-25",
       "occurrence_count": 1,
       "intelligence_type": "product_case",
-      "product_stage": "validated",
       "evidence_status": "reported",
       "target_user": "ChatGPT Plus、Pro、Business、Edu 和 Enterprise 订阅用户，以知识工作者和需要跨设备协作的团队为主",
       "user_problem": "在桌面深度工作场景中，用户需在 ChatGPT 对话、团队协作（Work）和代码/自动化任务（Codex）间频繁切换输入方式，打断心流状态",
-      "product_signal": "语音交互与 Codex/Work 工作流深度整合，实现自然语言驱动的 agent 控制",
-      "market_signal": "桌面端语音 agent 场景扩展",
-      "business_model": "订阅制：功能锁定在 Plus/Pro/Business/Edu/Enterprise 付费层级，属于订阅增值功能",
-      "market_reaction": "未公开",
-      "input_process_output": {
-        "input": "用户语音指令、Work 模块中的团队上下文、Codex 中的代码/任务状态",
-        "process": "GPT-Live 进行语音转意图解析，路由至 Chat/Work/Codex 模块执行，保持跨模块会话上下文",
-        "output": "语音反馈任务状态、生成的文档/代码、更新的团队项目进度"
-      },
       "region": "global",
       "score": 8.2,
       "summary": "OpenAI 把 ChatGPT 语音模式带到桌面端，能联动 ChatGPT Work 和 Codex 做任务和操控 agent，展示了语音+工作流的产品化路径。",
@@ -313,49 +762,6 @@
           "url": "https://techcrunch.com/2026/07/24/openais-new-voice-mode-makes-it-to-the-chatgpt-desktop-app/"
         }
       ],
-      "original_workflow": [
-        "打开 ChatGPT 网页或应用",
-        "打字输入指令获取回复",
-        "切换至 Work 模块查看团队任务状态",
-        "再切换至 Codex 进行代码相关操作",
-        "如需调整，返回键盘输入"
-      ],
-      "product_workflow": [
-        "在 ChatGPT 桌面应用激活语音模式",
-        "语音指令启动任务（如'开始总结这份会议记录并同步给产品组'）",
-        "语音查询 Work 中的项目进度",
-        "语音调用 Codex 执行或调整代码/自动化流程",
-        "全程无需切换输入方式，可语音打断或修正方向"
-      ],
-      "tool_stack": [
-        "GPT-Live（语音交互引擎）",
-        "ChatGPT 桌面应用",
-        "ChatGPT Work（团队协作模块）",
-        "Codex（代码与自动化模块）"
-      ],
-      "traction_evidence": [
-        "已集成至官方 ChatGPT 桌面应用并向付费用户开放",
-        "OpenAI 官方文档（learn.chatgpt.com）确认功能可用性和覆盖计划"
-      ],
-      "transferable_lessons": [
-        "将语音从独立功能嵌入现有工作流模块，而非单独做语音产品",
-        "跨模块上下文保持是降低用户切换成本的关键设计",
-        "付费功能分层：将高阶交互模式（语音操控 agent）作为订阅升级钩子",
-        "桌面端作为企业级 AI 的必争场景，语音可成为差异化交互层"
-      ],
-      "mvp_path": [
-        "选定一个现有文本交互的 SaaS 工具（如 Notion、Linear）",
-        "用浏览器语音 API 或 Whisper 实现语音转文本",
-        "将语音指令映射至该工具的 2-3 个核心操作（创建任务、查询状态、更新字段）",
-        "录制 3 分钟 Demo 视频验证用户是否愿意用语音替代打字",
-        "收集 10 个目标用户的语音交互摩擦点，迭代指令理解准确率"
-      ],
-      "skill_signals": [
-        "语音交互设计（VUI）与多模态状态管理",
-        "实时语音流处理与低延迟响应优化",
-        "LLM 意图路由与工具调用（function calling）架构",
-        "跨模块会话上下文保持技术"
-      ],
       "verticals": [
         "AI 产品",
         "生产力工具"
@@ -375,19 +781,9 @@
       "last_seen": "2026-07-25",
       "occurrence_count": 1,
       "intelligence_type": "product_case",
-      "product_stage": "validated",
       "evidence_status": "first_party",
       "target_user": "使用终端进行软件开发的工程师、需要代码库级 AI 辅助的技术团队、有自托管和合规需求的企业客户",
       "user_problem": "企业开发者在将 AI coding agent 引入生产环境时面临：模型能力不确定且默认模型频繁变更、沙箱网络访问缺乏强制管控、MCP 配置错误难以定位、自托管部署时权限状态在 runner 重启后丢失、Vim/screen-reader 等辅助工具兼容性差、子代理嵌套深度不足限制复杂任务分解。",
-      "product_signal": "将前沿模型能力（Opus 5, 1M 上下文）快速产品化为 CLI 工具默认选项；通过 strictAllowlist 和 DirectoryAdded hook 实现企业级安全与动态工作流集成；MCP 错误可见性和自托管 runner 修复降低生产环境部署门槛",
-      "market_signal": "Opus 5 fast mode 定价 $10/$50 per Mtok 公开；Claude Code 作为官方工具持续快速迭代（版本密集发布）",
-      "business_model": "未公开",
-      "market_reaction": "未公开",
-      "input_process_output": {
-        "input": "开发者自然语言指令、代码库文件、目录路径、MCP 服务器配置、沙箱网络白名单规则",
-        "process": "Claude Opus 5 处理长上下文（1M tokens），沙箱执行命令时校验网络白名单，MCP 服务器连接状态实时反馈，自托管 runner 管理权限生命周期，子代理按配置深度递归委派任务",
-        "output": "代码生成/修改、命令执行结果、结构化错误报告（MCP/ runner/ hook 分类）、工作流状态更新、动态工作流尺寸提示"
-      },
       "region": "global",
       "score": 8.2,
       "summary": "Claude Code 官方工具 v2.1.219 正式接入 Claude Opus 5，同时发布企业安全沙箱白名单、MCP 错误可见性、自托管 runner 稳定性等大量产品化改进，是 AI coding agent 从 demo 走向企业级工具的典型案例。",
@@ -423,59 +819,6 @@
           "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.219"
         }
       ],
-      "original_workflow": [
-        "开发者启动 Claude Code CLI",
-        "手动选择或确认模型版本",
-        "通过 `/add-dir` 或 SDK 注册工作目录",
-        "配置 MCP 服务器（错误仅在运行时静默失败）",
-        "在自托管 runner 上执行命令（重启后需重新授权）",
-        "使用 Vim 模式或 screen-reader 时遇到交互异常",
-        "复杂任务需手动拆分为多个独立会话"
-      ],
-      "product_workflow": [
-        "开发者启动 Claude Code CLI，默认加载 Claude Opus 5（1M 上下文）",
-        "通过 `/add-dir` 或 SDK 注册工作目录，触发 `DirectoryAdded` hook 自动集成",
-        "沙箱网络强制遵循 `strictAllowlist`，非白名单主机自动拒绝",
-        "MCP 配置在启动时验证，`mcp_server_errors` 暴露跳过条目并打印警告",
-        "自托管 runner 重启后保留已授权权限，SIGTERM 时干净注销",
-        "Vim 模式 ← 键从 NORMAL 返回 agent 视图，screen-reader 逐字符回显",
-        "嵌套子代理默认支持 3 层深度，复杂任务可自动分解执行"
-      ],
-      "tool_stack": [
-        "Claude Opus 5（1M 上下文 LLM）",
-        "Claude Code CLI（Node.js/终端应用）",
-        "MCP（Model Context Protocol）服务器",
-        "自托管 runner（企业部署组件）",
-        "sandbox 网络隔离层",
-        "stream-json（headless 模式通信协议）"
-      ],
-      "traction_evidence": [
-        "GitHub 官方 releases 页面持续迭代（v2.1.219 为正式版本标签）",
-        "存在企业级功能（self-hosted runner、sandbox 白名单、MCP 托管配置）",
-        "第三方开发者社区跟踪站点（claudeupdates.dev）收录版本变更"
-      ],
-      "transferable_lessons": [
-        "AI coding agent 的企业化路径：先解决模型接入与定价透明，再叠加安全沙箱和部署可控性",
-        "将配置错误前置到启动阶段暴露（MCP `mcp_server_errors`），而非运行时静默失败",
-        "用结构化错误分类（hook/runner/config）替代模糊报错，降低运维排查成本",
-        "终端工具的辅助功能兼容性（Vim/screen-reader）是开发者体验的关键差异化点",
-        "动态 hook 机制（`DirectoryAdded`）支持会话中工作流扩展，避免重启会话"
-      ],
-      "mvp_path": [
-        "基于现有 LLM API 构建最小终端交互原型（支持单轮代码生成）",
-        "添加本地文件系统读写能力，验证代码库上下文理解",
-        "实现基础沙箱（限制网络/文件访问范围）",
-        "集成 1-2 个 MCP 服务器，验证外部工具调用",
-        "添加启动时配置校验与错误暴露",
-        "针对目标用户群体（如 Vim 用户）优化终端交互细节"
-      ],
-      "skill_signals": [
-        "终端 UI/UX 开发（如 blessed、ink、或原生 TUI 框架）",
-        "进程沙箱与容器化隔离（seccomp、namespace、或轻量级 VM）",
-        "MCP 协议实现与服务器集成",
-        "分布式系统运维（runner 生命周期管理、lease 机制、优雅退出）",
-        "无障碍设计（ARIA、screen-reader 兼容）"
-      ],
       "verticals": [
         "AI 产品",
         "开发者工具"
@@ -497,15 +840,9 @@
       "last_seen": "2026-07-25",
       "occurrence_count": 1,
       "intelligence_type": "product_case",
-      "product_stage": "early_growth",
       "evidence_status": "reported",
       "target_user": "Bluesky用户、研究者、内容创作者",
       "user_problem": "未公开",
-      "product_signal": "将平台内置AI助手从个人助理升级为跨协议的社交数据研究入口，结合去中心化身份和数据",
-      "market_signal": "未公开",
-      "business_model": "未公开",
-      "market_reaction": "未公开",
-      "input_process_output": {},
       "region": "global",
       "score": 7.8,
       "summary": "Bluesky把AI助手Attie扩展成开放社交研究工具，让用户能跨AT Protocol应用查询新闻趋势和对话，是社交平台内置AI搜索的产品参考。",
@@ -529,17 +866,6 @@
           "url": "https://techcrunch.com/2026/07/24/blueskys-ai-assistant-attie-expands-into-an-open-social-research-tool/"
         }
       ],
-      "original_workflow": [],
-      "product_workflow": [],
-      "tool_stack": [],
-      "traction_evidence": [],
-      "transferable_lessons": [],
-      "mvp_path": [],
-      "skill_signals": [
-        "产品设计",
-        "平台策略",
-        "AI搜索"
-      ],
       "verticals": [
         "AI 产品",
         "社交媒体"
@@ -559,15 +885,9 @@
       "last_seen": "2026-07-25",
       "occurrence_count": 1,
       "intelligence_type": "product_case",
-      "product_stage": "validated",
       "evidence_status": "reported",
       "target_user": "普通消费者、轻办公用户",
       "user_problem": "未公开",
-      "product_signal": "社交平台 AI 从娱乐向生产力场景延伸，强调渐进式可控交互",
-      "market_signal": "巨头全面涌入 AI 个人助理赛道",
-      "business_model": "未公开",
-      "market_reaction": "未公开",
-      "input_process_output": {},
       "region": "global",
       "score": 7.8,
       "summary": "Meta 给 AI 聊天机器人加日历、每日简报和可控深度研究功能，正式切入生产力助理赛道与 OpenAI/Google 竞争。",
@@ -591,17 +911,6 @@
           "url": "https://www.theverge.com/tech/970570/meta-ai-chatbot-productivity-update"
         }
       ],
-      "original_workflow": [],
-      "product_workflow": [],
-      "tool_stack": [],
-      "traction_evidence": [],
-      "transferable_lessons": [],
-      "mvp_path": [],
-      "skill_signals": [
-        "个人数据整合",
-        "渐进式交互设计",
-        "平台生态 leveraging"
-      ],
       "verticals": [
         "AI 产品",
         "生产力工具"
@@ -621,15 +930,9 @@
       "last_seen": "2026-07-25",
       "occurrence_count": 1,
       "intelligence_type": "product_case",
-      "product_stage": "early_growth",
       "evidence_status": "reported",
       "target_user": "开发者",
       "user_problem": "未公开",
-      "product_signal": "通过收购获取 AI 人格/交互风格能力，整合至编码 Agent",
-      "market_signal": "Cognition 收购 Poke，战略级产品整合",
-      "business_model": "未公开",
-      "market_reaction": "未公开",
-      "input_process_output": {},
       "region": "global",
       "score": 7.5,
       "summary": "Cognition 收购了 Poke，要把后者的对话人格和交互风格加到编码 Agent Devin 里，说明 AI 助手的交互方式正在和模型能力一样成为竞争壁垒。",
@@ -653,17 +956,6 @@
           "url": "https://techcrunch.com/2026/07/24/why-cognition-bought-poke-ai-personality-is-becoming-a-competitive-advantage/"
         }
       ],
-      "original_workflow": [],
-      "product_workflow": [],
-      "tool_stack": [],
-      "traction_evidence": [],
-      "transferable_lessons": [],
-      "mvp_path": [],
-      "skill_signals": [
-        "交互设计",
-        "产品差异化",
-        "收购整合"
-      ],
       "verticals": [
         "AI 产品",
         "开发者工具"
@@ -684,15 +976,9 @@
       "last_seen": "2026-07-25",
       "occurrence_count": 1,
       "intelligence_type": "market_signal",
-      "product_stage": "validated",
       "evidence_status": "reported",
       "target_user": "年轻女性、星座/占星爱好者",
       "user_problem": "未公开",
-      "product_signal": "AI 生成+个性化情感内容的垂直场景整合",
-      "market_signal": "AI 公司收购成熟 C 端应用进入新垂直领域",
-      "business_model": "未公开",
-      "market_reaction": "未公开",
-      "input_process_output": {},
       "region": "global",
       "score": 7.5,
       "summary": "Midjourney 收购个性化占星应用 Co-Star，从图像生成拓展到情感陪伴和个性化内容，探索 AI 在精神消费场景的产品化。",
@@ -716,17 +1002,6 @@
           "url": "https://www.theverge.com/ai-artificial-intelligence/970894/midjourney-co-star-acquisition"
         }
       ],
-      "original_workflow": [],
-      "product_workflow": [],
-      "tool_stack": [],
-      "traction_evidence": [],
-      "transferable_lessons": [],
-      "mvp_path": [],
-      "skill_signals": [
-        "垂直场景选择",
-        "并购整合",
-        "用户运营"
-      ],
       "verticals": [
         "AI 产品",
         "生活方式",
@@ -747,15 +1022,9 @@
       "last_seen": "2026-07-25",
       "occurrence_count": 1,
       "intelligence_type": "builder_insight",
-      "product_stage": "validated",
       "evidence_status": "first_party",
       "target_user": "Claude开发者、产品经理、前端工程师",
       "user_problem": "未公开",
-      "product_signal": "Skills设计模式：用户主动调用而非自动触发，减少上下文占用，强制用户思考终态",
-      "market_signal": "官方文档平台化（platform.claude.com），294分156评论显示高社区关注度",
-      "business_model": "未公开",
-      "market_reaction": "未公开",
-      "input_process_output": {},
       "region": "global",
       "score": 7.2,
       "summary": "Anthropic官方发布Claude Cookbook，包含可复用的Skills代码示例，但社区质疑部分教程效果（如前端美学改进不明显），'用户主动调用Skills'的设计思路有产品参考价值。",
@@ -779,17 +1048,6 @@
           "url": "https://platform.claude.com/cookbook/"
         }
       ],
-      "original_workflow": [],
-      "product_workflow": [],
-      "tool_stack": [],
-      "traction_evidence": [],
-      "transferable_lessons": [],
-      "mvp_path": [],
-      "skill_signals": [
-        "Prompt工程",
-        "AI交互设计",
-        "前端开发"
-      ],
       "verticals": [
         "AI 产品"
       ],
@@ -809,19 +1067,9 @@
       "last_seen": "2026-07-24",
       "occurrence_count": 1,
       "intelligence_type": "product_case",
-      "product_stage": "early_growth",
       "evidence_status": "first_party",
       "target_user": "需要降低大模型推理成本的 AI 应用开发者；希望测试多模型组合效果的技术用户",
       "user_problem": "单一闭源模型（如 Fable）推理成本高；固定使用单一模型无法利用不同模型在特定任务上的互补优势；手动选择和切换模型增加开发复杂度",
-      "product_signal": "动态计算分配+多模型组合路由，替代单模型选择范式；开源模型池互补性利用",
-      "market_signal": "HN 268分134评论；公开API和聊天界面可试用；声称达 Fable 水平成本1/3",
-      "business_model": "未公开具体定价；提供需注册/绑卡的 API 访问，推测为按 token 计费的 API 服务",
-      "market_reaction": "技术方向获社区认可，但产品成熟度受质疑：批评集中在信息透明度（benchmark、模型清单）、准入门槛（必须绑卡）、隐私政策条款",
-      "input_process_output": {
-        "input": "用户自然语言请求（通过 Web UI 或 OpenAI 兼容 API）",
-        "process": "动态三层决策：计算分配 → 模型选择 → 输出组合；底层调用多个开源权重模型（GLM-5.2、Kimi K2.7 等）",
-        "output": "组合后的文本响应"
-      },
       "region": "global",
       "score": 8.7,
       "summary": "Echo 推出动态模型路由系统，根据请求自动分配计算资源和组合多个开源模型输出，以 Fable 三分之一的推理成本达到相近效果，已提供聊天界面和 OpenAI 兼容 API。",
@@ -863,48 +1111,6 @@
           "url": "https://news.ycombinator.com/item?id=49026810"
         }
       ],
-      "original_workflow": [],
-      "product_workflow": [
-        "通过聊天界面或 API 提交请求",
-        "Echo 动态决定计算量分配",
-        "Echo 从模型池中选择参与模型",
-        "多模型并行或分阶段推理",
-        "Echo 组合输出返回结果"
-      ],
-      "tool_stack": [
-        "GLM-5.2",
-        "Kimi K2.7",
-        "其他未公开开源权重模型",
-        "自建路由决策系统",
-        "OpenAI 兼容 API 层",
-        "Web 聊天界面"
-      ],
-      "traction_evidence": [
-        "HN 发布获 268 分、134 条评论",
-        "已上线可访问的聊天界面和 API",
-        "作者自建评估集验证效果并公开 eval 页面",
-        "社区有实际试用反馈（包括失败案例报告）"
-      ],
-      "transferable_lessons": [
-        "多模型互补性假设验证：整体弱模型可在特定任务或组合中发挥关键作用",
-        "动态计算分配：按请求复杂度弹性分配推理资源而非固定深度",
-        "三层路由架构（计算量-模型-组合）可作为模型路由产品的参考框架",
-        "早期发布策略：通过 HN 获取真实失败案例反馈，优先优化路由决策错误"
-      ],
-      "mvp_path": [
-        "选择 2-3 个互补开源模型搭建最小模型池",
-        "设计简单启发式规则（如请求长度、关键词）进行模型路由实验",
-        "在自建小评估集上测量组合效果 vs 单模型",
-        "搭建最小 API  wrapper 邀请有限用户测试",
-        "收集失败案例迭代路由策略"
-      ],
-      "skill_signals": [
-        "大模型评估与 benchmark 设计",
-        "多模型推理系统的工程化（并发调用、延迟优化）",
-        "输出聚合/投票/排序算法",
-        "成本核算与定价模型设计",
-        "开源模型生态跟踪（GLM、Kimi 等能力边界）"
-      ],
       "verticals": [
         "AI 基础设施",
         "模型服务"
@@ -925,15 +1131,9 @@
       "last_seen": "2026-07-24",
       "occurrence_count": 1,
       "intelligence_type": "product_case",
-      "product_stage": "early_growth",
       "evidence_status": "first_party",
       "target_user": "有健康管理需求的美国用户，尤其是已使用Apple Health和电子健康记录系统的人群",
       "user_problem": "未公开",
-      "product_signal": "将分散的医疗数据（EHR+可穿戴设备）整合到对话式AI中，提供个性化健康解读，解决了健康数据孤岛和普通人看不懂医疗记录的问题",
-      "market_signal": "OpenAI官方发布，明确面向eligible U.S. users，属于已上线产品功能",
-      "business_model": "未公开",
-      "market_reaction": "未公开",
-      "input_process_output": {},
       "region": "global",
       "score": 8.5,
       "summary": "OpenAI在ChatGPT中上线Health功能，让美国用户安全连接医疗记录和Apple Health获取个性化健康洞察，展示了消费级健康AI产品的数据整合与隐私设计路径。",
@@ -969,19 +1169,6 @@
           "url": "https://openai.com/index/health-in-chatgpt"
         }
       ],
-      "original_workflow": [],
-      "product_workflow": [],
-      "tool_stack": [],
-      "traction_evidence": [],
-      "transferable_lessons": [],
-      "mvp_path": [],
-      "skill_signals": [
-        "数据集成",
-        "隐私设计",
-        "健康领域知识",
-        "用户授权流程",
-        "个性化推荐"
-      ],
       "verticals": [
         "医疗健康AI",
         "消费级AI产品"
@@ -1003,19 +1190,9 @@
       "last_seen": "2026-07-24",
       "occurrence_count": 1,
       "intelligence_type": "product_case",
-      "product_stage": "validated",
       "evidence_status": "first_party",
       "target_user": "ChatGPT Plus/Pro/Business/Edu/Enterprise 订阅用户，尤其是需要同时使用 ChatGPT Work 和 Codex 的知识工作者、开发者、项目经理",
       "user_problem": "用户在桌面端使用多个 AI Agent（如 ChatGPT Work 处理项目任务、Codex 处理代码）时，需要在不同界面间切换、手动输入指令，难以流畅地同时协调多个 Agent 的工作进度和方向",
-      "product_signal": "语音实时控制多Agent并行工作流，GPT-Live同时处理听说和任务协调",
-      "market_signal": "全球macOS/Windows今日 rollout，覆盖全付费层级",
-      "business_model": "订阅制：功能随现有 ChatGPT 订阅层级（Plus/Pro/Business/Edu/Enterprise）提供，无额外收费",
-      "market_reaction": "未公开",
-      "input_process_output": {
-        "input": "用户自然语音指令（可包含任务启动、进度查询、方向调整等意图）",
-        "process": "GPT-Live 全双工处理语音流，实时解析意图并分发给对应 Agent（ChatGPT Work/Codex），协调多 Agent 并行执行，同时保持语音对话连续性",
-        "output": "Agent 执行结果 + GPT-Live 语音反馈（状态更新、确认、追问等）"
-      },
       "region": "global",
       "score": 8.5,
       "summary": "OpenAI在ChatGPT桌面端上线GPT-Live语音功能，用户可用语音同时控制电脑和指挥多个Agent工作，是多模态Agent协调的重要产品化案例。",
@@ -1057,51 +1234,6 @@
           "url": "https://twitter.com/OpenAI/status/tweet-2080378182469857576"
         }
       ],
-      "original_workflow": [
-        "打开 ChatGPT Work 网页/应用，输入任务指令",
-        "切换到 Codex 界面，输入代码相关需求",
-        "返回 ChatGPT Work 检查任务进度",
-        "再次切换到 Codex 调整代码方向",
-        "反复在多个窗口/标签页间手动操作"
-      ],
-      "product_workflow": [
-        "在 ChatGPT 桌面端开启语音对话",
-        "用语音直接启动 ChatGPT Work 中的新任务",
-        "同时用语音向 Codex 下达代码指令",
-        "在一段连续对话中口头询问各 Agent 进度",
-        "实时语音调整任一 Agent 的工作方向",
-        "Agent 通过语音反馈当前状态"
-      ],
-      "tool_stack": [
-        "GPT-Live（全双工语音模型）",
-        "ChatGPT 桌面应用（macOS/Windows）",
-        "ChatGPT Work（通用任务 Agent）",
-        "Codex（代码 Agent）"
-      ],
-      "traction_evidence": [
-        "OpenAI 官方宣布全球上线",
-        "明确覆盖 Plus 到 Enterprise 全部付费层级",
-        "基于已发布的 GPT-Live 和已存在的 ChatGPT Work、Codex 产品扩展"
-      ],
-      "transferable_lessons": [
-        "将语音从\"输入方式\"升级为\"系统编排层\"，可同时调度多个垂直 Agent",
-        "全双工语音（边说边听）是降低多任务协调摩擦的关键技术选择",
-        "利用已有订阅体系做功能扩展，而非单独售卖，降低用户试用门槛",
-        "在桌面端（而非移动端）优先落地语音 Agent 协调，瞄准生产力场景"
-      ],
-      "mvp_path": [
-        "用现有语音 API（如 OpenAI Realtime API 或其他全双工方案）搭建单 Agent 语音控制原型",
-        "增加第二个垂直 Agent（如代码助手），实现语音切换和基本状态播报",
-        "在桌面端用 Electron/Tauri 等封装，获取系统级音频权限",
-        "测试用户能否在一段对话中完成\"启动 A 任务→查询 B 进度→调整 A 方向\"的闭环",
-        "收集语音打断、重叠指令的边界案例，优化意图分发逻辑"
-      ],
-      "skill_signals": [
-        "全双工语音交互设计（turn-taking、打断处理、反馈语设计）",
-        "多 Agent 意图路由与状态管理",
-        "桌面端应用音频捕获与实时流处理",
-        "语音对话的提示工程（将复杂任务指令转化为 Agent 可执行的结构化命令）"
-      ],
       "verticals": [
         "AI 产品",
         "生产力工具"
@@ -1122,19 +1254,9 @@
       "last_seen": "2026-07-24",
       "occurrence_count": 1,
       "intelligence_type": "product_case",
-      "product_stage": "early_growth",
       "evidence_status": "first_party",
       "target_user": "知识工作者、需要自动化重复任务的个人用户、构建个性化 Agent 的技术用户、希望减少上下文切换的 Second Brain 实践者",
       "user_problem": "AI Agent 缺乏用户实时上下文，导致无法自主执行需要理解用户工作状态的复杂任务；现有方案（fine-tuning、tool calling、MCP、skills）均需人工选择导入源，无法自动获知用户跨应用的日常活动；手动维护 Second Brain 耗时且易遗漏。",
-      "product_signal": "本地持续录制+结构化记忆替代手动import，让agent自动获取上下文；从个人second brain到企业SOP的演进路径",
-      "market_signal": "HN 63分50评论，YC S26背书，创始人有Ava Obsidian插件和Embedbase的 prior traction",
-      "business_model": "未公开",
-      "market_reaction": "社区对隐私边界表达显著担忧，对自动记忆价值表示认可；竞品开发者（Daydream、HiddenSteps）同期出现，显示赛道热度。",
-      "input_process_output": {
-        "input": "用户屏幕活动（应用切换、点击、滚动、打字）、系统音频、麦克风输入",
-        "process": "OS 事件监听 → 有意义变化检测 → 截图+accessibility tree 配对（OCR fallback）+ 音频转录 → 本地 SQLite 索引 + mp4/md 存储 → AI-friendly API 暴露",
-        "output": "可搜索的个人工作记忆、Agent 可用的结构化上下文、自动生成的 SOP/CRM 更新/Obsidian 知识库"
-      },
       "region": "global",
       "score": 8.5,
       "summary": "Screenpipe创始人Louis发布YC S26项目，本地录制屏幕和音频让AI agent拥有可搜索的个人工作记忆，解决agent缺乏用户上下文导致无法自主执行的问题。",
@@ -1164,65 +1286,6 @@
           "url": "https://news.ycombinator.com/item?id=49024620"
         }
       ],
-      "original_workflow": [
-        "用户在不同应用间切换工作",
-        "手动记录工作日志/笔记到 Second Brain",
-        "需要时手动整理为 SOP 或项目文档",
-        "使用 AI 时反复提供上下文提示",
-        "Agent 因缺乏背景信息无法自主执行跨应用任务"
-      ],
-      "product_workflow": [
-        "安装 Screenpipe，后台持续本地录制屏幕和音频",
-        "OS 事件触发结构化捕获（截图+accessibility tree+音频转录）",
-        "数据索引至本地 SQLite，形成可搜索时间线",
-        "通过内置聊天或外部 Agent（Claude/ChatGPT 等）自然语言查询",
-        "Agent 自动检索相关上下文，减少提示工程",
-        "按需生成 SOP、更新 CRM、维护 Obsidian 知识库等自动化输出"
-      ],
-      "tool_stack": [
-        "本地屏幕/音频捕获（OS 原生 API）",
-        "可访问性树（accessibility tree）",
-        "OCR（未公开具体引擎）",
-        "Parakeet/Whisper（本地语音转录）",
-        "可选云转录模型（未公开提供商）",
-        "SQLite（本地数据索引）",
-        "mp4/md 文件存储",
-        "端口 3030 REST API",
-        "MCP（Model Context Protocol）",
-        "skills 框架"
-      ],
-      "traction_evidence": [
-        "YC S26 入选项目",
-        "2024 年 HN 首次发布（item?id=41695840）后社区驱动产品迭代",
-        "创始人前作 Ava Obsidian 插件快速增长至数千用户",
-        "fillskills 验证：从去年起作为用户用于构建 AI-buddies",
-        "本次 HN 发布获 63 条评论互动",
-        "提供 Demo 视频和营销视频"
-      ],
-      "transferable_lessons": [
-        "从 OS 可访问性树而非纯视频 OCR 提取结构，大幅降低资源消耗",
-        "用事件驱动（应用切换、打字停顿）替代连续录制，优化信号噪声比",
-        "为 Agent 提供标准化 API + MCP + skills 三层接口，兼容不同生态",
-        "个人工具→社区反馈→YC 的渐进式验证路径",
-        "创始人先以自身需求为起点（2020 年 Second Brain 实践），积累领域直觉"
-      ],
-      "mvp_path": [
-        "用 Python/AppleScript 构建本地屏幕捕获 CLI",
-        "接入 OS 可访问性 API 获取窗口结构信息",
-        "Whisper 本地音频转录原型",
-        "SQLite 时间线存储 + 基础全文搜索",
-        "发布 HN 获取隐私、性能、场景反馈",
-        "迭代事件驱动捕获逻辑降低资源占用",
-        "封装 REST API 供单个 Agent 调用验证端到端价值"
-      ],
-      "skill_signals": [
-        "OS 级屏幕/音频捕获与可访问性 API（macOS/Windows/Linux）",
-        "本地优先架构设计（SQLite、资源优化、隐私工程）",
-        "RAG 与向量/结构化混合索引",
-        "语音转录与说话人分离",
-        "MCP 和 Agent 工具协议实现",
-        "事件驱动系统与信号处理"
-      ],
       "verticals": [
         "AI 产品",
         "生产力工具"
@@ -1244,15 +1307,9 @@
       "last_seen": "2026-07-24",
       "occurrence_count": 1,
       "intelligence_type": "product_case",
-      "product_stage": "validated",
       "evidence_status": "reported",
       "target_user": "需要集成多模态生成能力的开发者和企业",
       "user_problem": "未公开",
-      "product_signal": "模型路由器作为基础设施层产品，抽象多模型选择复杂度，提供统一API",
-      "market_signal": "正式发布产品，Runway作为成熟生成媒体平台的延伸布局",
-      "business_model": "未公开",
-      "market_reaction": "未公开",
-      "input_process_output": {},
       "region": "global",
       "score": 8.2,
       "summary": "Runway推出Media Router，帮开发者自动按质量、速度或成本选择最优的图像/视频/音频生成模型，降低多模型集成的复杂度。",
@@ -1276,18 +1333,6 @@
           "url": "https://techcrunch.com/2026/07/23/runway-bets-on-ai-model-routing-as-generative-media-gets-crowded/"
         }
       ],
-      "original_workflow": [],
-      "product_workflow": [],
-      "tool_stack": [],
-      "traction_evidence": [],
-      "transferable_lessons": [],
-      "mvp_path": [],
-      "skill_signals": [
-        "模型评估",
-        "API产品设计",
-        "成本优化",
-        "开发者体验"
-      ],
       "verticals": [
         "AI 产品",
         "生成式媒体",
@@ -1308,15 +1353,9 @@
       "last_seen": "2026-07-24",
       "occurrence_count": 1,
       "intelligence_type": "product_case",
-      "product_stage": "early_growth",
       "evidence_status": "first_party",
       "target_user": "知识工作者、需要自动化重复任务的个人和团队",
       "user_problem": "未公开",
-      "product_signal": "本地录屏录音作为Agent上下文源，自动构建可搜索的个人工作记忆，转化为SOP和自动化任务",
-      "market_signal": "YC S26入选，Launch HN 30分/32评论早期关注",
-      "business_model": "未公开",
-      "market_reaction": "未公开",
-      "input_process_output": {},
       "region": "global",
       "score": 8.2,
       "summary": "YC S26项目Screenpipe发布：本地录屏录音+AI记忆，让Agent自动理解用户工作内容并生成SOP，创始人详述从Obsidian插件到RAG API再到终端AI产品的演进方法论。",
@@ -1340,18 +1379,6 @@
           "url": "https://news.ycombinator.com/item?id=49024620"
         }
       ],
-      "original_workflow": [],
-      "product_workflow": [],
-      "tool_stack": [],
-      "traction_evidence": [],
-      "transferable_lessons": [],
-      "mvp_path": [],
-      "skill_signals": [
-        "产品演进",
-        "用户研究",
-        "隐私设计",
-        "Agent架构"
-      ],
       "verticals": [
         "AI 产品",
         "生产力工具"
@@ -1373,15 +1400,9 @@
       "last_seen": "2026-07-24",
       "occurrence_count": 2,
       "intelligence_type": "builder_insight",
-      "product_stage": "validated",
       "evidence_status": "first_party",
       "target_user": "未公开",
       "user_problem": "未公开",
-      "product_signal": "小团队（相对OpenAI/Anthropic）构建可扩展模型工厂，实现高效模型产出",
-      "market_signal": "118B MOE击败~1T开源模型，证明架构效率可弥补规模差距",
-      "business_model": "未公开",
-      "market_reaction": "未公开",
-      "input_process_output": {},
       "region": "global",
       "score": 8.2,
       "summary": "Poolside联合创始人Eiso Kant分享其小团队如何通过模型工厂方法论训练出118B MOE模型Laguna S，性能超越近1T参数开源模型。",
@@ -1419,21 +1440,6 @@
           "url": "https://www.latent.space/p/poolside"
         }
       ],
-      "original_workflow": [],
-      "product_workflow": [],
-      "tool_stack": [],
-      "traction_evidence": [],
-      "transferable_lessons": [],
-      "mvp_path": [],
-      "skill_signals": [
-        "研发管理",
-        "模型选型",
-        "成本控制",
-        "团队组建",
-        "研究管理",
-        "工程化",
-        "效率优化"
-      ],
       "verticals": [
         "AI基础设施",
         "开发者工具",
@@ -1458,15 +1464,9 @@
       "last_seen": "2026-07-24",
       "occurrence_count": 1,
       "intelligence_type": "product_case",
-      "product_stage": "early_growth",
       "evidence_status": "first_party",
       "target_user": "有健康管理需求的普通用户、患者",
       "user_problem": "未公开",
-      "product_signal": "跨对话的医疗健康上下文关联，连接 EHR/Apple Health 的隐私优先设计",
-      "market_signal": "与数百名医师合作验证，基于早期测试者反馈迭代",
-      "business_model": "未公开",
-      "market_reaction": "未公开",
-      "input_process_output": {},
       "region": "global",
       "score": 8.2,
       "summary": "OpenAI 推出 ChatGPT 健康功能，能连 Apple Health 和医疗记录，在对话里跨时间对比检查结果，且承诺不用这些数据训练模型或投广告。",
@@ -1508,17 +1508,6 @@
           "url": "https://twitter.com/OpenAI/status/tweet-2080339983962181983"
         }
       ],
-      "original_workflow": [],
-      "product_workflow": [],
-      "tool_stack": [],
-      "traction_evidence": [],
-      "transferable_lessons": [],
-      "mvp_path": [],
-      "skill_signals": [
-        "用户研究",
-        "隐私产品设计",
-        "垂直领域专家合作"
-      ],
       "verticals": [
         "医疗健康",
         "AI 产品"
@@ -1538,15 +1527,9 @@
       "last_seen": "2026-07-24",
       "occurrence_count": 1,
       "intelligence_type": "product_case",
-      "product_stage": "proof_of_concept",
       "evidence_status": "first_party",
       "target_user": "AI视频创作者、需要批量剪辑的播客/内容团队",
       "user_problem": "未公开",
-      "product_signal": "将MCP server嵌入创意工具，使AI代理直接操作专业软件的时间线和素材库；本地SigLIP2实现语义搜索；两种交互模式（chat for latency, MCP for automation）",
-      "market_signal": "从内部工具开放，有实际工作流验证（为初创公司制作AI发布视频）",
-      "business_model": "未公开",
-      "market_reaction": "未公开",
-      "input_process_output": {},
       "region": "global",
       "score": 8.2,
       "summary": "Palmier Pro是开源macOS视频编辑器，内置AI生成和本地MCP服务器，让Claude/Codex直接操控时间线、搜索素材、生成媒体，消除AI平台与编辑器间的来回切换。",
@@ -1570,17 +1553,6 @@
           "url": "https://github.com/palmier-io/palmier-pro"
         }
       ],
-      "original_workflow": [],
-      "product_workflow": [],
-      "tool_stack": [],
-      "traction_evidence": [],
-      "transferable_lessons": [],
-      "mvp_path": [],
-      "skill_signals": [
-        "MCP协议集成",
-        "本地嵌入模型部署",
-        "双模式AI交互设计"
-      ],
       "verticals": [
         "AI视频工具",
         "创意生产力"
@@ -1601,15 +1573,9 @@
       "last_seen": "2026-07-24",
       "occurrence_count": 1,
       "intelligence_type": "product_case",
-      "product_stage": "proof_of_concept",
       "evidence_status": "first_party",
       "target_user": "使用AI agent的企业开发者、需要agent访问敏感服务的团队",
       "user_problem": "未公开",
-      "product_signal": "网络层代理替代agent本地持钥，human-in-the-loop强制在基础设施层而非应用层实现，兼容MCP/CLI/curl/agent自写代码",
-      "market_signal": "HN 83分29评论，团队有ChartDB背景，已自用验证",
-      "business_model": "未公开",
-      "market_reaction": "未公开",
-      "input_process_output": {},
       "region": "global",
       "score": 8.2,
       "summary": "OneCLI创始人发布开源AI agent凭证网关，不让agent直接接触密钥，而是在网络层拦截请求并替换凭证，支持human-in-the-loop审批防止prompt injection攻击。",
@@ -1633,17 +1599,6 @@
           "url": "https://github.com/onecli/onecli"
         }
       ],
-      "original_workflow": [],
-      "product_workflow": [],
-      "tool_stack": [],
-      "traction_evidence": [],
-      "transferable_lessons": [],
-      "mvp_path": [],
-      "skill_signals": [
-        "安全设计",
-        "开发者体验",
-        "需求发现"
-      ],
       "verticals": [
         "AI 基础设施",
         "安全"
@@ -1664,15 +1619,9 @@
       "last_seen": "2026-07-24",
       "occurrence_count": 1,
       "intelligence_type": "product_case",
-      "product_stage": "early_growth",
       "evidence_status": "reported",
       "target_user": "企业安全团队、CISO",
       "user_problem": "未公开",
-      "product_signal": "用 AI Agent 模拟人类逐消息分析，捕捉规则 checklist 无法覆盖的细微异常",
-      "market_signal": "3600万美元融资，前 Google 安全高管背书",
-      "business_model": "未公开",
-      "market_reaction": "未公开",
-      "input_process_output": {},
       "region": "global",
       "score": 7.8,
       "summary": "前 Google 安全高管创立的 AegisAI 获 3600 万美元融资，用 AI Agent 逐条分析邮件异常以阻止 AI 驱动的鱼叉式钓鱼攻击。",
@@ -1696,18 +1645,6 @@
           "url": "https://techcrunch.com/2026/07/23/aegisai-founded-by-former-google-security-execs-lands-36m-to-stop-ai-driven-spear-phishing/"
         }
       ],
-      "original_workflow": [],
-      "product_workflow": [],
-      "tool_stack": [],
-      "traction_evidence": [],
-      "transferable_lessons": [],
-      "mvp_path": [],
-      "skill_signals": [
-        "垂直领域知识嵌入",
-        "Agent 设计",
-        "异常检测",
-        "企业安全产品"
-      ],
       "verticals": [
         "AI 安全",
         "企业 SaaS"
@@ -1728,15 +1665,9 @@
       "last_seen": "2026-07-24",
       "occurrence_count": 1,
       "intelligence_type": "product_case",
-      "product_stage": "validated",
       "evidence_status": "reported",
       "target_user": "需要语音高效处理日常任务的知识工作者",
       "user_problem": "未公开",
-      "product_signal": "语音Agent从对话转向任务执行，集成日历/邮件等生产力工具链",
-      "market_signal": "功能正式发布，但未披露用户量或留存数据",
-      "business_model": "未公开",
-      "market_reaction": "未公开",
-      "input_process_output": {},
       "region": "global",
       "score": 7.5,
       "summary": "Anthropic升级Claude语音模式，让用户用语音直接完成改会议、写邮件等任务，展示了语音Agent从聊天向任务执行的演进路径。",
@@ -1760,17 +1691,6 @@
           "url": "https://techcrunch.com/2026/07/23/anthropic-updates-claude-voice-mode-with-more-capable-models/"
         }
       ],
-      "original_workflow": [],
-      "product_workflow": [],
-      "tool_stack": [],
-      "traction_evidence": [],
-      "transferable_lessons": [],
-      "mvp_path": [],
-      "skill_signals": [
-        "语音交互设计",
-        "Agent任务规划",
-        "第三方集成"
-      ],
       "verticals": [
         "AI 产品",
         "生产力工具"
@@ -1790,15 +1710,9 @@
       "last_seen": "2026-07-24",
       "occurrence_count": 2,
       "intelligence_type": "model_capability",
-      "product_stage": "early_growth",
       "evidence_status": "reported",
       "target_user": "知识工作者、需要语音交互效率的用户",
       "user_problem": "未公开",
-      "product_signal": "语音模式从'对话'升级为'任务执行'，集成日历重排和邮件起草",
-      "market_signal": "语音 Agent 竞争加剧，Anthropic 追赶 OpenAI 高级语音模式",
-      "business_model": "未公开",
-      "market_reaction": "未公开",
-      "input_process_output": {},
       "region": "global",
       "score": 7.5,
       "summary": "Anthropic 升级 Claude 语音模式，新模型支持重新安排会议、起草邮件等任务执行，显示语音 Agent 从对话向行动演进。",
@@ -1836,19 +1750,6 @@
           "url": "https://techcrunch.com/2026/07/23/anthropic-updates-claude-voice-mode-with-more-capable-models/"
         }
       ],
-      "original_workflow": [],
-      "product_workflow": [],
-      "tool_stack": [],
-      "traction_evidence": [],
-      "transferable_lessons": [],
-      "mvp_path": [],
-      "skill_signals": [
-        "语音交互设计",
-        "应用集成",
-        "模型能力分层",
-        "Agent 工具调用",
-        "多模态产品"
-      ],
       "verticals": [
         "AI 产品",
         "AI 助手",
@@ -1873,15 +1774,9 @@
       "last_seen": "2026-07-24",
       "occurrence_count": 1,
       "intelligence_type": "model_capability",
-      "product_stage": "validated",
       "evidence_status": "first_party",
       "target_user": "有健康咨询需求的普通用户",
       "user_problem": "未公开",
-      "product_signal": "模型版本专门优化健康场景，从 Instant 到 Sol 的复杂度升级路径",
-      "market_signal": "3 亿周活用户存在健康需求，医师网络作为质量保障机制",
-      "business_model": "未公开",
-      "market_reaction": "未公开",
-      "input_process_output": {},
       "region": "global",
       "score": 7.5,
       "summary": "OpenAI 称每周 3 亿人用 ChatGPT 问健康问题，新模型 GPT-5.6 Sol 专门加强了复杂健康问题的回答能力。",
@@ -1904,16 +1799,6 @@
           "score": 7.5,
           "url": "https://twitter.com/OpenAI/status/tweet-2080339986717790394"
         }
-      ],
-      "original_workflow": [],
-      "product_workflow": [],
-      "tool_stack": [],
-      "traction_evidence": [],
-      "transferable_lessons": [],
-      "mvp_path": [],
-      "skill_signals": [
-        "垂直模型优化",
-        "专家审核体系"
       ],
       "verticals": [
         "医疗健康",
