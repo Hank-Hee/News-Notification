@@ -5,9 +5,9 @@ date: 2026-07-26
 lang: zh
 ---
 
-**日期**：2026-07-26　 **更新时间**：2026-07-26 00:39 北京时间
+**日期**：2026-07-26　 **更新时间**：2026-07-26 12:08 北京时间
 
-> 从 107 条内容中筛选出 12 条重要资讯。
+> 从 84 条内容中筛选出 8 条重要资讯。
 
 
 <nav class="daily-toc">
@@ -17,85 +17,85 @@ lang: zh
 <a id="daily-focus"></a>
 ## 今日重点
 
-- OpenAI 宣布 ChatGPT Work agent 现在可以登录需要认证的网站，用户接管云浏览器登录后 agent 可继续任务，登录状态跨会话保持。
-- Claude Code v2.1.219 新增 Opus 5 模型支持、网络沙箱白名单等多项功能。
-- OpenAI 宣布 ChatGPT 自定义宠物现在支持分享链接，用户可创建链接让朋友领养宠物。
-- OpenAI 在 ChatGPT 中推出个人健康伴侣功能，提供健康相关对话支持。
-- OpenComputer 发布托管代理部署服务，简化 AI 代理的部署流程。
+- 开发者成功在 ESP32-S3 微控制器上运行 28.9M 参数 LLM，实现低成本边缘 AI 推理。
+- OpenAI 推出企业级客服智能体产品 Presence，用于自动化客服，值得产品经理拆解。
+- Anthropic 发布 Claude 5 上下文工程新规则，指导用户如何优化提示词和上下文管理以提升模型表现。
+- Latent Space 简报称 Opus 5 以 Opus 价格提供 Fable 级性能。
+- 分析文章认为开源 AI 正经历类似 Kubernetes 的转折点，将重塑行业格局。
 
 <a id="product-teardown"></a>
 ## 产品拆解
 
-### 1. [ChatGPT Work agent 现在能登录需要账号的网站了](https://twitter.com/OpenAIDevs/status/tweet-2080707685448847418){:target="_blank" rel="noopener noreferrer"}
+### 1. [在 8 美元微控制器上运行 2800 万参数大语言模型](https://github.com/slvDev/esp32-ai){:target="_blank" rel="noopener noreferrer"}
 
-**一句话看懂**：OpenAI 宣布 ChatGPT Work agent 现在可以登录需要认证的网站，用户接管云浏览器登录后 agent 可继续任务，登录状态跨会话保持。
+**一句话看懂**：开发者成功在 ESP32-S3 微控制器上运行 28.9M 参数 LLM，实现低成本边缘 AI 推理。
 
-**评分**：8.5 / 10　 **证据**：一手信息
+**评分**：8.0 / 10　 **证据**：已核验
 
-**产品 / 团队**：ChatGPT Work / OpenAI Developers
+**产品 / 团队**：esp32-ai（GitHub 项目名） / boveyking
 
-**目标用户**：企业团队、需要让 AI 处理涉及登录网站的工作流的用户
+**目标用户**：嵌入式开发者、想做低成本离线语音/文字设备的硬件爱好者、边缘 AI 产品原型设计者
 
-**它是什么**：OpenAI 给企业团队用的 ChatGPT Work 产品里，AI agent（智能体，能自主执行多步骤任务的 AI）新增了一项能力：可以像真人一样登录需要用户名密码的网站，而且只需登录一次，之后跨会话都能保持登录状态。
+**它是什么**：一个开源项目，把 28.9M 参数的轻量 LLM 塞进 ESP32-S3 芯片里离线跑，不用联网就能做 AI 推理
 
-**用户问题**：以前 AI agent 遇到需要登录的网站就卡住了，用户要么自己手动操作完再交给 AI，要么干脆用不了这类网站；每次新开对话还得重新登录，很麻烦。
+**用户问题**：普通 LLM 需要 GPU 或云端服务器，贵且要联网；想在 10 美元以下的微控制器上跑 AI，内存和算力根本不够塞下完整模型
 
 **使用流程**：
-1. 用户在 ChatGPT Work 里给 agent 布置任务，agent 遇到需要登录的网站时暂停
-2. 用户接管云浏览器，自己输入账号密码完成登录
-3. 用户把控制权交还给 agent，agent 继续执行后续任务
-4. 下次再用时，登录状态还在，不用重新登录
+1. 把量化压缩后的轻量模型刷进 ESP32-S3 开发板
+2. 通过串口或简单接口输入文字提示
+3. 芯片逐层读取模型权重做推理计算
+4. 板子输出生成的文字结果
 
-**AI 在做什么**：agent 负责在登录前后执行主要任务；遇到登录障碍时暂停并通知用户接管；登录完成后自动恢复任务流
+**AI 在做什么**：负责在芯片本地逐层计算，把输入的文字提示转换成生成的回复，全程不经过云端
 
-**怎么实现**：OpenAI 在云端给每个用户运行了一个浏览器（类似远程控制的 Chrome），用户和 agent 轮流操作这个浏览器。用户登录时，cookie 和登录凭证存在云端，所以下次开新会话还能用。
+**怎么实现**：核心用了 &#x27;per-layer embedding trick&#x27;——不把整个模型塞进内存，而是算到哪一层再从 Flash 临时加载哪一层，像流水线一样分批处理，省下了 90% 以上的内存占用
 
 **需要理解的知识点**：
-1. Agent：不只是回答问题，还能自主决定步骤、调用工具、执行多步任务的 AI 系统
-2. 云浏览器/远程浏览器：AI 在云端开的真实浏览器，让 AI 能操作网页就像真人一样
-3. 会话持久化：把登录状态存下来，打破&#x27;每次对话从零开始&#x27;的限制
+1. 模型量化（Quantization）：把模型参数从 32 位浮点数砍成 8 位甚至更低，体积和计算量大幅缩水，但精度会轻微下降
+2. Embedding：把文字转成数字向量的技术，这里每层单独处理而不是一次性加载全部
+3. 边缘推理 vs 云端推理：在设备本地跑模型能保隐私、省流量，但模型必须够小够轻
 
-**动手练习**：找一个你日常需要登录的网站（比如公司内部系统或某个数据分析平台），手动记录完成一个重复任务需要点击几次、输入什么；然后对比：如果 AI 能自动登录并执行，哪些步骤可以省掉？写下 3 个你最想让 agent 自动化的登录后任务。
+**动手练习**：花 30 分钟：在 GitHub 下载项目代码，用 PlatformIO 或 Arduino IDE 编译烧录到 ESP32-S3 开发板，输入一句 &#x27;你好&#x27; 观察串口输出的推理延迟和结果质量
 
-**已知限制**：未公开支持哪些具体网站类型（是否支持 SSO、企业内网、两步验证等）；未说明登录凭证的加密存储细节和安全审计情况；未公开该功能是否额外收费或仅限特定套餐。
+**已知限制**：未公开具体模型名称和训练数据；未公开推理速度（token/秒）和实际生成质量评测；未确认是否支持中文；社区提到的 TTS（文字转语音）联动仅为推测，非项目本身功能
 
-**原始来源**：twitter · OpenAI Developers · 7月25日 01:32 北京时间 · [打开原文](https://twitter.com/OpenAIDevs/status/tweet-2080707685448847418){:target="_blank" rel="noopener noreferrer"}
+**原始来源**：hackernews · boveyking · 7月26日 02:59 北京时间 · [打开原文](https://github.com/slvDev/esp32-ai){:target="_blank" rel="noopener noreferrer"}
 
 ---
-### 2. [Claude Code v2.1.219：新增 Opus 5 模型支持与网络沙箱白名单](https://github.com/anthropics/claude-code/releases/tag/v2.1.219){:target="_blank" rel="noopener noreferrer"}
+### 2. [OpenAI 推出企业级客服智能体产品 Presence](https://news.google.com/rss/articles/CBMib0FVX3lxTE03ZThBcU9td2xYdTdUZG5nMGtSTFktN3JVcDlocDhaZFctdTZPOVNPU0pUczc3ZXJOUWlNdDBpcE0tZGppY3I0aWtndlIxMnZlY2lfZnIwWjdFcW11dWpoeUVsQTdtNXRITVRkOEN2SQ?oc=5){:target="_blank" rel="noopener noreferrer"}
 
-**一句话看懂**：Claude Code v2.1.219 新增 Opus 5 模型支持、网络沙箱白名单等多项功能。
+**一句话看懂**：OpenAI 推出企业级客服智能体产品 Presence，用于自动化客服，值得产品经理拆解。
 
-**评分**：8.0 / 10　 **证据**：一手信息
+**评分**：8.0 / 10　 **证据**：媒体报道
 
-**产品 / 团队**：Claude Code / ashwin-ant
+**产品 / 团队**：Presence / 至顶网
 
-**目标用户**：需要在终端/命令行环境下编写、修改、调试代码的开发者
+**目标用户**：需要自动化客服的企业客户
 
-**它是什么**：Anthropic 出品的命令行 AI 编程助手，能在终端里理解代码库、改文件、跑命令
+**它是什么**：OpenAI 发布的一款面向企业客服场景的 AI 智能体产品，用于自动处理客户咨询。
 
-**用户问题**：开发者想直接用自然语言指挥 AI 改代码、跑测试，但担心 AI 自动执行命令时连到不该连的网络地址，或模型能力不够处理大代码库
+**用户问题**：企业客服人力成本高、响应慢、重复性问题多，需要 7×24 小时服务但难以实现。
 
 **使用流程**：
-1. 在终端安装并启动 claude，用自然语言描述需求（如&#x27;给这个项目加登录功能&#x27;）
-2. AI 自动分析代码库，必要时用 /add-dir 添加更多目录到上下文
-3. AI 提出修改方案，经确认后自动编辑文件、运行命令
-4. 开发者检查 git diff，确认无误后提交代码
+1. 企业将 Presence 接入客服渠道（如网站、App、电话）
+2. 客户发起咨询，Presence 自动理解问题
+3. AI 生成回复或执行操作（如查订单、改密码）
+4. 复杂问题自动转接人工客服
 
-**AI 在做什么**：理解代码库结构 → 生成修改方案 → 执行文件编辑和终端命令 → 汇报结果
+**AI 在做什么**：自动理解客户意图、生成回复、执行标准化操作，并在必要时判断何时转人工。
 
-**怎么实现**：把大语言模型包进命令行工具，通过 MCP（Model Context Protocol，一种让 AI 调用外部工具的通用接口）连接文件系统、代码库和外部服务；用沙箱限制 AI 执行命令时的网络访问，白名单机制让管理员预先批准可信域名
+**怎么实现**：基于大语言模型做对话理解和生成，通过预设的业务规则和企业知识库来回答常见问题，遇到超范围的情况就升级给真人。
 
 **需要理解的知识点**：
-1. Context window（上下文窗口）：模型一次能&#x27;看&#x27;多少字，Opus 5 的 1M 约等于能塞进整本《三体》第一部，让 AI 分析大型代码库不丢线索
-2. Agent（智能体）：不只是聊天回复，而是能自主决定&#x27;我要先读哪个文件、再改哪行、然后跑测试&#x27;的 AI 系统
-3. Function calling（函数调用）：模型不直接生成答案，而是输出结构化指令（如&#x27;调用 read\_file 工具&#x27;），由外部程序执行后再把结果喂回模型
+1. Agent（智能体）：让 AI 不仅能说话，还能调用工具、执行动作、自主决策的完整系统
+2. RAG（检索增强生成）：让 AI 先查企业自己的知识库，再回答，避免胡说八道
+3. Function Calling（函数调用）：AI 识别出&#x27;我要查订单&#x27;后，自动调用后台系统的查订单功能
 
-**动手练习**：30 分钟练习：安装 Claude Code，找一个自己的 Python 项目，用 /add-dir 把项目根目录加进去，然后问&#x27;这个项目的依赖结构有什么风险&#x27;，观察它如何分析；接着在设置里打开 sandbox.network.strictAllowlist，尝试让 AI 访问一个未白名单的 URL，看是否被拦截
+**动手练习**：用 OpenAI API 或国内大模型平台，做一个简易客服 Demo：上传一份产品 FAQ 文档，让 AI 只能根据文档内容回答用户问题，并设置一个触发词（如&#x27;转人工&#x27;）让对话结束。
 
-**已知限制**：Opus 5 的 &#x27;$10/$50 per Mtok&#x27; 具体指输入/输出哪端定价未在 release note 中明示；&#x27;fast mode&#x27; 的具体速度提升幅度未公开；嵌套 subagent 的 depth-3 限制是否会导致复杂任务中的上下文爆炸需用户自行验证
+**已知限制**：产品具体定价、支持哪些接入渠道、是否已正式商用、与 OpenAI 其他企业产品的关系均未公开；原文仅为至顶网报道，未找到 OpenAI 官方博客或产品页面确认。
 
-**原始来源**：github · ashwin-ant · 7月25日 01:14 北京时间 · [打开原文](https://github.com/anthropics/claude-code/releases/tag/v2.1.219){:target="_blank" rel="noopener noreferrer"}
+**原始来源**：google\_news · 至顶网 · 7月26日 00:02 北京时间 · [打开原文](https://news.google.com/rss/articles/CBMib0FVX3lxTE03ZThBcU9td2xYdTdUZG5nMGtSTFktN3JVcDlocDhaZFctdTZPOVNPU0pUczc3ZXJOUWlNdDBpcE0tZGppY3I0aWtndlIxMnZlY2lfZnIwWjdFcW11dWpoeUVsQTdtNXRITVRkOEN2SQ?oc=5){:target="_blank" rel="noopener noreferrer"}
 
 ---
 
@@ -107,119 +107,79 @@ _今天没有达到标准的一线构建实践；不会用泛泛观点补位。_
 <a id="model-company-news"></a>
 ## 模型公司动态
 
-### [Quoting Boris Cherny](https://simonwillison.net/2026/Jul/25/boris-cherny/#atom-everything){:target="_blank" rel="noopener noreferrer"} ⭐️ 8.0/10
+### [The new rules of context engineering for Claude 5 generation models](https://claude.com/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models){:target="_blank" rel="noopener noreferrer"} ⭐️ 8.0/10
 
-Anthropic 工程师称 Opus 5 是最难被提示注入的模型，安全性显著提升。
+Anthropic 发布 Claude 5 上下文工程新规则，指导用户如何优化提示词和上下文管理以提升模型表现。
 
-**对做产品的启发**：Anthropic 工程师 Boris Cherny 透露 Opus 5 是最难被提示注入的模型，一手信息，高价值。
+**对做产品的启发**：Anthropic 官方发布 Claude 5 上下文工程新规则，直接指导如何更有效使用 Claude 模型，对 AI 产品经理和开发者有高价值实践指导。
 
-**继续验证**：关注 Opus 5 安全性的实际验证。
+**继续验证**：关注社区对新规则的实际应用反馈。
 
-**原始来源**：rss · Simon Willison · 7月25日 08:42 北京时间 · [打开原文](https://simonwillison.net/2026/Jul/25/boris-cherny/#atom-everything){:target="_blank" rel="noopener noreferrer"}
+**原始来源**：hackernews · mellosouls · 7月26日 04:42 北京时间 · [打开原文](https://claude.com/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models){:target="_blank" rel="noopener noreferrer"}
 
-### [Introducing Claude Opus 5](https://simonwillison.net/2026/Jul/24/introducing-claude-opus-5/#atom-everything){:target="_blank" rel="noopener noreferrer"} ⭐️ 8.0/10
+### [\[AINews\] Claude Opus 5: Fable-level performance at Opus price \(half Fable\)](https://www.latent.space/p/ainews-claude-opus-5-fable-level){:target="_blank" rel="noopener noreferrer"} ⭐️ 7.0/10
 
-Claude Opus 5 发布，性能接近 Fable 5，价格减半，在 Artificial Analysis 排行榜领先。
+Latent Space 简报称 Opus 5 以 Opus 价格提供 Fable 级性能。
 
-**对做产品的启发**：Simon Willison 汇总 Opus 5 发布信息，包括定价、性能领先等，高信噪比。
+**对做产品的启发**：Latent Space 简报提及 Opus 5，但内容简短，价值有限。
 
-**继续验证**：关注 Opus 5 实际应用案例。
+**继续验证**：无。
 
-**原始来源**：rss · Simon Willison · 7月25日 07:48 北京时间 · [打开原文](https://simonwillison.net/2026/Jul/24/introducing-claude-opus-5/#atom-everything){:target="_blank" rel="noopener noreferrer"}
-
-### [vercel/ai released @ai-sdk/anthropic@4.0.20](https://github.com/vercel/ai/releases/tag/%40ai-sdk/anthropic%404.0.20){:target="_blank" rel="noopener noreferrer"} ⭐️ 8.0/10
-
-Vercel AI SDK 的 Anthropic 包 v4.0.20 新增 Claude Opus 5 模型、安全回退和对话中工具变更支持。
-
-**对做产品的启发**：Vercel AI SDK 的 Anthropic 包新增 Claude Opus 5 模型支持、安全分类器回退和对话中工具变更功能，对构建 AI 产品有直接价值。
-
-**继续验证**：关注 Claude Opus 5 在实际产品中的表现和定价。
-
-**原始来源**：github · github-actions\[bot\] · 7月25日 01:25 北京时间 · [打开原文](https://github.com/vercel/ai/releases/tag/%40ai-sdk/anthropic%404.0.20){:target="_blank" rel="noopener noreferrer"}
+**原始来源**：rss · Latent Space · 7月25日 15:25 北京时间 · [打开原文](https://www.latent.space/p/ainews-claude-opus-5-fable-level){:target="_blank" rel="noopener noreferrer"}
 
 
 ### 其他值得留意
 
-### [@OpenAIDevs: Your Pet is ready to meet other builders.  On Chat...](https://twitter.com/OpenAIDevs/status/tweet-2080747505474736162){:target="_blank" rel="noopener noreferrer"} ⭐️ 7.5/10
+### [Open-weight AI is having its Kubernetes moment](https://tobi.knaup.me/2026-07-25-open-weight-ai-is-having-its-kubernetes-moment/){:target="_blank" rel="noopener noreferrer"} ⭐️ 8.0/10
 
-OpenAI 宣布 ChatGPT 自定义宠物现在支持分享链接，用户可创建链接让朋友领养宠物。
+分析文章认为开源 AI 正经历类似 Kubernetes 的转折点，将重塑行业格局。
 
-**对做产品的启发**：OpenAI 官方宣布 ChatGPT 自定义宠物（Pet）新增分享功能，用户可创建可分享链接让朋友领养。这是 ChatGPT 个性化功能的小更新，但展示了社交化玩法，对产品经理有启发。
+**对做产品的启发**：文章将开源 AI 比作 Kubernetes 时刻，讨论开源模型对行业的影响，包含对定价、地缘政治等深刻分析，高信噪比。
 
-**继续验证**：观察用户分享和领养数据，评估社交功能对用户粘性的影响。
+**继续验证**：关注开源模型生态发展及企业采用情况。
 
-**原始来源**：twitter · OpenAI Developers · 7月25日 04:10 北京时间 · [打开原文](https://twitter.com/OpenAIDevs/status/tweet-2080747505474736162){:target="_blank" rel="noopener noreferrer"}
+**原始来源**：hackernews · tknaup · 7月25日 22:49 北京时间 · [打开原文](https://tobi.knaup.me/2026-07-25-open-weight-ai-is-having-its-kubernetes-moment/){:target="_blank" rel="noopener noreferrer"}
 
-### [Health in ChatGPT](https://www.producthunt.com/products/openai){:target="_blank" rel="noopener noreferrer"} ⭐️ 7.0/10
+### [DeepSeek pause fundraise after comments on compute gap to US leaked \(transcript\) \[pdf\]](https://github.com/demo-zexuan/liang-wenfeng-investor-meeting-2026-7-22/blob/master/%E6%A2%81%E6%96%87%E9%94%8B%E6%8A%95%E8%B5%84%E8%80%85%E4%BA%A4%E6%B5%81%E4%BC%9A-%E6%96%87%E5%AD%97%E7%A8%BF_1_18_translate_20260723201651.pdf){:target="_blank" rel="noopener noreferrer"} ⭐️ 7.0/10
 
-OpenAI 在 ChatGPT 中推出个人健康伴侣功能，提供健康相关对话支持。
+DeepSeek 因创始人关于中美算力差距的言论泄露，暂停第二轮融资。
 
-**对做产品的启发**：ChatGPT 新增健康伴侣功能，属于产品新能力，但信息简短缺乏细节。
+**对做产品的启发**：DeepSeek 因创始人言论泄露暂停融资，反映中国 AI 公司面临的算力差距和地缘政治压力，对理解行业格局有参考价值。
 
-**继续验证**：关注具体功能细节和用户反馈。
+**继续验证**：关注 DeepSeek 后续融资进展及算力获取策略。
 
-**原始来源**：rss · Justin Jincaid · 7月25日 08:38 北京时间 · [打开原文](https://www.producthunt.com/products/openai){:target="_blank" rel="noopener noreferrer"}
+**原始来源**：hackernews · oliculipolicula · 7月26日 07:32 北京时间 · [打开原文](https://github.com/demo-zexuan/liang-wenfeng-investor-meeting-2026-7-22/blob/master/%E6%A2%81%E6%96%87%E9%94%8B%E6%8A%95%E8%B5%84%E8%80%85%E4%BA%A4%E6%B5%81%E4%BC%9A-%E6%96%87%E5%AD%97%E7%A8%BF_1_18_translate_20260723201651.pdf){:target="_blank" rel="noopener noreferrer"}
 
-### [OpenComputer](https://www.producthunt.com/products/opencomputer){:target="_blank" rel="noopener noreferrer"} ⭐️ 7.0/10
+### [Cloudflare&#x27;s new AI traffic options for customers](https://blog.cloudflare.com/content-independence-day-ai-options/){:target="_blank" rel="noopener noreferrer"} ⭐️ 7.0/10
 
-OpenComputer 发布托管代理部署服务，简化 AI 代理的部署流程。
+Cloudflare 为网站提供新的 AI 流量控制选项，允许屏蔽 AI 训练爬虫，并将于 9 月 15 日起默认屏蔽多用途爬虫。
 
-**对做产品的启发**：新产品 OpenComputer 提供托管代理部署，但信息简短缺乏细节。
+**对做产品的启发**：Cloudflare 推出新的 AI 流量控制选项，允许网站屏蔽 AI 训练爬虫，对 AI 产品构建者理解数据获取环境有直接价值，且包含具体政策变化（9 月 15 日起屏蔽 Googlebot）。
 
-**继续验证**：关注产品文档和用户反馈。
+**继续验证**：观察其他云服务商是否跟进类似政策。
 
-**原始来源**：rss · Utpal Nadiger 👋📈 · 7月25日 09:43 北京时间 · [打开原文](https://www.producthunt.com/products/opencomputer){:target="_blank" rel="noopener noreferrer"}
+**原始来源**：hackernews · alphabetatango · 7月26日 06:50 北京时间 · [打开原文](https://blog.cloudflare.com/content-independence-day-ai-options/){:target="_blank" rel="noopener noreferrer"}
 
-### [I tried out OpenAI’s new AI keypad — which will be fun for some coders and slightly mystifying to everyone else](https://techcrunch.com/2026/07/24/i-tried-out-openais-new-ai-keypad-which-will-be-fun-for-coders-and-slightly-mystifying-to-everyone-else/){:target="_blank" rel="noopener noreferrer"} ⭐️ 7.0/10
+### [LLM Usage in Debian: Three Proposals](https://www.debian.org/vote/2026/vote_002){:target="_blank" rel="noopener noreferrer"} ⭐️ 7.0/10
 
-TechCrunch 试用 OpenAI 新 AI 键盘，认为对程序员有趣但对其他人可能神秘。
+Debian 项目提出三项关于 LLM 辅助贡献的提案，从完全禁止到有条件允许。
 
-**对做产品的启发**：OpenAI 新硬件产品 AI 键盘，有试用体验，属于新产品发布。
+**对做产品的启发**：Debian 社区就 LLM 辅助贡献提出三项提案，反映开源社区对 AI 使用的态度分歧，对 AI 产品在开源生态中的接受度有参考意义。
 
-**继续验证**：关注正式发布和用户反馈。
+**继续验证**：关注投票结果及对其他开源项目的影响。
 
-**原始来源**：rss · Lucas Ropek · 7月25日 08:23 北京时间 · [打开原文](https://techcrunch.com/2026/07/24/i-tried-out-openais-new-ai-keypad-which-will-be-fun-for-coders-and-slightly-mystifying-to-everyone-else/){:target="_blank" rel="noopener noreferrer"}
-
-### [ARC-AGI Leaderboard](https://arcprize.org/leaderboard){:target="_blank" rel="noopener noreferrer"} ⭐️ 8.0/10
-
-ARC-AGI 排行榜显示 Claude Opus 5 取得高分，社区讨论其真实能力与基准测试的差距。
-
-**对做产品的启发**：ARC-AGI 排行榜显示 Claude Opus 5 取得高分，引发社区讨论模型真实能力与基准测试的关系，对评估模型能力有参考价值。
-
-**继续验证**：关注 Claude Opus 5 在更多基准测试和实际任务中的表现。
-
-**原始来源**：hackernews · rzk · 7月25日 14:31 北京时间 · [打开原文](https://arcprize.org/leaderboard){:target="_blank" rel="noopener noreferrer"}
-
-### [@sama: RT @pashmerepat: A billion users can now create an...](https://twitter.com/sama/status/tweet-2080713767122591863){:target="_blank" rel="noopener noreferrer"} ⭐️ 7.0/10
-
-Sam Altman 转发称 10 亿用户现在可以用 ChatGPT Work 从手机创建和发布网站。
-
-**对做产品的启发**：Sam Altman 转发他人推文，称 10 亿用户现在可以用 ChatGPT Work 从手机创建和发布网站。虽然是转发，但来自 CEO，有一定信号价值，但缺乏具体细节。
-
-**继续验证**：观察 ChatGPT Work 网站创建功能的具体实现和用户反馈。
-
-**原始来源**：twitter · Sam Altman · 7月25日 01:56 北京时间 · [打开原文](https://twitter.com/sama/status/tweet-2080713767122591863){:target="_blank" rel="noopener noreferrer"}
-
-### [Why Cognition bought Poke: AI personality is becoming a competitive advantage](https://techcrunch.com/2026/07/24/why-cognition-bought-poke-ai-personality-is-becoming-a-competitive-advantage/){:target="_blank" rel="noopener noreferrer"} ⭐️ 7.0/10
-
-Cognition 收购 Poke，将对话风格融入编程代理 Devin，提升 AI 交互体验。
-
-**对做产品的启发**：Cognition 收购 Poke 以增强 Devin 的对话个性，反映 AI 助手交互风格成为竞争差异。有明确产品案例和构建思路，但细节有限。
-
-**继续验证**：关注 Devin 集成 Poke 后的用户反馈和交互效果。
-
-**原始来源**：rss · Sarah Perez · 7月25日 02:07 北京时间 · [打开原文](https://techcrunch.com/2026/07/24/why-cognition-bought-poke-ai-personality-is-becoming-a-competitive-advantage/){:target="_blank" rel="noopener noreferrer"}
+**原始来源**：hackernews · zdw · 7月26日 03:44 北京时间 · [打开原文](https://www.debian.org/vote/2026/vote_002){:target="_blank" rel="noopener noreferrer"}
 
 
 <a id="learn-today"></a>
 ## 今天学什么
 
-- **知识点**：Agent：不只是回答问题，还能自主决定步骤、调用工具、执行多步任务的 AI 系统
-- **知识点**：云浏览器/远程浏览器：AI 在云端开的真实浏览器，让 AI 能操作网页就像真人一样
-- **知识点**：会话持久化：把登录状态存下来，打破&#x27;每次对话从零开始&#x27;的限制
-- **知识点**：Context window（上下文窗口）：模型一次能&#x27;看&#x27;多少字，Opus 5 的 1M 约等于能塞进整本《三体》第一部，让 AI 分析大型代码库不丢线索
-- **动手练习**：找一个你日常需要登录的网站（比如公司内部系统或某个数据分析平台），手动记录完成一个重复任务需要点击几次、输入什么；然后对比：如果 AI 能自动登录并执行，哪些步骤可以省掉？写下 3 个你最想让 agent 自动化的登录后任务。
-- **动手练习**：30 分钟练习：安装 Claude Code，找一个自己的 Python 项目，用 /add-dir 把项目根目录加进去，然后问&#x27;这个项目的依赖结构有什么风险&#x27;，观察它如何分析；接着在设置里打开 sandbox.network.strictAllowlist，尝试让 AI 访问一个未白名单的 URL，看是否被拦截
+- **知识点**：模型量化（Quantization）：把模型参数从 32 位浮点数砍成 8 位甚至更低，体积和计算量大幅缩水，但精度会轻微下降
+- **知识点**：Embedding：把文字转成数字向量的技术，这里每层单独处理而不是一次性加载全部
+- **知识点**：边缘推理 vs 云端推理：在设备本地跑模型能保隐私、省流量，但模型必须够小够轻
+- **知识点**：Agent（智能体）：让 AI 不仅能说话，还能调用工具、执行动作、自主决策的完整系统
+- **动手练习**：花 30 分钟：在 GitHub 下载项目代码，用 PlatformIO 或 Arduino IDE 编译烧录到 ESP32-S3 开发板，输入一句 &#x27;你好&#x27; 观察串口输出的推理延迟和结果质量
+- **动手练习**：用 OpenAI API 或国内大模型平台，做一个简易客服 Demo：上传一份产品 FAQ 文档，让 AI 只能根据文档内容回答用户问题，并设置一个触发词（如&#x27;转人工&#x27;）让对话结束。
 
 ## 数据与筛选说明
 

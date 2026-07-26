@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-07-25T16:39:51.809040+00:00",
+  "updated_at": "2026-07-26T04:08:20.736262+00:00",
   "products": [
     {
       "product_id": "product-f7405f4becbf49ae",
@@ -263,6 +263,175 @@
         "Vercel",
         "Anthropic",
         "Claude Opus 5"
+      ]
+    },
+    {
+      "product_id": "product-acb40eee92118ae4",
+      "product_name": "esp32-ai（GitHub 项目名）",
+      "builder_name": "boveyking",
+      "first_seen": "2026-07-26",
+      "last_seen": "2026-07-26",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "verified",
+      "target_user": "嵌入式开发者、想做低成本离线语音/文字设备的硬件爱好者、边缘 AI 产品原型设计者",
+      "user_problem": "普通 LLM 需要 GPU 或云端服务器，贵且要联网；想在 10 美元以下的微控制器上跑 AI，内存和算力根本不够塞下完整模型",
+      "what_it_is": "一个开源项目，把 28.9M 参数的轻量 LLM 塞进 ESP32-S3 芯片里离线跑，不用联网就能做 AI 推理",
+      "ai_role": "负责在芯片本地逐层计算，把输入的文字提示转换成生成的回复，全程不经过云端",
+      "implementation_idea": "核心用了 'per-layer embedding trick'——不把整个模型塞进内存，而是算到哪一层再从 Flash 临时加载哪一层，像流水线一样分批处理，省下了 90% 以上的内存占用",
+      "hands_on_exercise": "花 30 分钟：在 GitHub 下载项目代码，用 PlatformIO 或 Arduino IDE 编译烧录到 ESP32-S3 开发板，输入一句 '你好' 观察串口输出的推理延迟和结果质量",
+      "limitations_or_uncertainties": "未公开具体模型名称和训练数据；未公开推理速度（token/秒）和实际生成质量评测；未确认是否支持中文；社区提到的 TTS（文字转语音）联动仅为推测，非项目本身功能",
+      "region": "global",
+      "score": 8.0,
+      "summary": "开发者成功在ESP32-S3微控制器上运行28.9M参数LLM，实现低成本边缘AI推理。",
+      "title": "在 8 美元微控制器上运行 2800 万参数大语言模型",
+      "url": "https://github.com/slvDev/esp32-ai",
+      "sources": [
+        {
+          "url": "https://github.com/slvDev/esp32-ai",
+          "title": "Running a 28.9M parameter LLM on an $8 microcontroller",
+          "source_type": "hackernews",
+          "published_at": "2026-07-25T18:59:50+00:00"
+        },
+        {
+          "url": "https://github.com/tomik395/ESP32-AI",
+          "title": "GitHub - tomik395/ESP32-AI: Speak to your ESP32 and it speaks back! Your new personal assistance is tiny, highly intelligent, and ready to be built from your home. · GitHub",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "esp32-llm-on-microcontroller",
+          "date": "2026-07-26",
+          "title": "在 8 美元微控制器上运行 2800 万参数大语言模型",
+          "summary": "开发者成功在ESP32-S3微控制器上运行28.9M参数LLM，实现低成本边缘AI推理。",
+          "score": 8.0,
+          "url": "https://github.com/slvDev/esp32-ai"
+        }
+      ],
+      "usage_flow": [
+        "把量化压缩后的轻量模型刷进 ESP32-S3 开发板",
+        "通过串口或简单接口输入文字提示",
+        "芯片逐层读取模型权重做推理计算",
+        "板子输出生成的文字结果"
+      ],
+      "learning_points": [
+        "模型量化（Quantization）：把模型参数从 32 位浮点数砍成 8 位甚至更低，体积和计算量大幅缩水，但精度会轻微下降",
+        "Embedding：把文字转成数字向量的技术，这里每层单独处理而不是一次性加载全部",
+        "边缘推理 vs 云端推理：在设备本地跑模型能保隐私、省流量，但模型必须够小够轻"
+      ],
+      "verticals": [],
+      "tags": [
+        "边缘AI",
+        "微控制器",
+        "ESP32",
+        "开源"
+      ]
+    },
+    {
+      "product_id": "product-56de04d4111351d5",
+      "product_name": "Presence",
+      "builder_name": "至顶网",
+      "first_seen": "2026-07-26",
+      "last_seen": "2026-07-26",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "reported",
+      "target_user": "需要自动化客服的企业客户",
+      "user_problem": "企业客服人力成本高、响应慢、重复性问题多，需要7×24小时服务但难以实现。",
+      "what_it_is": "OpenAI发布的一款面向企业客服场景的AI智能体产品，用于自动处理客户咨询。",
+      "ai_role": "自动理解客户意图、生成回复、执行标准化操作，并在必要时判断何时转人工。",
+      "implementation_idea": "基于大语言模型做对话理解和生成，通过预设的业务规则和企业知识库来回答常见问题，遇到超范围的情况就升级给真人。",
+      "hands_on_exercise": "用OpenAI API或国内大模型平台，做一个简易客服Demo：上传一份产品FAQ文档，让AI只能根据文档内容回答用户问题，并设置一个触发词（如'转人工'）让对话结束。",
+      "limitations_or_uncertainties": "产品具体定价、支持哪些接入渠道、是否已正式商用、与OpenAI其他企业产品的关系均未公开；原文仅为至顶网报道，未找到OpenAI官方博客或产品页面确认。",
+      "region": "global",
+      "score": 8.0,
+      "summary": "OpenAI推出企业级客服智能体产品Presence，用于自动化客服，值得产品经理拆解。",
+      "title": "OpenAI推出企业级客服智能体产品Presence",
+      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE03ZThBcU9td2xYdTdUZG5nMGtSTFktN3JVcDlocDhaZFctdTZPOVNPU0pUczc3ZXJOUWlNdDBpcE0tZGppY3I0aWtndlIxMnZlY2lfZnIwWjdFcW11dWpoeUVsQTdtNXRITVRkOEN2SQ?oc=5",
+      "sources": [
+        {
+          "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE03ZThBcU9td2xYdTdUZG5nMGtSTFktN3JVcDlocDhaZFctdTZPOVNPU0pUczc3ZXJOUWlNdDBpcE0tZGppY3I0aWtndlIxMnZlY2lfZnIwWjdFcW11dWpoeUVsQTdtNXRITVRkOEN2SQ?oc=5",
+          "title": "OpenAI推出企业级客服智能体产品Presence-AI应用 - 至顶网",
+          "source_type": "google_news",
+          "published_at": "2026-07-25T16:02:46+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "openai-presence-agent-launch",
+          "date": "2026-07-26",
+          "title": "OpenAI推出企业级客服智能体产品Presence",
+          "summary": "OpenAI推出企业级客服智能体产品Presence，用于自动化客服，值得产品经理拆解。",
+          "score": 8.0,
+          "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE03ZThBcU9td2xYdTdUZG5nMGtSTFktN3JVcDlocDhaZFctdTZPOVNPU0pUczc3ZXJOUWlNdDBpcE0tZGppY3I0aWtndlIxMnZlY2lfZnIwWjdFcW11dWpoeUVsQTdtNXRITVRkOEN2SQ?oc=5"
+        }
+      ],
+      "usage_flow": [
+        "企业将Presence接入客服渠道（如网站、App、电话）",
+        "客户发起咨询，Presence自动理解问题",
+        "AI生成回复或执行操作（如查订单、改密码）",
+        "复杂问题自动转接人工客服"
+      ],
+      "learning_points": [
+        "Agent（智能体）：让AI不仅能说话，还能调用工具、执行动作、自主决策的完整系统",
+        "RAG（检索增强生成）：让AI先查企业自己的知识库，再回答，避免胡说八道",
+        "Function Calling（函数调用）：AI识别出'我要查订单'后，自动调用后台系统的查订单功能"
+      ],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "企业服务",
+        "客服"
+      ]
+    },
+    {
+      "product_id": "product-128940a36ea95120",
+      "product_name": "Claude",
+      "builder_name": "mellosouls",
+      "first_seen": "2026-07-26",
+      "last_seen": "2026-07-26",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Anthropic发布Claude 5上下文工程新规则，指导用户如何优化提示词和上下文管理以提升模型表现。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.0,
+      "summary": "Anthropic发布Claude 5上下文工程新规则，指导用户如何优化提示词和上下文管理以提升模型表现。",
+      "title": "The new rules of context engineering for Claude 5 generation models",
+      "url": "https://claude.com/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models",
+      "sources": [
+        {
+          "url": "https://claude.com/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models",
+          "title": "The new rules of context engineering for Claude 5 generation models",
+          "source_type": "hackernews",
+          "published_at": "2026-07-25T20:42:35+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "claude-context-engineering-rules",
+          "date": "2026-07-26",
+          "title": "The new rules of context engineering for Claude 5 generation models",
+          "summary": "Anthropic发布Claude 5上下文工程新规则，指导用户如何优化提示词和上下文管理以提升模型表现。",
+          "score": 8.0,
+          "url": "https://claude.com/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Claude",
+        "上下文工程",
+        "提示词"
       ]
     },
     {
@@ -548,6 +717,199 @@
         "AI Agent",
         "产品收购",
         "交互设计"
+      ]
+    },
+    {
+      "product_id": "product-114612621af7b0da",
+      "product_name": "Claude Opus 5",
+      "builder_name": "Latent Space",
+      "first_seen": "2026-07-26",
+      "last_seen": "2026-07-26",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Latent Space简报称Opus 5以Opus价格提供Fable级性能。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.0,
+      "summary": "Latent Space简报称Opus 5以Opus价格提供Fable级性能。",
+      "title": "[AINews] Claude Opus 5: Fable-level performance at Opus price (half Fable)",
+      "url": "https://www.latent.space/p/ainews-claude-opus-5-fable-level",
+      "sources": [
+        {
+          "url": "https://www.latent.space/p/ainews-claude-opus-5-fable-level",
+          "title": "[AINews] Claude Opus 5: Fable-level performance at Opus price (half Fable)",
+          "source_type": "rss",
+          "published_at": "2026-07-25T07:25:38+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "anthropic-opus-5-launch",
+          "date": "2026-07-26",
+          "title": "[AINews] Claude Opus 5: Fable-level performance at Opus price (half Fable)",
+          "summary": "Latent Space简报称Opus 5以Opus价格提供Fable级性能。",
+          "score": 7.0,
+          "url": "https://www.latent.space/p/ainews-claude-opus-5-fable-level"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "模型发布",
+        "Anthropic"
+      ]
+    },
+    {
+      "product_id": "product-157507b966d91100",
+      "product_name": "DeepSeek",
+      "builder_name": "oliculipolicula",
+      "first_seen": "2026-07-26",
+      "last_seen": "2026-07-26",
+      "occurrence_count": 1,
+      "intelligence_type": "market_signal",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "DeepSeek因创始人关于中美算力差距的言论泄露，暂停第二轮融资。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "china",
+      "score": 7.0,
+      "summary": "DeepSeek因创始人关于中美算力差距的言论泄露，暂停第二轮融资。",
+      "title": "DeepSeek pause fundraise after comments on compute gap to US leaked (transcript) [pdf]",
+      "url": "https://github.com/demo-zexuan/liang-wenfeng-investor-meeting-2026-7-22/blob/master/%E6%A2%81%E6%96%87%E9%94%8B%E6%8A%95%E8%B5%84%E8%80%85%E4%BA%A4%E6%B5%81%E4%BC%9A-%E6%96%87%E5%AD%97%E7%A8%BF_1_18_translate_20260723201651.pdf",
+      "sources": [
+        {
+          "url": "https://github.com/demo-zexuan/liang-wenfeng-investor-meeting-2026-7-22/blob/master/%E6%A2%81%E6%96%87%E9%94%8B%E6%8A%95%E8%B5%84%E8%80%85%E4%BA%A4%E6%B5%81%E4%BC%9A-%E6%96%87%E5%AD%97%E7%A8%BF_1_18_translate_20260723201651.pdf",
+          "title": "DeepSeek pause fundraise after comments on compute gap to US leaked (transcript) [pdf]",
+          "source_type": "hackernews",
+          "published_at": "2026-07-25T23:32:50+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "deepseek-pause-fundraise",
+          "date": "2026-07-26",
+          "title": "DeepSeek pause fundraise after comments on compute gap to US leaked (transcript) [pdf]",
+          "summary": "DeepSeek因创始人关于中美算力差距的言论泄露，暂停第二轮融资。",
+          "score": 7.0,
+          "url": "https://github.com/demo-zexuan/liang-wenfeng-investor-meeting-2026-7-22/blob/master/%E6%A2%81%E6%96%87%E9%94%8B%E6%8A%95%E8%B5%84%E8%80%85%E4%BA%A4%E6%B5%81%E4%BC%9A-%E6%96%87%E5%AD%97%E7%A8%BF_1_18_translate_20260723201651.pdf"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "DeepSeek",
+        "融资",
+        "算力差距",
+        "地缘政治"
+      ]
+    },
+    {
+      "product_id": "product-ae6c43974b7aa4dc",
+      "product_name": "Cloudflare",
+      "builder_name": "alphabetatango",
+      "first_seen": "2026-07-26",
+      "last_seen": "2026-07-26",
+      "occurrence_count": 1,
+      "intelligence_type": "business_policy",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Cloudflare为网站提供新的AI流量控制选项，允许屏蔽AI训练爬虫，并将于9月15日起默认屏蔽多用途爬虫。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.0,
+      "summary": "Cloudflare为网站提供新的AI流量控制选项，允许屏蔽AI训练爬虫，并将于9月15日起默认屏蔽多用途爬虫。",
+      "title": "Cloudflare's new AI traffic options for customers",
+      "url": "https://blog.cloudflare.com/content-independence-day-ai-options/",
+      "sources": [
+        {
+          "url": "https://blog.cloudflare.com/content-independence-day-ai-options/",
+          "title": "Cloudflare's new AI traffic options for customers",
+          "source_type": "hackernews",
+          "published_at": "2026-07-25T22:50:49+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "cloudflare-ai-traffic-options",
+          "date": "2026-07-26",
+          "title": "Cloudflare's new AI traffic options for customers",
+          "summary": "Cloudflare为网站提供新的AI流量控制选项，允许屏蔽AI训练爬虫，并将于9月15日起默认屏蔽多用途爬虫。",
+          "score": 7.0,
+          "url": "https://blog.cloudflare.com/content-independence-day-ai-options/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Cloudflare",
+        "AI训练",
+        "数据获取",
+        "政策"
+      ]
+    },
+    {
+      "product_id": "product-edc675114461f1d4",
+      "product_name": "Debian",
+      "builder_name": "zdw",
+      "first_seen": "2026-07-26",
+      "last_seen": "2026-07-26",
+      "occurrence_count": 1,
+      "intelligence_type": "business_policy",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Debian项目提出三项关于LLM辅助贡献的提案，从完全禁止到有条件允许。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.0,
+      "summary": "Debian项目提出三项关于LLM辅助贡献的提案，从完全禁止到有条件允许。",
+      "title": "LLM Usage in Debian: Three Proposals",
+      "url": "https://www.debian.org/vote/2026/vote_002",
+      "sources": [
+        {
+          "url": "https://www.debian.org/vote/2026/vote_002",
+          "title": "LLM Usage in Debian: Three Proposals",
+          "source_type": "hackernews",
+          "published_at": "2026-07-25T19:44:39+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "debian-llm-usage-proposals",
+          "date": "2026-07-26",
+          "title": "LLM Usage in Debian: Three Proposals",
+          "summary": "Debian项目提出三项关于LLM辅助贡献的提案，从完全禁止到有条件允许。",
+          "score": 7.0,
+          "url": "https://www.debian.org/vote/2026/vote_002"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Debian",
+        "开源",
+        "LLM政策"
       ]
     },
     {
