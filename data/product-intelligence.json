@@ -1,7 +1,184 @@
 {
   "version": 1,
-  "updated_at": "2026-07-26T04:08:20.736262+00:00",
+  "updated_at": "2026-07-27T04:16:13.842710+00:00",
   "products": [
+    {
+      "product_id": "product-10ecb665d441048e",
+      "product_name": "OpenAI Agents SDK (openai-agents-python)",
+      "builder_name": "seratch",
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-27",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "first_party",
+      "target_user": "用 Python 开发 AI Agent 的工程师，需要模型自动编排多步骤工具调用的场景",
+      "user_problem": "以前 Agent 调用工具是\"一步一请示\"：模型想查天气→调用天气 API→等结果→再决定下一步。步骤多、延迟高，复杂任务需要来回很多次。用户希望模型能一次性规划好整个工具调用流程，减少往返",
+      "what_it_is": "OpenAI 官方 Python SDK 的一个新版本，新增「程序化工具调用」功能，让 AI 模型能生成 JavaScript 代码来串联多个工具完成任务",
+      "ai_role": "AI 不再只是\"选哪个工具\"，而是写一段 JavaScript 代码来当\"导演\"，决定什么时候调用哪个工具、怎么处理中间结果、什么条件下走分支",
+      "implementation_idea": "相当于给模型发了一张\"工具清单\"和一张\"空白剧本纸\"。模型根据用户请求，写一段 JavaScript 剧本（比如：先查天气→如果rain=true则调用订票→把结果拼成消息）。这段剧本在受控环境里运行，只能调用你允许的工具，跑完把结果还给用户。开发者可以设\"谁能被调用\"（allowed_callers）、加审批规则、看执行日志",
+      "hands_on_exercise": "30 分钟动手：从 GitHub 拉 openai-agents-python v0.19.0，跑通官方 examples 里的 tool calling 示例。然后自己写两个假工具（一个返回随机天气，一个返回假机票信息），用 ProgrammaticToolCallingTool 包装，让模型写一段 JS 来根据天气决定是否\"订票\"，观察生成的 JavaScript 和执行日志",
+      "limitations_or_uncertainties": "未公开：具体哪些 OpenAI Responses 模型支持此功能；JavaScript 执行环境的沙箱隔离细节；allowed_callers 的权限粒度是否支持到用户级别；与第三方 LLM（AnyLLM/LiteLLM）配合时此功能是否可用",
+      "region": "global",
+      "score": 9.0,
+      "summary": "OpenAI发布agents-python v0.19.0，新增程序化工具调用，让模型生成JavaScript协调工具，提升Agent能力。",
+      "title": "OpenAI Agents SDK v0.19.0：让模型自己写 JavaScript 来协调工具",
+      "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.19.0",
+      "sources": [
+        {
+          "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.19.0",
+          "title": "openai/openai-agents-python released v0.19.0",
+          "source_type": "github",
+          "published_at": "2026-07-27T04:10:05+00:00"
+        },
+        {
+          "url": "https://openai.github.io/openai-agents-python/",
+          "title": "OpenAI Agents SDK",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://github.com/openai/openai-agents-python",
+          "title": "GitHub - openai/openai-agents-python: A lightweight, powerful ...",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "openai-agents-python-v0.19.0",
+          "date": "2026-07-27",
+          "title": "OpenAI Agents SDK v0.19.0：让模型自己写 JavaScript 来协调工具",
+          "summary": "OpenAI发布agents-python v0.19.0，新增程序化工具调用，让模型生成JavaScript协调工具，提升Agent能力。",
+          "score": 9.0,
+          "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.19.0"
+        }
+      ],
+      "usage_flow": [
+        "开发者在代码里注册多个工具（如查天气、订机票、发邮件），并标记哪些工具允许被程序化调用",
+        "用 `ProgrammaticToolCallingTool` 包装这些工具，让模型看到它们的描述和参数",
+        "用户提出复杂请求（如'查北京天气，如果下雨就给我订明天去上海的机票'），模型自动生成一段 JavaScript 来编排这些工具的调用顺序和条件判断",
+        "SDK 执行这段 JavaScript，按模型写的逻辑调用工具，返回最终结果"
+      ],
+      "learning_points": [
+        "Tool Calling（工具调用）：模型不只会聊天，还能根据你的描述选择并调用外部功能，比如查数据库或发邮件",
+        "Agent（智能体）：一个能自主规划、调用工具、完成多步骤任务的 AI 系统，不只是单次问答",
+        "Runner streaming / RunState：SDK 里管任务执行和状态追踪的机制，让你能看到 Agent 每一步在干嘛、中途打断或恢复"
+      ],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "OpenAI",
+        "Tool Calling",
+        "JavaScript"
+      ]
+    },
+    {
+      "product_id": "product-cd3ee4b4726e4308",
+      "product_name": "OpenATP",
+      "builder_name": "zdw",
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-27",
+      "occurrence_count": 1,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "early_signal",
+      "target_user": "形式化验证研究者、编译器/密码学开发者、对 AI+数学证明感兴趣的工程师",
+      "user_problem": "传统写代码靠测试找 bug，但测试无法覆盖所有情况；关键系统（如压缩、加密）一旦出错后果严重，需要数学级别的\"绝对正确\"保证，但人工写形式化证明极其耗时、门槛极高。",
+      "what_it_is": "一篇技术博客，展示如何用 Lean（一种数学证明语言）+ AI 自动化工具，来形式化验证 zstd 压缩算法的实现没有 bug。",
+      "ai_role": "AI 充当\"证明搜索助手\"：在巨大的证明策略空间里尝试构造证明步骤，替代人类手动试错；人类负责定义目标和审查关键步骤。",
+      "implementation_idea": "核心思路是\"证明即搜索\"：把数学证明看成在规则树里找路径的游戏，AI 用类似下棋的思路预测下一步该用什么定理/变换；Lean 作为\"裁判\"实时判定每一步是否合法，形成 AI 提议→验证器检查→反馈迭代的闭环。OpenATP 把这个流程打包成可 benchmark 不同 AI 模型的工具。",
+      "hands_on_exercise": "30 分钟体验：安装 Lean 4（https://lean-lang.org/theorem_proving_in_lean4/），跟着官方教程完成第 1 章\"依赖类型入门\"，手写一个简单的加法交换律证明（a+b=b+a），感受\"代码即证明\"的交互过程；有余力可浏览 OpenATP GitHub 看其如何封装模型调用。",
+      "limitations_or_uncertainties": "原文正文未抓取到，无法确认 zstd 证明的具体完成度和 AI 自动化程度（是全自动还是人机协作）；OpenATP 的成熟度、支持的模型列表未在输入中详述；社区评论提到的 $150k API 成本和一周推理时间暗示当前成本极高，非普遍可用。",
+      "region": "global",
+      "score": 7.0,
+      "summary": "文章展示用Lean证明zstd压缩算法正确性，讨论AI自动化证明，并提及OpenATP工具。",
+      "title": "AI 自动定理证明：用 Lean 验证 zstd 压缩算法的正确性",
+      "url": "https://www.imperialviolet.org/2026/07/26/zstd-lean.html",
+      "sources": [
+        {
+          "url": "https://www.imperialviolet.org/2026/07/26/zstd-lean.html",
+          "title": "We have proof automation now",
+          "source_type": "hackernews",
+          "published_at": "2026-07-26T20:53:26+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "proof-automation-zstd-lean",
+          "date": "2026-07-27",
+          "title": "AI 自动定理证明：用 Lean 验证 zstd 压缩算法的正确性",
+          "summary": "文章展示用Lean证明zstd压缩算法正确性，讨论AI自动化证明，并提及OpenATP工具。",
+          "score": 7.0,
+          "url": "https://www.imperialviolet.org/2026/07/26/zstd-lean.html"
+        }
+      ],
+      "usage_flow": [
+        "开发者用 Lean 写出算法实现的\"规格说明\"（即数学上什么算正确）",
+        "AI Agent（如 OpenATP 调用的模型）尝试自动生成证明步骤",
+        "Lean 的验证器检查每一步是否逻辑严谨，不通过则反馈给 AI 继续尝试",
+        "证明通过后，代码获得形式化保证，可部署到生产环境"
+      ],
+      "learning_points": [
+        "Lean：一种编程语言，写代码的同时可以写数学证明，编译器会严格检查证明是否成立——可以理解为\"不会说谎的代码+数学笔记本\"",
+        "Agent：这里指能自主调用工具（如 Lean 验证器）、根据反馈调整行动的 AI 系统，不只是单次问答",
+        "Function Calling：AI 调用外部程序（如 Lean 或 Docker 里的验证环境）的能力，让 AI 能\"动手做实验\"验证自己的猜测"
+      ],
+      "verticals": [],
+      "tags": [
+        "Theorem Proving",
+        "AI",
+        "Lean",
+        "OpenATP"
+      ]
+    },
+    {
+      "product_id": "product-b6ca14cd12b5e4ed",
+      "product_name": "one-api",
+      "builder_name": "Simon Willison",
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-27",
+      "occurrence_count": 1,
+      "intelligence_type": "market_signal",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "调查揭示中国LLM token转售市场，利用开源代理软件one-api/new-api提供折扣API访问。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "china",
+      "score": 7.0,
+      "summary": "调查揭示中国LLM token转售市场，利用开源代理软件one-api/new-api提供折扣API访问。",
+      "title": "An Inside Look at the Relay Market Powering Token Resellers and Fraud",
+      "url": "https://simonwillison.net/2026/Jul/26/relay-market/#atom-everything",
+      "sources": [
+        {
+          "url": "https://simonwillison.net/2026/Jul/26/relay-market/#atom-everything",
+          "title": "An Inside Look at the Relay Market Powering Token Resellers and Fraud",
+          "source_type": "rss",
+          "published_at": "2026-07-26T19:30:54+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "token-relay-market-fraud",
+          "date": "2026-07-27",
+          "title": "An Inside Look at the Relay Market Powering Token Resellers and Fraud",
+          "summary": "调查揭示中国LLM token转售市场，利用开源代理软件one-api/new-api提供折扣API访问。",
+          "score": 7.0,
+          "url": "https://simonwillison.net/2026/Jul/26/relay-market/#atom-everything"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "LLM",
+        "Token Reselling",
+        "Fraud",
+        "China"
+      ]
+    },
     {
       "product_id": "product-f7405f4becbf49ae",
       "product_name": "ChatGPT Work",
