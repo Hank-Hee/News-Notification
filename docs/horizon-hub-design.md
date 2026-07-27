@@ -65,7 +65,7 @@ The core interface users see when opening the Hub website.
   - Total Sources | Field Categories | Contributors | Active Users
 
 - **Source Card Waterfall**: Each source has a card.
-  - Source Name + Type Tags (RSS / Reddit / GitHub / Telegram / Twitter)
+  - Source Name + Type Tags (RSS / Newsletter / GitHub / Public Web)
   - Color-coded Field Tags (AI Purple, Systems Blue, Security Red...)
   - One-sentence Bio (CN/EN)
   - Key Metrics: Users · AI Avg Score · Signal-to-Noise Ratio

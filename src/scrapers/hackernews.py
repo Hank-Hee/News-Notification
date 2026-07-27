@@ -28,52 +28,81 @@ class HackerNewsScraper(BaseScraper):
             return []
 
         try:
-            response = await self.client.get(f"{self.base_url}/topstories.json")
-            response.raise_for_status()
-            story_ids = response.json()
-
-            fetch_count = self.config.get("fetch_top_stories", 30)
-            story_ids = story_ids[:fetch_count]
-
-            # Fetch story details concurrently
-            tasks = [self._fetch_story(story_id) for story_id in story_ids]
-            stories = await asyncio.gather(*tasks, return_exceptions=True)
-
-            # Filter and process stories, then fetch comments
-            items = []
-            min_score = self.config.get("min_score", 100)
-
-            comment_tasks = []
-            valid_stories = []
-
-            for story in stories:
-                if isinstance(story, Exception) or story is None:
-                    continue
-                if story.get("score", 0) < min_score:
-                    continue
-                published_at = datetime.fromtimestamp(story["time"], tz=timezone.utc)
-                if published_at < since:
-                    continue
-                valid_stories.append(story)
-                # Queue comment fetching
-                comment_ids = story.get("kids", [])[:TOP_COMMENTS_LIMIT]
-                comment_tasks.append(self._fetch_comments(comment_ids))
-
-            # Fetch all comments concurrently
-            all_comments = await asyncio.gather(*comment_tasks, return_exceptions=True)
-
-            for story, comments in zip(valid_stories, all_comments):
-                if isinstance(comments, Exception):
-                    comments = []
-                item = self._parse_story(story, comments)
-                if item:
-                    items.append(item)
-
+            stream_specs = [
+                (
+                    "topstories",
+                    self.config.get("fetch_top_stories", 30),
+                    self.config.get("min_score", 100),
+                    "Hacker News Top",
+                    self.config.get("category"),
+                ),
+                (
+                    "showstories",
+                    self.config.get("fetch_show_stories", 0),
+                    self.config.get("show_min_score", 5),
+                    "Show HN",
+                    self.config.get("show_category"),
+                ),
+            ]
+            stream_results = await asyncio.gather(
+                *[
+                    self._fetch_stream(*spec, since)
+                    for spec in stream_specs
+                    if spec[1] > 0
+                ]
+            )
+            items: List[ContentItem] = []
+            seen_ids: set[str] = set()
+            for stream_items in stream_results:
+                for item in stream_items:
+                    if item.id not in seen_ids:
+                        seen_ids.add(item.id)
+                        items.append(item)
             return items
 
         except httpx.HTTPError as e:
             logger.warning("Error fetching Hacker News stories: %s", e)
             return []
+
+    async def _fetch_stream(
+        self,
+        endpoint: str,
+        fetch_count: int,
+        min_score: int,
+        source_name: str,
+        category: Optional[str],
+        since: datetime,
+    ) -> List[ContentItem]:
+        response = await self.client.get(f"{self.base_url}/{endpoint}.json")
+        response.raise_for_status()
+        story_ids = response.json()[:fetch_count]
+        stories = await asyncio.gather(
+            *[self._fetch_story(story_id) for story_id in story_ids],
+            return_exceptions=True,
+        )
+        valid_stories = []
+        comment_tasks = []
+        for story in stories:
+            if isinstance(story, Exception) or story is None:
+                continue
+            if story.get("score", 0) < min_score:
+                continue
+            published_at = datetime.fromtimestamp(story["time"], tz=timezone.utc)
+            if published_at < since:
+                continue
+            valid_stories.append(story)
+            comment_tasks.append(
+                self._fetch_comments(story.get("kids", [])[:TOP_COMMENTS_LIMIT])
+            )
+        all_comments = await asyncio.gather(*comment_tasks, return_exceptions=True)
+        items = []
+        for story, comments in zip(valid_stories, all_comments):
+            if isinstance(comments, Exception):
+                comments = []
+            item = self._parse_story(story, comments, source_name, category)
+            if item:
+                items.append(item)
+        return items
 
     async def _fetch_story(self, story_id: int) -> Optional[dict]:
         try:
@@ -97,7 +126,13 @@ class HackerNewsScraper(BaseScraper):
                 comments.append(r)
         return comments
 
-    def _parse_story(self, story: dict, comments: List[dict]) -> ContentItem:
+    def _parse_story(
+        self,
+        story: dict,
+        comments: List[dict],
+        source_name: str = "Hacker News Top",
+        category: Optional[str] = None,
+    ) -> ContentItem:
         story_id = story["id"]
         title = story.get("title", "")
         url = story.get("url", f"https://news.ycombinator.com/item?id={story_id}")
@@ -138,6 +173,7 @@ class HackerNewsScraper(BaseScraper):
                 "type": story.get("type", "story"),
                 "discussion_url": hn_discussion_url,
                 "comment_count": len(comments),
-                "category": self.config.get("category"),
+                "source_name": source_name,
+                "category": category if category is not None else self.config.get("category"),
             }
         )

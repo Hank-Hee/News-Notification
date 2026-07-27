@@ -12,7 +12,7 @@
 2. 在 **Workflow permissions** 中选择 **Read and write permissions**。
 3. 保存设置。工作流需要写入 `gh-pages` 分支，但不会把 API Key 写入该分支。
 
-## 2. 检查三个 Repository Secrets
+## 2. 检查两个 Repository Secrets
 
 不要把真实 API Key 粘贴到代码、配置文件、Issue、PR 或聊天内容中。
 
@@ -25,12 +25,9 @@
 5. 再次点击 **New repository secret**，添加 DeepSeek：
    - `Name`：`DEEPSEEK_API_KEY`
    - `Secret`：DeepSeek 开放平台创建的 API Key
-6. 检查已有的 Apify Secret：
-   - `Name`：`APIFY_TOKEN`
-   - `Secret`：Apify Console 生成的 API Token
-7. 每个 Secret 都点击 **Add secret** 保存；已存在的可直接保留。
+6. 每个 Secret 都点击 **Add secret** 保存；已存在的可直接保留。
 
-Secret 保存后不能在 GitHub 页面再次查看明文，只能覆盖更新。代码只在 Actions 运行时读取这三个 Secret，不会把它们写入网页、JSON、CSV 或日志。
+Secret 保存后不能在 GitHub 页面再次查看明文，只能覆盖更新。代码只在 Actions 运行时读取这两个 Secret，不会把它们写入网页、JSON、CSV 或日志。
 
 ## 3. 添加模型 Variables
 
@@ -52,12 +49,11 @@ GitHub 自动生成的 `GITHUB_TOKEN` 用于读取公开 GitHub 数据和发布 
 
 1. 无需手动点击 **Run workflow**，等待合并后的下一个北京时间 08:30。
 2. 打开仓库 **Actions**，左侧选择 **Daily Horizon AI Summary**。
-3. 打开当天运行，确认 `Validate Kimi configuration`、`Validate DeepSeek configuration`、`Validate Apify configuration`、`Generate Chinese AI daily` 和 `Deploy to GitHub Pages` 均成功。
-4. 如 Apify 提示 Actor 尚未授权，在 Apify Store 分别打开 `altimis/scweet` 和 `apify/website-content-crawler`，点击 **Try / Start / Allow** 完成一次授权，然后等待下一次运行或再手动重跑。
+3. 打开当天运行，确认 `Validate Kimi configuration`、`Validate DeepSeek configuration`、`Generate Chinese AI daily` 和 `Deploy to GitHub Pages` 均成功。
 
 日志会按“阶段 / Provider / 模型”显示请求数、输入/输出 Token、缓存命中、重试、结构校验失败和估算费用。正常无缓存运行目标为 7 次请求：DeepSeek 评分 4 次、语义去重 1 次、Kimi 深度拆解 2 次。日志不会输出 API Key。
 
-Apify 每日会运行两个有上限的任务：X 抓取最多 0.40 美元，邮件资讯抓取最多 0.30 美元。这是保护性上限，不是每日必然消费数。
+情报采集使用公开 Feed、公开网页和无需新密钥的接口，采集端不产生按条计费。
 
 ## 5. 启用 GitHub Pages
 
@@ -72,15 +68,15 @@ Apify 每日会运行两个有上限的任务：X 抓取最多 0.40 美元，邮
 
 ## 6. 自动运行时间
 
-工作流 cron 为 `30 0 * * *`，即每天 UTC 00:30、北京时间 08:30 触发。GitHub 的计划任务可能有少量排队延迟。
+工作流使用 GitHub Actions 的时区计划：`30 8 * * *` + `Asia/Shanghai`，即每天北京时间 08:30 触发。GitHub 的计划任务可能有少量排队延迟。
 
 ## 7. 修改信源与筛选规则
 
 主要配置位于 `data/config.github.json`：
 
 - `sources.rss`：模型公司、产品媒体与构建者博客的公开 Feed；
-- `sources.newsletter`：通过 Apify Website Content Crawler 每日抓取 Lenny's Newsletter、Simple.ai、AlphaSignal 的公开免费归档，不登录、不访问付费内容；
-- `sources.twitter`：模型公司核心人员、真实 AI 产品构建者和少量高信噪比观察者；
+- `sources.newsletter`：通过官方公开 Feed 抓取 Lenny's Newsletter、Simple.ai、AlphaSignal、AI News 和 Interconnects，不登录、不访问付费内容；
+- `sources.public_web`：Anthropic、Cursor、Lovable、The Batch、Artificial Analysis、OpenRouter 和 LMArena 的公开更新；
 - `sources.github`：重点项目 Release；
 - `sources.ossinsight`：最近 24 小时开源趋势；
 - `sources.google_news`：中国公司与中文 AI 新闻补充入口；
@@ -99,7 +95,6 @@ Apify 每日会运行两个有上限的任务：X 抓取最多 0.40 美元，邮
 - **Missing repository secret: MOONSHOT_API_KEY / DEEPSEEK_API_KEY**：Secret 名称拼写错误、未创建或创建在 Environment 而非 Repository。
 - **Thinking disablement is incompatible**：当前 SDK 或模型不能确认关闭 Thinking；系统会安全停止该调用，不会切换到思考模式。
 - **DeepSeek model unavailable**：确认使用国内官方地址 `https://api.deepseek.com`，并检查模型名为 `deepseek-v4-flash` 和 `deepseek-v4-pro`。
-- **Apify Actor preflight failed**：确认 `APIFY_TOKEN` 为 Repository Secret，并在 Apify Store 对报错的 Actor 执行一次 **Try / Start / Allow**。
 - **Webhook URL is empty**：说明运行的是合并前的旧版默认分支工作流；合并本 PR 后，新配置不会启用 Webhook，也不会读取 `HORIZON_WEBHOOK_URL`。
 - **401 / authentication / invalid API key**：在 Kimi Platform 检查 Key 状态，然后覆盖 `MOONSHOT_API_KEY` Secret。
 - **quota / billing / 额度不足**：在 Kimi Platform 检查余额与配额。此类错误会让工作流明确失败，不会发布误导性空日报。
@@ -108,7 +103,29 @@ Apify 每日会运行两个有上限的任务：X 抓取最多 0.40 美元，邮
 - **单一 RSS 或搜索失败**：其他来源会继续运行；所有来源均失败时工作流失败。
 - **Pages 404**：确认工作流已生成 `gh-pages` 分支，且 Pages 来源为 `gh-pages` 的 `/(root)`。
 
-## 9. 同步上游 Horizon
+## 9. 免费来源与本项目采集上限
+
+以下来源本身不产生按条费用；“项目上限”是 Horizon 每天最多接收的条数，不代表网站官方额度。没有公开 Feed 的来源每天只请求一次公开页面或接口。
+
+| 来源 | 接入方式 | 项目上限/天 | 额外费用或密钥 |
+|---|---|---:|---|
+| OpenAI、DeepMind、Google AI、Microsoft Foundry、GitHub AI、Hugging Face、Replit、Vercel | 官方 RSS/Atom | 每源 5 | 免费；无新密钥 |
+| TechCrunch AI、VentureBeat AI、The Verge AI | 公开 RSS/Atom | 每源 5 | 免费；无新密钥 |
+| Simon Willison、One Useful Thing、Latent Space | 官方 Feed | 每源 5 | 免费；无新密钥 |
+| Lenny's Newsletter、Simple.ai、AlphaSignal、AI News、Interconnects | 官方公开 Feed | 每源 5 | 免费；无新密钥 |
+| Product Hunt | 官方公开 Feed | 20 | 免费；无新密钥 |
+| Show HN | 官方 Hacker News API | 检查 20 条，分数至少 5 | 免费；无新密钥 |
+| Hacker News Top | 官方 Hacker News API | 检查 60 条，分数至少 30 | 免费；无新密钥 |
+| GitHub Releases | GitHub REST API | 每仓库 3 | 免费；复用 Actions 自带 `GITHUB_TOKEN` |
+| Anthropic、Lovable、The Batch、Artificial Analysis | 官方公开站点地图 | 每源 5 | 免费；无新密钥 |
+| Cursor | 官方更新日志页面 | 5 | 免费；无新密钥 |
+| OpenRouter | 公开 Models API | 1 个 Top 5 榜单 | 免费；无新密钥 |
+| LMArena | 官方 GitHub 榜单数据的提交记录 | 5 次更新 | 免费；复用 `GITHUB_TOKEN` |
+| Google News 中文搜索 | 公开 RSS | 80 | 免费；无新密钥 |
+
+Artificial Analysis 的付费/需 Key Data API 没有接入；这里只读取公开文章站点地图并链接原文。最终进入 DeepSeek 的候选总数仍为 40，最终日报为 8–12 条，Kimi 只处理 Top 2，因此新增免费来源不会取消现有 AI 费用控制。
+
+## 10. 同步上游 Horizon
 
 `Hank-Hee/News-Notification` 创建时是普通空仓库，不属于 GitHub 的 Fork 网络。本次导入的上游基线为 `Thysrael/Horizon@1e2fdc7ccb177f33c59aef2082c4093e1e82b22c`。为避免无共同历史导致整仓冲突，后续应把“上次同步点到最新上游”的差异应用到单独分支：
 
@@ -124,7 +141,7 @@ git push -u origin codex/sync-upstream
 
 随后为该分支创建 PR。下一次同步时，把命令中的旧 SHA 替换为本次实际同步到的最新上游 SHA。重点检查 `src/orchestrator.py`、`src/ai/`、`data/config.github.json`、工作流和 `docs/` 的冲突。
 
-## 10. 本地运行（可选）
+## 11. 本地运行（可选）
 
 复制 `.env.example` 为 `.env`，只在本机 `.env` 中填写真实值，然后：
 
@@ -138,7 +155,6 @@ export KIMI_MODEL_ID="kimi-k2.6"
 export DEEPSEEK_BASE_URL="https://api.deepseek.com"
 export DEEPSEEK_CANDIDATE_MODEL="deepseek-v4-flash"
 export DEEPSEEK_FALLBACK_MODEL="deepseek-v4-pro"
-export APIFY_TOKEN="你的 Apify Token"
 uv run horizon --hours 24
 ```
 

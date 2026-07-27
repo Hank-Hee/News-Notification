@@ -113,7 +113,6 @@ def _source_key(item: ContentItem) -> str:
     subsource = (
         metadata.get("feed_name")
         or metadata.get("source_name")
-        or metadata.get("twitter_handle")
         or metadata.get("subreddit")
         or metadata.get("repo")
         or metadata.get("domain")

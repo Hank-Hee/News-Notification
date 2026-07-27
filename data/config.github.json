@@ -60,34 +60,40 @@
   },
   "sources": {
     "github": [
-      {"type": "repo_releases", "owner": "openai", "repo": "openai-agents-python", "enabled": true, "category": "builder-tool"},
-      {"type": "repo_releases", "owner": "anthropics", "repo": "claude-code", "enabled": true, "category": "builder-tool"},
-      {"type": "repo_releases", "owner": "vercel", "repo": "ai", "enabled": true, "category": "builder-tool"},
-      {"type": "repo_releases", "owner": "langchain-ai", "repo": "langchain", "enabled": true, "category": "builder-tool"},
-      {"type": "repo_releases", "owner": "browser-use", "repo": "browser-use", "enabled": true, "category": "builder-tool"},
-      {"type": "repo_releases", "owner": "langgenius", "repo": "dify", "enabled": true, "category": "builder-tool"},
-      {"type": "repo_releases", "owner": "n8n-io", "repo": "n8n", "enabled": true, "category": "builder-tool"}
+      {"type": "repo_releases", "owner": "openai", "repo": "openai-agents-python", "enabled": true, "category": "builder-tool", "max_items": 3},
+      {"type": "repo_releases", "owner": "openai", "repo": "codex", "enabled": true, "category": "builder-tool", "max_items": 3},
+      {"type": "repo_releases", "owner": "anthropics", "repo": "claude-code", "enabled": true, "category": "builder-tool", "max_items": 3},
+      {"type": "repo_releases", "owner": "vercel", "repo": "ai", "enabled": true, "category": "builder-tool", "max_items": 3},
+      {"type": "repo_releases", "owner": "langchain-ai", "repo": "langchain", "enabled": true, "category": "builder-tool", "max_items": 3},
+      {"type": "repo_releases", "owner": "browser-use", "repo": "browser-use", "enabled": true, "category": "builder-tool", "max_items": 3},
+      {"type": "repo_releases", "owner": "langgenius", "repo": "dify", "enabled": true, "category": "builder-tool", "max_items": 3},
+      {"type": "repo_releases", "owner": "n8n-io", "repo": "n8n", "enabled": true, "category": "builder-tool", "max_items": 3}
     ],
     "hackernews": {
       "enabled": true,
       "fetch_top_stories": 60,
       "min_score": 30,
-      "category": "product-community"
+      "category": "product-community",
+      "fetch_show_stories": 20,
+      "show_min_score": 5,
+      "show_category": "product-launch"
     },
     "rss": [
-      {"name": "OpenAI News", "url": "https://openai.com/news/rss.xml", "enabled": true, "category": "official-global"},
-      {"name": "Google DeepMind", "url": "https://deepmind.google/blog/rss.xml", "enabled": true, "category": "official-global"},
-      {"name": "Google AI", "url": "https://blog.google/innovation-and-ai/technology/ai/rss/", "enabled": true, "category": "official-global"},
-      {"name": "Microsoft Foundry", "url": "https://devblogs.microsoft.com/foundry/feed/", "enabled": true, "category": "builder-global"},
-      {"name": "GitHub AI", "url": "https://github.blog/ai-and-ml/feed/", "enabled": true, "category": "builder-global"},
-      {"name": "Hugging Face", "url": "https://huggingface.co/blog/feed.xml", "enabled": true, "category": "builder-global"},
-      {"name": "Product Hunt", "url": "https://www.producthunt.com/feed", "enabled": true, "category": "product-global"},
-      {"name": "TechCrunch AI", "url": "https://techcrunch.com/category/artificial-intelligence/feed/", "enabled": true, "category": "product-media"},
-      {"name": "VentureBeat AI", "url": "https://venturebeat.com/category/ai/feed/", "enabled": true, "category": "product-media"},
-      {"name": "The Verge AI", "url": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml", "enabled": true, "category": "product-media"},
-      {"name": "Simon Willison", "url": "https://simonwillison.net/atom/everything/", "enabled": true, "category": "builder-global"},
-      {"name": "One Useful Thing", "url": "https://www.oneusefulthing.org/feed", "enabled": true, "category": "builder-global"},
-      {"name": "Latent Space", "url": "https://www.latent.space/feed", "enabled": true, "category": "builder-global"}
+      {"name": "OpenAI News", "url": "https://openai.com/news/rss.xml", "enabled": true, "category": "official-global", "max_items": 5},
+      {"name": "Google DeepMind", "url": "https://deepmind.google/blog/rss.xml", "enabled": true, "category": "official-global", "max_items": 5},
+      {"name": "Google AI", "url": "https://blog.google/innovation-and-ai/technology/ai/rss/", "enabled": true, "category": "official-global", "max_items": 5},
+      {"name": "Microsoft Foundry", "url": "https://devblogs.microsoft.com/foundry/feed/", "enabled": true, "category": "builder-global", "max_items": 5},
+      {"name": "GitHub AI", "url": "https://github.blog/ai-and-ml/feed/", "enabled": true, "category": "builder-global", "max_items": 5},
+      {"name": "Hugging Face", "url": "https://huggingface.co/blog/feed.xml", "enabled": true, "category": "builder-global", "max_items": 5},
+      {"name": "Product Hunt", "url": "https://www.producthunt.com/feed", "enabled": true, "category": "product-global", "max_items": 20},
+      {"name": "TechCrunch AI", "url": "https://techcrunch.com/category/artificial-intelligence/feed/", "enabled": true, "category": "product-media", "max_items": 5},
+      {"name": "VentureBeat AI", "url": "https://venturebeat.com/category/ai/feed/", "enabled": true, "category": "product-media", "max_items": 5},
+      {"name": "The Verge AI", "url": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml", "enabled": true, "category": "product-media", "max_items": 5},
+      {"name": "Simon Willison", "url": "https://simonwillison.net/atom/everything/", "enabled": true, "category": "builder-global", "max_items": 5},
+      {"name": "One Useful Thing", "url": "https://www.oneusefulthing.org/feed", "enabled": true, "category": "builder-global", "max_items": 5},
+      {"name": "Latent Space", "url": "https://www.latent.space/feed", "enabled": true, "category": "builder-global", "max_items": 5},
+      {"name": "Replit Blog", "url": "https://blog.replit.com/feed.xml", "enabled": true, "category": "product-builder", "max_items": 5},
+      {"name": "Vercel Changelog", "url": "https://vercel.com/changelog/rss", "enabled": true, "category": "product-changelog", "max_items": 5}
     ],
     "reddit": {
       "enabled": false,
@@ -102,40 +108,9 @@
       "fetch_comments": 3
     },
     "telegram": {"enabled": false, "channels": []},
-    "twitter": {
-      "enabled": true,
-      "required": true,
-      "mode": "apify",
-      "apify_token_env": "APIFY_TOKEN",
-      "actor_id": "altimis~scweet",
-      "max_total_charge_usd": 0.4,
-      "fetch_limit": 30,
-      "category": "first-party-builder",
-      "fetch_reply_text": false,
-      "max_replies_per_tweet": 3,
-      "max_tweets_to_expand": 3,
-      "reply_min_likes": 3,
-      "users": [
-        "OpenAI", "OpenAIDevs", "sama", "gdb", "kevinweil", "markchen90",
-        "AnthropicAI", "claudeai", "DarioAmodei", "jackclarkSF", "alexalbert__", "AmandaAskell",
-        "GoogleDeepMind", "GoogleAI", "demishassabis", "JeffDean", "OfficialLoganK", "OriolVinyalsML",
-        "AIatMeta", "ylecun", "Ahmad_Al_Dahle", "xai", "MistralAI", "arthurmensch", "GuillaumeLample",
-        "deepseek_ai", "Kimi_Moonshot", "Alibaba_Qwen",
-        "cursor_ai", "michaeltruell", "Replit", "amasad", "lovable_dev", "antonosika",
-        "vercel", "rauchg", "leeerob", "v0", "dify_ai", "n8n_io", "LangChainAI", "hwchase17", "browser_use",
-        "simonw", "karpathy", "levelsio", "dharmesh", "danshipper", "mattshumer_",
-        "swyx", "lennysan", "saranormous", "eladgil"
-      ]
-    },
     "newsletter": {
       "enabled": true,
       "required": true,
-      "apify_token_env": "APIFY_TOKEN",
-      "actor_id": "apify~website-content-crawler",
-      "max_total_charge_usd": 0.3,
-      "max_crawl_pages": 6,
-      "max_crawl_depth": 1,
-      "max_wait_seconds": 480,
       "lookback_days": 7,
       "sources": [
         {
@@ -144,7 +119,8 @@
           "feed_url": "https://www.lennysnewsletter.com/feed",
           "include_url_globs": ["https://www.lennysnewsletter.com/p/**"],
           "enabled": true,
-          "category": "product-management"
+          "category": "product-management",
+          "max_items": 5
         },
         {
           "name": "Simple.ai by Dharmesh",
@@ -155,7 +131,8 @@
           ],
           "include_url_globs": ["https://simple.ai/p/**"],
           "enabled": true,
-          "category": "builder-newsletter"
+          "category": "builder-newsletter",
+          "max_items": 5
         },
         {
           "name": "AlphaSignal",
@@ -163,7 +140,94 @@
           "feed_url": "https://alphasignalai.substack.com/feed",
           "include_url_globs": ["https://alphasignalai.substack.com/p/**"],
           "enabled": true,
-          "category": "ai-newsletter"
+          "category": "ai-newsletter",
+          "max_items": 5
+        },
+        {
+          "name": "AI News",
+          "start_url": "https://news.smol.ai/",
+          "feed_url": "https://news.smol.ai/rss.xml",
+          "enabled": true,
+          "category": "ai-digest-leads",
+          "max_items": 5
+        },
+        {
+          "name": "Interconnects",
+          "start_url": "https://www.interconnects.ai/archive",
+          "feed_url": "https://www.interconnects.ai/feed",
+          "enabled": true,
+          "category": "model-analysis",
+          "max_items": 5
+        }
+      ]
+    },
+    "public_web": {
+      "enabled": true,
+      "sources": [
+        {
+          "name": "Anthropic News",
+          "kind": "sitemap",
+          "url": "https://www.anthropic.com/sitemap.xml",
+          "url_prefix": "https://www.anthropic.com/news/",
+          "category": "official-ai",
+          "max_items": 5,
+          "lookback_hours": 168
+        },
+        {
+          "name": "Cursor Changelog",
+          "kind": "html_changelog",
+          "url": "https://cursor.com/en-US/changelog",
+          "public_url": "https://cursor.com/en-US/changelog",
+          "category": "product-changelog",
+          "max_items": 5,
+          "lookback_hours": 168
+        },
+        {
+          "name": "Lovable Blog",
+          "kind": "sitemap",
+          "url": "https://lovable.dev/sitemap/en.xml",
+          "url_prefix": "https://lovable.dev/blog/",
+          "category": "product-builder",
+          "max_items": 5,
+          "lookback_hours": 168
+        },
+        {
+          "name": "The Batch",
+          "kind": "sitemap",
+          "url": "https://www.deeplearning.ai/sitemap-0.xml",
+          "url_prefix": "https://www.deeplearning.ai/the-batch/",
+          "exclude_url_contains": ["/about", "/tag/", "/issue-"],
+          "category": "ai-industry-analysis",
+          "max_items": 5,
+          "lookback_hours": 336
+        },
+        {
+          "name": "Artificial Analysis",
+          "kind": "sitemap",
+          "url": "https://artificialanalysis.ai/sitemap.xml",
+          "url_prefix": "https://artificialanalysis.ai/articles/",
+          "exclude_url_contains": ["gpu", "nvidia", "chip", "data-center"],
+          "category": "ai-model-evaluation",
+          "max_items": 5,
+          "lookback_hours": 168
+        },
+        {
+          "name": "OpenRouter Rankings",
+          "kind": "openrouter_rankings",
+          "url": "https://openrouter.ai/api/v1/models?sort=most-popular",
+          "public_url": "https://openrouter.ai/rankings",
+          "category": "ai-model-adoption",
+          "max_items": 5,
+          "lookback_hours": 24
+        },
+        {
+          "name": "LMArena",
+          "kind": "github_file_updates",
+          "url": "https://api.github.com/repos/lmarena/arena-catalog/commits?path=data%2Fleaderboard-text.json",
+          "public_url": "https://arena.ai/leaderboard",
+          "category": "ai-model-evaluation",
+          "max_items": 5,
+          "lookback_hours": 168
         }
       ]
     },
@@ -185,8 +249,8 @@
     "ai_score_threshold": 7.0,
     "candidate_limit": 40,
     "per_source_limit": 8,
-    "source_priority": ["twitter", "newsletter", "rss", "github", "hackernews", "reddit", "google_news", "gdelt"],
-    "source_time_window_hours": {"newsletter": 168},
+    "source_priority": ["public_web", "newsletter", "rss", "github", "hackernews", "google_news", "reddit", "gdelt"],
+    "source_time_window_hours": {"newsletter": 168, "public_web": 336},
     "min_content_chars": 40,
     "community_min_score": 5,
     "final_min_items": 8,

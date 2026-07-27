@@ -14,14 +14,12 @@ from src.models import (
     RedditUserConfig,
     TelegramChannelConfig,
     TelegramConfig,
-    TwitterConfig,
 )
 from src.scrapers.github import GitHubScraper
 from src.scrapers.hackernews import HackerNewsScraper
 from src.scrapers.ossinsight import OSSInsightScraper
 from src.scrapers.reddit import RedditScraper
 from src.scrapers.telegram import TelegramScraper
-from src.scrapers.twitter import TwitterScraper
 
 _SINCE = datetime(2020, 1, 1, tzinfo=timezone.utc)
 _NOW = datetime(2025, 1, 1, 12, 0, tzinfo=timezone.utc)
@@ -295,41 +293,5 @@ def test_ossinsight_row_to_item_category_none_when_unset():
         "pull_requests": 1,
     }
     item = scraper._row_to_item(row, "Go")
-    assert item is not None
-    assert item.metadata["category"] is None
-
-
-# ---------------------------------------------------------------------------
-# Twitter (Apify)
-# ---------------------------------------------------------------------------
-
-
-def _twitter_raw_item() -> dict:
-    return {
-        "id": "tweet-999",
-        "tweet_id": "999",
-        "full_text": "Hello twitter",
-        "user": {"screen_name": "alice", "name": "Alice"},
-        "created_at": "Wed Jan 01 12:00:00 +0000 2025",
-        "favorite_count": 10,
-        "retweet_count": 2,
-        "reply_count": 1,
-        "is_reply": False,
-        "conversation_id": "999",
-    }
-
-
-def test_twitter_parse_item_category_in_metadata():
-    cfg = TwitterConfig(enabled=True, users=["alice"], category="social")
-    scraper = TwitterScraper(cfg, AsyncMock())
-    item = scraper._parse_item(_twitter_raw_item(), _SINCE)
-    assert item is not None
-    assert item.metadata["category"] == "social"
-
-
-def test_twitter_parse_item_category_none_when_unset():
-    cfg = TwitterConfig(enabled=True, users=["alice"])
-    scraper = TwitterScraper(cfg, AsyncMock())
-    item = scraper._parse_item(_twitter_raw_item(), _SINCE)
     assert item is not None
     assert item.metadata["category"] is None

@@ -106,6 +106,8 @@ class GitHubScraper(BaseScraper):
                 item = self._parse_event(event, source)
                 if item:
                     items.append(item)
+                if len(items) >= source.max_items:
+                    break
 
         except httpx.HTTPError as e:
             logger.warning("Error fetching GitHub events for %s: %s", source.username, e)
@@ -215,6 +217,8 @@ class GitHubScraper(BaseScraper):
                     }
                 )
                 items.append(item)
+                if len(items) >= source.max_items:
+                    break
 
         except httpx.HTTPError as e:
             logger.warning("Error fetching releases for %s/%s: %s", owner, repo, e)

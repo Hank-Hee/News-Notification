@@ -454,8 +454,10 @@ def _count_sources(config: Config) -> int:
         count += len([s for s in config.sources.reddit.users if s.enabled])
     if config.sources.telegram.enabled:
         count += len([s for s in config.sources.telegram.channels if s.enabled])
-    if config.sources.twitter and config.sources.twitter.enabled:
-        count += len(config.sources.twitter.users)
+    if config.sources.newsletter and config.sources.newsletter.enabled:
+        count += len([s for s in config.sources.newsletter.sources if s.enabled])
+    if config.sources.public_web and config.sources.public_web.enabled:
+        count += len([s for s in config.sources.public_web.sources if s.enabled])
     if config.sources.openbb and config.sources.openbb.enabled:
         count += len([s for s in config.sources.openbb.watchlists if s.enabled])
     if config.sources.ossinsight.enabled:

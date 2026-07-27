@@ -42,8 +42,8 @@ def make_sources(**overrides):  # type: ignore[no-untyped-def]
         "rss": [],
         "reddit": SimpleNamespace(enabled=False),
         "telegram": SimpleNamespace(enabled=False),
-        "twitter": None,
         "newsletter": None,
+        "public_web": None,
         "openbb": None,
         "ossinsight": SimpleNamespace(enabled=False),
         "gdelt": None,
@@ -218,37 +218,3 @@ def test_required_newsletters_fail_only_when_all_three_fail() -> None:
         "Newsletter: One", "empty"
     )
     orchestrator._enforce_required_newsletters()
-
-
-def test_native_run_refuses_to_publish_when_required_twitter_failed(monkeypatch) -> None:
-    orchestrator = make_orchestrator()
-    orchestrator.config = SimpleNamespace(  # type: ignore[assignment]
-        email=None,
-        filtering=SimpleNamespace(time_window_hours=24),
-        sources=SimpleNamespace(
-            twitter=SimpleNamespace(enabled=True, required=True)
-        ),
-    )
-    orchestrator.email_manager = None
-    send_failure = AsyncMock()
-    orchestrator.webhook_notifier = SimpleNamespace(send_failure=send_failure)  # type: ignore[assignment]
-
-    async def fetch_all_sources(since):  # type: ignore[no-untyped-def]
-        orchestrator.last_fetch_report = FetchReport(
-            [
-                SourceFetchOutcome("RSS Feeds", "success", items=[make_item("kept")]),
-                SourceFetchOutcome(
-                    "Twitter",
-                    "failure",
-                    error="RuntimeError: full-permission-actor-not-approved",
-                ),
-            ]
-        )
-        return [make_item("kept")]
-
-    monkeypatch.setattr(orchestrator, "fetch_all_sources", fetch_all_sources)
-
-    with pytest.raises(RuntimeError, match="refusing to publish.*X intelligence"):
-        asyncio.run(orchestrator.run())
-
-    send_failure.assert_awaited_once()

@@ -98,7 +98,6 @@ def test_merge_configs_preserves_all_existing_configuration_and_deduplicates_lis
                     "enabled": False,
                     "channels": [{"channel": "updates", "enabled": False, "fetch_limit": 7}],
                 },
-                "twitter": {"enabled": True, "users": ["openai"], "fetch_limit": 4},
                 "openbb": {"enabled": True, "watchlists": [{"name": "tech", "symbols": ["NVDA"]}]},
                 "ossinsight": {"enabled": True, "keywords": ["agent"], "max_items": 8},
                 "gdelt": {"enabled": True, "query": "robotics", "max_records": 13},
@@ -126,7 +125,7 @@ def test_merge_configs_preserves_all_existing_configuration_and_deduplicates_lis
     assert merged.webhook == existing.webhook
     assert merged.ai == new.ai
     assert merged.filtering == new.filtering
-    for name in ("hackernews", "twitter", "openbb", "ossinsight", "gdelt", "google_news"):
+    for name in ("hackernews", "openbb", "ossinsight", "gdelt", "google_news"):
         assert getattr(merged.sources, name) == getattr(existing.sources, name)
     assert merged.sources.reddit.enabled is False
     assert merged.sources.reddit.fetch_comments == 42

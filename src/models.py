@@ -15,12 +15,12 @@ class SourceType(str, Enum):
     RSS = "rss"
     REDDIT = "reddit"
     TELEGRAM = "telegram"
-    TWITTER = "twitter"
     OPENBB = "openbb"
     OSSINSIGHT = "ossinsight"
     GDELT = "gdelt"
     GOOGLE_NEWS = "google_news"
     NEWSLETTER = "newsletter"
+    PUBLIC_WEB = "public_web"
 
 
 class SourceDefinition(NamedTuple):
@@ -37,12 +37,12 @@ SOURCE_REGISTRY = {
     SourceType.RSS.value: SourceDefinition("rss", config_is_list=True),
     SourceType.REDDIT.value: SourceDefinition("reddit", item_fields=("subreddits", "users")),
     SourceType.TELEGRAM.value: SourceDefinition("telegram", item_fields=("channels",)),
-    SourceType.TWITTER.value: SourceDefinition("twitter", item_fields=("users",)),
     SourceType.OPENBB.value: SourceDefinition("openbb", item_fields=("watchlists",)),
     SourceType.OSSINSIGHT.value: SourceDefinition("ossinsight"),
     SourceType.GDELT.value: SourceDefinition("gdelt"),
     SourceType.GOOGLE_NEWS.value: SourceDefinition("google_news"),
     SourceType.NEWSLETTER.value: SourceDefinition("newsletter", item_fields=("sources",)),
+    SourceType.PUBLIC_WEB.value: SourceDefinition("public_web", item_fields=("sources",)),
 }
 
 
@@ -210,6 +210,7 @@ class GitHubSourceConfig(BaseModel):
     repo: Optional[str] = None
     enabled: bool = True
     category: Optional[str] = None
+    max_items: int = Field(default=3, gt=0, le=20)
 
 
 class HackerNewsConfig(BaseModel):
@@ -219,6 +220,9 @@ class HackerNewsConfig(BaseModel):
     fetch_top_stories: int = 30
     min_score: int = 100
     category: Optional[str] = None
+    fetch_show_stories: int = Field(default=0, ge=0, le=100)
+    show_min_score: int = Field(default=5, ge=0)
+    show_category: Optional[str] = "product-launch"
 
 
 class ExtractorType(str, Enum):
@@ -245,6 +249,7 @@ class RSSSourceConfig(BaseModel):
     enabled: bool = True
     category: Optional[str] = None
     content_extractor: Optional[str] = None
+    max_items: int = Field(default=20, gt=0, le=100)
 
 
 class RedditSubredditConfig(BaseModel):
@@ -296,33 +301,6 @@ class TelegramConfig(BaseModel):
     channels: List[TelegramChannelConfig] = Field(default_factory=list)
 
 
-class TwitterConfig(BaseModel):
-    """Twitter source configuration.
-
-    Two modes are supported:
-    - "apify": Use Apify scweet actor (requires APIFY_TOKEN, more reliable)
-    - "playwright": Use Playwright + browser cookies (free, no token needed)
-    """
-
-    enabled: bool = True
-    required: bool = False
-    mode: str = "apify"  # "apify" or "playwright"
-    users: List[str] = Field(default_factory=list)
-    fetch_limit: int = 10
-    category: Optional[str] = None
-    fetch_reply_text: bool = False
-    max_replies_per_tweet: int = 3
-    max_tweets_to_expand: int = 10
-    reply_min_likes: int = 0
-    # Apify settings (used when mode == "apify")
-    apify_token_env: str = "APIFY_TOKEN"
-    actor_id: str = "altimis~scweet"
-    max_total_charge_usd: float = Field(default=0.4, gt=0)
-    # Playwright settings (used when mode == "playwright")
-    cookie_dir: str = "data"
-    cookie_file_pattern: str = "x_cookies_*.json"
-
-
 class NewsletterSourceConfig(BaseModel):
     """One publicly accessible newsletter feed/archive."""
 
@@ -333,21 +311,43 @@ class NewsletterSourceConfig(BaseModel):
     include_url_globs: List[str] = Field(default_factory=list)
     enabled: bool = True
     category: str = "newsletter"
+    max_items: int = Field(default=5, gt=0, le=20)
 
 
 class NewsletterConfig(BaseModel):
-    """Public-feed-first newsletter collection with a bounded Apify fallback."""
+    """Free public-feed newsletter collection."""
 
     enabled: bool = False
     required: bool = False
-    apify_token_env: str = "APIFY_TOKEN"
-    actor_id: str = "apify~website-content-crawler"
-    max_total_charge_usd: float = Field(default=0.3, gt=0)
-    max_crawl_pages: int = Field(default=15, gt=0, le=50)
-    max_crawl_depth: int = Field(default=1, ge=0, le=2)
-    max_wait_seconds: int = Field(default=480, ge=30, le=1200)
     lookback_days: int = Field(default=7, ge=1, le=30)
     sources: List[NewsletterSourceConfig] = Field(default_factory=list)
+
+
+class PublicWebSourceConfig(BaseModel):
+    """One key-less public page or endpoint used as a first-party signal."""
+
+    name: str
+    kind: Literal[
+        "sitemap",
+        "html_changelog",
+        "openrouter_rankings",
+        "github_file_updates",
+    ]
+    url: HttpUrl
+    public_url: Optional[HttpUrl] = None
+    url_prefix: Optional[str] = None
+    exclude_url_contains: List[str] = Field(default_factory=list)
+    enabled: bool = True
+    max_items: int = Field(default=5, gt=0, le=20)
+    lookback_hours: int = Field(default=168, ge=1, le=720)
+    category: str = "public-update"
+
+
+class PublicWebConfig(BaseModel):
+    """Collection of key-less public web sources."""
+
+    enabled: bool = False
+    sources: List[PublicWebSourceConfig] = Field(default_factory=list)
 
 
 class OpenBBWatchlist(BaseModel):
@@ -450,12 +450,12 @@ class SourcesConfig(BaseModel):
     rss: List[RSSSourceConfig] = Field(default_factory=list)
     reddit: RedditConfig = Field(default_factory=RedditConfig)
     telegram: TelegramConfig = Field(default_factory=TelegramConfig)
-    twitter: Optional[TwitterConfig] = None
     openbb: Optional[OpenBBConfig] = None
     ossinsight: OSSInsightConfig = Field(default_factory=OSSInsightConfig)
     gdelt: Optional[GDELTConfig] = None
     google_news: Optional[GoogleNewsConfig] = None
     newsletter: Optional[NewsletterConfig] = None
+    public_web: Optional[PublicWebConfig] = None
 
 
 class WebhookConfig(BaseModel):

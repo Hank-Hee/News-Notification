@@ -341,36 +341,35 @@ Telegram scraping uses the public web preview at `https://t.me/s/<channel>`, so 
 - `fetch_limit` — maximum number of recent messages to inspect per channel per run (default: `20`)
 - `category` — optional tag for balanced digest grouping (e.g., `"ai-news"`, `"finance"`)
 
-### Twitter
+### Public Web
 
-Requires an [Apify](https://apify.com) account. Set `APIFY_TOKEN` in your `.env` file. The free tier includes $5/month of credit, enough for roughly 20,000 tweets.
+Key-less public pages can be used for official updates that do not expose RSS.
 
 ```json
 {
   "sources": {
-    "twitter": {
+    "public_web": {
       "enabled": true,
-      "users": ["karpathy", "ylecun"],
-      "fetch_limit": 10,
-      "category": "social",
-      "fetch_reply_text": false,
-      "max_replies_per_tweet": 3,
-      "max_tweets_to_expand": 10,
-      "reply_min_likes": 5
+      "sources": [{
+        "name": "Anthropic News",
+        "kind": "sitemap",
+        "url": "https://www.anthropic.com/sitemap.xml",
+        "url_prefix": "https://www.anthropic.com/news/",
+        "max_items": 5,
+        "lookback_hours": 168,
+        "category": "official-ai"
+      }]
     }
   }
 }
 ```
 
-- `users` — Twitter screen names to monitor, without the `@` prefix
-- `fetch_limit` — maximum tweets to fetch per run (across all users combined; minimum 100 due to actor constraint)
-- `category` — optional tag for balanced digest grouping (applies to all tweets from this source)
-- `fetch_reply_text` — when `true`, fetch actual reply bodies for important tweets and append them under `--- Top Comments ---` so the AI can factor in community discussion. Disabled by default.
-- `max_replies_per_tweet` — maximum reply lines to append per tweet (default: 3)
-- `max_tweets_to_expand` — cap on how many tweets get reply expansion per run, to control Apify credit usage (default: 10)
-- `reply_min_likes` — only include replies with at least this many likes (default: 0)
-
-The scraper uses the `altimis/scweet` actor by default. You can override it with `actor_id` if needed.
+- `kind` — one of `sitemap`, `html_changelog`, `openrouter_rankings`, or `github_file_updates`
+- `url` — public page or endpoint; no new API key is required
+- `url_prefix` / `exclude_url_contains` — optional sitemap filters
+- `max_items` — maximum items accepted from this source per run
+- `lookback_hours` — source-specific lookback window
+- `category` — metadata tag for downstream scoring and grouping
 
 ### OpenBB Financial News
 
@@ -501,7 +500,7 @@ Group matching uses the source category stored in `ContentItem.metadata.category
 All source types support a `category` field: `sources.rss[].category`,
 `sources.github[].category`, `sources.hackernews.category`,
 `sources.reddit.subreddits[].category`, `sources.reddit.users[].category`,
-`sources.telegram.channels[].category`, `sources.twitter.category`,
+`sources.telegram.channels[].category`, `sources.public_web.sources[].category`,
 `sources.openbb.watchlists[].category`, `sources.ossinsight.category`,
 `sources.gdelt.category`, and `sources.google_news.category`.
 Sources without a category set enter the default group.
