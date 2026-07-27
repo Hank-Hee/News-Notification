@@ -165,6 +165,61 @@ def test_native_run_treats_all_success_empty_as_no_content(monkeypatch) -> None:
     send_failure.assert_not_awaited()
 
 
+def test_source_only_run_exits_before_any_ai_request(monkeypatch) -> None:
+    orchestrator = make_orchestrator()
+    orchestrator.config = SimpleNamespace(  # type: ignore[assignment]
+        email=None,
+        filtering=SimpleNamespace(time_window_hours=24),
+    )
+    orchestrator.email_manager = None
+    orchestrator.webhook_notifier = None
+    analyze = AsyncMock()
+    monkeypatch.setattr(orchestrator, "_analyze_content", analyze)
+
+    async def fetch_all_sources(since):  # type: ignore[no-untyped-def]
+        orchestrator.last_fetch_report = FetchReport(
+            [SourceFetchOutcome("RSS Feeds", "empty")]
+        )
+        return []
+
+    monkeypatch.setattr(orchestrator, "fetch_all_sources", fetch_all_sources)
+
+    asyncio.run(orchestrator.run(validate_sources_only=True))
+
+    analyze.assert_not_awaited()
+    assert "Source validation completed before any DeepSeek/Kimi request" in (
+        orchestrator.console.file.getvalue()
+    )
+
+
+def test_required_newsletters_fail_only_when_all_three_fail() -> None:
+    orchestrator = make_orchestrator()
+    sources = [
+        SimpleNamespace(name="One", enabled=True),
+        SimpleNamespace(name="Two", enabled=True),
+        SimpleNamespace(name="Three", enabled=True),
+    ]
+    orchestrator.config = SimpleNamespace(  # type: ignore[assignment]
+        sources=SimpleNamespace(
+            newsletter=SimpleNamespace(enabled=True, required=True, sources=sources)
+        )
+    )
+    orchestrator.last_fetch_report = FetchReport(
+        [
+            SourceFetchOutcome(f"Newsletter: {source.name}", "failure", error="down")
+            for source in sources
+        ]
+    )
+
+    with pytest.raises(RuntimeError, match="All required Newsletter sources failed"):
+        orchestrator._enforce_required_newsletters()
+
+    orchestrator.last_fetch_report.outcomes[0] = SourceFetchOutcome(
+        "Newsletter: One", "empty"
+    )
+    orchestrator._enforce_required_newsletters()
+
+
 def test_native_run_refuses_to_publish_when_required_twitter_failed(monkeypatch) -> None:
     orchestrator = make_orchestrator()
     orchestrator.config = SimpleNamespace(  # type: ignore[assignment]

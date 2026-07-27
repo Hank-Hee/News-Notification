@@ -203,7 +203,11 @@ class HorizonOrchestrator:
             max_records=config.cost_control.analysis_cache_max_records,
         ).load()
 
-    async def run(self, force_hours: int = None) -> None:
+    async def run(
+        self,
+        force_hours: int = None,
+        validate_sources_only: bool = False,
+    ) -> None:
         """Execute the complete workflow.
 
         Args:
@@ -240,6 +244,8 @@ class HorizonOrchestrator:
             if self.last_fetch_report and self.last_fetch_report.all_failed:
                 raise RuntimeError(self.last_fetch_report.failure_message())
 
+            self._enforce_required_newsletters()
+
             twitter_config = getattr(
                 getattr(self.config, "sources", None), "twitter", None
             )
@@ -264,6 +270,9 @@ class HorizonOrchestrator:
                     )
 
             if not all_items:
+                if validate_sources_only:
+                    self._finish_source_validation(candidate_count=0)
+                    return
                 self.console.print("[yellow]No new content found. Exiting.[/yellow]")
                 return
 
@@ -273,6 +282,7 @@ class HorizonOrchestrator:
                     all_items,
                     since=since,
                     config=self.config.filtering,
+                    reference_time=datetime.now(timezone.utc),
                 )
                 self.console.print(
                     "🧹 Prefilter statistics: "
@@ -280,6 +290,9 @@ class HorizonOrchestrator:
                     + "\n"
                 )
                 if not prefilter_result.items:
+                    if validate_sources_only:
+                        self._finish_source_validation(candidate_count=0)
+                        return
                     self.console.print(
                         "[yellow]No candidates survived the deterministic prefilter.[/yellow]"
                     )
@@ -307,9 +320,16 @@ class HorizonOrchestrator:
                 f"allowed changed content {history_result.allowed_updates}\n"
             )
             if not candidates:
+                if validate_sources_only:
+                    self._finish_source_validation(candidate_count=0)
+                    return
                 self.console.print(
                     "[yellow]No new candidates remain after history filtering.[/yellow]"
                 )
+                return
+
+            if validate_sources_only:
+                self._finish_source_validation(candidate_count=len(candidates))
                 return
 
             # 6. Batch-score with the candidate-analysis model.
@@ -500,6 +520,57 @@ class HorizonOrchestrator:
             since = datetime.now(timezone.utc) - timedelta(hours=hours)
         return since
 
+    def _enforce_required_newsletters(self) -> None:
+        """Fail only when every enabled required newsletter source failed."""
+        newsletter = getattr(getattr(self.config, "sources", None), "newsletter", None)
+        if not (
+            newsletter
+            and newsletter.enabled
+            and newsletter.required
+            and self.last_fetch_report
+        ):
+            return
+        enabled_names = {
+            f"Newsletter: {source.name}"
+            for source in newsletter.sources
+            if source.enabled
+        }
+        outcomes = [
+            outcome
+            for outcome in self.last_fetch_report.outcomes
+            if outcome.source_name in enabled_names
+        ]
+        if outcomes and len(outcomes) == len(enabled_names) and all(
+            outcome.status == "failure" for outcome in outcomes
+        ):
+            failures = "; ".join(
+                f"{outcome.source_name}: {outcome.error or 'unknown error'}"
+                for outcome in outcomes
+            )
+            raise RuntimeError(
+                "All required Newsletter sources failed; refusing to continue "
+                f"with a silently incomplete digest ({failures})"
+            )
+
+    def _finish_source_validation(self, *, candidate_count: int) -> None:
+        """Report a source-only run and prove that no model was called."""
+        usage = get_usage_snapshot()
+        if usage.total_requests != 0:
+            raise RuntimeError(
+                "Source-only validation unexpectedly made "
+                f"{usage.total_requests} AI request(s)"
+            )
+        report = self.last_fetch_report.to_dict() if self.last_fetch_report else {}
+        self.console.print(
+            "📋 Source validation report: "
+            + json.dumps(report, ensure_ascii=False)
+        )
+        self.console.print(f"🧹 Candidates before AI: {candidate_count}")
+        self.console.print(
+            "[bold green]✅ Source validation completed before any DeepSeek/Kimi request "
+            "(AI requests: 0).[/bold green]"
+        )
+
     async def fetch_all_sources(self, since: datetime) -> List[ContentItem]:
         """Fetch content from all configured sources.
 
@@ -554,19 +625,30 @@ class HorizonOrchestrator:
                     twitter_scraper = TwitterScraper(tw_cfg, client)
                 tasks.append(self._fetch_with_progress("Twitter", twitter_scraper, since))
 
-            # Public newsletter archives through one bounded Apify crawl
+            # Public newsletter feeds, with one isolated Apify fallback per source.
             if (
                 self.config.sources.newsletter
                 and self.config.sources.newsletter.enabled
             ):
-                newsletter_scraper = NewsletterScraper(
-                    self.config.sources.newsletter, client
+                newsletter_config = self.config.sources.newsletter
+                newsletter_since = datetime.now(timezone.utc) - timedelta(
+                    days=newsletter_config.lookback_days
                 )
-                tasks.append(
-                    self._fetch_with_progress(
-                        "Newsletters", newsletter_scraper, since
+                for newsletter_source in newsletter_config.sources:
+                    if not newsletter_source.enabled:
+                        continue
+                    newsletter_scraper = NewsletterScraper(
+                        newsletter_config,
+                        newsletter_source,
+                        client,
                     )
-                )
+                    tasks.append(
+                        self._fetch_with_progress(
+                            f"Newsletter: {newsletter_source.name}",
+                            newsletter_scraper,
+                            newsletter_since,
+                        )
+                    )
 
             # OpenBB (financial news / filings via the OpenBB Platform SDK)
             if self.config.sources.openbb and self.config.sources.openbb.enabled:

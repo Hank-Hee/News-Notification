@@ -133,6 +133,8 @@ def test_chinese_daily_renders_product_intelligence_sections_and_shortage_notice
     assert "今日高质量增量有限" in result
     assert "## 今日重点" in result
     assert "## 产品拆解" in result
+    assert "## Newsletter 精选" in result
+    assert "最近 7 天没有达到收录标准" in result
     assert "## 他们怎么做" in result
     assert "## 模型公司动态" in result
     assert "## 今天学什么" in result
