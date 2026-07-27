@@ -77,7 +77,7 @@ But Horizon is not just another summarizer. AI is great at reducing noise, but n
 
 ## Features
 
-- **📡 Watch Your Own Sources** — Track Hacker News, RSS, Reddit, Telegram, Twitter/X, GitHub releases or user activity, and OpenBB financial news watchlists in one pipeline
+- **📡 Watch Your Own Sources** — Track Hacker News, RSS/newsletters, public product changelogs, GitHub releases or user activity, and OpenBB financial news watchlists in one pipeline
 - **🤖 Turn Noise Into a Reading List** — Score each item from 0-10 with Claude, GPT, Gemini, DeepSeek, Doubao, MiniMax, Ollama, or any OpenAI-compatible API
 - **🔗 Merge Repeated Stories** — Deduplicate the same story across platforms before it reaches your briefing
 - **🔍 Understand the Background** — Add web-researched context for unfamiliar concepts, companies, projects, and technical terms
@@ -118,7 +118,7 @@ flowchart LR
         hn["📰 Hacker News"]
         reddit["💬 Reddit"]
         telegram["✈️ Telegram"]
-        twitter["🐦 Twitter / X"]
+        publicweb["🌐 Public updates"]
         github["🐙 GitHub"]
         openbb["💹 OpenBB"]
     end
@@ -142,7 +142,7 @@ flowchart LR
     hn --> fetch
     reddit --> fetch
     telegram --> fetch
-    twitter --> fetch
+    publicweb --> fetch
     github --> fetch
     openbb --> fetch
 
@@ -157,7 +157,7 @@ flowchart LR
     summary --> mcp
 
     class config config
-    class rss,hn,reddit,telegram,twitter,github,openbb source
+    class rss,hn,reddit,telegram,publicweb,github,openbb source
     class fetch,dedup,score,enrich,summary process
     class site,email,webhook,mcp output
 ```
@@ -342,7 +342,7 @@ Horizon works great as a **GitHub Actions** cron job. See [`.github/workflows/da
 | **RSS / Atom** | Any RSS or Atom feed | — |
 | **Reddit** | Subreddits + user posts | Yes (top N comments) |
 | **Telegram** | Public channel messages | — |
-| **Twitter / X** | Tweets from specific users | Yes (top N replies) |
+| **Public Web** | Official changelogs, sitemaps, and public rankings | — |
 | **GitHub** | User events & repo releases | — |
 | **OpenBB** | Financial company news by watchlist/provider | — |
 

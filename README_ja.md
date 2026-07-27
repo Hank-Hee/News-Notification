@@ -76,7 +76,7 @@
 
 ## 機能
 
-- **📡 自分だけの情報源を監視** — Hacker News、RSS、Reddit、Telegram、Twitter/X、GitHubのリリースやユーザーアクティビティ、OpenBBの金融ニュースウォッチリストを1つのパイプラインで追跡
+- **📡 自分だけの情報源を監視** — Hacker News、RSS/ニュースレター、公開製品更新、GitHubのリリースやユーザーアクティビティ、OpenBBの金融ニュースウォッチリストを1つのパイプラインで追跡
 - **🤖 ノイズを読むべきリストに変換** — Claude、GPT、Gemini、DeepSeek、Doubao、MiniMax、Ollama、またはOpenAI互換のあらゆるAPIで各記事を0〜10点でスコアリング
 - **🔗 重複した記事を統合** — ブリーフィングに届く前に、プラットフォームをまたいで同じ記事を重複排除
 - **🔍 背景を理解する** — 馴染みのない概念・企業・プロジェクト・専門用語について、Webで調べた背景情報を付加
@@ -117,7 +117,7 @@ flowchart LR
         hn["📰 Hacker News"]
         reddit["💬 Reddit"]
         telegram["✈️ Telegram"]
-        twitter["🐦 Twitter / X"]
+        publicweb["🌐 Public updates"]
         github["🐙 GitHub"]
         openbb["💹 OpenBB"]
     end
@@ -141,7 +141,7 @@ flowchart LR
     hn --> fetch
     reddit --> fetch
     telegram --> fetch
-    twitter --> fetch
+    publicweb --> fetch
     github --> fetch
     openbb --> fetch
 
@@ -156,7 +156,7 @@ flowchart LR
     summary --> mcp
 
     class config config
-    class rss,hn,reddit,telegram,twitter,github,openbb source
+    class rss,hn,reddit,telegram,publicweb,github,openbb source
     class fetch,dedup,score,enrich,summary process
     class site,email,webhook,mcp output
 ```
@@ -337,7 +337,7 @@ Horizonは**GitHub Actions**のcronジョブとして最適に動作します。
 | **RSS / Atom** | 任意のRSSまたはAtomフィード | — |
 | **Reddit** | サブレディット + ユーザー投稿 | あり（上位N件のコメント） |
 | **Telegram** | 公開チャンネルのメッセージ | — |
-| **Twitter / X** | 特定ユーザーのツイート | あり（上位N件の返信） |
+| **Public Web** | 公式変更履歴、サイトマップ、公開ランキング | — |
 | **GitHub** | ユーザーイベント & リポジトリのリリース | — |
 | **OpenBB** | ウォッチリスト/プロバイダー別の企業金融ニュース | — |
 

@@ -385,7 +385,7 @@ class ContentAnalyzer:
         engagement = {
             key: item.metadata[key]
             for key in (
-                "score", "descendants", "favorite_count", "retweet_count", "reply_count",
+                "score", "descendants",
                 "views", "bookmarks", "upvote_ratio", "stars_gained", "repo",
             )
             if item.metadata.get(key) is not None

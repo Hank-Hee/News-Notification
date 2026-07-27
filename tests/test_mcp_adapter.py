@@ -83,7 +83,7 @@ def test_load_config_expands_env_vars(tmp_path: Path, monkeypatch) -> None:
     assert config.ai.base_url == "https://api.example.com/v1"
 
 
-def test_apply_source_filter_handles_twitter_and_openbb() -> None:
+def test_apply_source_filter_handles_public_web_and_openbb() -> None:
     config = Config.model_validate(
         {
             "ai": {
@@ -92,7 +92,14 @@ def test_apply_source_filter_handles_twitter_and_openbb() -> None:
                 "api_key_env": "OPENAI_API_KEY",
             },
             "sources": {
-                "twitter": {"enabled": True, "users": ["openai"]},
+                "public_web": {
+                    "enabled": True,
+                    "sources": [{
+                        "name": "Example",
+                        "kind": "sitemap",
+                        "url": "https://example.com/sitemap.xml",
+                    }],
+                },
                 "openbb": {
                     "enabled": True,
                     "watchlists": [{"name": "ai", "symbols": ["NVDA"]}],
@@ -102,11 +109,11 @@ def test_apply_source_filter_handles_twitter_and_openbb() -> None:
         }
     )
 
-    filtered, chosen, unknown = apply_source_filter(config, ["twitter"])
+    filtered, chosen, unknown = apply_source_filter(config, ["public_web"])
 
-    assert chosen == ["twitter"]
+    assert chosen == ["public_web"]
     assert unknown == []
-    assert filtered.sources.twitter.enabled is True
+    assert filtered.sources.public_web.enabled is True
     assert filtered.sources.openbb.enabled is False
     assert filtered.sources.openbb.watchlists == []
 
@@ -126,7 +133,14 @@ def test_mcp_filter_and_reporting_support_every_registered_source() -> None:
                 "rss": [{"name": "Feed", "url": "https://example.com/feed"}],
                 "reddit": {"enabled": True, "subreddits": [{"subreddit": "python"}]},
                 "telegram": {"enabled": True, "channels": [{"channel": "updates"}]},
-                "twitter": {"enabled": True, "users": ["openai"]},
+                "public_web": {
+                    "enabled": True,
+                    "sources": [{
+                        "name": "Example",
+                        "kind": "sitemap",
+                        "url": "https://example.com/sitemap.xml",
+                    }],
+                },
                 "newsletter": {
                     "enabled": True,
                     "sources": [

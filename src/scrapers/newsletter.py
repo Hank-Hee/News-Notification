@@ -1,13 +1,11 @@
-"""Fetch one public newsletter via its feed, with an isolated Apify fallback."""
+"""Fetch free newsletters exclusively through their public RSS/Atom feeds."""
 
 from __future__ import annotations
 
-import asyncio
 import calendar
 from datetime import datetime, timezone
 from email.utils import parsedate_to_datetime
 import hashlib
-import os
 from urllib.parse import urlsplit
 
 import feedparser
@@ -17,9 +15,7 @@ from ..models import ContentItem, NewsletterConfig, NewsletterSourceConfig, Sour
 
 
 class NewsletterScraper:
-    """Fetch one free newsletter without login or paywalled content."""
-
-    API_BASE = "https://api.apify.com/v2"
+    """Fetch one newsletter without paid crawlers, login, or paywalled content."""
 
     def __init__(
         self,
@@ -35,57 +31,24 @@ class NewsletterScraper:
         if not self.config.enabled or not self.source.enabled:
             return []
 
-        feed_failures: list[str] = []
+        failures: list[str] = []
         feed_urls = [
             url
             for url in [self.source.feed_url, *self.source.fallback_feed_urls]
             if url is not None
         ]
+        if not feed_urls:
+            raise RuntimeError(f"No public feed configured for {self.source.name}")
+
         for feed_url in feed_urls:
             try:
-                items = await self._fetch_public_feed(str(feed_url), since)
-                print(
-                    f"   Used public feed for {self.source.name}: "
-                    f"{len(items)} item(s) in lookback window"
-                )
-                return items
+                return await self._fetch_public_feed(str(feed_url), since)
             except Exception as exc:
-                failure = f"{type(exc).__name__}: {exc}"
-                feed_failures.append(failure)
-                print(
-                    f"   Public feed unavailable for {self.source.name} "
-                    f"({failure})"
-                )
+                failures.append(f"{feed_url}: {type(exc).__name__}: {exc}")
 
-        feed_error_detail = "; ".join(feed_failures)
-        if feed_failures:
-            print(f"   All public feeds failed for {self.source.name}; using Apify fallback")
-
-        token = os.getenv(self.config.apify_token_env)
-        if not token:
-            detail = (
-                f" after public feeds failed ({feed_error_detail})"
-                if feed_failures
-                else ""
-            )
-            raise ValueError(
-                f"Apify token not found in env var '{self.config.apify_token_env}'{detail}"
-            )
-
-        try:
-            items = await self._fetch_with_apify(token, since)
-        except Exception as exc:
-            if feed_failures:
-                raise RuntimeError(
-                    f"public feeds failed ({feed_error_detail}); "
-                    f"Apify fallback failed ({type(exc).__name__}: {exc})"
-                ) from exc
-            raise
-        print(
-            f"   Used Apify fallback for {self.source.name}: "
-            f"{len(items)} item(s) in lookback window"
+        raise RuntimeError(
+            f"All public feeds failed for {self.source.name}: " + "; ".join(failures)
         )
-        return items
 
     async def _fetch_public_feed(
         self,
@@ -96,6 +59,7 @@ class NewsletterScraper:
             feed_url,
             follow_redirects=True,
             timeout=30.0,
+            headers={"User-Agent": "Horizon-Aggregator/1.0"},
         )
         response.raise_for_status()
         feed = feedparser.parse(response.content)
@@ -116,22 +80,19 @@ class NewsletterScraper:
                 or normalized_url in seen_urls
             ):
                 continue
-            title = str(entry.get("title") or self.source.name).strip()
-            content = self._entry_content(entry).strip()
-            if not content:
-                continue
             native_id = hashlib.sha256(url.encode("utf-8")).hexdigest()[:20]
             items.append(
                 ContentItem(
                     id=f"newsletter:feed:{native_id}",
                     source_type=SourceType.NEWSLETTER,
-                    title=title,
+                    title=str(entry.get("title") or self.source.name).strip(),
                     url=url,
-                    content=content,
+                    content=self._entry_content(entry).strip(),
                     author=str(entry.get("author") or self.source.name),
                     published_at=published_at,
                     metadata={
                         "feed_name": self.source.name,
+                        "source_name": self.source.name,
                         "category": self.source.category,
                         "is_public_archive": True,
                         "fetch_method": "public_feed",
@@ -139,151 +100,8 @@ class NewsletterScraper:
                 )
             )
             seen_urls.add(normalized_url)
-        return items
-
-    async def _fetch_with_apify(
-        self, token: str, since: datetime
-    ) -> list[ContentItem]:
-        run = await self._start_run(token)
-        run_id = str(run.get("id") or "")
-        dataset_id = str(run.get("defaultDatasetId") or "")
-        if not run_id:
-            raise RuntimeError("Newsletter crawler did not return an Apify run ID")
-        run = await self._wait_for_run(token, run_id, run)
-        dataset_id = str(run.get("defaultDatasetId") or dataset_id)
-        if not dataset_id:
-            raise RuntimeError("Newsletter crawler did not return a dataset ID")
-        rows = await self._fetch_dataset(token, dataset_id)
-        return self._to_items(rows, self.source, since)
-
-    async def _start_run(self, token: str) -> dict:
-        enabled_count = max(
-            1,
-            sum(source.enabled for source in self.config.sources),
-        )
-        # Apify rejects values infinitesimally below its USD minimum.  For
-        # example, 0.3 / 3 serializes as 0.09999999999999999 without rounding.
-        per_source_charge = round(
-            self.config.max_total_charge_usd / enabled_count,
-            2,
-        )
-        payload = {
-            "startUrls": [{"url": str(self.source.start_url)}],
-            "includeUrlGlobs": self.source.include_url_globs,
-            "crawlerType": "cheerio",
-            "maxCrawlDepth": self.config.max_crawl_depth,
-            "maxCrawlPages": self.config.max_crawl_pages,
-            "maxResults": self.config.max_crawl_pages,
-            "saveMarkdown": True,
-            "useSitemaps": False,
-            "respectRobotsTxtFile": True,
-            "proxyConfiguration": {"useApifyProxy": True},
-        }
-        response = await self.client.post(
-            f"{self.API_BASE}/acts/{self.config.actor_id}/runs",
-            params={"maxTotalChargeUsd": per_source_charge},
-            headers=self._auth_headers(token),
-            json=payload,
-            timeout=30.0,
-        )
-        response.raise_for_status()
-        body = response.json()
-        return body.get("data", body)
-
-    async def _wait_for_run(self, token: str, run_id: str, initial: dict) -> dict:
-        run = initial
-        loop = asyncio.get_running_loop()
-        deadline = loop.time() + self.config.max_wait_seconds
-        while True:
-            status = str(run.get("status") or "").upper()
-            if status == "SUCCEEDED":
-                return run
-            if status in {"FAILED", "ABORTED", "TIMED-OUT"}:
-                message = str(run.get("statusMessage") or "unknown error")
-                raise RuntimeError(f"Newsletter Apify run {status}: {message}")
-            if loop.time() >= deadline:
-                raise TimeoutError(
-                    "Newsletter Apify run did not finish within "
-                    f"{self.config.max_wait_seconds} seconds"
-                )
-            await asyncio.sleep(min(5, max(0, deadline - loop.time())))
-            response = await self.client.get(
-                f"{self.API_BASE}/actor-runs/{run_id}",
-                headers=self._auth_headers(token),
-                timeout=15.0,
-            )
-            response.raise_for_status()
-            body = response.json()
-            run = body.get("data", body)
-
-    async def _fetch_dataset(self, token: str, dataset_id: str) -> list[dict]:
-        response = await self.client.get(
-            f"{self.API_BASE}/datasets/{dataset_id}/items",
-            params={"clean": "true", "format": "json", "limit": 50},
-            headers=self._auth_headers(token),
-            timeout=30.0,
-        )
-        response.raise_for_status()
-        rows = response.json()
-        return rows if isinstance(rows, list) else []
-
-    @classmethod
-    def _to_items(
-        cls,
-        rows: list[dict],
-        source: NewsletterSourceConfig,
-        since: datetime,
-    ) -> list[ContentItem]:
-        start_url = cls._url_identity(str(source.start_url))
-        items: list[ContentItem] = []
-        seen_urls: set[str] = set()
-        for row in rows:
-            if not isinstance(row, dict):
-                continue
-            url = str(row.get("url") or row.get("loadedUrl") or "").strip()
-            normalized_url = cls._url_identity(url)
-            if not url or normalized_url == start_url or normalized_url in seen_urls:
-                continue
-            if cls._hostname(url) != cls._hostname(str(source.start_url)):
-                continue
-            metadata = row.get("metadata") if isinstance(row.get("metadata"), dict) else {}
-            published_at = cls._parse_datetime(
-                row.get("publishedAt")
-                or row.get("datePublished")
-                or metadata.get("publishedAt")
-                or metadata.get("datePublished")
-            )
-            if published_at is not None and published_at < since:
-                continue
-            published_at = published_at or datetime.now(timezone.utc)
-            title = str(
-                row.get("title")
-                or metadata.get("title")
-                or urlsplit(url).path.rstrip("/").rsplit("/", 1)[-1]
-                or source.name
-            ).strip()
-            content = str(row.get("markdown") or row.get("text") or "").strip()
-            if not content:
-                continue
-            native_id = hashlib.sha256(url.encode("utf-8")).hexdigest()[:20]
-            items.append(
-                ContentItem(
-                    id=f"newsletter:page:{native_id}",
-                    source_type=SourceType.NEWSLETTER,
-                    title=title,
-                    url=url,
-                    content=content,
-                    author=source.name,
-                    published_at=published_at,
-                    metadata={
-                        "feed_name": source.name,
-                        "category": source.category,
-                        "is_public_archive": True,
-                        "fetch_method": "apify",
-                    },
-                )
-            )
-            seen_urls.add(normalized_url)
+            if len(items) >= self.source.max_items:
+                break
         return items
 
     @staticmethod
@@ -294,46 +112,23 @@ class NewsletterScraper:
                 return datetime.fromtimestamp(calendar.timegm(parsed), tz=timezone.utc)
             value = entry.get(field)
             if value:
-                result = NewsletterScraper._parse_datetime(value)
-                if result:
-                    return result
+                try:
+                    result = parsedate_to_datetime(str(value))
+                    if result.tzinfo is None:
+                        result = result.replace(tzinfo=timezone.utc)
+                    return result.astimezone(timezone.utc)
+                except (TypeError, ValueError, OverflowError):
+                    continue
         return None
 
     @staticmethod
     def _entry_content(entry: dict) -> str:
         content = entry.get("content")
         if isinstance(content, list) and content:
-            value = content[0].get("value")
-            if value:
-                return str(value)
+            return str(content[0].get("value") or "")
         return str(entry.get("summary") or entry.get("description") or "")
 
     @staticmethod
-    def _parse_datetime(value: object) -> datetime | None:
-        text = str(value or "").strip()
-        if not text:
-            return None
-        try:
-            parsed = datetime.fromisoformat(text.replace("Z", "+00:00"))
-        except ValueError:
-            try:
-                parsed = parsedate_to_datetime(text)
-            except (TypeError, ValueError):
-                return None
-        if parsed.tzinfo is None:
-            parsed = parsed.replace(tzinfo=timezone.utc)
-        return parsed.astimezone(timezone.utc)
-
-    @staticmethod
-    def _auth_headers(token: str) -> dict[str, str]:
-        return {"Authorization": f"Bearer {token}"}
-
-    @staticmethod
-    def _hostname(url: str) -> str:
-        return (urlsplit(url).hostname or "").lower().removeprefix("www.")
-
-    @classmethod
-    def _url_identity(cls, url: str) -> str:
+    def _url_identity(url: str) -> str:
         parsed = urlsplit(url)
-        path = parsed.path.rstrip("/") or "/"
-        return f"{cls._hostname(url)}{path}"
+        return f"{parsed.scheme.casefold()}://{parsed.netloc.casefold()}{parsed.path.rstrip('/')}"

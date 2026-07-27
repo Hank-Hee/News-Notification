@@ -172,63 +172,15 @@ def test_run_applies_balanced_digest_before_enrichment(tmp_path, monkeypatch) ->
     async def merge_topic_duplicates(input_items, *, log=True):  # type: ignore[no-untyped-def]
         return input_items
 
-    async def expand_twitter_discussion(input_items):  # type: ignore[no-untyped-def]
-        return None
-
     async def enrich_important_items(input_items):  # type: ignore[no-untyped-def]
         enriched_ids.extend(item.id for item in input_items)
 
     monkeypatch.setattr(orchestrator, "fetch_all_sources", fetch_all_sources)
     monkeypatch.setattr(orchestrator, "_analyze_content", analyze_content)
     monkeypatch.setattr(orchestrator, "merge_topic_duplicates", merge_topic_duplicates)
-    monkeypatch.setattr(orchestrator, "_expand_twitter_discussion", expand_twitter_discussion)
     monkeypatch.setattr(orchestrator, "_enrich_important_items", enrich_important_items)
     monkeypatch.chdir(tmp_path)
 
     asyncio.run(orchestrator.run())
 
     assert enriched_ids == ["ai"]
-
-
-def test_run_balances_after_twitter_reanalysis(tmp_path, monkeypatch) -> None:
-    config = Config(
-        ai=AIConfig(
-            provider="openai",
-            model="test",
-            api_key_env="TEST_API_KEY",
-            languages=[],
-        ),
-        sources=SourcesConfig(),
-        filtering=FilteringConfig(ai_score_threshold=7.0, max_items=1),
-    )
-    orchestrator = HorizonOrchestrator(config, SimpleNamespace())
-    items = [make_item("first", 9.0, "ai"), make_item("second", 8.0, "ai")]
-    enriched_ids: list[str] = []
-
-    async def fetch_all_sources(since):  # type: ignore[no-untyped-def]
-        return items
-
-    async def analyze_content(input_items):  # type: ignore[no-untyped-def]
-        return input_items
-
-    async def merge_topic_duplicates(input_items, *, log=True):  # type: ignore[no-untyped-def]
-        return input_items
-
-    async def expand_twitter_discussion(input_items):  # type: ignore[no-untyped-def]
-        input_items[0].ai_score = 7.0
-        input_items[1].ai_score = 10.0
-        input_items.sort(key=lambda item: item.ai_score or 0, reverse=True)
-
-    async def enrich_important_items(input_items):  # type: ignore[no-untyped-def]
-        enriched_ids.extend(item.id for item in input_items)
-
-    monkeypatch.setattr(orchestrator, "fetch_all_sources", fetch_all_sources)
-    monkeypatch.setattr(orchestrator, "_analyze_content", analyze_content)
-    monkeypatch.setattr(orchestrator, "merge_topic_duplicates", merge_topic_duplicates)
-    monkeypatch.setattr(orchestrator, "_expand_twitter_discussion", expand_twitter_discussion)
-    monkeypatch.setattr(orchestrator, "_enrich_important_items", enrich_important_items)
-    monkeypatch.chdir(tmp_path)
-
-    asyncio.run(orchestrator.run())
-
-    assert enriched_ids == ["second"]

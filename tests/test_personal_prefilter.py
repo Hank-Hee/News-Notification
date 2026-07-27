@@ -59,12 +59,12 @@ def test_title_and_tracking_url_duplicates_are_removed():
     assert normalize_title(items[0].title) == normalize_title(items[2].title)
 
 
-def test_source_priority_keeps_twitter_before_candidate_limit():
+def test_source_priority_keeps_public_web_before_candidate_limit():
     config = FilteringConfig(
         rule_prefilter_enabled=True,
         min_content_chars=0,
         candidate_limit=1,
-        source_priority=["twitter", "rss"],
+        source_priority=["public_web", "rss"],
     )
     rss = _item(
         "rss",
@@ -72,20 +72,20 @@ def test_source_priority_keeps_twitter_before_candidate_limit():
         "https://example.com/rss",
         content="AI product details",
     )
-    tweet = _item(
-        "tweet",
-        "OpenAI builder shares a new AI workflow",
-        "https://x.com/openai/status/1",
+    official = _item(
+        "official",
+        "OpenAI publishes a new AI product workflow",
+        "https://openai.com/news/product-workflow",
         content="AI workflow details",
-        source=SourceType.TWITTER,
+        source=SourceType.PUBLIC_WEB,
     )
 
-    result = prefilter_items([rss, tweet], since=NOW - timedelta(hours=24), config=config)
+    result = prefilter_items([rss, official], since=NOW - timedelta(hours=24), config=config)
 
-    assert [item.id for item in result.items] == ["tweet"]
+    assert [item.id for item in result.items] == ["official"]
 
 
-def test_twitter_per_source_limit_is_applied_per_handle():
+def test_public_web_per_source_limit_is_applied_per_named_source():
     config = FilteringConfig(
         rule_prefilter_enabled=True,
         min_content_chars=0,
@@ -93,20 +93,20 @@ def test_twitter_per_source_limit_is_applied_per_handle():
     )
     first = _item(
         "first",
-        "OpenAI builder shares an AI product launch",
-        "https://x.com/openai/status/1",
+        "OpenAI publishes an AI product launch",
+        "https://openai.com/news/product-launch",
         content="AI product details",
-        source=SourceType.TWITTER,
+        source=SourceType.PUBLIC_WEB,
     )
-    first.metadata["twitter_handle"] = "openai"
+    first.metadata["source_name"] = "OpenAI News"
     second = _item(
         "second",
-        "Anthropic builder shares an AI product launch",
-        "https://x.com/anthropic/status/2",
+        "Anthropic publishes an AI product launch",
+        "https://anthropic.com/news/product-launch",
         content="AI product details",
-        source=SourceType.TWITTER,
+        source=SourceType.PUBLIC_WEB,
     )
-    second.metadata["twitter_handle"] = "anthropicai"
+    second.metadata["source_name"] = "Anthropic News"
 
     result = prefilter_items([first, second], since=NOW - timedelta(hours=24), config=config)
 

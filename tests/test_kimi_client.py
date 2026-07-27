@@ -193,17 +193,15 @@ def test_personal_config_and_workflow_pin_kimi_and_node24_actions():
     assert "Kimi API preflight passed" in workflow
     assert "DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}" in workflow
     assert "DeepSeek API preflight passed" in workflow
-    assert "APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}" in workflow
-    assert "Apify API preflight passed" in workflow
     assert 'cron: "30 8 * * *"' in workflow
     assert 'timezone: "Asia/Shanghai"' in workflow
     assert "--validate-sources-only" in workflow
     assert "default: sources_only" in workflow
     assert config["filtering"]["deep_analysis_limit"] == 2
-    assert config["filtering"]["source_priority"][0] == "twitter"
-    assert config["sources"]["twitter"]["enabled"] is True
+    assert config["filtering"]["source_priority"][0] == "public_web"
+    assert config["sources"]["public_web"]["enabled"] is True
     assert config["sources"]["newsletter"]["enabled"] is True
-    assert len(config["sources"]["newsletter"]["sources"]) == 3
+    assert len(config["sources"]["newsletter"]["sources"]) == 5
     assert config["sources"]["newsletter"]["required"] is True
     assert config["sources"]["newsletter"]["lookback_days"] == 7
     assert all(

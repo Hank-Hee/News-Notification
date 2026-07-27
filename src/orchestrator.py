@@ -26,13 +26,12 @@ from .scrapers.hackernews import HackerNewsScraper
 from .scrapers.rss import RSSScraper
 from .scrapers.reddit import RedditScraper
 from .scrapers.telegram import TelegramScraper
-from .scrapers.twitter import TwitterScraper
-from .scrapers.twitter_playwright import TwitterPlaywrightScraper
 from .scrapers.openbb import OpenBBScraper
 from .scrapers.ossinsight import OSSInsightScraper
 from .scrapers.gdelt import GDELTScraper
 from .scrapers.google_news import GoogleNewsScraper
 from .scrapers.newsletter import NewsletterScraper
+from .scrapers.public_web import PublicWebScraper
 from .ai.client import create_ai_client
 from .ai.cache import AnalysisCache
 from .ai.analyzer import ContentAnalyzer
@@ -246,29 +245,6 @@ class HorizonOrchestrator:
 
             self._enforce_required_newsletters()
 
-            twitter_config = getattr(
-                getattr(self.config, "sources", None), "twitter", None
-            )
-            if (
-                self.last_fetch_report
-                and twitter_config
-                and twitter_config.enabled
-                and twitter_config.required
-            ):
-                twitter_outcome = next(
-                    (
-                        outcome
-                        for outcome in self.last_fetch_report.outcomes
-                        if outcome.source_name == "Twitter"
-                    ),
-                    None,
-                )
-                if twitter_outcome and twitter_outcome.status == "failure":
-                    raise RuntimeError(
-                        "Required source Twitter failed; refusing to publish a digest "
-                        f"without first-party X intelligence. {twitter_outcome.error}"
-                    )
-
             if not all_items:
                 if validate_sources_only:
                     self._finish_source_validation(candidate_count=0)
@@ -343,10 +319,7 @@ class HorizonOrchestrator:
             )
             important_items = filtering_result.items
 
-            # Optional second-stage Twitter reply expansion + targeted re-analysis.
-            await self._expand_twitter_discussion(important_items)
-
-            # 5.6 Apply digest limits after any targeted re-analysis changes scores.
+            # Apply digest limits after scoring and semantic deduplication.
             important_items = self.apply_balanced_digest(important_items).items
             important_items = self._prioritize_product_intelligence(important_items)
 
@@ -616,16 +589,7 @@ class HorizonOrchestrator:
                 telegram_scraper = TelegramScraper(self.config.sources.telegram, client)
                 tasks.append(self._fetch_with_progress("Telegram", telegram_scraper, since))
 
-            # Twitter (Apify or Playwright mode)
-            if self.config.sources.twitter and self.config.sources.twitter.enabled:
-                tw_cfg = self.config.sources.twitter
-                if tw_cfg.mode == "playwright":
-                    twitter_scraper = TwitterPlaywrightScraper(tw_cfg)
-                else:
-                    twitter_scraper = TwitterScraper(tw_cfg, client)
-                tasks.append(self._fetch_with_progress("Twitter", twitter_scraper, since))
-
-            # Public newsletter feeds, with one isolated Apify fallback per source.
+            # Free public newsletter feeds.
             if (
                 self.config.sources.newsletter
                 and self.config.sources.newsletter.enabled
@@ -647,6 +611,23 @@ class HorizonOrchestrator:
                             f"Newsletter: {newsletter_source.name}",
                             newsletter_scraper,
                             newsletter_since,
+                        )
+                    )
+
+            # Key-less official pages, rankings, and public update endpoints.
+            if self.config.sources.public_web and self.config.sources.public_web.enabled:
+                for public_source in self.config.sources.public_web.sources:
+                    if not public_source.enabled:
+                        continue
+                    public_scraper = PublicWebScraper(public_source, client)
+                    public_since = datetime.now(timezone.utc) - timedelta(
+                        hours=public_source.lookback_hours
+                    )
+                    tasks.append(
+                        self._fetch_with_progress(
+                            f"Public web: {public_source.name}",
+                            public_scraper,
+                            public_since,
                         )
                     )
 
@@ -740,8 +721,6 @@ class HorizonOrchestrator:
             return meta["watchlist"]
         if meta.get("source_name"):
             return meta["source_name"]
-        if meta.get("twitter_handle"):
-            return f"@{meta['twitter_handle']}"
         if meta.get("gn_query"):
             return f"google_news:{meta['gn_query']}"
         if meta.get("domain"):
@@ -1173,67 +1152,6 @@ class HorizonOrchestrator:
                 counts["github"] += 1
             result.append(best)
         return result
-
-    async def _expand_twitter_discussion(self, items: List[ContentItem]) -> None:
-        """Second-stage: fetch reply text for important Twitter items and re-analyze.
-
-        Only runs when sources.twitter.fetch_reply_text is True.
-        Bounded by max_tweets_to_expand to control cost.
-        """
-        tw_cfg = self.config.sources.twitter
-        if not tw_cfg or not tw_cfg.enabled or not tw_cfg.fetch_reply_text:
-            return
-
-        from .models import SourceType
-
-        twitter_items = [
-            item for item in items
-            if item.source_type == SourceType.TWITTER
-        ][:tw_cfg.max_tweets_to_expand]
-
-        if not twitter_items:
-            return
-
-        self.console.print(
-            f"💬 Fetching reply text for {len(twitter_items)} Twitter items..."
-        )
-
-        async with httpx.AsyncClient(timeout=30.0) as client:
-            if tw_cfg.mode == "playwright":
-                self.console.print(
-                    "   [yellow]Reply expansion not yet supported in Playwright mode.[/yellow]"
-                )
-                return
-            scraper = TwitterScraper(tw_cfg, client)
-            expanded = []
-            for item in twitter_items:
-                try:
-                    reply_lines = await scraper.fetch_replies_for_item(item)
-                    if TwitterScraper.append_discussion_content(item, reply_lines):
-                        expanded.append(item)
-                        self.console.print(
-                            f"   💬 {len(reply_lines)} replies added to: {item.title[:60]}"
-                        )
-                except Exception as exc:
-                    self.console.print(
-                        f"   [yellow]⚠️  Reply fetch failed for {item.id}: {exc}[/yellow]"
-                    )
-
-        if not expanded:
-            return
-
-        self.console.print(
-            f"   Re-analyzing {len(expanded)} Twitter items with reply context...\n"
-        )
-        ai_client = create_ai_client(
-            stage_ai_config(self.config.ai, "candidate_analysis")
-        )
-        analyzer = ContentAnalyzer(
-            ai_client,
-            cache=self.analysis_cache,
-            max_retries=self.config.cost_control.max_retries_per_stage,
-        )
-        await analyzer.analyze_batch(expanded)
 
     async def _enrich_important_items(self, items: List[ContentItem]) -> List[str]:
         """Enrich items with background knowledge (2nd AI pass).
