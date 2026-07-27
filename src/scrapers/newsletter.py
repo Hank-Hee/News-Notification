@@ -147,7 +147,12 @@ class NewsletterScraper:
             1,
             sum(source.enabled for source in self.config.sources),
         )
-        per_source_charge = self.config.max_total_charge_usd / enabled_count
+        # Apify rejects values infinitesimally below its USD minimum.  For
+        # example, 0.3 / 3 serializes as 0.09999999999999999 without rounding.
+        per_source_charge = round(
+            self.config.max_total_charge_usd / enabled_count,
+            2,
+        )
         payload = {
             "startUrls": [{"url": str(self.source.start_url)}],
             "includeUrlGlobs": self.source.include_url_globs,

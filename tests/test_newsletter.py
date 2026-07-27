@@ -111,6 +111,53 @@ def test_newsletter_run_is_bounded_and_token_stays_in_header(monkeypatch):
     assert captured["payload"]["crawlerType"] == "cheerio"
 
 
+def test_per_source_apify_charge_is_rounded_to_currency_precision(monkeypatch):
+    monkeypatch.setenv("APIFY_TOKEN", "test-token")
+    captured = {}
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        if request.method == "POST":
+            captured["max_total_charge"] = request.url.params.get(
+                "maxTotalChargeUsd"
+            )
+            return httpx.Response(
+                200,
+                json={
+                    "data": {
+                        "id": "run-1",
+                        "status": "SUCCEEDED",
+                        "defaultDatasetId": "dataset-1",
+                    }
+                },
+            )
+        if "/datasets/" in request.url.path:
+            return httpx.Response(200, json=[])
+        raise AssertionError(f"Unexpected request: {request.url}")
+
+    config = _config()
+    config.sources.extend(
+        [
+            NewsletterSourceConfig(
+                name="Second Letter",
+                start_url="https://second.example.com/archive",
+            ),
+            NewsletterSourceConfig(
+                name="Third Letter",
+                start_url="https://third.example.com/archive",
+            ),
+        ]
+    )
+    client = httpx.AsyncClient(transport=httpx.MockTransport(handler))
+    asyncio.run(
+        _scraper(config, client).fetch(
+            datetime.now(timezone.utc) - timedelta(days=7)
+        )
+    )
+    asyncio.run(client.aclose())
+
+    assert captured["max_total_charge"] == "0.1"
+
+
 def test_dataset_keeps_recent_articles_and_normalizes_www_host(monkeypatch):
     monkeypatch.setenv("APIFY_TOKEN", "test-token")
     now = datetime.now(timezone.utc)
