@@ -150,6 +150,9 @@
           "name": "Simple.ai by Dharmesh",
           "start_url": "https://simple.ai/archive",
           "feed_url": "https://simple.ai/feed",
+          "fallback_feed_urls": [
+            "https://news.google.com/rss/search?q=site%3Asimple.ai%20when%3A7d&hl=en-US&gl=US&ceid=US%3Aen"
+          ],
           "include_url_globs": ["https://simple.ai/p/**"],
           "enabled": true,
           "category": "builder-newsletter"

@@ -275,3 +275,43 @@ def test_feed_failure_falls_back_to_apify(monkeypatch):
 
     assert items == []
     assert methods == ["GET", "POST", "GET"]
+
+
+def test_alternate_public_feed_is_used_before_apify(monkeypatch):
+    monkeypatch.delenv("APIFY_TOKEN", raising=False)
+    now = datetime.now(timezone.utc)
+    published = now.strftime("%a, %d %b %Y %H:%M:%S GMT")
+    alternate_feed = f"""<?xml version="1.0" encoding="UTF-8"?>
+    <rss version="2.0"><channel><title>Simple.ai public index</title>
+      <item><title>New Simple.ai workflow</title>
+      <link>https://simple.ai/p/new-workflow</link>
+      <pubDate>{published}</pubDate>
+      <description>A public summary of the new AI workflow.</description></item>
+    </channel></rss>"""
+    paths = []
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        paths.append(request.url.path)
+        if request.url.path == "/feed":
+            return httpx.Response(200, text="<html>Cloudflare challenge</html>")
+        if request.url.host == "news.google.com":
+            return httpx.Response(
+                200,
+                text=alternate_feed,
+                headers={"content-type": "application/xml"},
+            )
+        raise AssertionError(f"Unexpected request: {request.url}")
+
+    config = _config()
+    config.sources[0].feed_url = "https://simple.ai/feed"
+    config.sources[0].fallback_feed_urls = [
+        "https://news.google.com/rss/search?q=site%3Asimple.ai%20when%3A7d"
+    ]
+    client = httpx.AsyncClient(transport=httpx.MockTransport(handler))
+    items = asyncio.run(_scraper(config, client).fetch(now - timedelta(days=7)))
+    asyncio.run(client.aclose())
+
+    assert len(items) == 1
+    assert items[0].title == "New Simple.ai workflow"
+    assert items[0].metadata["fetch_method"] == "public_feed"
+    assert paths == ["/feed", "/rss/search"]

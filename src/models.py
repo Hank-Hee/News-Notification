@@ -329,6 +329,7 @@ class NewsletterSourceConfig(BaseModel):
     name: str
     start_url: HttpUrl
     feed_url: Optional[HttpUrl] = None
+    fallback_feed_urls: List[HttpUrl] = Field(default_factory=list)
     include_url_globs: List[str] = Field(default_factory=list)
     enabled: bool = True
     category: str = "newsletter"

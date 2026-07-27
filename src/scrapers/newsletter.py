@@ -35,27 +35,37 @@ class NewsletterScraper:
         if not self.config.enabled or not self.source.enabled:
             return []
 
-        feed_error: Exception | None = None
-        if self.source.feed_url:
+        feed_failures: list[str] = []
+        feed_urls = [
+            url
+            for url in [self.source.feed_url, *self.source.fallback_feed_urls]
+            if url is not None
+        ]
+        for feed_url in feed_urls:
             try:
-                items = await self._fetch_public_feed(since)
+                items = await self._fetch_public_feed(str(feed_url), since)
                 print(
                     f"   Used public feed for {self.source.name}: "
                     f"{len(items)} item(s) in lookback window"
                 )
                 return items
             except Exception as exc:
-                feed_error = exc
+                failure = f"{type(exc).__name__}: {exc}"
+                feed_failures.append(failure)
                 print(
                     f"   Public feed unavailable for {self.source.name} "
-                    f"({type(exc).__name__}: {exc}); using Apify fallback"
+                    f"({failure})"
                 )
+
+        feed_error_detail = "; ".join(feed_failures)
+        if feed_failures:
+            print(f"   All public feeds failed for {self.source.name}; using Apify fallback")
 
         token = os.getenv(self.config.apify_token_env)
         if not token:
             detail = (
-                f" after public feed failed ({type(feed_error).__name__}: {feed_error})"
-                if feed_error
+                f" after public feeds failed ({feed_error_detail})"
+                if feed_failures
                 else ""
             )
             raise ValueError(
@@ -65,9 +75,9 @@ class NewsletterScraper:
         try:
             items = await self._fetch_with_apify(token, since)
         except Exception as exc:
-            if feed_error:
+            if feed_failures:
                 raise RuntimeError(
-                    f"public feed failed ({type(feed_error).__name__}: {feed_error}); "
+                    f"public feeds failed ({feed_error_detail}); "
                     f"Apify fallback failed ({type(exc).__name__}: {exc})"
                 ) from exc
             raise
@@ -77,9 +87,13 @@ class NewsletterScraper:
         )
         return items
 
-    async def _fetch_public_feed(self, since: datetime) -> list[ContentItem]:
+    async def _fetch_public_feed(
+        self,
+        feed_url: str,
+        since: datetime,
+    ) -> list[ContentItem]:
         response = await self.client.get(
-            str(self.source.feed_url),
+            feed_url,
             follow_redirects=True,
             timeout=30.0,
         )
