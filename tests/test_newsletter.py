@@ -30,12 +30,16 @@ def _config(**overrides) -> NewsletterConfig:
     return NewsletterConfig(**values)
 
 
+def _scraper(config: NewsletterConfig, client: httpx.AsyncClient) -> NewsletterScraper:
+    return NewsletterScraper(config, config.sources[0], client)
+
+
 def test_disabled_newsletter_does_not_require_token(monkeypatch):
     monkeypatch.delenv("APIFY_TOKEN", raising=False)
     client = httpx.AsyncClient(transport=httpx.MockTransport(lambda request: None))
 
     items = asyncio.run(
-        NewsletterScraper(_config(enabled=False), client).fetch(
+        _scraper(_config(enabled=False), client).fetch(
             datetime.now(timezone.utc) - timedelta(days=1)
         )
     )
@@ -50,7 +54,7 @@ def test_missing_apify_token_is_explicit(monkeypatch):
 
     with pytest.raises(ValueError, match="APIFY_TOKEN"):
         asyncio.run(
-            NewsletterScraper(_config(), client).fetch(
+            _scraper(_config(), client).fetch(
                 datetime.now(timezone.utc) - timedelta(days=1)
             )
         )
@@ -85,7 +89,7 @@ def test_newsletter_run_is_bounded_and_token_stays_in_header(monkeypatch):
 
     client = httpx.AsyncClient(transport=httpx.MockTransport(handler))
     asyncio.run(
-        NewsletterScraper(_config(), client).fetch(
+        _scraper(_config(), client).fetch(
             datetime.now(timezone.utc) - timedelta(days=1)
         )
     )
@@ -104,6 +108,7 @@ def test_newsletter_run_is_bounded_and_token_stays_in_header(monkeypatch):
     assert captured["payload"]["maxResults"] == 15
     assert captured["payload"]["maxCrawlDepth"] == 1
     assert captured["payload"]["respectRobotsTxtFile"] is True
+    assert captured["payload"]["crawlerType"] == "cheerio"
 
 
 def test_dataset_keeps_recent_articles_and_normalizes_www_host(monkeypatch):
@@ -147,7 +152,7 @@ def test_dataset_keeps_recent_articles_and_normalizes_www_host(monkeypatch):
 
     client = httpx.AsyncClient(transport=httpx.MockTransport(handler))
     items = asyncio.run(
-        NewsletterScraper(_config(), client).fetch(now - timedelta(days=1))
+        _scraper(_config(), client).fetch(now - timedelta(days=1))
     )
     asyncio.run(client.aclose())
 
@@ -158,4 +163,68 @@ def test_dataset_keeps_recent_articles_and_normalizes_www_host(monkeypatch):
         "feed_name": "Example Letter",
         "category": "builder-newsletter",
         "is_public_archive": True,
+        "fetch_method": "apify",
     }
+
+
+def test_public_feed_is_primary_and_does_not_require_apify_token(monkeypatch):
+    monkeypatch.delenv("APIFY_TOKEN", raising=False)
+    now = datetime.now(timezone.utc)
+    published = now.strftime("%a, %d %b %Y %H:%M:%S GMT")
+    feed = f"""<?xml version="1.0" encoding="UTF-8"?>
+    <rss version="2.0"><channel><title>Example Letter</title>
+      <item><title>New AI product workflow</title>
+      <link>https://example.com/p/new-ai-product</link>
+      <pubDate>{published}</pubDate>
+      <description>An AI builder explains the product workflow.</description></item>
+    </channel></rss>"""
+    requests = []
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        requests.append(request)
+        return httpx.Response(200, text=feed, headers={"content-type": "application/xml"})
+
+    config = _config()
+    config.sources[0].feed_url = "https://example.com/feed"
+    client = httpx.AsyncClient(transport=httpx.MockTransport(handler))
+    items = asyncio.run(_scraper(config, client).fetch(now - timedelta(days=7)))
+    asyncio.run(client.aclose())
+
+    assert len(items) == 1
+    assert items[0].metadata["fetch_method"] == "public_feed"
+    assert [request.method for request in requests] == ["GET"]
+
+
+def test_feed_failure_falls_back_to_apify(monkeypatch):
+    monkeypatch.setenv("APIFY_TOKEN", "test-token")
+    methods = []
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        methods.append(request.method)
+        if request.method == "GET" and request.url.path == "/feed":
+            return httpx.Response(403, text="blocked")
+        if request.method == "POST":
+            return httpx.Response(
+                200,
+                json={
+                    "data": {
+                        "id": "run-1",
+                        "status": "SUCCEEDED",
+                        "defaultDatasetId": "dataset-1",
+                    }
+                },
+            )
+        if "/datasets/" in request.url.path:
+            return httpx.Response(200, json=[])
+        raise AssertionError(f"Unexpected request: {request.url}")
+
+    config = _config()
+    config.sources[0].feed_url = "https://example.com/feed"
+    client = httpx.AsyncClient(transport=httpx.MockTransport(handler))
+    items = asyncio.run(
+        _scraper(config, client).fetch(datetime.now(timezone.utc) - timedelta(days=7))
+    )
+    asyncio.run(client.aclose())
+
+    assert items == []
+    assert methods == ["GET", "POST", "GET"]

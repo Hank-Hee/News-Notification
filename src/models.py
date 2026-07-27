@@ -324,17 +324,18 @@ class TwitterConfig(BaseModel):
 
 
 class NewsletterSourceConfig(BaseModel):
-    """One publicly accessible newsletter archive monitored by Apify."""
+    """One publicly accessible newsletter feed/archive."""
 
     name: str
     start_url: HttpUrl
+    feed_url: Optional[HttpUrl] = None
     include_url_globs: List[str] = Field(default_factory=list)
     enabled: bool = True
     category: str = "newsletter"
 
 
 class NewsletterConfig(BaseModel):
-    """Bounded Apify crawl of free newsletter archive pages."""
+    """Public-feed-first newsletter collection with a bounded Apify fallback."""
 
     enabled: bool = False
     required: bool = False
@@ -343,6 +344,8 @@ class NewsletterConfig(BaseModel):
     max_total_charge_usd: float = Field(default=0.3, gt=0)
     max_crawl_pages: int = Field(default=15, gt=0, le=50)
     max_crawl_depth: int = Field(default=1, ge=0, le=2)
+    max_wait_seconds: int = Field(default=480, ge=30, le=1200)
+    lookback_days: int = Field(default=7, ge=1, le=30)
     sources: List[NewsletterSourceConfig] = Field(default_factory=list)
 
 
@@ -562,6 +565,7 @@ class FilteringConfig(BaseModel):
     history_dedup_days: int = Field(default=7, ge=0)
     max_items: Optional[int] = Field(default=None, gt=0)
     source_priority: List[str] = Field(default_factory=list)
+    source_time_window_hours: Dict[str, int] = Field(default_factory=dict)
     category_groups: Dict[str, CategoryGroupConfig] = Field(default_factory=dict)
     default_group: str = "other"
     default_group_limit: Optional[int] = Field(default=None, gt=0)

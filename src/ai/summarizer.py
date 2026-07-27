@@ -7,7 +7,7 @@ from typing import Dict, List, Optional
 from urllib.parse import quote, urlsplit
 from zoneinfo import ZoneInfo
 
-from ..models import ContentItem
+from ..models import ContentItem, SourceType
 
 
 _CJK = r"[\u4e00-\u9fff\u3400-\u4dbf]"
@@ -182,6 +182,7 @@ class DailySummarizer:
             '<nav class="daily-toc">',
             '<a href="#daily-focus">今日重点</a> · '
             '<a href="#product-teardown">产品拆解</a> · '
+            '<a href="#newsletter-picks">Newsletter 精选</a> · '
             '<a href="#how-they-build">他们怎么做</a> · '
             '<a href="#model-company-news">模型公司动态</a> · '
             '<a href="#learn-today">今天学什么</a> · '
@@ -211,17 +212,38 @@ class DailySummarizer:
         for index, item in enumerate(top_items, start=1):
             lines.append(self._product_teardown(item, index).rstrip())
 
+        newsletter_items = [
+            item for item in items if item.source_type == SourceType.NEWSLETTER
+        ][:3]
+        lines.extend(
+            [
+                "",
+                '<a id="newsletter-picks"></a>',
+                "## Newsletter 精选",
+                "",
+            ]
+        )
+        lines.extend(self._intelligence_item(item) for item in newsletter_items)
+        if not newsletter_items:
+            lines.append(
+                "_最近 7 天没有达到收录标准的新 Newsletter 内容；请查看数据源日志。_"
+            )
+
         builder_items = [
             item
             for item in remainder
-            if item.metadata.get("intelligence_type") == "builder_insight"
+            if item.source_type != SourceType.NEWSLETTER
+            and item.metadata.get("intelligence_type") == "builder_insight"
         ]
         model_items = [
             item
             for item in remainder
-            if item.metadata.get("intelligence_type") == "model_capability"
+            if item.source_type != SourceType.NEWSLETTER
+            and item.metadata.get("intelligence_type") == "model_capability"
         ]
-        used_ids = {item.id for item in [*builder_items, *model_items]}
+        used_ids = {
+            item.id for item in [*newsletter_items, *builder_items, *model_items]
+        }
         market_items = [item for item in remainder if item.id not in used_ids]
 
         lines.extend(
@@ -287,7 +309,7 @@ class DailySummarizer:
                 "",
                 "## 数据与筛选说明",
                 "",
-                "- 每天 08:30（北京时间）处理最近 24 小时的公开来源；先程序预筛和历史去重，再由 DeepSeek 批量评分。",
+                "- 每天 08:30（北京时间）处理公开来源；Newsletter 回看 7 天，其他来源回看 24 小时。",
                 "- 优先级依次为：真实 AI 产品、构建实践、模型公司核心人员、新能力、精选 Newsletter。",
                 "- 纯算力、GPU、底层推理优化和学术论文默认降权，除非能直接解释新的产品机会。",
                 "- Top 2 由 Kimi 做初学者版产品拆解；失败时只对该条使用 DeepSeek Pro，所有模型均关闭思考。",

@@ -111,3 +111,36 @@ def test_twitter_per_source_limit_is_applied_per_handle():
     result = prefilter_items([first, second], since=NOW - timedelta(hours=24), config=config)
 
     assert [item.id for item in result.items] == ["first", "second"]
+
+
+def test_newsletter_uses_seven_day_window_while_rss_remains_24_hours():
+    config = FilteringConfig(
+        rule_prefilter_enabled=True,
+        min_content_chars=0,
+        source_time_window_hours={"newsletter": 168},
+    )
+    newsletter = _item(
+        "newsletter",
+        "AI builder explains a new product workflow",
+        "https://example.com/newsletter",
+        content="Detailed AI product workflow",
+        published_at=NOW - timedelta(days=6),
+        source=SourceType.NEWSLETTER,
+    )
+    rss = _item(
+        "rss-old",
+        "AI media reports a new product workflow",
+        "https://example.com/rss-old",
+        content="Detailed AI product report",
+        published_at=NOW - timedelta(days=2),
+    )
+
+    result = prefilter_items(
+        [newsletter, rss],
+        since=NOW - timedelta(hours=24),
+        config=config,
+        reference_time=NOW,
+    )
+
+    assert [item.id for item in result.items] == ["newsletter"]
+    assert result.stats.dropped_outside_window == 1

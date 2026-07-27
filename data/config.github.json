@@ -129,16 +129,19 @@
     },
     "newsletter": {
       "enabled": true,
-      "required": false,
+      "required": true,
       "apify_token_env": "APIFY_TOKEN",
       "actor_id": "apify~website-content-crawler",
       "max_total_charge_usd": 0.3,
-      "max_crawl_pages": 15,
+      "max_crawl_pages": 6,
       "max_crawl_depth": 1,
+      "max_wait_seconds": 480,
+      "lookback_days": 7,
       "sources": [
         {
           "name": "Lenny's Newsletter",
           "start_url": "https://www.lennysnewsletter.com/archive",
+          "feed_url": "https://www.lennysnewsletter.com/feed",
           "include_url_globs": ["https://www.lennysnewsletter.com/p/**"],
           "enabled": true,
           "category": "product-management"
@@ -146,6 +149,7 @@
         {
           "name": "Simple.ai by Dharmesh",
           "start_url": "https://simple.ai/archive",
+          "feed_url": "https://simple.ai/feed",
           "include_url_globs": ["https://simple.ai/p/**"],
           "enabled": true,
           "category": "builder-newsletter"
@@ -153,6 +157,7 @@
         {
           "name": "AlphaSignal",
           "start_url": "https://alphasignalai.substack.com/archive",
+          "feed_url": "https://alphasignalai.substack.com/feed",
           "include_url_globs": ["https://alphasignalai.substack.com/p/**"],
           "enabled": true,
           "category": "ai-newsletter"
@@ -178,6 +183,7 @@
     "candidate_limit": 40,
     "per_source_limit": 8,
     "source_priority": ["twitter", "newsletter", "rss", "github", "hackernews", "reddit", "google_news", "gdelt"],
+    "source_time_window_hours": {"newsletter": 168},
     "min_content_chars": 40,
     "community_min_score": 5,
     "final_min_items": 8,

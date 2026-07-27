@@ -6,7 +6,7 @@ import html
 import re
 from collections import Counter
 from dataclasses import asdict, dataclass
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from typing import Iterable
 from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
 
@@ -127,8 +127,9 @@ def prefilter_items(
     *,
     since: datetime,
     config: FilteringConfig,
+    reference_time: datetime | None = None,
 ) -> PrefilterResult:
-    """Apply the 24h/rule/dedup/source-cap/candidate-cap stage."""
+    """Apply source windows, rules, deduplication, and candidate caps."""
     stats = PrefilterStats()
     candidates: list[ContentItem] = []
     seen_urls: dict[str, int] = {}
@@ -136,6 +137,10 @@ def prefilter_items(
     source_counts: Counter[str] = Counter()
     if since.tzinfo is None:
         since = since.replace(tzinfo=timezone.utc)
+    if reference_time is None:
+        reference_time = since + timedelta(hours=config.time_window_hours)
+    elif reference_time.tzinfo is None:
+        reference_time = reference_time.replace(tzinfo=timezone.utc)
 
     ordered_items = list(items)
     if config.source_priority:
@@ -157,7 +162,12 @@ def prefilter_items(
         published_at = original.published_at
         if published_at.tzinfo is None:
             published_at = published_at.replace(tzinfo=timezone.utc)
-        if published_at < since:
+        source_window_hours = config.source_time_window_hours.get(
+            original.source_type.value,
+            config.time_window_hours,
+        )
+        item_since = reference_time - timedelta(hours=source_window_hours)
+        if published_at < item_since:
             stats.dropped_outside_window += 1
             continue
         content = (original.content or "").strip()

@@ -1,15 +1,19 @@
 name: Daily Horizon AI Summary
 
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - ".github/workflows/daily-summary.yml"
   schedule:
-    # UTC 00:30 = 08:30 Asia/Shanghai.
-    - cron: "30 0 * * *"
+    - cron: "30 8 * * *"
+      timezone: "Asia/Shanghai"
   workflow_dispatch:
+    inputs:
+      run_mode:
+        description: "Choose sources_only to validate collection without any AI calls"
+        required: true
+        default: sources_only
+        type: choice
+        options:
+          - sources_only
+          - full
 
 jobs:
   daily-summary:
@@ -47,6 +51,7 @@ jobs:
         run: uv sync
 
       - name: Validate Kimi configuration
+        if: github.event_name != 'workflow_dispatch' || inputs.run_mode == 'full'
         shell: bash
         run: |
           test -n "$MOONSHOT_API_KEY" || { echo "Missing repository secret: MOONSHOT_API_KEY"; exit 1; }
@@ -75,6 +80,7 @@ jobs:
           echo "Kimi API preflight passed for $KIMI_MODEL_ID"
 
       - name: Validate DeepSeek configuration
+        if: github.event_name != 'workflow_dispatch' || inputs.run_mode == 'full'
         shell: bash
         run: |
           test -n "$DEEPSEEK_API_KEY" || { echo "Missing repository secret: DEEPSEEK_API_KEY"; exit 1; }
@@ -154,14 +160,21 @@ jobs:
           git show origin/gh-pages:data/product-intelligence.json > data/product-intelligence.json || true
           git show origin/gh-pages:data/product-intelligence.csv > data/product-intelligence.csv || true
 
+      - name: Validate sources without AI
+        if: github.event_name == 'workflow_dispatch' && inputs.run_mode == 'sources_only'
+        run: uv run horizon --hours 24 --validate-sources-only
+
       - name: Generate Chinese AI daily
+        if: github.event_name != 'workflow_dispatch' || inputs.run_mode == 'full'
         run: uv run horizon --hours 24
 
       - name: Set publication date
+        if: github.event_name != 'workflow_dispatch' || inputs.run_mode == 'full'
         shell: bash
         run: echo "DATE=$(TZ=Asia/Shanghai date +'%Y-%m-%d')" >> "$GITHUB_ENV"
 
       - name: Deploy to GitHub Pages
+        if: github.event_name != 'workflow_dispatch' || inputs.run_mode == 'full'
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
