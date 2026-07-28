@@ -1,7 +1,530 @@
 {
   "version": 1,
-  "updated_at": "2026-07-27T04:16:13.842710+00:00",
+  "updated_at": "2026-07-28T03:50:18.947151+00:00",
   "products": [
+    {
+      "product_id": "product-22a3ff516ebe297d",
+      "product_name": "Kimi K3",
+      "builder_name": "Simon Willison",
+      "first_seen": "2026-07-28",
+      "last_seen": "2026-07-28",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "月之暗面发布Kimi K3模型权重，2.8万亿参数，开源许可变更，值得关注其能力与合规要求。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "china",
+      "score": 9.0,
+      "summary": "月之暗面发布Kimi K3模型权重，2.8万亿参数，开源许可变更，值得关注其能力与合规要求。",
+      "title": "moonshotai/Kimi-K3",
+      "url": "https://simonwillison.net/2026/Jul/27/kimi-k3/#atom-everything",
+      "sources": [
+        {
+          "url": "https://simonwillison.net/2026/Jul/27/kimi-k3/#atom-everything",
+          "title": "moonshotai/Kimi-K3",
+          "source_type": "rss",
+          "published_at": "2026-07-27T23:39:04+00:00"
+        },
+        {
+          "url": "https://www.interconnects.ai/p/open-models-recap-more-on-kimi-k3",
+          "title": "Open models recap: more on Kimi K3, Qwen 3.8, Xi's WAIC speech, distillation, the open-closed gap, and what's next",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://www.theverge.com/ai-artificial-intelligence/971444/how-chinese-open-weight-ai-models-impact-us-companies",
+          "title": "Why China is giving away its best AI models",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "moonshot-kimi-k3-weights-release",
+          "date": "2026-07-28",
+          "title": "moonshotai/Kimi-K3",
+          "summary": "月之暗面发布Kimi K3模型权重，2.8万亿参数，开源许可变更，值得关注其能力与合规要求。",
+          "score": 9.0,
+          "url": "https://simonwillison.net/2026/Jul/27/kimi-k3/#atom-everything"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "模型发布",
+        "开源",
+        "Kimi"
+      ]
+    },
+    {
+      "product_id": "product-187f9da66a768435",
+      "product_name": "Claude Opus 5",
+      "builder_name": "Anthropic News",
+      "first_seen": "2026-07-28",
+      "last_seen": "2026-07-28",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Anthropic发布Claude Opus 5模型，引发基准测试和编码代理性能讨论。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.5,
+      "summary": "Anthropic发布Claude Opus 5模型，引发基准测试和编码代理性能讨论。",
+      "title": "Claude Opus 5",
+      "url": "https://www.anthropic.com/news/claude-opus-5",
+      "sources": [
+        {
+          "url": "https://www.anthropic.com/news/claude-opus-5",
+          "title": "Claude Opus 5",
+          "source_type": "public_web",
+          "published_at": "2026-07-25T02:03:36+00:00"
+        },
+        {
+          "url": "https://news.smol.ai/issues/26-07-24-opus-5/",
+          "title": "Opus 5",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://www.lennysnewsletter.com/p/claude-opus-5-review-this-model-is",
+          "title": "Claude Opus 5 review: this model is brilliant (but annoying)",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://artificialanalysis.ai/articles/claude-opus-5-leader-agentic-knowledge-work",
+          "title": "Claude Opus 5 Leader Agentic Knowledge Work",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "claude-opus-5-launch",
+          "date": "2026-07-28",
+          "title": "Claude Opus 5",
+          "summary": "Anthropic发布Claude Opus 5模型，引发基准测试和编码代理性能讨论。",
+          "score": 8.5,
+          "url": "https://www.anthropic.com/news/claude-opus-5"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "model",
+        "Claude"
+      ]
+    },
+    {
+      "product_id": "product-34a6ccb08c2529cf",
+      "product_name": "DeepsecBench",
+      "builder_name": "Eric Dodds",
+      "first_seen": "2026-07-28",
+      "last_seen": "2026-07-28",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "需要在代码上线前自动扫描安全漏洞的开发团队、安全工程师，以及想挑选合适 AI 模型的 AI 产品经理",
+      "user_problem": "以前不知道哪个 AI 模型查漏洞又快又准又便宜，只能盲目选最贵的；而且漏掉漏洞代价极高，误报太多又会浪费工程师时间",
+      "what_it_is": "Vercel 发布的一个公开排行榜，专门测试各种大语言模型在真实开源代码里找安全漏洞的能力，同时告诉你花多少钱、用多少时间。",
+      "ai_role": "AI 负责读取代码、分析潜在安全漏洞、输出问题位置和类型；另一个 AI 裁判负责判断 AI 找到的漏洞是否真实存在",
+      "implementation_idea": "核心思路是'考前不泄题'：找一个真实开源项目，截取'漏洞刚被修复前'的那个代码版本，人工标记出 231 个真实漏洞作为标准答案。模型来考试，看它找回多少标准答案（召回率），以及额外报的漏洞有多少是真的（精确率）。为了防止模型靠记忆作弊，考卷内容保密，不公开是哪个项目、哪个版本。",
+      "hands_on_exercise": "访问 https://vercel.com/ai-gateway/leaderboards/deepsecbench ，对比 GPT-5.6 Sol（最高分$55.98）和 Grok 4.5（$5.60）的分数、召回率、精确率、时间。假设你每月预算$100、代码量中等，写一段 200 字的选型建议，说明你会选哪个模型、什么配置、多久扫一次，并解释为什么。",
+      "limitations_or_uncertainties": "Vercel 未公开具体使用哪个开源仓库和哪个 commit，无法独立验证'防作弊'效果；排行榜中部分模型名称（如 GPT-5.6 Sol、Claude Opus 5、Grok 4.5）与主流公开命名不一致，是否为内部代号或笔误未确认；Anthropic 的 Fable 5 模型因拒绝安全相关工作未参与测试；文中提到'GPT-5.6 Sol 中等配置得 25.10 分'但表格未展示该行数据",
+      "region": "global",
+      "score": 8.0,
+      "summary": "Vercel发布DeepsecBench基准，评估模型查找代码漏洞的能力，提供召回率、精度、成本等指标。",
+      "title": "DeepsecBench：让 AI 模型比一比谁能更快更省地找出代码里的安全漏洞",
+      "url": "https://vercel.com/blog/deepsecbench-evaluating-model-performance-in-finding-cybersecurity-vulnerabilities",
+      "sources": [
+        {
+          "url": "https://vercel.com/blog/deepsecbench-evaluating-model-performance-in-finding-cybersecurity-vulnerabilities",
+          "title": "DeepsecBench: evaluating model performance in finding cybersecurity vulnerabilities",
+          "source_type": "rss",
+          "published_at": "2026-07-27T04:00:00+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "vercel-deepsecbench-cybersecurity-benchmark",
+          "date": "2026-07-28",
+          "title": "DeepsecBench：让 AI 模型比一比谁能更快更省地找出代码里的安全漏洞",
+          "summary": "Vercel发布DeepsecBench基准，评估模型查找代码漏洞的能力，提供召回率、精度、成本等指标。",
+          "score": 8.0,
+          "url": "https://vercel.com/blog/deepsecbench-evaluating-model-performance-in-finding-cybersecurity-vulnerabilities"
+        }
+      ],
+      "usage_flow": [
+        "在 DeepsecBench 网页查看各模型的排行榜，对比分数、成本、耗时",
+        "根据你的代码复杂度和预算，选择 1-3 个模型组合（比如高精准+低成本搭配）",
+        "通过 Vercel AI Gateway 调用选中的模型，扫描自己的代码仓库",
+        "根据报告修复漏洞，定期重新扫描或调整模型配置"
+      ],
+      "learning_points": [
+        "召回率（Recall）：模型找出了多少真实存在的漏洞，漏掉就是风险；精确率（Precision）：模型报的漏洞里有多少是真的，误报就是浪费人力",
+        "F2 分数：一种给召回率'加权重'的算法，因为安全场景里漏掉漏洞比误报更危险，所以召回率比精确率重要两倍",
+        "AI Gateway：一个统一入口，让你可以像切换水电一样，在同一个接口换不同的 AI 模型，方便比价和组合使用"
+      ],
+      "verticals": [],
+      "tags": [
+        "安全",
+        "基准测试"
+      ]
+    },
+    {
+      "product_id": "product-3e3cbda2938f9119",
+      "product_name": "Lovable",
+      "builder_name": "Lovable Blog",
+      "first_seen": "2026-07-28",
+      "last_seen": "2026-07-28",
+      "occurrence_count": 1,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Lovable分享运行AI黑客代理群组进行自我安全测试的实践经验。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.0,
+      "summary": "Lovable分享运行AI黑客代理群组进行自我安全测试的实践经验。",
+      "title": "How We Run Swarms Of Ai Hacking Agents Against Ourselves",
+      "url": "https://lovable.dev/blog/how-we-run-swarms-of-ai-hacking-agents-against-ourselves",
+      "sources": [
+        {
+          "url": "https://lovable.dev/blog/how-we-run-swarms-of-ai-hacking-agents-against-ourselves",
+          "title": "How We Run Swarms Of Ai Hacking Agents Against Ourselves",
+          "source_type": "public_web",
+          "published_at": "2026-07-24T14:30:00+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "lovable-ai-hacking-swarms",
+          "date": "2026-07-28",
+          "title": "How We Run Swarms Of Ai Hacking Agents Against Ourselves",
+          "summary": "Lovable分享运行AI黑客代理群组进行自我安全测试的实践经验。",
+          "score": 8.0,
+          "url": "https://lovable.dev/blog/how-we-run-swarms-of-ai-hacking-agents-against-ourselves"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "security"
+      ]
+    },
+    {
+      "product_id": "product-d2fa6b0996bfe8ab",
+      "product_name": "Cursor",
+      "builder_name": "Claire Vo",
+      "first_seen": "2026-07-28",
+      "last_seen": "2026-07-28",
+      "occurrence_count": 1,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Maddie Reese分享了她从零编程背景到使用Cursor和Raspberry Pi构建硬件产品的经验，展示了AI在硬件开发中的实际应用。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.0,
+      "summary": "Maddie Reese分享了她从零编程背景到使用Cursor和Raspberry Pi构建硬件产品的经验，展示了AI在硬件开发中的实际应用。",
+      "title": "From zero coding background to hardware hacker: How Cursor + a Raspberry Pi makes AI fun",
+      "url": "https://www.lennysnewsletter.com/p/from-zero-coding-background-to-hardware",
+      "sources": [
+        {
+          "url": "https://www.lennysnewsletter.com/p/from-zero-coding-background-to-hardware",
+          "title": "From zero coding background to hardware hacker: How Cursor + a Raspberry Pi makes AI fun",
+          "source_type": "newsletter",
+          "published_at": "2026-07-27T12:04:34+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "maddie-reese-cursor-raspberry-pi-hardware-hacker",
+          "date": "2026-07-28",
+          "title": "From zero coding background to hardware hacker: How Cursor + a Raspberry Pi makes AI fun",
+          "summary": "Maddie Reese分享了她从零编程背景到使用Cursor和Raspberry Pi构建硬件产品的经验，展示了AI在硬件开发中的实际应用。",
+          "score": 8.0,
+          "url": "https://www.lennysnewsletter.com/p/from-zero-coding-background-to-hardware"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Cursor",
+        "Hardware",
+        "Vibe Coding",
+        "Raspberry Pi"
+      ]
+    },
+    {
+      "product_id": "product-b395aae343201ce7",
+      "product_name": "未公开（官方未给出独立产品名，属于 Microsoft Security Copilot 生态扩展）",
+      "builder_name": "Lucas Ropek",
+      "first_seen": "2026-07-28",
+      "last_seen": "2026-07-28",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "reported",
+      "target_user": "企业安全团队、安全分析师",
+      "user_problem": "安全分析师面对海量告警和复杂攻击时，手动调查耗时数小时，难以快速识别威胁和响应",
+      "what_it_is": "微软发布的首个专门用于网络安全的AI模型，以及一个能自主执行安全任务的代理系统",
+      "ai_role": "AI负责解析自然语言查询、关联安全数据生成洞察，并由代理自主执行标准化安全任务",
+      "implementation_idea": "把网络安全领域的日志、告警、威胁情报等数据'喂'给专门训练的AI模型，让它学会识别攻击模式；同时给AI配备'代理'身份，在限定权限内能自己调用安全工具干活，不用每件事都等人批准",
+      "hands_on_exercise": "注册Microsoft Security Copilot免费试用（需企业身份），输入一个模拟告警的自然语言描述，观察AI如何解析并给出调查步骤；对比手动查阅原始日志的效率差异",
+      "limitations_or_uncertainties": "新模型的具体参数量、训练数据来源、代理系统的权限边界和误操作防护机制均未公开；与现有Security Copilot的功能重叠程度不明",
+      "region": "global",
+      "score": 7.5,
+      "summary": "微软推出首个网络安全AI模型和新的代理网络安全系统。",
+      "title": "微软推出首个网络安全AI模型和代理式网络安全系统",
+      "url": "https://techcrunch.com/2026/07/27/microsoft-launches-its-first-cyber-model-and-a-new-agentic-cybersecurity-system/",
+      "sources": [
+        {
+          "url": "https://techcrunch.com/2026/07/27/microsoft-launches-its-first-cyber-model-and-a-new-agentic-cybersecurity-system/",
+          "title": "Microsoft launches its first cybersecurity model, plus a new agentic cybersecurity system",
+          "source_type": "rss",
+          "published_at": "2026-07-27T18:32:11+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "microsoft-cyber-model-agentic-system",
+          "date": "2026-07-28",
+          "title": "微软推出首个网络安全AI模型和代理式网络安全系统",
+          "summary": "微软推出首个网络安全AI模型和新的代理网络安全系统。",
+          "score": 7.5,
+          "url": "https://techcrunch.com/2026/07/27/microsoft-launches-its-first-cyber-model-and-a-new-agentic-cybersecurity-system/"
+        }
+      ],
+      "usage_flow": [
+        "安全分析师用自然语言描述可疑事件或提问",
+        "AI模型分析安全数据并生成威胁摘要与调查建议",
+        "代理系统自动执行预设的安全操作（如隔离设备、收集证据）",
+        "分析师审核结果并决定后续行动"
+      ],
+      "learning_points": [
+        "Agent（代理）：AI不只是回答问题，还能被授权在系统里实际执行操作，比如自动封禁可疑账号",
+        "垂直领域模型：通用AI不懂安全行话，需要在专门的安全数据上训练才能看懂告警日志",
+        "Function Calling（函数调用）：AI判断该做什么后，通过调用预定义的安全工具函数来完成实际操作"
+      ],
+      "verticals": [],
+      "tags": [
+        "微软",
+        "网络安全",
+        "AI模型"
+      ]
+    },
+    {
+      "product_id": "product-9eefca8ba4717200",
+      "product_name": "GitHub Copilot",
+      "builder_name": "Burke Holland",
+      "first_seen": "2026-07-28",
+      "last_seen": "2026-07-28",
+      "occurrence_count": 1,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "GitHub官方博客介绍使用Copilot进行原型设计、规划、实现和审查的实用工作流。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.5,
+      "summary": "GitHub官方博客介绍使用Copilot进行原型设计、规划、实现和审查的实用工作流。",
+      "title": "The harness is all you need (mostly)",
+      "url": "https://github.blog/ai-and-ml/github-copilot/the-harness-is-all-you-need-mostly/",
+      "sources": [
+        {
+          "url": "https://github.blog/ai-and-ml/github-copilot/the-harness-is-all-you-need-mostly/",
+          "title": "The harness is all you need (mostly)",
+          "source_type": "rss",
+          "published_at": "2026-07-27T18:00:00+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "github-copilot-workflow-prototyping",
+          "date": "2026-07-28",
+          "title": "The harness is all you need (mostly)",
+          "summary": "GitHub官方博客介绍使用Copilot进行原型设计、规划、实现和审查的实用工作流。",
+          "score": 7.5,
+          "url": "https://github.blog/ai-and-ml/github-copilot/the-harness-is-all-you-need-mostly/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "GitHub Copilot",
+        "工作流"
+      ]
+    },
+    {
+      "product_id": "product-8e2addeba33dcecc",
+      "product_name": "Inkling",
+      "builder_name": "Artificial Analysis",
+      "first_seen": "2026-07-28",
+      "last_seen": "2026-07-28",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Artificial Analysis评测了Thinking Machines Lab的Inkling在agentic知识工作上的表现，值得关注其产品能力。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.0,
+      "summary": "Artificial Analysis评测了Thinking Machines Lab的Inkling在agentic知识工作上的表现，值得关注其产品能力。",
+      "title": "How Thinking Machines Lab S Inkling Performs On Agentic Knowledge Work",
+      "url": "https://artificialanalysis.ai/articles/how-thinking-machines-lab-s-inkling-performs-on-agentic-knowledge-work",
+      "sources": [
+        {
+          "url": "https://artificialanalysis.ai/articles/how-thinking-machines-lab-s-inkling-performs-on-agentic-knowledge-work",
+          "title": "How Thinking Machines Lab S Inkling Performs On Agentic Knowledge Work",
+          "source_type": "public_web",
+          "published_at": "2026-07-22T00:00:00+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "thinking-machines-lab-inkling-agentic-knowledge-work",
+          "date": "2026-07-28",
+          "title": "How Thinking Machines Lab S Inkling Performs On Agentic Knowledge Work",
+          "summary": "Artificial Analysis评测了Thinking Machines Lab的Inkling在agentic知识工作上的表现，值得关注其产品能力。",
+          "score": 7.0,
+          "url": "https://artificialanalysis.ai/articles/how-thinking-machines-lab-s-inkling-performs-on-agentic-knowledge-work"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "Knowledge Work",
+        "Evaluation"
+      ]
+    },
+    {
+      "product_id": "product-e0c75917c2f84f80",
+      "product_name": "GitHub Copilot",
+      "builder_name": "Christopher Harrison",
+      "first_seen": "2026-07-28",
+      "last_seen": "2026-07-28",
+      "occurrence_count": 1,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "GitHub Copilot应用入门指南，教初学者如何开始项目、使用AI代理和画布。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.0,
+      "summary": "GitHub Copilot应用入门指南，教初学者如何开始项目、使用AI代理和画布。",
+      "title": "GitHub Copilot app for Beginners: Getting started",
+      "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-getting-started/",
+      "sources": [
+        {
+          "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-getting-started/",
+          "title": "GitHub Copilot app for Beginners: Getting started",
+          "source_type": "rss",
+          "published_at": "2026-07-27T16:00:00+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "github-copilot-app-beginners-guide",
+          "date": "2026-07-28",
+          "title": "GitHub Copilot app for Beginners: Getting started",
+          "summary": "GitHub Copilot应用入门指南，教初学者如何开始项目、使用AI代理和画布。",
+          "score": 7.0,
+          "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-getting-started/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "GitHub Copilot",
+        "入门"
+      ]
+    },
+    {
+      "product_id": "product-3126f4c9d59e5e9d",
+      "product_name": "HeyZoku",
+      "builder_name": "Priyanshu Dangi",
+      "first_seen": "2026-07-28",
+      "last_seen": "2026-07-28",
+      "occurrence_count": 1,
+      "intelligence_type": "early_signal",
+      "evidence_status": "early_signal",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "HeyZoku允许用户通过语音指挥一群编码代理。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.0,
+      "summary": "HeyZoku允许用户通过语音指挥一群编码代理。",
+      "title": "HeyZoku",
+      "url": "https://www.producthunt.com/products/heyzoku",
+      "sources": [
+        {
+          "url": "https://www.producthunt.com/products/heyzoku",
+          "title": "HeyZoku",
+          "source_type": "rss",
+          "published_at": "2026-07-27T06:25:42+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "heyzoku-voice-coding-agents",
+          "date": "2026-07-28",
+          "title": "HeyZoku",
+          "summary": "HeyZoku允许用户通过语音指挥一群编码代理。",
+          "score": 7.0,
+          "url": "https://www.producthunt.com/products/heyzoku"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "语音",
+        "编码代理"
+      ]
+    },
     {
       "product_id": "product-10ecb665d441048e",
       "product_name": "OpenAI Agents SDK (openai-agents-python)",
