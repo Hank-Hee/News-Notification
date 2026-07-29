@@ -2,8 +2,8 @@ name: Daily Horizon AI Summary
 
 on:
   schedule:
-    - cron: "30 8 * * *"
-      timezone: "Asia/Shanghai"
+    - cron: "17 0 * * *"
+    - cron: "7 1 * * *"
   workflow_dispatch:
     inputs:
       run_mode:
@@ -35,22 +35,83 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v6
 
+      - name: Inspect trigger and daily idempotency
+        id: daily_guard
+        shell: bash
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          EVENT_SCHEDULE: ${{ github.event.schedule }}
+          REQUESTED_RUN_MODE: ${{ inputs.run_mode }}
+        run: |
+          set -euo pipefail
+
+          beijing_now=$(TZ=Asia/Shanghai date +'%Y-%m-%d %H:%M:%S %Z')
+          beijing_date=$(TZ=Asia/Shanghai date +'%Y-%m-%d')
+          report_path="_posts/${beijing_date}-summary-zh.md"
+
+          if [ "$EVENT_NAME" = "schedule" ]; then
+            effective_mode="full"
+            case "$EVENT_SCHEDULE" in
+              "17 0 * * *") task_kind="main" ;;
+              "7 1 * * *") task_kind="backup" ;;
+              *) task_kind="schedule-unknown" ;;
+            esac
+          else
+            effective_mode="${REQUESTED_RUN_MODE:-sources_only}"
+            task_kind="manual"
+          fi
+
+          git fetch origin gh-pages --depth=1
+          if git cat-file -e "origin/gh-pages:${report_path}" 2>/dev/null; then
+            daily_exists="true"
+          else
+            daily_exists="false"
+          fi
+
+          should_run="true"
+          if [ "$EVENT_NAME" = "schedule" ] && [ "$daily_exists" = "true" ]; then
+            should_run="false"
+          fi
+
+          {
+            echo "should_run=$should_run"
+            echo "beijing_date=$beijing_date"
+            echo "task_kind=$task_kind"
+            echo "effective_mode=$effective_mode"
+          } >> "$GITHUB_OUTPUT"
+
+          echo "Trigger type: $EVENT_NAME"
+          echo "Cron expression: ${EVENT_SCHEDULE:-manual}"
+          echo "Current Beijing time: $beijing_now"
+          echo "Task kind: $task_kind"
+          echo "Effective run mode: $effective_mode"
+          echo "Daily report path: $report_path"
+          echo "Daily report already exists: $daily_exists"
+          if [ "$should_run" = "false" ]; then
+            echo "Scheduled run skipped: today's Chinese daily already exists on gh-pages."
+          else
+            echo "Run will continue."
+          fi
+
       - name: Set up Python
+        if: steps.daily_guard.outputs.should_run == 'true'
         uses: actions/setup-python@v7
         with:
           python-version: "3.12"
 
       - name: Install uv
+        if: steps.daily_guard.outputs.should_run == 'true'
         uses: astral-sh/setup-uv@v9.0.0
         with:
           version: "0.11.26"
           prune-cache: true
 
       - name: Install dependencies
+        if: steps.daily_guard.outputs.should_run == 'true'
         run: uv sync
 
       - name: Validate Kimi configuration
-        if: github.event_name != 'workflow_dispatch' || inputs.run_mode == 'full'
+        if: steps.daily_guard.outputs.should_run == 'true' && (github.event_name == 'schedule' || inputs.run_mode == 'full')
         shell: bash
         run: |
           test -n "$MOONSHOT_API_KEY" || { echo "Missing repository secret: MOONSHOT_API_KEY"; exit 1; }
@@ -79,7 +140,7 @@ jobs:
           echo "Kimi API preflight passed for $KIMI_MODEL_ID"
 
       - name: Validate DeepSeek configuration
-        if: github.event_name != 'workflow_dispatch' || inputs.run_mode == 'full'
+        if: steps.daily_guard.outputs.should_run == 'true' && (github.event_name == 'schedule' || inputs.run_mode == 'full')
         shell: bash
         run: |
           test -n "$DEEPSEEK_API_KEY" || { echo "Missing repository secret: DEEPSEEK_API_KEY"; exit 1; }
@@ -117,9 +178,11 @@ jobs:
           echo "DeepSeek API preflight passed for $DEEPSEEK_CANDIDATE_MODEL and $DEEPSEEK_FALLBACK_MODEL"
 
       - name: Prepare runtime configuration
+        if: steps.daily_guard.outputs.should_run == 'true'
         run: cp data/config.github.json data/config.json
 
       - name: Restore history and product intelligence database
+        if: steps.daily_guard.outputs.should_run == 'true'
         shell: bash
         run: |
           mkdir -p data/history
@@ -130,20 +193,20 @@ jobs:
           git show origin/gh-pages:data/product-intelligence.csv > data/product-intelligence.csv || true
 
       - name: Validate sources without AI
-        if: github.event_name == 'workflow_dispatch' && inputs.run_mode == 'sources_only'
+        if: steps.daily_guard.outputs.should_run == 'true' && github.event_name == 'workflow_dispatch' && inputs.run_mode == 'sources_only'
         run: uv run horizon --hours 24 --validate-sources-only
 
       - name: Generate Chinese AI daily
-        if: github.event_name != 'workflow_dispatch' || inputs.run_mode == 'full'
+        if: steps.daily_guard.outputs.should_run == 'true' && (github.event_name == 'schedule' || inputs.run_mode == 'full')
         run: uv run horizon --hours 24
 
       - name: Set publication date
-        if: github.event_name != 'workflow_dispatch' || inputs.run_mode == 'full'
+        if: steps.daily_guard.outputs.should_run == 'true' && (github.event_name == 'schedule' || inputs.run_mode == 'full')
         shell: bash
         run: echo "DATE=$(TZ=Asia/Shanghai date +'%Y-%m-%d')" >> "$GITHUB_ENV"
 
       - name: Deploy to GitHub Pages
-        if: github.event_name != 'workflow_dispatch' || inputs.run_mode == 'full'
+        if: steps.daily_guard.outputs.should_run == 'true' && (github.event_name == 'schedule' || inputs.run_mode == 'full')
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
