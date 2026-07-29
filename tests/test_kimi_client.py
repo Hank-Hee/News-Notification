@@ -193,8 +193,9 @@ def test_personal_config_and_workflow_pin_kimi_and_node24_actions():
     assert "Kimi API preflight passed" in workflow
     assert "DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}" in workflow
     assert "DeepSeek API preflight passed" in workflow
-    assert 'cron: "30 8 * * *"' in workflow
-    assert 'timezone: "Asia/Shanghai"' in workflow
+    assert 'cron: "17 0 * * *"' in workflow
+    assert 'cron: "7 1 * * *"' in workflow
+    assert "timezone:" not in workflow
     assert "--validate-sources-only" in workflow
     assert "default: sources_only" in workflow
     assert config["filtering"]["deep_analysis_limit"] == 2
@@ -212,6 +213,39 @@ def test_personal_config_and_workflow_pin_kimi_and_node24_actions():
     assert config["product_intelligence"]["enabled"] is True
     assert "\n  push:" not in workflow
     assert "HORIZON_WEBHOOK_URL" not in workflow
+
+
+def test_daily_workflow_schedule_idempotency_and_manual_modes():
+    root = Path(__file__).resolve().parents[1]
+    workflow = (root / ".github/workflows/daily-summary.yml").read_text(
+        encoding="utf-8"
+    )
+
+    assert workflow.count("cron:") == 2
+    assert 'EVENT_SCHEDULE: ${{ github.event.schedule }}' in workflow
+    assert 'git fetch origin gh-pages --depth=1' in workflow
+    assert 'origin/gh-pages:${report_path}' in workflow
+    assert (
+        'if [ "$EVENT_NAME" = "schedule" ] && [ "$daily_exists" = "true" ]; then'
+        in workflow
+    )
+    assert 'effective_mode="full"' in workflow
+    assert 'task_kind="main"' in workflow
+    assert 'task_kind="backup"' in workflow
+    assert 'task_kind="manual"' in workflow
+    assert 'Daily report already exists: $daily_exists' in workflow
+
+    full_condition = (
+        "steps.daily_guard.outputs.should_run == 'true' && "
+        "(github.event_name == 'schedule' || inputs.run_mode == 'full')"
+    )
+    assert workflow.count(full_condition) == 5
+    assert (
+        "steps.daily_guard.outputs.should_run == 'true' && "
+        "github.event_name == 'workflow_dispatch' && "
+        "inputs.run_mode == 'sources_only'"
+    ) in workflow
+    assert "uv run horizon --hours 24 --validate-sources-only" in workflow
 
 
 def test_api_key_is_redacted_from_log_messages(monkeypatch):
