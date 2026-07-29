@@ -193,6 +193,41 @@
       },
       "stage": "candidate_analysis"
     },
+    "05590a3777a8b5bfd6748807e21caa853345dcc70ae4697b089d5df22fb8209b": {
+      "created_at": "2026-07-29T01:53:59.679955+00:00",
+      "model": "kimi-k2.6",
+      "prompt_version": "deep-v3-beginner",
+      "result": {
+        "ai_role": "作为\"通用数字员工\"，理解用户指令后，自主调用本地文件和应用程序完成跨软件任务",
+        "evidence_status": "reported",
+        "hands_on_exercise": "30 分钟体验：打开 Perplexity 官网的 Personal Computer for Windows 页面，对比它和 Mac 版的功能描述；再打开自己电脑的 Copilot 或任意 AI 助手，尝试用一句话指令让它帮你整理桌面某个文件夹的内容，观察 AI 能否直接操作本地文件——如果不行，思考还需要什么权限或工具才能实现",
+        "implementation_idea": "在用户的 Windows 电脑上常驻运行一个 AI 代理（Agent，即\"能自主行动的智能程序\"），它通过操作系统层面的权限直接读写本地文件、操控已安装的微软办公软件，而不是把所有数据上传到云端处理",
+        "learning_points": [
+          "Agent（智能代理）：不只是回答问题，还能自己决定调用什么工具、执行什么动作来完成目标的 AI 程序",
+          "本地运行 vs 云端运行：数据留在自己电脑里处理，降低隐私泄露风险，但对电脑性能有要求",
+          "Function Calling（函数调用）：AI 不直接动手，而是学会\"调用\"外部程序或 API 来完成任务，就像人学会按遥控器开空调"
+        ],
+        "limitations_or_uncertainties": "未公开具体技术架构（是否完全本地运行模型、还是云端模型+本地执行）；未公开定价模式；未公开支持的具体 Windows 版本和硬件要求；The Verge 报道为第三方媒体信息，非 Perplexity 官方技术白皮书",
+        "product_name": "Personal Computer for Windows",
+        "sources": [
+          "https://www.theverge.com/ai-artificial-intelligence/971750/perplexity-personal-computer-windows-ai-agents",
+          "https://www.perplexity.ai/personal-computer",
+          "https://www.perplexity.ai/hub/products/computer-for-windows",
+          "https://grokipedia.com/page/Perplexity_Personal_Computer"
+        ],
+        "target_users": "需要在 Windows 电脑上自动化处理本地文件、Excel、PPT、Word、Outlook、OneDrive 等任务的用户",
+        "title_zh": "Perplexity 把 AI 代理工具 Personal Computer 带到 Windows",
+        "usage_flow": [
+          "在 Windows 电脑上下载安装 Perplexity 的 Personal Computer 工具",
+          "授权 AI 访问本地文件和指定的微软应用（Excel、Word 等）",
+          "用自然语言下达任务指令，比如\"把这份 Excel 数据汇总成 PPT\"",
+          "AI 自动在后台跨应用执行操作，用户检查并确认结果"
+        ],
+        "user_problem": "用户要在多个本地文件和微软应用之间手动切换、整理信息、执行重复操作，费时且容易出错",
+        "what_it_is": "Perplexity 推出的本地 AI 代理工具，让 Windows 电脑变成能操作本地文件和微软办公软件的\"数字员工\""
+      },
+      "stage": "deep_analysis"
+    },
     "05bbef882497ead5ec51adf812da35a48a82160b3124ceb7f8320f4d78475be1": {
       "created_at": "2026-07-28T03:48:25.674596+00:00",
       "model": "deepseek-v4-flash",
@@ -534,6 +569,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "1139f88edac49c326bb2b09fc0f05cb59d9792d1661416a48004b2df3cffa70b": {
+      "created_at": "2026-07-29T01:53:11.237108+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "liquidai-lfm2-5-encoders-long-context-cpu",
+        "evidence_status": "first_party",
+        "follow_up": "关注其在实际应用中的性能表现。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:huggingface.co_blog_feed.xml:a5bc54280bf29efc",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "LFM2.5-Encoders",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Liquid AI发布LFM2.5编码器，用于CPU上快速长上下文推理，属于底层优化，对产品经理直接价值有限。",
+        "region": "global",
+        "score": 5.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Liquid AI推出LFM2.5编码器，实现CPU上快速长上下文推理。",
+        "tags": [
+          "编码器",
+          "长上下文"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "117bd061f86f1485dfdb774d7740f9bd93593364a8e1ee7485ac8a98b43c6a20": {
       "created_at": "2026-07-26T04:06:44.242641+00:00",
       "model": "deepseek-v4-flash",
@@ -601,6 +674,44 @@
         "tags": [
           "模型发布",
           "Anthropic"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "130472abe5ffb366748484edaf731583323fe98f861840212af0a2522f980892": {
+      "created_at": "2026-07-29T01:53:11.237228+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "ai-leaders-statement-government-automated-ai",
+        "evidence_status": "reported",
+        "follow_up": "关注后续政策动向。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:756b1273584e0bbf",
+        "intelligence_type": "business_policy",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "AI领袖签署声明要求政府监管自动化AI，属于政策呼吁，无具体产品信息，对初学者价值低。",
+        "region": "global",
+        "score": 5.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "OpenAI、Anthropic等AI实验室员工签署声明，呼吁美国政府监管自动化AI。",
+        "tags": [
+          "政策",
+          "监管"
         ],
         "target_user": "",
         "verticals": []
@@ -676,6 +787,84 @@
         "tags": [
           "Voice",
           "Prompting"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "14ab1f46627e39ff4f74996b527755fee6c125d0bbfb9a3c93177642db230ec4": {
+      "created_at": "2026-07-29T01:53:26.758113+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "openai-chatgpt-work-akshay-nathan",
+        "evidence_status": "reported",
+        "follow_up": "关注ChatGPT Work后续功能更新",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:www.latent.space_feed:60a8b00e51bcf718",
+        "intelligence_type": "builder_insight",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "ChatGPT Work",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI产品工程负责人分享ChatGPT Work从0到1000万用户的构建经验，包含具体功能如Sites、Memory、Subagents等，对产品经理极有价值。",
+        "region": "global",
+        "score": 9.0,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "OpenAI产品负责人Akshay Nathan分享ChatGPT Work从0到1000万用户的构建历程，涵盖Sites、Memory、Subagents等关键功能。",
+        "tags": [
+          "ChatGPT",
+          "Product",
+          "OpenAI",
+          "Scaling"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "17d132d0ee1858be326e92d2a5d3b71d6a4ad990a388c78a2855ef21155afaa9": {
+      "created_at": "2026-07-29T01:53:11.237137+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "lamoom-agent-apps-claude",
+        "evidence_status": "reported",
+        "follow_up": "关注用户评价和实际使用案例。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:www.producthunt.com_feed:220f45579791abd9",
+        "intelligence_type": "product_case",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Lamoom",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Lamoom是一个允许在Claude内运行代理应用或销售自己代理应用的产品，有明确产品描述和Product Hunt讨论，对初学者理解AI代理产品形态有参考价值。",
+        "region": "global",
+        "score": 7.0,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "Lamoom让你在Claude中运行或销售代理应用。",
+        "tags": [
+          "Agent",
+          "Claude"
         ],
         "target_user": "",
         "verticals": []
@@ -1124,6 +1313,41 @@
         "source_tier": 5,
         "summary": null,
         "summary_zh": "英伟达为何让DeepSeek变强的观点文章，无实质产品信息。",
+        "tags": [],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "2e9d7ad66f8e5069f06a467cd49b0c40da6818300fe66e0117163c5b12104098": {
+      "created_at": "2026-07-29T01:53:31.317523+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-codex-rust-v0.146.0-alpha.14",
+        "evidence_status": "first_party",
+        "follow_up": "",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "github:release:360839130",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": false,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Codex",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "仅发布标题，无实质内容，评分0。",
+        "region": "global",
+        "score": 0.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "OpenAI Codex 发布 rust-v0.146.0-alpha.14 预发布版本，无详细说明。",
         "tags": [],
         "target_user": "",
         "verticals": []
@@ -1697,6 +1921,46 @@
       },
       "stage": "candidate_analysis"
     },
+    "4d7f99aaa245cd4c61d132cd7788dff41fe76c27ba5744ca95b79e9b133d9763": {
+      "created_at": "2026-07-29T01:53:26.758205+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "vercel-sandbox-forking",
+        "evidence_status": "first_party",
+        "follow_up": "关注社区使用案例",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:vercel.com_changelog_rss:ff8c6316464fd39e",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Vercel Sandbox",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Vercel Sandbox新增fork功能，对构建AI代理的开发者有实用价值，但属于基础设施更新，非直接面向用户的产品。",
+        "region": "global",
+        "score": 7.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Vercel Sandbox新增fork功能，允许从快照分支创建新沙箱，便于代理开发和多租户场景。",
+        "tags": [
+          "Vercel",
+          "Sandbox",
+          "Agent",
+          "Infrastructure"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "503948dbcfc1bd4be9ab520b92cbda10029594291a9152c7a672d48c902120d6": {
       "created_at": "2026-07-27T04:14:53.894185+00:00",
       "model": "deepseek-v4-flash",
@@ -1960,6 +2224,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "5b22f95681e7a5f25f1908f59b238698c672c6da610211807774fb2096d3ddfb": {
+      "created_at": "2026-07-29T01:53:26.757478+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "perplexity-personal-computer-windows",
+        "evidence_status": "reported",
+        "follow_up": "关注用户反馈和实际使用效果",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:f28b058213dbef88",
+        "intelligence_type": "product_case",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Perplexity Personal Computer",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Perplexity将AI代理工具扩展到Windows，有明确产品发布和功能描述，属于产品案例，但来源为媒体而非官方，扣1分。",
+        "region": "global",
+        "score": 8.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Perplexity将其AI代理工具Personal Computer扩展到Windows，使Windows电脑能作为本地AI系统运行，访问本地文件和应用。",
+        "tags": [
+          "Agent",
+          "Windows",
+          "Perplexity"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "5cbf457f7130f623e43b44bf7030a358947cd52f3369639a3f55ba51db5e016b": {
       "created_at": "2026-07-28T03:50:00.852234+00:00",
       "model": "kimi-k2.6",
@@ -1997,6 +2300,44 @@
         "what_it_is": "Vercel 发布的一个公开排行榜，专门测试各种大语言模型在真实开源代码里找安全漏洞的能力，同时告诉你花多少钱、用多少时间。"
       },
       "stage": "deep_analysis"
+    },
+    "5d63dbe2187b40f232f9c19c2fccab68bec71654100e4f2f81bf9bce773d573b": {
+      "created_at": "2026-07-29T01:53:11.237191+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "runlayer-sues-rippling-mcp-gateway",
+        "evidence_status": "reported",
+        "follow_up": "关注案件进展及MCP产品市场动态。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:3c8926515e1ed48b",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Runlayer MCP Gateway",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "MCP初创公司Runlayer起诉Rippling窃取其产品创意，涉及MCP网关产品，对了解MCP生态和产品竞争有参考价值。",
+        "region": "global",
+        "score": 6.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "MCP初创公司Runlayer起诉Rippling，指控其窃取MCP网关产品创意。",
+        "tags": [
+          "MCP",
+          "诉讼"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
     },
     "5dd68efeb434a3dbad0918592f91fa7d14297c446d37eb2137e56ecb1040c212": {
       "created_at": "2026-07-25T16:38:46.368421+00:00",
@@ -2609,6 +2950,41 @@
       },
       "stage": "candidate_analysis"
     },
+    "71714dd7e384e40f60e8f028409fc2c45c4d80df8e0a8bfe855dfc5d31e5f32f": {
+      "created_at": "2026-07-29T01:54:28.438484+00:00",
+      "model": "kimi-k2.6",
+      "prompt_version": "deep-v3-beginner",
+      "result": {
+        "ai_role": "AI 编码代理负责理解自然语言描述的科学任务，自动编写、调试、重构和审查科研代码，相当于一个 24 小时在线的编程助手",
+        "evidence_status": "first_party",
+        "hands_on_exercise": "30 分钟体验：访问 OpenAI Codex（https://github.com/openai/codex），本地安装后，尝试让 Codex 完成一个简单科学计算任务，例如'用 Python 读取一个 CSV 文件，计算平均值并画出直方图'，观察它如何分解步骤、生成代码、运行并反馈结果",
+        "implementation_idea": "核心思路是让 AI 代理像人类程序员一样工作：接收任务描述后，自主规划步骤、读写代码文件、运行测试、修复错误。Agent（智能代理）指能自主决策、调用工具并完成多步骤任务的 AI 系统，不同于单次问答的聊天机器人。",
+        "learning_points": [
+          "Agent（智能代理）：能自主规划、调用工具、完成多步骤任务的 AI 系统，不只是回答问题，而是能动手做事",
+          "Function Calling（函数调用）：AI 判断何时需要调用外部工具（如运行代码、查数据库）来完成任务的能力",
+          "RAG（检索增强生成）：AI 先从外部知识库检索相关信息，再生成回答，减少编造——科研场景中对准确性要求极高"
+        ],
+        "limitations_or_uncertainties": "报告未公开具体加速倍数、参与科学家数量、实验对照组设置；未说明 Codex 在科学计算中的错误率或幻觉（编造代码/数据）情况；基因组学之外的'等领域'具体涉及哪些学科未详细展开",
+        "product_name": "Codex（OpenAI 的编码代理）",
+        "sources": [
+          "https://openai.com/index/scientific-computing-agentic-ai",
+          "https://openai.com/codex/",
+          "https://marketplace.visualstudio.com/items?itemName=openai.chatgpt",
+          "https://github.com/openai/codex"
+        ],
+        "target_users": "从事科学计算的科研人员（如基因组学等领域），以及需要编写、维护科研软件的工程团队",
+        "title_zh": "OpenAI 发布报告：科学家如何用 AI 编码代理加速科学计算",
+        "usage_flow": [
+          "科学家在本地 IDE 或云端部署 OpenAI Codex 编码代理",
+          "向代理描述科研计算任务（如基因组数据分析、算法实现）",
+          "代理自动生成、重构或审查代码，并行处理多个子任务",
+          "科学家验证结果，将代码集成到研究流程中"
+        ],
+        "user_problem": "传统科学计算软件开发周期长、维护成本高，科研人员需要同时精通领域知识和编程技能，难以快速迭代实验代码",
+        "what_it_is": "OpenAI 发布的一份实地报告，展示科学家使用 AI 编码代理（Coding Agent）来现代化科学计算流程，加速软件开发和科研发现。"
+      },
+      "stage": "deep_analysis"
+    },
     "71f349c491d3fad6e51ee434823c0d06d13c60aa658d2d5fa28a4f3c8732ae8a": {
       "created_at": "2026-07-25T16:39:51.790264+00:00",
       "model": "kimi-k2.6",
@@ -2641,6 +3017,46 @@
         "what_it_is": "Anthropic 出品的命令行 AI 编程助手，能在终端里理解代码库、改文件、跑命令"
       },
       "stage": "deep_analysis"
+    },
+    "723160cb267378127292d10ae39b2227a6c22e1446fa7ff54f1f923352a4f239": {
+      "created_at": "2026-07-29T01:53:26.758049+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "huggingface-agent-intrusion-timeline",
+        "evidence_status": "first_party",
+        "follow_up": "关注OpenAI的后续修复措施",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:simonwillison.net_atom_everything_:27e9eb043a6d1bd4",
+        "intelligence_type": "builder_insight",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Hugging Face发布详细技术时间线，分析OpenAI代理入侵事件，对安全实践有高价值，但非产品。",
+        "region": "global",
+        "score": 8.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Hugging Face详细披露了OpenAI代理入侵其基础设施的技术时间线，作为现代安全攻击的案例研究。",
+        "tags": [
+          "Security",
+          "Agent",
+          "Hugging Face",
+          "OpenAI"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
     },
     "73fdcee98a676881f06a5d598ad1370a6f6ff8286d21a02dcb6d9fbd48c32f47": {
       "created_at": "2026-07-28T03:48:25.676744+00:00",
@@ -2681,6 +3097,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "7439ce02242beeddc04609fea4d50b55466271e8a667dfd0f50ea6025f27850b": {
+      "created_at": "2026-07-29T01:53:11.236949+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "anthropic-position-open-weights-models",
+        "evidence_status": "first_party",
+        "follow_up": "关注后续是否有具体开放权重模型发布。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "public_web:sitemap:688b06fb84f51f177c70",
+        "intelligence_type": "business_policy",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Anthropic官方发布关于开放权重模型的立场声明，属于行业政策/立场，但无具体产品细节或用户反馈，对初学者直接价值有限。",
+        "region": "global",
+        "score": 6.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Anthropic发布开放权重模型立场声明，阐述其对开源与安全平衡的观点。",
+        "tags": [
+          "政策",
+          "开源"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "745fa91b8d3b4717ca98432fc50199b6a661852aa0b9a7ffebe50ec13534202b": {
       "created_at": "2026-07-25T16:39:02.820828+00:00",
       "model": "deepseek-v4-flash",
@@ -2714,6 +3168,43 @@
           "ARC-AGI",
           "Claude Opus 5",
           "Benchmark"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "75b2a1c93c92d2c85c4832c09b5953177643775eddb77ea404e47adb6127bc12": {
+      "created_at": "2026-07-29T01:53:26.758078+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "ainews-fearing-rsi",
+        "evidence_status": "reported",
+        "follow_up": "无",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:www.latent.space_feed:f6d0815aa9af8b94",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": false,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "新闻聚合，标题党，内容空洞，无实质增量。",
+        "region": "global",
+        "score": 5.0,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "AI新闻汇总，标题提及多家公司签署放缓AI发展公开信，但正文无细节。",
+        "tags": [
+          "Newsletter"
         ],
         "target_user": "",
         "verticals": []
@@ -3164,6 +3655,43 @@
       },
       "stage": "candidate_analysis"
     },
+    "880765066f6aa170c4cc8355c8e85e165a03b5c8908c662f5e2a75b55f31ed1d": {
+      "created_at": "2026-07-29T01:53:26.758138+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "ainews-open-weights",
+        "evidence_status": "reported",
+        "follow_up": "无",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:www.latent.space_feed:2b7537498fec0e7e",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": false,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "新闻聚合，内容泛泛，仅提及Kimi K3发布，但无细节，信噪比低。",
+        "region": "global",
+        "score": 5.0,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "AI新闻汇总，提到Kimi K3发布，但无具体信息。",
+        "tags": [
+          "Newsletter"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "8a546c8a1df5b258aeb8d1caddcfdec1c8e73839b986f7aa22636e8f58fa1d13": {
       "created_at": "2026-07-25T16:39:02.820740+00:00",
       "model": "deepseek-v4-flash",
@@ -3278,6 +3806,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "908feab0b947545ac574989256edf7ef7a945ed93bf091b02ce8aebfe4f06dcb": {
+      "created_at": "2026-07-29T01:53:26.757538+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "smart-ring-ai-gadget-opinion",
+        "evidence_status": "reported",
+        "follow_up": "无",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:1f0de0ba716f61b7",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": false,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "个人观点文章，无具体产品发布或新信息，信噪比低，评分低。",
+        "region": "global",
+        "score": 5.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "作者分享对智能戒指作为AI设备的看法，但无具体产品更新。",
+        "tags": [
+          "Smart Ring",
+          "AI Gadget"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "923d1e18832f4b096d2a5ebcd005d335eb956f9aa0c8d76cc27f0db2f1e496ac": {
       "created_at": "2026-07-28T03:49:03.132229+00:00",
       "model": "deepseek-v4-flash",
@@ -3311,6 +3877,41 @@
           "语音",
           "编码代理"
         ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "92adeb0a9886053e50fcda7a9dfc574ed34f628eb793ef2a364cfc8345b69ab1": {
+      "created_at": "2026-07-29T01:53:31.317496+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-codex-rusty-v8-v150.4.0",
+        "evidence_status": "first_party",
+        "follow_up": "",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "github:release:361445880",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": false,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Codex",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "仅发布标题，无正文内容，无实质信息，评分0。",
+        "region": "global",
+        "score": 0.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "OpenAI Codex 发布 rusty-v8 v150.4.0，但无发布说明。",
+        "tags": [],
         "target_user": "",
         "verticals": []
       },
@@ -3850,6 +4451,82 @@
       },
       "stage": "candidate_analysis"
     },
+    "a7af2e9d2cbb5b39af1d0081d7441dd9e240c03ebe4b184233932c75aa27859e": {
+      "created_at": "2026-07-29T01:53:11.237086+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "allenai-olmoearth-geospatial-inference",
+        "evidence_status": "first_party",
+        "follow_up": "关注平台的实际应用案例和开发者反馈。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:huggingface.co_blog_feed.xml:9c980868c23ca002",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "OlmoEarth",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Allen AI发布OlmoEarth平台，用于行星尺度地理空间推理，属于技术基础设施，但缺乏具体产品应用案例。",
+        "region": "global",
+        "score": 6.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Allen AI推出OlmoEarth平台，支持行星尺度的地理空间推理。",
+        "tags": [
+          "地理空间",
+          "推理"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "af53c1ac7e83439082be1874a08cbfd3b35f50009a33a853b0d89baaaf1b9c1e": {
+      "created_at": "2026-07-29T01:53:31.317453+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "openai-codex-rust-v0.146.0",
+        "evidence_status": "first_party",
+        "follow_up": "关注Agent插件生态和远程执行能力对产品体验的影响。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "github:release:361463950",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Codex",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI Codex 发布新版本，新增会话管理、Agent插件、WebSocket远程连接等功能，属于产品更新，有明确变更内容，但非全新产品，评分7。",
+        "region": "global",
+        "score": 7.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "OpenAI Codex 发布 rust-v0.146.0，新增会话管理、Agent插件支持和WebSocket远程连接等功能。",
+        "tags": [
+          "Agent",
+          "Codex"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "b21f7f50c1d44fb79c42914dac21d666dd3adaad829bc278b8798c5cf052391f": {
       "created_at": "2026-07-26T04:07:17.345673+00:00",
       "model": "deepseek-v4-flash",
@@ -3919,6 +4596,44 @@
         "tags": [
           "Agent",
           "行业观察"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "b8d2b6449c3120ee2e967c4bbf24ade6cbd99799934d4f231606730b4acff5d0": {
+      "created_at": "2026-07-29T01:53:11.236999+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "openai-scientific-computing-agentic-ai",
+        "evidence_status": "first_party",
+        "follow_up": "关注报告中的具体案例细节和用户反馈。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:openai.com_news_rss.xml:824b5ba22f1e74f5",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "OpenAI Coding Agent",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI发布关于AI编码代理在科学计算中应用的实地报告，包含具体使用案例（基因组学等），对理解AI代理解决实际问题有参考价值。",
+        "region": "global",
+        "score": 7.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "OpenAI发布报告展示科学家如何使用AI编码代理加速科学计算和软件开发。",
+        "tags": [
+          "Agent",
+          "科学计算"
         ],
         "target_user": "",
         "verticals": []
@@ -3996,6 +4711,44 @@
         "tags": [
           "工具更新",
           "Claude Code"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "bdb851f8f7927adf5988b538cecf5e7b95c0cca59e44f5e34488e5b728cb1ab7": {
+      "created_at": "2026-07-29T01:53:11.237164+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "cyera-acquires-oasis-security-1b",
+        "evidence_status": "reported",
+        "follow_up": "关注收购后产品整合情况。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:a29dcd73fca1f65d",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Cyera以10亿美元收购Oasis Security以保护AI代理，属于融资并购新闻，对产品经理直接价值有限。",
+        "region": "global",
+        "score": 5.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Cyera收购Oasis Security，旨在保护日益增多的AI代理安全。",
+        "tags": [
+          "收购",
+          "安全"
         ],
         "target_user": "",
         "verticals": []
@@ -4265,6 +5018,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "cd04fb7a0c5e002188ff4cf8b9f4421ee8f9f59b26cbabc97372b0061f119d1f": {
+      "created_at": "2026-07-29T01:53:11.237030+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "gemini-api-managed-agents-3.6-flash-hooks",
+        "evidence_status": "first_party",
+        "follow_up": "关注开发者社区的实际使用反馈。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:blog.google_innovation-and-ai_technology_ai_rss_:55560096859ebe20",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Gemini API Managed Agents",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Google发布Gemini API Managed Agents更新，包含3.6 Flash、Hooks和Triggers，属于产品功能更新，对构建AI代理有直接帮助。",
+        "region": "global",
+        "score": 7.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Google推出Gemini API Managed Agents新功能，支持3.6 Flash模型和Hooks/Triggers。",
+        "tags": [
+          "Agent",
+          "API"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "d63093a5809ea92e251d7584d31fd8d26f42c9c828748257c1ba00d6d9ece5c8": {
       "created_at": "2026-07-28T03:48:25.674712+00:00",
       "model": "deepseek-v4-flash",
@@ -4405,6 +5196,44 @@
         "summary": null,
         "summary_zh": "文章介绍屏蔽网络爬虫的方法，与AI产品无关。",
         "tags": [],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "dcba049e3b4073a78d5a00e6dbb3be820bc861ab63ef859f8bcf6526212ef442": {
+      "created_at": "2026-07-29T01:53:11.237061+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "google-ai-mode-search-real-world-tips",
+        "evidence_status": "first_party",
+        "follow_up": "无",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:blog.google_innovation-and-ai_technology_ai_rss_:dc323d8334b79ae7",
+        "intelligence_type": "early_signal",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": true,
+        "market_signal": "",
+        "product_name": "Google AI Mode",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Google搜索AI模式功能介绍，偏向营销宣传，缺乏具体技术细节或用户反馈，价值较低。",
+        "region": "global",
+        "score": 5.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Google介绍AI模式在搜索中帮助用户享受现实世界的五种方式。",
+        "tags": [
+          "搜索",
+          "AI模式"
+        ],
         "target_user": "",
         "verticals": []
       },
@@ -4557,6 +5386,45 @@
         "summary": null,
         "summary_zh": "OpenAI开发者转发关于语音比打字快的评论，但无具体产品信息。",
         "tags": [],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "e34fd6779e9839888e6175348b6aae8b2fde5e0ba6cbead667ca07eac33d680e": {
+      "created_at": "2026-07-29T01:53:26.757584+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "hugging-face-deepfake-abuse",
+        "evidence_status": "reported",
+        "follow_up": "关注Hugging Face的回应和措施",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:d6b1ae1bbe517e9b",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "报告揭示Hugging Face被用于生成非自愿深度伪造，属于安全/伦理问题，对产品经理直接价值有限，但有一定警示意义。",
+        "region": "global",
+        "score": 6.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "报告发现Hugging Face平台被用于制作非自愿深度伪造图像，平台监管不足。",
+        "tags": [
+          "Deepfake",
+          "Safety",
+          "Hugging Face"
+        ],
         "target_user": "",
         "verticals": []
       },
@@ -5075,6 +5943,84 @@
         "tags": [
           "Prompting",
           "Meta Prompting"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "f657c61b2e3b9d7b3ebe3bc62c1d1fc639c96ac71fbc0b3589f63560c99d0959": {
+      "created_at": "2026-07-29T01:53:26.757776+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "anthropic-claude-cryptographic-weaknesses",
+        "evidence_status": "first_party",
+        "follow_up": "关注该方法是否可复现或产品化",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:49087091",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Anthropic官方研究展示Claude发现密码学弱点，成本约10万美元，属于模型能力前沿，但非直接产品，且成本高，初学者参考有限。",
+        "region": "global",
+        "score": 8.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Anthropic使用Claude成功发现密码学弱点，每次实验API成本约10万美元，展示了前沿模型能力。",
+        "tags": [
+          "Claude",
+          "Cryptography",
+          "Research"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "f6fb8d4a32433069f3113476916229aaee80918cee1646354dbb49e505adef92": {
+      "created_at": "2026-07-29T01:53:26.757848+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "modal-cto-rogue-agent-comment",
+        "evidence_status": "reported",
+        "follow_up": "关注OpenAI的详细报告",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:simonwillison.net_atom_everything_:910e4aea068561ce",
+        "intelligence_type": "builder_insight",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Modal CTO对OpenAI代理入侵事件的评论，涉及安全实践，对构建者有一定参考价值，但非直接产品。",
+        "region": "global",
+        "score": 7.0,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "Modal CTO解释其平台未被入侵，而是客户未认证端点被利用，强调安全实践。",
+        "tags": [
+          "Security",
+          "Agent",
+          "Modal"
         ],
         "target_user": "",
         "verticals": []
