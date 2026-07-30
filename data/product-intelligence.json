@@ -1,54 +1,53 @@
 {
   "version": 1,
-  "updated_at": "2026-07-29T03:52:23.705001+00:00",
+  "updated_at": "2026-07-30T03:28:58.868220+00:00",
   "products": [
     {
-      "product_id": "product-a1bf09633e677895",
-      "product_name": "ChatGPT Work",
-      "builder_name": "Latent Space",
-      "first_seen": "2026-07-29",
-      "last_seen": "2026-07-29",
+      "product_id": "product-1e46f20bebb7b354",
+      "product_name": "GPT-5.6",
+      "builder_name": "OpenAI News",
+      "first_seen": "2026-07-30",
+      "last_seen": "2026-07-30",
       "occurrence_count": 1,
-      "intelligence_type": "builder_insight",
-      "evidence_status": "reported",
+      "intelligence_type": "model_capability",
+      "evidence_status": "first_party",
       "target_user": "未公开",
       "user_problem": "未公开",
-      "what_it_is": "OpenAI产品负责人Akshay Nathan分享ChatGPT Work从0到1000万用户的构建历程，涵盖Sites、Memory、Subagents等关键功能。",
+      "what_it_is": "OpenAI发现两个API设置可大幅提升GPT-5.6在ARC-AGI-3上的表现，为AI产品优化提供新思路。",
       "ai_role": "未公开",
       "implementation_idea": "未公开",
       "hands_on_exercise": "未公开",
       "limitations_or_uncertainties": "未公开",
       "region": "global",
       "score": 9.0,
-      "summary": "OpenAI产品负责人Akshay Nathan分享ChatGPT Work从0到1000万用户的构建历程，涵盖Sites、Memory、Subagents等关键功能。",
-      "title": "Codex from 0 to 10M Users: Building ChatGPT Work — Akshay Nathan, OpenAI",
-      "url": "https://www.latent.space/p/chatgpt-work",
+      "summary": "OpenAI发现两个API设置可大幅提升GPT-5.6在ARC-AGI-3上的表现，为AI产品优化提供新思路。",
+      "title": "How enabling two settings tripled our scores on the ARC-AGI-3 benchmark",
+      "url": "https://openai.com/index/how-two-settings-tripled-our-arc-agi-3-scores",
       "sources": [
         {
-          "url": "https://www.latent.space/p/chatgpt-work",
-          "title": "Codex from 0 to 10M Users: Building ChatGPT Work — Akshay Nathan, OpenAI",
+          "url": "https://openai.com/index/how-two-settings-tripled-our-arc-agi-3-scores",
+          "title": "How enabling two settings tripled our scores on the ARC-AGI-3 benchmark",
           "source_type": "rss",
-          "published_at": "2026-07-28T15:26:30+00:00"
+          "published_at": "2026-07-29T15:00:00+00:00"
         }
       ],
       "updates": [
         {
-          "update_id": "openai-chatgpt-work-akshay-nathan",
-          "date": "2026-07-29",
-          "title": "Codex from 0 to 10M Users: Building ChatGPT Work — Akshay Nathan, OpenAI",
-          "summary": "OpenAI产品负责人Akshay Nathan分享ChatGPT Work从0到1000万用户的构建历程，涵盖Sites、Memory、Subagents等关键功能。",
+          "update_id": "openai-arc-agi-3-settings",
+          "date": "2026-07-30",
+          "title": "How enabling two settings tripled our scores on the ARC-AGI-3 benchmark",
+          "summary": "OpenAI发现两个API设置可大幅提升GPT-5.6在ARC-AGI-3上的表现，为AI产品优化提供新思路。",
           "score": 9.0,
-          "url": "https://www.latent.space/p/chatgpt-work"
+          "url": "https://openai.com/index/how-two-settings-tripled-our-arc-agi-3-scores"
         }
       ],
       "usage_flow": [],
       "learning_points": [],
       "verticals": [],
       "tags": [
-        "ChatGPT",
-        "Product",
         "OpenAI",
-        "Scaling"
+        "ARC-AGI",
+        "模型能力"
       ]
     },
     {
@@ -56,13 +55,13 @@
       "product_name": "Claude Opus 5",
       "builder_name": "Anthropic News",
       "first_seen": "2026-07-28",
-      "last_seen": "2026-07-29",
+      "last_seen": "2026-07-30",
       "occurrence_count": 1,
       "intelligence_type": "model_capability",
       "evidence_status": "first_party",
       "target_user": "需要高强度编码、金融研究、日常知识工作的开发者和分析师；预算敏感但想要接近顶级性能的团队",
       "user_problem": "顶级模型（如 Fable 5、Mythos 5）太贵或访问受限；现有模型在复杂编码、数值推理、表格处理上不够精准；想自动化浏览器操作但模型执行不稳定",
-      "what_it_is": "Anthropic 发布的最新旗舰大模型，定位是日常可用的智能助手，编码和知识工作能力强，价格是同档 Fable 5 的一半",
+      "what_it_is": "Anthropic发布Claude Opus 5模型，引发基准测试和编码代理性能讨论。",
       "ai_role": "作为'副驾驶'主动推理：理解复杂指令、分解任务、调用外部工具（如浏览器、代码执行环境）、生成或修改代码",
       "implementation_idea": "Anthropic 用'宪法 AI'（Constitutional AI，即让模型对照一套原则自我修正，而不是全靠人工标注）训练，让模型在保持能力的同时更安全、更可控。Opus 5 相比前代优化了推理效率，用更少资源达到接近 Fable 5 的效果",
       "hands_on_exercise": "在 Claude 网页端或 Nous Portal（有 20% 折扣）用 Opus 5 完成一个实际任务：给它一个真实网站的 URL，让它用浏览器工具帮你提取特定信息并总结成表格；对比它直接回答和启用工具后的准确度差异，记录耗时和幻觉情况",
@@ -70,7 +69,7 @@
       "region": "global",
       "score": 8.5,
       "summary": "Anthropic发布Claude Opus 5模型，引发基准测试和编码代理性能讨论。",
-      "title": "Claude Opus 5 发布：接近 Fable 5 性能但半价，编码和知识工作新标杆",
+      "title": "Claude Opus 5",
       "url": "https://www.anthropic.com/news/claude-opus-5",
       "sources": [
         {
@@ -135,6 +134,496 @@
       "tags": [
         "model",
         "Claude"
+      ]
+    },
+    {
+      "product_id": "product-83c240d6cec379de",
+      "product_name": "TurboFieldfare",
+      "builder_name": "gitpusher42",
+      "first_seen": "2026-07-30",
+      "last_seen": "2026-07-30",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "verified",
+      "target_user": "想在低内存 Mac 上本地跑大语言模型的开发者和技术爱好者；需要离线 AI 但不想买高配机器的人",
+      "user_problem": "Gemma 4 26B 模型量化后还要 14GB，8GB 或 16GB 内存的 Mac 根本装不下，传统推理工具直接拒绝运行或卡死",
+      "what_it_is": "TurboFieldfare 是一个专为苹果 M 系列芯片 Mac 写的推理引擎，能把 14GB 的 AI 模型塞进约 2GB 内存里运行，靠 SSD 流式加载关键部件。",
+      "ai_role": "Gemma 4 26B 模型负责根据输入文本逐 token 生成回复；TurboFieldfare 负责在内存和 SSD 之间调度模型的不同部件，让大模型能在小内存机器上运转",
+      "implementation_idea": "把模型拆成「公共基础部分」和「专家部分」。公共部分（约 1.35GB）和计算缓存常驻内存；生成每个词时，只从硬盘读取真正用得上的那几个专家，同时 GPU 不闲着算别的。用个小缓存记住刚读过的专家，减少重复读盘。",
+      "hands_on_exercise": "30 分钟：在任意 Mac 上安装 TurboFieldfare，用 curl 测试它的 OpenAI 兼容接口（curl http://localhost:端口号/v1/chat/completions），对比开启/关闭工具调用时的响应差异；再用活动监视器观察内存是否真压在 2GB 左右",
+      "limitations_or_uncertainties": "M1 Mac 需手动改两行 Swift 代码才能编译，且会损失 2.4 倍预填充加速；与 llama.cpp 的 mmap 方案相比，真实延迟差距未公开基准测试；DiffusionGemma 支持尚在他人项目阶段，未合并",
+      "region": "global",
+      "score": 8.0,
+      "summary": "开发者构建了TurboFieldfare引擎，可在2GB RAM的Mac上运行Gemma 4模型，通过SSD流式传输专家权重实现。",
+      "title": "开源引擎让 260 亿参数大模型在 2GB 内存的 Mac 上跑起来",
+      "url": "https://github.com/drumih/turbo-fieldfare",
+      "sources": [
+        {
+          "url": "https://github.com/drumih/turbo-fieldfare",
+          "title": "Show HN: Open-source engine running Gemma 4 26B in 2 GB RAM on any M-series Mac",
+          "source_type": "hackernews",
+          "published_at": "2026-07-29T15:05:43+00:00"
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=49098510",
+          "title": "Show HN: Open-source engine running Gemma 4 26B in 2 GB RAM on any M-series Mac | Hacker News",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "turbo-fieldfare-gemma4-inference-engine",
+          "date": "2026-07-30",
+          "title": "开源引擎让 260 亿参数大模型在 2GB 内存的 Mac 上跑起来",
+          "summary": "开发者构建了TurboFieldfare引擎，可在2GB RAM的Mac上运行Gemma 4模型，通过SSD流式传输专家权重实现。",
+          "score": 8.0,
+          "url": "https://github.com/drumih/turbo-fieldfare"
+        }
+      ],
+      "usage_flow": [
+        "下载 Mac 应用，首次运行自动从 Hugging Face 拉取 15GB 模型权重",
+        "启动本地 OpenAI 兼容服务，用任意客户端或代码接入",
+        "输入提示词，引擎自动决定从 SSD 调取哪些「专家」部件",
+        "收到流式返回的生成结果，支持工具调用和上下文缓存复用"
+      ],
+      "learning_points": [
+        "MoE（混合专家）：不是每次都用模型全部参数，而是按输入动态挑几个「专家」子网络，省算力——就像医院不是每次会诊都把所有科室主任叫来",
+        "KV Cache：大模型生成句子时，会把已经算过的上下文结果存起来，避免重复计算，但这东西也吃内存",
+        "量化（Quantization）：把模型权重从 32 位浮点数压成 4 位，体积砍到 1/8，精度损失可控"
+      ],
+      "verticals": [],
+      "tags": [
+        "推理引擎",
+        "开源",
+        "Gemma"
+      ]
+    },
+    {
+      "product_id": "product-aa9a1b26bd6b7895",
+      "product_name": "Agnes 2.5 Pro Alpha",
+      "builder_name": "Artificial Analysis",
+      "first_seen": "2026-07-30",
+      "last_seen": "2026-07-30",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Agnes AI发布Agnes 2.5 Pro Alpha模型，值得关注其能力变化。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.0,
+      "summary": "Agnes AI发布Agnes 2.5 Pro Alpha模型，值得关注其能力变化。",
+      "title": "Agnes Ai Releases Agnes 2 5 Pro Alpha",
+      "url": "https://artificialanalysis.ai/articles/agnes-ai-releases-agnes-2-5-pro-alpha",
+      "sources": [
+        {
+          "url": "https://artificialanalysis.ai/articles/agnes-ai-releases-agnes-2-5-pro-alpha",
+          "title": "Agnes Ai Releases Agnes 2 5 Pro Alpha",
+          "source_type": "public_web",
+          "published_at": "2026-07-29T00:00:00+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "agnes-2-5-pro-alpha-release",
+          "date": "2026-07-30",
+          "title": "Agnes Ai Releases Agnes 2 5 Pro Alpha",
+          "summary": "Agnes AI发布Agnes 2.5 Pro Alpha模型，值得关注其能力变化。",
+          "score": 8.0,
+          "url": "https://artificialanalysis.ai/articles/agnes-ai-releases-agnes-2-5-pro-alpha"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "模型发布",
+        "Agnes"
+      ]
+    },
+    {
+      "product_id": "product-713baac350b932e2",
+      "product_name": "Microsoft Copilot for Word",
+      "builder_name": "Simon Willison",
+      "first_seen": "2026-07-30",
+      "last_seen": "2026-07-30",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "verified",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "研究者发现一种针对Word Copilot的提示注入攻击，可自我复制传播。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.0,
+      "summary": "研究者发现一种针对Word Copilot的提示注入攻击，可自我复制传播。",
+      "title": "AI Worming through Word",
+      "url": "https://simonwillison.net/2026/Jul/29/ai-worming-through-word/#atom-everything",
+      "sources": [
+        {
+          "url": "https://simonwillison.net/2026/Jul/29/ai-worming-through-word/#atom-everything",
+          "title": "AI Worming through Word",
+          "source_type": "rss",
+          "published_at": "2026-07-29T18:43:03+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "ai-worm-word-prompt-injection-2026",
+          "date": "2026-07-30",
+          "title": "AI Worming through Word",
+          "summary": "研究者发现一种针对Word Copilot的提示注入攻击，可自我复制传播。",
+          "score": 8.0,
+          "url": "https://simonwillison.net/2026/Jul/29/ai-worming-through-word/#atom-everything"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "安全",
+        "提示注入",
+        "Copilot",
+        "Word"
+      ]
+    },
+    {
+      "product_id": "product-92d1b297c66cce17",
+      "product_name": "ChatGPT",
+      "builder_name": "OpenAI News",
+      "first_seen": "2026-07-30",
+      "last_seen": "2026-07-30",
+      "occurrence_count": 1,
+      "intelligence_type": "business_policy",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "OpenAI向10万学术研究者免费提供ChatGPT高级模型，加速科学发现。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.0,
+      "summary": "OpenAI向10万学术研究者免费提供ChatGPT高级模型，加速科学发现。",
+      "title": "Accelerating scientific discovery with ChatGPT for Academic Researchers",
+      "url": "https://openai.com/index/chatgpt-for-academic-researchers",
+      "sources": [
+        {
+          "url": "https://openai.com/index/chatgpt-for-academic-researchers",
+          "title": "Accelerating scientific discovery with ChatGPT for Academic Researchers",
+          "source_type": "rss",
+          "published_at": "2026-07-29T10:00:00+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "openai-chatgpt-academic-researchers",
+          "date": "2026-07-30",
+          "title": "Accelerating scientific discovery with ChatGPT for Academic Researchers",
+          "summary": "OpenAI向10万学术研究者免费提供ChatGPT高级模型，加速科学发现。",
+          "score": 8.0,
+          "url": "https://openai.com/index/chatgpt-for-academic-researchers"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "OpenAI",
+        "ChatGPT",
+        "学术"
+      ]
+    },
+    {
+      "product_id": "product-3e3cbda2938f9119",
+      "product_name": "Lovable",
+      "builder_name": "Lovable Blog",
+      "first_seen": "2026-07-28",
+      "last_seen": "2026-07-30",
+      "occurrence_count": 2,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "使用 Lovable 构建全栈应用、需要连接数据库或第三方服务的开发者和团队",
+      "user_problem": "用户用 AI 生成应用后，需要连接真实数据库或 API，但担心数据泄露、权限失控、合规风险",
+      "what_it_is": "Lovable 官方博客文章，介绍其 AI 编程平台在连接用户外部数据时的安全机制",
+      "ai_role": "AI 负责根据用户描述生成完整应用代码，并在连接数据时自动配置安全最佳实践（如认证流程）",
+      "implementation_idea": "核心思路是'分层管控'：传输层加密（防止数据被窃听）、身份层统一认证（谁有权访问）、治理层审计追踪（做了什么操作）。AI 生成代码时内置这些安全模板，而非让用户手动配置。",
+      "hands_on_exercise": "在 Lovable 免费版创建一个待办应用，尝试连接 Supabase 数据库，观察平台自动生成的认证流程和 API 密钥管理方式，对比你手动配置时的步骤差异（约 45 分钟）",
+      "limitations_or_uncertainties": "原文未公开具体加密协议版本、第三方审计机构名称、数据驻留地域选项；AIUC-1 认证的具体覆盖范围未详细说明",
+      "region": "global",
+      "score": 7.0,
+      "summary": "Lovable官方博客介绍其AI产品如何安全连接用户数据，值得产品经理关注。",
+      "title": "Lovable 如何保障已连接数据的安全",
+      "url": "https://lovable.dev/blog/how-lovable-secures-connected-data",
+      "sources": [
+        {
+          "url": "https://lovable.dev/blog/how-we-run-swarms-of-ai-hacking-agents-against-ourselves",
+          "title": "How We Run Swarms Of Ai Hacking Agents Against Ourselves",
+          "source_type": "public_web",
+          "published_at": "2026-07-24T14:30:00+00:00"
+        },
+        {
+          "url": "https://lovable.dev/blog/how-lovable-secures-connected-data",
+          "title": "How Lovable Secures Connected Data",
+          "source_type": "public_web",
+          "published_at": "2026-07-29T08:00:00+00:00"
+        },
+        {
+          "url": "https://lovable.dev/blog",
+          "title": "Blog - Lovable",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://lovable.dev/pricing",
+          "title": "Lovable Pricing",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://lovable.dev/blog/app-user-connectors",
+          "title": "App User Connectors",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "lovable-ai-hacking-swarms",
+          "date": "2026-07-28",
+          "title": "How We Run Swarms Of Ai Hacking Agents Against Ourselves",
+          "summary": "Lovable分享运行AI黑客代理群组进行自我安全测试的实践经验。",
+          "score": 8.0,
+          "url": "https://lovable.dev/blog/how-we-run-swarms-of-ai-hacking-agents-against-ourselves"
+        },
+        {
+          "update_id": "lovable-secures-connected-data",
+          "date": "2026-07-30",
+          "title": "Lovable 如何保障已连接数据的安全",
+          "summary": "Lovable官方博客介绍其AI产品如何安全连接用户数据，值得产品经理关注。",
+          "score": 7.0,
+          "url": "https://lovable.dev/blog/how-lovable-secures-connected-data"
+        }
+      ],
+      "usage_flow": [
+        "用户在 Lovable 中通过自然语言描述应用需求，AI 生成前后端代码",
+        "用户选择连接外部数据源（如数据库、API），平台建立加密连接",
+        "管理员通过企业级治理面板设置权限、认证和发布控制",
+        "平台自动进行安全扫描，清理废弃应用，输出合规报告"
+      ],
+      "learning_points": [
+        "RAG（检索增强生成）：AI 需要查外部数据库时，如何不让敏感数据泄露给模型本身",
+        "Function Calling（函数调用）：AI 不直接碰数据，而是调用预定义的安全函数去读写，类似'按规矩办事'",
+        "Embedding（嵌入向量）：用户数据转成向量存储时的脱敏处理，防止原始信息被还原"
+      ],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "security",
+        "AI产品",
+        "数据安全"
+      ]
+    },
+    {
+      "product_id": "product-b10fa71dd530857d",
+      "product_name": "Superlogical",
+      "builder_name": "yan",
+      "first_seen": "2026-07-30",
+      "last_seen": "2026-07-30",
+      "occurrence_count": 1,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Mitchell Hashimoto宣布新公司Superlogical，将基于开源libghostty构建AI终端应用。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.0,
+      "summary": "Mitchell Hashimoto宣布新公司Superlogical，将基于开源libghostty构建AI终端应用。",
+      "title": "Superlogical",
+      "url": "https://www.superlogical.com/",
+      "sources": [
+        {
+          "url": "https://www.superlogical.com/",
+          "title": "Superlogical",
+          "source_type": "hackernews",
+          "published_at": "2026-07-29T15:41:33+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "superlogical-mitchellh-new-company",
+          "date": "2026-07-30",
+          "title": "Superlogical",
+          "summary": "Mitchell Hashimoto宣布新公司Superlogical，将基于开源libghostty构建AI终端应用。",
+          "score": 7.0,
+          "url": "https://www.superlogical.com/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "AI终端",
+        "创业"
+      ]
+    },
+    {
+      "product_id": "product-b37b5909bb539dad",
+      "product_name": "openai-agents-python",
+      "builder_name": "seratch",
+      "first_seen": "2026-07-30",
+      "last_seen": "2026-07-30",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "OpenAI发布agents-python v0.19.1，修复多项问题并支持原生主机路径。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.0,
+      "summary": "OpenAI发布agents-python v0.19.1，修复多项问题并支持原生主机路径。",
+      "title": "openai/openai-agents-python released v0.19.1",
+      "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.19.1",
+      "sources": [
+        {
+          "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.19.1",
+          "title": "openai/openai-agents-python released v0.19.1",
+          "source_type": "github",
+          "published_at": "2026-07-29T07:44:24+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "openai-agents-python-v0.19.1",
+          "date": "2026-07-30",
+          "title": "openai/openai-agents-python released v0.19.1",
+          "summary": "OpenAI发布agents-python v0.19.1，修复多项问题并支持原生主机路径。",
+          "score": 7.0,
+          "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.19.1"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "OpenAI",
+        "Agent",
+        "SDK",
+        "Python"
+      ]
+    },
+    {
+      "product_id": "product-6bb6c223e069384a",
+      "product_name": "Copilot",
+      "builder_name": "Emma Roth",
+      "first_seen": "2026-07-30",
+      "last_seen": "2026-07-30",
+      "occurrence_count": 1,
+      "intelligence_type": "early_signal",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "微软确认今年将推出Copilot超级应用，整合聊天、编码和智能体功能。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.0,
+      "summary": "微软确认今年将推出Copilot超级应用，整合聊天、编码和智能体功能。",
+      "title": "Microsoft confirms Copilot ‘super app’ coming this year",
+      "url": "https://www.theverge.com/tech/972927/microsoft-copilot-super-app-confirmed",
+      "sources": [
+        {
+          "url": "https://www.theverge.com/tech/972927/microsoft-copilot-super-app-confirmed",
+          "title": "Microsoft confirms Copilot ‘super app’ coming this year",
+          "source_type": "rss",
+          "published_at": "2026-07-29T22:17:38+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "microsoft-copilot-super-app-2026",
+          "date": "2026-07-30",
+          "title": "Microsoft confirms Copilot ‘super app’ coming this year",
+          "summary": "微软确认今年将推出Copilot超级应用，整合聊天、编码和智能体功能。",
+          "score": 7.0,
+          "url": "https://www.theverge.com/tech/972927/microsoft-copilot-super-app-confirmed"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Microsoft",
+        "Copilot",
+        "超级应用"
+      ]
+    },
+    {
+      "product_id": "product-a1bf09633e677895",
+      "product_name": "ChatGPT Work",
+      "builder_name": "Latent Space",
+      "first_seen": "2026-07-29",
+      "last_seen": "2026-07-29",
+      "occurrence_count": 1,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "OpenAI产品负责人Akshay Nathan分享ChatGPT Work从0到1000万用户的构建历程，涵盖Sites、Memory、Subagents等关键功能。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 9.0,
+      "summary": "OpenAI产品负责人Akshay Nathan分享ChatGPT Work从0到1000万用户的构建历程，涵盖Sites、Memory、Subagents等关键功能。",
+      "title": "Codex from 0 to 10M Users: Building ChatGPT Work — Akshay Nathan, OpenAI",
+      "url": "https://www.latent.space/p/chatgpt-work",
+      "sources": [
+        {
+          "url": "https://www.latent.space/p/chatgpt-work",
+          "title": "Codex from 0 to 10M Users: Building ChatGPT Work — Akshay Nathan, OpenAI",
+          "source_type": "rss",
+          "published_at": "2026-07-28T15:26:30+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "openai-chatgpt-work-akshay-nathan",
+          "date": "2026-07-29",
+          "title": "Codex from 0 to 10M Users: Building ChatGPT Work — Akshay Nathan, OpenAI",
+          "summary": "OpenAI产品负责人Akshay Nathan分享ChatGPT Work从0到1000万用户的构建历程，涵盖Sites、Memory、Subagents等关键功能。",
+          "score": 9.0,
+          "url": "https://www.latent.space/p/chatgpt-work"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "ChatGPT",
+        "Product",
+        "OpenAI",
+        "Scaling"
       ]
     },
     {
@@ -578,53 +1067,6 @@
       "tags": [
         "安全",
         "基准测试"
-      ]
-    },
-    {
-      "product_id": "product-3e3cbda2938f9119",
-      "product_name": "Lovable",
-      "builder_name": "Lovable Blog",
-      "first_seen": "2026-07-28",
-      "last_seen": "2026-07-28",
-      "occurrence_count": 1,
-      "intelligence_type": "builder_insight",
-      "evidence_status": "first_party",
-      "target_user": "未公开",
-      "user_problem": "未公开",
-      "what_it_is": "Lovable分享运行AI黑客代理群组进行自我安全测试的实践经验。",
-      "ai_role": "未公开",
-      "implementation_idea": "未公开",
-      "hands_on_exercise": "未公开",
-      "limitations_or_uncertainties": "未公开",
-      "region": "global",
-      "score": 8.0,
-      "summary": "Lovable分享运行AI黑客代理群组进行自我安全测试的实践经验。",
-      "title": "How We Run Swarms Of Ai Hacking Agents Against Ourselves",
-      "url": "https://lovable.dev/blog/how-we-run-swarms-of-ai-hacking-agents-against-ourselves",
-      "sources": [
-        {
-          "url": "https://lovable.dev/blog/how-we-run-swarms-of-ai-hacking-agents-against-ourselves",
-          "title": "How We Run Swarms Of Ai Hacking Agents Against Ourselves",
-          "source_type": "public_web",
-          "published_at": "2026-07-24T14:30:00+00:00"
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "lovable-ai-hacking-swarms",
-          "date": "2026-07-28",
-          "title": "How We Run Swarms Of Ai Hacking Agents Against Ourselves",
-          "summary": "Lovable分享运行AI黑客代理群组进行自我安全测试的实践经验。",
-          "score": 8.0,
-          "url": "https://lovable.dev/blog/how-we-run-swarms-of-ai-hacking-agents-against-ourselves"
-        }
-      ],
-      "usage_flow": [],
-      "learning_points": [],
-      "verticals": [],
-      "tags": [
-        "Agent",
-        "security"
       ]
     },
     {

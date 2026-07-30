@@ -418,6 +418,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "0ceda52545268807de360215ff336aa71a9bf0c8a9e783227254f03746b72085": {
+      "created_at": "2026-07-30T03:28:09.352455+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "superlogical-mitchellh-new-company",
+        "evidence_status": "first_party",
+        "follow_up": "关注产品具体形态和发布。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:49098965",
+        "intelligence_type": "builder_insight",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Superlogical",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Mitchell Hashimoto新公司Superlogical，基于libghostty构建终端AI产品，有明确思路和开源依赖，值得关注。",
+        "region": "global",
+        "score": 7.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Mitchell Hashimoto宣布新公司Superlogical，将基于开源libghostty构建AI终端应用。",
+        "tags": [
+          "AI终端",
+          "创业"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "0d3db7f43bb0ea54bbe9c756228067a76d3d95f7e08e1f365f03a1b1a08fe697": {
       "created_at": "2026-07-25T16:38:13.701711+00:00",
       "model": "deepseek-v4-flash",
@@ -1249,6 +1287,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "28d9aff41c2661b74b0d5d3dd86d3b4d5395dcfffd741047bf8fbe37060a67c3": {
+      "created_at": "2026-07-30T03:27:45.918997+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "lovable-app-user-connectors",
+        "evidence_status": "first_party",
+        "follow_up": "可关注Lovable集成能力扩展",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "public_web:sitemap:7d13e98953da73712279",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Lovable",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Lovable官方博客，产品功能更新，介绍App用户连接器，对构建AI产品有参考价值。",
+        "region": "global",
+        "score": 7.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Lovable发布App用户连接器功能，帮助用户集成外部应用数据。",
+        "tags": [
+          "AI产品",
+          "集成"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "2a3b19c0d25c392a0850a7c029d0e43b424fe6fc2adcb7c4ec6f89a2c6b2e737": {
       "created_at": "2026-07-26T04:07:29.874120+00:00",
       "model": "deepseek-v4-flash",
@@ -1543,6 +1619,40 @@
       },
       "stage": "candidate_analysis"
     },
+    "3d142451627d35c9e773b01f2fcbaebd32590e95838b1f38966e3c4f013883ce": {
+      "created_at": "2026-07-30T03:28:58.840745+00:00",
+      "model": "kimi-k2.6",
+      "prompt_version": "deep-v3-beginner",
+      "result": {
+        "ai_role": "AI 负责根据用户描述生成完整应用代码，并在连接数据时自动配置安全最佳实践（如认证流程）",
+        "evidence_status": "first_party",
+        "hands_on_exercise": "在 Lovable 免费版创建一个待办应用，尝试连接 Supabase 数据库，观察平台自动生成的认证流程和 API 密钥管理方式，对比你手动配置时的步骤差异（约 45 分钟）",
+        "implementation_idea": "核心思路是'分层管控'：传输层加密（防止数据被窃听）、身份层统一认证（谁有权访问）、治理层审计追踪（做了什么操作）。AI 生成代码时内置这些安全模板，而非让用户手动配置。",
+        "learning_points": [
+          "RAG（检索增强生成）：AI 需要查外部数据库时，如何不让敏感数据泄露给模型本身",
+          "Function Calling（函数调用）：AI 不直接碰数据，而是调用预定义的安全函数去读写，类似'按规矩办事'",
+          "Embedding（嵌入向量）：用户数据转成向量存储时的脱敏处理，防止原始信息被还原"
+        ],
+        "limitations_or_uncertainties": "原文未公开具体加密协议版本、第三方审计机构名称、数据驻留地域选项；AIUC-1 认证的具体覆盖范围未详细说明",
+        "product_name": "Lovable",
+        "sources": [
+          "https://lovable.dev/blog/how-lovable-secures-connected-data",
+          "https://lovable.dev/blog",
+          "https://lovable.dev/pricing"
+        ],
+        "target_users": "使用 Lovable 构建全栈应用、需要连接数据库或第三方服务的开发者和团队",
+        "title_zh": "Lovable 如何保障已连接数据的安全",
+        "usage_flow": [
+          "用户在 Lovable 中通过自然语言描述应用需求，AI 生成前后端代码",
+          "用户选择连接外部数据源（如数据库、API），平台建立加密连接",
+          "管理员通过企业级治理面板设置权限、认证和发布控制",
+          "平台自动进行安全扫描，清理废弃应用，输出合规报告"
+        ],
+        "user_problem": "用户用 AI 生成应用后，需要连接真实数据库或 API，但担心数据泄露、权限失控、合规风险",
+        "what_it_is": "Lovable 官方博客文章，介绍其 AI 编程平台在连接用户外部数据时的安全机制"
+      },
+      "stage": "deep_analysis"
+    },
     "3f50257dda2f0f9e1ed20245d8f34978fdb4abd970e6e2b80b177f0f18779be5": {
       "created_at": "2026-07-27T04:14:53.894471+00:00",
       "model": "deepseek-v4-flash",
@@ -1687,6 +1797,45 @@
         "summary_zh": "讨论英语散文写作，与AI无关。",
         "tags": [
           "Writing"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "4798cce757fd3e4a58e065949f2f4fb5ad2cc329babb15b7c78f9435563d8150": {
+      "created_at": "2026-07-30T03:28:00.813300+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "artists-lawsuit-ai-slop-2026",
+        "evidence_status": "reported",
+        "follow_up": "关注法律进展对AI产品的影响",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:5a969d4bba2fd724",
+        "intelligence_type": "business_policy",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "报道艺术家起诉AI公司使用其作品训练模型，涉及法律和伦理，但非产品案例或构建者洞察，对产品经理直接价值有限。",
+        "region": "global",
+        "score": 6.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "艺术家对AI公司提起版权诉讼，部分案件获胜。",
+        "tags": [
+          "版权",
+          "诉讼",
+          "AI训练"
         ],
         "target_user": "",
         "verticals": []
@@ -1841,6 +1990,44 @@
           "Token Reselling",
           "Fraud",
           "China"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "4c94b79ea3f3833fe30f66dc9176143bfcf58fa41cd29210624d74a683111c5e": {
+      "created_at": "2026-07-30T03:28:09.352026+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-codex-rust-alpha-0.146.0.9.2",
+        "evidence_status": "first_party",
+        "follow_up": "无。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "github:release:362110629",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Codex",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "同样内容为空，无价值。",
+        "region": "global",
+        "score": 5.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "OpenAI Codex发布Rust SDK的alpha版本，无变更日志。",
+        "tags": [
+          "SDK",
+          "Rust"
         ],
         "target_user": "",
         "verticals": []
@@ -2031,6 +2218,44 @@
         "summary": null,
         "summary_zh": "新浪网对比DeepSeek和通义千问，但缺乏实质增量信息。",
         "tags": [],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "50c88ad9664da9c910f42df78825235187140587de3142ef26c803650531d5e3": {
+      "created_at": "2026-07-30T03:28:00.813154+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "techcrunch-disrupt-2026-ai-stage",
+        "evidence_status": "reported",
+        "follow_up": "无",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:8272b42ef55944fe",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": true,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "纯会议推广，无实质AI产品信息，属于营销内容。",
+        "region": "global",
+        "score": 3.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "TechCrunch Disrupt 2026将设AI舞台讨论SaaS和智能体安全等话题。",
+        "tags": [
+          "会议",
+          "推广"
+        ],
         "target_user": "",
         "verticals": []
       },
@@ -2686,6 +2911,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "67150af29e054eb6994f96ba275f0315259d38c97048a7dac4cbd9cc4e03ac35": {
+      "created_at": "2026-07-30T03:28:09.352006+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-codex-rust-alpha-0.147.0.1",
+        "evidence_status": "first_party",
+        "follow_up": "无。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "github:release:361625998",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Codex",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "与上一条类似，内容为空，无实质信息。",
+        "region": "global",
+        "score": 5.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "OpenAI Codex发布Rust SDK的另一个alpha版本，无详细说明。",
+        "tags": [
+          "SDK",
+          "Rust"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "671c240f03f946480629f20d8224c6b729f54755b3d2dcef545aadf502aaaeb4": {
       "created_at": "2026-07-28T03:49:03.132456+00:00",
       "model": "deepseek-v4-flash",
@@ -2719,6 +2982,45 @@
           "Nvidia",
           "安全",
           "开源"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "673fcd92eaf979c677b5afe2eed997b63c7e48a76616d8662523ff74fce107d4": {
+      "created_at": "2026-07-30T03:28:00.813197+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "microsoft-copilot-super-app-2026",
+        "evidence_status": "reported",
+        "follow_up": "关注具体发布日期和功能细节",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:3274af0c52d6e92c",
+        "intelligence_type": "early_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Copilot",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "微软CEO确认Copilot超级应用计划，涵盖聊天、编码和智能体能力，面向消费者和企业，有明确产品方向和时间点，但尚未发布。",
+        "region": "global",
+        "score": 7.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "微软确认今年将推出Copilot超级应用，整合聊天、编码和智能体功能。",
+        "tags": [
+          "Microsoft",
+          "Copilot",
+          "超级应用"
         ],
         "target_user": "",
         "verticals": []
@@ -2910,6 +3212,44 @@
         "what_it_is": "一篇技术博客，展示如何用 Lean（一种数学证明语言）+ AI 自动化工具，来形式化验证 zstd 压缩算法的实现没有 bug。"
       },
       "stage": "deep_analysis"
+    },
+    "71264e4ad221d01f70808f73cda4c901533a7ce547daa1c8eda292a748dae81d": {
+      "created_at": "2026-07-30T03:27:45.921979+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "zuckerberg-predicts-personal-ai-agents",
+        "evidence_status": "reported",
+        "follow_up": "无",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:0d6a1e24d1fb119d",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "扎克伯格预测，属于观点性内容，无具体产品证据，信噪比低。",
+        "region": "global",
+        "score": 5.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "扎克伯格预测五年内数十亿人将拥有个人AI代理。",
+        "tags": [
+          "Meta",
+          "AI代理"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
     },
     "7141077f1ebc956856eed5daa229280809424eeb619ea02a7256b1e928e70dad": {
       "created_at": "2026-07-28T03:48:46.847062+00:00",
@@ -3620,6 +3960,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "846fa6315691cdba34a5e93cbf61f0d1bbd6afb15f335434b9276dd2c177bd41": {
+      "created_at": "2026-07-30T03:28:00.813533+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "ainews-ai-finance-2026",
+        "evidence_status": "reported",
+        "follow_up": "关注具体金融AI产品案例",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:www.latent.space_feed:67da035349e3126a",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "AI在金融服务业渗透的行业观察，但内容概括，缺乏具体产品案例或构建者实践。",
+        "region": "global",
+        "score": 6.0,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "AI正在金融服务业成为继编程后的下一个垂直领域。",
+        "tags": [
+          "金融",
+          "行业观察"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "85dc02970a73b680782dd8d6048d0269d7a04cc926d54596bbd261529c9b725d": {
       "created_at": "2026-07-26T04:06:44.242785+00:00",
       "model": "deepseek-v4-flash",
@@ -3650,6 +4028,45 @@
         "summary": null,
         "summary_zh": "Vercel AI SDK的Anthropic AWS包发布补丁版本1.0.25，仅更新依赖。",
         "tags": [],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "873b20f6867e9c81131a428f069fab0fb268daf3838c80ba9aa27e11802a045a": {
+      "created_at": "2026-07-30T03:28:00.813098+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "meta-enterprise-ai-opportunity-2026",
+        "evidence_status": "reported",
+        "follow_up": "关注Meta后续具体企业AI产品发布",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:819780bbf9e7efb6",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Meta CEO财报发言，但内容泛泛，无具体产品细节或用户反馈，属于高层战略表态，信息增量有限。",
+        "region": "global",
+        "score": 5.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "扎克伯格称Meta的企业AI机会超越智能体，涵盖API、算力和内部软件。",
+        "tags": [
+          "Meta",
+          "企业AI",
+          "战略"
+        ],
         "target_user": "",
         "verticals": []
       },
@@ -3686,6 +4103,44 @@
         "summary_zh": "AI新闻汇总，提到Kimi K3发布，但无具体信息。",
         "tags": [
           "Newsletter"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "89966d7e526f240f07910f3973ccfe0e402bcfebe188faf16b9eaa15f88b5617": {
+      "created_at": "2026-07-30T03:27:45.921951+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "microsoft-competing-openai-anthropic",
+        "evidence_status": "reported",
+        "follow_up": "关注微软AI产品进展",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:23ff04a1ef74259b",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "TechCrunch报道微软与OpenAI、Anthropic竞争，属于行业动态，但无具体产品细节，信噪比一般。",
+        "region": "global",
+        "score": 6.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "微软在AI领域与OpenAI、Anthropic公开竞争，推出自研模型和工具。",
+        "tags": [
+          "微软",
+          "竞争"
         ],
         "target_user": "",
         "verticals": []
@@ -4186,6 +4641,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "9b4d990f1c7648b9e0a22bb7246b7e098b2361db21306fec84a36ec059f56b54": {
+      "created_at": "2026-07-30T03:28:09.351969+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-codex-rust-alpha-0.147.0.2",
+        "evidence_status": "first_party",
+        "follow_up": "关注后续版本是否有实质性更新。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "github:release:362128612",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Codex",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI Codex Rust SDK的alpha版本发布，但内容为空，无实质性更新说明，对产品经理价值低。",
+        "region": "global",
+        "score": 5.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "OpenAI Codex发布Rust SDK的alpha版本，但无详细变更说明。",
+        "tags": [
+          "SDK",
+          "Rust"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "9b9102b022d59d594cad549894a2e141d89bd3a57326482cbfc102d6e4fcddc1": {
       "created_at": "2026-07-26T04:07:02.363223+00:00",
       "model": "deepseek-v4-flash",
@@ -4380,6 +4873,45 @@
       },
       "stage": "deep_analysis"
     },
+    "a11edeffae2e025dd4f3c550aade9a9d7ac1a312575a8cc2a62251a82d9df8da": {
+      "created_at": "2026-07-30T03:28:00.813509+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "matthew-green-anthropic-cryptanalysis-2026",
+        "evidence_status": "reported",
+        "follow_up": "关注Anthropic具体研究成果",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:simonwillison.net_atom_everything_:4930bf7708b02209",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "引用密码学专家对Anthropic新结果的评论，涉及后量子密码学，与AI产品直接关联弱，属于学术讨论。",
+        "region": "global",
+        "score": 4.0,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "密码学专家评论Anthropic的AI密码分析能力，认为正值后量子密码转型期。",
+        "tags": [
+          "密码学",
+          "Anthropic",
+          "后量子"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "a123ebb9f9b52b26b3d48370d2fffdfc53bb0513c5ef205e3bd5076bc9019cbf": {
       "created_at": "2026-07-26T04:06:44.242713+00:00",
       "model": "deepseek-v4-flash",
@@ -4451,6 +4983,160 @@
           "微控制器",
           "ESP32",
           "开源"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "a30de0241248ab75720d2209bee75cd6348f8b76f124e14fffb9ad86e0110c04": {
+      "created_at": "2026-07-30T03:27:45.918955+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "lovable-secures-connected-data",
+        "evidence_status": "first_party",
+        "follow_up": "可关注Lovable后续产品更新",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "public_web:sitemap:d90f9326e010dc006510",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Lovable",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Lovable官方博客，产品案例，说明如何保护连接数据，对AI产品安全有参考价值。",
+        "region": "global",
+        "score": 7.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Lovable官方博客介绍其AI产品如何安全连接用户数据，值得产品经理关注。",
+        "tags": [
+          "AI产品",
+          "数据安全"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "a4da8b2a54ac0b6b23fc13455468af1afc4bad9b9143dec091d3785ebc086f2c": {
+      "created_at": "2026-07-30T03:28:00.813232+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "meta-personal-ai-agents-2026",
+        "evidence_status": "reported",
+        "follow_up": "关注Meta个人AI智能体产品发布",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:9e8446d68bd69810",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "扎克伯格预告个人AI智能体愿景，但无具体产品、Demo或用户反馈，属于高层战略发言，信息增量有限。",
+        "region": "global",
+        "score": 5.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "扎克伯格计划大力推动个人AI智能体，能代表用户执行任务。",
+        "tags": [
+          "Meta",
+          "个人AI智能体",
+          "战略"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "a5c4672bd098cfc74bc9003f6f4b32dc9cdd0113e22bc2f7dccbf9cbef950fb9": {
+      "created_at": "2026-07-30T03:28:00.813267+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "openai-hardware-family-2026",
+        "evidence_status": "reported",
+        "follow_up": "关注OpenAI硬件产品发布",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:f777d8824fc58068",
+        "intelligence_type": "early_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI总裁透露正在构建AI聊天机器人的设备家族，但未确认具体产品形态和发布时间，属于早期信号。",
+        "region": "global",
+        "score": 6.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "OpenAI总裁表示正在构建AI聊天机器人的设备家族，但未透露细节。",
+        "tags": [
+          "OpenAI",
+          "硬件",
+          "设备"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "a6984284d41d6474560658ca3201704ec086d88f5ea3405ae734372ec7f819c1": {
+      "created_at": "2026-07-30T03:27:45.919023+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "agnes-2-5-pro-alpha-release",
+        "evidence_status": "reported",
+        "follow_up": "关注模型性能评测和产品应用",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "public_web:sitemap:462efea7c6c603d0b96d",
+        "intelligence_type": "model_capability",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Agnes 2.5 Pro Alpha",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "新模型发布，Agnes 2.5 Pro Alpha，来自Artificial Analysis报道，模型能力更新，可能催生新产品。",
+        "region": "global",
+        "score": 8.0,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "Agnes AI发布Agnes 2.5 Pro Alpha模型，值得关注其能力变化。",
+        "tags": [
+          "模型发布",
+          "Agnes"
         ],
         "target_user": "",
         "verticals": []
@@ -4573,6 +5259,46 @@
       },
       "stage": "candidate_analysis"
     },
+    "b07f24944869109c4a1df8d1a983ddc6ef70456bfc8c183a11b43e57099d59ff": {
+      "created_at": "2026-07-30T03:28:00.813401+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "ai-worm-word-prompt-injection-2026",
+        "evidence_status": "verified",
+        "follow_up": "关注微软修复措施及类似攻击在其他Copilot产品中的风险",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:simonwillison.net_atom_everything_:dc6dd2ecfc18702f",
+        "intelligence_type": "model_capability",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Microsoft Copilot for Word",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "发现针对Microsoft Word Copilot的提示注入变种，可自我复制形成蠕虫，有具体技术细节和复现方法，对AI产品安全有重要启示。",
+        "region": "global",
+        "score": 8.0,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "研究者发现一种针对Word Copilot的提示注入攻击，可自我复制传播。",
+        "tags": [
+          "安全",
+          "提示注入",
+          "Copilot",
+          "Word"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "b21f7f50c1d44fb79c42914dac21d666dd3adaad829bc278b8798c5cf052391f": {
       "created_at": "2026-07-26T04:07:17.345673+00:00",
       "model": "deepseek-v4-flash",
@@ -4604,6 +5330,44 @@
         "summary_zh": "风闻文章讨论DeepSeek工资待遇，无实质产品内容。",
         "tags": [
           "行业评论"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "b3004e8abcd2e0d7fa5311b7c5f9b46ca0f2b6c87689430e78ed0561543bac07": {
+      "created_at": "2026-07-30T03:27:45.922009+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "microsoft-anthropic-investment-3.2b",
+        "evidence_status": "reported",
+        "follow_up": "无",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:c47c204727d23e91",
+        "intelligence_type": "business_policy",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "微软财报披露投资Anthropic收益，属于财务信息，无产品增量，信噪比低。",
+        "region": "global",
+        "score": 5.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "微软从Anthropic投资中获利32亿美元，但OpenAI投资表现不一。",
+        "tags": [
+          "微软",
+          "投资"
         ],
         "target_user": "",
         "verticals": []
@@ -4680,6 +5444,76 @@
         "tags": [
           "Agent",
           "科学计算"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "b9265b1db450ad82f7118b5de117ca8ebab63308abd58146b10f2506effe5d3c": {
+      "created_at": "2026-07-30T03:28:42.894651+00:00",
+      "model": "kimi-k2.6",
+      "prompt_version": "deep-v3-beginner",
+      "result": {
+        "ai_role": "Gemma 4 26B 模型负责根据输入文本逐 token 生成回复；TurboFieldfare 负责在内存和 SSD 之间调度模型的不同部件，让大模型能在小内存机器上运转",
+        "evidence_status": "verified",
+        "hands_on_exercise": "30 分钟：在任意 Mac 上安装 TurboFieldfare，用 curl 测试它的 OpenAI 兼容接口（curl http://localhost:端口号/v1/chat/completions），对比开启/关闭工具调用时的响应差异；再用活动监视器观察内存是否真压在 2GB 左右",
+        "implementation_idea": "把模型拆成「公共基础部分」和「专家部分」。公共部分（约 1.35GB）和计算缓存常驻内存；生成每个词时，只从硬盘读取真正用得上的那几个专家，同时 GPU 不闲着算别的。用个小缓存记住刚读过的专家，减少重复读盘。",
+        "learning_points": [
+          "MoE（混合专家）：不是每次都用模型全部参数，而是按输入动态挑几个「专家」子网络，省算力——就像医院不是每次会诊都把所有科室主任叫来",
+          "KV Cache：大模型生成句子时，会把已经算过的上下文结果存起来，避免重复计算，但这东西也吃内存",
+          "量化（Quantization）：把模型权重从 32 位浮点数压成 4 位，体积砍到 1/8，精度损失可控"
+        ],
+        "limitations_or_uncertainties": "M1 Mac 需手动改两行 Swift 代码才能编译，且会损失 2.4 倍预填充加速；与 llama.cpp 的 mmap 方案相比，真实延迟差距未公开基准测试；DiffusionGemma 支持尚在他人项目阶段，未合并",
+        "product_name": "TurboFieldfare",
+        "sources": [
+          "https://github.com/drumih/turbo-fieldfare",
+          "https://news.ycombinator.com/item?id=49098510"
+        ],
+        "target_users": "想在低内存 Mac 上本地跑大语言模型的开发者和技术爱好者；需要离线 AI 但不想买高配机器的人",
+        "title_zh": "开源引擎让 260 亿参数大模型在 2GB 内存的 Mac 上跑起来",
+        "usage_flow": [
+          "下载 Mac 应用，首次运行自动从 Hugging Face 拉取 15GB 模型权重",
+          "启动本地 OpenAI 兼容服务，用任意客户端或代码接入",
+          "输入提示词，引擎自动决定从 SSD 调取哪些「专家」部件",
+          "收到流式返回的生成结果，支持工具调用和上下文缓存复用"
+        ],
+        "user_problem": "Gemma 4 26B 模型量化后还要 14GB，8GB 或 16GB 内存的 Mac 根本装不下，传统推理工具直接拒绝运行或卡死",
+        "what_it_is": "TurboFieldfare 是一个专为苹果 M 系列芯片 Mac 写的推理引擎，能把 14GB 的 AI 模型塞进约 2GB 内存里运行，靠 SSD 流式加载关键部件。"
+      },
+      "stage": "deep_analysis"
+    },
+    "b9941155e6727ea20d41c1ba7c394aa23102713bcea4ce7c26e05533fac28c16": {
+      "created_at": "2026-07-30T03:27:45.921814+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "not-much-happened-today",
+        "evidence_status": "reported",
+        "follow_up": "无",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "newsletter:feed:b0674db36a69ac0ea3a6",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": false,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "内容为AI新闻汇总，但标题说'not much happened'，信息量低，且来源为聚合，信噪比低。",
+        "region": "global",
+        "score": 4.0,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "AI新闻汇总，提及OpenAI agent安全事件，但信息零散。",
+        "tags": [
+          "AI新闻"
         ],
         "target_user": "",
         "verticals": []
@@ -4840,6 +5674,46 @@
       },
       "stage": "candidate_analysis"
     },
+    "bedc476593e5a58129f1852d76125fc0725ab1e0a0fd07553962fd1f69b6ef38": {
+      "created_at": "2026-07-30T03:28:00.813618+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-agents-python-v0.19.1",
+        "evidence_status": "first_party",
+        "follow_up": "关注后续版本新功能",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "github:release:361579740",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "openai-agents-python",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI官方Agent SDK发布新版本，包含沙箱路径支持、WebSocket错误重试等修复，对构建AI Agent产品有直接实用价值。",
+        "region": "global",
+        "score": 7.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "OpenAI发布agents-python v0.19.1，修复多项问题并支持原生主机路径。",
+        "tags": [
+          "OpenAI",
+          "Agent",
+          "SDK",
+          "Python"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "c0d35db6569179823cb743b138cfebffc229866d2513babf9df74cd614e55b96": {
       "created_at": "2026-07-25T16:38:13.701911+00:00",
       "model": "deepseek-v4-flash",
@@ -4992,6 +5866,43 @@
       },
       "stage": "candidate_analysis"
     },
+    "c953d8d4e1eb1a356ba0e51f0b4eddb7cc189f9c15601bbf06742dfbe2522927": {
+      "created_at": "2026-07-30T03:27:45.919054+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "ai-experiments-fun-fruitful",
+        "evidence_status": "reported",
+        "follow_up": "无",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "newsletter:feed:29e8715e42e52bb87b30",
+        "intelligence_type": "builder_insight",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "标题泛泛，内容不详，来源为newsletter，信噪比低，无具体产品细节。",
+        "region": "global",
+        "score": 5.0,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "Dharmesh分享AI实验心得，但缺乏具体产品信息。",
+        "tags": [
+          "AI实验"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "c9b2a405adfc02f4f10dfa87067167d92fed3e18e60afc5dc77c1c0b120f2622": {
       "created_at": "2026-07-26T04:07:17.345834+00:00",
       "model": "deepseek-v4-flash",
@@ -5096,6 +6007,45 @@
         "tags": [
           "Agent",
           "API"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "d5c4832a39249c743daee61fe741bef6750d2465df4448234a55032b74cd6f4a": {
+      "created_at": "2026-07-30T03:27:45.921918+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "openai-chatgpt-academic-researchers",
+        "evidence_status": "first_party",
+        "follow_up": "关注该计划对科研AI产品的影响",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:openai.com_news_rss.xml:47da73cdc4f72b4c",
+        "intelligence_type": "business_policy",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "ChatGPT",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI官方宣布向10万学术研究者免费提供ChatGPT高级模型，直接推动AI在科研领域的应用，是重要的产品策略。",
+        "region": "global",
+        "score": 8.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "OpenAI向10万学术研究者免费提供ChatGPT高级模型，加速科学发现。",
+        "tags": [
+          "OpenAI",
+          "ChatGPT",
+          "学术"
         ],
         "target_user": "",
         "verticals": []
@@ -5437,6 +6387,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "e2e831a7e7daf6876f1c1bb41be7c3ffe721fdae806e9ac9cd117157c02ccf58": {
+      "created_at": "2026-07-30T03:27:45.921876+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-arc-agi-3-settings",
+        "evidence_status": "first_party",
+        "follow_up": "关注这些设置如何应用于实际产品",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:openai.com_news_rss.xml:265c6a0134aba9b6",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "GPT-5.6",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI官方发布，展示如何通过两个API设置将ARC-AGI-3分数提升三倍，直接解锁新模型能力，对产品构建有重要参考。",
+        "region": "global",
+        "score": 9.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "OpenAI发现两个API设置可大幅提升GPT-5.6在ARC-AGI-3上的表现，为AI产品优化提供新思路。",
+        "tags": [
+          "OpenAI",
+          "ARC-AGI",
+          "模型能力"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "e34fd6779e9839888e6175348b6aae8b2fde5e0ba6cbead667ca07eac33d680e": {
       "created_at": "2026-07-29T01:53:26.757584+00:00",
       "model": "deepseek-v4-flash",
@@ -5654,6 +6643,43 @@
         "what_it_is": "微软发布的首个专门用于网络安全的AI模型，以及一个能自主执行安全任务的代理系统"
       },
       "stage": "deep_analysis"
+    },
+    "ea177d264111fc6833d95c10a37849e5999b2edb6f0c44fc28d44e77d1bc7442": {
+      "created_at": "2026-07-30T03:28:09.352177+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "ai-startups-publishing-decline",
+        "evidence_status": "reported",
+        "follow_up": "无。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:49103285",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "讨论AI初创公司减少发表研究，但内容为评论，缺乏一手证据，对产品经理增量有限。",
+        "region": "global",
+        "score": 6.0,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "文章讨论AI初创公司减少发表研究，评论者分享个人经历。",
+        "tags": [
+          "行业观察"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
     },
     "ea7b966ff70a8f5dcf731a10325b9c53ece168b81b360911187846b4627e97e7": {
       "created_at": "2026-07-28T03:48:25.674693+00:00",
@@ -6141,6 +7167,45 @@
         "what_it_is": "OpenAI 给企业团队用的 ChatGPT Work 产品里，AI agent（智能体，能自主执行多步骤任务的 AI）新增了一项能力：可以像真人一样登录需要用户名密码的网站，而且只需登录一次，之后跨会话都能保持登录状态。"
       },
       "stage": "deep_analysis"
+    },
+    "ffbe63a26bf14fc73c8e681370331baa229e347e96453007fa3dc288db892764": {
+      "created_at": "2026-07-30T03:28:09.352363+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "turbo-fieldfare-gemma4-inference-engine",
+        "evidence_status": "first_party",
+        "follow_up": "关注后续是否支持更多模型或优化。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:49098510",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "TurboFieldfare",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "开源推理引擎，在低内存Mac上运行Gemma 4，有具体实现和性能数据，对AI产品经理有参考价值。",
+        "region": "global",
+        "score": 8.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "开发者构建了TurboFieldfare引擎，可在2GB RAM的Mac上运行Gemma 4模型，通过SSD流式传输专家权重实现。",
+        "tags": [
+          "推理引擎",
+          "开源",
+          "Gemma"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
     },
     "ffbf120fdc88f9ed1ff5618946232e6a059b7100bfb70d0c760e3dc57cfa777a": {
       "created_at": "2026-07-26T04:08:20.723282+00:00",
