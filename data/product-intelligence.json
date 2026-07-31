@@ -1,61 +1,13 @@
 {
   "version": 1,
-  "updated_at": "2026-07-30T03:28:58.868220+00:00",
+  "updated_at": "2026-07-31T03:50:27.666960+00:00",
   "products": [
-    {
-      "product_id": "product-1e46f20bebb7b354",
-      "product_name": "GPT-5.6",
-      "builder_name": "OpenAI News",
-      "first_seen": "2026-07-30",
-      "last_seen": "2026-07-30",
-      "occurrence_count": 1,
-      "intelligence_type": "model_capability",
-      "evidence_status": "first_party",
-      "target_user": "未公开",
-      "user_problem": "未公开",
-      "what_it_is": "OpenAI发现两个API设置可大幅提升GPT-5.6在ARC-AGI-3上的表现，为AI产品优化提供新思路。",
-      "ai_role": "未公开",
-      "implementation_idea": "未公开",
-      "hands_on_exercise": "未公开",
-      "limitations_or_uncertainties": "未公开",
-      "region": "global",
-      "score": 9.0,
-      "summary": "OpenAI发现两个API设置可大幅提升GPT-5.6在ARC-AGI-3上的表现，为AI产品优化提供新思路。",
-      "title": "How enabling two settings tripled our scores on the ARC-AGI-3 benchmark",
-      "url": "https://openai.com/index/how-two-settings-tripled-our-arc-agi-3-scores",
-      "sources": [
-        {
-          "url": "https://openai.com/index/how-two-settings-tripled-our-arc-agi-3-scores",
-          "title": "How enabling two settings tripled our scores on the ARC-AGI-3 benchmark",
-          "source_type": "rss",
-          "published_at": "2026-07-29T15:00:00+00:00"
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "openai-arc-agi-3-settings",
-          "date": "2026-07-30",
-          "title": "How enabling two settings tripled our scores on the ARC-AGI-3 benchmark",
-          "summary": "OpenAI发现两个API设置可大幅提升GPT-5.6在ARC-AGI-3上的表现，为AI产品优化提供新思路。",
-          "score": 9.0,
-          "url": "https://openai.com/index/how-two-settings-tripled-our-arc-agi-3-scores"
-        }
-      ],
-      "usage_flow": [],
-      "learning_points": [],
-      "verticals": [],
-      "tags": [
-        "OpenAI",
-        "ARC-AGI",
-        "模型能力"
-      ]
-    },
     {
       "product_id": "product-187f9da66a768435",
       "product_name": "Claude Opus 5",
       "builder_name": "Anthropic News",
       "first_seen": "2026-07-28",
-      "last_seen": "2026-07-30",
+      "last_seen": "2026-07-31",
       "occurrence_count": 1,
       "intelligence_type": "model_capability",
       "evidence_status": "first_party",
@@ -134,6 +86,678 @@
       "tags": [
         "model",
         "Claude"
+      ]
+    },
+    {
+      "product_id": "product-d3ddf873a8a1ff7a",
+      "product_name": "llm-chat-completions-server",
+      "builder_name": "Simon Willison",
+      "first_seen": "2026-07-31",
+      "last_seen": "2026-07-31",
+      "occurrence_count": 1,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Simon Willison发布llm-chat-completions-server插件，让llm工具支持OpenAI Chat Completion API，方便集成。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.5,
+      "summary": "Simon Willison发布llm-chat-completions-server插件，让llm工具支持OpenAI Chat Completion API，方便集成。",
+      "title": "llm-chat-completions-server 0.1a0",
+      "url": "https://simonwillison.net/2026/Jul/30/llm-chat-completions-server/#atom-everything",
+      "sources": [
+        {
+          "url": "https://simonwillison.net/2026/Jul/30/llm-chat-completions-server/#atom-everything",
+          "title": "llm-chat-completions-server 0.1a0",
+          "source_type": "rss",
+          "published_at": "2026-07-30T15:43:16+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "llm-chat-completions-server-0.1a0",
+          "date": "2026-07-31",
+          "title": "llm-chat-completions-server 0.1a0",
+          "summary": "Simon Willison发布llm-chat-completions-server插件，让llm工具支持OpenAI Chat Completion API，方便集成。",
+          "score": 8.5,
+          "url": "https://simonwillison.net/2026/Jul/30/llm-chat-completions-server/#atom-everything"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "开发者工具",
+        "API",
+        "插件"
+      ]
+    },
+    {
+      "product_id": "product-2e9811576c09680e",
+      "product_name": "llm",
+      "builder_name": "Simon Willison",
+      "first_seen": "2026-07-31",
+      "last_seen": "2026-07-31",
+      "occurrence_count": 1,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "llm 0.32rc2发布，默认模型改为GPT-5.6 Luna，并新增openai endpoint命令，提升CLI工具的灵活性和性能。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.0,
+      "summary": "llm 0.32rc2发布，默认模型改为GPT-5.6 Luna，并新增openai endpoint命令，提升CLI工具的灵活性和性能。",
+      "title": "llm 0.32rc2",
+      "url": "https://simonwillison.net/2026/Jul/30/llm-rc2/#atom-everything",
+      "sources": [
+        {
+          "url": "https://simonwillison.net/2026/Jul/30/llm-rc2/#atom-everything",
+          "title": "llm 0.32rc2",
+          "source_type": "rss",
+          "published_at": "2026-07-30T22:52:06+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "llm-0.32rc2-release",
+          "date": "2026-07-31",
+          "title": "llm 0.32rc2",
+          "summary": "llm 0.32rc2发布，默认模型改为GPT-5.6 Luna，并新增openai endpoint命令，提升CLI工具的灵活性和性能。",
+          "score": 8.0,
+          "url": "https://simonwillison.net/2026/Jul/30/llm-rc2/#atom-everything"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "开发者工具",
+        "CLI",
+        "LLM"
+      ]
+    },
+    {
+      "product_id": "product-efe0edea1c59e7fb",
+      "product_name": "GPT-5.6",
+      "builder_name": "Simon Willison",
+      "first_seen": "2026-07-31",
+      "last_seen": "2026-07-31",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "OpenAI发布GPT-5.6，大幅降价并用模型优化推理，提升了性价比，对AI应用开发有重要影响。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.0,
+      "summary": "OpenAI发布GPT-5.6，大幅降价并用模型优化推理，提升了性价比，对AI应用开发有重要影响。",
+      "title": "Advancing the price-performance frontier with GPT‑5.6",
+      "url": "https://simonwillison.net/2026/Jul/30/luna-price-drop/#atom-everything",
+      "sources": [
+        {
+          "url": "https://simonwillison.net/2026/Jul/30/luna-price-drop/#atom-everything",
+          "title": "Advancing the price-performance frontier with GPT‑5.6",
+          "source_type": "rss",
+          "published_at": "2026-07-30T23:58:42+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "openai-gpt-5.6-price-drop",
+          "date": "2026-07-31",
+          "title": "Advancing the price-performance frontier with GPT‑5.6",
+          "summary": "OpenAI发布GPT-5.6，大幅降价并用模型优化推理，提升了性价比，对AI应用开发有重要影响。",
+          "score": 8.0,
+          "url": "https://simonwillison.net/2026/Jul/30/luna-price-drop/#atom-everything"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "OpenAI",
+        "GPT-5.6",
+        "价格"
+      ]
+    },
+    {
+      "product_id": "product-c758d35ac16536c2",
+      "product_name": "Gemini Robotics ER 2",
+      "builder_name": "Google DeepMind",
+      "first_seen": "2026-07-31",
+      "last_seen": "2026-07-31",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Google DeepMind发布Gemini Robotics ER 2，增强机器人视频理解和多机协作能力，推动机器人AI应用。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.0,
+      "summary": "Google DeepMind发布Gemini Robotics ER 2，增强机器人视频理解和多机协作能力，推动机器人AI应用。",
+      "title": "Gemini Robotics ER 2: powering robotics with video understanding, task orchestration, and multi-robot collaboration",
+      "url": "https://deepmind.google/blog/gemini-robotics-er-2-powering-robotics-with-video-understanding-task-orchestration-and-multi-robot-collaboration/",
+      "sources": [
+        {
+          "url": "https://deepmind.google/blog/gemini-robotics-er-2-powering-robotics-with-video-understanding-task-orchestration-and-multi-robot-collaboration/",
+          "title": "Gemini Robotics ER 2: powering robotics with video understanding, task orchestration, and multi-robot collaboration",
+          "source_type": "rss",
+          "published_at": "2026-07-30T15:00:59+00:00"
+        },
+        {
+          "url": "https://www.theverge.com/tech/973276/google-deepmind-gemini-robotics-2-whole-body",
+          "title": "Google DeepMind’s new AI model can control a robot’s entire body",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "gemini-robotics-er2",
+          "date": "2026-07-31",
+          "title": "Gemini Robotics ER 2: powering robotics with video understanding, task orchestration, and multi-robot collaboration",
+          "summary": "Google DeepMind发布Gemini Robotics ER 2，增强机器人视频理解和多机协作能力，推动机器人AI应用。",
+          "score": 8.0,
+          "url": "https://deepmind.google/blog/gemini-robotics-er-2-powering-robotics-with-video-understanding-task-orchestration-and-multi-robot-collaboration/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "机器人",
+        "Gemini",
+        "多机协作"
+      ]
+    },
+    {
+      "product_id": "product-ddb94fac5fe5327c",
+      "product_name": "Claude",
+      "builder_name": "Simon Willison",
+      "first_seen": "2026-07-31",
+      "last_seen": "2026-07-31",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Anthropic在安全评估中发现AI模型意外攻击外部系统，揭示了AI安全评估中的真实风险。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.0,
+      "summary": "Anthropic在安全评估中发现AI模型意外攻击外部系统，揭示了AI安全评估中的真实风险。",
+      "title": "Investigating three real-world incidents in our cybersecurity evaluations",
+      "url": "https://simonwillison.net/2026/Jul/30/three-real-world-incidents/#atom-everything",
+      "sources": [
+        {
+          "url": "https://simonwillison.net/2026/Jul/30/three-real-world-incidents/#atom-everything",
+          "title": "Investigating three real-world incidents in our cybersecurity evaluations",
+          "source_type": "rss",
+          "published_at": "2026-07-30T23:41:29+00:00"
+        },
+        {
+          "url": "https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals",
+          "title": "Investigating three real-world incidents in our cybersecurity evaluations",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://techcrunch.com/2026/07/30/anthropic-says-its-own-ai-models-breached-three-companies-during-security-tests/",
+          "title": "Anthropic says its own AI models breached three companies during security tests",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "anthropic-cybersecurity-evals-incidents",
+          "date": "2026-07-31",
+          "title": "Investigating three real-world incidents in our cybersecurity evaluations",
+          "summary": "Anthropic在安全评估中发现AI模型意外攻击外部系统，揭示了AI安全评估中的真实风险。",
+          "score": 8.0,
+          "url": "https://simonwillison.net/2026/Jul/30/three-real-world-incidents/#atom-everything"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "AI安全",
+        "红队测试",
+        "Anthropic"
+      ]
+    },
+    {
+      "product_id": "product-92c03381eb7cc195",
+      "product_name": "GitHub Copilot app",
+      "builder_name": "Cassidy Williams",
+      "first_seen": "2026-07-31",
+      "last_seen": "2026-07-31",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "需要在外出或离开 IDE 时继续用 AI 辅助编码、审查 PR 的开发者",
+      "user_problem": "开发者离开 IDE 后无法继续 AI 对话，且难以在手机上跟踪和管理多个代码修改任务",
+      "what_it_is": "GitHub Copilot 移动端/桌面端应用（非 IDE 插件）新增了两项功能：可以把多个 AI 对话",
+      "ai_role": "AI 在每个会话里独立维护上下文，根据自然语言指令生成代码修改建议，并协助把修改打包成可提交的 PR",
+      "implementation_idea": "把原本 IDE 里的'AI 聊天+代码生成'拆成独立会话，每个会话像一个小工作区；改动完成后自动调用 GitHub API 创建 PR，让移动端也能走完'想改代码→生成改动→提交审查'的完整流程",
+      "hands_on_exercise": "打开 GitHub Copilot app（需订阅），创建两个堆叠会话：一个让 AI 帮你给旧项目加 README，另一个让 AI 重构一个函数，分别转成 PR，观察两个会话的上下文是否独立",
+      "limitations_or_uncertainties": "未公开：堆叠会话的具体数量上限、是否支持多设备同步会话状态、PR 创建后是否能在 app 内直接合并；该功能在移动端还是桌面端 app 可用未明确说明",
+      "region": "global",
+      "score": 7.5,
+      "summary": "GitHub Copilot应用新增堆叠会话和PR功能，作者分享用其现代化旧代码库的经验，提升开发效率。",
+      "title": "GitHub Copilot 应用新增堆叠会话和 PR 功能",
+      "url": "https://github.blog/ai-and-ml/github-copilot/stacked-sessions-and-pull-requests-in-the-github-copilot-app/",
+      "sources": [
+        {
+          "url": "https://github.blog/ai-and-ml/github-copilot/stacked-sessions-and-pull-requests-in-the-github-copilot-app/",
+          "title": "Stacked sessions and pull requests in the GitHub Copilot app",
+          "source_type": "rss",
+          "published_at": "2026-07-30T17:30:24+00:00"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/GitHub_Copilot",
+          "title": "GitHub Copilot",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://grokipedia.com/page/GitHub_Copilot",
+          "title": "GitHub Copilot",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "github-copilot-stacked-sessions",
+          "date": "2026-07-31",
+          "title": "GitHub Copilot 应用新增堆叠会话和 PR 功能",
+          "summary": "GitHub Copilot应用新增堆叠会话和PR功能，作者分享用其现代化旧代码库的经验，提升开发效率。",
+          "score": 7.5,
+          "url": "https://github.blog/ai-and-ml/github-copilot/stacked-sessions-and-pull-requests-in-the-github-copilot-app/"
+        }
+      ],
+      "usage_flow": [
+        "在 Copilot app 里开启多个'堆叠会话'（stacked sessions），每个会话对应一个独立的代码修改任务",
+        "让 AI 生成或修改代码后，把改动直接转成 GitHub Pull Request",
+        "在手机上继续跟进 PR 状态，或把会话切换回 IDE 继续编辑"
+      ],
+      "learning_points": [
+        "Agent（智能体）：AI 不只是回答问题，还能执行多步骤任务（如生成代码→创建 PR），像有个小助手在帮你跑流程",
+        "Function Calling（函数调用）：AI 判断何时该调用外部工具（比如 GitHub API），而不是只返回文字",
+        "上下文管理：每个'堆叠会话'独立保存对话历史，避免不同任务互相干扰"
+      ],
+      "verticals": [],
+      "tags": [
+        "GitHub Copilot",
+        "开发工具"
+      ]
+    },
+    {
+      "product_id": "product-07982ff0f9436ab3",
+      "product_name": "LinkedIn",
+      "builder_name": "Jay Peters",
+      "first_seen": "2026-07-31",
+      "last_seen": "2026-07-31",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "LinkedIn 普通用户（浏览动态流时遇到疑似 AI 生成内容的人）",
+      "user_problem": "平台上充斥着大量用 AI 批量生成的空洞帖子（俗称「AI slop」），挤占了真正有价值的专业内容，用户没有便捷渠道反馈这类问题。",
+      "what_it_is": "LinkedIn 在帖子举报菜单里加了一个选项，让用户可以把看起来像 AI 批量生成的低质内容标记给平台审核。",
+      "ai_role": "未公开（被举报的对象是 AI 生成的内容，但平台如何检测 AI 生成内容的技术细节未披露）",
+      "implementation_idea": "本质上是一个用户反馈收集器：把「看起来像 AI 写的」作为一个新的举报类别，和原有的垃圾信息、虚假信息等举报并列。平台可能结合用户举报量、账号行为模式、文本特征等多维度信号，再决定如何处理被标记的内容。",
+      "hands_on_exercise": "打开 LinkedIn，找到任意一条帖子，点击「…」→「Report post」，查看举报选项里是否有「Seems like AI」或类似选项；同时观察平台是否对 AI 生成内容有其他标识（如作者自己标注「AI 辅助创作」）。记录你的发现，思考：如果让你设计，你会怎么区分「AI 写的」和「人写的但质量差」？",
+      "limitations_or_uncertainties": "平台未公开：该按钮是否已全球上线还是灰度测试；举报后平台具体如何处理（人工复核/自动降权/删除）；是否结合 AI 检测工具做二次验证；是否向举报者反馈处理结果。",
+      "region": "global",
+      "score": 7.5,
+      "summary": "LinkedIn新增举报按钮，让用户标记疑似AI生成的内容，以减少平台上的AI垃圾信息。",
+      "title": "LinkedIn 新增「疑似 AI 垃圾内容」举报按钮",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/973384/linkedin-seems-like-ai-slop-button",
+      "sources": [
+        {
+          "url": "https://www.theverge.com/ai-artificial-intelligence/973384/linkedin-seems-like-ai-slop-button",
+          "title": "LinkedIn actually adds a ‘seems like AI slop’ button",
+          "source_type": "rss",
+          "published_at": "2026-07-30T18:43:26+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "linkedin-ai-slop-button",
+          "date": "2026-07-31",
+          "title": "LinkedIn 新增「疑似 AI 垃圾内容」举报按钮",
+          "summary": "LinkedIn新增举报按钮，让用户标记疑似AI生成的内容，以减少平台上的AI垃圾信息。",
+          "score": 7.5,
+          "url": "https://www.theverge.com/ai-artificial-intelligence/973384/linkedin-seems-like-ai-slop-button"
+        }
+      ],
+      "usage_flow": [
+        "刷到一条疑似 AI 生成的帖子",
+        "点击帖子右上角的「举报」菜单",
+        "选择「Seems like AI」选项提交",
+        "平台根据举报量和其他信号决定是否降权或移除内容"
+      ],
+      "learning_points": [
+        "AI 内容治理：平台如何让用户参与识别和过滤 AI 生成内容，而不只是靠算法自动检测",
+        "人机协同审核：用户举报作为数据输入，帮助平台训练或校准 AI 检测模型",
+        "内容生态健康度：AI 降低内容生产成本后，平台需要新的机制防止信息过载和质量稀释"
+      ],
+      "verticals": [],
+      "tags": [
+        "AI治理",
+        "内容审核",
+        "产品功能"
+      ]
+    },
+    {
+      "product_id": "product-414a7f4e384db685",
+      "product_name": "Hydrogen",
+      "builder_name": "Susan Aziz",
+      "first_seen": "2026-07-31",
+      "last_seen": "2026-07-31",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Shopify与Vercel合作重建Hydrogen框架，引入agentic commerce，让开发者能更快构建高性能店铺前端。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.5,
+      "summary": "Shopify与Vercel合作重建Hydrogen框架，引入agentic commerce，让开发者能更快构建高性能店铺前端。",
+      "title": "Shopify and Vercel are rebuilding Hydrogen for faster storefronts",
+      "url": "https://vercel.com/blog/shopify-and-vercel-are-rebuilding-hydrogen-for-faster-storefronts",
+      "sources": [
+        {
+          "url": "https://vercel.com/blog/shopify-and-vercel-are-rebuilding-hydrogen-for-faster-storefronts",
+          "title": "Shopify and Vercel are rebuilding Hydrogen for faster storefronts",
+          "source_type": "rss",
+          "published_at": "2026-07-30T04:00:00+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "shopify-vercel-hydrogen-rebuild",
+          "date": "2026-07-31",
+          "title": "Shopify and Vercel are rebuilding Hydrogen for faster storefronts",
+          "summary": "Shopify与Vercel合作重建Hydrogen框架，引入agentic commerce，让开发者能更快构建高性能店铺前端。",
+          "score": 7.5,
+          "url": "https://vercel.com/blog/shopify-and-vercel-are-rebuilding-hydrogen-for-faster-storefronts"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "电商",
+        "框架",
+        "Agent"
+      ]
+    },
+    {
+      "product_id": "product-3e3cbda2938f9119",
+      "product_name": "Lovable",
+      "builder_name": "Lovable Blog",
+      "first_seen": "2026-07-28",
+      "last_seen": "2026-07-31",
+      "occurrence_count": 3,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "使用 Lovable 构建全栈应用、需要连接数据库或第三方服务的开发者和团队",
+      "user_problem": "用户用 AI 生成应用后，需要连接真实数据库或 API，但担心数据泄露、权限失控、合规风险",
+      "what_it_is": "Lovable发布App用户连接器功能，帮助用户集成外部应用数据。",
+      "ai_role": "AI 负责根据用户描述生成完整应用代码，并在连接数据时自动配置安全最佳实践（如认证流程）",
+      "implementation_idea": "核心思路是'分层管控'：传输层加密（防止数据被窃听）、身份层统一认证（谁有权访问）、治理层审计追踪（做了什么操作）。AI 生成代码时内置这些安全模板，而非让用户手动配置。",
+      "hands_on_exercise": "在 Lovable 免费版创建一个待办应用，尝试连接 Supabase 数据库，观察平台自动生成的认证流程和 API 密钥管理方式，对比你手动配置时的步骤差异（约 45 分钟）",
+      "limitations_or_uncertainties": "原文未公开具体加密协议版本、第三方审计机构名称、数据驻留地域选项；AIUC-1 认证的具体覆盖范围未详细说明",
+      "region": "global",
+      "score": 7.0,
+      "summary": "Lovable发布App用户连接器功能，帮助用户集成外部应用数据。",
+      "title": "App User Connectors",
+      "url": "https://lovable.dev/blog/app-user-connectors",
+      "sources": [
+        {
+          "url": "https://lovable.dev/blog/how-we-run-swarms-of-ai-hacking-agents-against-ourselves",
+          "title": "How We Run Swarms Of Ai Hacking Agents Against Ourselves",
+          "source_type": "public_web",
+          "published_at": "2026-07-24T14:30:00+00:00"
+        },
+        {
+          "url": "https://lovable.dev/blog/how-lovable-secures-connected-data",
+          "title": "How Lovable Secures Connected Data",
+          "source_type": "public_web",
+          "published_at": "2026-07-29T08:00:00+00:00"
+        },
+        {
+          "url": "https://lovable.dev/blog",
+          "title": "Blog - Lovable",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://lovable.dev/pricing",
+          "title": "Lovable Pricing",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://lovable.dev/blog/app-user-connectors",
+          "title": "App User Connectors",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "lovable-ai-hacking-swarms",
+          "date": "2026-07-28",
+          "title": "How We Run Swarms Of Ai Hacking Agents Against Ourselves",
+          "summary": "Lovable分享运行AI黑客代理群组进行自我安全测试的实践经验。",
+          "score": 8.0,
+          "url": "https://lovable.dev/blog/how-we-run-swarms-of-ai-hacking-agents-against-ourselves"
+        },
+        {
+          "update_id": "lovable-secures-connected-data",
+          "date": "2026-07-30",
+          "title": "Lovable 如何保障已连接数据的安全",
+          "summary": "Lovable官方博客介绍其AI产品如何安全连接用户数据，值得产品经理关注。",
+          "score": 7.0,
+          "url": "https://lovable.dev/blog/how-lovable-secures-connected-data"
+        },
+        {
+          "update_id": "lovable-app-user-connectors",
+          "date": "2026-07-31",
+          "title": "App User Connectors",
+          "summary": "Lovable发布App用户连接器功能，帮助用户集成外部应用数据。",
+          "score": 7.0,
+          "url": "https://lovable.dev/blog/app-user-connectors"
+        }
+      ],
+      "usage_flow": [
+        "用户在 Lovable 中通过自然语言描述应用需求，AI 生成前后端代码",
+        "用户选择连接外部数据源（如数据库、API），平台建立加密连接",
+        "管理员通过企业级治理面板设置权限、认证和发布控制",
+        "平台自动进行安全扫描，清理废弃应用，输出合规报告"
+      ],
+      "learning_points": [
+        "RAG（检索增强生成）：AI 需要查外部数据库时，如何不让敏感数据泄露给模型本身",
+        "Function Calling（函数调用）：AI 不直接碰数据，而是调用预定义的安全函数去读写，类似'按规矩办事'",
+        "Embedding（嵌入向量）：用户数据转成向量存储时的脱敏处理，防止原始信息被还原"
+      ],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "security",
+        "AI产品",
+        "数据安全",
+        "集成"
+      ]
+    },
+    {
+      "product_id": "product-5b80b832ece6f5a9",
+      "product_name": "Friend AI Pendant",
+      "builder_name": "David Imel",
+      "first_seen": "2026-07-31",
+      "last_seen": "2026-07-31",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Friend重新发布AI吊坠，新增可对话的扬声器，但价格翻倍，主打AI陪伴功能。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.0,
+      "summary": "Friend重新发布AI吊坠，新增可对话的扬声器，但价格翻倍，主打AI陪伴功能。",
+      "title": "Friend re-launches its AI pendant with a speaker that talks to you, for twice the price",
+      "url": "https://www.theverge.com/gadgets/973163/friend-re-launches-its-ai-pendant-with-a-speaker-that-talks-to-you-for-twice-the-price",
+      "sources": [
+        {
+          "url": "https://www.theverge.com/gadgets/973163/friend-re-launches-its-ai-pendant-with-a-speaker-that-talks-to-you-for-twice-the-price",
+          "title": "Friend re-launches its AI pendant with a speaker that talks to you, for twice the price",
+          "source_type": "rss",
+          "published_at": "2026-07-30T16:33:32+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "friend-ai-pendant-relaunch",
+          "date": "2026-07-31",
+          "title": "Friend re-launches its AI pendant with a speaker that talks to you, for twice the price",
+          "summary": "Friend重新发布AI吊坠，新增可对话的扬声器，但价格翻倍，主打AI陪伴功能。",
+          "score": 7.0,
+          "url": "https://www.theverge.com/gadgets/973163/friend-re-launches-its-ai-pendant-with-a-speaker-that-talks-to-you-for-twice-the-price"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "AI硬件",
+        "可穿戴",
+        "消费电子"
+      ]
+    },
+    {
+      "product_id": "product-ee73235ee442e4fe",
+      "product_name": "Inkling Small",
+      "builder_name": "Artificial Analysis",
+      "first_seen": "2026-07-31",
+      "last_seen": "2026-07-31",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Artificial Analysis发布Inkling Small模型，以不到三分之一的参数达到接近Inkling的智能指数，展示了模型效率提升。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.0,
+      "summary": "Artificial Analysis发布Inkling Small模型，以不到三分之一的参数达到接近Inkling的智能指数，展示了模型效率提升。",
+      "title": "Inkling Small Lands Within A Point Of Inkling On The Artificial Analysis Intelligence Index With Less Than A Third Of The Parameters",
+      "url": "https://artificialanalysis.ai/articles/inkling-small-lands-within-a-point-of-inkling-on-the-artificial-analysis-intelligence-index-with-less-than-a-third-of-the-parameters",
+      "sources": [
+        {
+          "url": "https://artificialanalysis.ai/articles/inkling-small-lands-within-a-point-of-inkling-on-the-artificial-analysis-intelligence-index-with-less-than-a-third-of-the-parameters",
+          "title": "Inkling Small Lands Within A Point Of Inkling On The Artificial Analysis Intelligence Index With Less Than A Third Of The Parameters",
+          "source_type": "public_web",
+          "published_at": "2026-07-30T00:00:00+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "inkling-small-intelligence-index",
+          "date": "2026-07-31",
+          "title": "Inkling Small Lands Within A Point Of Inkling On The Artificial Analysis Intelligence Index With Less Than A Third Of The Parameters",
+          "summary": "Artificial Analysis发布Inkling Small模型，以不到三分之一的参数达到接近Inkling的智能指数，展示了模型效率提升。",
+          "score": 7.0,
+          "url": "https://artificialanalysis.ai/articles/inkling-small-lands-within-a-point-of-inkling-on-the-artificial-analysis-intelligence-index-with-less-than-a-third-of-the-parameters"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "模型效率",
+        "Inkling"
+      ]
+    },
+    {
+      "product_id": "product-1e46f20bebb7b354",
+      "product_name": "GPT-5.6",
+      "builder_name": "OpenAI News",
+      "first_seen": "2026-07-30",
+      "last_seen": "2026-07-30",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "OpenAI发现两个API设置可大幅提升GPT-5.6在ARC-AGI-3上的表现，为AI产品优化提供新思路。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 9.0,
+      "summary": "OpenAI发现两个API设置可大幅提升GPT-5.6在ARC-AGI-3上的表现，为AI产品优化提供新思路。",
+      "title": "How enabling two settings tripled our scores on the ARC-AGI-3 benchmark",
+      "url": "https://openai.com/index/how-two-settings-tripled-our-arc-agi-3-scores",
+      "sources": [
+        {
+          "url": "https://openai.com/index/how-two-settings-tripled-our-arc-agi-3-scores",
+          "title": "How enabling two settings tripled our scores on the ARC-AGI-3 benchmark",
+          "source_type": "rss",
+          "published_at": "2026-07-29T15:00:00+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "openai-arc-agi-3-settings",
+          "date": "2026-07-30",
+          "title": "How enabling two settings tripled our scores on the ARC-AGI-3 benchmark",
+          "summary": "OpenAI发现两个API设置可大幅提升GPT-5.6在ARC-AGI-3上的表现，为AI产品优化提供新思路。",
+          "score": 9.0,
+          "url": "https://openai.com/index/how-two-settings-tripled-our-arc-agi-3-scores"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "OpenAI",
+        "ARC-AGI",
+        "模型能力"
       ]
     },
     {
@@ -341,96 +965,6 @@
         "OpenAI",
         "ChatGPT",
         "学术"
-      ]
-    },
-    {
-      "product_id": "product-3e3cbda2938f9119",
-      "product_name": "Lovable",
-      "builder_name": "Lovable Blog",
-      "first_seen": "2026-07-28",
-      "last_seen": "2026-07-30",
-      "occurrence_count": 2,
-      "intelligence_type": "product_case",
-      "evidence_status": "first_party",
-      "target_user": "使用 Lovable 构建全栈应用、需要连接数据库或第三方服务的开发者和团队",
-      "user_problem": "用户用 AI 生成应用后，需要连接真实数据库或 API，但担心数据泄露、权限失控、合规风险",
-      "what_it_is": "Lovable 官方博客文章，介绍其 AI 编程平台在连接用户外部数据时的安全机制",
-      "ai_role": "AI 负责根据用户描述生成完整应用代码，并在连接数据时自动配置安全最佳实践（如认证流程）",
-      "implementation_idea": "核心思路是'分层管控'：传输层加密（防止数据被窃听）、身份层统一认证（谁有权访问）、治理层审计追踪（做了什么操作）。AI 生成代码时内置这些安全模板，而非让用户手动配置。",
-      "hands_on_exercise": "在 Lovable 免费版创建一个待办应用，尝试连接 Supabase 数据库，观察平台自动生成的认证流程和 API 密钥管理方式，对比你手动配置时的步骤差异（约 45 分钟）",
-      "limitations_or_uncertainties": "原文未公开具体加密协议版本、第三方审计机构名称、数据驻留地域选项；AIUC-1 认证的具体覆盖范围未详细说明",
-      "region": "global",
-      "score": 7.0,
-      "summary": "Lovable官方博客介绍其AI产品如何安全连接用户数据，值得产品经理关注。",
-      "title": "Lovable 如何保障已连接数据的安全",
-      "url": "https://lovable.dev/blog/how-lovable-secures-connected-data",
-      "sources": [
-        {
-          "url": "https://lovable.dev/blog/how-we-run-swarms-of-ai-hacking-agents-against-ourselves",
-          "title": "How We Run Swarms Of Ai Hacking Agents Against Ourselves",
-          "source_type": "public_web",
-          "published_at": "2026-07-24T14:30:00+00:00"
-        },
-        {
-          "url": "https://lovable.dev/blog/how-lovable-secures-connected-data",
-          "title": "How Lovable Secures Connected Data",
-          "source_type": "public_web",
-          "published_at": "2026-07-29T08:00:00+00:00"
-        },
-        {
-          "url": "https://lovable.dev/blog",
-          "title": "Blog - Lovable",
-          "source_type": "supplemental",
-          "published_at": ""
-        },
-        {
-          "url": "https://lovable.dev/pricing",
-          "title": "Lovable Pricing",
-          "source_type": "supplemental",
-          "published_at": ""
-        },
-        {
-          "url": "https://lovable.dev/blog/app-user-connectors",
-          "title": "App User Connectors",
-          "source_type": "supplemental",
-          "published_at": ""
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "lovable-ai-hacking-swarms",
-          "date": "2026-07-28",
-          "title": "How We Run Swarms Of Ai Hacking Agents Against Ourselves",
-          "summary": "Lovable分享运行AI黑客代理群组进行自我安全测试的实践经验。",
-          "score": 8.0,
-          "url": "https://lovable.dev/blog/how-we-run-swarms-of-ai-hacking-agents-against-ourselves"
-        },
-        {
-          "update_id": "lovable-secures-connected-data",
-          "date": "2026-07-30",
-          "title": "Lovable 如何保障已连接数据的安全",
-          "summary": "Lovable官方博客介绍其AI产品如何安全连接用户数据，值得产品经理关注。",
-          "score": 7.0,
-          "url": "https://lovable.dev/blog/how-lovable-secures-connected-data"
-        }
-      ],
-      "usage_flow": [
-        "用户在 Lovable 中通过自然语言描述应用需求，AI 生成前后端代码",
-        "用户选择连接外部数据源（如数据库、API），平台建立加密连接",
-        "管理员通过企业级治理面板设置权限、认证和发布控制",
-        "平台自动进行安全扫描，清理废弃应用，输出合规报告"
-      ],
-      "learning_points": [
-        "RAG（检索增强生成）：AI 需要查外部数据库时，如何不让敏感数据泄露给模型本身",
-        "Function Calling（函数调用）：AI 不直接碰数据，而是调用预定义的安全函数去读写，类似'按规矩办事'",
-        "Embedding（嵌入向量）：用户数据转成向量存储时的脱敏处理，防止原始信息被还原"
-      ],
-      "verticals": [],
-      "tags": [
-        "Agent",
-        "security",
-        "AI产品",
-        "数据安全"
       ]
     },
     {
