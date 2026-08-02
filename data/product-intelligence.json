@@ -1,7 +1,477 @@
 {
   "version": 1,
-  "updated_at": "2026-08-01T03:51:09.425674+00:00",
+  "updated_at": "2026-08-02T03:54:07.560730+00:00",
   "products": [
+    {
+      "product_id": "product-4a6f555be1b665c9",
+      "product_name": "Astra",
+      "builder_name": "Simon Willison",
+      "first_seen": "2026-08-02",
+      "last_seen": "2026-08-02",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "OpenAI用内部模型Astra解决十个长期未解的数学难题，并开源形式化证明，展示强大推理能力。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.5,
+      "summary": "OpenAI用内部模型Astra解决十个长期未解的数学难题，并开源形式化证明，展示强大推理能力。",
+      "title": "Ten advances in mathematics and theoretical computer science",
+      "url": "https://simonwillison.net/2026/Aug/1/ten-advances-in-mathematics/#atom-everything",
+      "sources": [
+        {
+          "url": "https://simonwillison.net/2026/Aug/1/ten-advances-in-mathematics/#atom-everything",
+          "title": "Ten advances in mathematics and theoretical computer science",
+          "source_type": "rss",
+          "published_at": "2026-08-01T20:34:49+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "openai-ten-proofs",
+          "date": "2026-08-02",
+          "title": "Ten advances in mathematics and theoretical computer science",
+          "summary": "OpenAI用内部模型Astra解决十个长期未解的数学难题，并开源形式化证明，展示强大推理能力。",
+          "score": 8.5,
+          "url": "https://simonwillison.net/2026/Aug/1/ten-advances-in-mathematics/#atom-everything"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "OpenAI",
+        "数学推理",
+        "模型能力"
+      ]
+    },
+    {
+      "product_id": "product-e5b67fc29c55575b",
+      "product_name": "datasette-apps",
+      "builder_name": "Simon Willison",
+      "first_seen": "2026-08-02",
+      "last_seen": "2026-08-02",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "用 Datasette 做数据管理、同时想快速搭建内部小工具或数据看板的开发者；想用 AI Agent 自动化维护这些应用的人",
+      "user_problem": "开发者用 AI 生成或修改小应用后，得手动打开浏览器检查有没有 bug、样式对不对；应用多了之后，AI 也不知道用户有哪些应用可以改，得人来指。",
+      "what_it_is": "Datasette 的一个插件，让你能在 Datasette 平台里创建、托管和编辑小型网页应用（HTML/CSS/JS 单文件），最新版加了两个工具让 AI Agent 可以自动调试和列出应用。",
+      "ai_role": "AI Agent（这里指 Datasette Agent）负责自动发现应用、在后台隐形测试应用功能、根据结果编辑代码——相当于一个能自己'看'和'改'的自动化程序员。",
+      "implementation_idea": "核心 trick 是 app_debug() 用一个看不见的 iframe（CSS 设成透明+不接收点击）来加载应用，然后往里面注入 AI 提供的 JavaScript 代码做测试，比如量元素尺寸、检查功能是否正常。这利用了 datasette-agent 0.4a0 新增的 context.browser_task() 机制，让 AI 能在隔离环境里安全地'操作浏览器'。",
+      "hands_on_exercise": "30 分钟：去 GitHub 下载 datasette-apps 的 0.2a0 版本，本地装起 Datasette，创建一个最简单的 HTML 页面（比如显示当前时间），然后在 Datasette Agent 里尝试用自然语言让它'测试这个应用能否正常显示'，观察它是否会调用 app_debug() 工具并返回测试结果。",
+      "limitations_or_uncertainties": "未公开实际用户规模和稳定性；datasette-agent 0.4a0 的 context.browser_task() 具体安全边界未详细说明；隐形 iframe 测试是否能覆盖复杂交互场景（如需要用户登录、多页面跳转）未验证。",
+      "region": "global",
+      "score": 8.0,
+      "summary": "Simon Willison发布datasette-apps 0.2a0，新增工具让AI Agent能自动测试和编辑应用，提升开发效率。",
+      "title": "datasette-apps 0.2a0：让 AI Agent 能自动测试和修改网页应用",
+      "url": "https://simonwillison.net/2026/Aug/1/datasette-apps/#atom-everything",
+      "sources": [
+        {
+          "url": "https://simonwillison.net/2026/Aug/1/datasette-apps/#atom-everything",
+          "title": "datasette-apps 0.2a0",
+          "source_type": "rss",
+          "published_at": "2026-08-01T21:23:56+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "datasette-apps-0.2a0",
+          "date": "2026-08-02",
+          "title": "datasette-apps 0.2a0：让 AI Agent 能自动测试和修改网页应用",
+          "summary": "Simon Willison发布datasette-apps 0.2a0，新增工具让AI Agent能自动测试和编辑应用，提升开发效率。",
+          "score": 8.0,
+          "url": "https://simonwillison.net/2026/Aug/1/datasette-apps/#atom-everything"
+        }
+      ],
+      "usage_flow": [
+        "开发者在 Datasette 里创建或上传一个单文件网页应用（HTML+CSS+JS）",
+        "对 AI Agent 说'测试一下这个应用'或'帮我改改第三个应用'",
+        "Agent 调用 app_list() 找到你有权限改的应用，或用 app_debug() 打开隐形 iframe 跑 JS 测试",
+        "Agent 根据测试结果自动修 bug 或按指令修改应用代码"
+      ],
+      "learning_points": [
+        "Agent：不是简单问答的 AI，而是能调用工具、执行多步骤任务的 AI 系统，这里它调用了 app_debug() 和 app_list() 两个工具",
+        "Function Calling：AI 不直接生成答案，而是输出'我要调用某某工具、参数是什么'的结构化指令，让外部系统执行具体操作",
+        "iframe 沙箱：浏览器里一种隔离机制，让代码跑在独立环境里，即使出问题也不会影响到主页面，这里用来安全地让 AI 测试未知代码"
+      ],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "开源",
+        "开发工具"
+      ]
+    },
+    {
+      "product_id": "product-f5864add04ed9a88",
+      "product_name": "Seedance 2.5",
+      "builder_name": "njaremko",
+      "first_seen": "2026-08-02",
+      "last_seen": "2026-08-02",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "verified",
+      "target_user": "短视频创作者、广告制作人员、社交媒体内容生产者；西方电影制作人反馈匹配度一般",
+      "user_problem": "做高质量视频需要拍摄团队、后期剪辑，成本高、周期长；现有 AI 视频工具要么太短（几秒），要么角色/风格难以保持一致",
+      "what_it_is": "字节跳动旗下的 AI 视频生成模型，能把文字、图片、视频、音频等多种输入转成最长 30 秒的电影级视频片段。",
+      "ai_role": "根据用户的多模态输入，直接生成符合描述的视频画面，包括动作特效、镜头运动、场景转换",
+      "implementation_idea": "本质是一个'超级翻译器'：把文字、图片、声音这些人类能懂的信息，翻译成连续的视频帧序列。它靠大量视频数据学习'什么样的画面该跟着什么样的指令走'，再通过扩散模型（Diffusion Model，一种从噪声中逐步'去模糊'出清晰图像的技术）一帧帧生成连贯画面。多模态参考的作用是给 AI'定调子'——比如上传一张人物照片，AI 就会让这个角色在视频里保持一致长相。",
+      "hands_on_exercise": "打开 https://www.seeddance.io 或 Dreamina 的 Seedance 2.5 入口，用同一组文字提示词分别不加参考图、加 1 张人物照片、加 3 张风格参考图，各生成一次 5 秒视频，对比角色一致性和画面风格的差异，记录哪种参考组合最符合你的预期",
+      "limitations_or_uncertainties": "官方未公开训练数据规模、模型参数量、是否开源；社区反馈西方电影制作人需要的'演员对话场景'和'V2V（视频转视频，保持演员表演换背景/风格）'能力较弱；具体 API 定价和开放程度未明确",
+      "region": "china",
+      "score": 8.0,
+      "summary": "字节跳动发布Seedance 2.5视频生成模型，用户反馈质量高，但评论指出其侧重动作特效，与西方电影制作人需求有差异。",
+      "title": "字节跳动发布 Seedance 2.5 视频生成模型：单镜头 30 秒、多模态参考、4K 输出",
+      "url": "https://seed.bytedance.com/en/blog/one-take-creation-flexible-referencing-introducing-seedance-2-5",
+      "sources": [
+        {
+          "url": "https://seed.bytedance.com/en/blog/one-take-creation-flexible-referencing-introducing-seedance-2-5",
+          "title": "Seedance 2.5",
+          "source_type": "hackernews",
+          "published_at": "2026-08-01T20:45:12+00:00"
+        },
+        {
+          "url": "https://www.seeddance.io/models/seedance-2-5",
+          "title": "Seedance 2 . 5 Free: Try ByteDance AI Video, No Queue, Instant Results",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://dreamina.capcut.com/seedance/seedance-2-5",
+          "title": "Official Seedance 2 . 5 : 4K & 30s AI Video Generator",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "seedance-2.5-release",
+          "date": "2026-08-02",
+          "title": "字节跳动发布 Seedance 2.5 视频生成模型：单镜头 30 秒、多模态参考、4K 输出",
+          "summary": "字节跳动发布Seedance 2.5视频生成模型，用户反馈质量高，但评论指出其侧重动作特效，与西方电影制作人需求有差异。",
+          "score": 8.0,
+          "url": "https://seed.bytedance.com/en/blog/one-take-creation-flexible-referencing-introducing-seedance-2-5"
+        }
+      ],
+      "usage_flow": [
+        "在 Dreamina（剪映海外版）或 seeddance.io 等平台选择 Seedance 2.5 模型",
+        "输入文字描述，或上传图片/视频/音频作为参考（最多 50 个多模态参考）",
+        "设置参数（如 4K 分辨率、时长 up to 30 秒），点击生成",
+        "下载成品或做精确编辑后用于广告、社交媒体等场景"
+      ],
+      "learning_points": [
+        "T2V（Text-to-Video，文生视频）：输入文字描述，AI 输出视频，是这类产品的核心交互方式",
+        "多模态（Multimodal）：AI 同时处理文字、图像、声音、视频等多种信息类型，不是只看文字",
+        "扩散模型（Diffusion Model）：AI 生成图像/视频的常用技术，先从随机噪声开始，逐步'雕刻'出清晰内容"
+      ],
+      "verticals": [],
+      "tags": [
+        "视频生成",
+        "字节跳动",
+        "产品发布"
+      ]
+    },
+    {
+      "product_id": "product-72a47a1600f31c98",
+      "product_name": "Cursor",
+      "builder_name": "EugeneOZ",
+      "first_seen": "2026-08-02",
+      "last_seen": "2026-08-02",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Cursor意外移除使用页面成本信息，引发用户讨论，官方回应已修复，反映AI编程工具的用户关注点。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.0,
+      "summary": "Cursor意外移除使用页面成本信息，引发用户讨论，官方回应已修复，反映AI编程工具的用户关注点。",
+      "title": "Cursor removed cost information from the usage page and CSV export",
+      "url": "https://forum.cursor.com/t/usage-page-to-token-amount-what/167153",
+      "sources": [
+        {
+          "url": "https://forum.cursor.com/t/usage-page-to-token-amount-what/167153",
+          "title": "Cursor removed cost information from the usage page and CSV export",
+          "source_type": "hackernews",
+          "published_at": "2026-08-01T15:25:21+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "cursor-usage-page-cost-removal",
+          "date": "2026-08-02",
+          "title": "Cursor removed cost information from the usage page and CSV export",
+          "summary": "Cursor意外移除使用页面成本信息，引发用户讨论，官方回应已修复，反映AI编程工具的用户关注点。",
+          "score": 8.0,
+          "url": "https://forum.cursor.com/t/usage-page-to-token-amount-what/167153"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Cursor",
+        "AI编程",
+        "用户反馈"
+      ]
+    },
+    {
+      "product_id": "product-0e239c0f5ebbb0a8",
+      "product_name": "Symbio",
+      "builder_name": "huyedit",
+      "first_seen": "2026-08-02",
+      "last_seen": "2026-08-02",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Symbio是一个本地自我微调AI循环项目，根据错误进行训练，但尚处早期。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.0,
+      "summary": "Symbio是一个本地自我微调AI循环项目，根据错误进行训练，但尚处早期。",
+      "title": "Show HN: Symbio self fine-tuning AI loop",
+      "url": "https://github.com/huyedits/Symbio",
+      "sources": [
+        {
+          "url": "https://github.com/huyedits/Symbio",
+          "title": "Show HN: Symbio self fine-tuning AI loop",
+          "source_type": "hackernews",
+          "published_at": "2026-08-01T23:06:26+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "symbio-self-finetuning-loop",
+          "date": "2026-08-02",
+          "title": "Show HN: Symbio self fine-tuning AI loop",
+          "summary": "Symbio是一个本地自我微调AI循环项目，根据错误进行训练，但尚处早期。",
+          "score": 7.0,
+          "url": "https://github.com/huyedits/Symbio"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "微调",
+        "本地AI"
+      ]
+    },
+    {
+      "product_id": "product-79a2b6dd7d7c7939",
+      "product_name": "ChatGPT",
+      "builder_name": "Simon Willison",
+      "first_seen": "2026-08-02",
+      "last_seen": "2026-08-02",
+      "occurrence_count": 1,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "OpenAI联合创始人Greg Brockman透露内部员工不喜欢被同事的ChatGPT请求打扰，强调AI应增强而非隔阂人际关系。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.0,
+      "summary": "OpenAI联合创始人Greg Brockman透露内部员工不喜欢被同事的ChatGPT请求打扰，强调AI应增强而非隔阂人际关系。",
+      "title": "Quoting Greg Brockman",
+      "url": "https://simonwillison.net/2026/Aug/1/greg-brockman/#atom-everything",
+      "sources": [
+        {
+          "url": "https://simonwillison.net/2026/Aug/1/greg-brockman/#atom-everything",
+          "title": "Quoting Greg Brockman",
+          "source_type": "rss",
+          "published_at": "2026-08-01T22:29:44+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "brockman-chatgpt-slack",
+          "date": "2026-08-02",
+          "title": "Quoting Greg Brockman",
+          "summary": "OpenAI联合创始人Greg Brockman透露内部员工不喜欢被同事的ChatGPT请求打扰，强调AI应增强而非隔阂人际关系。",
+          "score": 7.0,
+          "url": "https://simonwillison.net/2026/Aug/1/greg-brockman/#atom-everything"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "OpenAI",
+        "人机协作"
+      ]
+    },
+    {
+      "product_id": "product-2d7a215225af38f3",
+      "product_name": "nano-llm-posttraining",
+      "builder_name": "popopanda",
+      "first_seen": "2026-08-02",
+      "last_seen": "2026-08-02",
+      "occurrence_count": 1,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "在8GB GPU上进行LLM后训练实验，展示SFT、DPO、GRPO等，但缺乏详细说明。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.0,
+      "summary": "在8GB GPU上进行LLM后训练实验，展示SFT、DPO、GRPO等，但缺乏详细说明。",
+      "title": "Show HN: Minimal LLM Post-Training Experiments on an 8GB GPU (SFT, DPO, GRPO)",
+      "url": "https://github.com/pochenai/nano-llm-posttraining",
+      "sources": [
+        {
+          "url": "https://github.com/pochenai/nano-llm-posttraining",
+          "title": "Show HN: Minimal LLM Post-Training Experiments on an 8GB GPU (SFT, DPO, GRPO)",
+          "source_type": "hackernews",
+          "published_at": "2026-08-01T12:30:32+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "nano-llm-posttraining-8gb",
+          "date": "2026-08-02",
+          "title": "Show HN: Minimal LLM Post-Training Experiments on an 8GB GPU (SFT, DPO, GRPO)",
+          "summary": "在8GB GPU上进行LLM后训练实验，展示SFT、DPO、GRPO等，但缺乏详细说明。",
+          "score": 7.0,
+          "url": "https://github.com/pochenai/nano-llm-posttraining"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "LLM",
+        "后训练",
+        "GPU"
+      ]
+    },
+    {
+      "product_id": "product-0d906e11fcf5bdbe",
+      "product_name": "DeepSeek V4 Flash",
+      "builder_name": "Artificial Analysis",
+      "first_seen": "2026-08-02",
+      "last_seen": "2026-08-02",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "verified",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "DeepSeek V4 Flash 0731在Artificial Analysis智能指数上得分50，比上一版高10分，显示模型能力提升。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.0,
+      "summary": "DeepSeek V4 Flash 0731在Artificial Analysis智能指数上得分50，比上一版高10分，显示模型能力提升。",
+      "title": "Deepseek V4 Flash 0731 Scores 50 On The Artificial Analysis Intelligence Index 10 Points Above Previous Deepseek V4 Flash",
+      "url": "https://artificialanalysis.ai/articles/deepseek-v4-flash-0731-scores-50-on-the-artificial-analysis-intelligence-index-10-points-above-previous-deepseek-v4-flash",
+      "sources": [
+        {
+          "url": "https://artificialanalysis.ai/articles/deepseek-v4-flash-0731-scores-50-on-the-artificial-analysis-intelligence-index-10-points-above-previous-deepseek-v4-flash",
+          "title": "Deepseek V4 Flash 0731 Scores 50 On The Artificial Analysis Intelligence Index 10 Points Above Previous Deepseek V4 Flash",
+          "source_type": "public_web",
+          "published_at": "2026-07-31T00:00:00+00:00"
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFB2OTlPV05yYUxtaVZVdVBnREtxc0dlaDNTRTBpV1hpdV8waWF4bkRGM0FycXNQNFlPUDV6c190NTdMb1Z4V3BKZlRCa2haREhua1NITkhmSENYbHViV3lTaWl3?oc=5",
+          "title": "DeepSeek V4-Flash正式版来了！AI开发者实测：价格“很香” Agent能力直追顶级模型 - 天天基金",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE9xM2lvSlpRNjlpZHFOZEROT3daY19KOFV5Z25JV25FaWQ3aWxoQWdLZDBJeGw4WTkxelZRQnFRcVhsamJfaThmMA?oc=5",
+          "title": "从翻译到桌面Agent，网易有道全线产品完成DeepSeek-V4-Flash正式版升级 - 品玩",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "deepseek-v4-flash-0731-benchmark",
+          "date": "2026-08-02",
+          "title": "Deepseek V4 Flash 0731 Scores 50 On The Artificial Analysis Intelligence Index 10 Points Above Previous Deepseek V4 Flash",
+          "summary": "DeepSeek V4 Flash 0731在Artificial Analysis智能指数上得分50，比上一版高10分，显示模型能力提升。",
+          "score": 7.0,
+          "url": "https://artificialanalysis.ai/articles/deepseek-v4-flash-0731-scores-50-on-the-artificial-analysis-intelligence-index-10-points-above-previous-deepseek-v4-flash"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "DeepSeek",
+        "模型评测"
+      ]
+    },
+    {
+      "product_id": "product-6c26fab238ba08ce",
+      "product_name": "DeepSeek Harness",
+      "builder_name": "凤凰网科技",
+      "first_seen": "2026-08-02",
+      "last_seen": "2026-08-02",
+      "occurrence_count": 1,
+      "intelligence_type": "early_signal",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "DeepSeek推出Harness工具并启动内测，面向开源开发者，值得关注其功能和应用场景。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "china",
+      "score": 7.0,
+      "summary": "DeepSeek推出Harness工具并启动内测，面向开源开发者，值得关注其功能和应用场景。",
+      "title": "DeepSeek Harness启动内测，面向开源开发者开放招募 - 凤凰网科技",
+      "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBLSDlOVHBPSmluRE16OFM1SVhFLXNwTUdacE9GYlNwbVpmLWFBcjBoOGNuQ0xWd2xIZUtPbWxpLVNOY3NYeW9kTHFGZFk?oc=5",
+      "sources": [
+        {
+          "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBLSDlOVHBPSmluRE16OFM1SVhFLXNwTUdacE9GYlNwbVpmLWFBcjBoOGNuQ0xWd2xIZUtPbWxpLVNOY3NYeW9kTHFGZFk?oc=5",
+          "title": "DeepSeek Harness启动内测，面向开源开发者开放招募 - 凤凰网科技",
+          "source_type": "google_news",
+          "published_at": "2026-08-02T02:01:27+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "deepseek-harness-beta",
+          "date": "2026-08-02",
+          "title": "DeepSeek Harness启动内测，面向开源开发者开放招募 - 凤凰网科技",
+          "summary": "DeepSeek推出Harness工具并启动内测，面向开源开发者，值得关注其功能和应用场景。",
+          "score": 7.0,
+          "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBLSDlOVHBPSmluRE16OFM1SVhFLXNwTUdacE9GYlNwbVpmLWFBcjBoOGNuQ0xWd2xIZUtPbWxpLVNOY3NYeW9kTHFGZFk?oc=5"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "开发者工具",
+        "内测"
+      ]
+    },
     {
       "product_id": "product-38991af7b447b133",
       "product_name": "DeepSeek V4 Flash",

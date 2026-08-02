@@ -381,6 +381,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "09ffa11753a672d3c5327897a4ab5b7d3e2eae56948aa525687bbdbaf2cd905b": {
+      "created_at": "2026-08-02T03:52:15.980410+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-ten-proofs",
+        "evidence_status": "first_party",
+        "follow_up": "关注Astra正式发布及更多能力验证。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:simonwillison.net_atom_everything_:518c46c1375437aa",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Astra",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI发布内部模型Astra解决十个数学难题，并开源Lean 4形式化证明，展示模型能力突破，有具体成果和成本数据，对理解模型能力有高价值。",
+        "region": "global",
+        "score": 8.5,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "OpenAI用内部模型Astra解决十个长期未解的数学难题，并开源形式化证明，展示强大推理能力。",
+        "tags": [
+          "OpenAI",
+          "数学推理",
+          "模型能力"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "0c432526749697821055adcaca01e800860f01947e3c3a88eb3426d6da801727": {
       "created_at": "2026-07-28T03:49:03.132420+00:00",
       "model": "deepseek-v4-flash",
@@ -451,6 +490,43 @@
         "summary_zh": "新浪网报道DeepSeek和豆包在手机AI应用中排名靠前，但无详细分析。",
         "tags": [
           "排名"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "0cacfe7afa8e815180f864d3a8c4fcc5c5a2ad828e7cc6e3a4d950a7e85c13a1": {
+      "created_at": "2026-08-02T03:52:45.120313+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "musk-follows-deepseek",
+        "evidence_status": "reported",
+        "follow_up": "关注后续是否有合作或产品联动。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "google_news:article:19130688101fde29",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": false,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "马斯克关注DeepSeek账号，属于社交动态，无产品、技术或商业实质信息，低相关度。",
+        "region": "global",
+        "score": 3.0,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "马斯克在社交平台关注DeepSeek账号，引发媒体讨论，但无实质产品信息。",
+        "tags": [
+          "社交动态"
         ],
         "target_user": "",
         "verticals": []
@@ -573,6 +649,43 @@
       },
       "stage": "candidate_analysis"
     },
+    "0f4cee728b74b74e7655b4e79fb1f4d268853ce9b1d362381517540c782e6df7": {
+      "created_at": "2026-08-02T03:53:12.400998+00:00",
+      "model": "kimi-k2.6",
+      "prompt_version": "deep-v3-beginner",
+      "result": {
+        "ai_role": "AI Agent（这里指 Datasette Agent）负责自动发现应用、在后台隐形测试应用功能、根据结果编辑代码——相当于一个能自己'看'和'改'的自动化程序员。",
+        "evidence_status": "first_party",
+        "hands_on_exercise": "30 分钟：去 GitHub 下载 datasette-apps 的 0.2a0 版本，本地装起 Datasette，创建一个最简单的 HTML 页面（比如显示当前时间），然后在 Datasette Agent 里尝试用自然语言让它'测试这个应用能否正常显示'，观察它是否会调用 app_debug() 工具并返回测试结果。",
+        "implementation_idea": "核心 trick 是 app_debug() 用一个看不见的 iframe（CSS 设成透明+不接收点击）来加载应用，然后往里面注入 AI 提供的 JavaScript 代码做测试，比如量元素尺寸、检查功能是否正常。这利用了 datasette-agent 0.4a0 新增的 context.browser_task() 机制，让 AI 能在隔离环境里安全地'操作浏览器'。",
+        "learning_points": [
+          "Agent：不是简单问答的 AI，而是能调用工具、执行多步骤任务的 AI 系统，这里它调用了 app_debug() 和 app_list() 两个工具",
+          "Function Calling：AI 不直接生成答案，而是输出'我要调用某某工具、参数是什么'的结构化指令，让外部系统执行具体操作",
+          "iframe 沙箱：浏览器里一种隔离机制，让代码跑在独立环境里，即使出问题也不会影响到主页面，这里用来安全地让 AI 测试未知代码"
+        ],
+        "limitations_or_uncertainties": "未公开实际用户规模和稳定性；datasette-agent 0.4a0 的 context.browser_task() 具体安全边界未详细说明；隐形 iframe 测试是否能覆盖复杂交互场景（如需要用户登录、多页面跳转）未验证。",
+        "product_name": "datasette-apps",
+        "sources": [
+          "https://simonwillison.net/2026/Aug/1/datasette-apps/#atom-everything",
+          "https://github.com/datasette/datasette-apps/releases/tag/0.2a0",
+          "https://github.com/datasette/datasette-apps/pull/33",
+          "https://github.com/datasette/datasette-apps/issues/36",
+          "https://agent.datasette.io/",
+          "https://simonwillison.net/2026/Jul/31/datasette-agent/"
+        ],
+        "target_users": "用 Datasette 做数据管理、同时想快速搭建内部小工具或数据看板的开发者；想用 AI Agent 自动化维护这些应用的人",
+        "title_zh": "datasette-apps 0.2a0：让 AI Agent 能自动测试和修改网页应用",
+        "usage_flow": [
+          "开发者在 Datasette 里创建或上传一个单文件网页应用（HTML+CSS+JS）",
+          "对 AI Agent 说'测试一下这个应用'或'帮我改改第三个应用'",
+          "Agent 调用 app_list() 找到你有权限改的应用，或用 app_debug() 打开隐形 iframe 跑 JS 测试",
+          "Agent 根据测试结果自动修 bug 或按指令修改应用代码"
+        ],
+        "user_problem": "开发者用 AI 生成或修改小应用后，得手动打开浏览器检查有没有 bug、样式对不对；应用多了之后，AI 也不知道用户有哪些应用可以改，得人来指。",
+        "what_it_is": "Datasette 的一个插件，让你能在 Datasette 平台里创建、托管和编辑小型网页应用（HTML/CSS/JS 单文件），最新版加了两个工具让 AI Agent 可以自动调试和列出应用。"
+      },
+      "stage": "deep_analysis"
+    },
     "1017d63bfffc3e2e0d4ce4f73262427b7ea83853145d99fdf832d7038dcc06fc": {
       "created_at": "2026-07-25T16:38:13.701942+00:00",
       "model": "deepseek-v4-flash",
@@ -641,6 +754,44 @@
         "summary": null,
         "summary_zh": "传DeepSeek 100亿元新一轮融资突然放缓，但无产品细节。",
         "tags": [],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "10caf9740da0aa763b3ea33ad1bd65971d316c2d23f7d0ceb3731607f4aecb93": {
+      "created_at": "2026-08-02T03:52:15.980830+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "lean-kernel-soundness-bug",
+        "evidence_status": "first_party",
+        "follow_up": "无",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:49137060",
+        "intelligence_type": "market_signal",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Lean证明器内核健全性bug的事后分析，涉及形式化验证，但非AI产品，与LLM关联弱，价值一般。",
+        "region": "global",
+        "score": 6.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Lean证明器内核发现健全性bug，事后分析指出验证结果并非绝对保证。",
+        "tags": [
+          "形式化验证",
+          "bug"
+        ],
         "target_user": "",
         "verticals": []
       },
@@ -1025,6 +1176,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "17f5d7a7942e118d50cc4ebfbdd9c27495b64a0e12462b7b1320f34900eef6b3": {
+      "created_at": "2026-08-02T03:52:32.503821+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "cycloidal-gearbox-showhn",
+        "evidence_status": "first_party",
+        "follow_up": "无",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:49140396",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Cycloidal Gearbox",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "15岁少年展示自己构建的摆线齿轮箱，有GitHub项目，但非AI相关，且评论质疑可能使用AI，但无明确AI产品增量。",
+        "region": "global",
+        "score": 6.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "一名15岁少年展示了自己制作的摆线齿轮箱，但非AI产品，与AI领域关联弱。",
+        "tags": [
+          "硬件",
+          "齿轮箱"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "181727d95c1fd2b83917e537c3370c98e1f43a92ca3ae493ffc0616800a0ef9c": {
       "created_at": "2026-07-27T04:14:53.894399+00:00",
       "model": "deepseek-v4-flash",
@@ -1098,6 +1287,44 @@
           "产品收购",
           "Midjourney",
           "个性化"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "19a81484eecdd78921161eae7805bb985dd1682e79c3e7370abed8bbe20e11f2": {
+      "created_at": "2026-08-02T03:52:32.504195+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "wage-against-machine-index",
+        "evidence_status": "first_party",
+        "follow_up": "无",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:49139370",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Wage Against the Machine",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "展示AI任务工资指数，但内容简单，无实质增量，用户反馈少。",
+        "region": "global",
+        "score": 5.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "一个展示AI任务工资指数的网站，但信息量有限。",
+        "tags": [
+          "AI",
+          "工资指数"
         ],
         "target_user": "",
         "verticals": []
@@ -1210,6 +1437,44 @@
         "tags": [
           "Hardware",
           "OpenAI"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "1daee41a0372b955c96c54bb49fe6d5107695f1d336ab730f11eb26ba1decb69": {
+      "created_at": "2026-08-02T03:52:32.503927+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "cisa-water-plc-targeting",
+        "evidence_status": "reported",
+        "follow_up": "无",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:49137228",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "关于水利基础设施PLC网络安全的警报，与AI产品无关，属于安全领域新闻。",
+        "region": "global",
+        "score": 5.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "CISA发布水利部门PLC遭攻击警报，但非AI相关。",
+        "tags": [
+          "安全",
+          "基础设施"
         ],
         "target_user": "",
         "verticals": []
@@ -1361,6 +1626,43 @@
         "tags": [
           "AI SDK",
           "Vercel"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "2545eb350071b7e32f5440ab72704fcc00beca244c4ed95efb543c783c60ac5f": {
+      "created_at": "2026-08-02T03:52:45.120505+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "musk-follows-deepseek-grok",
+        "evidence_status": "reported",
+        "follow_up": "无。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "google_news:article:2b66e29765576a5d",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": false,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "马斯克关注DeepSeek账号及Grok点评，属于社交花边，无产品价值。",
+        "region": "global",
+        "score": 3.0,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "马斯克关注DeepSeek账号，Grok的点评引发讨论，但无实质产品信息。",
+        "tags": [
+          "社交动态"
         ],
         "target_user": "",
         "verticals": []
@@ -1627,6 +1929,81 @@
       },
       "stage": "candidate_analysis"
     },
+    "2d5e7a4a866c097dd072fc15315addc36e8a6fa88cd1f3041c0bb257b693a0cf": {
+      "created_at": "2026-08-02T03:52:32.503708+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "art-of-64-bit-assembly-book",
+        "evidence_status": "reported",
+        "follow_up": "无",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:49134599",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "关于汇编语言书籍的讨论，与AI产品、模型能力或行业观察无关，属于低相关度内容。",
+        "region": "global",
+        "score": 4.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "一本关于64位汇编的书籍在HN引发讨论，但与AI产品领域无关。",
+        "tags": [
+          "汇编",
+          "书籍"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "2e895a9fff53f42e88fc75ecf8328682397bc97ab141a94044550544aa247334": {
+      "created_at": "2026-08-02T03:54:07.543832+00:00",
+      "model": "kimi-k2.6",
+      "prompt_version": "deep-v3-beginner",
+      "result": {
+        "ai_role": "根据用户的多模态输入，直接生成符合描述的视频画面，包括动作特效、镜头运动、场景转换",
+        "evidence_status": "verified",
+        "hands_on_exercise": "打开 https://www.seeddance.io 或 Dreamina 的 Seedance 2.5 入口，用同一组文字提示词分别不加参考图、加 1 张人物照片、加 3 张风格参考图，各生成一次 5 秒视频，对比角色一致性和画面风格的差异，记录哪种参考组合最符合你的预期",
+        "implementation_idea": "本质是一个'超级翻译器'：把文字、图片、声音这些人类能懂的信息，翻译成连续的视频帧序列。它靠大量视频数据学习'什么样的画面该跟着什么样的指令走'，再通过扩散模型（Diffusion Model，一种从噪声中逐步'去模糊'出清晰图像的技术）一帧帧生成连贯画面。多模态参考的作用是给 AI'定调子'——比如上传一张人物照片，AI 就会让这个角色在视频里保持一致长相。",
+        "learning_points": [
+          "T2V（Text-to-Video，文生视频）：输入文字描述，AI 输出视频，是这类产品的核心交互方式",
+          "多模态（Multimodal）：AI 同时处理文字、图像、声音、视频等多种信息类型，不是只看文字",
+          "扩散模型（Diffusion Model）：AI 生成图像/视频的常用技术，先从随机噪声开始，逐步'雕刻'出清晰内容"
+        ],
+        "limitations_or_uncertainties": "官方未公开训练数据规模、模型参数量、是否开源；社区反馈西方电影制作人需要的'演员对话场景'和'V2V（视频转视频，保持演员表演换背景/风格）'能力较弱；具体 API 定价和开放程度未明确",
+        "product_name": "Seedance 2.5",
+        "sources": [
+          "https://seed.bytedance.com/en/blog/one-take-creation-flexible-referencing-introducing-seedance-2-5",
+          "https://www.seeddance.io/models/seedance-2-5",
+          "https://dreamina.capcut.com/seedance/seedance-2-5",
+          "https://x.com/CuiMao/status/2058458683781365873",
+          "https://x.com/CuiMao/status/2082740754380984373",
+          "https://fal.ai/minimax-h3"
+        ],
+        "target_users": "短视频创作者、广告制作人员、社交媒体内容生产者；西方电影制作人反馈匹配度一般",
+        "title_zh": "字节跳动发布 Seedance 2.5 视频生成模型：单镜头 30 秒、多模态参考、4K 输出",
+        "usage_flow": [
+          "在 Dreamina（剪映海外版）或 seeddance.io 等平台选择 Seedance 2.5 模型",
+          "输入文字描述，或上传图片/视频/音频作为参考（最多 50 个多模态参考）",
+          "设置参数（如 4K 分辨率、时长 up to 30 秒），点击生成",
+          "下载成品或做精确编辑后用于广告、社交媒体等场景"
+        ],
+        "user_problem": "做高质量视频需要拍摄团队、后期剪辑，成本高、周期长；现有 AI 视频工具要么太短（几秒），要么角色/风格难以保持一致",
+        "what_it_is": "字节跳动旗下的 AI 视频生成模型，能把文字、图片、视频、音频等多种输入转成最长 30 秒的电影级视频片段。"
+      },
+      "stage": "deep_analysis"
+    },
     "2e9d7ad66f8e5069f06a467cd49b0c40da6818300fe66e0117163c5b12104098": {
       "created_at": "2026-07-29T01:53:31.317523+00:00",
       "model": "deepseek-v4-flash",
@@ -1696,6 +2073,43 @@
         "what_it_is": "一个用 YAML 配置 + 脚本就能跑起来的命令行工具，专门给不同模型配置做「出题-考试-阅卷-出报告」一条龙评估。"
       },
       "stage": "deep_analysis"
+    },
+    "31023adbccd2eef66bb30ce2c669904f659bf79b27946fe84210b19e15806347": {
+      "created_at": "2026-08-02T03:52:45.120631+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "deepseek-v4-flash-tech-highlights",
+        "evidence_status": "reported",
+        "follow_up": "查阅官方技术报告以获取准确信息。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "google_news:article:1ffded24c244b0d7",
+        "intelligence_type": "model_capability",
+        "is_first_party": false,
+        "is_new_event": false,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "DeepSeek-V4-Flash",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "讨论DeepSeek-V4-Flash技术亮点，但来源为媒体转载，缺乏官方技术细节，信息可信度一般。",
+        "region": "china",
+        "score": 6.0,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "文章介绍DeepSeek-V4-Flash正式版的技术亮点，但内容可能不完整。",
+        "tags": [
+          "模型技术"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
     },
     "31cf7c4d64c488c9e35304335de600fe811f4ddb265a07445d37e80d0e5c9c15": {
       "created_at": "2026-07-26T04:07:02.363133+00:00",
@@ -2178,6 +2592,83 @@
         "what_it_is": "LinkedIn 在帖子举报菜单里加了一个选项，让用户可以把看起来像 AI 批量生成的低质内容标记给平台审核。"
       },
       "stage": "deep_analysis"
+    },
+    "4475f193135525012b0c9f19e39a4e3e9b5577ccc0200d9b044f34d9a5c4b783": {
+      "created_at": "2026-08-02T03:52:15.980695+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "ai-financial-advice-study",
+        "evidence_status": "reported",
+        "follow_up": "关注是否有具体产品落地。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:49139102",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "MIT研究称AI财务建议质量不错，但HN评论质疑其本质是自动补全，缺乏产品案例，价值中等。",
+        "region": "global",
+        "score": 6.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "MIT研究显示AI财务建议效果不错，但社区评论认为其本质是自动补全，需正确提问。",
+        "tags": [
+          "AI应用",
+          "金融"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "473e44c2b675c2b1df9ac3244ef8b96bccf277d0292960d674a1a3e1ce2547e3": {
+      "created_at": "2026-08-02T03:52:32.504303+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "deepseek-v4-flash-release",
+        "evidence_status": "reported",
+        "follow_up": "关注官方文档和实际性能测试。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "google_news:article:3e2fed886be8c05b",
+        "intelligence_type": "model_capability",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "DeepSeek V4-Flash",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "DeepSeek V4-Flash正式版发布，有价格和Agent能力实测，属于模型能力更新，但来源为媒体转载，非官方一手。",
+        "region": "china",
+        "score": 8.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "DeepSeek V4-Flash正式版发布，价格实惠，Agent能力接近顶级模型。",
+        "tags": [
+          "DeepSeek",
+          "模型发布",
+          "Agent"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
     },
     "474624815bad802cbd706dc0d85a73697051960f2d0195b4e044df5e4da908ef": {
       "created_at": "2026-08-01T03:49:24.197984+00:00",
@@ -3056,6 +3547,43 @@
       },
       "stage": "candidate_analysis"
     },
+    "5af513cdd9a89a89aabc8a723c99f451cd9549011ce926fbccf95122aac5c48d": {
+      "created_at": "2026-08-02T03:52:45.120585+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "musk-follows-deepseek-news",
+        "evidence_status": "reported",
+        "follow_up": "无。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "google_news:article:53cc62fe0c03f884",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": false,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "重复报道马斯克关注DeepSeek，无新增信息，低价值。",
+        "region": "global",
+        "score": 3.0,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "马斯克关注DeepSeek账号引发AI圈讨论，但无实质内容。",
+        "tags": [
+          "社交动态"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "5b22f95681e7a5f25f1908f59b238698c672c6da610211807774fb2096d3ddfb": {
       "created_at": "2026-07-29T01:53:26.757478+00:00",
       "model": "deepseek-v4-flash",
@@ -3474,6 +4002,45 @@
           "ChatGPT",
           "Personalization",
           "Social"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "636dc282bd921d5b0e41b9f9da25d60ff0fb9bd17fa3604132b91f28abc54940": {
+      "created_at": "2026-08-02T03:52:15.980249+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "datasette-apps-0.2a0",
+        "evidence_status": "first_party",
+        "follow_up": "观察该工具在真实项目中的使用效果。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:simonwillison.net_atom_everything_:453d766c216078df",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "datasette-apps",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Simon Willison发布datasette-apps 0.2a0，新增app_debug()和app_list()工具，让Agent能自动测试和编辑应用，有具体实现细节，对构建AI Agent产品有参考价值。",
+        "region": "global",
+        "score": 8.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Simon Willison发布datasette-apps 0.2a0，新增工具让AI Agent能自动测试和编辑应用，提升开发效率。",
+        "tags": [
+          "Agent",
+          "开源",
+          "开发工具"
         ],
         "target_user": "",
         "verticals": []
@@ -4238,6 +4805,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "71ce908cac390c0d843c0fb75ce304ddde1e36efce970bc858aba3a1b5a5d56f": {
+      "created_at": "2026-08-02T03:52:15.979999+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openrouter-model-rankings-2026-08",
+        "evidence_status": "first_party",
+        "follow_up": "关注这些模型的实际应用案例和用户反馈。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "public_web:ranking:b0ab1ec5ca2d10da9cfa",
+        "intelligence_type": "market_signal",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenRouter官方排名，展示多款中国模型（DeepSeek V4 Flash/Pro、小米MiMo-V2.5、腾讯Hy3、智谱GLM 5.2）的热度与关键参数，反映市场趋势，但缺乏产品案例或用户反馈，信息密度中等。",
+        "region": "china",
+        "score": 7.5,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "OpenRouter官方热度榜显示DeepSeek、小米、腾讯、智谱等中国模型占据前列，反映当前模型市场格局。",
+        "tags": [
+          "模型排行",
+          "市场信号"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "71f349c491d3fad6e51ee434823c0d06d13c60aa658d2d5fa28a4f3c8732ae8a": {
       "created_at": "2026-07-25T16:39:51.790264+00:00",
       "model": "kimi-k2.6",
@@ -4305,6 +4910,45 @@
           "Agent",
           "Hugging Face",
           "OpenAI"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "7354ec0298c3390726c1df55c91e715e5aadd6a28883ba87fbbc97d9c358c19b": {
+      "created_at": "2026-08-02T03:52:15.980573+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "seedance-2.5-release",
+        "evidence_status": "verified",
+        "follow_up": "关注Seedance 2.5在电影制作等专业场景的应用。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:49138302",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Seedance 2.5",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "字节跳动发布Seedance 2.5视频生成模型，HN评论展示实际使用案例和用户反馈，讨论其质量与中西需求差异，有产品细节和社区验证。",
+        "region": "china",
+        "score": 8.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "字节跳动发布Seedance 2.5视频生成模型，用户反馈质量高，但评论指出其侧重动作特效，与西方电影制作人需求有差异。",
+        "tags": [
+          "视频生成",
+          "字节跳动",
+          "产品发布"
         ],
         "target_user": "",
         "verticals": []
@@ -4840,6 +5484,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "7d6e7cb6d4957125ce41de1992d3ec38a4615954253cdf57e0f4415394422c7c": {
+      "created_at": "2026-08-02T03:52:45.120549+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "youdao-deepseek-v4-flash-upgrade",
+        "evidence_status": "reported",
+        "follow_up": "关注升级后产品体验和用户反馈。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "google_news:article:9dd3910cc41d6b22",
+        "intelligence_type": "product_case",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "网易有道",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "网易有道全线产品升级DeepSeek-V4-Flash正式版，从翻译到桌面Agent，有明确产品落地和场景，对产品经理有参考价值。",
+        "region": "china",
+        "score": 8.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "网易有道将全线产品升级至DeepSeek-V4-Flash，覆盖翻译和桌面Agent，展示模型在垂直场景的应用。",
+        "tags": [
+          "Agent",
+          "翻译",
+          "产品升级"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "7d72cfd99f55c136cee5c3a4a0e39f2166c0a2d006028906c4304eab64eb815c": {
       "created_at": "2026-07-28T03:48:25.674676+00:00",
       "model": "deepseek-v4-flash",
@@ -4870,6 +5553,44 @@
         "summary": null,
         "summary_zh": "Anthropic发布经济未来研究基金议程，但缺乏具体信息。",
         "tags": [],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "7dc0334f7c3777301bb9b4ce229b2859136d8f8ef2b2fd96469bc4aa0898a8c8": {
+      "created_at": "2026-08-02T03:52:15.980189+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "brockman-chatgpt-slack",
+        "evidence_status": "first_party",
+        "follow_up": "关注OpenAI如何调整ChatGPT的协作功能设计。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:simonwillison.net_atom_everything_:9d04b3a9a2417e2b",
+        "intelligence_type": "builder_insight",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "ChatGPT",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI联合创始人Greg Brockman分享内部观察：员工不喜欢被同事的ChatGPT打扰，强调人际关系重要性。属于一手动态，但无产品细节，价值中等。",
+        "region": "global",
+        "score": 7.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "OpenAI联合创始人Greg Brockman透露内部员工不喜欢被同事的ChatGPT请求打扰，强调AI应增强而非隔阂人际关系。",
+        "tags": [
+          "OpenAI",
+          "人机协作"
+        ],
         "target_user": "",
         "verticals": []
       },
@@ -5170,6 +5891,43 @@
         "summary_zh": "AI新闻汇总，提到Kimi K3发布，但无具体信息。",
         "tags": [
           "Newsletter"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "88d1609805f4be23811a76ebb26112e87b9fc74a888d026936b79e87063b3bdf": {
+      "created_at": "2026-08-02T03:52:45.120471+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "deepseek-v4-flash-release",
+        "evidence_status": "reported",
+        "follow_up": "关注V4-Flash的官方技术报告和实际应用案例。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "google_news:article:cc1dea14b3da7d5a",
+        "intelligence_type": "model_capability",
+        "is_first_party": false,
+        "is_new_event": false,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "DeepSeek-V4-Flash",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "AI周报提及DeepSeek-V4-Flash正式版发布，但为聚合新闻，缺乏技术细节和产品案例，信息增量有限。",
+        "region": "global",
+        "score": 6.0,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "AI周报汇总DeepSeek-V4-Flash正式版发布及扎克伯格支持开源模型，但无深入分析。",
+        "tags": [
+          "模型发布"
         ],
         "target_user": "",
         "verticals": []
@@ -6366,6 +7124,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "a44a98d97c103eb71f2e5985ff58561dc36f422a9ec34dfd87664def5901bc3b": {
+      "created_at": "2026-08-02T03:52:32.504126+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "cursor-usage-page-cost-removal",
+        "evidence_status": "first_party",
+        "follow_up": "观察Cursor后续是否恢复成本显示及用户信任变化。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:49135257",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Cursor",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Cursor移除使用页面成本信息引发用户讨论，官方回应称是意外并已修复，涉及AI编程工具的用户反馈和产品透明度，有实际用户反馈和官方回应。",
+        "region": "global",
+        "score": 8.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Cursor意外移除使用页面成本信息，引发用户讨论，官方回应已修复，反映AI编程工具的用户关注点。",
+        "tags": [
+          "Cursor",
+          "AI编程",
+          "用户反馈"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "a4da8b2a54ac0b6b23fc13455468af1afc4bad9b9143dec091d3785ebc086f2c": {
       "created_at": "2026-07-30T03:28:00.813232+00:00",
       "model": "deepseek-v4-flash",
@@ -6598,6 +7395,82 @@
       },
       "stage": "candidate_analysis"
     },
+    "a7eec11c4b19f3ad53af0488d26447413dbea5b34dcebd7c36796dc06790426a": {
+      "created_at": "2026-08-02T03:52:32.504252+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "crew-collaborative-ide",
+        "evidence_status": "first_party",
+        "follow_up": "无",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:49137891",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Crew",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "本地协作IDE，支持人和代理，开源，但评论少，非AI核心，属于开发者工具。",
+        "region": "global",
+        "score": 6.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Crew是一个本地协作IDE，支持人和代理共同开发，但非AI产品。",
+        "tags": [
+          "IDE",
+          "协作"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "a882cc4d1e46da858b7b27c50197ff04e70fa1c020ae5acb66408d6056ed369b": {
+      "created_at": "2026-08-02T03:52:32.504168+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "symbio-self-finetuning-loop",
+        "evidence_status": "first_party",
+        "follow_up": "关注其RAM优化和实际效果。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:49139461",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Symbio",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "展示一个本地自我微调AI循环项目，有GitHub仓库和用户评论，但评论较少，属于早期项目，有明确构建过程。",
+        "region": "global",
+        "score": 7.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Symbio是一个本地自我微调AI循环项目，根据错误进行训练，但尚处早期。",
+        "tags": [
+          "微调",
+          "本地AI"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "a9dd1c884f14085e532a91acc8750d3b4ab123b126ba2599c3907726a503a523": {
       "created_at": "2026-07-31T03:49:36.342695+00:00",
       "model": "deepseek-v4-flash",
@@ -6670,6 +7543,44 @@
           "OpenAI",
           "Codex",
           "Agent"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "abc31f6baee6d529cef5f8258506ee368a98c8515528840eb49baeba88a227a6": {
+      "created_at": "2026-08-02T03:52:45.120421+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "deepseek-harness-beta",
+        "evidence_status": "reported",
+        "follow_up": "关注Harness的具体功能、文档和开发者反馈。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "google_news:article:c03de2fc2e44a3af",
+        "intelligence_type": "early_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "DeepSeek Harness",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "DeepSeek Harness启动内测，面向开源开发者，属于新工具发布，有明确产品形态和用户群体，但细节有限，且为内测阶段。",
+        "region": "china",
+        "score": 7.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "DeepSeek推出Harness工具并启动内测，面向开源开发者，值得关注其功能和应用场景。",
+        "tags": [
+          "开发者工具",
+          "内测"
         ],
         "target_user": "",
         "verticals": []
@@ -6944,6 +7855,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "b484eb7f70bf7390d164ba300722de4446732209c149b0f9fb22a313d85460f6": {
+      "created_at": "2026-08-02T03:52:15.980084+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "altman-parenting-chatgpt",
+        "evidence_status": "reported",
+        "follow_up": "关注是否有具体产品功能或用户研究发布。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:02523526d0cd7f93",
+        "intelligence_type": "early_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "ChatGPT",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI CEO分享育儿用例，但无具体产品细节或用户反馈，属于模糊预告，价值有限。",
+        "region": "global",
+        "score": 5.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Sam Altman再次宣传用ChatGPT辅助育儿的用例，但缺乏具体细节。",
+        "tags": [
+          "OpenAI",
+          "用例"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "b68e0af6ffb12d97b10aab9d3814d111bebec7728ef36aa37670d246fcae0428": {
       "created_at": "2026-08-01T03:49:06.725963+00:00",
       "model": "deepseek-v4-flash",
@@ -7196,6 +8145,44 @@
         "tags": [
           "工具更新",
           "Claude Code"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "bc7135eb8c74aab5c880da08b0482982ef60065df1d9c1a517c67eab79d7c19e": {
+      "created_at": "2026-08-02T03:52:15.980053+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "hank-green-ai-usage-health",
+        "evidence_status": "reported",
+        "follow_up": "无",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:9c6ee84305bd4ff2",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "名人个人观点，无产品、无数据、无实践证据，属于泛行业评论，价值低。",
+        "region": "global",
+        "score": 4.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "YouTuber Hank Green公开表示自己过度使用AI不健康，属于个人感受分享。",
+        "tags": [
+          "AI伦理",
+          "个人观点"
         ],
         "target_user": "",
         "verticals": []
@@ -7657,6 +8644,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "ce03a49021bf9aa9d428c186e3589cdcece37c9f198b478dcbadc0b834d3b7c8": {
+      "created_at": "2026-08-02T03:52:32.504219+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "nano-llm-posttraining-8gb",
+        "evidence_status": "first_party",
+        "follow_up": "查看GitHub仓库获取实验细节。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:49133851",
+        "intelligence_type": "builder_insight",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "nano-llm-posttraining",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "在8GB GPU上进行LLM后训练实验，有GitHub项目，但无正文和评论，属于技术实验，对初学者有参考价值。",
+        "region": "global",
+        "score": 7.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "在8GB GPU上进行LLM后训练实验，展示SFT、DPO、GRPO等，但缺乏详细说明。",
+        "tags": [
+          "LLM",
+          "后训练",
+          "GPU"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "d50036f7daed19578b318eab55b77c9c6678761ea580abf990c20177466fcd7d": {
       "created_at": "2026-08-01T03:49:24.198728+00:00",
       "model": "deepseek-v4-flash",
@@ -7690,6 +8716,44 @@
           "MCP",
           "协议",
           "Agent"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "d544d4ff0fd3ef5c2c9b18ec75c089657ca1004905c920ca96ce04e94381c6e7": {
+      "created_at": "2026-08-02T03:52:15.980124+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "fenix-flexin-ai-slop",
+        "evidence_status": "reported",
+        "follow_up": "无",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:5b1c51b53fafc4b0",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "关于AI生成音乐的争议，无产品、无构建过程，属于泛行业评论，价值低。",
+        "region": "global",
+        "score": 4.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Billboard热单被质疑是AI生成，引发关于AI音乐的讨论。",
+        "tags": [
+          "AI音乐",
+          "争议"
         ],
         "target_user": "",
         "verticals": []
@@ -8449,6 +9513,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "e6f44c5958b3586918018e9b870c72c6c74349990a92979e89cd0c6be03b4a86": {
+      "created_at": "2026-08-02T03:52:32.503977+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "kaisel-flutter-router",
+        "evidence_status": "first_party",
+        "follow_up": "无",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:49135985",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Kaisel",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Flutter原生路由库，有产品页面和用户反馈，但非AI相关，属于开发者工具。",
+        "region": "global",
+        "score": 6.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Kaisel是一个Flutter原生路由库，解决路由配置问题，但非AI产品。",
+        "tags": [
+          "Flutter",
+          "路由"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "e8da20f582dd8d1ab91b4e53fc487ee3f57788b033f96293888173eaec41ca8c": {
       "created_at": "2026-07-31T03:50:03.570843+00:00",
       "model": "kimi-k2.6",
@@ -9042,6 +10144,43 @@
           "Security",
           "Agent",
           "Modal"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "f869cf93e1332297a659eadde6caac4482ce5a73eef7c4c0fc4312e6de9c3a4e": {
+      "created_at": "2026-08-02T03:52:45.120373+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "deepseek-1gw-compute",
+        "evidence_status": "reported",
+        "follow_up": "关注算力投入对模型能力的影响。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "google_news:article:610ad85977c7df16",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": false,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "关于DeepSeek算力投资的报道，涉及基础设施，但无产品细节或用户反馈，对产品经理参考价值低。",
+        "region": "china",
+        "score": 4.0,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "报道DeepSeek在草原建设1GW算力项目，属于基础设施投资，无产品层面信息。",
+        "tags": [
+          "算力"
         ],
         "target_user": "",
         "verticals": []
