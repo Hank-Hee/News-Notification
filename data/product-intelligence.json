@@ -1,7 +1,431 @@
 {
   "version": 1,
-  "updated_at": "2026-08-02T03:54:07.560730+00:00",
+  "updated_at": "2026-08-03T03:55:09.272815+00:00",
   "products": [
+    {
+      "product_id": "product-4b618a492c075b4f",
+      "product_name": "Qwen3.8-Max",
+      "builder_name": "ai2027",
+      "first_seen": "2026-08-03",
+      "last_seen": "2026-08-03",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "阿里发布Qwen3.8-Max，并宣布下周开源权重，提升编码和协作能力。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "china",
+      "score": 8.5,
+      "summary": "阿里发布Qwen3.8-Max，并宣布下周开源权重，提升编码和协作能力。",
+      "title": "Qwen3.8-Max: A New Bar for Coding and Cowork",
+      "url": "https://qwen.ai/blog?id=qwen3.8",
+      "sources": [
+        {
+          "url": "https://qwen.ai/blog?id=qwen3.8",
+          "title": "Qwen3.8-Max: A New Bar for Coding and Cowork",
+          "source_type": "hackernews",
+          "published_at": "2026-08-03T02:16:09+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "qwen3.8-max-release",
+          "date": "2026-08-03",
+          "title": "Qwen3.8-Max: A New Bar for Coding and Cowork",
+          "summary": "阿里发布Qwen3.8-Max，并宣布下周开源权重，提升编码和协作能力。",
+          "score": 8.5,
+          "url": "https://qwen.ai/blog?id=qwen3.8"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "模型发布",
+        "开源",
+        "Qwen"
+      ]
+    },
+    {
+      "product_id": "product-fd1cefc1eb67232c",
+      "product_name": "Isopolis",
+      "builder_name": "nuwandavek",
+      "first_seen": "2026-08-03",
+      "last_seen": "2026-08-03",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "verified",
+      "target_user": "对城市探索、像素艺术、等距地图或 AI 辅助开发感兴趣的人；未公开具体商业化目标用户",
+      "user_problem": "做一张好看又准确的等距城市地图很费劲——要获取建筑数据、处理 3D 模型、调视角、上纹理，传统方式耗时且技术门槛高",
+      "what_it_is": "一个可交互的等距视角像素风格旧金山地图网站，用 Google 3D 实景数据和 Claude Code（AI 编程助手）辅助开发完成。",
+      "ai_role": "Claude Code 负责写代码：作者描述它'whipped up a scraper'（快速搭了一个抓取程序），用来流式获取 Google 3D Tiles 数据并用 three.js 渲染",
+      "implementation_idea": "底层拿 Google 的实景 3D 瓦片当素材，用程序转成等距视角的像素风格画面。作者试过美国政府免费的 LIDAR 数据，但 30 分钟后放弃，觉得 Google 的 3D 图像纹理更真实、更省事。AI 编程助手 Claude Code 帮写了大部分代码，人主要做决策和调效果。",
+      "hands_on_exercise": "30 分钟：去 https://sf.isopolis.city/dev.html 读开发过程，然后打开 Claude Code 或类似 AI 编程助手，尝试用自然语言让它帮你写一个'抓取公开 API 数据并渲染成简单 2D 可视化'的小脚本，观察它能独立完成到哪一步、哪里需要你人工干预。",
+      "limitations_or_uncertainties": "未公开具体技术架构细节（如完整技术栈、代码是否开源、Claude Code 具体完成了多少比例代码）；社区反馈指出地图有地理错误（如把道路误标为湖泊）；缩放功能有限，用户希望放大更多",
+      "region": "global",
+      "score": 8.0,
+      "summary": "Isopolis是一个旧金山等距像素地图，利用Google 3D Tiles和Claude Code生成，展示了AI辅助开发的潜力。",
+      "title": "Isopolis：用 AI 辅助开发的旧金山等距像素地图",
+      "url": "https://sf.isopolis.city/",
+      "sources": [
+        {
+          "url": "https://sf.isopolis.city/",
+          "title": "Show HN: Isopolis – Isometric pixel map of SF",
+          "source_type": "hackernews",
+          "published_at": "2026-08-03T00:46:38+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "isopolis-sf-launch",
+          "date": "2026-08-03",
+          "title": "Isopolis：用 AI 辅助开发的旧金山等距像素地图",
+          "summary": "Isopolis是一个旧金山等距像素地图，利用Google 3D Tiles和Claude Code生成，展示了AI辅助开发的潜力。",
+          "score": 8.0,
+          "url": "https://sf.isopolis.city/"
+        }
+      ],
+      "usage_flow": [
+        "打开网站，直接看到旧金山等距像素地图",
+        "滚动/拖拽浏览城市不同区域",
+        "（可选）访问 dev.html 页面查看开发幕后过程"
+      ],
+      "learning_points": [
+        "3D Tiles：Google 把城市实景切成很多小块数据，像地图瓦片一样按需加载，用来搭 3D 应用",
+        "Claude Code：Anthropic 出的 AI 编程助手，能理解自然语言指令并直接操作代码文件、跑命令，不只是聊天补全",
+        "等距投影（Isometric）：一种 2D 画法，让物体看起来有 3D 立体感，但没有透视近大远小，游戏和地图常用"
+      ],
+      "verticals": [],
+      "tags": [
+        "AI辅助开发",
+        "地图",
+        "Claude Code"
+      ]
+    },
+    {
+      "product_id": "product-dc1f3dcd003477f9",
+      "product_name": "Syncular",
+      "builder_name": "quambo",
+      "first_seen": "2026-08-03",
+      "last_seen": "2026-08-03",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "early_signal",
+      "target_user": "开发本地优先（local-first）应用的开发者，尤其是需要浏览器/移动端离线 SQL 数据库的场景",
+      "user_problem": "做离线应用时，要么数据库不支持 CRDT 式同步（比如 SQLite 配传统同步），要么 CRDT 方案不是 SQL 接口（比如 Loro），导致复杂查询写起来很麻烦；另外浏览器存储可能被系统清理，未同步的数据会丢失",
+      "what_it_is": "一个让你在断网时也能正常使用 App，联网后自动同步数据库修改的开源工具库。",
+      "ai_role": "未公开；这是一个底层数据库同步库，不涉及 LLM 或 AI 功能",
+      "implementation_idea": "用 Rust 做高性能的同步引擎，TypeScript 做开发者接口，把 SQL 操作翻译成可以合并的变更日志。社区讨论提到可能用了 CRDT（无冲突复制数据类型，大白话就是'多人同时改同一份数据，系统自动算出该长什么样，不用锁表'）思路来解决冲突，但具体怎么塞进关系型数据库的表里，官方没给细节。",
+      "hands_on_exercise": "30 分钟：克隆 GitHub 仓库，跑通示例 Demo，断网后插入几条数据，再开网看是否能同步到服务端；同时打开浏览器的 Application → Storage 面板，观察 OPFS 里的 SQLite 文件长什么样。",
+      "limitations_or_uncertainties": "官方 README 未说明冲突解决策略（社区 jmull 质疑这点）；未确认是否支持 P2P 直连还是必须走中央服务器；浏览器存储驱逐风险（elsaicequeen 提问）官方未回应是否请求了持久化权限；CRDT 与 SQL 关系模型的具体结合方式未公开。",
+      "region": "global",
+      "score": 8.0,
+      "summary": "开发者 quambo 发布 Syncular，一个离线优先的 SQL 同步库，社区讨论了冲突解决和浏览器存储等关键问题。",
+      "title": "Syncular：离线优先的 SQL 同步库，用 TypeScript 和 Rust 实现",
+      "url": "https://github.com/syncular/syncular",
+      "sources": [
+        {
+          "url": "https://github.com/syncular/syncular",
+          "title": "Show HN: Syncular – offline-first SQL sync with TypeScript and Rust cores",
+          "source_type": "hackernews",
+          "published_at": "2026-08-02T09:48:08+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "syncular-sql-sync",
+          "date": "2026-08-03",
+          "title": "Syncular：离线优先的 SQL 同步库，用 TypeScript 和 Rust 实现",
+          "summary": "开发者 quambo 发布 Syncular，一个离线优先的 SQL 同步库，社区讨论了冲突解决和浏览器存储等关键问题。",
+          "score": 8.0,
+          "url": "https://github.com/syncular/syncular"
+        }
+      ],
+      "usage_flow": [
+        "前端用 TypeScript SDK 操作本地 SQLite 数据库（浏览器里跑在 OPFS 上）",
+        "Rust 核心层在后台处理数据变更记录和同步逻辑",
+        "联网时与服务端或其他客户端交换变更、合并冲突",
+        "应用保持离线可用，同步对用户无感"
+      ],
+      "learning_points": [
+        "CRDT：多人离线编辑后自动合并结果的数学方法，不需要中央服务器仲裁",
+        "OPFS（Origin Private File System）：浏览器给网页用的私有文件系统，比 localStorage 大且快，但可能被系统清理",
+        "本地优先软件（local-first）：数据存在用户设备上，云只是同步备份，不是唯一真相源"
+      ],
+      "verticals": [],
+      "tags": [
+        "SQL",
+        "同步",
+        "离线优先"
+      ]
+    },
+    {
+      "product_id": "product-efea7f8b3f434620",
+      "product_name": "ssh.place",
+      "builder_name": "jeninh",
+      "first_seen": "2026-08-03",
+      "last_seen": "2026-08-03",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "开发者 jeninh 推出 ssh.place，一个通过 SSH 连接进行多人协作画布的产品，因创意玩法引发社区讨论，但存在安全风险。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.5,
+      "summary": "开发者 jeninh 推出 ssh.place，一个通过 SSH 连接进行多人协作画布的产品，因创意玩法引发社区讨论，但存在安全风险。",
+      "title": "Show HN: ssh ssh.place",
+      "url": "https://ssh.place/",
+      "sources": [
+        {
+          "url": "https://ssh.place/",
+          "title": "Show HN: ssh ssh.place",
+          "source_type": "hackernews",
+          "published_at": "2026-08-03T00:23:21+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "ssh-place-launch",
+          "date": "2026-08-03",
+          "title": "Show HN: ssh ssh.place",
+          "summary": "开发者 jeninh 推出 ssh.place，一个通过 SSH 连接进行多人协作画布的产品，因创意玩法引发社区讨论，但存在安全风险。",
+          "score": 7.5,
+          "url": "https://ssh.place/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "SSH",
+        "协作",
+        "创意"
+      ]
+    },
+    {
+      "product_id": "product-0d906e11fcf5bdbe",
+      "product_name": "DeepSeek V4 Flash",
+      "builder_name": "Artificial Analysis",
+      "first_seen": "2026-08-02",
+      "last_seen": "2026-08-03",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "verified",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "DeepSeek V4 Flash 0731在Artificial Analysis智能指数上得分50，比上一版高10分，显示模型能力提升。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.0,
+      "summary": "DeepSeek V4 Flash 0731在Artificial Analysis智能指数上得分50，比上一版高10分，显示模型能力提升。",
+      "title": "Deepseek V4 Flash 0731 Scores 50 On The Artificial Analysis Intelligence Index 10 Points Above Previous Deepseek V4 Flash",
+      "url": "https://artificialanalysis.ai/articles/deepseek-v4-flash-0731-scores-50-on-the-artificial-analysis-intelligence-index-10-points-above-previous-deepseek-v4-flash",
+      "sources": [
+        {
+          "url": "https://artificialanalysis.ai/articles/deepseek-v4-flash-0731-scores-50-on-the-artificial-analysis-intelligence-index-10-points-above-previous-deepseek-v4-flash",
+          "title": "Deepseek V4 Flash 0731 Scores 50 On The Artificial Analysis Intelligence Index 10 Points Above Previous Deepseek V4 Flash",
+          "source_type": "public_web",
+          "published_at": "2026-07-31T00:00:00+00:00"
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFB2OTlPV05yYUxtaVZVdVBnREtxc0dlaDNTRTBpV1hpdV8waWF4bkRGM0FycXNQNFlPUDV6c190NTdMb1Z4V3BKZlRCa2haREhua1NITkhmSENYbHViV3lTaWl3?oc=5",
+          "title": "DeepSeek V4-Flash正式版来了！AI开发者实测：价格“很香” Agent能力直追顶级模型 - 天天基金",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE9xM2lvSlpRNjlpZHFOZEROT3daY19KOFV5Z25JV25FaWQ3aWxoQWdLZDBJeGw4WTkxelZRQnFRcVhsamJfaThmMA?oc=5",
+          "title": "从翻译到桌面Agent，网易有道全线产品完成DeepSeek-V4-Flash正式版升级 - 品玩",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5Cc1lCcndHYW9xcXBYWDlFTGhkUnkyaFRCUVFyNlJOYjFrZ2NBT2tGazRoUGNvemg2eUI0RG84QzMyejFTMnlhbmdWcDBzZ0RNOTJnRndUcW5KYVRWdGhKbA?oc=5",
+          "title": "DeepSeek V4-Flash正式版来了！AI开发者实测：价格“很香” Agent能力直追顶级模型 - 东方财富",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1MR0o4NV9Od0NvN3dreWZxOTlqbm9GcS1LckYtUXJORjU2czlzQ25vdlRaT2xxYzVGdEZkbXVOQ3h0cUc4Z2hqV3pWcE4xdTdPNmc0bmM3UHFNV2FPQk9OWGNoWUJhSzBZUEE?oc=5",
+          "title": "前瞻全球产业早报：DeepSeek V4-Flash正式版API上线公测_产经 - 前瞻网",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "deepseek-v4-flash-0731-benchmark",
+          "date": "2026-08-02",
+          "title": "Deepseek V4 Flash 0731 Scores 50 On The Artificial Analysis Intelligence Index 10 Points Above Previous Deepseek V4 Flash",
+          "summary": "DeepSeek V4 Flash 0731在Artificial Analysis智能指数上得分50，比上一版高10分，显示模型能力提升。",
+          "score": 7.0,
+          "url": "https://artificialanalysis.ai/articles/deepseek-v4-flash-0731-scores-50-on-the-artificial-analysis-intelligence-index-10-points-above-previous-deepseek-v4-flash"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "DeepSeek",
+        "模型评测"
+      ]
+    },
+    {
+      "product_id": "product-78f5de897cdc14b7",
+      "product_name": "Termexo",
+      "builder_name": "guomengyue",
+      "first_seen": "2026-08-03",
+      "last_seen": "2026-08-03",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Termexo是一个本地Windows工作台，用于Claude Code和Codex，旨在提升开发效率。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.0,
+      "summary": "Termexo是一个本地Windows工作台，用于Claude Code和Codex，旨在提升开发效率。",
+      "title": "Termexo",
+      "url": "https://www.producthunt.com/products/termexo",
+      "sources": [
+        {
+          "url": "https://www.producthunt.com/products/termexo",
+          "title": "Termexo",
+          "source_type": "rss",
+          "published_at": "2026-08-02T06:05:43+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "termexo-launch",
+          "date": "2026-08-03",
+          "title": "Termexo",
+          "summary": "Termexo是一个本地Windows工作台，用于Claude Code和Codex，旨在提升开发效率。",
+          "score": 7.0,
+          "url": "https://www.producthunt.com/products/termexo"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "开发工具",
+        "Claude Code",
+        "Codex"
+      ]
+    },
+    {
+      "product_id": "product-df3ae57e6daef3ee",
+      "product_name": "Mu",
+      "builder_name": "asim",
+      "first_seen": "2026-08-03",
+      "last_seen": "2026-08-03",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "开发者 asim 发布 Mu，一套面向 AI Agent 的工具集，但社区对其实际用途存在争议。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.0,
+      "summary": "开发者 asim 发布 Mu，一套面向 AI Agent 的工具集，但社区对其实际用途存在争议。",
+      "title": "Show HN: Mu – Tools for Agents",
+      "url": "https://github.com/micro/mu",
+      "sources": [
+        {
+          "url": "https://github.com/micro/mu",
+          "title": "Show HN: Mu – Tools for Agents",
+          "source_type": "hackernews",
+          "published_at": "2026-08-02T22:06:34+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "mu-tools-for-agents",
+          "date": "2026-08-03",
+          "title": "Show HN: Mu – Tools for Agents",
+          "summary": "开发者 asim 发布 Mu，一套面向 AI Agent 的工具集，但社区对其实际用途存在争议。",
+          "score": 7.0,
+          "url": "https://github.com/micro/mu"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "工具",
+        "MCP"
+      ]
+    },
+    {
+      "product_id": "product-245cb447f54b7b75",
+      "product_name": "MicroCodex",
+      "builder_name": "paoloanzn",
+      "first_seen": "2026-08-03",
+      "last_seen": "2026-08-03",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "开发者 paoloanzn 用 C++ 实现了 OpenAI Codex 的轻量版 MicroCodex，二进制小于 1MB，引发对维护成本的讨论。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.0,
+      "summary": "开发者 paoloanzn 用 C++ 实现了 OpenAI Codex 的轻量版 MicroCodex，二进制小于 1MB，引发对维护成本的讨论。",
+      "title": "Show HN: MicroCodex Coding Agent – OpenAI/codex reimplemented in C++ <1MB binary",
+      "url": "https://github.com/paoloanzn/microcodex",
+      "sources": [
+        {
+          "url": "https://github.com/paoloanzn/microcodex",
+          "title": "Show HN: MicroCodex Coding Agent – OpenAI/codex reimplemented in C++ <1MB binary",
+          "source_type": "hackernews",
+          "published_at": "2026-08-02T20:11:35+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "microcodex-cpp-agent",
+          "date": "2026-08-03",
+          "title": "Show HN: MicroCodex Coding Agent – OpenAI/codex reimplemented in C++ <1MB binary",
+          "summary": "开发者 paoloanzn 用 C++ 实现了 OpenAI Codex 的轻量版 MicroCodex，二进制小于 1MB，引发对维护成本的讨论。",
+          "score": 7.0,
+          "url": "https://github.com/paoloanzn/microcodex"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "C++",
+        "Agent",
+        "轻量"
+      ]
+    },
     {
       "product_id": "product-4a6f555be1b665c9",
       "product_name": "Astra",
@@ -364,65 +788,6 @@
         "LLM",
         "后训练",
         "GPU"
-      ]
-    },
-    {
-      "product_id": "product-0d906e11fcf5bdbe",
-      "product_name": "DeepSeek V4 Flash",
-      "builder_name": "Artificial Analysis",
-      "first_seen": "2026-08-02",
-      "last_seen": "2026-08-02",
-      "occurrence_count": 1,
-      "intelligence_type": "model_capability",
-      "evidence_status": "verified",
-      "target_user": "未公开",
-      "user_problem": "未公开",
-      "what_it_is": "DeepSeek V4 Flash 0731在Artificial Analysis智能指数上得分50，比上一版高10分，显示模型能力提升。",
-      "ai_role": "未公开",
-      "implementation_idea": "未公开",
-      "hands_on_exercise": "未公开",
-      "limitations_or_uncertainties": "未公开",
-      "region": "global",
-      "score": 7.0,
-      "summary": "DeepSeek V4 Flash 0731在Artificial Analysis智能指数上得分50，比上一版高10分，显示模型能力提升。",
-      "title": "Deepseek V4 Flash 0731 Scores 50 On The Artificial Analysis Intelligence Index 10 Points Above Previous Deepseek V4 Flash",
-      "url": "https://artificialanalysis.ai/articles/deepseek-v4-flash-0731-scores-50-on-the-artificial-analysis-intelligence-index-10-points-above-previous-deepseek-v4-flash",
-      "sources": [
-        {
-          "url": "https://artificialanalysis.ai/articles/deepseek-v4-flash-0731-scores-50-on-the-artificial-analysis-intelligence-index-10-points-above-previous-deepseek-v4-flash",
-          "title": "Deepseek V4 Flash 0731 Scores 50 On The Artificial Analysis Intelligence Index 10 Points Above Previous Deepseek V4 Flash",
-          "source_type": "public_web",
-          "published_at": "2026-07-31T00:00:00+00:00"
-        },
-        {
-          "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFB2OTlPV05yYUxtaVZVdVBnREtxc0dlaDNTRTBpV1hpdV8waWF4bkRGM0FycXNQNFlPUDV6c190NTdMb1Z4V3BKZlRCa2haREhua1NITkhmSENYbHViV3lTaWl3?oc=5",
-          "title": "DeepSeek V4-Flash正式版来了！AI开发者实测：价格“很香” Agent能力直追顶级模型 - 天天基金",
-          "source_type": "supplemental",
-          "published_at": ""
-        },
-        {
-          "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE9xM2lvSlpRNjlpZHFOZEROT3daY19KOFV5Z25JV25FaWQ3aWxoQWdLZDBJeGw4WTkxelZRQnFRcVhsamJfaThmMA?oc=5",
-          "title": "从翻译到桌面Agent，网易有道全线产品完成DeepSeek-V4-Flash正式版升级 - 品玩",
-          "source_type": "supplemental",
-          "published_at": ""
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "deepseek-v4-flash-0731-benchmark",
-          "date": "2026-08-02",
-          "title": "Deepseek V4 Flash 0731 Scores 50 On The Artificial Analysis Intelligence Index 10 Points Above Previous Deepseek V4 Flash",
-          "summary": "DeepSeek V4 Flash 0731在Artificial Analysis智能指数上得分50，比上一版高10分，显示模型能力提升。",
-          "score": 7.0,
-          "url": "https://artificialanalysis.ai/articles/deepseek-v4-flash-0731-scores-50-on-the-artificial-analysis-intelligence-index-10-points-above-previous-deepseek-v4-flash"
-        }
-      ],
-      "usage_flow": [],
-      "learning_points": [],
-      "verticals": [],
-      "tags": [
-        "DeepSeek",
-        "模型评测"
       ]
     },
     {
