@@ -1,7 +1,502 @@
 {
   "version": 1,
-  "updated_at": "2026-08-03T03:55:09.272815+00:00",
+  "updated_at": "2026-08-04T03:46:29.025419+00:00",
   "products": [
+    {
+      "product_id": "product-7f7811de59626bc9",
+      "product_name": "Claude Code",
+      "builder_name": "ashwin-ant",
+      "first_seen": "2026-07-26",
+      "last_seen": "2026-08-04",
+      "occurrence_count": 2,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "需要在终端或 IDE 里写代码、改代码、调试的开发者",
+      "user_problem": "开发者用 AI 辅助编程时，工具调用过程太嘈杂干扰思路；沙箱环境里怕敏感凭据泄露；旧版提示词在新模型上效果变差却难排查；并行工具调用的权限检查又慢又贵。",
+      "what_it_is": "Anthropic 出的命令行 AI 编程助手，能读代码库、改文件、跑命令，像个住在终端里的程序员搭档。",
+      "ai_role": "理解用户意图后，自主决定读哪些文件、改哪几行、执行什么命令，并把执行过程和结果反馈给用户确认",
+      "implementation_idea": "Claude Code 本质上是一个 Agent（智能体）：它把用户的自然语言目标拆解成一步步操作，每步调用'工具'（如读文件、写文件、跑 Bash）。新版 Focus view 是在 UI 层把工具调用的详细日志折叠起来；沙箱凭据保护则是让 AI 在隔离环境里只能看到'假值'，真实密码在数据离开沙箱时才由代理层替换。",
+      "hands_on_exercise": "30 分钟体验：找一个本地 Git 项目，安装 Claude Code，让它解释一个复杂函数的实现；然后开启 Focus view（Ctrl+Alt+F）对比折叠前后的界面差异；最后故意写一条带模型版本假设的旧提示词，运行 `claude-api prompt-audit` 看它会报什么问题。",
+      "limitations_or_uncertainties": "macOS 上沙箱凭据 mask 功能回退到 deny 模式，具体限制范围未公开；prompt-audit 的检测规则和覆盖的'旧模型模式'清单未公开；背景会话（background sessions）的自动推送到远程仓库的具体策略细节未公开。",
+      "region": "global",
+      "score": 8.5,
+      "summary": "Anthropic 发布 Claude Code v2.1.221，新增 Focus view 和 sandbox 凭据保护等功能，提升开发体验和安全性。",
+      "title": "Claude Code v2.1.221：新增专注视图、沙箱凭据保护和提示审计功能",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.221",
+      "sources": [
+        {
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.219",
+          "title": "anthropics/claude-code released v2.1.219",
+          "source_type": "github",
+          "published_at": "2026-07-24T17:14:23+00:00"
+        },
+        {
+          "url": "https://claude.com/product/claude-code",
+          "title": "Claude Code by Anthropic | AI Coding Agent, Terminal, IDE",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.221",
+          "title": "anthropics/claude-code released v2.1.221",
+          "source_type": "github",
+          "published_at": "2026-08-04T00:14:23+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "claude-code-v2.1.219",
+          "date": "2026-07-26",
+          "title": "Claude Code v2.1.219：新增 Opus 5 模型支持与网络沙箱白名单",
+          "summary": "Claude Code v2.1.219新增Opus 5模型支持、网络沙箱白名单等多项功能。",
+          "score": 8.0,
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.219"
+        },
+        {
+          "update_id": "claude-code-v2.1.221-release",
+          "date": "2026-08-04",
+          "title": "Claude Code v2.1.221：新增专注视图、沙箱凭据保护和提示审计功能",
+          "summary": "Anthropic 发布 Claude Code v2.1.221，新增 Focus view 和 sandbox 凭据保护等功能，提升开发体验和安全性。",
+          "score": 8.5,
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.221"
+        }
+      ],
+      "usage_flow": [
+        "在终端安装并启动 claude，用自然语言描述需求（如'给这个项目加登录功能'）",
+        "AI 自动分析代码库，必要时用 /add-dir 添加更多目录到上下文",
+        "AI 提出修改方案，经确认后自动编辑文件、运行命令",
+        "开发者检查 git diff，确认无误后提交代码",
+        "安装 Claude Code CLI，在代码仓库目录下运行 `claude` 启动对话",
+        "用自然语言描述需求（如'给这个函数加单元测试'），AI 自动读文件、改代码、跑命令",
+        "按 `Ctrl+Alt+F` 开启 Focus view，把工具执行细节折叠成可展开摘要，专注看对话",
+        "用 `claude-api prompt-audit` 检查旧提示词是否适合当前模型，确认后提交代码"
+      ],
+      "learning_points": [
+        "Context window（上下文窗口）：模型一次能'看'多少字，Opus 5 的 1M 约等于能塞进整本《三体》第一部，让 AI 分析大型代码库不丢线索",
+        "Agent（智能体）：不只是聊天回复，而是能自主决定'我要先读哪个文件、再改哪行、然后跑测试'的 AI 系统",
+        "Function calling（函数调用）：模型不直接生成答案，而是输出结构化指令（如'调用 read_file 工具'），由外部程序执行后再把结果喂回模型",
+        "Agent：不只是问答，而是能自主规划步骤、调用工具完成任务的 AI 系统",
+        "Function Calling（函数调用）：LLM 输出结构化指令让程序去执行具体操作，比如'读这个文件'或'运行这个测试'",
+        "Prompt 审计：不同模型对提示词的敏感度不同，旧提示词可能在新模型上失效，需要系统性检查"
+      ],
+      "verticals": [],
+      "tags": [
+        "工具更新",
+        "Claude Code",
+        "Opus 5",
+        "Agent",
+        "开发者工具"
+      ]
+    },
+    {
+      "product_id": "product-03c84cffde99f305",
+      "product_name": "GPT-Live",
+      "builder_name": "OpenAI News",
+      "first_seen": "2026-08-04",
+      "last_seen": "2026-08-04",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "OpenAI推出GPT-Live，实现连续语音交互，采用无轮次语音模型和低延迟架构，提升对话自然度。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.5,
+      "summary": "OpenAI推出GPT-Live，实现连续语音交互，采用无轮次语音模型和低延迟架构，提升对话自然度。",
+      "title": "How we built a realtime system for responsive voice AI in six months",
+      "url": "https://openai.com/index/continuous-voice-interaction-with-gpt-live",
+      "sources": [
+        {
+          "url": "https://openai.com/index/continuous-voice-interaction-with-gpt-live",
+          "title": "How we built a realtime system for responsive voice AI in six months",
+          "source_type": "rss",
+          "published_at": "2026-08-03T07:00:00+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "openai-gpt-live-realtime",
+          "date": "2026-08-04",
+          "title": "How we built a realtime system for responsive voice AI in six months",
+          "summary": "OpenAI推出GPT-Live，实现连续语音交互，采用无轮次语音模型和低延迟架构，提升对话自然度。",
+          "score": 8.5,
+          "url": "https://openai.com/index/continuous-voice-interaction-with-gpt-live"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "语音AI",
+        "实时交互"
+      ]
+    },
+    {
+      "product_id": "product-bd29b954bf78a9c4",
+      "product_name": "Swiftlet",
+      "builder_name": "leonickson",
+      "first_seen": "2026-08-04",
+      "last_seen": "2026-08-04",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "verified",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "开发者发布Swiftlet，能在Mac上仅用4.3GB内存运行80B Qwen模型，并在iPhone上运行35B，展示了端侧大模型部署的新可能。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.5,
+      "summary": "开发者发布Swiftlet，能在Mac上仅用4.3GB内存运行80B Qwen模型，并在iPhone上运行35B，展示了端侧大模型部署的新可能。",
+      "title": "Show HN: Run an 80B Qwen in 4.3 GB of RAM on a Mac, and a 35B on an iPhone",
+      "url": "https://github.com/leonickson1/Swiftlet",
+      "sources": [
+        {
+          "url": "https://github.com/leonickson1/Swiftlet",
+          "title": "Show HN: Run an 80B Qwen in 4.3 GB of RAM on a Mac, and a 35B on an iPhone",
+          "source_type": "hackernews",
+          "published_at": "2026-08-03T16:54:15+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "swiftlet-run-80b-qwen-4gb-ram",
+          "date": "2026-08-04",
+          "title": "Show HN: Run an 80B Qwen in 4.3 GB of RAM on a Mac, and a 35B on an iPhone",
+          "summary": "开发者发布Swiftlet，能在Mac上仅用4.3GB内存运行80B Qwen模型，并在iPhone上运行35B，展示了端侧大模型部署的新可能。",
+          "score": 8.5,
+          "url": "https://github.com/leonickson1/Swiftlet"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "端侧部署",
+        "Qwen",
+        "模型压缩"
+      ]
+    },
+    {
+      "product_id": "product-5316a431e530b8e6",
+      "product_name": "MiniMax H3",
+      "builder_name": "vblanco",
+      "first_seen": "2026-08-04",
+      "last_seen": "2026-08-04",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "verified",
+      "target_user": "需要本地运行视频生成的工作者（如独立创作者、小型工作室），以及想尝试 AI 视频+音频同步生成的技术爱好者",
+      "user_problem": "以往高质量视频生成模型要么只能云端调用、要么硬件门槛极高；同时视频和音频通常要分开生成再手动对齐，流程复杂。",
+      "what_it_is": "MiniMax H3 是一个能同时生成视频和音频的 AI 模型，现在可以在 ComfyUI 这个可视化工作流工具里直接运行，而且模型权重已经开源。",
+      "ai_role": "根据用户输入的文本/图像/视频，端到端生成带同步音频的视频内容",
+      "implementation_idea": "模型本身是一个'全能型生成系统'，能理解多种输入模态（文字、图、视频、声音），然后一次性输出视频帧和音频波形。ComfyUI 这边通过加载开源权重，把原本需要 123.6 GB 显存的计算，用'查找表替换部分参数'和'动态显存卸载'两种技巧压缩到 42.5 GB，甚至能让 RTX 3060 这种 16GB 显存的显卡也能跑 2K 视频生成——代价是生成速度会变慢。",
+      "hands_on_exercise": "如果你有 NVIDIA 显卡（建议 12GB+ 显存）：1）安装 ComfyUI；2）从 Hugging Face 下载 MiniMax-H3 权重；3）加载官方示例工作流，用简单文本提示生成一段 5 秒 480p 视频，记录显存占用和生成时间。如果显存不足，观察开启'低显存模式'后的变化。",
+      "limitations_or_uncertainties": "官方博客声称'无损压缩'调制权重，但社区对'无质量损失'存疑；RTX 3060 运行 2K 视频的具体生成速度未公开；'Day-0 支持'的实际稳定性需更多用户验证；16GB 显存跑 2K 是否可行与合理耗时之间的平衡未明确",
+      "region": "global",
+      "score": 8.0,
+      "summary": "MiniMax H3 模型在 ComfyUI 中上线，支持原生音频和 2K 视频生成，用户反馈效果惊艳。",
+      "title": "MiniMax H3 在 ComfyUI 上线首日支持：开源权重、原生音频与 2K 视频生成",
+      "url": "https://blog.comfy.org/p/minimax-h3-day-0-support-in-comfyui",
+      "sources": [
+        {
+          "url": "https://blog.comfy.org/p/minimax-h3-day-0-support-in-comfyui",
+          "title": "MiniMax H3 Day-0 Support in ComfyUI: Open Weights, Native Audio, and 2K Video",
+          "source_type": "hackernews",
+          "published_at": "2026-08-03T13:34:43+00:00"
+        },
+        {
+          "url": "https://huggingface.co/MiniMaxAI/MiniMax-H3",
+          "title": "MiniMaxAI/ MiniMax - H 3 · Hugging Face",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://minimaxh3.ai/",
+          "title": "MiniMax H 3 AI Video Generator: Create Videos with Sound",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "minimax-h3-comfyui-support",
+          "date": "2026-08-04",
+          "title": "MiniMax H3 在 ComfyUI 上线首日支持：开源权重、原生音频与 2K 视频生成",
+          "summary": "MiniMax H3 模型在 ComfyUI 中上线，支持原生音频和 2K 视频生成，用户反馈效果惊艳。",
+          "score": 8.0,
+          "url": "https://blog.comfy.org/p/minimax-h3-day-0-support-in-comfyui"
+        }
+      ],
+      "usage_flow": [
+        "在 ComfyUI 中加载 MiniMax H3 节点和工作流",
+        "输入文本描述，可选附加图片或视频作为参考",
+        "模型同时生成视频画面和配套音频",
+        "导出最高 2K 分辨率的成品视频"
+      ],
+      "learning_points": [
+        "多模态（Omni-modal）：AI 同时处理和理解文字、图像、视频、音频多种信息的能力",
+        "显存优化中的量化与卸载：通过减少参数精度、把暂时不用的计算放到内存/硬盘，让小显卡也能跑大模型",
+        "ComfyUI：一个用'节点连线'方式搭建 AI 工作流的开源工具，不需要写代码就能组合不同模型"
+      ],
+      "verticals": [],
+      "tags": [
+        "MiniMax",
+        "视频生成",
+        "ComfyUI"
+      ]
+    },
+    {
+      "product_id": "product-8650d98b81792fda",
+      "product_name": "ChatGPT Codex",
+      "builder_name": "Lenny Rachitsky",
+      "first_seen": "2026-08-04",
+      "last_seen": "2026-08-04",
+      "occurrence_count": 1,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "OpenAI专家Nick Baumann演示ChatGPT Codex的语音、浏览器和Sites功能，展示AI辅助工作流，值得学习其实际应用。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.0,
+      "summary": "OpenAI专家Nick Baumann演示ChatGPT Codex的语音、浏览器和Sites功能，展示AI辅助工作流，值得学习其实际应用。",
+      "title": "🎙️ How I AI: ChatGPT Codex Voice + browser + Sites: an expert’s AI workflow | Nick Baumann (OpenAI)",
+      "url": "https://www.lennysnewsletter.com/p/how-i-ai-chatgpt-codex-voice-browser",
+      "sources": [
+        {
+          "url": "https://www.lennysnewsletter.com/p/how-i-ai-chatgpt-codex-voice-browser",
+          "title": "🎙️ How I AI: ChatGPT Codex Voice + browser + Sites: an expert’s AI workflow | Nick Baumann (OpenAI)",
+          "source_type": "newsletter",
+          "published_at": "2026-08-03T15:02:21+00:00"
+        },
+        {
+          "url": "https://www.lennysnewsletter.com/p/chatgpt-codex-voice-browser-sites",
+          "title": "ChatGPT Codex Voice + browser + Sites: an expert’s AI workflow | Nick Baumann (OpenAI)",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "openai-codex-voice-workflow",
+          "date": "2026-08-04",
+          "title": "🎙️ How I AI: ChatGPT Codex Voice + browser + Sites: an expert’s AI workflow | Nick Baumann (OpenAI)",
+          "summary": "OpenAI专家Nick Baumann演示ChatGPT Codex的语音、浏览器和Sites功能，展示AI辅助工作流，值得学习其实际应用。",
+          "score": 8.0,
+          "url": "https://www.lennysnewsletter.com/p/how-i-ai-chatgpt-codex-voice-browser"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "ChatGPT",
+        "工作流",
+        "语音交互"
+      ]
+    },
+    {
+      "product_id": "product-56961a89429ad50e",
+      "product_name": "Gas Town",
+      "builder_name": "Simon Willison",
+      "first_seen": "2026-08-04",
+      "last_seen": "2026-08-04",
+      "occurrence_count": 1,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Steve Yegge透露其AI编码工具Gas Town因Claude Opus 4.7的'just two more things'行为而失败，展示了当前编码代理的可靠性问题。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.0,
+      "summary": "Steve Yegge透露其AI编码工具Gas Town因Claude Opus 4.7的'just two more things'行为而失败，展示了当前编码代理的可靠性问题。",
+      "title": "Quoting Steve Yegge",
+      "url": "https://simonwillison.net/2026/Aug/4/steve-yegge/#atom-everything",
+      "sources": [
+        {
+          "url": "https://simonwillison.net/2026/Aug/4/steve-yegge/#atom-everything",
+          "title": "Quoting Steve Yegge",
+          "source_type": "rss",
+          "published_at": "2026-08-04T00:42:45+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "steve-yegge-gastown-opus-4.7",
+          "date": "2026-08-04",
+          "title": "Quoting Steve Yegge",
+          "summary": "Steve Yegge透露其AI编码工具Gas Town因Claude Opus 4.7的'just two more things'行为而失败，展示了当前编码代理的可靠性问题。",
+          "score": 8.0,
+          "url": "https://simonwillison.net/2026/Aug/4/steve-yegge/#atom-everything"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Steve Yegge",
+        "编码代理",
+        "Opus"
+      ]
+    },
+    {
+      "product_id": "product-6b07f1c2139d1ca9",
+      "product_name": "Replit",
+      "builder_name": "Replit Blog",
+      "first_seen": "2026-08-04",
+      "last_seen": "2026-08-04",
+      "occurrence_count": 1,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Replit官方博客强调语义层是AI采用的基础，指出AI代理需要可靠的数据真相来源，对AI产品设计有重要参考价值。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.0,
+      "summary": "Replit官方博客强调语义层是AI采用的基础，指出AI代理需要可靠的数据真相来源，对AI产品设计有重要参考价值。",
+      "title": "AI adoption starts with truth",
+      "url": "https://replit.com/blog/ai-adoption",
+      "sources": [
+        {
+          "url": "https://replit.com/blog/ai-adoption",
+          "title": "AI adoption starts with truth",
+          "source_type": "rss",
+          "published_at": "2026-08-03T16:15:17+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "replit-semantic-layer-ai-adoption",
+          "date": "2026-08-04",
+          "title": "AI adoption starts with truth",
+          "summary": "Replit官方博客强调语义层是AI采用的基础，指出AI代理需要可靠的数据真相来源，对AI产品设计有重要参考价值。",
+          "score": 8.0,
+          "url": "https://replit.com/blog/ai-adoption"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Replit",
+        "语义层",
+        "AI采用"
+      ]
+    },
+    {
+      "product_id": "product-af72f3b283a8998d",
+      "product_name": "Qwen3.8-Max",
+      "builder_name": "Robert Hart",
+      "first_seen": "2026-08-04",
+      "last_seen": "2026-08-04",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "阿里巴巴发布最新大模型Qwen3.8-Max，声称性能比肩美国前沿实验室，并开放给用户使用，值得关注其实际表现。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "china",
+      "score": 8.0,
+      "summary": "阿里巴巴发布最新大模型Qwen3.8-Max，声称性能比肩美国前沿实验室，并开放给用户使用，值得关注其实际表现。",
+      "title": "China&#8217;s Alibaba takes another swipe at America’s AI supremacy",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/974342/alibaba-qwen-max-open-weight-ai",
+      "sources": [
+        {
+          "url": "https://www.theverge.com/ai-artificial-intelligence/974342/alibaba-qwen-max-open-weight-ai",
+          "title": "China&#8217;s Alibaba takes another swipe at America’s AI supremacy",
+          "source_type": "rss",
+          "published_at": "2026-08-03T11:01:11+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "alibaba-qwen3.8-max-release",
+          "date": "2026-08-04",
+          "title": "China&#8217;s Alibaba takes another swipe at America’s AI supremacy",
+          "summary": "阿里巴巴发布最新大模型Qwen3.8-Max，声称性能比肩美国前沿实验室，并开放给用户使用，值得关注其实际表现。",
+          "score": 8.0,
+          "url": "https://www.theverge.com/ai-artificial-intelligence/974342/alibaba-qwen-max-open-weight-ai"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "阿里巴巴",
+        "Qwen",
+        "大模型"
+      ]
+    },
+    {
+      "product_id": "product-32bdd03d61088459",
+      "product_name": "Claude for Nonprofits",
+      "builder_name": "Anthropic News",
+      "first_seen": "2026-08-04",
+      "last_seen": "2026-08-04",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Anthropic推出Claude for Nonprofits，为非营利组织提供AI工具，值得关注其如何降低公益机构使用AI的门槛。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.5,
+      "summary": "Anthropic推出Claude for Nonprofits，为非营利组织提供AI工具，值得关注其如何降低公益机构使用AI的门槛。",
+      "title": "Claude For Nonprofits",
+      "url": "https://www.anthropic.com/news/claude-for-nonprofits",
+      "sources": [
+        {
+          "url": "https://www.anthropic.com/news/claude-for-nonprofits",
+          "title": "Claude For Nonprofits",
+          "source_type": "public_web",
+          "published_at": "2026-08-03T16:00:43+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "anthropic-claude-for-nonprofits",
+          "date": "2026-08-04",
+          "title": "Claude For Nonprofits",
+          "summary": "Anthropic推出Claude for Nonprofits，为非营利组织提供AI工具，值得关注其如何降低公益机构使用AI的门槛。",
+          "score": 7.5,
+          "url": "https://www.anthropic.com/news/claude-for-nonprofits"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "非营利",
+        "AI应用"
+      ]
+    },
     {
       "product_id": "product-4b618a492c075b4f",
       "product_name": "Qwen3.8-Max",
@@ -3454,69 +3949,6 @@
         "Agent",
         "ChatGPT",
         "Work"
-      ]
-    },
-    {
-      "product_id": "product-7f7811de59626bc9",
-      "product_name": "Claude Code",
-      "builder_name": "ashwin-ant",
-      "first_seen": "2026-07-26",
-      "last_seen": "2026-07-26",
-      "occurrence_count": 1,
-      "intelligence_type": "product_case",
-      "evidence_status": "first_party",
-      "target_user": "需要在终端/命令行环境下编写、修改、调试代码的开发者",
-      "user_problem": "开发者想直接用自然语言指挥 AI 改代码、跑测试，但担心 AI 自动执行命令时连到不该连的网络地址，或模型能力不够处理大代码库",
-      "what_it_is": "Anthropic 出品的命令行 AI 编程助手，能在终端里理解代码库、改文件、跑命令",
-      "ai_role": "理解代码库结构 → 生成修改方案 → 执行文件编辑和终端命令 → 汇报结果",
-      "implementation_idea": "把大语言模型包进命令行工具，通过 MCP（Model Context Protocol，一种让 AI 调用外部工具的通用接口）连接文件系统、代码库和外部服务；用沙箱限制 AI 执行命令时的网络访问，白名单机制让管理员预先批准可信域名",
-      "hands_on_exercise": "30 分钟练习：安装 Claude Code，找一个自己的 Python 项目，用 /add-dir 把项目根目录加进去，然后问'这个项目的依赖结构有什么风险'，观察它如何分析；接着在设置里打开 sandbox.network.strictAllowlist，尝试让 AI 访问一个未白名单的 URL，看是否被拦截",
-      "limitations_or_uncertainties": "Opus 5 的 '$10/$50 per Mtok' 具体指输入/输出哪端定价未在 release note 中明示；'fast mode' 的具体速度提升幅度未公开；嵌套 subagent 的 depth-3 限制是否会导致复杂任务中的上下文爆炸需用户自行验证",
-      "region": "global",
-      "score": 8.0,
-      "summary": "Claude Code v2.1.219新增Opus 5模型支持、网络沙箱白名单等多项功能。",
-      "title": "Claude Code v2.1.219：新增 Opus 5 模型支持与网络沙箱白名单",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.219",
-      "sources": [
-        {
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.219",
-          "title": "anthropics/claude-code released v2.1.219",
-          "source_type": "github",
-          "published_at": "2026-07-24T17:14:23+00:00"
-        },
-        {
-          "url": "https://claude.com/product/claude-code",
-          "title": "Claude Code by Anthropic | AI Coding Agent, Terminal, IDE",
-          "source_type": "supplemental",
-          "published_at": ""
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "claude-code-v2.1.219",
-          "date": "2026-07-26",
-          "title": "Claude Code v2.1.219：新增 Opus 5 模型支持与网络沙箱白名单",
-          "summary": "Claude Code v2.1.219新增Opus 5模型支持、网络沙箱白名单等多项功能。",
-          "score": 8.0,
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.219"
-        }
-      ],
-      "usage_flow": [
-        "在终端安装并启动 claude，用自然语言描述需求（如'给这个项目加登录功能'）",
-        "AI 自动分析代码库，必要时用 /add-dir 添加更多目录到上下文",
-        "AI 提出修改方案，经确认后自动编辑文件、运行命令",
-        "开发者检查 git diff，确认无误后提交代码"
-      ],
-      "learning_points": [
-        "Context window（上下文窗口）：模型一次能'看'多少字，Opus 5 的 1M 约等于能塞进整本《三体》第一部，让 AI 分析大型代码库不丢线索",
-        "Agent（智能体）：不只是聊天回复，而是能自主决定'我要先读哪个文件、再改哪行、然后跑测试'的 AI 系统",
-        "Function calling（函数调用）：模型不直接生成答案，而是输出结构化指令（如'调用 read_file 工具'），由外部程序执行后再把结果喂回模型"
-      ],
-      "verticals": [],
-      "tags": [
-        "工具更新",
-        "Claude Code",
-        "Opus 5"
       ]
     },
     {
