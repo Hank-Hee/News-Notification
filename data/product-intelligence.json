@@ -1,7 +1,614 @@
 {
   "version": 1,
-  "updated_at": "2026-08-04T03:46:29.025419+00:00",
+  "updated_at": "2026-08-05T03:33:59.236209+00:00",
   "products": [
+    {
+      "product_id": "product-2e9811576c09680e",
+      "product_name": "LLM",
+      "builder_name": "Simon Willison",
+      "first_seen": "2026-07-31",
+      "last_seen": "2026-08-05",
+      "occurrence_count": 2,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Simon Willison发布LLM 0.32，新增推理轨迹显示、服务端工具和OpenAI Responses支持，提升AI应用开发效率。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 9.0,
+      "summary": "Simon Willison发布LLM 0.32，新增推理轨迹显示、服务端工具和OpenAI Responses支持，提升AI应用开发效率。",
+      "title": "New release of LLM adds support for reasoning traces, OpenAI Responses, server-side tools, and smarter logging",
+      "url": "https://simonwillison.net/2026/Aug/4/new-release-of-llm/#atom-everything",
+      "sources": [
+        {
+          "url": "https://simonwillison.net/2026/Jul/30/llm-rc2/#atom-everything",
+          "title": "llm 0.32rc2",
+          "source_type": "rss",
+          "published_at": "2026-07-30T22:52:06+00:00"
+        },
+        {
+          "url": "https://simonwillison.net/2026/Aug/4/new-release-of-llm/#atom-everything",
+          "title": "New release of LLM adds support for reasoning traces, OpenAI Responses, server-side tools, and smarter logging",
+          "source_type": "rss",
+          "published_at": "2026-08-04T23:58:24+00:00"
+        },
+        {
+          "url": "https://simonwillison.net/2026/Aug/4/llm/#atom-everything",
+          "title": "llm 0.32",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "llm-0.32rc2-release",
+          "date": "2026-07-31",
+          "title": "llm 0.32rc2",
+          "summary": "llm 0.32rc2发布，默认模型改为GPT-5.6 Luna，并新增openai endpoint命令，提升CLI工具的灵活性和性能。",
+          "score": 8.0,
+          "url": "https://simonwillison.net/2026/Jul/30/llm-rc2/#atom-everything"
+        },
+        {
+          "update_id": "llm-0.32-release",
+          "date": "2026-08-05",
+          "title": "New release of LLM adds support for reasoning traces, OpenAI Responses, server-side tools, and smarter logging",
+          "summary": "Simon Willison发布LLM 0.32，新增推理轨迹显示、服务端工具和OpenAI Responses支持，提升AI应用开发效率。",
+          "score": 9.0,
+          "url": "https://simonwillison.net/2026/Aug/4/new-release-of-llm/#atom-everything"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "开发者工具",
+        "CLI",
+        "LLM",
+        "推理轨迹"
+      ]
+    },
+    {
+      "product_id": "product-e5bdd489b8bbd826",
+      "product_name": "ChatGPT Work",
+      "builder_name": "Shlok Khemani",
+      "first_seen": "2026-08-05",
+      "last_seen": "2026-08-05",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "reported",
+      "target_user": "需要自动化复杂工作流的团队和企业用户",
+      "user_problem": "日常工作中信息分散在各处（笔记、草稿、邮件、文档），需要手动切换工具、重复整理，项目推进靠人盯着",
+      "what_it_is": "一篇第三方博客文章，从外部反推 ChatGPT Work 的 Agent 能力设计，包括记忆、主动执行、定时任务、浏览器操作等模块",
+      "ai_role": "作为'执行代理'（Agent），理解目标后自主决策调用哪些工具、何时执行、如何记住上下文，而非等用户逐句指挥",
+      "implementation_idea": "核心思路是把大模型当成'会思考的项目经理'：先用记忆模块记住用户偏好和业务背景，再用调度模块安排定时任务，需要时调用浏览器或插件去外部系统取数据/操作，最后把结果汇总回来。作者是从产品外部观察这些模块如何配合，而非看内部代码",
+      "hands_on_exercise": "30 分钟：打开 ChatGPT 的'任务'功能（若已开放）或任何支持定时提醒的 AI 工具，设置一个重复任务如'每天早上 9 点总结我的日历并建议优先级'，观察它如何调用日历、生成摘要、是否需要你确认",
+      "limitations_or_uncertainties": "文章为外部重构，非 OpenAI 官方技术文档；GPT-5.6 型号、具体发布时间、企业定价、安全审计机制均未公开；'Proactivity'（主动执行）的实际边界和错误回滚策略未知",
+      "region": "global",
+      "score": 8.5,
+      "summary": "外部重构了ChatGPT Work的Agent能力，帮助理解其如何解决复杂任务自动化问题。",
+      "title": "拆解 ChatGPT Work：面向十亿用户的 Agent 长什么样",
+      "url": "https://www.latent.space/p/unpacking-chatgpt-work",
+      "sources": [
+        {
+          "url": "https://www.latent.space/p/unpacking-chatgpt-work",
+          "title": "Unpacking ChatGPT Work: the Agent for a Billion Users",
+          "source_type": "rss",
+          "published_at": "2026-08-04T18:20:14+00:00"
+        },
+        {
+          "url": "https://openai.com/chatgpt-work/",
+          "title": "ChatGPT Work for every team | OpenAI",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "chatgpt-work-agent-reconstruction",
+          "date": "2026-08-05",
+          "title": "拆解 ChatGPT Work：面向十亿用户的 Agent 长什么样",
+          "summary": "外部重构了ChatGPT Work的Agent能力，帮助理解其如何解决复杂任务自动化问题。",
+          "score": 8.5,
+          "url": "https://www.latent.space/p/unpacking-chatgpt-work"
+        }
+      ],
+      "usage_flow": [
+        "用户授权 ChatGPT Work 接入团队工具（如文档、日历、项目管理软件）",
+        "用自然语言描述目标，例如'每周一整理上周销售数据并邮件发给团队'",
+        "AI 自主规划步骤：调取数据、分析、生成报告、发送邮件",
+        "用户收到结果通知，必要时介入确认或修正"
+      ],
+      "learning_points": [
+        "Agent：不只是回答问题，而是能自主规划多步骤并调用工具完成目标的 AI 系统",
+        "Function Calling：大模型'伸出触角'——识别需要调外部工具时，生成结构化指令让程序去执行",
+        "RAG（检索增强生成）：AI 先从外部知识库找相关信息，再基于找来的内容回答或行动，避免瞎编"
+      ],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "ChatGPT Work",
+        "产品拆解"
+      ]
+    },
+    {
+      "product_id": "product-964a1016f7ccc233",
+      "product_name": "MiniMax-H3",
+      "builder_name": "Simon Willison",
+      "first_seen": "2026-08-05",
+      "last_seen": "2026-08-05",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "verified",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "MiniMax-H3多模态模型被移植到MLX，可在Apple Silicon上生成带音频的视频，Simon Willison演示了运行过程。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.5,
+      "summary": "MiniMax-H3多模态模型被移植到MLX，可在Apple Silicon上生成带音频的视频，Simon Willison演示了运行过程。",
+      "title": "PipeNetwork/minimax-h3-mlx",
+      "url": "https://simonwillison.net/2026/Aug/4/minimax-h3-mlx/#atom-everything",
+      "sources": [
+        {
+          "url": "https://simonwillison.net/2026/Aug/4/minimax-h3-mlx/#atom-everything",
+          "title": "PipeNetwork/minimax-h3-mlx",
+          "source_type": "rss",
+          "published_at": "2026-08-04T19:10:09+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "minimax-h3-mlx-port",
+          "date": "2026-08-05",
+          "title": "PipeNetwork/minimax-h3-mlx",
+          "summary": "MiniMax-H3多模态模型被移植到MLX，可在Apple Silicon上生成带音频的视频，Simon Willison演示了运行过程。",
+          "score": 8.5,
+          "url": "https://simonwillison.net/2026/Aug/4/minimax-h3-mlx/#atom-everything"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "多模态",
+        "MLX",
+        "MiniMax"
+      ]
+    },
+    {
+      "product_id": "product-8650d98b81792fda",
+      "product_name": "ChatGPT Codex",
+      "builder_name": "Lenny Rachitsky",
+      "first_seen": "2026-08-04",
+      "last_seen": "2026-08-05",
+      "occurrence_count": 1,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "OpenAI专家Nick Baumann演示ChatGPT Codex的语音、浏览器和Sites功能，展示AI辅助工作流，值得学习其实际应用。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.0,
+      "summary": "OpenAI专家Nick Baumann演示ChatGPT Codex的语音、浏览器和Sites功能，展示AI辅助工作流，值得学习其实际应用。",
+      "title": "🎙️ How I AI: ChatGPT Codex Voice + browser + Sites: an expert’s AI workflow | Nick Baumann (OpenAI)",
+      "url": "https://www.lennysnewsletter.com/p/how-i-ai-chatgpt-codex-voice-browser",
+      "sources": [
+        {
+          "url": "https://www.lennysnewsletter.com/p/how-i-ai-chatgpt-codex-voice-browser",
+          "title": "🎙️ How I AI: ChatGPT Codex Voice + browser + Sites: an expert’s AI workflow | Nick Baumann (OpenAI)",
+          "source_type": "newsletter",
+          "published_at": "2026-08-03T15:02:21+00:00"
+        },
+        {
+          "url": "https://www.lennysnewsletter.com/p/chatgpt-codex-voice-browser-sites",
+          "title": "ChatGPT Codex Voice + browser + Sites: an expert’s AI workflow | Nick Baumann (OpenAI)",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "openai-codex-voice-workflow",
+          "date": "2026-08-04",
+          "title": "🎙️ How I AI: ChatGPT Codex Voice + browser + Sites: an expert’s AI workflow | Nick Baumann (OpenAI)",
+          "summary": "OpenAI专家Nick Baumann演示ChatGPT Codex的语音、浏览器和Sites功能，展示AI辅助工作流，值得学习其实际应用。",
+          "score": 8.0,
+          "url": "https://www.lennysnewsletter.com/p/how-i-ai-chatgpt-codex-voice-browser"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "ChatGPT",
+        "工作流",
+        "语音交互"
+      ]
+    },
+    {
+      "product_id": "product-33347d4ff16d912f",
+      "product_name": "eve（@agent-browser/eve 扩展）",
+      "builder_name": "Chris Tate",
+      "first_seen": "2026-08-05",
+      "last_seen": "2026-08-05",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "开发 eve Agent 的工程师，需要让 AI 自动完成网页交互任务（如数据采集、自动化测试、表单填写）",
+      "user_problem": "Agent 原本只能调用 API 或处理文本，遇到需要操作网页界面的任务就束手无策，开发者得自己写复杂的浏览器自动化脚本。",
+      "what_it_is": "Vercel 旗下 eve 平台的一个浏览器扩展，让 AI Agent 能打开网页、点击、填表、截图，像人类一样操作浏览器。",
+      "ai_role": "AI 负责'看'页面（snapshot）、理解元素位置（通过 ref 引用）、决定下一步操作（点击/填写/截图），并在 sandbox 里实际执行浏览器命令",
+      "implementation_idea": "给 Agent 配了一个'沙盒里的 Chrome'，Agent 看到的不是原始 HTML，而是带编号标记的页面快照（snapshot），它说'点 @e12'，扩展就把这个引用翻译成真实元素去执行，避免 AI 直接碰原始 DOM 和 Cookie。",
+      "hands_on_exercise": "跟着官方 example（GitHub 上的 Next.js 项目）跑起来，让 eve Agent 自动完成一个任务：打开一个测试网页 → 截图保存 → 点击按钮 → 填写表单 → 再截图对比，全程观察 Agent 怎么通过 snapshot 和 ref 一步步决策。",
+      "limitations_or_uncertainties": "未公开具体定价、性能基准（页面加载多快、并发多少）、是否支持非 Chromium 浏览器、企业级安全审计细节；'Credential protection'的具体实现机制（是系统级拦截还是工具层屏蔽）未详细说明。",
+      "region": "global",
+      "score": 8.0,
+      "summary": "eve agent新增浏览器扩展，使其能像人类一样浏览和操作网页。",
+      "title": "给 eve Agent 装上浏览器：让它像人一样上网",
+      "url": "https://vercel.com/changelog/give-your-eve-agent-a-browser",
+      "sources": [
+        {
+          "url": "https://vercel.com/changelog/give-your-eve-agent-a-browser",
+          "title": "Give your eve agent a browser",
+          "source_type": "rss",
+          "published_at": "2026-08-04T04:00:00+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "eve-agent-browser-extension",
+          "date": "2026-08-05",
+          "title": "给 eve Agent 装上浏览器：让它像人一样上网",
+          "summary": "eve agent新增浏览器扩展，使其能像人类一样浏览和操作网页。",
+          "score": 8.0,
+          "url": "https://vercel.com/changelog/give-your-eve-agent-a-browser"
+        }
+      ],
+      "usage_flow": [
+        "安装 @agent-browser/eve 扩展包",
+        "把扩展挂载到 agent/extensions/ 目录",
+        "Agent 自动获得 browser__navigate 等工具，用 browser__snapshot 查看页面后，通过 @e12 这类引用精准点击或填写",
+        "通过 allowedDomains 等配置限制访问范围，保护敏感凭据"
+      ],
+      "learning_points": [
+        "Agent：能自主规划步骤、调用工具完成任务的 AI 系统，不只是聊天",
+        "Sandbox（沙盒）：把危险操作关进隔离环境，即使浏览器被攻击也不会影响到你的主程序",
+        "Function Calling：AI 不直接生成代码，而是输出'调用某某工具、参数是什么'的结构化指令，由系统代为执行"
+      ],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "浏览器",
+        "eve"
+      ]
+    },
+    {
+      "product_id": "product-823a2ce9c966ee05",
+      "product_name": "llm-anthropic",
+      "builder_name": "Simon Willison",
+      "first_seen": "2026-08-05",
+      "last_seen": "2026-08-05",
+      "occurrence_count": 1,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "llm-anthropic 0.26发布，新增Claude 5系列模型和服务端工具，支持LLM 0.32新特性。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.0,
+      "summary": "llm-anthropic 0.26发布，新增Claude 5系列模型和服务端工具，支持LLM 0.32新特性。",
+      "title": "llm-anthropic 0.26",
+      "url": "https://simonwillison.net/2026/Aug/4/llm-anthropic/#atom-everything",
+      "sources": [
+        {
+          "url": "https://simonwillison.net/2026/Aug/4/llm-anthropic/#atom-everything",
+          "title": "llm-anthropic 0.26",
+          "source_type": "rss",
+          "published_at": "2026-08-04T22:00:58+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "llm-anthropic-0.26-release",
+          "date": "2026-08-05",
+          "title": "llm-anthropic 0.26",
+          "summary": "llm-anthropic 0.26发布，新增Claude 5系列模型和服务端工具，支持LLM 0.32新特性。",
+          "score": 8.0,
+          "url": "https://simonwillison.net/2026/Aug/4/llm-anthropic/#atom-everything"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "LLM",
+        "Anthropic",
+        "插件"
+      ]
+    },
+    {
+      "product_id": "product-a879354aaeb1c3d7",
+      "product_name": "Qwen3.8-Max",
+      "builder_name": "AI News",
+      "first_seen": "2026-08-05",
+      "last_seen": "2026-08-05",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "阿里发布Qwen3.8-Max旗舰模型，2.4T参数，主打编码和长程agent，并宣布下周开源权重。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "china",
+      "score": 8.0,
+      "summary": "阿里发布Qwen3.8-Max旗舰模型，2.4T参数，主打编码和长程agent，并宣布下周开源权重。",
+      "title": "Qwen 3.8 Max",
+      "url": "https://news.smol.ai/issues/26-08-03-qwen-38/",
+      "sources": [
+        {
+          "url": "https://news.smol.ai/issues/26-08-03-qwen-38/",
+          "title": "Qwen 3.8 Max",
+          "source_type": "newsletter",
+          "published_at": "2026-08-03T05:44:39+00:00"
+        },
+        {
+          "url": "https://www.latent.space/p/ainews-qwen-38-max24t-and-27b-new",
+          "title": "[AINews] Qwen 3.8 Max(2.4T) and 27B, new open weights models for Coding and Cowork",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "qwen-3.8-max-launch",
+          "date": "2026-08-05",
+          "title": "Qwen 3.8 Max",
+          "summary": "阿里发布Qwen3.8-Max旗舰模型，2.4T参数，主打编码和长程agent，并宣布下周开源权重。",
+          "score": 8.0,
+          "url": "https://news.smol.ai/issues/26-08-03-qwen-38/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "模型发布",
+        "开源",
+        "Agent"
+      ]
+    },
+    {
+      "product_id": "product-08b818ca5e1a1c16",
+      "product_name": "Wrinkles",
+      "builder_name": "Aisha Malik",
+      "first_seen": "2026-08-05",
+      "last_seen": "2026-08-05",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Wrinkles是一款AI音频导览应用，通过揭示身边地点的隐藏历史故事，为用户提供沉浸式旅游体验。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.5,
+      "summary": "Wrinkles是一款AI音频导览应用，通过揭示身边地点的隐藏历史故事，为用户提供沉浸式旅游体验。",
+      "title": "Meet Wrinkles, an app that uncovers the hidden stories of the places around you",
+      "url": "https://techcrunch.com/2026/08/04/meet-wrinkles-an-ai-app-that-uncovers-the-hidden-stories-of-the-places-around-you/",
+      "sources": [
+        {
+          "url": "https://techcrunch.com/2026/08/04/meet-wrinkles-an-ai-app-that-uncovers-the-hidden-stories-of-the-places-around-you/",
+          "title": "Meet Wrinkles, an app that uncovers the hidden stories of the places around you",
+          "source_type": "rss",
+          "published_at": "2026-08-04T19:34:34+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "wrinkles-ai-audio-tour-guide-launch",
+          "date": "2026-08-05",
+          "title": "Meet Wrinkles, an app that uncovers the hidden stories of the places around you",
+          "summary": "Wrinkles是一款AI音频导览应用，通过揭示身边地点的隐藏历史故事，为用户提供沉浸式旅游体验。",
+          "score": 7.5,
+          "url": "https://techcrunch.com/2026/08/04/meet-wrinkles-an-ai-app-that-uncovers-the-hidden-stories-of-the-places-around-you/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "AI应用",
+        "旅游",
+        "音频导览"
+      ]
+    },
+    {
+      "product_id": "product-46dfc67f2a1396e0",
+      "product_name": "skills.sh",
+      "builder_name": "Andrew Qu",
+      "first_seen": "2026-08-05",
+      "last_seen": "2026-08-05",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "skills.sh推出技能包功能，可打包分享多个Agent技能，简化技能分发。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.5,
+      "summary": "skills.sh推出技能包功能，可打包分享多个Agent技能，简化技能分发。",
+      "title": "Skill packs are now available on skills.sh",
+      "url": "https://vercel.com/changelog/skill-packs-are-now-available",
+      "sources": [
+        {
+          "url": "https://vercel.com/changelog/skill-packs-are-now-available",
+          "title": "Skill packs are now available on skills.sh",
+          "source_type": "rss",
+          "published_at": "2026-08-04T04:00:00+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "skills.sh-skill-packs",
+          "date": "2026-08-05",
+          "title": "Skill packs are now available on skills.sh",
+          "summary": "skills.sh推出技能包功能，可打包分享多个Agent技能，简化技能分发。",
+          "score": 7.5,
+          "url": "https://vercel.com/changelog/skill-packs-are-now-available"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "技能包",
+        "skills.sh"
+      ]
+    },
+    {
+      "product_id": "product-0d906e11fcf5bdbe",
+      "product_name": "DeepSeek V4 Flash",
+      "builder_name": "Artificial Analysis",
+      "first_seen": "2026-08-02",
+      "last_seen": "2026-08-05",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "verified",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "DeepSeek V4 Flash 0731在Artificial Analysis智能指数上得分50，比上一版高10分，显示模型能力提升。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.0,
+      "summary": "DeepSeek V4 Flash 0731在Artificial Analysis智能指数上得分50，比上一版高10分，显示模型能力提升。",
+      "title": "Deepseek V4 Flash 0731 Scores 50 On The Artificial Analysis Intelligence Index 10 Points Above Previous Deepseek V4 Flash",
+      "url": "https://artificialanalysis.ai/articles/deepseek-v4-flash-0731-scores-50-on-the-artificial-analysis-intelligence-index-10-points-above-previous-deepseek-v4-flash",
+      "sources": [
+        {
+          "url": "https://artificialanalysis.ai/articles/deepseek-v4-flash-0731-scores-50-on-the-artificial-analysis-intelligence-index-10-points-above-previous-deepseek-v4-flash",
+          "title": "Deepseek V4 Flash 0731 Scores 50 On The Artificial Analysis Intelligence Index 10 Points Above Previous Deepseek V4 Flash",
+          "source_type": "public_web",
+          "published_at": "2026-07-31T00:00:00+00:00"
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFB2OTlPV05yYUxtaVZVdVBnREtxc0dlaDNTRTBpV1hpdV8waWF4bkRGM0FycXNQNFlPUDV6c190NTdMb1Z4V3BKZlRCa2haREhua1NITkhmSENYbHViV3lTaWl3?oc=5",
+          "title": "DeepSeek V4-Flash正式版来了！AI开发者实测：价格“很香” Agent能力直追顶级模型 - 天天基金",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE9xM2lvSlpRNjlpZHFOZEROT3daY19KOFV5Z25JV25FaWQ3aWxoQWdLZDBJeGw4WTkxelZRQnFRcVhsamJfaThmMA?oc=5",
+          "title": "从翻译到桌面Agent，网易有道全线产品完成DeepSeek-V4-Flash正式版升级 - 品玩",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5Cc1lCcndHYW9xcXBYWDlFTGhkUnkyaFRCUVFyNlJOYjFrZ2NBT2tGazRoUGNvemg2eUI0RG84QzMyejFTMnlhbmdWcDBzZ0RNOTJnRndUcW5KYVRWdGhKbA?oc=5",
+          "title": "DeepSeek V4-Flash正式版来了！AI开发者实测：价格“很香” Agent能力直追顶级模型 - 东方财富",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1MR0o4NV9Od0NvN3dreWZxOTlqbm9GcS1LckYtUXJORjU2czlzQ25vdlRaT2xxYzVGdEZkbXVOQ3h0cUc4Z2hqV3pWcE4xdTdPNmc0bmM3UHFNV2FPQk9OWGNoWUJhSzBZUEE?oc=5",
+          "title": "前瞻全球产业早报：DeepSeek V4-Flash正式版API上线公测_产经 - 前瞻网",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "deepseek-v4-flash-0731-benchmark",
+          "date": "2026-08-02",
+          "title": "Deepseek V4 Flash 0731 Scores 50 On The Artificial Analysis Intelligence Index 10 Points Above Previous Deepseek V4 Flash",
+          "summary": "DeepSeek V4 Flash 0731在Artificial Analysis智能指数上得分50，比上一版高10分，显示模型能力提升。",
+          "score": 7.0,
+          "url": "https://artificialanalysis.ai/articles/deepseek-v4-flash-0731-scores-50-on-the-artificial-analysis-intelligence-index-10-points-above-previous-deepseek-v4-flash"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "DeepSeek",
+        "模型评测"
+      ]
+    },
+    {
+      "product_id": "product-51faa5cd44660be2",
+      "product_name": "Artifacts Hub",
+      "builder_name": "Nathan Lambert",
+      "first_seen": "2026-08-05",
+      "last_seen": "2026-08-05",
+      "occurrence_count": 1,
+      "intelligence_type": "market_signal",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Interconnects推出Artifacts Hub和采用率仪表盘，追踪开源模型趋势，帮助了解模型生态动态。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.0,
+      "summary": "Interconnects推出Artifacts Hub和采用率仪表盘，追踪开源模型趋势，帮助了解模型生态动态。",
+      "title": "Introducing our Artifacts Hub and Adoption Dashboard",
+      "url": "https://www.interconnects.ai/p/introducing-our-artifacts-hub-and",
+      "sources": [
+        {
+          "url": "https://www.interconnects.ai/p/introducing-our-artifacts-hub-and",
+          "title": "Introducing our Artifacts Hub and Adoption Dashboard",
+          "source_type": "newsletter",
+          "published_at": "2026-08-03T14:03:08+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "interconnects-artifacts-hub",
+          "date": "2026-08-05",
+          "title": "Introducing our Artifacts Hub and Adoption Dashboard",
+          "summary": "Interconnects推出Artifacts Hub和采用率仪表盘，追踪开源模型趋势，帮助了解模型生态动态。",
+          "score": 7.0,
+          "url": "https://www.interconnects.ai/p/introducing-our-artifacts-hub-and"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "开源模型",
+        "数据仪表盘"
+      ]
+    },
     {
       "product_id": "product-7f7811de59626bc9",
       "product_name": "Claude Code",
@@ -250,60 +857,6 @@
         "MiniMax",
         "视频生成",
         "ComfyUI"
-      ]
-    },
-    {
-      "product_id": "product-8650d98b81792fda",
-      "product_name": "ChatGPT Codex",
-      "builder_name": "Lenny Rachitsky",
-      "first_seen": "2026-08-04",
-      "last_seen": "2026-08-04",
-      "occurrence_count": 1,
-      "intelligence_type": "builder_insight",
-      "evidence_status": "reported",
-      "target_user": "未公开",
-      "user_problem": "未公开",
-      "what_it_is": "OpenAI专家Nick Baumann演示ChatGPT Codex的语音、浏览器和Sites功能，展示AI辅助工作流，值得学习其实际应用。",
-      "ai_role": "未公开",
-      "implementation_idea": "未公开",
-      "hands_on_exercise": "未公开",
-      "limitations_or_uncertainties": "未公开",
-      "region": "global",
-      "score": 8.0,
-      "summary": "OpenAI专家Nick Baumann演示ChatGPT Codex的语音、浏览器和Sites功能，展示AI辅助工作流，值得学习其实际应用。",
-      "title": "🎙️ How I AI: ChatGPT Codex Voice + browser + Sites: an expert’s AI workflow | Nick Baumann (OpenAI)",
-      "url": "https://www.lennysnewsletter.com/p/how-i-ai-chatgpt-codex-voice-browser",
-      "sources": [
-        {
-          "url": "https://www.lennysnewsletter.com/p/how-i-ai-chatgpt-codex-voice-browser",
-          "title": "🎙️ How I AI: ChatGPT Codex Voice + browser + Sites: an expert’s AI workflow | Nick Baumann (OpenAI)",
-          "source_type": "newsletter",
-          "published_at": "2026-08-03T15:02:21+00:00"
-        },
-        {
-          "url": "https://www.lennysnewsletter.com/p/chatgpt-codex-voice-browser-sites",
-          "title": "ChatGPT Codex Voice + browser + Sites: an expert’s AI workflow | Nick Baumann (OpenAI)",
-          "source_type": "supplemental",
-          "published_at": ""
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "openai-codex-voice-workflow",
-          "date": "2026-08-04",
-          "title": "🎙️ How I AI: ChatGPT Codex Voice + browser + Sites: an expert’s AI workflow | Nick Baumann (OpenAI)",
-          "summary": "OpenAI专家Nick Baumann演示ChatGPT Codex的语音、浏览器和Sites功能，展示AI辅助工作流，值得学习其实际应用。",
-          "score": 8.0,
-          "url": "https://www.lennysnewsletter.com/p/how-i-ai-chatgpt-codex-voice-browser"
-        }
-      ],
-      "usage_flow": [],
-      "learning_points": [],
-      "verticals": [],
-      "tags": [
-        "ChatGPT",
-        "工作流",
-        "语音交互"
       ]
     },
     {
@@ -704,77 +1257,6 @@
         "SSH",
         "协作",
         "创意"
-      ]
-    },
-    {
-      "product_id": "product-0d906e11fcf5bdbe",
-      "product_name": "DeepSeek V4 Flash",
-      "builder_name": "Artificial Analysis",
-      "first_seen": "2026-08-02",
-      "last_seen": "2026-08-03",
-      "occurrence_count": 1,
-      "intelligence_type": "model_capability",
-      "evidence_status": "verified",
-      "target_user": "未公开",
-      "user_problem": "未公开",
-      "what_it_is": "DeepSeek V4 Flash 0731在Artificial Analysis智能指数上得分50，比上一版高10分，显示模型能力提升。",
-      "ai_role": "未公开",
-      "implementation_idea": "未公开",
-      "hands_on_exercise": "未公开",
-      "limitations_or_uncertainties": "未公开",
-      "region": "global",
-      "score": 7.0,
-      "summary": "DeepSeek V4 Flash 0731在Artificial Analysis智能指数上得分50，比上一版高10分，显示模型能力提升。",
-      "title": "Deepseek V4 Flash 0731 Scores 50 On The Artificial Analysis Intelligence Index 10 Points Above Previous Deepseek V4 Flash",
-      "url": "https://artificialanalysis.ai/articles/deepseek-v4-flash-0731-scores-50-on-the-artificial-analysis-intelligence-index-10-points-above-previous-deepseek-v4-flash",
-      "sources": [
-        {
-          "url": "https://artificialanalysis.ai/articles/deepseek-v4-flash-0731-scores-50-on-the-artificial-analysis-intelligence-index-10-points-above-previous-deepseek-v4-flash",
-          "title": "Deepseek V4 Flash 0731 Scores 50 On The Artificial Analysis Intelligence Index 10 Points Above Previous Deepseek V4 Flash",
-          "source_type": "public_web",
-          "published_at": "2026-07-31T00:00:00+00:00"
-        },
-        {
-          "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFB2OTlPV05yYUxtaVZVdVBnREtxc0dlaDNTRTBpV1hpdV8waWF4bkRGM0FycXNQNFlPUDV6c190NTdMb1Z4V3BKZlRCa2haREhua1NITkhmSENYbHViV3lTaWl3?oc=5",
-          "title": "DeepSeek V4-Flash正式版来了！AI开发者实测：价格“很香” Agent能力直追顶级模型 - 天天基金",
-          "source_type": "supplemental",
-          "published_at": ""
-        },
-        {
-          "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE9xM2lvSlpRNjlpZHFOZEROT3daY19KOFV5Z25JV25FaWQ3aWxoQWdLZDBJeGw4WTkxelZRQnFRcVhsamJfaThmMA?oc=5",
-          "title": "从翻译到桌面Agent，网易有道全线产品完成DeepSeek-V4-Flash正式版升级 - 品玩",
-          "source_type": "supplemental",
-          "published_at": ""
-        },
-        {
-          "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5Cc1lCcndHYW9xcXBYWDlFTGhkUnkyaFRCUVFyNlJOYjFrZ2NBT2tGazRoUGNvemg2eUI0RG84QzMyejFTMnlhbmdWcDBzZ0RNOTJnRndUcW5KYVRWdGhKbA?oc=5",
-          "title": "DeepSeek V4-Flash正式版来了！AI开发者实测：价格“很香” Agent能力直追顶级模型 - 东方财富",
-          "source_type": "supplemental",
-          "published_at": ""
-        },
-        {
-          "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1MR0o4NV9Od0NvN3dreWZxOTlqbm9GcS1LckYtUXJORjU2czlzQ25vdlRaT2xxYzVGdEZkbXVOQ3h0cUc4Z2hqV3pWcE4xdTdPNmc0bmM3UHFNV2FPQk9OWGNoWUJhSzBZUEE?oc=5",
-          "title": "前瞻全球产业早报：DeepSeek V4-Flash正式版API上线公测_产经 - 前瞻网",
-          "source_type": "supplemental",
-          "published_at": ""
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "deepseek-v4-flash-0731-benchmark",
-          "date": "2026-08-02",
-          "title": "Deepseek V4 Flash 0731 Scores 50 On The Artificial Analysis Intelligence Index 10 Points Above Previous Deepseek V4 Flash",
-          "summary": "DeepSeek V4 Flash 0731在Artificial Analysis智能指数上得分50，比上一版高10分，显示模型能力提升。",
-          "score": 7.0,
-          "url": "https://artificialanalysis.ai/articles/deepseek-v4-flash-0731-scores-50-on-the-artificial-analysis-intelligence-index-10-points-above-previous-deepseek-v4-flash"
-        }
-      ],
-      "usage_flow": [],
-      "learning_points": [],
-      "verticals": [],
-      "tags": [
-        "DeepSeek",
-        "模型评测"
       ]
     },
     {
@@ -1953,54 +2435,6 @@
         "开发者工具",
         "API",
         "插件"
-      ]
-    },
-    {
-      "product_id": "product-2e9811576c09680e",
-      "product_name": "llm",
-      "builder_name": "Simon Willison",
-      "first_seen": "2026-07-31",
-      "last_seen": "2026-07-31",
-      "occurrence_count": 1,
-      "intelligence_type": "builder_insight",
-      "evidence_status": "first_party",
-      "target_user": "未公开",
-      "user_problem": "未公开",
-      "what_it_is": "llm 0.32rc2发布，默认模型改为GPT-5.6 Luna，并新增openai endpoint命令，提升CLI工具的灵活性和性能。",
-      "ai_role": "未公开",
-      "implementation_idea": "未公开",
-      "hands_on_exercise": "未公开",
-      "limitations_or_uncertainties": "未公开",
-      "region": "global",
-      "score": 8.0,
-      "summary": "llm 0.32rc2发布，默认模型改为GPT-5.6 Luna，并新增openai endpoint命令，提升CLI工具的灵活性和性能。",
-      "title": "llm 0.32rc2",
-      "url": "https://simonwillison.net/2026/Jul/30/llm-rc2/#atom-everything",
-      "sources": [
-        {
-          "url": "https://simonwillison.net/2026/Jul/30/llm-rc2/#atom-everything",
-          "title": "llm 0.32rc2",
-          "source_type": "rss",
-          "published_at": "2026-07-30T22:52:06+00:00"
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "llm-0.32rc2-release",
-          "date": "2026-07-31",
-          "title": "llm 0.32rc2",
-          "summary": "llm 0.32rc2发布，默认模型改为GPT-5.6 Luna，并新增openai endpoint命令，提升CLI工具的灵活性和性能。",
-          "score": 8.0,
-          "url": "https://simonwillison.net/2026/Jul/30/llm-rc2/#atom-everything"
-        }
-      ],
-      "usage_flow": [],
-      "learning_points": [],
-      "verticals": [],
-      "tags": [
-        "开发者工具",
-        "CLI",
-        "LLM"
       ]
     },
     {
