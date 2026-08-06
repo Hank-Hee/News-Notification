@@ -1,7 +1,496 @@
 {
   "version": 1,
-  "updated_at": "2026-08-05T03:33:59.236209+00:00",
+  "updated_at": "2026-08-06T03:37:08.315975+00:00",
   "products": [
+    {
+      "product_id": "product-c7fc20f30f5b13fe",
+      "product_name": "Raccoon Heist",
+      "builder_name": "Simon Willison",
+      "first_seen": "2026-08-06",
+      "last_seen": "2026-08-06",
+      "occurrence_count": 1,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Simon Willison 用 Claude Fable 5 在网页版 Claude Code 中一次性构建了完整游戏 Raccoon Heist，并提供了可玩 Demo。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 9.0,
+      "summary": "Simon Willison 用 Claude Fable 5 在网页版 Claude Code 中一次性构建了完整游戏 Raccoon Heist，并提供了可玩 Demo。",
+      "title": "One-shotting a Raccoon Heist game using Claude Fable 5",
+      "url": "https://simonwillison.net/2026/Aug/5/raccoon-heist/#atom-everything",
+      "sources": [
+        {
+          "url": "https://simonwillison.net/2026/Aug/5/raccoon-heist/#atom-everything",
+          "title": "One-shotting a Raccoon Heist game using Claude Fable 5",
+          "source_type": "rss",
+          "published_at": "2026-08-05T19:42:38+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "simonw-raccoon-heist-claude-fable5",
+          "date": "2026-08-06",
+          "title": "One-shotting a Raccoon Heist game using Claude Fable 5",
+          "summary": "Simon Willison 用 Claude Fable 5 在网页版 Claude Code 中一次性构建了完整游戏 Raccoon Heist，并提供了可玩 Demo。",
+          "score": 9.0,
+          "url": "https://simonwillison.net/2026/Aug/5/raccoon-heist/#atom-everything"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Claude",
+        "Game Dev",
+        "Demo"
+      ]
+    },
+    {
+      "product_id": "product-ec8197c4a138bf06",
+      "product_name": "v0 API",
+      "builder_name": "Rickey McGregor",
+      "first_seen": "2026-08-06",
+      "last_seen": "2026-08-06",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "需要在自己的产品或工作流中集成 AI 应用生成功能的开发者、构建 Agent 的团队、想做白标应用构建器的公司",
+      "user_problem": "以前开发者只能手动在 v0 网页里输入需求等 AI 生成，无法把这套能力嵌入自己的产品、CI 流水线或让其他 Agent 调用；生成结果和过程也不透明，难以二次开发。",
+      "what_it_is": "v0 API 是 Vercel 推出的编程式接口，开发者发送文字指令（prompt）后，AI 自动写代码、启动开发服务器、返回可嵌入的实时预览链接。",
+      "ai_role": "AI 作为应用构建代理（agent），负责理解需求、读写文件、执行命令、在 Vercel Sandbox 里启动开发服务器、实时捕获并修复代码错误，最终输出可运行的预览。",
+      "implementation_idea": "核心是把'AI 写代码 + 云端沙盒运行'打包成标准 API。每次对话是一个独立工作区，AI 的操作（读文件、改代码、跑命令）被拆成有序的'parts'流式返回，前端可以据此展示进度。预览用短期 token 做安全代理，避免 API key 暴露到浏览器。",
+      "hands_on_exercise": "注册 Vercel 账号，在 v0.app 免费体验网页版生成一个待办应用；然后阅读 v0.app/docs/api 的 Quickstart，用 curl 或 SDK 发一个 prompt 创建 chat，观察返回的 stream 里有哪些 part 类型（text、file_edit、bash 等），最后用文档里的预览指南尝试把返回的 URL 嵌入本地 HTML 的 iframe 中。",
+      "limitations_or_uncertainties": "未公开具体定价和用量计费细节；未公开单次生成的代码量上限或 Sandbox 资源限制；未公开预览 token 的具体有效期时长；MCP 连接所需的 OAuth 权限粒度未详细说明。",
+      "region": "global",
+      "score": 8.5,
+      "summary": "Vercel 正式发布 v0 API，开发者可通过 API 发送提示词，让 v0 自动生成应用并返回可嵌入的预览链接，实现编程式 AI 应用构建。",
+      "title": "Vercel 正式发布 v0 API：用 API 调用让 AI 自动构建可运行的 Web 应用",
+      "url": "https://vercel.com/blog/introducing-the-new-v0-api",
+      "sources": [
+        {
+          "url": "https://vercel.com/blog/introducing-the-new-v0-api",
+          "title": "Introducing the new v0 API",
+          "source_type": "rss",
+          "published_at": "2026-08-05T04:00:00+00:00"
+        },
+        {
+          "url": "https://v0.app/",
+          "title": "v0 by Vercel - Build Full-Stack Web Apps with AI",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "vercel-v0-api-ga",
+          "date": "2026-08-06",
+          "title": "Vercel 正式发布 v0 API：用 API 调用让 AI 自动构建可运行的 Web 应用",
+          "summary": "Vercel 正式发布 v0 API，开发者可通过 API 发送提示词，让 v0 自动生成应用并返回可嵌入的预览链接，实现编程式 AI 应用构建。",
+          "score": 8.5,
+          "url": "https://vercel.com/blog/introducing-the-new-v0-api"
+        }
+      ],
+      "usage_flow": [
+        "安装 v0 SDK，用 API 创建 chat 并发送 prompt 描述想做的应用",
+        "选择同步、异步或流式接收响应，实时看到 AI 的代码编辑、运行、报错修复过程",
+        "通过服务器代理获取预览 token，把运行中的应用嵌入 iframe 或自己的 UI",
+        "（可选）一键调用 API 部署到 Vercel，或继续发 follow-up 消息迭代功能"
+      ],
+      "learning_points": [
+        "Agent：让 AI 不仅能回答问题，还能在沙盒里实际执行操作（写文件、跑服务器）来完成任务的系统",
+        "Function Calling / Tool Use：AI 判断需要调用外部工具（如创建文件、执行命令）来完成任务的能力，v0 的 trace 里能看到这些 tool call 的记录",
+        "Streaming：服务器一边生成内容一边推送给客户端，让用户不用等全部完成才能看到 AI 在做什么"
+      ],
+      "verticals": [],
+      "tags": [
+        "v0",
+        "API",
+        "AI应用生成"
+      ]
+    },
+    {
+      "product_id": "product-097077db835123aa",
+      "product_name": "Merge Mommy",
+      "builder_name": "Claire Vo",
+      "first_seen": "2026-08-06",
+      "last_seen": "2026-08-06",
+      "occurrence_count": 1,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Claire Vo 用 Vercel Eve 构建了 AI 代码审查机器人 Merge Mommy，自动评分并批准低风险 PR，清空了积压队列。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.5,
+      "summary": "Claire Vo 用 Vercel Eve 构建了 AI 代码审查机器人 Merge Mommy，自动评分并批准低风险 PR，清空了积压队列。",
+      "title": "Build an AI code review bot in 30 minutes with Vercel Eve",
+      "url": "https://www.lennysnewsletter.com/p/build-an-ai-code-review-bot-in-30",
+      "sources": [
+        {
+          "url": "https://www.lennysnewsletter.com/p/build-an-ai-code-review-bot-in-30",
+          "title": "Build an AI code review bot in 30 minutes with Vercel Eve",
+          "source_type": "newsletter",
+          "published_at": "2026-08-05T12:04:01+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "merge-mommy-ai-code-review-bot",
+          "date": "2026-08-06",
+          "title": "Build an AI code review bot in 30 minutes with Vercel Eve",
+          "summary": "Claire Vo 用 Vercel Eve 构建了 AI 代码审查机器人 Merge Mommy，自动评分并批准低风险 PR，清空了积压队列。",
+          "score": 8.5,
+          "url": "https://www.lennysnewsletter.com/p/build-an-ai-code-review-bot-in-30"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "AI Agent",
+        "代码审查",
+        "Vercel Eve"
+      ]
+    },
+    {
+      "product_id": "product-238ada95f2256aea",
+      "product_name": "Muse Code / Muse Spark 1.2",
+      "builder_name": "Simon Willison",
+      "first_seen": "2026-08-06",
+      "last_seen": "2026-08-06",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Meta 发布 Muse Code 和 Muse Spark 1.2，强化长序列 agentic tool calling 能力。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.5,
+      "summary": "Meta 发布 Muse Code 和 Muse Spark 1.2，强化长序列 agentic tool calling 能力。",
+      "title": "Introducing Muse Code and Muse Spark 1.2",
+      "url": "https://simonwillison.net/2026/Aug/5/muse-code-and-muse-spark-12/#atom-everything",
+      "sources": [
+        {
+          "url": "https://simonwillison.net/2026/Aug/5/muse-code-and-muse-spark-12/#atom-everything",
+          "title": "Introducing Muse Code and Muse Spark 1.2",
+          "source_type": "rss",
+          "published_at": "2026-08-05T23:58:35+00:00"
+        },
+        {
+          "url": "https://techcrunch.com/2026/08/05/meta-launches-muse-code-an-ai-agent-for-large-code-bases/",
+          "title": "Meta launches Muse Code, an AI agent for large code bases",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://artificialanalysis.ai/articles/muse-spark-1-2",
+          "title": "Muse Spark 1 2",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "meta-muse-code-spark-1.2",
+          "date": "2026-08-06",
+          "title": "Introducing Muse Code and Muse Spark 1.2",
+          "summary": "Meta 发布 Muse Code 和 Muse Spark 1.2，强化长序列 agentic tool calling 能力。",
+          "score": 8.5,
+          "url": "https://simonwillison.net/2026/Aug/5/muse-code-and-muse-spark-12/#atom-everything"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Meta",
+        "Agent",
+        "Model"
+      ]
+    },
+    {
+      "product_id": "product-8650d98b81792fda",
+      "product_name": "ChatGPT Codex",
+      "builder_name": "Lenny Rachitsky",
+      "first_seen": "2026-08-04",
+      "last_seen": "2026-08-06",
+      "occurrence_count": 1,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "OpenAI专家Nick Baumann演示ChatGPT Codex的语音、浏览器和Sites功能，展示AI辅助工作流，值得学习其实际应用。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.0,
+      "summary": "OpenAI专家Nick Baumann演示ChatGPT Codex的语音、浏览器和Sites功能，展示AI辅助工作流，值得学习其实际应用。",
+      "title": "🎙️ How I AI: ChatGPT Codex Voice + browser + Sites: an expert’s AI workflow | Nick Baumann (OpenAI)",
+      "url": "https://www.lennysnewsletter.com/p/how-i-ai-chatgpt-codex-voice-browser",
+      "sources": [
+        {
+          "url": "https://www.lennysnewsletter.com/p/how-i-ai-chatgpt-codex-voice-browser",
+          "title": "🎙️ How I AI: ChatGPT Codex Voice + browser + Sites: an expert’s AI workflow | Nick Baumann (OpenAI)",
+          "source_type": "newsletter",
+          "published_at": "2026-08-03T15:02:21+00:00"
+        },
+        {
+          "url": "https://www.lennysnewsletter.com/p/chatgpt-codex-voice-browser-sites",
+          "title": "ChatGPT Codex Voice + browser + Sites: an expert’s AI workflow | Nick Baumann (OpenAI)",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "openai-codex-voice-workflow",
+          "date": "2026-08-04",
+          "title": "🎙️ How I AI: ChatGPT Codex Voice + browser + Sites: an expert’s AI workflow | Nick Baumann (OpenAI)",
+          "summary": "OpenAI专家Nick Baumann演示ChatGPT Codex的语音、浏览器和Sites功能，展示AI辅助工作流，值得学习其实际应用。",
+          "score": 8.0,
+          "url": "https://www.lennysnewsletter.com/p/how-i-ai-chatgpt-codex-voice-browser"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "ChatGPT",
+        "工作流",
+        "语音交互"
+      ]
+    },
+    {
+      "product_id": "product-a879354aaeb1c3d7",
+      "product_name": "Qwen3.8-Max",
+      "builder_name": "AI News",
+      "first_seen": "2026-08-05",
+      "last_seen": "2026-08-06",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "阿里发布Qwen3.8-Max旗舰模型，2.4T参数，主打编码和长程agent，并宣布下周开源权重。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "china",
+      "score": 8.0,
+      "summary": "阿里发布Qwen3.8-Max旗舰模型，2.4T参数，主打编码和长程agent，并宣布下周开源权重。",
+      "title": "Qwen 3.8 Max",
+      "url": "https://news.smol.ai/issues/26-08-03-qwen-38/",
+      "sources": [
+        {
+          "url": "https://news.smol.ai/issues/26-08-03-qwen-38/",
+          "title": "Qwen 3.8 Max",
+          "source_type": "newsletter",
+          "published_at": "2026-08-03T05:44:39+00:00"
+        },
+        {
+          "url": "https://www.latent.space/p/ainews-qwen-38-max24t-and-27b-new",
+          "title": "[AINews] Qwen 3.8 Max(2.4T) and 27B, new open weights models for Coding and Cowork",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "qwen-3.8-max-launch",
+          "date": "2026-08-05",
+          "title": "Qwen 3.8 Max",
+          "summary": "阿里发布Qwen3.8-Max旗舰模型，2.4T参数，主打编码和长程agent，并宣布下周开源权重。",
+          "score": 8.0,
+          "url": "https://news.smol.ai/issues/26-08-03-qwen-38/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "模型发布",
+        "开源",
+        "Agent"
+      ]
+    },
+    {
+      "product_id": "product-e40da45fdd0f19c9",
+      "product_name": "Rules Hub",
+      "builder_name": "Jay Peters",
+      "first_seen": "2026-08-06",
+      "last_seen": "2026-08-06",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "Reddit 版主（moderators），尤其是新版块的版主",
+      "user_problem": "版主手动审核帖子/评论工作量太大，新人因 karma（社区积分）门槛高而难以发帖，社区规则执行不一致",
+      "what_it_is": "Reddit 正在上线一套基于大语言模型（LLM）的自动化社区管理工具，先给新版块试用，计划年内全站推广。",
+      "ai_role": "AI 负责读取社区规则，理解帖子/评论内容，自动判断违规并执行或建议审核动作——相当于一个 24 小时在线的初筛助理",
+      "implementation_idea": "用 LLM 做'规则理解+内容匹配'：把版主写的自然语言规则转成 AI 能执行的判断标准，再让 AI 对照这个标准去检查用户发的内容，类似一个会读说明书的自动安检员",
+      "hands_on_exercise": "在任意一个支持自定义指令的 LLM（如 ChatGPT、Claude）里，写 3 条简单的社区规则（如'禁止广告''必须友善'），然后给 AI 5 条模拟帖子，让它判断每条是否违规、说明理由，最后你自己检查 AI 判得对不对，体会'规则怎么写，AI 就怎么执行'",
+      "limitations_or_uncertainties": "具体覆盖哪些语言、误判率数据、版主能否完全关闭 AI 审核、与旧版 Reddit 的兼容方式均未公开；'年内全面推广'的具体时间表未确认",
+      "region": "global",
+      "score": 8.0,
+      "summary": "Reddit 引入 AI 审核工具，利用 LLM 帮助版主管理社区，并计划全面推广。",
+      "title": "Reddit 推出 AI 版主工具，用 LLM 自动审核社区内容",
+      "url": "https://www.theverge.com/tech/975398/reddit-ai-rules-hub-moderator-old-reddit-developer-platform",
+      "sources": [
+        {
+          "url": "https://www.theverge.com/tech/975398/reddit-ai-rules-hub-moderator-old-reddit-developer-platform",
+          "title": "Reddit is introducing a new moderator: AI",
+          "source_type": "rss",
+          "published_at": "2026-08-05T16:00:00+00:00"
+        },
+        {
+          "url": "https://news.google.com/stories/CAAqNggKIjBDQklTSGpvSmMzUnZjbmt0TXpZd1NoRUtEd2laM3Z6Z0VSRUUxeEk5NTFxaXVpZ0FQAQ?hl=en-US&gl=US&ceid=US:en",
+          "title": "Google News - Reddit announces Rules Hub AI moderation system...",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://savedelete.com/news/reddit-ai-moderation/",
+          "title": "Reddit introduces AI moderation tools for new subreddit — SaveDelete",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "reddit-ai-moderation-tools",
+          "date": "2026-08-06",
+          "title": "Reddit 推出 AI 版主工具，用 LLM 自动审核社区内容",
+          "summary": "Reddit 引入 AI 审核工具，利用 LLM 帮助版主管理社区，并计划全面推广。",
+          "score": 8.0,
+          "url": "https://www.theverge.com/tech/975398/reddit-ai-rules-hub-moderator-old-reddit-developer-platform"
+        }
+      ],
+      "usage_flow": [
+        "版主在 Rules Hub 中设定或选择社区规则",
+        "LLM 自动扫描新帖和评论，判断是否符合规则",
+        "AI 给出处理建议或直接执行操作（如移除、标记）",
+        "版主可复核 AI 的决定并调整规则"
+      ],
+      "learning_points": [
+        "LLM 的'指令遵循'能力：让 AI 按人类写的规则办事，而不是自由发挥",
+        "人机协作审核：AI 做初筛，人类做最终把关，降低漏判和误判",
+        "karma 门槛的替代方案：用 AI 审核降低对新用户的历史行为依赖"
+      ],
+      "verticals": [],
+      "tags": [
+        "AI Moderation",
+        "Reddit"
+      ]
+    },
+    {
+      "product_id": "product-18ab5351895fdc82",
+      "product_name": "DeepSeek V4-Flash",
+      "builder_name": "AI News",
+      "first_seen": "2026-08-06",
+      "last_seen": "2026-08-06",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "DeepSeek 发布 V4-Flash 0731，API 公测，agent 能力超越 V4-Pro-Preview，并支持 Responses API。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "china",
+      "score": 8.0,
+      "summary": "DeepSeek 发布 V4-Flash 0731，API 公测，agent 能力超越 V4-Pro-Preview，并支持 Responses API。",
+      "title": "not much happened today",
+      "url": "https://news.smol.ai/issues/26-07-31-not-much/",
+      "sources": [
+        {
+          "url": "https://news.smol.ai/issues/26-07-31-not-much/",
+          "title": "not much happened today",
+          "source_type": "newsletter",
+          "published_at": "2026-07-31T05:44:39+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "deepseek-v4-flash-0731-launch",
+          "date": "2026-08-06",
+          "title": "not much happened today",
+          "summary": "DeepSeek 发布 V4-Flash 0731，API 公测，agent 能力超越 V4-Pro-Preview，并支持 Responses API。",
+          "score": 8.0,
+          "url": "https://news.smol.ai/issues/26-07-31-not-much/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "模型发布",
+        "DeepSeek"
+      ]
+    },
+    {
+      "product_id": "product-3adf44cc7698a622",
+      "product_name": "Hark",
+      "builder_name": "Ivan Mehta",
+      "first_seen": "2026-08-06",
+      "last_seen": "2026-08-06",
+      "occurrence_count": 1,
+      "intelligence_type": "early_signal",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Hark 预览了其浏览器使用代理，声称比竞品更快更便宜，但尚无公开评测。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.5,
+      "summary": "Hark 预览了其浏览器使用代理，声称比竞品更快更便宜，但尚无公开评测。",
+      "title": "Hark previews its browser use agent for completing tasks",
+      "url": "https://techcrunch.com/2026/08/05/hark-previews-its-browser-use-agent-for-completing-tasks/",
+      "sources": [
+        {
+          "url": "https://techcrunch.com/2026/08/05/hark-previews-its-browser-use-agent-for-completing-tasks/",
+          "title": "Hark previews its browser use agent for completing tasks",
+          "source_type": "rss",
+          "published_at": "2026-08-05T15:46:27+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "hark-browser-agent-preview",
+          "date": "2026-08-06",
+          "title": "Hark previews its browser use agent for completing tasks",
+          "summary": "Hark 预览了其浏览器使用代理，声称比竞品更快更便宜，但尚无公开评测。",
+          "score": 7.5,
+          "url": "https://techcrunch.com/2026/08/05/hark-previews-its-browser-use-agent-for-completing-tasks/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "Browser Use"
+      ]
+    },
     {
       "product_id": "product-2e9811576c09680e",
       "product_name": "LLM",
@@ -183,60 +672,6 @@
       ]
     },
     {
-      "product_id": "product-8650d98b81792fda",
-      "product_name": "ChatGPT Codex",
-      "builder_name": "Lenny Rachitsky",
-      "first_seen": "2026-08-04",
-      "last_seen": "2026-08-05",
-      "occurrence_count": 1,
-      "intelligence_type": "builder_insight",
-      "evidence_status": "reported",
-      "target_user": "未公开",
-      "user_problem": "未公开",
-      "what_it_is": "OpenAI专家Nick Baumann演示ChatGPT Codex的语音、浏览器和Sites功能，展示AI辅助工作流，值得学习其实际应用。",
-      "ai_role": "未公开",
-      "implementation_idea": "未公开",
-      "hands_on_exercise": "未公开",
-      "limitations_or_uncertainties": "未公开",
-      "region": "global",
-      "score": 8.0,
-      "summary": "OpenAI专家Nick Baumann演示ChatGPT Codex的语音、浏览器和Sites功能，展示AI辅助工作流，值得学习其实际应用。",
-      "title": "🎙️ How I AI: ChatGPT Codex Voice + browser + Sites: an expert’s AI workflow | Nick Baumann (OpenAI)",
-      "url": "https://www.lennysnewsletter.com/p/how-i-ai-chatgpt-codex-voice-browser",
-      "sources": [
-        {
-          "url": "https://www.lennysnewsletter.com/p/how-i-ai-chatgpt-codex-voice-browser",
-          "title": "🎙️ How I AI: ChatGPT Codex Voice + browser + Sites: an expert’s AI workflow | Nick Baumann (OpenAI)",
-          "source_type": "newsletter",
-          "published_at": "2026-08-03T15:02:21+00:00"
-        },
-        {
-          "url": "https://www.lennysnewsletter.com/p/chatgpt-codex-voice-browser-sites",
-          "title": "ChatGPT Codex Voice + browser + Sites: an expert’s AI workflow | Nick Baumann (OpenAI)",
-          "source_type": "supplemental",
-          "published_at": ""
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "openai-codex-voice-workflow",
-          "date": "2026-08-04",
-          "title": "🎙️ How I AI: ChatGPT Codex Voice + browser + Sites: an expert’s AI workflow | Nick Baumann (OpenAI)",
-          "summary": "OpenAI专家Nick Baumann演示ChatGPT Codex的语音、浏览器和Sites功能，展示AI辅助工作流，值得学习其实际应用。",
-          "score": 8.0,
-          "url": "https://www.lennysnewsletter.com/p/how-i-ai-chatgpt-codex-voice-browser"
-        }
-      ],
-      "usage_flow": [],
-      "learning_points": [],
-      "verticals": [],
-      "tags": [
-        "ChatGPT",
-        "工作流",
-        "语音交互"
-      ]
-    },
-    {
       "product_id": "product-33347d4ff16d912f",
       "product_name": "eve（@agent-browser/eve 扩展）",
       "builder_name": "Chris Tate",
@@ -339,60 +774,6 @@
         "LLM",
         "Anthropic",
         "插件"
-      ]
-    },
-    {
-      "product_id": "product-a879354aaeb1c3d7",
-      "product_name": "Qwen3.8-Max",
-      "builder_name": "AI News",
-      "first_seen": "2026-08-05",
-      "last_seen": "2026-08-05",
-      "occurrence_count": 1,
-      "intelligence_type": "model_capability",
-      "evidence_status": "reported",
-      "target_user": "未公开",
-      "user_problem": "未公开",
-      "what_it_is": "阿里发布Qwen3.8-Max旗舰模型，2.4T参数，主打编码和长程agent，并宣布下周开源权重。",
-      "ai_role": "未公开",
-      "implementation_idea": "未公开",
-      "hands_on_exercise": "未公开",
-      "limitations_or_uncertainties": "未公开",
-      "region": "china",
-      "score": 8.0,
-      "summary": "阿里发布Qwen3.8-Max旗舰模型，2.4T参数，主打编码和长程agent，并宣布下周开源权重。",
-      "title": "Qwen 3.8 Max",
-      "url": "https://news.smol.ai/issues/26-08-03-qwen-38/",
-      "sources": [
-        {
-          "url": "https://news.smol.ai/issues/26-08-03-qwen-38/",
-          "title": "Qwen 3.8 Max",
-          "source_type": "newsletter",
-          "published_at": "2026-08-03T05:44:39+00:00"
-        },
-        {
-          "url": "https://www.latent.space/p/ainews-qwen-38-max24t-and-27b-new",
-          "title": "[AINews] Qwen 3.8 Max(2.4T) and 27B, new open weights models for Coding and Cowork",
-          "source_type": "supplemental",
-          "published_at": ""
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "qwen-3.8-max-launch",
-          "date": "2026-08-05",
-          "title": "Qwen 3.8 Max",
-          "summary": "阿里发布Qwen3.8-Max旗舰模型，2.4T参数，主打编码和长程agent，并宣布下周开源权重。",
-          "score": 8.0,
-          "url": "https://news.smol.ai/issues/26-08-03-qwen-38/"
-        }
-      ],
-      "usage_flow": [],
-      "learning_points": [],
-      "verticals": [],
-      "tags": [
-        "模型发布",
-        "开源",
-        "Agent"
       ]
     },
     {
