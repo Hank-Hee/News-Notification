@@ -1,7 +1,590 @@
 {
   "version": 1,
-  "updated_at": "2026-08-06T03:37:08.315975+00:00",
+  "updated_at": "2026-08-07T03:16:30.384796+00:00",
   "products": [
+    {
+      "product_id": "product-5c74e3424927ba6a",
+      "product_name": "Codex",
+      "builder_name": "github-actions[bot]",
+      "first_seen": "2026-07-29",
+      "last_seen": "2026-08-07",
+      "occurrence_count": 2,
+      "intelligence_type": "model_capability",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "OpenAI Codex发布rust-v0.147.0，新增Agent插件、会话组织、自动审批等功能，提升开发体验。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.5,
+      "summary": "OpenAI Codex发布rust-v0.147.0，新增Agent插件、会话组织、自动审批等功能，提升开发体验。",
+      "title": "openai/codex released rust-v0.147.0",
+      "url": "https://github.com/openai/codex/releases/tag/rust-v0.147.0",
+      "sources": [
+        {
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.146.0",
+          "title": "openai/codex released rust-v0.146.0",
+          "source_type": "github",
+          "published_at": "2026-07-29T01:42:51+00:00"
+        },
+        {
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.147.0",
+          "title": "openai/codex released rust-v0.147.0",
+          "source_type": "github",
+          "published_at": "2026-08-07T01:41:49+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "openai-codex-rust-v0.146.0",
+          "date": "2026-07-29",
+          "title": "openai/codex released rust-v0.146.0",
+          "summary": "OpenAI Codex 发布 rust-v0.146.0，新增会话管理、Agent插件支持和WebSocket远程连接等功能。",
+          "score": 7.0,
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.146.0"
+        },
+        {
+          "update_id": "openai-codex-rust-v0.147.0",
+          "date": "2026-08-07",
+          "title": "openai/codex released rust-v0.147.0",
+          "summary": "OpenAI Codex发布rust-v0.147.0，新增Agent插件、会话组织、自动审批等功能，提升开发体验。",
+          "score": 8.5,
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.147.0"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "Codex",
+        "OpenAI",
+        "CLI"
+      ]
+    },
+    {
+      "product_id": "product-02434fd98f857dd3",
+      "product_name": "ChatGPT（GPT-5.6 Sol / GPT-5.6 Luna）",
+      "builder_name": "tedsanders",
+      "first_seen": "2026-08-07",
+      "last_seen": "2026-08-07",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "ChatGPT 免费用户、日常对话用户",
+      "user_problem": "免费用户之前只能用较弱的默认模型，无法使用带推理能力的模型；付费模型和免费模型差距过大，导致体验分层严重。",
+      "what_it_is": "OpenAI 对 ChatGPT 的一次产品更新：优化了 GPT-5.6 Sol 模型的对话体验，并把原本付费或受限的 Luna 模型开放给免费用户使用。",
+      "ai_role": "Sol 负责日常快速对话；Luna 负责需要多步思考的推理任务（免费用户现在也能调用）",
+      "implementation_idea": "未公开。从用户侧观察，OpenAI 把模型分成两条线：Sol 主打低延迟日常回复，Luna 主打深度推理；通过服务器端的流量调度和配额控制，让免费用户也能有限度地调用 Luna。",
+      "hands_on_exercise": "注册一个免费 ChatGPT 账号，在同一类问题上分别用默认模式和开启 'Think' 模式各问 3 次，记录回答速度、长度和准确性的差异，总结什么类型的问题更适合开推理模式。",
+      "limitations_or_uncertainties": "GPT-5.6 Sol 的具体技术改进细节未公开；免费用户使用 Luna 的速率限制、每日配额未公开；'Think' 功能是否全球开放未确认；GPT-5.6 系列与之前 5.5 版本的架构关系未公开。",
+      "region": "global",
+      "score": 8.5,
+      "summary": "OpenAI改进GPT-5.6 Sol并让免费用户使用Luna，提升免费用户体验。",
+      "title": "OpenAI 改进 GPT-5.6 Sol 并向免费用户开放 Luna 模型",
+      "url": "https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt/",
+      "sources": [
+        {
+          "url": "https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt/",
+          "title": "Improving GPT‑5.6 Sol in ChatGPT, expanding GPT‑5.6 Luna access for free users",
+          "source_type": "hackernews",
+          "published_at": "2026-08-06T17:02:04+00:00"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/ChatGPT",
+          "title": "ChatGPT",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://chatgpt.com/",
+          "title": "ChatGPT: Chat, Work, Create & Code with AI",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "openai-gpt5.6-sol-luna-update",
+          "date": "2026-08-07",
+          "title": "OpenAI 改进 GPT-5.6 Sol 并向免费用户开放 Luna 模型",
+          "summary": "OpenAI改进GPT-5.6 Sol并让免费用户使用Luna，提升免费用户体验。",
+          "score": 8.5,
+          "url": "https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt/"
+        }
+      ],
+      "usage_flow": [
+        "打开 ChatGPT，免费用户现在可在模型选择中看到 GPT-5.6 Luna",
+        "日常对话默认使用改进后的 GPT-5.6 Sol",
+        "需要推理时，免费用户可开启 'Think' 切换按钮使用 Luna 的推理能力",
+        "按正常方式输入问题，获得回答"
+      ],
+      "learning_points": [
+        "模型分层策略：同一产品里用不同模型覆盖不同场景（快答 vs 深思），类似手机的'标准模式'和'性能模式'",
+        "Freemium（免费增值）模式：基础功能免费，高级功能付费或限次，是 AI 产品常见的商业策略",
+        "推理能力（Reasoning）：让 AI 不直接给答案，而是先'想几步'再输出，减少错误；这里的 'Think' 按钮就是让用户手动开启这种能力"
+      ],
+      "verticals": [],
+      "tags": [
+        "OpenAI",
+        "产品更新",
+        "免费策略"
+      ]
+    },
+    {
+      "product_id": "product-fc67226a7e041652",
+      "product_name": "ChatGPT",
+      "builder_name": "Jay Peters",
+      "first_seen": "2026-08-07",
+      "last_seen": "2026-08-07",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "ChatGPT 免费用户和 ChatGPT Go 订阅用户",
+      "user_problem": "免费和 Go 用户之前聊太多会碰到速率限制（rate limits），对话被中断或需要等待",
+      "what_it_is": "OpenAI 下周起取消 ChatGPT 免费版和 Go 版的文本对话次数上限，并新增思考按钮处理复杂问题",
+      "ai_role": "接收用户文字输入，生成回复；在 think 模式下会花更多计算步骤推理后再输出",
+      "implementation_idea": "未公开具体技术改动。推测是 OpenAI 降低了推理成本或优化了资源调度，才撑得起更多免费请求；think 按钮可能是让模型用更多 token 做内部推理（类似 chain-of-thought）再给出答案",
+      "hands_on_exercise": "用免费账号连续发起 10 轮以上文字对话，测试是否还会触发限制；再找一道数学题，对比点击 think 按钮前后的回答差异，记录哪个更准确",
+      "limitations_or_uncertainties": "未公开具体生效日期（只写 next week）；未说明 think 按钮的技术原理和覆盖范围；未确认免费用户的 GPT 模型版本是否有变化",
+      "region": "global",
+      "score": 8.5,
+      "summary": "OpenAI宣布ChatGPT免费和Go用户下周起无限文本聊天，取消速率限制，是重要的产品更新。",
+      "title": "OpenAI 取消 ChatGPT 免费和 Go 用户的文本聊天限制",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/976239/openai-chatgpt-free-go-text-chats",
+      "sources": [
+        {
+          "url": "https://www.theverge.com/ai-artificial-intelligence/976239/openai-chatgpt-free-go-text-chats",
+          "title": "OpenAI is giving ChatGPT free users unlimited text chats",
+          "source_type": "rss",
+          "published_at": "2026-08-06T17:00:00+00:00"
+        },
+        {
+          "url": "https://techcrunch.com/2026/08/06/openai-brings-unlimited-chatgpt-text-chats-to-free-users/",
+          "title": "ChatGPT brings unlimited text chats to free users",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "chatgpt-free-unlimited-text",
+          "date": "2026-08-07",
+          "title": "OpenAI 取消 ChatGPT 免费和 Go 用户的文本聊天限制",
+          "summary": "OpenAI宣布ChatGPT免费和Go用户下周起无限文本聊天，取消速率限制，是重要的产品更新。",
+          "score": 8.5,
+          "url": "https://www.theverge.com/ai-artificial-intelligence/976239/openai-chatgpt-free-go-text-chats"
+        }
+      ],
+      "usage_flow": [
+        "打开 ChatGPT，免费或 Go 账号登录",
+        "像之前一样发文字消息，现在不再受次数限制",
+        "遇到复杂问题时，点击新增的 think 按钮让 AI 多想想再回答"
+      ],
+      "learning_points": [
+        "速率限制（rate limit）：服务商为了防止服务器过载，对用户请求频率或总量设的上限",
+        "Freemium 模式：基础功能免费、高级功能收费，用免费用户摊薄获客成本",
+        "推理扩展（inference scaling）：给模型更多计算步骤（think 模式），通常能让复杂问题回答更准确"
+      ],
+      "verticals": [],
+      "tags": [
+        "ChatGPT",
+        "OpenAI",
+        "免费",
+        "产品更新"
+      ]
+    },
+    {
+      "product_id": "product-8650d98b81792fda",
+      "product_name": "ChatGPT Codex",
+      "builder_name": "Lenny Rachitsky",
+      "first_seen": "2026-08-04",
+      "last_seen": "2026-08-07",
+      "occurrence_count": 1,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "OpenAI专家Nick Baumann演示ChatGPT Codex的语音、浏览器和Sites功能，展示AI辅助工作流，值得学习其实际应用。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.0,
+      "summary": "OpenAI专家Nick Baumann演示ChatGPT Codex的语音、浏览器和Sites功能，展示AI辅助工作流，值得学习其实际应用。",
+      "title": "🎙️ How I AI: ChatGPT Codex Voice + browser + Sites: an expert’s AI workflow | Nick Baumann (OpenAI)",
+      "url": "https://www.lennysnewsletter.com/p/how-i-ai-chatgpt-codex-voice-browser",
+      "sources": [
+        {
+          "url": "https://www.lennysnewsletter.com/p/how-i-ai-chatgpt-codex-voice-browser",
+          "title": "🎙️ How I AI: ChatGPT Codex Voice + browser + Sites: an expert’s AI workflow | Nick Baumann (OpenAI)",
+          "source_type": "newsletter",
+          "published_at": "2026-08-03T15:02:21+00:00"
+        },
+        {
+          "url": "https://www.lennysnewsletter.com/p/chatgpt-codex-voice-browser-sites",
+          "title": "ChatGPT Codex Voice + browser + Sites: an expert’s AI workflow | Nick Baumann (OpenAI)",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "openai-codex-voice-workflow",
+          "date": "2026-08-04",
+          "title": "🎙️ How I AI: ChatGPT Codex Voice + browser + Sites: an expert’s AI workflow | Nick Baumann (OpenAI)",
+          "summary": "OpenAI专家Nick Baumann演示ChatGPT Codex的语音、浏览器和Sites功能，展示AI辅助工作流，值得学习其实际应用。",
+          "score": 8.0,
+          "url": "https://www.lennysnewsletter.com/p/how-i-ai-chatgpt-codex-voice-browser"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "ChatGPT",
+        "工作流",
+        "语音交互"
+      ]
+    },
+    {
+      "product_id": "product-86ef62f42bc97509",
+      "product_name": "Herdr",
+      "builder_name": "collinmanderson",
+      "first_seen": "2026-08-07",
+      "last_seen": "2026-08-07",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Herdr加入YC并获得融资，其多智能体编码终端复用器保持开源，有真实用户好评。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.0,
+      "summary": "Herdr加入YC并获得融资，其多智能体编码终端复用器保持开源，有真实用户好评。",
+      "title": "Herdr is joining Y Combinator. The runtime stays open",
+      "url": "https://herdr.dev/blog/herdr-is-joining-y-combinator/",
+      "sources": [
+        {
+          "url": "https://herdr.dev/blog/herdr-is-joining-y-combinator/",
+          "title": "Herdr is joining Y Combinator. The runtime stays open",
+          "source_type": "hackernews",
+          "published_at": "2026-08-06T19:14:21+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "herdr-joins-yc",
+          "date": "2026-08-07",
+          "title": "Herdr is joining Y Combinator. The runtime stays open",
+          "summary": "Herdr加入YC并获得融资，其多智能体编码终端复用器保持开源，有真实用户好评。",
+          "score": 8.0,
+          "url": "https://herdr.dev/blog/herdr-is-joining-y-combinator/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "AI编程",
+        "多智能体",
+        "YC",
+        "开源"
+      ]
+    },
+    {
+      "product_id": "product-9635acc4d5b8e951",
+      "product_name": "Suno",
+      "builder_name": "Terrence O’Brien",
+      "first_seen": "2026-08-07",
+      "last_seen": "2026-08-07",
+      "occurrence_count": 1,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Suno宣布采用水印技术和新下载政策来限制AI音乐垃圾信息，CEO详述了公司原则和下一步计划。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.0,
+      "summary": "Suno宣布采用水印技术和新下载政策来限制AI音乐垃圾信息，CEO详述了公司原则和下一步计划。",
+      "title": "Suno shares plans to combat spammy AI music",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/976289/suno-ai-music-spam-watermark",
+      "sources": [
+        {
+          "url": "https://www.theverge.com/ai-artificial-intelligence/976289/suno-ai-music-spam-watermark",
+          "title": "Suno shares plans to combat spammy AI music",
+          "source_type": "rss",
+          "published_at": "2026-08-06T17:39:43+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "suno-anti-spam-watermark",
+          "date": "2026-08-07",
+          "title": "Suno shares plans to combat spammy AI music",
+          "summary": "Suno宣布采用水印技术和新下载政策来限制AI音乐垃圾信息，CEO详述了公司原则和下一步计划。",
+          "score": 8.0,
+          "url": "https://www.theverge.com/ai-artificial-intelligence/976289/suno-ai-music-spam-watermark"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Suno",
+        "AI音乐",
+        "水印",
+        "内容治理"
+      ]
+    },
+    {
+      "product_id": "product-b27d79075e70c322",
+      "product_name": "Ditto",
+      "builder_name": "Amanda Silberling",
+      "first_seen": "2026-08-07",
+      "last_seen": "2026-08-07",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Ditto等约会应用用AI匹配取代滑动，针对Gen Z对传统滑动应用的厌倦，值得关注其产品思路。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.5,
+      "summary": "Ditto等约会应用用AI匹配取代滑动，针对Gen Z对传统滑动应用的厌倦，值得关注其产品思路。",
+      "title": "Gen Z dating apps like Ditto ditch swiping in favor of AI matchmaking",
+      "url": "https://techcrunch.com/2026/08/06/gen-z-dating-apps-like-ditto-ditch-swiping-in-favor-of-ai-matchmaking/",
+      "sources": [
+        {
+          "url": "https://techcrunch.com/2026/08/06/gen-z-dating-apps-like-ditto-ditch-swiping-in-favor-of-ai-matchmaking/",
+          "title": "Gen Z dating apps like Ditto ditch swiping in favor of AI matchmaking",
+          "source_type": "rss",
+          "published_at": "2026-08-06T15:53:03+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "ditto-ai-matchmaking",
+          "date": "2026-08-07",
+          "title": "Gen Z dating apps like Ditto ditch swiping in favor of AI matchmaking",
+          "summary": "Ditto等约会应用用AI匹配取代滑动，针对Gen Z对传统滑动应用的厌倦，值得关注其产品思路。",
+          "score": 7.5,
+          "url": "https://techcrunch.com/2026/08/06/gen-z-dating-apps-like-ditto-ditch-swiping-in-favor-of-ai-matchmaking/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "AI匹配",
+        "约会应用",
+        "Gen Z"
+      ]
+    },
+    {
+      "product_id": "product-fde8eecd278f5af7",
+      "product_name": "ProvenMetal",
+      "builder_name": "willcarkner",
+      "first_seen": "2026-08-07",
+      "last_seen": "2026-08-07",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "ProvenMetal提供快速PCB制造服务，将交付时间从数周缩短至数天，解决美国国内供应链问题。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.5,
+      "summary": "ProvenMetal提供快速PCB制造服务，将交付时间从数周缩短至数天，解决美国国内供应链问题。",
+      "title": "Launch HN: ProvenMetal (YC S26) delivers circuit boards in days instead of weeks",
+      "url": "https://provenmetal.com/",
+      "sources": [
+        {
+          "url": "https://provenmetal.com/",
+          "title": "Launch HN: ProvenMetal (YC S26) delivers circuit boards in days instead of weeks",
+          "source_type": "hackernews",
+          "published_at": "2026-08-06T15:59:15+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "provenmetal-launch",
+          "date": "2026-08-07",
+          "title": "Launch HN: ProvenMetal (YC S26) delivers circuit boards in days instead of weeks",
+          "summary": "ProvenMetal提供快速PCB制造服务，将交付时间从数周缩短至数天，解决美国国内供应链问题。",
+          "score": 7.5,
+          "url": "https://provenmetal.com/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "PCB",
+        "硬件",
+        "YC"
+      ]
+    },
+    {
+      "product_id": "product-68f041a50262db97",
+      "product_name": "Fable 5",
+      "builder_name": "Anthropic News",
+      "first_seen": "2026-08-07",
+      "last_seen": "2026-08-07",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Anthropic官方更新了Fable 5模型的生物学安全防护措施，值得关注其安全设计思路。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.5,
+      "summary": "Anthropic官方更新了Fable 5模型的生物学安全防护措施，值得关注其安全设计思路。",
+      "title": "Improving Fable 5 S Biology Safeguards",
+      "url": "https://www.anthropic.com/news/improving-fable-5-s-biology-safeguards",
+      "sources": [
+        {
+          "url": "https://www.anthropic.com/news/improving-fable-5-s-biology-safeguards",
+          "title": "Improving Fable 5 S Biology Safeguards",
+          "source_type": "public_web",
+          "published_at": "2026-08-07T03:05:42+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "anthropic-fable-5-biology-safeguards",
+          "date": "2026-08-07",
+          "title": "Improving Fable 5 S Biology Safeguards",
+          "summary": "Anthropic官方更新了Fable 5模型的生物学安全防护措施，值得关注其安全设计思路。",
+          "score": 7.5,
+          "url": "https://www.anthropic.com/news/improving-fable-5-s-biology-safeguards"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "AI安全",
+        "模型更新"
+      ]
+    },
+    {
+      "product_id": "product-234b68b0d6806782",
+      "product_name": "Muse Spark 1 2",
+      "builder_name": "Artificial Analysis",
+      "first_seen": "2026-08-07",
+      "last_seen": "2026-08-07",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Artificial Analysis 发布 Muse Spark 1 2 模型，值得关注其性能表现。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.5,
+      "summary": "Artificial Analysis 发布 Muse Spark 1 2 模型，值得关注其性能表现。",
+      "title": "Muse Spark 1 2",
+      "url": "https://artificialanalysis.ai/articles/muse-spark-1-2",
+      "sources": [
+        {
+          "url": "https://artificialanalysis.ai/articles/muse-spark-1-2",
+          "title": "Muse Spark 1 2",
+          "source_type": "public_web",
+          "published_at": "2026-08-05T00:00:00+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "muse-spark-1-2-release",
+          "date": "2026-08-07",
+          "title": "Muse Spark 1 2",
+          "summary": "Artificial Analysis 发布 Muse Spark 1 2 模型，值得关注其性能表现。",
+          "score": 7.5,
+          "url": "https://artificialanalysis.ai/articles/muse-spark-1-2"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "模型发布"
+      ]
+    },
+    {
+      "product_id": "product-eb3c13e667a45f69",
+      "product_name": "WeatherNext",
+      "builder_name": "Google DeepMind",
+      "first_seen": "2026-08-07",
+      "last_seen": "2026-08-07",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Google DeepMind的WeatherNext模型在气旋预报上实现突破，展示AI在气象领域的潜力。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.5,
+      "summary": "Google DeepMind的WeatherNext模型在气旋预报上实现突破，展示AI在气象领域的潜力。",
+      "title": "WeatherNext: AI model achieves breakthrough in forecasting cyclones",
+      "url": "https://deepmind.google/blog/weathernext-ai-model-achieves-breakthrough-in-forecasting-cyclones/",
+      "sources": [
+        {
+          "url": "https://deepmind.google/blog/weathernext-ai-model-achieves-breakthrough-in-forecasting-cyclones/",
+          "title": "WeatherNext: AI model achieves breakthrough in forecasting cyclones",
+          "source_type": "rss",
+          "published_at": "2026-08-06T15:06:15+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "deepmind-weathernext-cyclone-forecast",
+          "date": "2026-08-07",
+          "title": "WeatherNext: AI model achieves breakthrough in forecasting cyclones",
+          "summary": "Google DeepMind的WeatherNext模型在气旋预报上实现突破，展示AI在气象领域的潜力。",
+          "score": 7.5,
+          "url": "https://deepmind.google/blog/weathernext-ai-model-achieves-breakthrough-in-forecasting-cyclones/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "AI科学",
+        "气象预测"
+      ]
+    },
     {
       "product_id": "product-c7fc20f30f5b13fe",
       "product_name": "Raccoon Heist",
@@ -219,60 +802,6 @@
         "Meta",
         "Agent",
         "Model"
-      ]
-    },
-    {
-      "product_id": "product-8650d98b81792fda",
-      "product_name": "ChatGPT Codex",
-      "builder_name": "Lenny Rachitsky",
-      "first_seen": "2026-08-04",
-      "last_seen": "2026-08-06",
-      "occurrence_count": 1,
-      "intelligence_type": "builder_insight",
-      "evidence_status": "reported",
-      "target_user": "未公开",
-      "user_problem": "未公开",
-      "what_it_is": "OpenAI专家Nick Baumann演示ChatGPT Codex的语音、浏览器和Sites功能，展示AI辅助工作流，值得学习其实际应用。",
-      "ai_role": "未公开",
-      "implementation_idea": "未公开",
-      "hands_on_exercise": "未公开",
-      "limitations_or_uncertainties": "未公开",
-      "region": "global",
-      "score": 8.0,
-      "summary": "OpenAI专家Nick Baumann演示ChatGPT Codex的语音、浏览器和Sites功能，展示AI辅助工作流，值得学习其实际应用。",
-      "title": "🎙️ How I AI: ChatGPT Codex Voice + browser + Sites: an expert’s AI workflow | Nick Baumann (OpenAI)",
-      "url": "https://www.lennysnewsletter.com/p/how-i-ai-chatgpt-codex-voice-browser",
-      "sources": [
-        {
-          "url": "https://www.lennysnewsletter.com/p/how-i-ai-chatgpt-codex-voice-browser",
-          "title": "🎙️ How I AI: ChatGPT Codex Voice + browser + Sites: an expert’s AI workflow | Nick Baumann (OpenAI)",
-          "source_type": "newsletter",
-          "published_at": "2026-08-03T15:02:21+00:00"
-        },
-        {
-          "url": "https://www.lennysnewsletter.com/p/chatgpt-codex-voice-browser-sites",
-          "title": "ChatGPT Codex Voice + browser + Sites: an expert’s AI workflow | Nick Baumann (OpenAI)",
-          "source_type": "supplemental",
-          "published_at": ""
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "openai-codex-voice-workflow",
-          "date": "2026-08-04",
-          "title": "🎙️ How I AI: ChatGPT Codex Voice + browser + Sites: an expert’s AI workflow | Nick Baumann (OpenAI)",
-          "summary": "OpenAI专家Nick Baumann演示ChatGPT Codex的语音、浏览器和Sites功能，展示AI辅助工作流，值得学习其实际应用。",
-          "score": 8.0,
-          "url": "https://www.lennysnewsletter.com/p/how-i-ai-chatgpt-codex-voice-browser"
-        }
-      ],
-      "usage_flow": [],
-      "learning_points": [],
-      "verticals": [],
-      "tags": [
-        "ChatGPT",
-        "工作流",
-        "语音交互"
       ]
     },
     {
@@ -4025,53 +4554,6 @@
         "Sandbox",
         "Agent",
         "Infrastructure"
-      ]
-    },
-    {
-      "product_id": "product-5c74e3424927ba6a",
-      "product_name": "Codex",
-      "builder_name": "github-actions[bot]",
-      "first_seen": "2026-07-29",
-      "last_seen": "2026-07-29",
-      "occurrence_count": 1,
-      "intelligence_type": "product_case",
-      "evidence_status": "first_party",
-      "target_user": "未公开",
-      "user_problem": "未公开",
-      "what_it_is": "OpenAI Codex 发布 rust-v0.146.0，新增会话管理、Agent插件支持和WebSocket远程连接等功能。",
-      "ai_role": "未公开",
-      "implementation_idea": "未公开",
-      "hands_on_exercise": "未公开",
-      "limitations_or_uncertainties": "未公开",
-      "region": "global",
-      "score": 7.0,
-      "summary": "OpenAI Codex 发布 rust-v0.146.0，新增会话管理、Agent插件支持和WebSocket远程连接等功能。",
-      "title": "openai/codex released rust-v0.146.0",
-      "url": "https://github.com/openai/codex/releases/tag/rust-v0.146.0",
-      "sources": [
-        {
-          "url": "https://github.com/openai/codex/releases/tag/rust-v0.146.0",
-          "title": "openai/codex released rust-v0.146.0",
-          "source_type": "github",
-          "published_at": "2026-07-29T01:42:51+00:00"
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "openai-codex-rust-v0.146.0",
-          "date": "2026-07-29",
-          "title": "openai/codex released rust-v0.146.0",
-          "summary": "OpenAI Codex 发布 rust-v0.146.0，新增会话管理、Agent插件支持和WebSocket远程连接等功能。",
-          "score": 7.0,
-          "url": "https://github.com/openai/codex/releases/tag/rust-v0.146.0"
-        }
-      ],
-      "usage_flow": [],
-      "learning_points": [],
-      "verticals": [],
-      "tags": [
-        "Agent",
-        "Codex"
       ]
     },
     {
