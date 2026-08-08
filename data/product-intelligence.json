@@ -1,7 +1,475 @@
 {
   "version": 1,
-  "updated_at": "2026-08-07T03:16:30.384796+00:00",
+  "updated_at": "2026-08-08T02:22:50.915283+00:00",
   "products": [
+    {
+      "product_id": "product-fa20c0b5fd69b131",
+      "product_name": "Codex（OpenAI 的 AI 编程助手）",
+      "builder_name": "Simon Willison",
+      "first_seen": "2026-08-08",
+      "last_seen": "2026-08-08",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "verified",
+      "target_user": "想快速把游戏创意变成可玩 Demo 的独立开发者、程序员",
+      "user_problem": "从'浣熊团伙盗窃'这个文字创意到可玩游戏，中间需要写代码、做美术、调 bug，耗时耗力；之前用 Claude Fable 5 做的版本玩法太简单（只是在后院捡硬币），不够贴合'盗窃'主题。",
+      "what_it_is": "开发者 Simon Willison 用 OpenAI 的 Codex 编程助手（搭载 GPT-5.6 Sol Ultra 模式）复刻了一个 4 年前的游戏创意，生成可玩的网页游戏并开源代码。",
+      "ai_role": "AI 是整个'开发团队'：写游戏逻辑、生成美术资源、自我 review（虽然漏掉了眼球 bug），并根据自然语言指令修复问题。",
+      "implementation_idea": "核心思路是'提示词即需求文档'。Sol Ultra 模式会主动拆分任务给多个子 Agent（可以理解为 AI 里的小工头各自负责不同模块），一个写游戏引擎代码、一个调画面、一个管资源，最后拼起来。作者全程用对话式指令控制，不用手写代码。",
+      "hands_on_exercise": "30 分钟练习：打开 Claude Artifacts 或 v0.dev，用一段 200 字内的中文描述让 AI 做一个'小猫偷鱼'的网页小游戏，试玩后指出 1 个 bug，再用一句话让 AI 修复，观察它能否理解并改正。",
+      "limitations_or_uncertainties": "GPT-5.6 Sol Ultra 的'子 Agent' aggressive 模式具体如何拆分任务未公开；眼球 bug 说明 AI 自我 review 仍可能漏掉明显视觉问题；$23.28 是第三方估算成本，非官方定价。",
+      "region": "global",
+      "score": 9.0,
+      "summary": "Simon Willison 用 Codex 和 GPT-5.6 生成了一款完整游戏，并提供了可玩 Demo。",
+      "title": "Moonlight & Mayhem：用 Codex + GPT-5.6 一次生成完整游戏",
+      "url": "https://simonwillison.net/2026/Aug/7/moonlight-mayhem/#atom-everything",
+      "sources": [
+        {
+          "url": "https://simonwillison.net/2026/Aug/7/moonlight-mayhem/#atom-everything",
+          "title": "Moonlight & Mayhem (Raccoon Heist by Codex + GPT-5.6 Sol Ultra)",
+          "source_type": "rss",
+          "published_at": "2026-08-07T19:18:09+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "simonw-codex-gpt56-game",
+          "date": "2026-08-08",
+          "title": "Moonlight & Mayhem：用 Codex + GPT-5.6 一次生成完整游戏",
+          "summary": "Simon Willison 用 Codex 和 GPT-5.6 生成了一款完整游戏，并提供了可玩 Demo。",
+          "score": 9.0,
+          "url": "https://simonwillison.net/2026/Aug/7/moonlight-mayhem/#atom-everything"
+        }
+      ],
+      "usage_flow": [
+        "把同一个游戏创意提示词丢给 Codex Desktop（GPT-5.6 Sol Ultra 模式）",
+        "Codex 自动调用子 Agent 写代码、用 gpt-image-2 生成贴图，52 分钟后产出完整游戏",
+        "作者试玩发现 bug（浣熊眼睛变成巨大黑球飘在头顶），用自然语言问'为什么'和'修掉它'",
+        "Codex 修复后得到最终版，部署到 GitHub Pages 可在线玩"
+      ],
+      "learning_points": [
+        "Agent（智能体）：不只是聊天，而是能自己规划步骤、调用工具（如写文件、生成图片）的 AI 系统",
+        "Function Calling（函数调用）：AI 判断'现在该去生成图片了'或'该改代码了'，并自动调用对应工具的能力",
+        "One-shot prompting（一次性提示）：给 AI 一段完整需求，让它一次性产出完整作品，而不是一步步教"
+      ],
+      "verticals": [],
+      "tags": [
+        "Codex",
+        "游戏生成",
+        "GPT-5.6"
+      ]
+    },
+    {
+      "product_id": "product-7a53cf6c6ed49a68",
+      "product_name": "Hermes Agent",
+      "builder_name": "Elisabeth Rülke",
+      "first_seen": "2026-08-08",
+      "last_seen": "2026-08-08",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "需要在本地终端或桌面运行 AI Agent、但又想云端跑代码和调用多模型的开发者",
+      "user_problem": "原来 Hermes 要么本地跑模型能力有限，要么自己对接多个 API 很麻烦；代码执行也在本机，有安全和环境污染风险",
+      "what_it_is": "Nous Research 开源的 AI Agent 工具 Hermes，现在可以调用 Vercel 的模型网关（200+模型）并在云端隔离沙箱里运行代码",
+      "ai_role": "作为 Agent 的「大脑」做推理决策，并通过 Function Calling（AI 调用外部工具的能力）来执行终端命令或代码",
+      "implementation_idea": "Hermes 本身是一个终端应用，现在把「调用哪个模型」外包给 Vercel AI Gateway（一个统一中转站），把「执行代码」外包给 Vercel Sandbox（一个临时云虚拟机）。用户本地只留界面，重活都上云。",
+      "hands_on_exercise": "30 分钟练习：在本地装好 Hermes Agent，用 Vercel AI Gateway 接免费层模型（如 Gemini 2.0 Flash），让 Agent 写一段 Python 爬取网页标题；然后开启 vercel_sandbox 模式，观察代码实际在云端 /vercel/sandbox 里执行，本机目录没有变化。",
+      "limitations_or_uncertainties": "未公开：具体哪些 200+ 模型全部免费层可用；Sandbox 的免费额度/超时限制；Hermes 的持久化记忆是否也能存到云端；Nous Research 与 Vercel 是否有商业合作条款",
+      "region": "global",
+      "score": 8.5,
+      "summary": "Vercel 官方宣布 Hermes Agent 现在可以使用 AI Gateway 作为推理层，并在 Vercel Sandbox 中运行命令，支持200多个模型。",
+      "title": "Hermes Agent 接入 Vercel AI Gateway 与 Sandbox：云端推理+隔离执行",
+      "url": "https://vercel.com/changelog/vercel-ai-gateway-and-vercel-sandbox-now-available-on-hermes-agent",
+      "sources": [
+        {
+          "url": "https://vercel.com/changelog/vercel-ai-gateway-and-vercel-sandbox-now-available-on-hermes-agent",
+          "title": "Vercel AI Gateway and Vercel Sandbox now available on Hermes Agent",
+          "source_type": "rss",
+          "published_at": "2026-08-07T19:00:00+00:00"
+        },
+        {
+          "url": "https://hermes-agent.nousresearch.com/",
+          "title": "Hermes Agent | Nous Research",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "vercel-hermes-agent-ai-gateway-sandbox",
+          "date": "2026-08-08",
+          "title": "Hermes Agent 接入 Vercel AI Gateway 与 Sandbox：云端推理+隔离执行",
+          "summary": "Vercel 官方宣布 Hermes Agent 现在可以使用 AI Gateway 作为推理层，并在 Vercel Sandbox 中运行命令，支持200多个模型。",
+          "score": 8.5,
+          "url": "https://vercel.com/changelog/vercel-ai-gateway-and-vercel-sandbox-now-available-on-hermes-agent"
+        }
+      ],
+      "usage_flow": [
+        "安装 Hermes Agent，setup 向导里选择「Vercel AI Gateway」作为推理层",
+        "Agent 自动拉取实时可用的 200+ 模型列表和定价，用户选一个模型开始对话",
+        "（可选）把 terminal.backend 改成 vercel_sandbox，让 Agent 的代码命令跑到云端 microVM 而非本机",
+        "在 Vercel 后台统一看所有请求的用量和花费"
+      ],
+      "learning_points": [
+        "AI Gateway：一个中间层，帮你对接很多家模型商，统一计费、统一日志，不用每个平台单独申请 API Key",
+        "Sandbox/microVM：一种轻量级云端虚拟机，代码在里面跑，跑完销毁，本机不会被改坏",
+        "Agent = LLM + 工具使用 + 循环执行，不只是聊天，它能自己决定下一步干什么"
+      ],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "Vercel",
+        "AI Gateway"
+      ]
+    },
+    {
+      "product_id": "product-8650d98b81792fda",
+      "product_name": "ChatGPT Codex",
+      "builder_name": "Lenny Rachitsky",
+      "first_seen": "2026-08-04",
+      "last_seen": "2026-08-08",
+      "occurrence_count": 1,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "OpenAI专家Nick Baumann演示ChatGPT Codex的语音、浏览器和Sites功能，展示AI辅助工作流，值得学习其实际应用。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.0,
+      "summary": "OpenAI专家Nick Baumann演示ChatGPT Codex的语音、浏览器和Sites功能，展示AI辅助工作流，值得学习其实际应用。",
+      "title": "🎙️ How I AI: ChatGPT Codex Voice + browser + Sites: an expert’s AI workflow | Nick Baumann (OpenAI)",
+      "url": "https://www.lennysnewsletter.com/p/how-i-ai-chatgpt-codex-voice-browser",
+      "sources": [
+        {
+          "url": "https://www.lennysnewsletter.com/p/how-i-ai-chatgpt-codex-voice-browser",
+          "title": "🎙️ How I AI: ChatGPT Codex Voice + browser + Sites: an expert’s AI workflow | Nick Baumann (OpenAI)",
+          "source_type": "newsletter",
+          "published_at": "2026-08-03T15:02:21+00:00"
+        },
+        {
+          "url": "https://www.lennysnewsletter.com/p/chatgpt-codex-voice-browser-sites",
+          "title": "ChatGPT Codex Voice + browser + Sites: an expert’s AI workflow | Nick Baumann (OpenAI)",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "openai-codex-voice-workflow",
+          "date": "2026-08-04",
+          "title": "🎙️ How I AI: ChatGPT Codex Voice + browser + Sites: an expert’s AI workflow | Nick Baumann (OpenAI)",
+          "summary": "OpenAI专家Nick Baumann演示ChatGPT Codex的语音、浏览器和Sites功能，展示AI辅助工作流，值得学习其实际应用。",
+          "score": 8.0,
+          "url": "https://www.lennysnewsletter.com/p/how-i-ai-chatgpt-codex-voice-browser"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "ChatGPT",
+        "工作流",
+        "语音交互"
+      ]
+    },
+    {
+      "product_id": "product-46dfc67f2a1396e0",
+      "product_name": "skills.sh",
+      "builder_name": "Andrew Qu",
+      "first_seen": "2026-08-05",
+      "last_seen": "2026-08-08",
+      "occurrence_count": 2,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Vercel 官方宣布 skills.sh 现在支持将多个 agent 技能打包成可分享的包，方便团队标准化使用。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.0,
+      "summary": "Vercel 官方宣布 skills.sh 现在支持将多个 agent 技能打包成可分享的包，方便团队标准化使用。",
+      "title": "Skill packs are now available on skills.sh",
+      "url": "https://vercel.com/changelog/skill-packs-are-now-available",
+      "sources": [
+        {
+          "url": "https://vercel.com/changelog/skill-packs-are-now-available",
+          "title": "Skill packs are now available on skills.sh",
+          "source_type": "rss",
+          "published_at": "2026-08-04T04:00:00+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "skills.sh-skill-packs",
+          "date": "2026-08-05",
+          "title": "Skill packs are now available on skills.sh",
+          "summary": "skills.sh推出技能包功能，可打包分享多个Agent技能，简化技能分发。",
+          "score": 7.5,
+          "url": "https://vercel.com/changelog/skill-packs-are-now-available"
+        },
+        {
+          "update_id": "vercel-skill-packs-available",
+          "date": "2026-08-08",
+          "title": "Skill packs are now available on skills.sh",
+          "summary": "Vercel 官方宣布 skills.sh 现在支持将多个 agent 技能打包成可分享的包，方便团队标准化使用。",
+          "score": 8.0,
+          "url": "https://vercel.com/changelog/skill-packs-are-now-available"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "技能包",
+        "skills.sh",
+        "Vercel"
+      ]
+    },
+    {
+      "product_id": "product-d4f0152aaed21828",
+      "product_name": "Kitesurf",
+      "builder_name": "Sarah Perez",
+      "first_seen": "2026-08-08",
+      "last_seen": "2026-08-08",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Cloudflare 推出 Kitesurf，一个为 AI 代理设计的云托管浏览器，比 Chromium 更高效，帮助开发者构建浏览器 AI 代理。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.0,
+      "summary": "Cloudflare 推出 Kitesurf，一个为 AI 代理设计的云托管浏览器，比 Chromium 更高效，帮助开发者构建浏览器 AI 代理。",
+      "title": "Cloudflare launches Kitesurf, a browser built for AI agents",
+      "url": "https://techcrunch.com/2026/08/07/cloudflare-launches-kitesurf-a-browser-built-for-ai-agents/",
+      "sources": [
+        {
+          "url": "https://techcrunch.com/2026/08/07/cloudflare-launches-kitesurf-a-browser-built-for-ai-agents/",
+          "title": "Cloudflare launches Kitesurf, a browser built for AI agents",
+          "source_type": "rss",
+          "published_at": "2026-08-07T16:16:09+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "cloudflare-kitesurf-launch",
+          "date": "2026-08-08",
+          "title": "Cloudflare launches Kitesurf, a browser built for AI agents",
+          "summary": "Cloudflare 推出 Kitesurf，一个为 AI 代理设计的云托管浏览器，比 Chromium 更高效，帮助开发者构建浏览器 AI 代理。",
+          "score": 8.0,
+          "url": "https://techcrunch.com/2026/08/07/cloudflare-launches-kitesurf-a-browser-built-for-ai-agents/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "浏览器",
+        "AI代理",
+        "Cloudflare"
+      ]
+    },
+    {
+      "product_id": "product-a1a2c33f283c9073",
+      "product_name": "ChatGPT Codex",
+      "builder_name": "Claire Vo",
+      "first_seen": "2026-08-08",
+      "last_seen": "2026-08-08",
+      "occurrence_count": 1,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "OpenAI专家Nick Baumann详解ChatGPT Codex的语音、浏览器和Sites功能，展示AI辅助工作流，值得学习其实际应用。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.0,
+      "summary": "OpenAI专家Nick Baumann详解ChatGPT Codex的语音、浏览器和Sites功能，展示AI辅助工作流，值得学习其实际应用。",
+      "title": "ChatGPT Codex Voice + browser + Sites: an expert’s AI workflow | Nick Baumann (OpenAI)",
+      "url": "https://www.lennysnewsletter.com/p/chatgpt-codex-voice-browser-sites",
+      "sources": [
+        {
+          "url": "https://www.lennysnewsletter.com/p/chatgpt-codex-voice-browser-sites",
+          "title": "ChatGPT Codex Voice + browser + Sites: an expert’s AI workflow | Nick Baumann (OpenAI)",
+          "source_type": "newsletter",
+          "published_at": "2026-08-03T12:04:26+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "openai-codex-voice-workflow",
+          "date": "2026-08-08",
+          "title": "ChatGPT Codex Voice + browser + Sites: an expert’s AI workflow | Nick Baumann (OpenAI)",
+          "summary": "OpenAI专家Nick Baumann详解ChatGPT Codex的语音、浏览器和Sites功能，展示AI辅助工作流，值得学习其实际应用。",
+          "score": 8.0,
+          "url": "https://www.lennysnewsletter.com/p/chatgpt-codex-voice-browser-sites"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "ChatGPT",
+        "工作流",
+        "语音交互"
+      ]
+    },
+    {
+      "product_id": "product-23fa184b1a17cacb",
+      "product_name": "Astra",
+      "builder_name": "Kirsten Korosec",
+      "first_seen": "2026-08-08",
+      "last_seen": "2026-08-08",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "OpenAI 因安全担忧放缓 Astra 模型开发，该模型已达到关键网络安全阈值，能独立识别和发起网络攻击。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.0,
+      "summary": "OpenAI 因安全担忧放缓 Astra 模型开发，该模型已达到关键网络安全阈值，能独立识别和发起网络攻击。",
+      "title": "OpenAI says it slowed Astra model development over security concerns",
+      "url": "https://techcrunch.com/2026/08/07/openai-says-it-slowed-astra-model-development-over-security-concerns/",
+      "sources": [
+        {
+          "url": "https://techcrunch.com/2026/08/07/openai-says-it-slowed-astra-model-development-over-security-concerns/",
+          "title": "OpenAI says it slowed Astra model development over security concerns",
+          "source_type": "rss",
+          "published_at": "2026-08-07T22:48:24+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "openai-astra-security-delay",
+          "date": "2026-08-08",
+          "title": "OpenAI says it slowed Astra model development over security concerns",
+          "summary": "OpenAI 因安全担忧放缓 Astra 模型开发，该模型已达到关键网络安全阈值，能独立识别和发起网络攻击。",
+          "score": 8.0,
+          "url": "https://techcrunch.com/2026/08/07/openai-says-it-slowed-astra-model-development-over-security-concerns/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "AI安全",
+        "模型开发"
+      ]
+    },
+    {
+      "product_id": "product-5048cc58ea7fe34a",
+      "product_name": "Astra",
+      "builder_name": "Jay Peters",
+      "first_seen": "2026-08-08",
+      "last_seen": "2026-08-08",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "OpenAI 因安全标准暂停 Astra 模型的内部活动，该模型被认为过于强大。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.0,
+      "summary": "OpenAI 因安全标准暂停 Astra 模型的内部活动，该模型被认为过于强大。",
+      "title": "OpenAI puts the brakes on a new model because it&#8217;s supposedly too powerful",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/976948/openai-astra-model-pause-critical-cyber-capabilities",
+      "sources": [
+        {
+          "url": "https://www.theverge.com/ai-artificial-intelligence/976948/openai-astra-model-pause-critical-cyber-capabilities",
+          "title": "OpenAI puts the brakes on a new model because it&#8217;s supposedly too powerful",
+          "source_type": "rss",
+          "published_at": "2026-08-07T18:40:34+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "openai-astra-model-pause",
+          "date": "2026-08-08",
+          "title": "OpenAI puts the brakes on a new model because it&#8217;s supposedly too powerful",
+          "summary": "OpenAI 因安全标准暂停 Astra 模型的内部活动，该模型被认为过于强大。",
+          "score": 8.0,
+          "url": "https://www.theverge.com/ai-artificial-intelligence/976948/openai-astra-model-pause-critical-cyber-capabilities"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "OpenAI",
+        "模型安全"
+      ]
+    },
+    {
+      "product_id": "product-4ebaa8fc6527f139",
+      "product_name": "TutorMoments",
+      "builder_name": "Hugging Face",
+      "first_seen": "2026-08-08",
+      "last_seen": "2026-08-08",
+      "occurrence_count": 1,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Hugging Face 发布 TutorMoments 博客，探讨 AI 导师的干预时机，为教育 AI 产品设计提供思路。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.5,
+      "summary": "Hugging Face 发布 TutorMoments 博客，探讨 AI 导师的干预时机，为教育 AI 产品设计提供思路。",
+      "title": "TutorMoments: Do AI tutors know when to help and when to hold back?",
+      "url": "https://huggingface.co/blog/allenai/tutormoments",
+      "sources": [
+        {
+          "url": "https://huggingface.co/blog/allenai/tutormoments",
+          "title": "TutorMoments: Do AI tutors know when to help and when to hold back?",
+          "source_type": "rss",
+          "published_at": "2026-08-07T17:53:32+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "huggingface-tutormoments-blog",
+          "date": "2026-08-08",
+          "title": "TutorMoments: Do AI tutors know when to help and when to hold back?",
+          "summary": "Hugging Face 发布 TutorMoments 博客，探讨 AI 导师的干预时机，为教育 AI 产品设计提供思路。",
+          "score": 7.5,
+          "url": "https://huggingface.co/blog/allenai/tutormoments"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "教育",
+        "AI导师"
+      ]
+    },
     {
       "product_id": "product-5c74e3424927ba6a",
       "product_name": "Codex",
@@ -195,60 +663,6 @@
         "OpenAI",
         "免费",
         "产品更新"
-      ]
-    },
-    {
-      "product_id": "product-8650d98b81792fda",
-      "product_name": "ChatGPT Codex",
-      "builder_name": "Lenny Rachitsky",
-      "first_seen": "2026-08-04",
-      "last_seen": "2026-08-07",
-      "occurrence_count": 1,
-      "intelligence_type": "builder_insight",
-      "evidence_status": "reported",
-      "target_user": "未公开",
-      "user_problem": "未公开",
-      "what_it_is": "OpenAI专家Nick Baumann演示ChatGPT Codex的语音、浏览器和Sites功能，展示AI辅助工作流，值得学习其实际应用。",
-      "ai_role": "未公开",
-      "implementation_idea": "未公开",
-      "hands_on_exercise": "未公开",
-      "limitations_or_uncertainties": "未公开",
-      "region": "global",
-      "score": 8.0,
-      "summary": "OpenAI专家Nick Baumann演示ChatGPT Codex的语音、浏览器和Sites功能，展示AI辅助工作流，值得学习其实际应用。",
-      "title": "🎙️ How I AI: ChatGPT Codex Voice + browser + Sites: an expert’s AI workflow | Nick Baumann (OpenAI)",
-      "url": "https://www.lennysnewsletter.com/p/how-i-ai-chatgpt-codex-voice-browser",
-      "sources": [
-        {
-          "url": "https://www.lennysnewsletter.com/p/how-i-ai-chatgpt-codex-voice-browser",
-          "title": "🎙️ How I AI: ChatGPT Codex Voice + browser + Sites: an expert’s AI workflow | Nick Baumann (OpenAI)",
-          "source_type": "newsletter",
-          "published_at": "2026-08-03T15:02:21+00:00"
-        },
-        {
-          "url": "https://www.lennysnewsletter.com/p/chatgpt-codex-voice-browser-sites",
-          "title": "ChatGPT Codex Voice + browser + Sites: an expert’s AI workflow | Nick Baumann (OpenAI)",
-          "source_type": "supplemental",
-          "published_at": ""
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "openai-codex-voice-workflow",
-          "date": "2026-08-04",
-          "title": "🎙️ How I AI: ChatGPT Codex Voice + browser + Sites: an expert’s AI workflow | Nick Baumann (OpenAI)",
-          "summary": "OpenAI专家Nick Baumann演示ChatGPT Codex的语音、浏览器和Sites功能，展示AI辅助工作流，值得学习其实际应用。",
-          "score": 8.0,
-          "url": "https://www.lennysnewsletter.com/p/how-i-ai-chatgpt-codex-voice-browser"
-        }
-      ],
-      "usage_flow": [],
-      "learning_points": [],
-      "verticals": [],
-      "tags": [
-        "ChatGPT",
-        "工作流",
-        "语音交互"
       ]
     },
     {
@@ -1351,54 +1765,6 @@
         "AI应用",
         "旅游",
         "音频导览"
-      ]
-    },
-    {
-      "product_id": "product-46dfc67f2a1396e0",
-      "product_name": "skills.sh",
-      "builder_name": "Andrew Qu",
-      "first_seen": "2026-08-05",
-      "last_seen": "2026-08-05",
-      "occurrence_count": 1,
-      "intelligence_type": "product_case",
-      "evidence_status": "first_party",
-      "target_user": "未公开",
-      "user_problem": "未公开",
-      "what_it_is": "skills.sh推出技能包功能，可打包分享多个Agent技能，简化技能分发。",
-      "ai_role": "未公开",
-      "implementation_idea": "未公开",
-      "hands_on_exercise": "未公开",
-      "limitations_or_uncertainties": "未公开",
-      "region": "global",
-      "score": 7.5,
-      "summary": "skills.sh推出技能包功能，可打包分享多个Agent技能，简化技能分发。",
-      "title": "Skill packs are now available on skills.sh",
-      "url": "https://vercel.com/changelog/skill-packs-are-now-available",
-      "sources": [
-        {
-          "url": "https://vercel.com/changelog/skill-packs-are-now-available",
-          "title": "Skill packs are now available on skills.sh",
-          "source_type": "rss",
-          "published_at": "2026-08-04T04:00:00+00:00"
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "skills.sh-skill-packs",
-          "date": "2026-08-05",
-          "title": "Skill packs are now available on skills.sh",
-          "summary": "skills.sh推出技能包功能，可打包分享多个Agent技能，简化技能分发。",
-          "score": 7.5,
-          "url": "https://vercel.com/changelog/skill-packs-are-now-available"
-        }
-      ],
-      "usage_flow": [],
-      "learning_points": [],
-      "verticals": [],
-      "tags": [
-        "Agent",
-        "技能包",
-        "skills.sh"
       ]
     },
     {
