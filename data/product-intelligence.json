@@ -1,7 +1,422 @@
 {
   "version": 1,
-  "updated_at": "2026-08-08T02:22:50.915283+00:00",
+  "updated_at": "2026-08-09T02:29:39.239528+00:00",
   "products": [
+    {
+      "product_id": "product-97a104e5a93a2b88",
+      "product_name": "Claude Code",
+      "builder_name": "Simon Willison",
+      "first_seen": "2026-08-09",
+      "last_seen": "2026-08-09",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "Pro、Max、Team 订阅计划的开发者；Anthropic 内部员工",
+      "user_problem": "开发者用 AI 编程助手时，每步操作都要人工点'确认'，导致'确认疲劳'，反而更容易草率通过危险操作；同时担心 AI 被恶意指令劫持（提示注入攻击）后自动执行有害命令",
+      "what_it_is": "Claude Code 是 Anthropic 推出的 AI 编程助手，'auto mode'（自动模式）指 AI 可在无需人工逐条确认的情况下自动执行终端命令和文件操作",
+      "ai_role": "AI 充当'能自主执行但带安全刹车的编程代理'（Agent）：自己分解任务、运行命令、读写文件，同时用内置安全评估过滤危险操作",
+      "implementation_idea": "核心思路是给 AI 配一个'安全护栏层'——不是让人类逐条审批，而是让 AI 自己用另一套规则判断'这个命令会不会删数据、会不会把代码发给外部'。Anthropic 称他们用大量攻击场景训练了这套判断能力，并引入第三方独立测试验证。",
+      "hands_on_exercise": "打开 Claude Code（需订阅 Pro/Max/Team），在设置里确认 auto mode 已开启，让它帮你初始化一个 Python 项目（创建虚拟环境、安装依赖、跑通测试）。观察它哪些操作自动执行了、哪些停下来问你——对比之前手动逐条确认的体验。",
+      "limitations_or_uncertainties": "第三方测试由 Trajectory Labs 执行，但具体测试方法、72 个攻击场景的详细设计未完全公开；11% 的危险操作仍可能漏过；Simon Willison 提出一种攻击场景（恶意包伪装成正常命令链）尚未见公开测试结果；Claude Fable 5/Opus 5/Sonnet 5 的具体模型版本信息未详细披露",
+      "region": "global",
+      "score": 8.5,
+      "summary": "Anthropic 宣布 Claude Code 的 auto mode 将成为 Pro、Max 和 Team 计划的默认模式，并透露内部几乎全员使用，值得关注其安全性和效率提升。",
+      "title": "Claude Code 将自动模式设为默认：Anthropic 称已大幅缓解提示注入风险",
+      "url": "https://simonwillison.net/2026/Aug/8/auto-mode/#atom-everything",
+      "sources": [
+        {
+          "url": "https://simonwillison.net/2026/Aug/8/auto-mode/#atom-everything",
+          "title": "Auto mode is now the default in Claude Code for Pro, Max, and Team plans",
+          "source_type": "rss",
+          "published_at": "2026-08-08T22:36:03+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "claude-code-auto-mode-default",
+          "date": "2026-08-09",
+          "title": "Claude Code 将自动模式设为默认：Anthropic 称已大幅缓解提示注入风险",
+          "summary": "Anthropic 宣布 Claude Code 的 auto mode 将成为 Pro、Max 和 Team 计划的默认模式，并透露内部几乎全员使用，值得关注其安全性和效率提升。",
+          "score": 8.5,
+          "url": "https://simonwillison.net/2026/Aug/8/auto-mode/#atom-everything"
+        }
+      ],
+      "usage_flow": [
+        "开发者用自然语言描述需求，Claude Code 规划并执行多步骤任务",
+        "自动模式下，AI 自行判断命令风险等级，低风险直接执行，高风险拦截或请示",
+        "AI 读取外部代码、文档、依赖包时，自动模式尝试识别并阻断隐藏的恶意指令",
+        "开发者事后审计 AI 执行记录，必要时回滚操作"
+      ],
+      "learning_points": [
+        "Agent（智能体）：LLM 不只是聊天，还能自己动手操作电脑、运行程序、完成任务",
+        "Prompt injection（提示注入）：攻击者把恶意指令藏在 AI 要读取的网页、邮件、代码里，骗 AI 执行",
+        "Confirmation fatigue（确认疲劳）：让人类点太多'同意'，人会麻木点错，反而降低安全性"
+      ],
+      "verticals": [],
+      "tags": [
+        "Claude Code",
+        "auto mode",
+        "Anthropic"
+      ]
+    },
+    {
+      "product_id": "product-8650d98b81792fda",
+      "product_name": "ChatGPT Codex",
+      "builder_name": "Lenny Rachitsky",
+      "first_seen": "2026-08-04",
+      "last_seen": "2026-08-09",
+      "occurrence_count": 1,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "OpenAI专家Nick Baumann演示ChatGPT Codex的语音、浏览器和Sites功能，展示AI辅助工作流，值得学习其实际应用。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.0,
+      "summary": "OpenAI专家Nick Baumann演示ChatGPT Codex的语音、浏览器和Sites功能，展示AI辅助工作流，值得学习其实际应用。",
+      "title": "🎙️ How I AI: ChatGPT Codex Voice + browser + Sites: an expert’s AI workflow | Nick Baumann (OpenAI)",
+      "url": "https://www.lennysnewsletter.com/p/how-i-ai-chatgpt-codex-voice-browser",
+      "sources": [
+        {
+          "url": "https://www.lennysnewsletter.com/p/how-i-ai-chatgpt-codex-voice-browser",
+          "title": "🎙️ How I AI: ChatGPT Codex Voice + browser + Sites: an expert’s AI workflow | Nick Baumann (OpenAI)",
+          "source_type": "newsletter",
+          "published_at": "2026-08-03T15:02:21+00:00"
+        },
+        {
+          "url": "https://www.lennysnewsletter.com/p/chatgpt-codex-voice-browser-sites",
+          "title": "ChatGPT Codex Voice + browser + Sites: an expert’s AI workflow | Nick Baumann (OpenAI)",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "openai-codex-voice-workflow",
+          "date": "2026-08-04",
+          "title": "🎙️ How I AI: ChatGPT Codex Voice + browser + Sites: an expert’s AI workflow | Nick Baumann (OpenAI)",
+          "summary": "OpenAI专家Nick Baumann演示ChatGPT Codex的语音、浏览器和Sites功能，展示AI辅助工作流，值得学习其实际应用。",
+          "score": 8.0,
+          "url": "https://www.lennysnewsletter.com/p/how-i-ai-chatgpt-codex-voice-browser"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "ChatGPT",
+        "工作流",
+        "语音交互"
+      ]
+    },
+    {
+      "product_id": "product-6535862495cf6fc5",
+      "product_name": "Claude Code",
+      "builder_name": "mfiguiere",
+      "first_seen": "2026-08-09",
+      "last_seen": "2026-08-09",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "使用 Claude Code 进行编程的开发者，特别是需要同时运行多个 AI 会话处理不同任务的人",
+      "user_problem": "以前开多个 Claude Code 窗口/会话时，各会话完全隔离，重复交代背景浪费 token，也无法让专门处理某类任务的会话把成果直接传给另一个会话",
+      "what_it_is": "Claude Code 新增官方功能，允许不同的 AI 编码会话之间发送和接收消息，实现类似「多个 AI 助手互相协作」的效果。",
+      "ai_role": "每个 Claude Code 会话作为独立的 Agent（AI 代理，能自主执行任务的程序），通过消息机制共享信息、分工协作",
+      "implementation_idea": "官方未公开技术细节。从社区反馈看，核心思路是给每个会话一个「地址」或标识，让它能向其他会话投递消息，类似给不同 AI 助手建了个内部微信群。社区早期用 tmux（终端多窗口工具）+ 共享文件 + 调度器自己搭过类似方案。",
+      "hands_on_exercise": "打开两个 Claude Code 会话（需要 Claude Code 访问权限）：会话 A 让它分析项目结构并总结，会话 B 让它写一个具体功能，然后用跨会话消息把 A 的总结发给 B，观察 B 是否无需重复询问就能继续开发。记录是否成功、有无延迟或限制。",
+      "limitations_or_uncertainties": "官方未公开具体技术实现（是本地进程间通信还是云端中转）；不清楚消息大小限制、是否支持文件传输；与社区方案 CMUX/Orca 的具体差异未官方说明；该功能是否需要特定订阅 tier 未公开",
+      "region": "global",
+      "score": 8.0,
+      "summary": "Claude Code 新增跨会话消息功能，允许不同会话间通信，社区已有实践案例，值得关注多 Agent 协作的潜力。",
+      "title": "Claude Code 推出跨会话消息：让多个 AI 会话互相传话",
+      "url": "https://code.claude.com/docs/en/cross-session-messaging",
+      "sources": [
+        {
+          "url": "https://code.claude.com/docs/en/cross-session-messaging",
+          "title": "Message your other Claude Code sessions",
+          "source_type": "hackernews",
+          "published_at": "2026-08-08T15:34:49+00:00"
+        },
+        {
+          "url": "https://claude.com/product/claude-code",
+          "title": "Claude Code by Anthropic | AI Coding Agent, Terminal, IDE",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "claude-code-cross-session-messaging",
+          "date": "2026-08-09",
+          "title": "Claude Code 推出跨会话消息：让多个 AI 会话互相传话",
+          "summary": "Claude Code 新增跨会话消息功能，允许不同会话间通信，社区已有实践案例，值得关注多 Agent 协作的潜力。",
+          "score": 8.0,
+          "url": "https://code.claude.com/docs/en/cross-session-messaging"
+        }
+      ],
+      "usage_flow": [
+        "在 Claude Code 中开启多个会话，各自处理不同任务（如一个写前端、一个写测试）",
+        "通过跨会话消息功能，向指定会话发送消息或上下文",
+        "接收方会话收到消息，可继续基于新信息工作",
+        "社区用户还会配合 tmux、handoff 文件等工具做更复杂的编排"
+      ],
+      "learning_points": [
+        "Agent：能自主感知环境、做决策、执行动作的 AI 程序，这里每个 Claude Code 会话就是一个 Agent",
+        "多 Agent 协作：多个 AI 分工合作，比单个 AI 同时处理所有任务更高效，减少每个会话的上下文负担",
+        "上下文/Context：AI 能看到的对话历史和背景信息，太多会浪费 token、降低效率，共享消息可以减少重复加载"
+      ],
+      "verticals": [],
+      "tags": [
+        "Claude Code",
+        "多Agent",
+        "协作"
+      ]
+    },
+    {
+      "product_id": "product-82a3b5ff9dc18d93",
+      "product_name": "Revise",
+      "builder_name": "artursapek",
+      "first_seen": "2026-08-09",
+      "last_seen": "2026-08-09",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "开发者发布免费DOCX编辑器Revise，集成MCP server，让AI能直接编辑文档，已开发12个月。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.0,
+      "summary": "开发者发布免费DOCX编辑器Revise，集成MCP server，让AI能直接编辑文档，已开发12个月。",
+      "title": "Show HN: A free DOCX editor with MCP server for editing",
+      "url": "https://revise.io/help/mcp-server",
+      "sources": [
+        {
+          "url": "https://revise.io/help/mcp-server",
+          "title": "Show HN: A free DOCX editor with MCP server for editing",
+          "source_type": "hackernews",
+          "published_at": "2026-08-08T12:46:40+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "revise-docx-editor-mcp",
+          "date": "2026-08-09",
+          "title": "Show HN: A free DOCX editor with MCP server for editing",
+          "summary": "开发者发布免费DOCX编辑器Revise，集成MCP server，让AI能直接编辑文档，已开发12个月。",
+          "score": 8.0,
+          "url": "https://revise.io/help/mcp-server"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "文档编辑",
+        "MCP",
+        "独立开发"
+      ]
+    },
+    {
+      "product_id": "product-cb043f0ed61b425c",
+      "product_name": "Os8088",
+      "builder_name": "jggonz",
+      "first_seen": "2026-08-09",
+      "last_seen": "2026-08-09",
+      "occurrence_count": 1,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "verified",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "开发者用 Claude 辅助编写了运行在 IBM XT 上的 Mac 风格操作系统 Os8088，已通过真实硬件验证，展示了 AI 在底层系统开发中的能力。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.0,
+      "summary": "开发者用 Claude 辅助编写了运行在 IBM XT 上的 Mac 风格操作系统 Os8088，已通过真实硬件验证，展示了 AI 在底层系统开发中的能力。",
+      "title": "Os8088: A powerful Mac-like OS for the IBM XT, 286, 386",
+      "url": "https://os8088.com/",
+      "sources": [
+        {
+          "url": "https://os8088.com/",
+          "title": "Os8088: A powerful Mac-like OS for the IBM XT, 286, 386",
+          "source_type": "hackernews",
+          "published_at": "2026-08-08T23:37:27+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "os8088-mac-like-os",
+          "date": "2026-08-09",
+          "title": "Os8088: A powerful Mac-like OS for the IBM XT, 286, 386",
+          "summary": "开发者用 Claude 辅助编写了运行在 IBM XT 上的 Mac 风格操作系统 Os8088，已通过真实硬件验证，展示了 AI 在底层系统开发中的能力。",
+          "score": 8.0,
+          "url": "https://os8088.com/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "AI编程",
+        "操作系统",
+        "Claude"
+      ]
+    },
+    {
+      "product_id": "product-8781bfba78cf112c",
+      "product_name": "DeepSeek V4",
+      "builder_name": "茉莉花新闻网",
+      "first_seen": "2026-08-09",
+      "last_seen": "2026-08-09",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "实测DeepSeek V4正式版，用3块钱完成5个任务，展示其高性价比，开启AI智价比竞争。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "china",
+      "score": 7.5,
+      "summary": "实测DeepSeek V4正式版，用3块钱完成5个任务，展示其高性价比，开启AI智价比竞争。",
+      "title": "实测 DeepSeek V4 正式版：3 块钱干完 5 件事，AI「智价比」之战开打了 - 茉莉花新闻网",
+      "url": "https://news.google.com/rss/articles/CBMiwwJBVV95cUxNbFd3S1NLb3k4Tl9nb2pZWjk1dHFOUVRDMFpfMVN5RVJfNU9XS1ctR3JwOGJhM1k3UTctZ3FoTmtlQXFFeXdYMDJHU0F5d1ZaYmFtczI1bjczS1ZtRGIyZG9ad2hpT2E1NW84eHUzZHMyc0RXcUwyWXF5d1NFaHJ1Q0c4ZDRiaGNFQzVWWnN4LVBHRWhMUGZaMHR2SVdvSEgxalhYYU5SNHhMb2xaLXRucTFJcVVmSkZTUWxGcGZKdS0wQmhkczJhT0JTYzVCeFFFcEo5UnZpeWwxYnZFWVFsdjBtME8yaFVTRllCLXpGOFRFeldXUjhsZXNsSXh1bDhzbGlFWFQzTndjNDRxOHNPUnZRa20wRFZ0WEpaVmdGZXVwV3hQZ2VFN1RJekc5cmtHM3F5SnRYc0FfbVJfazQyd2VoRQ?oc=5",
+      "sources": [
+        {
+          "url": "https://news.google.com/rss/articles/CBMiwwJBVV95cUxNbFd3S1NLb3k4Tl9nb2pZWjk1dHFOUVRDMFpfMVN5RVJfNU9XS1ctR3JwOGJhM1k3UTctZ3FoTmtlQXFFeXdYMDJHU0F5d1ZaYmFtczI1bjczS1ZtRGIyZG9ad2hpT2E1NW84eHUzZHMyc0RXcUwyWXF5d1NFaHJ1Q0c4ZDRiaGNFQzVWWnN4LVBHRWhMUGZaMHR2SVdvSEgxalhYYU5SNHhMb2xaLXRucTFJcVVmSkZTUWxGcGZKdS0wQmhkczJhT0JTYzVCeFFFcEo5UnZpeWwxYnZFWVFsdjBtME8yaFVTRllCLXpGOFRFeldXUjhsZXNsSXh1bDhzbGlFWFQzTndjNDRxOHNPUnZRa20wRFZ0WEpaVmdGZXVwV3hQZ2VFN1RJekc5cmtHM3F5SnRYc0FfbVJfazQyd2VoRQ?oc=5",
+          "title": "实测 DeepSeek V4 正式版：3 块钱干完 5 件事，AI「智价比」之战开打了 - 茉莉花新闻网",
+          "source_type": "google_news",
+          "published_at": "2026-08-08T14:56:39+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "deepseek-v4-practical-test",
+          "date": "2026-08-09",
+          "title": "实测 DeepSeek V4 正式版：3 块钱干完 5 件事，AI「智价比」之战开打了 - 茉莉花新闻网",
+          "summary": "实测DeepSeek V4正式版，用3块钱完成5个任务，展示其高性价比，开启AI智价比竞争。",
+          "score": 7.5,
+          "url": "https://news.google.com/rss/articles/CBMiwwJBVV95cUxNbFd3S1NLb3k4Tl9nb2pZWjk1dHFOUVRDMFpfMVN5RVJfNU9XS1ctR3JwOGJhM1k3UTctZ3FoTmtlQXFFeXdYMDJHU0F5d1ZaYmFtczI1bjczS1ZtRGIyZG9ad2hpT2E1NW84eHUzZHMyc0RXcUwyWXF5d1NFaHJ1Q0c4ZDRiaGNFQzVWWnN4LVBHRWhMUGZaMHR2SVdvSEgxalhYYU5SNHhMb2xaLXRucTFJcVVmSkZTUWxGcGZKdS0wQmhkczJhT0JTYzVCeFFFcEo5UnZpeWwxYnZFWVFsdjBtME8yaFVTRllCLXpGOFRFeldXUjhsZXNsSXh1bDhzbGlFWFQzTndjNDRxOHNPUnZRa20wRFZ0WEpaVmdGZXVwV3hQZ2VFN1RJekc5cmtHM3F5SnRYc0FfbVJfazQyd2VoRQ?oc=5"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "DeepSeek",
+        "V4",
+        "实测",
+        "性价比"
+      ]
+    },
+    {
+      "product_id": "product-986d4435f7e0c4b1",
+      "product_name": "NextSlide",
+      "builder_name": "Anthony Ha",
+      "first_seen": "2026-08-09",
+      "last_seen": "2026-08-09",
+      "occurrence_count": 1,
+      "intelligence_type": "market_signal",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "OpenAI 收购了演示文稿初创公司 NextSlide，其团队将加入 ChatGPT 团队，值得关注其对 ChatGPT 演示功能的潜在增强。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.5,
+      "summary": "OpenAI 收购了演示文稿初创公司 NextSlide，其团队将加入 ChatGPT 团队，值得关注其对 ChatGPT 演示功能的潜在增强。",
+      "title": "OpenAI acquires presentation startup NextSlide",
+      "url": "https://techcrunch.com/2026/08/08/openai-acquires-presentation-startup-nextslide/",
+      "sources": [
+        {
+          "url": "https://techcrunch.com/2026/08/08/openai-acquires-presentation-startup-nextslide/",
+          "title": "OpenAI acquires presentation startup NextSlide",
+          "source_type": "rss",
+          "published_at": "2026-08-08T19:41:13+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "openai-acquires-nextslide",
+          "date": "2026-08-09",
+          "title": "OpenAI acquires presentation startup NextSlide",
+          "summary": "OpenAI 收购了演示文稿初创公司 NextSlide，其团队将加入 ChatGPT 团队，值得关注其对 ChatGPT 演示功能的潜在增强。",
+          "score": 7.5,
+          "url": "https://techcrunch.com/2026/08/08/openai-acquires-presentation-startup-nextslide/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "OpenAI",
+        "收购",
+        "ChatGPT"
+      ]
+    },
+    {
+      "product_id": "product-38b3af49fd4946f3",
+      "product_name": "Clippy",
+      "builder_name": "noobcoder",
+      "first_seen": "2026-08-09",
+      "last_seen": "2026-08-09",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "开发者发布macOS复古回形针助手Clippy，支持AI控制电脑，但用户希望支持本地模型。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.0,
+      "summary": "开发者发布macOS复古回形针助手Clippy，支持AI控制电脑，但用户希望支持本地模型。",
+      "title": "Show HN: Clippy for macOS – retro floating paperclip with computer use",
+      "url": "https://github.com/Ar9av/clippy",
+      "sources": [
+        {
+          "url": "https://github.com/Ar9av/clippy",
+          "title": "Show HN: Clippy for macOS – retro floating paperclip with computer use",
+          "source_type": "hackernews",
+          "published_at": "2026-08-08T17:39:16+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "clippy-macos-computer-use",
+          "date": "2026-08-09",
+          "title": "Show HN: Clippy for macOS – retro floating paperclip with computer use",
+          "summary": "开发者发布macOS复古回形针助手Clippy，支持AI控制电脑，但用户希望支持本地模型。",
+          "score": 7.0,
+          "url": "https://github.com/Ar9av/clippy"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "AI助手",
+        "computer use",
+        "macOS"
+      ]
+    },
     {
       "product_id": "product-fa20c0b5fd69b131",
       "product_name": "Codex（OpenAI 的 AI 编程助手）",
@@ -120,60 +535,6 @@
         "Agent",
         "Vercel",
         "AI Gateway"
-      ]
-    },
-    {
-      "product_id": "product-8650d98b81792fda",
-      "product_name": "ChatGPT Codex",
-      "builder_name": "Lenny Rachitsky",
-      "first_seen": "2026-08-04",
-      "last_seen": "2026-08-08",
-      "occurrence_count": 1,
-      "intelligence_type": "builder_insight",
-      "evidence_status": "reported",
-      "target_user": "未公开",
-      "user_problem": "未公开",
-      "what_it_is": "OpenAI专家Nick Baumann演示ChatGPT Codex的语音、浏览器和Sites功能，展示AI辅助工作流，值得学习其实际应用。",
-      "ai_role": "未公开",
-      "implementation_idea": "未公开",
-      "hands_on_exercise": "未公开",
-      "limitations_or_uncertainties": "未公开",
-      "region": "global",
-      "score": 8.0,
-      "summary": "OpenAI专家Nick Baumann演示ChatGPT Codex的语音、浏览器和Sites功能，展示AI辅助工作流，值得学习其实际应用。",
-      "title": "🎙️ How I AI: ChatGPT Codex Voice + browser + Sites: an expert’s AI workflow | Nick Baumann (OpenAI)",
-      "url": "https://www.lennysnewsletter.com/p/how-i-ai-chatgpt-codex-voice-browser",
-      "sources": [
-        {
-          "url": "https://www.lennysnewsletter.com/p/how-i-ai-chatgpt-codex-voice-browser",
-          "title": "🎙️ How I AI: ChatGPT Codex Voice + browser + Sites: an expert’s AI workflow | Nick Baumann (OpenAI)",
-          "source_type": "newsletter",
-          "published_at": "2026-08-03T15:02:21+00:00"
-        },
-        {
-          "url": "https://www.lennysnewsletter.com/p/chatgpt-codex-voice-browser-sites",
-          "title": "ChatGPT Codex Voice + browser + Sites: an expert’s AI workflow | Nick Baumann (OpenAI)",
-          "source_type": "supplemental",
-          "published_at": ""
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "openai-codex-voice-workflow",
-          "date": "2026-08-04",
-          "title": "🎙️ How I AI: ChatGPT Codex Voice + browser + Sites: an expert’s AI workflow | Nick Baumann (OpenAI)",
-          "summary": "OpenAI专家Nick Baumann演示ChatGPT Codex的语音、浏览器和Sites功能，展示AI辅助工作流，值得学习其实际应用。",
-          "score": 8.0,
-          "url": "https://www.lennysnewsletter.com/p/how-i-ai-chatgpt-codex-voice-browser"
-        }
-      ],
-      "usage_flow": [],
-      "learning_points": [],
-      "verticals": [],
-      "tags": [
-        "ChatGPT",
-        "工作流",
-        "语音交互"
       ]
     },
     {

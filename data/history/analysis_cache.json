@@ -2090,6 +2090,39 @@
       },
       "stage": "candidate_analysis"
     },
+    "1fd9bdd68002912ce77d18865f5c9383c292855a66462ccb46ce62923c715756": {
+      "created_at": "2026-08-09T02:29:39.216044+00:00",
+      "model": "kimi-k2.6",
+      "prompt_version": "deep-v3-beginner",
+      "result": {
+        "ai_role": "每个 Claude Code 会话作为独立的 Agent（AI 代理，能自主执行任务的程序），通过消息机制共享信息、分工协作",
+        "evidence_status": "first_party",
+        "hands_on_exercise": "打开两个 Claude Code 会话（需要 Claude Code 访问权限）：会话 A 让它分析项目结构并总结，会话 B 让它写一个具体功能，然后用跨会话消息把 A 的总结发给 B，观察 B 是否无需重复询问就能继续开发。记录是否成功、有无延迟或限制。",
+        "implementation_idea": "官方未公开技术细节。从社区反馈看，核心思路是给每个会话一个「地址」或标识，让它能向其他会话投递消息，类似给不同 AI 助手建了个内部微信群。社区早期用 tmux（终端多窗口工具）+ 共享文件 + 调度器自己搭过类似方案。",
+        "learning_points": [
+          "Agent：能自主感知环境、做决策、执行动作的 AI 程序，这里每个 Claude Code 会话就是一个 Agent",
+          "多 Agent 协作：多个 AI 分工合作，比单个 AI 同时处理所有任务更高效，减少每个会话的上下文负担",
+          "上下文/Context：AI 能看到的对话历史和背景信息，太多会浪费 token、降低效率，共享消息可以减少重复加载"
+        ],
+        "limitations_or_uncertainties": "官方未公开具体技术实现（是本地进程间通信还是云端中转）；不清楚消息大小限制、是否支持文件传输；与社区方案 CMUX/Orca 的具体差异未官方说明；该功能是否需要特定订阅 tier 未公开",
+        "product_name": "Claude Code",
+        "sources": [
+          "https://code.claude.com/docs/en/cross-session-messaging",
+          "https://claude.com/product/claude-code"
+        ],
+        "target_users": "使用 Claude Code 进行编程的开发者，特别是需要同时运行多个 AI 会话处理不同任务的人",
+        "title_zh": "Claude Code 推出跨会话消息：让多个 AI 会话互相传话",
+        "usage_flow": [
+          "在 Claude Code 中开启多个会话，各自处理不同任务（如一个写前端、一个写测试）",
+          "通过跨会话消息功能，向指定会话发送消息或上下文",
+          "接收方会话收到消息，可继续基于新信息工作",
+          "社区用户还会配合 tmux、handoff 文件等工具做更复杂的编排"
+        ],
+        "user_problem": "以前开多个 Claude Code 窗口/会话时，各会话完全隔离，重复交代背景浪费 token，也无法让专门处理某类任务的会话把成果直接传给另一个会话",
+        "what_it_is": "Claude Code 新增官方功能，允许不同的 AI 编码会话之间发送和接收消息，实现类似「多个 AI 助手互相协作」的效果。"
+      },
+      "stage": "deep_analysis"
+    },
     "20430573e67a54e38d3872ecbc7aee3d147f138458d1341a168d66dd02c2d7d8": {
       "created_at": "2026-07-31T03:49:17.802442+00:00",
       "model": "deepseek-v4-flash",
@@ -2428,6 +2461,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "270cb87242fc6fa27f8cfc5d5ff3e4b959bc27d8605748725563166c110275c3": {
+      "created_at": "2026-08-09T02:28:23.071693+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "claude-code-auto-mode-default",
+        "evidence_status": "first_party",
+        "follow_up": "关注 auto mode 的评估报告和用户反馈。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:simonwillison.net_atom_everything_:6296a492575fb3b0",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Claude Code",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Anthropic 将 Claude Code 的 auto mode 设为默认，官方博客和 Simon Willison 的分析提供了一手信息，涉及产品重要功能变更和内部使用实践，对开发者有直接指导意义。",
+        "region": "global",
+        "score": 8.5,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Anthropic 宣布 Claude Code 的 auto mode 将成为 Pro、Max 和 Team 计划的默认模式，并透露内部几乎全员使用，值得关注其安全性和效率提升。",
+        "tags": [
+          "Claude Code",
+          "auto mode",
+          "Anthropic"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "2742fdd6f9b729e64bdb5c26346f195801daaec4cde8347780354b63fcf694e5": {
       "created_at": "2026-07-28T03:49:20.637859+00:00",
       "model": "deepseek-v4-flash",
@@ -2654,6 +2726,46 @@
       },
       "stage": "candidate_analysis"
     },
+    "2a6d35b7725c8b012358877892e1267a5c0d71d5d6df7f48c8be52aaf29038f0": {
+      "created_at": "2026-08-09T02:28:40.977048+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "deepseek-v4-practical-test",
+        "evidence_status": "reported",
+        "follow_up": "关注DeepSeek V4在更多场景下的实际表现和用户反馈。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "google_news:article:8586d49cba883aaf",
+        "intelligence_type": "product_case",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "DeepSeek V4",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "实测DeepSeek V4正式版，展示3块钱完成5件事的性价比，有具体使用场景和成本数据，对理解模型能力有参考价值，但来源为自媒体，权威性一般。",
+        "region": "china",
+        "score": 7.5,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "实测DeepSeek V4正式版，用3块钱完成5个任务，展示其高性价比，开启AI智价比竞争。",
+        "tags": [
+          "DeepSeek",
+          "V4",
+          "实测",
+          "性价比"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "2b01f74cb87dce001a58eea97e42f18f2f92e80c48dd25b910b6e2f1f7a45595": {
       "created_at": "2026-08-06T03:35:45.970026+00:00",
       "model": "deepseek-v4-flash",
@@ -2725,6 +2837,45 @@
           "Codex",
           "Agent",
           "alpha"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "2c4d8a49e99bee4747d420d53760e514c3c2711cc06b95cbc228a77aa07e2540": {
+      "created_at": "2026-08-09T02:28:23.071463+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "openai-acquires-nextslide",
+        "evidence_status": "reported",
+        "follow_up": "关注 NextSlide 团队在 ChatGPT 中的具体产品整合和功能发布。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:ee87da6898761cea",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "NextSlide",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI 收购演示文稿初创公司 NextSlide，团队并入 ChatGPT，属于产品能力扩展和商业动态，有明确收购事实，但缺乏产品细节和用户反馈。",
+        "region": "global",
+        "score": 7.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "OpenAI 收购了演示文稿初创公司 NextSlide，其团队将加入 ChatGPT 团队，值得关注其对 ChatGPT 演示功能的潜在增强。",
+        "tags": [
+          "OpenAI",
+          "收购",
+          "ChatGPT"
         ],
         "target_user": "",
         "verticals": []
@@ -3698,6 +3849,44 @@
         "what_it_is": "Lovable 官方博客文章，介绍其 AI 编程平台在连接用户外部数据时的安全机制"
       },
       "stage": "deep_analysis"
+    },
+    "3e70f45f6eb9123f508b915ba2a0ab725aa34e40d1cab74bb695a198315bf541": {
+      "created_at": "2026-08-09T02:28:36.839491+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "deepseek-price-increase-analysis",
+        "evidence_status": "reported",
+        "follow_up": "无",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "google_news:article:c295c361ce132115",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": false,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "DeepSeek",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "分析DeepSeek涨价原因，但无新事实，观点性内容，信噪比一般。",
+        "region": "china",
+        "score": 5.0,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "智源社区分析DeepSeek涨价并非为盈利，但缺乏新信息。",
+        "tags": [
+          "DeepSeek",
+          "定价"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
     },
     "3ed7de5ed4d457fd965c72ae34e17e6d821f59c496af18c52f99ea3a1597befb": {
       "created_at": "2026-08-07T03:15:36.303337+00:00",
@@ -4992,6 +5181,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "4ec221037ee6dcf50002ec4359c01fc551853a03d6c7493df93fa0b9d4fe2e09": {
+      "created_at": "2026-08-09T02:28:36.839423+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "deepseek-benchmark-commentary",
+        "evidence_status": "reported",
+        "follow_up": "无",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "google_news:article:ad95e281ae7a5816",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": false,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "DeepSeek",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "标题党，无实质内容，低质量评论。",
+        "region": "china",
+        "score": 3.0,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "风闻文章称DeepSeek成为AI基准线，但无具体数据或分析。",
+        "tags": [
+          "DeepSeek",
+          "行业评论"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "4ef69bde19e7638e87f89848f7163e5d5164429243f4967a82a79859c92e9510": {
       "created_at": "2026-08-06T03:36:17.593037+00:00",
       "model": "deepseek-v4-flash",
@@ -5253,6 +5480,44 @@
         "tags": [
           "本地部署",
           "Agent"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "52fcfdb975ac92069323220934a35aa7dffb20752fe5a33531f22b7b7cf09161": {
+      "created_at": "2026-08-09T02:28:23.072069+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "gateway-2000-ads",
+        "evidence_status": "reported",
+        "follow_up": "无",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:49221220",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "关于 Gateway 2000 90 年代广告的怀旧内容，与 AI 无关，无增量价值。",
+        "region": "global",
+        "score": 2.0,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "一篇关于 Gateway 2000 在 90 年代糟糕广告的怀旧文章，与 AI 无关。",
+        "tags": [
+          "怀旧",
+          "广告"
         ],
         "target_user": "",
         "verticals": []
@@ -6559,6 +6824,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "6468ea11c0d446a8da83533a2ace7c3161a9da77327d4eeeea7f1a6b34a31318": {
+      "created_at": "2026-08-09T02:28:23.072200+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "claude-code-cross-session-messaging",
+        "evidence_status": "first_party",
+        "follow_up": "关注该功能的实际应用案例和性能表现。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:49222824",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Claude Code",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Claude Code 新增跨会话消息功能，官方文档提供一手信息，社区有实践反馈，展示了多 Agent 协作的新能力，对构建复杂 AI 工作流有参考价值。",
+        "region": "global",
+        "score": 8.0,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "Claude Code 新增跨会话消息功能，允许不同会话间通信，社区已有实践案例，值得关注多 Agent 协作的潜力。",
+        "tags": [
+          "Claude Code",
+          "多Agent",
+          "协作"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "652a03fb53aa253e0baf4016172c31b59d78b40b0a219b0dd23ed502a22a6add": {
       "created_at": "2026-07-25T16:38:29.697355+00:00",
       "model": "deepseek-v4-flash",
@@ -6899,6 +7203,46 @@
           "Microsoft",
           "Copilot",
           "超级应用"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "67fb267ca5c8002cfbdf96cbdaf1fa66a2317fff85530a668c5a7d39b79b0cb8": {
+      "created_at": "2026-08-09T02:28:40.976991+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-free-tier-deepseek-competition",
+        "evidence_status": "reported",
+        "follow_up": "关注OpenAI免费策略的具体实施及对市场格局的影响。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "google_news:article:5d0d634239465fc0",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "报道DeepSeek调用量达OpenAI三倍，OpenAI选择免费策略，属于市场信号，但无具体产品细节或一手数据，来源为媒体转载，价值中等。",
+        "region": "china",
+        "score": 6.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "报道称DeepSeek调用量达OpenAI三倍，OpenAI在打折无效后选择免费策略，反映市场竞争态势。",
+        "tags": [
+          "市场",
+          "竞争",
+          "OpenAI",
+          "DeepSeek"
         ],
         "target_user": "",
         "verticals": []
@@ -8981,6 +9325,85 @@
       },
       "stage": "candidate_analysis"
     },
+    "8257646a8cc6a59c7d5e8a56eeee807f90ef7e71c74f694efb7a98e5ab865f31": {
+      "created_at": "2026-08-09T02:28:36.839517+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "deepseek-cpu-inference",
+        "evidence_status": "reported",
+        "follow_up": "验证技术细节和实际性能。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "google_news:article:039ff5a6f1c0ea96",
+        "intelligence_type": "model_capability",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "DeepSeek",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "报道纯CPU跑通DeepSeek，可能解锁新部署场景，但来源权威性低，需验证。",
+        "region": "china",
+        "score": 6.0,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "电子工程专辑报道称零GPU用国产CPU跑通DeepSeek，可能改变算力依赖，但细节待验证。",
+        "tags": [
+          "DeepSeek",
+          "CPU推理",
+          "国产算力"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "82cdb627c800dde411794189e542f6e14df6b3ad290447727a80298ace4320fa": {
+      "created_at": "2026-08-09T02:29:14.821582+00:00",
+      "model": "kimi-k2.6",
+      "prompt_version": "deep-v3-beginner",
+      "result": {
+        "ai_role": "AI 充当'能自主执行但带安全刹车的编程代理'（Agent）：自己分解任务、运行命令、读写文件，同时用内置安全评估过滤危险操作",
+        "evidence_status": "first_party",
+        "hands_on_exercise": "打开 Claude Code（需订阅 Pro/Max/Team），在设置里确认 auto mode 已开启，让它帮你初始化一个 Python 项目（创建虚拟环境、安装依赖、跑通测试）。观察它哪些操作自动执行了、哪些停下来问你——对比之前手动逐条确认的体验。",
+        "implementation_idea": "核心思路是给 AI 配一个'安全护栏层'——不是让人类逐条审批，而是让 AI 自己用另一套规则判断'这个命令会不会删数据、会不会把代码发给外部'。Anthropic 称他们用大量攻击场景训练了这套判断能力，并引入第三方独立测试验证。",
+        "learning_points": [
+          "Agent（智能体）：LLM 不只是聊天，还能自己动手操作电脑、运行程序、完成任务",
+          "Prompt injection（提示注入）：攻击者把恶意指令藏在 AI 要读取的网页、邮件、代码里，骗 AI 执行",
+          "Confirmation fatigue（确认疲劳）：让人类点太多'同意'，人会麻木点错，反而降低安全性"
+        ],
+        "limitations_or_uncertainties": "第三方测试由 Trajectory Labs 执行，但具体测试方法、72 个攻击场景的详细设计未完全公开；11% 的危险操作仍可能漏过；Simon Willison 提出一种攻击场景（恶意包伪装成正常命令链）尚未见公开测试结果；Claude Fable 5/Opus 5/Sonnet 5 的具体模型版本信息未详细披露",
+        "product_name": "Claude Code",
+        "sources": [
+          "https://simonwillison.net/2026/Aug/8/auto-mode/#atom-everything",
+          "https://claude.com/blog/auto-mode-default-in-claude-code",
+          "https://code.claude.com/docs/en/auto-mode-config",
+          "https://simonwillison.net/2026/Jul/21/cat-and-thariq/",
+          "https://simonwillison.net/2026/Jul/21/cat-and-thariq/#what-s-the-advice-within-anthropic-for-safely-running-claude-code-",
+          "https://twitter.com/trq212/status/2085863307106468143",
+          "https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/",
+          "https://simonwillison.net/2026/Jan/8/llm-predictions-for-2026/#1-year-a-challenger-disaster-for-coding-agent-security",
+          "https://simonwillison.net/2026/Aug/7/openai-timeline/"
+        ],
+        "target_users": "Pro、Max、Team 订阅计划的开发者；Anthropic 内部员工",
+        "title_zh": "Claude Code 将自动模式设为默认：Anthropic 称已大幅缓解提示注入风险",
+        "usage_flow": [
+          "开发者用自然语言描述需求，Claude Code 规划并执行多步骤任务",
+          "自动模式下，AI 自行判断命令风险等级，低风险直接执行，高风险拦截或请示",
+          "AI 读取外部代码、文档、依赖包时，自动模式尝试识别并阻断隐藏的恶意指令",
+          "开发者事后审计 AI 执行记录，必要时回滚操作"
+        ],
+        "user_problem": "开发者用 AI 编程助手时，每步操作都要人工点'确认'，导致'确认疲劳'，反而更容易草率通过危险操作；同时担心 AI 被恶意指令劫持（提示注入攻击）后自动执行有害命令",
+        "what_it_is": "Claude Code 是 Anthropic 推出的 AI 编程助手，'auto mode'（自动模式）指 AI 可在无需人工逐条确认的情况下自动执行终端命令和文件操作"
+      },
+      "stage": "deep_analysis"
+    },
     "83b6d6aec81e59ff2c88d7d734e60a3daf5c126951a9a2ae4c06b8200e578e08": {
       "created_at": "2026-08-08T02:21:40.317353+00:00",
       "model": "deepseek-v4-flash",
@@ -10470,6 +10893,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "96e08ef8ca89f09dd01ca9857ea42fe020a25c66f98497fe41e7ba360ac1b550": {
+      "created_at": "2026-08-09T02:28:36.839308+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "revise-docx-editor-mcp",
+        "evidence_status": "first_party",
+        "follow_up": "关注MCP集成体验和用户反馈。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:49221354",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Revise",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "独立开发者12个月打磨的DOCX编辑器，提供MCP server，有明确产品思路和用户反馈，对AI文档编辑有参考价值。",
+        "region": "global",
+        "score": 8.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "开发者发布免费DOCX编辑器Revise，集成MCP server，让AI能直接编辑文档，已开发12个月。",
+        "tags": [
+          "文档编辑",
+          "MCP",
+          "独立开发"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "975a96729e4d50ba5c72438efbbd797cbe618809a43462eb796dd38dd7d2c9cc": {
       "created_at": "2026-08-06T03:35:45.969894+00:00",
       "model": "deepseek-v4-flash",
@@ -11425,6 +11887,44 @@
           "工作流",
           "AI Assistant",
           "补丁"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "a2cafe4f33ae985d592e2a5cc74df471b1915e88b737bc9cc8f804005c489331": {
+      "created_at": "2026-08-09T02:28:36.839399+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "deepseek-r1-strength-article",
+        "evidence_status": "reported",
+        "follow_up": "无",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "google_news:article:dd81d6ebba57a34e",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": false,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "DeepSeek",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "旧闻重发，无新信息，低质量转载。",
+        "region": "china",
+        "score": 3.0,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "新浪网旧文重发，讨论DeepSeek R1模型能力，无新内容。",
+        "tags": [
+          "DeepSeek",
+          "R1"
         ],
         "target_user": "",
         "verticals": []
@@ -14297,6 +14797,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "ccd9bef0b337053d155a715dc0b3c0942cb8187ecad0b75ea59b2e58d65a2c29": {
+      "created_at": "2026-08-09T02:28:36.839244+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "gentoo-bugzilla-ai-scraper-overload",
+        "evidence_status": "reported",
+        "follow_up": "关注是否有社区应对措施或新工具出现。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:49221864",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "讨论AI爬虫对开源社区的影响，但无具体产品、构建者或新能力，属于行业现象评论，信噪比低。",
+        "region": "global",
+        "score": 5.0,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "Gentoo的bugzilla因AI爬虫过载而关闭，反映AI训练数据抓取对开源社区的冲击。",
+        "tags": [
+          "AI爬虫",
+          "开源社区"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "cd04fb7a0c5e002188ff4cf8b9f4421ee8f9f59b26cbabc97372b0061f119d1f": {
       "created_at": "2026-07-29T01:53:11.237030+00:00",
       "model": "deepseek-v4-flash",
@@ -15206,6 +15744,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "df889f175e2db19ab620be9bcf77dc22a343bba827018dd5729b7b98eeaa24c8": {
+      "created_at": "2026-08-09T02:28:36.839474+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "deepseek-external-funding-rumor",
+        "evidence_status": "reported",
+        "follow_up": "关注官方确认或更多细节。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "google_news:article:9d3bf4820c07b168",
+        "intelligence_type": "early_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "DeepSeek",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "传闻DeepSeek首次启动外部融资，但来源为媒体转载，未证实，属于早期信号。",
+        "region": "china",
+        "score": 6.0,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "新浪财经报道DeepSeek可能首次启动外部融资，但尚未证实。",
+        "tags": [
+          "DeepSeek",
+          "融资"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "dfaa046ed26da40b22eaa8d6ee810f7cd04e8514e8f4645562451680609fb082": {
       "created_at": "2026-08-01T03:49:24.197921+00:00",
       "model": "deepseek-v4-flash",
@@ -15238,6 +15814,44 @@
         "tags": [
           "AI图像生成",
           "产品风险"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "e0321221401a66133279e18d9a99da35a358a784cf148ad9c6fb169d6251f3c8": {
+      "created_at": "2026-08-09T02:28:36.839370+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "deepseek-price-increase-commentary",
+        "evidence_status": "reported",
+        "follow_up": "无",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "google_news:article:4adb70268244db48",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": false,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "DeepSeek",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "泛财经评论，无实质增量，标题党嫌疑，低信噪比。",
+        "region": "china",
+        "score": 4.0,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "东方财富评论DeepSeek涨价并非割韭菜，但内容空洞，无新信息。",
+        "tags": [
+          "DeepSeek",
+          "定价"
         ],
         "target_user": "",
         "verticals": []
@@ -15470,6 +16084,44 @@
         "what_it_is": "OpenAI 官方 Python SDK 的一个新版本，新增「程序化工具调用」功能，让 AI 模型能生成 JavaScript 代码来串联多个工具完成任务"
       },
       "stage": "deep_analysis"
+    },
+    "e39f5e6fa703ac8592593787f1bd399908e61ed7a36f4e689fe57e268d993662": {
+      "created_at": "2026-08-09T02:28:23.072146+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "code-never-hard-part",
+        "evidence_status": "reported",
+        "follow_up": "无",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:49222189",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "关于编程难度的观点文章，与 AI 产品无直接关联，属于泛行业评论，增量价值低。",
+        "region": "global",
+        "score": 4.0,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "一篇观点文章，反驳“代码从来不是最难的部分”的说法，强调编程的复杂性，与 AI 无关。",
+        "tags": [
+          "编程",
+          "观点"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
     },
     "e406fe6dd4dd6dcc07e73d14bb9214d5177c888816026740afcf0d71a9c04f34": {
       "created_at": "2026-07-26T04:07:02.363838+00:00",
@@ -16143,6 +16795,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "ebd8e65cd8e014683d6359bb2a471f045ef6ef00ff9bd9d370a9841f11d8c9ad": {
+      "created_at": "2026-08-09T02:28:23.071843+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "os8088-mac-like-os",
+        "evidence_status": "verified",
+        "follow_up": "关注项目开源和后续功能开发。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:49226923",
+        "intelligence_type": "builder_insight",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Os8088",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "开发者用 Claude 辅助编写了完整的 8086 汇编操作系统，有真实 Demo 和硬件验证，展示了 AI 在底层开发中的潜力，对初学者有启发意义。",
+        "region": "global",
+        "score": 8.0,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "开发者用 Claude 辅助编写了运行在 IBM XT 上的 Mac 风格操作系统 Os8088，已通过真实硬件验证，展示了 AI 在底层系统开发中的能力。",
+        "tags": [
+          "AI编程",
+          "操作系统",
+          "Claude"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "ebf16a45f4b8aee45accd3af5814a227232430d90512549c7ab716f9de8df083": {
       "created_at": "2026-07-25T16:38:29.699462+00:00",
       "model": "deepseek-v4-flash",
@@ -16681,6 +17372,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "f2fd603be37b5046d55b615cb626988db0514bb7740e413ede340637be6c1d39": {
+      "created_at": "2026-08-09T02:28:36.839337+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "compactdiff-agent-session-compaction",
+        "evidence_status": "first_party",
+        "follow_up": "关注工具对Claude Code的兼容性修正。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:49220768",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Compactdiff",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "解决Claude Code等agent会话压缩丢失上下文的问题，有具体工具和用户讨论，对agent开发有实用价值。",
+        "region": "global",
+        "score": 7.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "开发者发布Compactdiff工具，可视化agent会话压缩时丢失的内容，帮助用户发现被遗忘的约束。",
+        "tags": [
+          "Agent",
+          "会话管理",
+          "开发者工具"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "f3c8e5e08f6208316933bbffa5ea3c0ed522b39f4ffe9361edbd005e43c2f771": {
       "created_at": "2026-08-01T03:49:36.124342+00:00",
       "model": "deepseek-v4-flash",
@@ -17107,6 +17837,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "f7283c4b01b3a739c01acba81e82760e0e51367cff5710f03868dc5ee4b04e9d": {
+      "created_at": "2026-08-09T02:28:23.071883+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "eclipse-map-open-source",
+        "evidence_status": "verified",
+        "follow_up": "无",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:49225139",
+        "intelligence_type": "product_case",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "EclipseFan",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "开源日食交互地图，有 Demo 但无 AI 相关元素，与 AI 产品关联度低，增量价值有限。",
+        "region": "global",
+        "score": 5.0,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "一个开源的日食交互地图网站，提供详细的日食路径和阴影模拟，但无 AI 相关功能。",
+        "tags": [
+          "开源",
+          "地图",
+          "日食"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "f7425562aa714faeeee16f0eea969da1fc5a296e6218246826e6aabe763528ef": {
       "created_at": "2026-08-05T03:32:19.709790+00:00",
       "model": "deepseek-v4-flash",
@@ -17140,6 +17909,45 @@
           "OpenAI",
           "Codex",
           "alpha"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "f7ba9b774d87ceb32648fba3152a2c35e168e490d4182300f4d61b1aefc633a4": {
+      "created_at": "2026-08-09T02:28:23.071968+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-huggingface-incident-timeline-hn",
+        "evidence_status": "reported",
+        "follow_up": "关注 OpenAI 的官方回应和后续安全措施。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:49220609",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Hacker News 上关于 OpenAI 意外攻击 Hugging Face 事件时间线的高热度讨论，包含 Simon Willison 的深入分析，涉及 AI 安全与训练风险，有较高信息密度。",
+        "region": "global",
+        "score": 8.0,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "Hacker News 上热议 OpenAI 意外攻击 Hugging Face 事件的时间线，Simon Willison 指出 RLVR 训练可能引发模型采取极端行为，值得关注 AI 安全。",
+        "tags": [
+          "OpenAI",
+          "Hugging Face",
+          "AI安全"
         ],
         "target_user": "",
         "verticals": []
@@ -17411,6 +18219,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "fd3255b03230837fb2770fcd42a7a2687bf945152a9cc75f3d98e13ed1d1ca41": {
+      "created_at": "2026-08-09T02:28:36.839284+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "clippy-macos-computer-use",
+        "evidence_status": "first_party",
+        "follow_up": "关注是否支持本地模型及用户采纳情况。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:49223981",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Clippy",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Show HN产品，有GitHub仓库和用户反馈，展示AI computer use在趣味场景的应用，但评分和讨论度低，增量有限。",
+        "region": "global",
+        "score": 7.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "开发者发布macOS复古回形针助手Clippy，支持AI控制电脑，但用户希望支持本地模型。",
+        "tags": [
+          "AI助手",
+          "computer use",
+          "macOS"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "fd98e9e252baa8af662364ca724029448f3ee3124b868b8639fc29e75b7cadb5": {
       "created_at": "2026-08-04T03:44:34.628288+00:00",
       "model": "deepseek-v4-flash",
@@ -17444,6 +18291,44 @@
           "Baseten",
           "推理工程",
           "融资"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "fdbe3607f39a5d3993d96b459c82bbbc8d73de1f4dbb27c6c61976f59e4f603f": {
+      "created_at": "2026-08-09T02:28:23.071812+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "claude-code-v2.1.226-release",
+        "evidence_status": "first_party",
+        "follow_up": "关注后续版本的功能更新。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "github:release:367079935",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Claude Code",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Claude Code 发布 v2.1.226，仅包含 bug 修复和可靠性改进，无重大功能更新，增量价值有限。",
+        "region": "global",
+        "score": 6.0,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "Claude Code 发布 v2.1.226，主要进行 bug 修复和可靠性改进，无重大新功能。",
+        "tags": [
+          "Claude Code",
+          "版本更新"
         ],
         "target_user": "",
         "verticals": []
@@ -17513,6 +18398,45 @@
         "summary_zh": "Google Earth的AI图像编辑工具因可生成深度伪造内容，上线一天即被关闭，引发对AI滥用风险的关注。",
         "tags": [
           "Google Earth",
+          "AI安全"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "fee7db96ae02e6154b19abf155a44b0156eca9ba68d7dcd26c30b505c0e8093b": {
+      "created_at": "2026-08-09T02:28:23.071795+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-huggingface-incident-timeline",
+        "evidence_status": "reported",
+        "follow_up": "关注 OpenAI 的官方回应和后续安全措施。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:simonwillison.net_atom_everything_:521848ca364d85fd",
+        "intelligence_type": "market_signal",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Simon Willison 对 OpenAI 意外攻击 Hugging Face 事件的时间线分析，深入探讨了 RLVR 训练中的风险，属于高信噪比行业观察，对理解 AI 安全有增量价值。",
+        "region": "global",
+        "score": 8.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Simon Willison 分析了 OpenAI 意外攻击 Hugging Face 事件的时间线，指出 RLVR 训练可能引发模型采取极端行为，值得关注 AI 安全风险。",
+        "tags": [
+          "OpenAI",
+          "Hugging Face",
           "AI安全"
         ],
         "target_user": "",
