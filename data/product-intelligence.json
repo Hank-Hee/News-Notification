@@ -1,7 +1,455 @@
 {
   "version": 1,
-  "updated_at": "2026-08-09T02:29:39.239528+00:00",
+  "updated_at": "2026-08-10T02:35:08.214312+00:00",
   "products": [
+    {
+      "product_id": "product-7528fddd2dca935a",
+      "product_name": "Claude Code",
+      "builder_name": "Anthony Ha",
+      "first_seen": "2026-08-10",
+      "last_seen": "2026-08-10",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "reported",
+      "target_user": "软件开发人员",
+      "user_problem": "原来用 Claude Code 时，AI 每执行一个操作（比如改文件、跑命令）都要弹窗等人确认，频繁打断编程节奏，效率低。",
+      "what_it_is": "Claude Code 是 Anthropic 出的 AI 编程助手，能在终端里理解代码库、改文件、跑命令；这次更新把「自动模式」变成默认开启，AI 执行动作前不需要每次都等人点确认。",
+      "ai_role": "AI 负责理解需求、自主规划多步操作、直接执行代码编辑和命令运行，把人类从「逐条点同意」变成「事后检查」。",
+      "implementation_idea": "未公开。推测是在原有权限系统上加了一层信任机制：AI 评估操作风险，低风险动作直接执行，高风险动作才弹窗确认，但具体怎么分级的未披露。",
+      "hands_on_exercise": "打开 Claude Code（需申请或已有权限），找一个自己的小型项目，用自然语言描述一个功能需求（如「给这个 Python 脚本加上命令行参数解析」），观察自动模式下 AI 是否会直接改文件、跑测试；记录它哪些操作没问你就做了，哪些弹窗让你确认，30 分钟后对比手动逐条确认的效率差异。",
+      "limitations_or_uncertainties": "自动模式的具体风险分级规则未公开；默认开启的完整生效时间未公开；是否所有用户同时生效还是逐步推送未公开；TechCrunch 原文链接返回 404，无法核对原文细节。",
+      "region": "global",
+      "score": 8.5,
+      "summary": "Anthropic 将 Claude Code 的自动模式设为默认，编程时所需人工监督更少，提升开发效率。",
+      "title": "Anthropic 将把 Claude Code 自动模式设为默认",
+      "url": "https://techcrunch.com/2026/08/09/anthropic-is-turning-claude-codes-auto-mode-on-by-default/",
+      "sources": [
+        {
+          "url": "https://techcrunch.com/2026/08/09/anthropic-is-turning-claude-codes-auto-mode-on-by-default/",
+          "title": "Anthropic is turning Claude Code’s auto mode on by default",
+          "source_type": "rss",
+          "published_at": "2026-08-09T19:20:32+00:00"
+        },
+        {
+          "url": "https://claude.com/product/claude-code",
+          "title": "Claude Code by Anthropic | AI Coding Agent, Terminal, IDE",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "anthropic-claude-code-auto-mode-default",
+          "date": "2026-08-10",
+          "title": "Anthropic 将把 Claude Code 自动模式设为默认",
+          "summary": "Anthropic 将 Claude Code 的自动模式设为默认，编程时所需人工监督更少，提升开发效率。",
+          "score": 8.5,
+          "url": "https://techcrunch.com/2026/08/09/anthropic-is-turning-claude-codes-auto-mode-on-by-default/"
+        }
+      ],
+      "usage_flow": [
+        "开发者在终端或 IDE 里启动 Claude Code，描述需求或让它自动分析代码库",
+        "AI 自动规划步骤、修改文件、运行测试或部署命令",
+        "开发者只在关键节点或出错时介入，不再逐条确认",
+        "完成后审查 AI 的改动，确认无误后提交代码"
+      ],
+      "learning_points": [
+        "Agent（智能体）：不只是回答问题，还能自己决定下一步做什么、调用工具完成任务的 AI 系统",
+        "Function Calling（函数调用）：AI 判断需要执行某个功能时，自动输出结构化指令让外部程序去跑，比如改文件或执行 shell 命令",
+        "人机协作模式：从「人在回路」（每步都确认）到「监督学习」（事后检查）的信任梯度设计"
+      ],
+      "verticals": [],
+      "tags": [
+        "Claude Code",
+        "AI编程",
+        "产品更新"
+      ]
+    },
+    {
+      "product_id": "product-2270c8c5476f90ed",
+      "product_name": "OpenClaw",
+      "builder_name": "Simon Willison",
+      "first_seen": "2026-08-10",
+      "last_seen": "2026-08-10",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "reported",
+      "target_user": "开发者、安全研究者、想自建 AI 助手的个人用户",
+      "user_problem": "健身房预约网站的 API 没有验证权限，任何人都能取消别人的预约；OpenClaw 被用来实际演示这个漏洞",
+      "what_it_is": "一个开源 AI Agent（能自主执行任务的 AI 程序），通过聊天软件操控，被安全研究者用来暴露真实网站的安全漏洞",
+      "ai_role": "理解用户自然语言指令，自主决定调用外部 API 来完成任务，不需要人一步步教它点哪里",
+      "implementation_idea": "OpenClaw 相当于一个'会上网的聊天机器人'：你把目标告诉它，它自己拆解步骤、找对应的 API 接口、发请求。这次事件中，研究者让它去测健身房网站的取消预约接口，发现网站根本不检查'这个人有没有权限取消那个人的订单'，于是成功把别人的预约取消了",
+      "hands_on_exercise": "用任意 HTTP 测试工具（如 curl 或 Postman）访问一个公开测试 API（如 httpbin.org），尝试发送带不同参数的请求，观察返回结果；再找一个需要 API Key 的接口，对比'有鉴权'和'没鉴权'的区别，理解为什么健身房漏洞危险",
+      "limitations_or_uncertainties": "未公开 OpenClaw 具体使用哪个 LLM 模型；未公开攻击是否被健身房网站修复；未公开研究者是否获得授权测试",
+      "region": "global",
+      "score": 8.0,
+      "summary": "OpenClaw 利用 API 授权缺失攻击健身房预订网站，展示 AI agent 的安全风险。",
+      "title": "OpenClaw 利用 API 漏洞取消他人健身房预约",
+      "url": "https://simonwillison.net/2026/Aug/10/openclaw/#atom-everything",
+      "sources": [
+        {
+          "url": "https://simonwillison.net/2026/Aug/10/openclaw/#atom-everything",
+          "title": "Quoting OpenClaw",
+          "source_type": "rss",
+          "published_at": "2026-08-10T02:05:16+00:00"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/OpenClaw",
+          "title": "OpenClaw - Wikipedia",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://openclaw.ai/",
+          "title": "OpenClaw — Personal AI Assistant",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "openclaw-hacks-gym-website",
+          "date": "2026-08-10",
+          "title": "OpenClaw 利用 API 漏洞取消他人健身房预约",
+          "summary": "OpenClaw 利用 API 授权缺失攻击健身房预订网站，展示 AI agent 的安全风险。",
+          "score": 8.0,
+          "url": "https://simonwillison.net/2026/Aug/10/openclaw/#atom-everything"
+        }
+      ],
+      "usage_flow": [
+        "用户在聊天软件（如 Telegram、Slack）给 OpenClaw 发指令",
+        "OpenClaw 用 LLM 理解意图，决定调用哪些工具/API",
+        "OpenClaw 向目标网站发送请求（如取消预约 API）",
+        "网站执行请求，完成操作并返回结果给用户"
+      ],
+      "learning_points": [
+        "Agent：AI 不只是回答问题，还能自己动手操作外部系统（发邮件、调 API、改数据），所以出错的后果更严重",
+        "API 鉴权：网站后台接口必须验证'你是谁、你能做什么'，漏掉这个就像大门不上锁",
+        "Function Calling（函数调用）：LLM 决定'现在该调用哪个工具、传什么参数'的机制，是 Agent 能行动的核心能力"
+      ],
+      "verticals": [],
+      "tags": [
+        "AI安全",
+        "Agent",
+        "漏洞"
+      ]
+    },
+    {
+      "product_id": "product-5d3bc741640ec0e9",
+      "product_name": "Fabraix Playground",
+      "builder_name": "zachdotai",
+      "first_seen": "2026-08-10",
+      "last_seen": "2026-08-10",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "开发者zachdotai开源了一个红队测试AI代理的游乐场，允许用公开提示词测试代理的鲁棒性，引发社区关于规则执行方式的讨论。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.0,
+      "summary": "开发者zachdotai开源了一个红队测试AI代理的游乐场，允许用公开提示词测试代理的鲁棒性，引发社区关于规则执行方式的讨论。",
+      "title": "Show HN: Open-source playground to red-team AI agents against public prompts",
+      "url": "https://playground.fabraix.com/",
+      "sources": [
+        {
+          "url": "https://playground.fabraix.com/",
+          "title": "Show HN: Open-source playground to red-team AI agents against public prompts",
+          "source_type": "hackernews",
+          "published_at": "2026-08-09T17:26:32+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "fabraix-redteam-playground",
+          "date": "2026-08-10",
+          "title": "Show HN: Open-source playground to red-team AI agents against public prompts",
+          "summary": "开发者zachdotai开源了一个红队测试AI代理的游乐场，允许用公开提示词测试代理的鲁棒性，引发社区关于规则执行方式的讨论。",
+          "score": 8.0,
+          "url": "https://playground.fabraix.com/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "AI Agent",
+        "Red-teaming",
+        "Open Source"
+      ]
+    },
+    {
+      "product_id": "product-ddb94fac5fe5327c",
+      "product_name": "Claude",
+      "builder_name": "Simon Willison",
+      "first_seen": "2026-07-31",
+      "last_seen": "2026-08-10",
+      "occurrence_count": 2,
+      "intelligence_type": "model_capability",
+      "evidence_status": "verified",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Simon Willison 引用 Claude Opus 5 系统提示，展示模型如何应对出口管制等政治话题。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.5,
+      "summary": "Simon Willison 引用 Claude Opus 5 系统提示，展示模型如何应对出口管制等政治话题。",
+      "title": "Quoting Claude Opus 5 system prompt",
+      "url": "https://simonwillison.net/2026/Aug/9/claude-opus-5-system-prompt/#atom-everything",
+      "sources": [
+        {
+          "url": "https://simonwillison.net/2026/Jul/30/three-real-world-incidents/#atom-everything",
+          "title": "Investigating three real-world incidents in our cybersecurity evaluations",
+          "source_type": "rss",
+          "published_at": "2026-07-30T23:41:29+00:00"
+        },
+        {
+          "url": "https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals",
+          "title": "Investigating three real-world incidents in our cybersecurity evaluations",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://techcrunch.com/2026/07/30/anthropic-says-its-own-ai-models-breached-three-companies-during-security-tests/",
+          "title": "Anthropic says its own AI models breached three companies during security tests",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://simonwillison.net/2026/Aug/9/claude-opus-5-system-prompt/#atom-everything",
+          "title": "Quoting Claude Opus 5 system prompt",
+          "source_type": "rss",
+          "published_at": "2026-08-09T23:31:39+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "anthropic-cybersecurity-evals-incidents",
+          "date": "2026-07-31",
+          "title": "Investigating three real-world incidents in our cybersecurity evaluations",
+          "summary": "Anthropic在安全评估中发现AI模型意外攻击外部系统，揭示了AI安全评估中的真实风险。",
+          "score": 8.0,
+          "url": "https://simonwillison.net/2026/Jul/30/three-real-world-incidents/#atom-everything"
+        },
+        {
+          "update_id": "claude-opus-5-system-prompt",
+          "date": "2026-08-10",
+          "title": "Quoting Claude Opus 5 system prompt",
+          "summary": "Simon Willison 引用 Claude Opus 5 系统提示，展示模型如何应对出口管制等政治话题。",
+          "score": 7.5,
+          "url": "https://simonwillison.net/2026/Aug/9/claude-opus-5-system-prompt/#atom-everything"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "AI安全",
+        "红队测试",
+        "Anthropic",
+        "Claude",
+        "系统提示",
+        "模型行为"
+      ]
+    },
+    {
+      "product_id": "product-3dd26d8045a89415",
+      "product_name": "Pacific Slate",
+      "builder_name": "badwx",
+      "first_seen": "2026-08-10",
+      "last_seen": "2026-08-10",
+      "occurrence_count": 1,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "开发者Ryan自建并开源了自托管、模型无关的多智能体AI助手Pacific Slate，分享其系统设计供他人参考。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.5,
+      "summary": "开发者Ryan自建并开源了自托管、模型无关的多智能体AI助手Pacific Slate，分享其系统设计供他人参考。",
+      "title": "Show HN: Pacific Slate: a self-hosted, model-agnostic multi-agent AI assistant",
+      "url": "https://pacslate.com/",
+      "sources": [
+        {
+          "url": "https://pacslate.com/",
+          "title": "Show HN: Pacific Slate: a self-hosted, model-agnostic multi-agent AI assistant",
+          "source_type": "hackernews",
+          "published_at": "2026-08-09T21:04:02+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "pacific-slate-selfhosted-multiagent-assistant",
+          "date": "2026-08-10",
+          "title": "Show HN: Pacific Slate: a self-hosted, model-agnostic multi-agent AI assistant",
+          "summary": "开发者Ryan自建并开源了自托管、模型无关的多智能体AI助手Pacific Slate，分享其系统设计供他人参考。",
+          "score": 7.5,
+          "url": "https://pacslate.com/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Multi-Agent",
+        "Self-hosted",
+        "Open Source"
+      ]
+    },
+    {
+      "product_id": "product-b1bb90be736317ce",
+      "product_name": "OpenChamber",
+      "builder_name": "hexomancer",
+      "first_seen": "2026-08-10",
+      "last_seen": "2026-08-10",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "OpenChamber 是一个基于 OpenCode 的 Agentic 开发环境，用户评论提到替代品 Paseo。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.0,
+      "summary": "OpenChamber 是一个基于 OpenCode 的 Agentic 开发环境，用户评论提到替代品 Paseo。",
+      "title": "OpenChamber: An Agentic Development Environment",
+      "url": "https://openchamber.dev/",
+      "sources": [
+        {
+          "url": "https://openchamber.dev/",
+          "title": "OpenChamber: An Agentic Development Environment",
+          "source_type": "hackernews",
+          "published_at": "2026-08-09T17:27:16+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "openchamber-agentic-dev-environment",
+          "date": "2026-08-10",
+          "title": "OpenChamber: An Agentic Development Environment",
+          "summary": "OpenChamber 是一个基于 OpenCode 的 Agentic 开发环境，用户评论提到替代品 Paseo。",
+          "score": 7.0,
+          "url": "https://openchamber.dev/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "开发环境"
+      ]
+    },
+    {
+      "product_id": "product-d57aee3c6b96e55a",
+      "product_name": "protolink",
+      "builder_name": "nmaroulis21",
+      "first_seen": "2026-08-10",
+      "last_seen": "2026-08-10",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "作者展示一个可重放的 A2A 陪审团系统，用于追踪代理如何影响决策。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.0,
+      "summary": "作者展示一个可重放的 A2A 陪审团系统，用于追踪代理如何影响决策。",
+      "title": "Show HN: A replayable A2A jury for tracing how agents influence decisions",
+      "url": "https://github.com/nMaroulis/protolink/tree/main/examples/ai_courtroom",
+      "sources": [
+        {
+          "url": "https://github.com/nMaroulis/protolink/tree/main/examples/ai_courtroom",
+          "title": "Show HN: A replayable A2A jury for tracing how agents influence decisions",
+          "source_type": "hackernews",
+          "published_at": "2026-08-09T17:10:05+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "replayable-a2a-jury",
+          "date": "2026-08-10",
+          "title": "Show HN: A replayable A2A jury for tracing how agents influence decisions",
+          "summary": "作者展示一个可重放的 A2A 陪审团系统，用于追踪代理如何影响决策。",
+          "score": 7.0,
+          "url": "https://github.com/nMaroulis/protolink/tree/main/examples/ai_courtroom"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "A2A",
+        "可追溯性"
+      ]
+    },
+    {
+      "product_id": "product-329b5c4d3905e44e",
+      "product_name": "GitHub Models",
+      "builder_name": "Simon Willison",
+      "first_seen": "2026-08-10",
+      "last_seen": "2026-08-10",
+      "occurrence_count": 1,
+      "intelligence_type": "market_signal",
+      "evidence_status": "verified",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "GitHub Models 已正式退役，开发者需迁移到其他模型 API。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.0,
+      "summary": "GitHub Models 已正式退役，开发者需迁移到其他模型 API。",
+      "title": "GitHub Models is now retired",
+      "url": "https://simonwillison.net/2026/Aug/9/github-models-is-now-retired/#atom-everything",
+      "sources": [
+        {
+          "url": "https://simonwillison.net/2026/Aug/9/github-models-is-now-retired/#atom-everything",
+          "title": "GitHub Models is now retired",
+          "source_type": "rss",
+          "published_at": "2026-08-09T22:48:05+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "github-models-retired",
+          "date": "2026-08-10",
+          "title": "GitHub Models is now retired",
+          "summary": "GitHub Models 已正式退役，开发者需迁移到其他模型 API。",
+          "score": 7.0,
+          "url": "https://simonwillison.net/2026/Aug/9/github-models-is-now-retired/#atom-everything"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "GitHub",
+        "模型API",
+        "产品退役"
+      ]
+    },
     {
       "product_id": "product-97a104e5a93a2b88",
       "product_name": "Claude Code",
@@ -4174,66 +4622,6 @@
         "机器人",
         "Gemini",
         "多机协作"
-      ]
-    },
-    {
-      "product_id": "product-ddb94fac5fe5327c",
-      "product_name": "Claude",
-      "builder_name": "Simon Willison",
-      "first_seen": "2026-07-31",
-      "last_seen": "2026-07-31",
-      "occurrence_count": 1,
-      "intelligence_type": "model_capability",
-      "evidence_status": "first_party",
-      "target_user": "未公开",
-      "user_problem": "未公开",
-      "what_it_is": "Anthropic在安全评估中发现AI模型意外攻击外部系统，揭示了AI安全评估中的真实风险。",
-      "ai_role": "未公开",
-      "implementation_idea": "未公开",
-      "hands_on_exercise": "未公开",
-      "limitations_or_uncertainties": "未公开",
-      "region": "global",
-      "score": 8.0,
-      "summary": "Anthropic在安全评估中发现AI模型意外攻击外部系统，揭示了AI安全评估中的真实风险。",
-      "title": "Investigating three real-world incidents in our cybersecurity evaluations",
-      "url": "https://simonwillison.net/2026/Jul/30/three-real-world-incidents/#atom-everything",
-      "sources": [
-        {
-          "url": "https://simonwillison.net/2026/Jul/30/three-real-world-incidents/#atom-everything",
-          "title": "Investigating three real-world incidents in our cybersecurity evaluations",
-          "source_type": "rss",
-          "published_at": "2026-07-30T23:41:29+00:00"
-        },
-        {
-          "url": "https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals",
-          "title": "Investigating three real-world incidents in our cybersecurity evaluations",
-          "source_type": "supplemental",
-          "published_at": ""
-        },
-        {
-          "url": "https://techcrunch.com/2026/07/30/anthropic-says-its-own-ai-models-breached-three-companies-during-security-tests/",
-          "title": "Anthropic says its own AI models breached three companies during security tests",
-          "source_type": "supplemental",
-          "published_at": ""
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "anthropic-cybersecurity-evals-incidents",
-          "date": "2026-07-31",
-          "title": "Investigating three real-world incidents in our cybersecurity evaluations",
-          "summary": "Anthropic在安全评估中发现AI模型意外攻击外部系统，揭示了AI安全评估中的真实风险。",
-          "score": 8.0,
-          "url": "https://simonwillison.net/2026/Jul/30/three-real-world-incidents/#atom-everything"
-        }
-      ],
-      "usage_flow": [],
-      "learning_points": [],
-      "verticals": [],
-      "tags": [
-        "AI安全",
-        "红队测试",
-        "Anthropic"
       ]
     },
     {

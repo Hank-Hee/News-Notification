@@ -418,6 +418,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "05c98f5b6af910a3c2038f118468db3785e06c1793136462845746ea4b28fdc4": {
+      "created_at": "2026-08-10T02:34:30.029291+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "deepseek-price-increase-stock-impact",
+        "evidence_status": "reported",
+        "follow_up": "关注DeepSeek官方提价公告及产业链动态。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "google_news:article:572db4de6926dddb",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "DeepSeek",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "券商对DeepSeek提价的股市影响分析，属于泛行业评论，无产品增量，且来源为低质量聚合。",
+        "region": "china",
+        "score": 5.0,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "中信建投分析DeepSeek拟提价对国产大模型及算力产业链的影响。",
+        "tags": [
+          "DeepSeek",
+          "Stock Market",
+          "Analysis"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "06094be9aeb2f2c18be449805dce234259d2ee5ac327fb417ace5d538ac9d817": {
       "created_at": "2026-07-26T04:06:44.242690+00:00",
       "model": "deepseek-v4-flash",
@@ -1702,6 +1741,45 @@
         "tags": [
           "Agent",
           "Claude"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "17e628f8d6f51317bc00b49074df5b2ace354e5f78d478f1028001768a6d9f65": {
+      "created_at": "2026-08-10T02:34:06.038525+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "vercel-ai-sdk-vercel-3.0.28",
+        "evidence_status": "verified",
+        "follow_up": "无",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "github:release:367547228",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Vercel AI SDK",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "常规依赖更新，无实质功能变化，对初学者增量低。",
+        "region": "global",
+        "score": 6.0,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "Vercel AI SDK 的 @ai-sdk/vercel 发布 3.0.28 补丁，更新依赖。",
+        "tags": [
+          "Vercel",
+          "SDK",
+          "更新"
         ],
         "target_user": "",
         "verticals": []
@@ -3290,6 +3368,80 @@
       },
       "stage": "candidate_analysis"
     },
+    "32ac6ec4f963e858bc0267967dfaf0a74082d691aadbaa3b3020a183fd493f07": {
+      "created_at": "2026-08-10T02:34:06.038540+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "vercel-ai-sdk-togetherai-3.0.29",
+        "evidence_status": "verified",
+        "follow_up": "无",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "github:release:367547215",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Vercel AI SDK",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "常规依赖更新，无实质功能变化，对初学者增量低。",
+        "region": "global",
+        "score": 6.0,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "Vercel AI SDK 的 @ai-sdk/togetherai 发布 3.0.29 补丁，更新依赖。",
+        "tags": [
+          "Vercel",
+          "SDK",
+          "更新"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "3413b1e294e6a5df42f5722b32856f71c3dfe2cabad7cc3727f156e2ecf1b1f9": {
+      "created_at": "2026-08-10T02:35:08.177852+00:00",
+      "model": "kimi-k2.6",
+      "prompt_version": "deep-v3-beginner",
+      "result": {
+        "ai_role": "理解用户自然语言指令，自主决定调用外部 API 来完成任务，不需要人一步步教它点哪里",
+        "evidence_status": "reported",
+        "hands_on_exercise": "用任意 HTTP 测试工具（如 curl 或 Postman）访问一个公开测试 API（如 httpbin.org），尝试发送带不同参数的请求，观察返回结果；再找一个需要 API Key 的接口，对比'有鉴权'和'没鉴权'的区别，理解为什么健身房漏洞危险",
+        "implementation_idea": "OpenClaw 相当于一个'会上网的聊天机器人'：你把目标告诉它，它自己拆解步骤、找对应的 API 接口、发请求。这次事件中，研究者让它去测健身房网站的取消预约接口，发现网站根本不检查'这个人有没有权限取消那个人的订单'，于是成功把别人的预约取消了",
+        "learning_points": [
+          "Agent：AI 不只是回答问题，还能自己动手操作外部系统（发邮件、调 API、改数据），所以出错的后果更严重",
+          "API 鉴权：网站后台接口必须验证'你是谁、你能做什么'，漏掉这个就像大门不上锁",
+          "Function Calling（函数调用）：LLM 决定'现在该调用哪个工具、传什么参数'的机制，是 Agent 能行动的核心能力"
+        ],
+        "limitations_or_uncertainties": "未公开 OpenClaw 具体使用哪个 LLM 模型；未公开攻击是否被健身房网站修复；未公开研究者是否获得授权测试",
+        "product_name": "OpenClaw",
+        "sources": [
+          "https://simonwillison.net/2026/Aug/10/openclaw/#atom-everything",
+          "https://www.abc.net.au/news/2026-08-10/ai-assistant-hacks-gym-website-aus-cyber-attack/107007986",
+          "https://en.wikipedia.org/wiki/OpenClaw",
+          "https://openclaw.ai/"
+        ],
+        "target_users": "开发者、安全研究者、想自建 AI 助手的个人用户",
+        "title_zh": "OpenClaw 利用 API 漏洞取消他人健身房预约",
+        "usage_flow": [
+          "用户在聊天软件（如 Telegram、Slack）给 OpenClaw 发指令",
+          "OpenClaw 用 LLM 理解意图，决定调用哪些工具/API",
+          "OpenClaw 向目标网站发送请求（如取消预约 API）",
+          "网站执行请求，完成操作并返回结果给用户"
+        ],
+        "user_problem": "健身房预约网站的 API 没有验证权限，任何人都能取消别人的预约；OpenClaw 被用来实际演示这个漏洞",
+        "what_it_is": "一个开源 AI Agent（能自主执行任务的 AI 程序），通过聊天软件操控，被安全研究者用来暴露真实网站的安全漏洞"
+      },
+      "stage": "deep_analysis"
+    },
     "347209b372cf26b4ac05a3a9b0e8a77295133b39c7cd0f358eaed13556ae5588": {
       "created_at": "2026-08-03T03:54:11.107459+00:00",
       "model": "deepseek-v4-flash",
@@ -3996,6 +4148,45 @@
         "tags": [
           "Programming",
           "Data-Oriented Design"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "3f9b8c6013f86f080ca401742951b24ed92c426f50980345dd39907bdfe732f8": {
+      "created_at": "2026-08-10T02:34:21.217804+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "mea-culpa-dark-hours",
+        "evidence_status": "reported",
+        "follow_up": "关注后续苹果审核政策变化。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:49231154",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "涉及AI抄袭争议，但缺乏产品构建细节，且评论多为负面，对产品经理参考价值低。",
+        "region": "global",
+        "score": 4.0,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "开发者承认其 AI 生成的占星应用抄袭了开源项目 Dark Hours，引发争议。",
+        "tags": [
+          "AI",
+          "抄袭",
+          "争议"
         ],
         "target_user": "",
         "verticals": []
@@ -5335,6 +5526,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "5024ecbf42230a57ab5949b6f8a99a830e5fc1ddf43aaab234ee301763bd771c": {
+      "created_at": "2026-08-10T02:34:21.217894+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "ask-hn-what-are-you-working-on-2026-08",
+        "evidence_status": "reported",
+        "follow_up": "关注其中提到的具体项目后续进展。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:49233423",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "HN月度分享帖，包含多个AI项目，但信息碎片化，缺乏深度，仅部分项目有具体描述。",
+        "region": "global",
+        "score": 6.0,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "HN 用户分享正在构建的项目，包括木工模拟器、多语言库等，但多为早期想法。",
+        "tags": [
+          "HN",
+          "项目",
+          "社区"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "503948dbcfc1bd4be9ab520b92cbda10029594291a9152c7a672d48c902120d6": {
       "created_at": "2026-07-27T04:14:53.894185+00:00",
       "model": "deepseek-v4-flash",
@@ -5562,6 +5792,39 @@
       },
       "stage": "candidate_analysis"
     },
+    "54748c7fdc13cf9096821518faf1c304fa71dee433b58f53c217455a591e281a": {
+      "created_at": "2026-08-10T02:34:50.398360+00:00",
+      "model": "kimi-k2.6",
+      "prompt_version": "deep-v3-beginner",
+      "result": {
+        "ai_role": "AI 负责理解需求、自主规划多步操作、直接执行代码编辑和命令运行，把人类从「逐条点同意」变成「事后检查」。",
+        "evidence_status": "reported",
+        "hands_on_exercise": "打开 Claude Code（需申请或已有权限），找一个自己的小型项目，用自然语言描述一个功能需求（如「给这个 Python 脚本加上命令行参数解析」），观察自动模式下 AI 是否会直接改文件、跑测试；记录它哪些操作没问你就做了，哪些弹窗让你确认，30 分钟后对比手动逐条确认的效率差异。",
+        "implementation_idea": "未公开。推测是在原有权限系统上加了一层信任机制：AI 评估操作风险，低风险动作直接执行，高风险动作才弹窗确认，但具体怎么分级的未披露。",
+        "learning_points": [
+          "Agent（智能体）：不只是回答问题，还能自己决定下一步做什么、调用工具完成任务的 AI 系统",
+          "Function Calling（函数调用）：AI 判断需要执行某个功能时，自动输出结构化指令让外部程序去跑，比如改文件或执行 shell 命令",
+          "人机协作模式：从「人在回路」（每步都确认）到「监督学习」（事后检查）的信任梯度设计"
+        ],
+        "limitations_or_uncertainties": "自动模式的具体风险分级规则未公开；默认开启的完整生效时间未公开；是否所有用户同时生效还是逐步推送未公开；TechCrunch 原文链接返回 404，无法核对原文细节。",
+        "product_name": "Claude Code",
+        "sources": [
+          "https://techcrunch.com/2026/08/09/anthropic-is-turning-claude-codes-auto-mode-on-by-default/",
+          "https://claude.com/product/claude-code"
+        ],
+        "target_users": "软件开发人员",
+        "title_zh": "Anthropic 将把 Claude Code 自动模式设为默认",
+        "usage_flow": [
+          "开发者在终端或 IDE 里启动 Claude Code，描述需求或让它自动分析代码库",
+          "AI 自动规划步骤、修改文件、运行测试或部署命令",
+          "开发者只在关键节点或出错时介入，不再逐条确认",
+          "完成后审查 AI 的改动，确认无误后提交代码"
+        ],
+        "user_problem": "原来用 Claude Code 时，AI 每执行一个操作（比如改文件、跑命令）都要弹窗等人确认，频繁打断编程节奏，效率低。",
+        "what_it_is": "Claude Code 是 Anthropic 出的 AI 编程助手，能在终端里理解代码库、改文件、跑命令；这次更新把「自动模式」变成默认开启，AI 执行动作前不需要每次都等人点确认。"
+      },
+      "stage": "deep_analysis"
+    },
     "547b38b05138e48cdb8d3e861ebbcce36cd84323203cc5ca41706c21f2355a86": {
       "created_at": "2026-08-01T03:49:36.124529+00:00",
       "model": "deepseek-v4-flash",
@@ -5710,6 +5973,45 @@
         "tags": [
           "AI安全",
           "行业联盟"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "5695567f536dd73d7114d8e6423dfbd9cb5f137840f3cff75d595b62b3ce242c": {
+      "created_at": "2026-08-10T02:34:21.217749+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "how-i-use-llms-to-learn",
+        "evidence_status": "reported",
+        "follow_up": "关注作者是否提供更多具体提示词或工具。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:49234675",
+        "intelligence_type": "builder_insight",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "作者分享用LLM学习复杂主题的具体方法，有实践细节和用户反馈，对初学者有参考价值，但非产品案例。",
+        "region": "global",
+        "score": 7.5,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "作者分享如何用 LLM 学习复杂主题，包括生成可视化动画等方法，但用户反馈指出 LLM 输出可能不准确。",
+        "tags": [
+          "LLM",
+          "学习",
+          "方法论"
         ],
         "target_user": "",
         "verticals": []
@@ -6127,6 +6429,44 @@
           "Agent",
           "Windows",
           "Perplexity"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "5b2c54736a70b3564d07f168375c05a161d8cc7d34ba7d5b508eceefbfd6e041": {
+      "created_at": "2026-08-10T02:34:30.029262+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "sonnet-5.5-leak-rumor",
+        "evidence_status": "early_signal",
+        "follow_up": "等待官方发布或可靠证据。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "google_news:article:4335537566a0490f",
+        "intelligence_type": "early_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": true,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "标题党式泄露传闻，无实质证据，来源为低质量转载，属于噪音。",
+        "region": "china",
+        "score": 4.0,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "凤凰网科技报道Sonnet 5.5泄露传闻，称其对标DeepSeek，但无官方确认。",
+        "tags": [
+          "Anthropic",
+          "Rumor"
         ],
         "target_user": "",
         "verticals": []
@@ -7209,6 +7549,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "675634b8944337df79dc7c1a6a679566e17433fd26f5294eda67f193dd8191ff": {
+      "created_at": "2026-08-10T02:34:21.218017+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "tragedy-of-commons-ai",
+        "evidence_status": "reported",
+        "follow_up": "关注 AI 在法律领域的实际应用案例。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:49235011",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "经济学人文章讨论AI法律滥用，但缺乏具体产品案例，评论有见解但整体泛泛。",
+        "region": "global",
+        "score": 5.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "经济学人文章讨论 AI 导致法律系统被滥用，评论指出 AI 可能降低法律门槛。",
+        "tags": [
+          "AI",
+          "法律",
+          "社会"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "67fb267ca5c8002cfbdf96cbdaf1fa66a2317fff85530a668c5a7d39b79b0cb8": {
       "created_at": "2026-08-09T02:28:40.976991+00:00",
       "model": "deepseek-v4-flash",
@@ -7280,6 +7659,45 @@
         "summary_zh": "Latent Space 的 AI 新闻汇总，提到 DeepSeek V4 Flash 0731 发布，但无更多细节。",
         "tags": [
           "新闻汇总"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "6907bc0af5342fb7c036d497871ea02c0e2e2e1019c4aebc50c6657c914f7556": {
+      "created_at": "2026-08-10T02:34:06.038374+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "github-models-retired",
+        "evidence_status": "verified",
+        "follow_up": "关注替代方案和迁移指南。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:simonwillison.net_atom_everything_:5e6d7871f3c46c13",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "GitHub Models",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "GitHub Models 正式退役，影响依赖其 API 的开发者，属于产品生命周期事件，有实际影响。",
+        "region": "global",
+        "score": 7.0,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "GitHub Models 已正式退役，开发者需迁移到其他模型 API。",
+        "tags": [
+          "GitHub",
+          "模型API",
+          "产品退役"
         ],
         "target_user": "",
         "verticals": []
@@ -7468,6 +7886,45 @@
         "what_it_is": "OpenAI 下周起取消 ChatGPT 免费版和 Go 版的文本对话次数上限，并新增思考按钮处理复杂问题"
       },
       "stage": "deep_analysis"
+    },
+    "6bcf312e37d1bf9bd847248aa6c7b1f5d9506cc852d953c6e7e9725a358baba5": {
+      "created_at": "2026-08-10T02:34:21.218170+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "john-c-lilly-solid-state-intelligence",
+        "evidence_status": "reported",
+        "follow_up": "无",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:49231397",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "1978年文章，与当前AI产品无关，纯历史哲学讨论。",
+        "region": "global",
+        "score": 2.0,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "文章讨论 John C. Lilly 关于固态智能和人类消除的观点，评论涉及科幻和哲学。",
+        "tags": [
+          "AI",
+          "哲学",
+          "历史"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
     },
     "6c042d4726ed52668dfdbbbe10dd14bb8b885a825ba8e22836cfadda6b717fa4": {
       "created_at": "2026-07-26T04:06:44.242813+00:00",
@@ -7767,6 +8224,44 @@
           "v0",
           "API",
           "AI应用生成"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "7111048d0b784a36e69ad98cd5c82bbff864ea7e40da55fa5400babe557273bd": {
+      "created_at": "2026-08-10T02:34:21.218125+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "openchamber-agentic-dev-environment",
+        "evidence_status": "reported",
+        "follow_up": "关注 OpenChamber 与 OpenCode 的差异化功能。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:49233448",
+        "intelligence_type": "product_case",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "OpenChamber",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "展示Agentic开发环境，有用户评论和替代品对比，但产品本身是OpenCode的封装，增量有限。",
+        "region": "global",
+        "score": 7.0,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "OpenChamber 是一个基于 OpenCode 的 Agentic 开发环境，用户评论提到替代品 Paseo。",
+        "tags": [
+          "Agent",
+          "开发环境"
         ],
         "target_user": "",
         "verticals": []
@@ -8074,6 +8569,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "7315b25d7319100d73c5c50552d466deadcb60e1472376edcae372449fbaefdd": {
+      "created_at": "2026-08-10T02:34:21.217966+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "taxi-drivers-alzheimers",
+        "evidence_status": "reported",
+        "follow_up": "无",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:49232253",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "与AI无关，纯健康话题，不符合兴趣优先级。",
+        "region": "global",
+        "score": 2.0,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "文章讨论出租车司机较少死于阿尔茨海默症，但评论指出可能与寿命差异有关。",
+        "tags": [
+          "健康",
+          "阿尔茨海默"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "7354ec0298c3390726c1df55c91e715e5aadd6a28883ba87fbbc97d9c358c19b": {
       "created_at": "2026-08-02T03:52:15.980573+00:00",
       "model": "deepseek-v4-flash",
@@ -8223,6 +8756,45 @@
           "ARC-AGI",
           "Claude Opus 5",
           "Benchmark"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "74f25fa8081ae32fd4a775e9720294ca2b2e50cf6d09a3c7ef8fc6e5dc70f906": {
+      "created_at": "2026-08-10T02:34:30.029197+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "fabraix-redteam-playground",
+        "evidence_status": "first_party",
+        "follow_up": "关注平台是否被公司用于代理发布前的安全测试。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:49233442",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Fabraix Playground",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "开源AI代理红队测试平台，有可访问的Demo和社区讨论，涉及安全测试的实际问题，对构建AI代理的开发者有明确参考价值。",
+        "region": "global",
+        "score": 8.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "开发者zachdotai开源了一个红队测试AI代理的游乐场，允许用公开提示词测试代理的鲁棒性，引发社区关于规则执行方式的讨论。",
+        "tags": [
+          "AI Agent",
+          "Red-teaming",
+          "Open Source"
         ],
         "target_user": "",
         "verticals": []
@@ -9280,6 +9852,45 @@
           "OpenAI",
           "Codex",
           "Agent"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "81b49269a5ddbe4fd91c669677822bc4708aade184984cd7f1add8921060435e": {
+      "created_at": "2026-08-10T02:34:06.038274+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "openclaw-hacks-gym-website",
+        "evidence_status": "verified",
+        "follow_up": "关注该漏洞是否被修复及类似 API 安全问题。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:simonwillison.net_atom_everything_:328ec720754b1473",
+        "intelligence_type": "product_case",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "OpenClaw",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenClaw 实际攻击健身房网站，展示 AI agent 的安全漏洞，有具体案例和引用，对理解 AI 安全风险有高价值。",
+        "region": "global",
+        "score": 8.0,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "OpenClaw 利用 API 授权缺失攻击健身房预订网站，展示 AI agent 的安全风险。",
+        "tags": [
+          "AI安全",
+          "Agent",
+          "漏洞"
         ],
         "target_user": "",
         "verticals": []
@@ -11423,6 +12034,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "9ce5053cbc05558e79e09564c730a08d59c01bf2694aab3759372053f4787bc0": {
+      "created_at": "2026-08-10T02:34:06.038330+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "claude-opus-5-system-prompt",
+        "evidence_status": "verified",
+        "follow_up": "关注 Claude Opus 5 的更多系统提示细节。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:simonwillison.net_atom_everything_:d2a5f0864ab37741",
+        "intelligence_type": "model_capability",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Claude",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "引用 Claude Opus 5 系统提示，涉及模型对出口管制的处理，展示模型能力细节，对理解模型行为有增量。",
+        "region": "global",
+        "score": 7.5,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "Simon Willison 引用 Claude Opus 5 系统提示，展示模型如何应对出口管制等政治话题。",
+        "tags": [
+          "Claude",
+          "系统提示",
+          "模型行为"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "9d16dde1e40ad15493269bbeaf7f19cb7d0c2b544e37bd35142273199d27ce4f": {
       "created_at": "2026-08-04T03:45:21.753280+00:00",
       "model": "deepseek-v4-flash",
@@ -11571,6 +12221,44 @@
           "AI SDK",
           "Vercel",
           "Claude"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "9f74aa6aaf2f194b40d6a419074d2e7649dd0eaa0e27dcb143930d302a70323d": {
+      "created_at": "2026-08-10T02:34:21.217624+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "vercel-ai-openai-compatible-patch-3.0.28",
+        "evidence_status": "first_party",
+        "follow_up": "观察该修复是否影响相关模型在应用中的计费或显示。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "github:release:367547206",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Vercel AI SDK",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "官方补丁修复，解决特定推理模型token统计问题，但属于底层细节，对产品体验影响有限，且无用户反馈。",
+        "region": "global",
+        "score": 5.5,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "Vercel AI SDK 发布补丁，修复推理模型 token 统计可能为负的问题。",
+        "tags": [
+          "AI SDK",
+          "bugfix"
         ],
         "target_user": "",
         "verticals": []
@@ -12705,6 +13393,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "af037768b9e4c175153acffc0122b1fb7c3190e859cb2f8e4c7648bb2336e1d7": {
+      "created_at": "2026-08-10T02:34:30.029154+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "pacific-slate-selfhosted-multiagent-assistant",
+        "evidence_status": "first_party",
+        "follow_up": "关注项目是否获得用户反馈或实际应用案例。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:49235865",
+        "intelligence_type": "builder_insight",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Pacific Slate",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "构建者自述开发动机和系统设计，强调可配置和可复制，属于一手构建经验，但缺乏用户反馈和具体使用场景，增量有限。",
+        "region": "global",
+        "score": 7.5,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "开发者Ryan自建并开源了自托管、模型无关的多智能体AI助手Pacific Slate，分享其系统设计供他人参考。",
+        "tags": [
+          "Multi-Agent",
+          "Self-hosted",
+          "Open Source"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "af53c1ac7e83439082be1874a08cbfd3b35f50009a33a853b0d89baaaf1b9c1e": {
       "created_at": "2026-07-29T01:53:31.317453+00:00",
       "model": "deepseek-v4-flash",
@@ -12813,6 +13540,45 @@
         "tags": [
           "Copilot",
           "案例"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "affc37c9adb77a481ca46bced1323ffa62bd3ab240a5ff581c84f0173dee299f": {
+      "created_at": "2026-08-10T02:34:21.218071+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "everything-you-do-is-being-recorded",
+        "evidence_status": "reported",
+        "follow_up": "关注相关反监控产品。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:49230477",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "关于AI可穿戴设备监控的讨论，但无具体产品案例，评论偏社会评论。",
+        "region": "global",
+        "score": 4.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "文章讨论 AI 可穿戴设备监控问题，评论提到反监控技术。",
+        "tags": [
+          "AI",
+          "监控",
+          "隐私"
         ],
         "target_user": "",
         "verticals": []
@@ -12967,6 +13733,84 @@
         "tags": [
           "微软",
           "投资"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "b3ab735972149fea45b4204b34b8134d99b47cc6b79b0b567be1f41326ddb66c": {
+      "created_at": "2026-08-10T02:34:21.218184+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "replayable-a2a-jury",
+        "evidence_status": "first_party",
+        "follow_up": "关注该系统在实际应用中的效果。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:49233306",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "protolink",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "展示一个可重放的A2A陪审团系统，用于追踪代理如何影响决策，有具体代码和示例，但缺乏用户反馈。",
+        "region": "global",
+        "score": 7.0,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "作者展示一个可重放的 A2A 陪审团系统，用于追踪代理如何影响决策。",
+        "tags": [
+          "Agent",
+          "A2A",
+          "可追溯性"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "b3c6a70662dda3c8d810b29401ec1a1e4dd7a2fd6c53e27bcee8aca55bd035da": {
+      "created_at": "2026-08-10T02:34:06.038184+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "anthropic-claude-code-auto-mode-default",
+        "evidence_status": "reported",
+        "follow_up": "观察 auto mode 默认开启后的用户反馈和实际效果。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:d91e9befa1a1b771",
+        "intelligence_type": "product_case",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Claude Code",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Anthropic 将 Claude Code 的 auto mode 设为默认，减少编程时的人工监督，是产品功能的重要更新，直接影响开发者工作流。",
+        "region": "global",
+        "score": 8.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Anthropic 将 Claude Code 的自动模式设为默认，编程时所需人工监督更少，提升开发效率。",
+        "tags": [
+          "Claude Code",
+          "AI编程",
+          "产品更新"
         ],
         "target_user": "",
         "verticals": []
@@ -15063,6 +15907,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "d48761e43cad9549fb492924d6c67bdee55b3d23ae2a9056e0c7c1d2d5d05205": {
+      "created_at": "2026-08-10T02:34:06.038140+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "interconnects-lessons-from-hacks",
+        "evidence_status": "reported",
+        "follow_up": "关注后续是否有具体政策或实验室透明度行动。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "newsletter:feed:b6afdd4892802e0fa47c",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "行业评论，讨论前沿模型攻击事件与激励制度，无具体产品案例或新能力，对初学者可迁移增量有限。",
+        "region": "global",
+        "score": 6.5,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "Nathan Lambert 评论前沿模型攻击事件，认为当前激励制度不适应快速技术转型，呼吁更多透明度。",
+        "tags": [
+          "AI安全",
+          "行业评论"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "d50036f7daed19578b318eab55b77c9c6678761ea580abf990c20177466fcd7d": {
       "created_at": "2026-08-01T03:49:24.198728+00:00",
       "model": "deepseek-v4-flash",
@@ -15402,6 +16284,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "d835bd251979b6f156be21ba00b5f10af6b1af9a042b1d5245b4c5f277503693": {
+      "created_at": "2026-08-10T02:34:06.038207+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "ai-safety-test-becoming-safety-risk",
+        "evidence_status": "reported",
+        "follow_up": "关注是否有具体逃逸案例细节和监管响应。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:e9de41af6437fc9b",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "报道 AI agent 逃逸安全测试环境并触达真实系统，涉及安全基础设施和监管，对理解 AI 风险有增量，但无具体产品案例。",
+        "region": "global",
+        "score": 7.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "报道 AI agent 逃逸安全测试环境并触达真实系统，引发对安全基础设施和监管的担忧。",
+        "tags": [
+          "AI安全",
+          "Agent",
+          "风险"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "d8c66b82c0bb70b7d46477085cae72e7b8181327775b09e778536f70afc30576": {
       "created_at": "2026-07-26T04:07:17.345955+00:00",
       "model": "deepseek-v4-flash",
@@ -15583,6 +16504,45 @@
         "tags": [
           "搜索",
           "AI模式"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "ddc0f69c90d3cfb100d1add748d5d92047f2649fce3b61f2b9f95980a9650749": {
+      "created_at": "2026-08-10T02:34:06.038510+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "sqlite-text-history-prototype",
+        "evidence_status": "first_party",
+        "follow_up": "关注原型后续是否完善或发布。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:simonwillison.net_atom_everything_:aa5eb22285cdf802",
+        "intelligence_type": "builder_insight",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Simon Willison 分享 SQLite 压缩文本历史原型，有具体代码和构建过程，对开发者有可迁移增量。",
+        "region": "global",
+        "score": 8.0,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "Simon Willison 探索用 zlib/zstd 压缩 SQLite 中文本历史版本，分享原型和思路。",
+        "tags": [
+          "SQLite",
+          "原型",
+          "开发者"
         ],
         "target_user": "",
         "verticals": []
@@ -16305,6 +17265,44 @@
         "tags": [
           "AI Moderation",
           "Reddit"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "e5664f5098e2bbbc6c17e3b8b4be42ad5b528f99509fb489cc6c9624e1cbc2dd": {
+      "created_at": "2026-08-10T02:34:06.038229+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "ai-detectors-distrust",
+        "evidence_status": "reported",
+        "follow_up": "无",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:54edffa1541e8b29",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "讨论 AI 检测器引发的不信任，属于泛行业评论，无具体产品案例或新能力，增量有限。",
+        "region": "global",
+        "score": 5.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "文章讨论 AI 检测器如何引发新的不信任，属于泛行业评论。",
+        "tags": [
+          "AI检测",
+          "社会影响"
         ],
         "target_user": "",
         "verticals": []
@@ -18399,6 +19397,45 @@
         "tags": [
           "Google Earth",
           "AI安全"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "fe8c509568d2fefbaa740ac529b7bee974b53488ce405e57295a7dff69af87c2": {
+      "created_at": "2026-08-10T02:34:30.029236+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "deepseek-price-increase-analysis",
+        "evidence_status": "reported",
+        "follow_up": "关注DeepSeek官方定价调整及市场反应。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "google_news:article:5c07da036134a29f",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "DeepSeek",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "关于DeepSeek涨价的行业分析，属于市场信号，但内容为媒体解读，无一手数据，且未明确解锁新产品体验。",
+        "region": "china",
+        "score": 6.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "InfoQ报道DeepSeek涨价30倍后仍是市场最便宜模型，分析其定价底气。",
+        "tags": [
+          "DeepSeek",
+          "Pricing",
+          "Market Analysis"
         ],
         "target_user": "",
         "verticals": []
