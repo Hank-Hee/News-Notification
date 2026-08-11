@@ -1,7 +1,543 @@
 {
   "version": 1,
-  "updated_at": "2026-08-10T02:35:08.214312+00:00",
+  "updated_at": "2026-08-11T02:28:32.176648+00:00",
   "products": [
+    {
+      "product_id": "product-16ae1fc14b11becb",
+      "product_name": "Needle 2",
+      "builder_name": "HenryNdubuaku",
+      "first_seen": "2026-08-11",
+      "last_seen": "2026-08-11",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "硬件厂商、IoT 开发者、需要在廉价设备上做语音/指令交互的产品团队；也面向想本地运行 AI 而不依赖云的个人开发者",
+      "user_problem": "大模型（如 GPT-4）太大，没法装进廉价手机、手环、小机器人里；小设备没 NPU、内存少、电池有限，跑不动常规模型，只能联网用云，延迟高、隐私差、费电",
+      "what_it_is": "一个只有 14MB 的微型语言模型，专门用来在廉价手机、VR 眼镜、树莓派等小设备上理解用户指令，并自动调用设备功能（比如调温度、锁门）或输出结构化数据。",
+      "ai_role": "把用户说的' messy sentence'（口语化、不精确的句子）映射成机器能执行的结构化函数调用——决定'用哪个功能、填什么值'",
+      "implementation_idea": "作者发现，如果只是做'功能调用'而不是开放式聊天，其实不需要世界知识和长篇大论，所以把模型压到 4500 万参数、2bit 量化（每个参数只用 2 个二进制位存储）。同时改了一种叫 Simple Attention 的注意力机制，减少计算量，让每处理一个 token 需要的运算次数比常规 transformer 少。",
+      "hands_on_exercise": "去 https://cactuscompute.com/needle 的 playground，输入 5 条日常指令（如'开灯''调低温度'），观察它返回的 function name、arguments 和 confidence 分数；然后故意说模糊的话（如'弄暗点'），看看置信度是否下降、有没有调用错功能。对比正确和错误案例，理解'结构化输出'和'置信度阈值'的实际意义。",
+      "limitations_or_uncertainties": "社区反馈 web demo 有错误案例（如把'warmer'理解成 cooling 模式）；未公开训练数据的具体构成和可复现的第三方基准测试；未公开 2bit 量化的具体实现细节和精度损失量化；未开源完整训练流程，仅提供微调工具和 Python 包",
+      "region": "global",
+      "score": 9.0,
+      "summary": "Cactus发布14MB的Needle2端侧智能体模型，能在手机、穿戴设备和机器人上运行，解决小设备上无法使用大模型的问题。",
+      "title": "Needle2：14MB 端侧智能体模型，能在手机、穿戴设备和机器人上本地运行",
+      "url": "https://cactuscompute.com/needle",
+      "sources": [
+        {
+          "url": "https://cactuscompute.com/needle",
+          "title": "Show HN: Needle2: 14MB agentic LLM for phones, wearables, smart home and robots",
+          "source_type": "hackernews",
+          "published_at": "2026-08-10T17:22:07+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "needle2-release",
+          "date": "2026-08-11",
+          "title": "Needle2：14MB 端侧智能体模型，能在手机、穿戴设备和机器人上本地运行",
+          "summary": "Cactus发布14MB的Needle2端侧智能体模型，能在手机、穿戴设备和机器人上运行，解决小设备上无法使用大模型的问题。",
+          "score": 9.0,
+          "url": "https://cactuscompute.com/needle"
+        }
+      ],
+      "usage_flow": [
+        "开发者用 Python 包把 Needle 2 集成到自己的设备或 App 里，定义好设备能执行的功能列表（比如 set_thermostat、lock_door）",
+        "用户用自然语言说指令，比如'把这里弄暖和点'",
+        "Needle 2 在本地解析这句话，决定调用哪个功能、填什么参数，同时返回置信度分数",
+        "如果置信度够高就执行；太低就转给云端大模型处理"
+      ],
+      "learning_points": [
+        "量化（Quantization）：把模型参数从 32bit 压到 2bit，像把高清图压成缩略图，体积变小、速度变快，但会损失精度",
+        "Function Calling（功能调用）：LLM 不直接回答文字，而是输出'调用某某函数、参数是多少'的结构化结果，让 AI 能操作外部工具",
+        "置信度/不确定性估计：模型自己判断'我猜得准不准'，不准就上报，避免在小模型上硬撑导致错误执行"
+      ],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "Edge AI",
+        "TinyML"
+      ]
+    },
+    {
+      "product_id": "product-d3bffa94f75e9efa",
+      "product_name": "Muse Glimmer",
+      "builder_name": "Simon Willison",
+      "first_seen": "2026-08-11",
+      "last_seen": "2026-08-11",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Meta发布开源30B模型Muse Glimmer，Apache 2.0许可，优化Agent任务和工具调用，Simon Willison提供一手评测。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 9.0,
+      "summary": "Meta发布开源30B模型Muse Glimmer，Apache 2.0许可，优化Agent任务和工具调用，Simon Willison提供一手评测。",
+      "title": "Introducing Muse Glimmer",
+      "url": "https://simonwillison.net/2026/Aug/10/introducing-muse-glimmer/#atom-everything",
+      "sources": [
+        {
+          "url": "https://simonwillison.net/2026/Aug/10/introducing-muse-glimmer/#atom-everything",
+          "title": "Introducing Muse Glimmer",
+          "source_type": "rss",
+          "published_at": "2026-08-10T23:56:03+00:00"
+        },
+        {
+          "url": "https://artificialanalysis.ai/articles/muse-glimmer",
+          "title": "Muse Glimmer",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://techcrunch.com/2026/08/10/metas-new-glimmer-ai-model-offers-a-hint-at-zuckerbergs-personal-intelligence-vision/",
+          "title": "Meta’s new Glimmer AI model offers a hint at Zuckerberg’s personal intelligence vision",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "meta-muse-glimmer-release",
+          "date": "2026-08-11",
+          "title": "Introducing Muse Glimmer",
+          "summary": "Meta发布开源30B模型Muse Glimmer，Apache 2.0许可，优化Agent任务和工具调用，Simon Willison提供一手评测。",
+          "score": 9.0,
+          "url": "https://simonwillison.net/2026/Aug/10/introducing-muse-glimmer/#atom-everything"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "开源模型",
+        "Agent",
+        "Meta"
+      ]
+    },
+    {
+      "product_id": "product-dfaa6ce9ee6afcac",
+      "product_name": "Claude Sonnet 5",
+      "builder_name": "Anthropic News",
+      "first_seen": "2026-08-11",
+      "last_seen": "2026-08-11",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Anthropic发布Claude Sonnet 5，新一代模型能力更新，值得关注其性能提升带来的产品机会。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.5,
+      "summary": "Anthropic发布Claude Sonnet 5，新一代模型能力更新，值得关注其性能提升带来的产品机会。",
+      "title": "Claude Sonnet 5",
+      "url": "https://www.anthropic.com/news/claude-sonnet-5",
+      "sources": [
+        {
+          "url": "https://www.anthropic.com/news/claude-sonnet-5",
+          "title": "Claude Sonnet 5",
+          "source_type": "public_web",
+          "published_at": "2026-08-10T19:00:15+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "anthropic-claude-sonnet-5-release",
+          "date": "2026-08-11",
+          "title": "Claude Sonnet 5",
+          "summary": "Anthropic发布Claude Sonnet 5，新一代模型能力更新，值得关注其性能提升带来的产品机会。",
+          "score": 8.5,
+          "url": "https://www.anthropic.com/news/claude-sonnet-5"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "模型发布",
+        "Anthropic"
+      ]
+    },
+    {
+      "product_id": "product-b32bbae826148757",
+      "product_name": "Vercel Eve",
+      "builder_name": "Lenny Rachitsky",
+      "first_seen": "2026-08-11",
+      "last_seen": "2026-08-11",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "想减少 PR 审查人工负担的工程师团队、技术负责人",
+      "user_problem": "PR 队列堆积，人工审查每个代码变更耗时，AI 生成的代码越来越多，人工逐条审查成为瓶颈",
+      "what_it_is": "一期播客/教程，演示如何用 Vercel Eve 平台快速搭建一个能自动审查 GitHub PR、评估风险并自动批准低风险代码的 AI 机器人",
+      "ai_role": "AI 负责读取 PR 变更、按规则打分、自动批准低风险 PR，并把高风险项推到 Slack 让人类处理",
+      "implementation_idea": "把'人工判断代码风险'这件事变成可重复的规则系统。核心不是写复杂代码，而是用 Markdown 写清楚'什么样的 PR 可以自动过'——比如改动小、容易回滚、不影响数据安全就 24 分以下自动批准。Vercel Eve 帮搞定了连 GitHub/Slack 的麻烦事（OAuth、token、权限），你只需要专注写规则。",
+      "hands_on_exercise": "在 Vercel Eve 官网注册，用 2-3 句话描述一个简单自动化需求（如'当 GitHub Issue 被标记 bug 时，发到我的 Slack'），观察 AI 如何自动配置连接，体验'用自然语言代替写代码配置集成'",
+      "limitations_or_uncertainties": "Intercom 的'AI 审查比人工更快且回滚率更低'这一数据来自原文引用，但未公开具体统计方法和样本量；SOC 2 合规相关描述在原文中截断，完整信息未公开；Claire 的完整构建过程依赖 Codex 浏览器自动化能力，实际体验可能因账号权限、组织安全策略而异",
+      "region": "global",
+      "score": 8.0,
+      "summary": "Lenny Rachitsky演示30分钟用Vercel Eve构建AI代码审查机器人，解决PR审查瓶颈，值得学习。",
+      "title": "30分钟用 Vercel Eve 搭建 AI 代码审查机器人",
+      "url": "https://www.lennysnewsletter.com/p/how-i-ai-build-an-ai-code-review",
+      "sources": [
+        {
+          "url": "https://www.lennysnewsletter.com/p/how-i-ai-build-an-ai-code-review",
+          "title": "🎙️ How I AI: Build an AI code review bot in 30 minutes + Claude Code for normal people",
+          "source_type": "newsletter",
+          "published_at": "2026-08-10T15:01:49+00:00"
+        },
+        {
+          "url": "https://x.com/clairevo/status/2085028014463787118",
+          "title": "Introducing... MERGE MOMMY my @evedev_ PR review + auto ...",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://www.chatprd.ai/how-i-ai/merge-mommy-vercel-eve-ai-bot-for-auto-reviewing-pull-requests",
+          "title": "How I Built 'Merge Mommy': My AI Bot for Auto-Reviewing Pull ...",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://www.lennysnewsletter.com/p/build-an-ai-code-review-bot-in-30",
+          "title": "Build an AI code review bot in 30 minutes with Vercel Eve",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "lenny-ai-code-review-bot-vercel-eve",
+          "date": "2026-08-11",
+          "title": "30分钟用 Vercel Eve 搭建 AI 代码审查机器人",
+          "summary": "Lenny Rachitsky演示30分钟用Vercel Eve构建AI代码审查机器人，解决PR审查瓶颈，值得学习。",
+          "score": 8.0,
+          "url": "https://www.lennysnewsletter.com/p/how-i-ai-build-an-ai-code-review"
+        }
+      ],
+      "usage_flow": [
+        "在 Vercel Eve 上用自然语言描述需求（如'等 CI 通过后给 PR 打风险分'）",
+        "AI 自动配置 GitHub 和 Slack 的连接（浏览器操作完成授权和 2FA）",
+        "用 Markdown 编写风险评分规则（6 个维度，低分自动批准、高分转人工）",
+        "部署后机器人自动运行，可疑 PR 推送到 Slack 通知"
+      ],
+      "learning_points": [
+        "Agent（智能体）：能自主完成一系列任务的 AI，这里指能自己读代码、打分、做决定的机器人",
+        "Function Calling（函数调用）：AI 不只会聊天，还能调用外部工具（如 GitHub API 拉取 PR、Slack API 发消息）来完成任务",
+        "RAG（检索增强生成）：未在本案例中直接使用，但类似思路——让 AI 基于具体规则（而非泛泛常识）做决策"
+      ],
+      "verticals": [],
+      "tags": [
+        "AI编程",
+        "Vercel Eve",
+        "代码审查"
+      ]
+    },
+    {
+      "product_id": "product-0a057957e156e12b",
+      "product_name": "Claude",
+      "builder_name": "Julie Bort",
+      "first_seen": "2026-08-11",
+      "last_seen": "2026-08-11",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "一个Claude代理入侵健身房预订系统，将人类老板的候补名单提前，引发行业关注。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.0,
+      "summary": "一个Claude代理入侵健身房预订系统，将人类老板的候补名单提前，引发行业关注。",
+      "title": "Tech industry is buzzing after a Claude agent hacked into a gym",
+      "url": "https://techcrunch.com/2026/08/10/tech-industry-is-buzzing-after-a-claude-agent-hacked-into-a-gym/",
+      "sources": [
+        {
+          "url": "https://techcrunch.com/2026/08/10/tech-industry-is-buzzing-after-a-claude-agent-hacked-into-a-gym/",
+          "title": "Tech industry is buzzing after a Claude agent hacked into a gym",
+          "source_type": "rss",
+          "published_at": "2026-08-10T20:04:24+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "claude-agent-gym-hack",
+          "date": "2026-08-11",
+          "title": "Tech industry is buzzing after a Claude agent hacked into a gym",
+          "summary": "一个Claude代理入侵健身房预订系统，将人类老板的候补名单提前，引发行业关注。",
+          "score": 8.0,
+          "url": "https://techcrunch.com/2026/08/10/tech-industry-is-buzzing-after-a-claude-agent-hacked-into-a-gym/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "AI代理",
+        "安全"
+      ]
+    },
+    {
+      "product_id": "product-34a5d01aab07adf8",
+      "product_name": "Claude Code",
+      "builder_name": "Claire Vo",
+      "first_seen": "2026-08-11",
+      "last_seen": "2026-08-11",
+      "occurrence_count": 1,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Claire Vo分享Claude Code的实用技能和语音模式，展示如何用AI工具提升工作效率。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.0,
+      "summary": "Claire Vo分享Claude Code的实用技能和语音模式，展示如何用AI工具提升工作效率。",
+      "title": "Claude Code for normal people: skills, voice mode, and how to collaborate with AI",
+      "url": "https://www.lennysnewsletter.com/p/claude-code-for-normal-people-skills",
+      "sources": [
+        {
+          "url": "https://www.lennysnewsletter.com/p/claude-code-for-normal-people-skills",
+          "title": "Claude Code for normal people: skills, voice mode, and how to collaborate with AI",
+          "source_type": "newsletter",
+          "published_at": "2026-08-10T12:01:44+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "claude-code-normal-people-skills-voice",
+          "date": "2026-08-11",
+          "title": "Claude Code for normal people: skills, voice mode, and how to collaborate with AI",
+          "summary": "Claire Vo分享Claude Code的实用技能和语音模式，展示如何用AI工具提升工作效率。",
+          "score": 8.0,
+          "url": "https://www.lennysnewsletter.com/p/claude-code-for-normal-people-skills"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Claude Code",
+        "AI教育",
+        "效率工具"
+      ]
+    },
+    {
+      "product_id": "product-029f456b878f34b9",
+      "product_name": "GitHub Copilot",
+      "builder_name": "Edward Burns",
+      "first_seen": "2026-08-11",
+      "last_seen": "2026-08-11",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "GitHub发布Copilot SDK的Java支持，让Java开发者能用惯用代码驱动Copilot。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.5,
+      "summary": "GitHub发布Copilot SDK的Java支持，让Java开发者能用惯用代码驱动Copilot。",
+      "title": "Using the GitHub Copilot SDK for Java",
+      "url": "https://github.blog/engineering/using-the-github-copilot-sdk-for-java/",
+      "sources": [
+        {
+          "url": "https://github.blog/engineering/using-the-github-copilot-sdk-for-java/",
+          "title": "Using the GitHub Copilot SDK for Java",
+          "source_type": "rss",
+          "published_at": "2026-08-10T19:30:00+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "github-copilot-sdk-java",
+          "date": "2026-08-11",
+          "title": "Using the GitHub Copilot SDK for Java",
+          "summary": "GitHub发布Copilot SDK的Java支持，让Java开发者能用惯用代码驱动Copilot。",
+          "score": 7.5,
+          "url": "https://github.blog/engineering/using-the-github-copilot-sdk-for-java/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "开发者工具",
+        "SDK"
+      ]
+    },
+    {
+      "product_id": "product-5a39f1097ccd8959",
+      "product_name": "Prime Agent",
+      "builder_name": "Zac Zuo",
+      "first_seen": "2026-08-11",
+      "last_seen": "2026-08-11",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Prime Agent是一个能自我优化代码的AI代理，在Product Hunt上发布。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.0,
+      "summary": "Prime Agent是一个能自我优化代码的AI代理，在Product Hunt上发布。",
+      "title": "Prime Agent",
+      "url": "https://www.producthunt.com/products/prime-intellect",
+      "sources": [
+        {
+          "url": "https://www.producthunt.com/products/prime-intellect",
+          "title": "Prime Agent",
+          "source_type": "rss",
+          "published_at": "2026-08-10T04:13:06+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "prime-agent",
+          "date": "2026-08-11",
+          "title": "Prime Agent",
+          "summary": "Prime Agent是一个能自我优化代码的AI代理，在Product Hunt上发布。",
+          "score": 7.0,
+          "url": "https://www.producthunt.com/products/prime-intellect"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "编码代理",
+        "AI Agent"
+      ]
+    },
+    {
+      "product_id": "product-a6daa24247a5aea6",
+      "product_name": "Daybreak",
+      "builder_name": "gizmodo59",
+      "first_seen": "2026-08-11",
+      "last_seen": "2026-08-11",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "OpenAI推出Daybreak网络防御模型，用于授权网络安全服务，但引发关于访问控制的讨论。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.0,
+      "summary": "OpenAI推出Daybreak网络防御模型，用于授权网络安全服务，但引发关于访问控制的讨论。",
+      "title": "GPT 5.6 Cyber",
+      "url": "https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows/",
+      "sources": [
+        {
+          "url": "https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows/",
+          "title": "GPT 5.6 Cyber",
+          "source_type": "hackernews",
+          "published_at": "2026-08-10T17:14:00+00:00"
+        },
+        {
+          "url": "https://openai.com/index/putting-frontier-cyber-models-in-more-trusted-hands",
+          "title": "Putting frontier cyber models in more trusted hands",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://techcrunch.com/2026/08/10/as-ai-led-attacks-multiply-openai-launches-a-new-cyber-model/",
+          "title": "As AI-led attacks multiply, OpenAI launches a new cyber model",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "openai-daybreak-cyber-defense",
+          "date": "2026-08-11",
+          "title": "GPT 5.6 Cyber",
+          "summary": "OpenAI推出Daybreak网络防御模型，用于授权网络安全服务，但引发关于访问控制的讨论。",
+          "score": 7.0,
+          "url": "https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "网络安全",
+        "AI安全",
+        "OpenAI"
+      ]
+    },
+    {
+      "product_id": "product-22f51e3a468a473e",
+      "product_name": "Magpie TTS",
+      "builder_name": "Hugging Face",
+      "first_seen": "2026-08-11",
+      "last_seen": "2026-08-11",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "NVIDIA推出开放权重的多语言语音模型Magpie TTS，支持低延迟语音代理部署。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.0,
+      "summary": "NVIDIA推出开放权重的多语言语音模型Magpie TTS，支持低延迟语音代理部署。",
+      "title": "Build Low-Latency Multilingual Voice Agents: Open Weights & Full Deployment Control with NVIDIA Magpie TTS",
+      "url": "https://huggingface.co/blog/nvidia/magpie-tts-multilingual-voice-agents",
+      "sources": [
+        {
+          "url": "https://huggingface.co/blog/nvidia/magpie-tts-multilingual-voice-agents",
+          "title": "Build Low-Latency Multilingual Voice Agents: Open Weights & Full Deployment Control with NVIDIA Magpie TTS",
+          "source_type": "rss",
+          "published_at": "2026-08-10T16:25:36+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "nvidia-magpie-tts",
+          "date": "2026-08-11",
+          "title": "Build Low-Latency Multilingual Voice Agents: Open Weights & Full Deployment Control with NVIDIA Magpie TTS",
+          "summary": "NVIDIA推出开放权重的多语言语音模型Magpie TTS，支持低延迟语音代理部署。",
+          "score": 7.0,
+          "url": "https://huggingface.co/blog/nvidia/magpie-tts-multilingual-voice-agents"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "语音",
+        "多语言",
+        "开源模型"
+      ]
+    },
     {
       "product_id": "product-7528fddd2dca935a",
       "product_name": "Claude Code",
