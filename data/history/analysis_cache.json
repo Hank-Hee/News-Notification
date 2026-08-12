@@ -571,6 +571,39 @@
       },
       "stage": "candidate_analysis"
     },
+    "0834886114e0b66be08e6920277bfef890eea0727415184a652e68423bb76ed9": {
+      "created_at": "2026-08-12T02:44:18.656153+00:00",
+      "model": "kimi-k2.6",
+      "prompt_version": "deep-v3-beginner",
+      "result": {
+        "ai_role": "同时承担「问诊医生」和「观察员」角色：听懂患者描述、看懂视频画面、组织对话节奏、输出诊断推理",
+        "evidence_status": "first_party",
+        "hands_on_exercise": "打开 GPT-4o 或 Gemini 的摄像头功能，模拟一次「视频问诊」：用手机拍一张模拟皮疹或咳嗽动作的照片/短视频，让 AI 描述它观察到了什么、会追问哪些问题。对比纯文字描述 vs 带图片描述时 AI 的回答差异，体会多模态输入的价值。",
+        "implementation_idea": "把大语言模型（LLM）和视觉理解能力绑在一起，让 AI 能同时处理「你说了什么」和「我看见了什么」，再加上医学知识库做诊断推理。核心难点是让 AI 在视频通话的实时节奏里自然对话，而不是一问一答的机械流程。",
+        "learning_points": [
+          "多模态（Multimodal）：AI 同时处理文字、语音、图像/视频等多种信息输入，就像人看病时既听患者说、又观察脸色和动作",
+          "实时推理（Real-time inference）：AI 不能想太久，要在对话的秒级间隙内完成理解和回应，对模型速度和效率要求很高",
+          "医疗 AI 的安全边界：诊断类 AI 目前普遍作为辅助工具，最终决策仍需真人医生把关，涉及法规和伦理限制"
+        ],
+        "limitations_or_uncertainties": "未公开实际部署时间表；未公开训练数据来源和规模；未公开是否已通过临床监管审批；视频会诊的误诊率和安全性数据未在提供材料中披露；当前为研究论文/博客发布阶段，非已商用产品",
+        "product_name": "AMIE",
+        "sources": [
+          "https://blog.google/innovation-and-ai/models-and-research/google-research/amie-video-consultations/",
+          "https://research.google/people/anilpalepu/"
+        ],
+        "target_users": "未公开（当前为研究阶段，面向医疗机构/研究验证场景）",
+        "title_zh": "Google 医疗 AI 系统 AMIE 首次展示实时视频会诊能力",
+        "usage_flow": [
+          "患者打开视频界面，与 AMIE 开始实时对话",
+          "AMIE 通过视频观察患者外观、动作，同时用语音询问症状",
+          "AMIE 实时分析多模态信息，给出诊断建议或追问问题",
+          "对话记录和初步评估供后续真人医生复核或参考"
+        ],
+        "user_problem": "传统远程医疗中，医生无法同时处理大量患者；纯文字 AI 问诊缺少视觉观察（如查看皮疹、面部表情、肢体动作）；患者也希望获得更有「人情味」的交互体验",
+        "what_it_is": "Google Research 开发的一个能进行实时视频对话的医疗诊断 AI 系统，不只是聊天，还能通过视频「看」病人"
+      },
+      "stage": "deep_analysis"
+    },
     "08abc55a4af1688c235fbf864e08ef2b2708fa14ff0ee0b4954ca90284d6feab": {
       "created_at": "2026-08-11T02:27:37.869682+00:00",
       "model": "deepseek-v4-flash",
@@ -603,6 +636,44 @@
         "tags": [
           "沙箱",
           "开发者工具"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "0933b88c62d0328c5ae1928c89d329200d066a0c1588c4c73488246716c5224e": {
+      "created_at": "2026-08-12T02:43:31.539229+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "nemotron-3-5-lightning-launch",
+        "evidence_status": "reported",
+        "follow_up": "关注该模型在具体任务上的表现及与竞品对比。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "public_web:sitemap:c5258a16718c3dd5c5ce",
+        "intelligence_type": "model_capability",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Nemotron 3.5 Lightning",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "NVIDIA发布Nemotron 3.5 Lightning模型，Artificial Analysis提供评测，属于新模型能力，但缺乏具体产品应用细节，评分7.5。",
+        "region": "global",
+        "score": 7.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "NVIDIA发布Nemotron 3.5 Lightning模型，Artificial Analysis提供评测，值得关注其性能表现。",
+        "tags": [
+          "模型发布",
+          "NVIDIA"
         ],
         "target_user": "",
         "verticals": []
@@ -949,6 +1020,45 @@
           "OpenAI",
           "SDK",
           "Agent"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "0e2668f4d6c74667f70e44df5ab0be5397f8641b0845162c66f122b096a0bf4e": {
+      "created_at": "2026-08-12T02:43:47.131393+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "vercel-connect-cli-100-connectors",
+        "evidence_status": "first_party",
+        "follow_up": "关注该功能对开发者采用率的影响。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:vercel.com_changelog_rss:c5993615a9aebec6",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Vercel Connect",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Vercel Connect CLI支持100+连接器，简化集成流程，对开发者工具产品有参考价值，但非AI核心，价值中等。",
+        "region": "global",
+        "score": 7.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Vercel Connect CLI现支持100+服务连接器，简化集成流程，提升开发者体验。",
+        "tags": [
+          "开发者工具",
+          "CLI",
+          "集成"
         ],
         "target_user": "",
         "verticals": []
@@ -2237,6 +2347,44 @@
         "summary_zh": "TechCrunch试用OpenAI新AI键盘，认为对程序员有趣但对其他人可能神秘。",
         "tags": [
           "Hardware",
+          "OpenAI"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "1cc2070a402835ff6798ae28525dc62b50f646657a79a05064688a798a8d1835": {
+      "created_at": "2026-08-12T02:43:58.737766+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "codex-rust-v0.148.0-alpha.9",
+        "evidence_status": "early_signal",
+        "follow_up": "关注后续alpha版本的实质功能更新。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "github:release:368944732",
+        "intelligence_type": "early_signal",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "codex",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI Codex的alpha版本发布，无具体内容，仅版本号，信息量低。",
+        "region": "global",
+        "score": 5.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "OpenAI Codex发布alpha版本，无实质更新说明。",
+        "tags": [
+          "Codex",
           "OpenAI"
         ],
         "target_user": "",
@@ -4690,6 +4838,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "408ca53886aa9cc76a71ec1b4cb9edc19046ac030289cf451a810f66a45c9ae9": {
+      "created_at": "2026-08-12T02:43:31.542749+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "google-amie-video-consultations",
+        "evidence_status": "first_party",
+        "follow_up": "关注AMIE的临床落地和实际效果。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:blog.google_innovation-and-ai_technology_ai_rss_:012e30e2c241e587",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "AMIE",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Google研究医疗AI系统AMIE展示实时视频会诊能力，属于医疗垂直AI产品，有实际研究支撑，评分8.5。",
+        "region": "global",
+        "score": 8.5,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Google的医疗AI系统AMIE在首次研究中展示了实时临床视频会诊能力，值得关注医疗AI应用。",
+        "tags": [
+          "医疗AI",
+          "Google",
+          "视频会诊"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "40e40ac76045fe0f2ce2d1a97826ab5c97e1155f220fbeae054bf49cfe533c0e": {
       "created_at": "2026-08-01T03:49:24.198893+00:00",
       "model": "deepseek-v4-flash",
@@ -4880,6 +5067,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "430a7327dfdf39d306effaecd778b88173775920b025121c1a335ae8dd8fbf18": {
+      "created_at": "2026-08-12T02:43:31.542937+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-coo-brad-lightcap-departure",
+        "evidence_status": "reported",
+        "follow_up": "关注OpenAI后续管理层变动及战略影响。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:924538d771804e97",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI COO离职，属于公司人事变动，对产品影响不直接，评分6.5。",
+        "region": "global",
+        "score": 6.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "OpenAI长期COO Brad Lightcap离职，将开始新事业，可能影响公司运营。",
+        "tags": [
+          "OpenAI",
+          "人事变动"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "434baedb000f1de95f311fd4ae97c63b12989977023585683e14cb2c4452d006": {
       "created_at": "2026-08-08T02:21:40.316429+00:00",
       "model": "deepseek-v4-flash",
@@ -4916,6 +5141,41 @@
         "verticals": []
       },
       "stage": "candidate_analysis"
+    },
+    "4371eeb795fe1ffa364698e971ffba1bae7b38bf3608996dbb6efa6c5fbf72c9": {
+      "created_at": "2026-08-12T02:44:37.336274+00:00",
+      "model": "kimi-k2.6",
+      "prompt_version": "deep-v3-beginner",
+      "result": {
+        "ai_role": "负责第二步：基于生物数据和目标约束，生成并优化蛋白质/抗体的三维结构和序列。",
+        "evidence_status": "reported",
+        "hands_on_exercise": "用 Colab 免费版运行 ESMFold（Meta 开源的蛋白质结构预测工具），输入一段氨基酸序列，观察 AI 如何预测它的 3D 结构，体会'序列→结构'的映射过程。约 30 分钟。",
+        "implementation_idea": "用类似 LLM 的生成模型学习海量蛋白质结构数据，把'设计新蛋白质'变成'预测下一个氨基酸该放什么'的序列生成问题。",
+        "learning_points": [
+          "垂直领域 AI：通用大模型不够用时，需要在特定领域（如蛋白质结构）用专业数据微调",
+          "Function Calling（函数调用）：AI 不只是聊天，可以调用专业计算工具来验证自己生成的分子结构",
+          "Embedding（嵌入）：把蛋白质序列转成数字向量，让 AI 能'理解'不同分子之间的相似性"
+        ],
+        "limitations_or_uncertainties": "四笔交易的具体金额、合同期限、客户除 Lilly 外的另外三家是谁均未公开；'今年夏天完成'的具体时间范围未明确；AI 设计的分子在临床阶段的成功率数据未公开。",
+        "product_name": "Chai Discovery",
+        "sources": [
+          "https://www.latent.space/p/chai-discovery",
+          "https://www.chaidiscovery.com/news",
+          "https://techcrunch.com/2026/01/16/from-openais-offices-to-a-deal-with-eli-lilly-how-chai-discovery-became-one-of-the-flashiest-names-in-ai-drug-development/",
+          "https://www.forbes.com/companies/chai-discovery/"
+        ],
+        "target_users": "制药公司（如 Eli Lilly）和早期生物技术公司的研发人员",
+        "title_zh": "生物 AI 的拐点：Chai Discovery 如何让制药业为 AI 工具买单",
+        "usage_flow": [
+          "药企研发人员输入目标疾病或靶点信息",
+          "AI 生成候选蛋白质/抗体设计方案",
+          "研究人员在实验室验证 AI 设计的分子效果",
+          "根据反馈迭代优化，进入临床前开发"
+        ],
+        "user_problem": "传统方法设计蛋白质/抗体耗时长、成本高、失败率高；药企需要更快验证候选药物的可行性。",
+        "what_it_is": "Chai Discovery 是一家用 AI 设计蛋白质、抗体等生物分子的初创公司，帮助药企更快开发新药。"
+      },
+      "stage": "deep_analysis"
     },
     "43aa5c25bbe3267bebde8d5bda200a4a259c66b49c6f76da5c20a76edd6afce3": {
       "created_at": "2026-08-05T03:32:07.046367+00:00",
@@ -6555,6 +6815,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "581395be894464cf46793b4e39abe3f4ccd9b0e95cb4e6a5307345f511f7494e": {
+      "created_at": "2026-08-12T02:43:58.738135+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "langchain-anthropic-1.5.5",
+        "evidence_status": "first_party",
+        "follow_up": "关注reasoning tokens报告改进的实际效果。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "github:release:368799713",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "langchain-anthropic",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "LangChain Anthropic集成发布1.5.5，修复bug并改进reasoning tokens报告，对使用Anthropic的开发者有价值。",
+        "region": "global",
+        "score": 6.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "LangChain Anthropic集成发布1.5.5，修复bug并改进reasoning tokens报告。",
+        "tags": [
+          "LangChain",
+          "Anthropic"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "586ab4d15e65917e5352b37eeb90e30a428e4dcb4c46a21a23b4a8936526ed16": {
       "created_at": "2026-07-28T03:49:20.638386+00:00",
       "model": "deepseek-v4-flash",
@@ -7198,6 +7496,44 @@
         "what_it_is": "MiniMax H3 是一个能同时生成视频和音频的 AI 模型，现在可以在 ComfyUI 这个可视化工作流工具里直接运行，而且模型权重已经开源。"
       },
       "stage": "deep_analysis"
+    },
+    "5e4d98be5cd2c556305d7326f1939e65e8afac4979ccb586f5ea5253eab256e3": {
+      "created_at": "2026-08-12T02:43:58.737814+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "codex-rust-v0.148.0-alpha.7",
+        "evidence_status": "early_signal",
+        "follow_up": "关注后续alpha版本的实质功能更新。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "github:release:368670657",
+        "intelligence_type": "early_signal",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "codex",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI Codex的alpha版本发布，无具体内容，仅版本号，信息量低。",
+        "region": "global",
+        "score": 5.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "OpenAI Codex发布alpha版本，无实质更新说明。",
+        "tags": [
+          "Codex",
+          "OpenAI"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
     },
     "5f9bba811b851a5fef60be204dc0f016d4a9efca236365633f0f731bf7afaf7b": {
       "created_at": "2026-07-27T04:14:53.894536+00:00",
@@ -9788,6 +10124,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "7a34a71abf95f9803b6c196d276063898995d97df026b4e6d4c221fd20b37232": {
+      "created_at": "2026-08-12T02:43:47.130774+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "river-ai-1.1b-funding",
+        "evidence_status": "reported",
+        "follow_up": "关注River AI的产品发布和具体技术路线。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:50656477b0f6a3ba",
+        "intelligence_type": "early_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "River AI",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "新创公司River AI由xAI联合创始人创立，获得11亿美元融资，聚焦个人代理愿景，但产品尚未发布，属于早期信号，但创始人背景和融资规模提供高价值市场信号。",
+        "region": "global",
+        "score": 7.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "xAI联合创始人Igor Babuschkin创立的River AI成立两个月即获11亿美元融资，瞄准个人代理愿景，值得关注其后续产品落地。",
+        "tags": [
+          "Agent",
+          "融资",
+          "个人代理"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "7ba2abd906a3440cb447b70c4ccbf8889f523e6ec68aed0063887fe60e692b6f": {
       "created_at": "2026-08-01T03:49:24.198264+00:00",
       "model": "deepseek-v4-flash",
@@ -10126,6 +10501,44 @@
           "OpenAI",
           "数学",
           "研究"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "7eae751f2355d1e4c080977c6d23bcb3fa4ab825b6cbe58b7cebe867b2241cc6": {
+      "created_at": "2026-08-12T02:43:58.738044+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "langchain-1.3.15",
+        "evidence_status": "first_party",
+        "follow_up": "关注新功能如trace_policy的实际应用。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "github:release:368796722",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "langchain",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "LangChain发布1.3.15，包含多项功能增强和bug修复，但多为内部改进，对初学者价值一般。",
+        "region": "global",
+        "score": 6.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "LangChain发布1.3.15，包含多项功能增强和bug修复。",
+        "tags": [
+          "LangChain",
+          "Framework"
         ],
         "target_user": "",
         "verticals": []
@@ -10620,6 +11033,45 @@
         "tags": [
           "金融",
           "行业观察"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "84795c9e219559b05ce78ef216db72307b70a7a1b7d7d509908e62a60e89c8cb": {
+      "created_at": "2026-08-12T02:43:47.130835+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "saber-ai-writer-controversy",
+        "evidence_status": "reported",
+        "follow_up": "关注事件后续发展及对AI内容创作行业的影响。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:01f9f333168336e8",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "游戏公司Saber否认用ChatGPT替换编剧，但前编剧声称被AI取代，属于行业争议，对AI产品经理参考价值有限，但涉及AI在创意行业的应用伦理，有一定关注度。",
+        "region": "global",
+        "score": 5.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "游戏公司Saber否认用ChatGPT替换编剧，但前编剧声称被AI取代，引发AI替代创意工作者的争议。",
+        "tags": [
+          "AI伦理",
+          "游戏",
+          "争议"
         ],
         "target_user": "",
         "verticals": []
@@ -11582,6 +12034,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "913b44a01d2e41a4240d2fe513e2c198ccfd883384c6b6f89acfac4586843d75": {
+      "created_at": "2026-08-12T02:43:31.542707+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "openai-daybreak-models-on-aws",
+        "evidence_status": "first_party",
+        "follow_up": "关注Daybreak模型在企业的采用情况。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:openai.com_news_rss.xml:5d3aff0aba5d0b8a",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Daybreak",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI与AWS合作，将Daybreak网络安全模型上线Amazon Bedrock，属于企业级产品落地，评分8.0。",
+        "region": "global",
+        "score": 8.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "OpenAI的Daybreak网络安全模型现已在AWS Bedrock上提供，支持企业安全流程。",
+        "tags": [
+          "OpenAI",
+          "AWS",
+          "网络安全"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "9145182a4e484885867baa65a9dc300b65bbd769cf7a14512d109a338c78270c": {
       "created_at": "2026-08-07T03:15:36.303449+00:00",
       "model": "deepseek-v4-flash",
@@ -11615,6 +12106,45 @@
           "数据中心",
           "政策",
           "社会"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "915be0010980b660df9d0eb5dc96e5a47ac4d50b17ed9deba747694b6d1507d4": {
+      "created_at": "2026-08-12T02:43:47.131332+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "chai-discovery-bioai-deals",
+        "evidence_status": "reported",
+        "follow_up": "关注Chai Discovery的具体产品形态和客户案例。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:www.latent.space_feed:05a48f17b2b87f75",
+        "intelligence_type": "product_case",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Chai Discovery",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Chai Discovery在生物AI领域完成四笔交易，制药行业开始为Bio×AI工具付费，垂直AI产品落地案例，对医药健康AI产品经理有高参考价值。",
+        "region": "global",
+        "score": 8.5,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "Chai Discovery在生物AI领域完成四笔交易，制药行业开始为Bio×AI工具付费，垂直AI产品落地案例。",
+        "tags": [
+          "生物AI",
+          "医药",
+          "商业化"
         ],
         "target_user": "",
         "verticals": []
@@ -13575,6 +14105,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "a4d18337ca3001942342227c83259fbb87d0a8204d7da36939ad2de5204e384c": {
+      "created_at": "2026-08-12T02:43:47.130880+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "chatgpt-gemini-1b-users",
+        "evidence_status": "reported",
+        "follow_up": "关注用户增长背后的驱动因素及商业化进展。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:4574a83e15277853",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "ChatGPT/Gemini",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "ChatGPT和Gemini月活用户均突破10亿，是重要的市场里程碑，反映AI应用普及度，对产品经理有宏观参考价值。",
+        "region": "global",
+        "score": 7.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "ChatGPT和Gemini月活用户均突破10亿，标志AI聊天助手进入主流应用阶段。",
+        "tags": [
+          "用户规模",
+          "ChatGPT",
+          "Gemini"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "a4da8b2a54ac0b6b23fc13455468af1afc4bad9b9143dec091d3785ebc086f2c": {
       "created_at": "2026-07-30T03:28:00.813232+00:00",
       "model": "deepseek-v4-flash",
@@ -13647,6 +14216,45 @@
           "AI Agent",
           "代码审查",
           "Vercel Eve"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "a54943ccd24147931b212a4595487b3423c2ceb40da3d6170a76fd403ac20135": {
+      "created_at": "2026-08-12T02:43:47.131292+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "stealing-reasoning-traces-llm",
+        "evidence_status": "verified",
+        "follow_up": "关注各模型厂商对推理痕迹泄露的修复措施。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:simonwillison.net_atom_everything_:ae0bb8510d8a9c3c",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "论文展示如何从专有LLM API窃取推理痕迹，涉及安全漏洞，对AI产品安全设计有警示作用，但属于学术研究，产品关联度中等。",
+        "region": "global",
+        "score": 7.5,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "新论文揭示可从Anthropic、OpenAI等API中窃取加密推理痕迹，对AI产品安全设计提出挑战。",
+        "tags": [
+          "安全",
+          "LLM",
+          "推理"
         ],
         "target_user": "",
         "verticals": []
@@ -14033,6 +14641,45 @@
           "AI代理",
           "语义网",
           "行业观察"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "aace3676de71e9f47bbe09cb939819a2045f0c62d03089e3db4a9eff95518f75": {
+      "created_at": "2026-08-12T02:43:31.542867+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "openai-chatgpt-linux-desktop-app",
+        "evidence_status": "reported",
+        "follow_up": "关注Linux用户的使用反馈和功能差异。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:49264334",
+        "intelligence_type": "product_case",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "ChatGPT",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI发布ChatGPT Linux桌面应用，扩展平台覆盖，有用户讨论，评分8.0。",
+        "region": "global",
+        "score": 8.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "OpenAI推出ChatGPT Linux桌面应用，为Linux用户提供原生体验，引发社区讨论。",
+        "tags": [
+          "ChatGPT",
+          "Linux",
+          "桌面应用"
         ],
         "target_user": "",
         "verticals": []
@@ -16520,6 +17167,45 @@
       },
       "stage": "deep_analysis"
     },
+    "c8fd66b47630528e4cd3edbea2cf47871ad7f365475af40486d909a32d54311c": {
+      "created_at": "2026-08-12T02:43:58.737950+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "claude-code-v2.1.228",
+        "evidence_status": "first_party",
+        "follow_up": "观察修复效果及用户反馈。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "github:release:368745796",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "claude-code",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Anthropic官方发布Claude Code v2.1.228，修复多个关键bug，提升稳定性，对开发者有实际价值。",
+        "region": "global",
+        "score": 7.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Anthropic发布Claude Code v2.1.228，修复多个稳定性问题。",
+        "tags": [
+          "Claude Code",
+          "Anthropic",
+          "Bug Fix"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "c953d8d4e1eb1a356ba0e51f0b4eddb7cc189f9c15601bbf06742dfbe2522927": {
       "created_at": "2026-07-30T03:27:45.919054+00:00",
       "model": "deepseek-v4-flash",
@@ -16594,6 +17280,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "c9c21112b60ac82ca185c5fb05c0830fff7326cbe14aa73977fe6d8114f43ba3": {
+      "created_at": "2026-08-12T02:43:31.542621+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "meta-muse-glimmer-spark-1.2-release",
+        "evidence_status": "reported",
+        "follow_up": "关注Spark 1.2权重发布及Muse Glimmer的实际应用。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "newsletter:feed:39a989805a8affb58db4",
+        "intelligence_type": "model_capability",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Muse Glimmer",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Meta发布Muse Glimmer 30B开源模型并承诺发布Spark 1.2权重，属于模型能力更新，但信息来自newsletter，非一手，评分7.0。",
+        "region": "global",
+        "score": 7.0,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "Meta发布开源多模态模型Muse Glimmer并预告Spark 1.2，值得关注其开源策略。",
+        "tags": [
+          "模型发布",
+          "Meta",
+          "开源"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "c9fc6df5070adb5d26a00e3377ceb0351b885bd4b3bc1858f1ec4fa978333afe": {
       "created_at": "2026-07-28T03:48:25.674635+00:00",
       "model": "deepseek-v4-flash",
@@ -16624,6 +17349,45 @@
         "summary": null,
         "summary_zh": "Anthropic发布Cognizant相关新闻，但内容不详。",
         "tags": [],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "ca8206eeffaa908c37a90a0146916f621c4e1147f09598e4627797f2b5a37bb7": {
+      "created_at": "2026-08-12T02:43:31.542663+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "openai-testing-ads-in-chatgpt",
+        "evidence_status": "first_party",
+        "follow_up": "关注广告测试的反馈及对用户体验的影响。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:openai.com_news_rss.xml:b19ec562c455e753",
+        "intelligence_type": "business_policy",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "ChatGPT",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI官方宣布在ChatGPT中测试广告，涉及商业模式变化，对产品影响大，评分8.5。",
+        "region": "global",
+        "score": 8.5,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "OpenAI开始在ChatGPT中测试广告，以支持免费访问，但强调广告清晰标注、不影响回答独立性。",
+        "tags": [
+          "ChatGPT",
+          "广告",
+          "商业模式"
+        ],
         "target_user": "",
         "verticals": []
       },
@@ -16737,6 +17501,44 @@
         "tags": [
           "Agent",
           "API"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "cdb1b432890e531b72dad0addccc5d819a57bde6162725c5567b5143803c0a14": {
+      "created_at": "2026-08-12T02:43:58.738099+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "langchain-core-1.5.4",
+        "evidence_status": "first_party",
+        "follow_up": "关注pydantic 2.14兼容性修复。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "github:release:368756209",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "langchain-core",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "LangChain核心库发布1.5.4，修复兼容性和bug，对开发者有参考价值。",
+        "region": "global",
+        "score": 6.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "LangChain核心库发布1.5.4，修复兼容性和bug。",
+        "tags": [
+          "LangChain",
+          "Framework"
         ],
         "target_user": "",
         "verticals": []
@@ -17536,6 +18338,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "dd3e6d3041abaabf0544bed71e873dc78eee82ccf9677f66bcaccbee851b73e0": {
+      "created_at": "2026-08-12T02:43:47.131040+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "lossless-transformations-natural-language",
+        "evidence_status": "first_party",
+        "follow_up": "关注该政策在工程团队中的实际应用效果。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:simonwillison.net_atom_everything_:1f044ad3768cf707",
+        "intelligence_type": "builder_insight",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Sophie Alpert分享工程师使用AI写作的内部政策，强调对AI生成内容的负责，对AI产品设计和内容策略有直接指导意义，高价值。",
+        "region": "global",
+        "score": 8.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Sophie Alpert提出自然语言文本无无损转换，强调工程师必须对AI辅助写作的每个句子负责，对AI内容工具设计有启发。",
+        "tags": [
+          "AI写作",
+          "内容策略",
+          "工程实践"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "ddc0f69c90d3cfb100d1add748d5d92047f2649fce3b61f2b9f95980a9650749": {
       "created_at": "2026-08-10T02:34:06.038510+00:00",
       "model": "deepseek-v4-flash",
@@ -17800,6 +18641,45 @@
         "tags": [
           "AI图像生成",
           "产品风险"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "e02d6dd4472101ad449564ff22bfabb79ecac948065848c039a7f01867b273c2": {
+      "created_at": "2026-08-12T02:43:31.542903+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "google-gemini-1-billion-users",
+        "evidence_status": "reported",
+        "follow_up": "关注Gemini的语音功能如何持续吸引用户。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:0b5123017330db06",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Gemini",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Google Gemini应用用户数达10亿，且63%用户使用语音功能，属于关键指标，评分8.0。",
+        "region": "global",
+        "score": 8.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Google Gemini应用用户数突破10亿，其中63%用户使用语音功能，显示语音交互需求强劲。",
+        "tags": [
+          "Gemini",
+          "用户增长",
+          "语音交互"
         ],
         "target_user": "",
         "verticals": []
@@ -18373,6 +19253,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "e5af45c998a76bb293400f412fa8ac02cb1d47ffeb8e49580ca2bd4113638f9b": {
+      "created_at": "2026-08-12T02:43:58.738640+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "n8n-2.35.0",
+        "evidence_status": "first_party",
+        "follow_up": "观察AI Agent节点修复效果。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "github:release:368406873",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "n8n",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "n8n发布2.35.0，修复AI Agent节点和MCP工具schema编译等关键问题，对自动化工作流用户有实际价值。",
+        "region": "global",
+        "score": 7.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "n8n发布2.35.0，修复AI Agent节点和MCP工具schema编译等关键问题。",
+        "tags": [
+          "n8n",
+          "Workflow",
+          "AI Agent"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "e5fec50ea4781fb8408a924573efda97021f76a25d730bc1026622729fe4fbd1": {
       "created_at": "2026-07-28T03:48:46.846971+00:00",
       "model": "deepseek-v4-flash",
@@ -18526,6 +19445,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "e760e7c8fd60a2d811489a929a87aee72b41b90b6ac247c8b8969d75826fae36": {
+      "created_at": "2026-08-12T02:43:58.737791+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "codex-rust-v0.148.0-alpha.8",
+        "evidence_status": "early_signal",
+        "follow_up": "关注后续alpha版本的实质功能更新。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "github:release:368778909",
+        "intelligence_type": "early_signal",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "codex",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI Codex的alpha版本发布，无具体内容，仅版本号，信息量低。",
+        "region": "global",
+        "score": 5.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "OpenAI Codex发布alpha版本，无实质更新说明。",
+        "tags": [
+          "Codex",
+          "OpenAI"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "e764765ebc4a76b26a17d29984c5dac2b7b2f15c98d65ddbcc33cda8f098c8ce": {
       "created_at": "2026-08-03T03:53:41.465013+00:00",
       "model": "deepseek-v4-flash",
@@ -18596,6 +19553,44 @@
         "tags": [
           "开放模型",
           "行业趋势"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "e8323ac981df47266f6c79d667b90061f61232f98deeb96234ac6dadc3cc7dbd": {
+      "created_at": "2026-08-12T02:43:47.130920+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-lightcap-departure",
+        "evidence_status": "reported",
+        "follow_up": "关注Lightcap的新创业项目及OpenAI后续人事变动。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:0e01e0ae618e63a6",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI前COO Brad Lightcap离职创业，属于高管动态，对行业格局有影响，但缺乏具体产品信息，价值中等。",
+        "region": "global",
+        "score": 6.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "OpenAI前COO Brad Lightcap离职创业，引发对OpenAI人才流失和未来方向的关注。",
+        "tags": [
+          "OpenAI",
+          "高管离职"
         ],
         "target_user": "",
         "verticals": []
@@ -18784,6 +19779,44 @@
         "what_it_is": "微软发布的首个专门用于网络安全的AI模型，以及一个能自主执行安全任务的代理系统"
       },
       "stage": "deep_analysis"
+    },
+    "e998b0fb94982b968add41a8f8a052c68539c126279504b7793d9e4c5a7c7435": {
+      "created_at": "2026-08-12T02:43:58.739135+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "n8n-beta-2.35.0",
+        "evidence_status": "first_party",
+        "follow_up": "无需关注。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "github:release:368406885",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "n8n",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "n8n beta标签发布，内容与2.35.0相同，重复信息，无额外价值。",
+        "region": "global",
+        "score": 5.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "n8n beta标签发布，内容与2.35.0相同。",
+        "tags": [
+          "n8n",
+          "Workflow"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
     },
     "e9a427e78ed0e5752c617e9e29219959b23c208790951ac7440d920208efcca3": {
       "created_at": "2026-08-11T02:27:24.065991+00:00",
@@ -19665,6 +20698,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "f450afb9d42ff981f995a0ecb8dc23cafe9c32035080c1fa28d1f2584545afbe": {
+      "created_at": "2026-08-12T02:43:47.132350+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "deepseek-overtakes-google-volume",
+        "evidence_status": "first_party",
+        "follow_up": "关注DeepSeek的持续增长及对模型选择的影响。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:vercel.com_changelog_rss:bd5397697c4ea0a6",
+        "intelligence_type": "market_signal",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Vercel AI Gateway数据显示DeepSeek token量超过Google，成本下降13.6%，反映市场格局变化，对AI产品选型有参考价值。",
+        "region": "global",
+        "score": 7.5,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Vercel AI Gateway数据显示DeepSeek token量超过Google，成本下降13.6%，反映AI市场格局变化。",
+        "tags": [
+          "市场数据",
+          "DeepSeek",
+          "成本"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "f545e1fa69bcf9e3041074f64f8696329999c666ba0691b5c5fab69fa1f5f7a1": {
       "created_at": "2026-08-04T03:44:34.627978+00:00",
       "model": "deepseek-v4-flash",
@@ -19736,6 +20808,45 @@
         "tags": [
           "Prompting",
           "Meta Prompting"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "f56bde9dd3e7278fe11212c9f7b23851af1b8d3391efafcfb8d2367c051af02c": {
+      "created_at": "2026-08-12T02:43:47.131844+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "everything-hackable-will-get-hacked",
+        "evidence_status": "first_party",
+        "follow_up": "关注Kimi K3等开放权重模型在安全领域的应用。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:vercel.com_changelog_rss:1113be99a66eb462",
+        "intelligence_type": "builder_insight",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Vercel CTO分析AI在网络安全攻防中的能力变化，指出防御者当前优势及未来风险，对AI安全产品方向有指导意义，高价值。",
+        "region": "global",
+        "score": 8.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Vercel CTO指出AI模型在网络安全攻防中能力增强，防御者当前有优势但不会持久，对AI安全产品有启示。",
+        "tags": [
+          "网络安全",
+          "AI安全",
+          "模型能力"
         ],
         "target_user": "",
         "verticals": []
@@ -20243,6 +21354,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "f8f1b12fab27366fdd35fd11fdcb924393115452c908b83bae0af4a8940eab8b": {
+      "created_at": "2026-08-12T02:43:58.737722+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-agents-python-v0.20.0",
+        "evidence_status": "first_party",
+        "follow_up": "观察新默认模型gpt-5.6-luna的实际表现及MCP迁移影响。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "github:release:368311292",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "openai-agents-python",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI官方发布agents-python v0.20.0，默认模型更新为gpt-5.6-luna，支持MCP v1/v2，新增RunState.add_input()等，对构建agent有直接价值。",
+        "region": "global",
+        "score": 8.5,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "OpenAI发布agents-python v0.20.0，更新默认模型并增强MCP支持，值得关注。",
+        "tags": [
+          "Agent",
+          "OpenAI",
+          "MCP"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "f9358e1e55ed842d29855bea958c3c8e8d36667fdfb911f3e72acd9fbea7adf2": {
       "created_at": "2026-08-01T03:49:06.726057+00:00",
       "model": "deepseek-v4-flash",
@@ -20275,6 +21425,45 @@
         "tags": [
           "ChatGPT Enterprise",
           "企业案例"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "f9652b1c1c8800aa2b674b40d7e2a270a5f080f63b294b1478e1f396a3aab147": {
+      "created_at": "2026-08-12T02:43:31.542779+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "spotify-xirp-agentic-dev-environment",
+        "evidence_status": "reported",
+        "follow_up": "关注Xirp的功能和用户反馈。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:www.producthunt.com_feed:42b39b7a7a69bdf1",
+        "intelligence_type": "product_case",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Xirp",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Spotify推出代理式开发环境Xirp，属于产品案例，但信息来自Product Hunt，缺乏详细反馈，评分7.0。",
+        "region": "global",
+        "score": 7.0,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "Spotify推出代理式开发环境Xirp，值得关注其如何辅助开发。",
+        "tags": [
+          "Spotify",
+          "开发环境",
+          "Agent"
         ],
         "target_user": "",
         "verticals": []
@@ -20657,6 +21846,44 @@
         "what_it_is": "OpenAI 给企业团队用的 ChatGPT Work 产品里，AI agent（智能体，能自主执行多步骤任务的 AI）新增了一项能力：可以像真人一样登录需要用户名密码的网站，而且只需登录一次，之后跨会话都能保持登录状态。"
       },
       "stage": "deep_analysis"
+    },
+    "fe22061322dbd050f600765af6dada14ed8be95ea3e586dffe83bbf139b2279a": {
+      "created_at": "2026-08-12T02:43:31.542806+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "gitar-ai-code-review",
+        "evidence_status": "reported",
+        "follow_up": "关注Gitar的准确性和用户采用。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:www.producthunt.com_feed:6c282e4f914eb3c5",
+        "intelligence_type": "product_case",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Gitar",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Gitar是AI代码审查工具，能修复发现的问题，属于产品案例，但信息来自Product Hunt，缺乏详细反馈，评分7.0。",
+        "region": "global",
+        "score": 7.0,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "Gitar是一款AI代码审查工具，能自动修复发现的问题，值得关注其效率提升。",
+        "tags": [
+          "AI代码审查",
+          "开发者工具"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
     },
     "fe2a411d26d71880e779f05cc8438d0a03822522131f3c6da456326a1e73872b": {
       "created_at": "2026-08-01T03:49:06.726237+00:00",
