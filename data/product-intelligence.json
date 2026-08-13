@@ -1,28 +1,431 @@
 {
   "version": 1,
-  "updated_at": "2026-08-12T02:44:37.355317+00:00",
+  "updated_at": "2026-08-13T02:48:02.063874+00:00",
   "products": [
     {
-      "product_id": "product-92d1b297c66cce17",
-      "product_name": "ChatGPT",
-      "builder_name": "OpenAI News",
-      "first_seen": "2026-07-30",
-      "last_seen": "2026-08-12",
+      "product_id": "product-57ffcbb51df642bc",
+      "product_name": "SL2T（sign-language-to-text）",
+      "builder_name": "Google DeepMind",
+      "first_seen": "2026-08-13",
+      "last_seen": "2026-08-13",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "聋人、听障人士，以及需要与手语使用者交流的听人",
+      "user_problem": "手语使用者日常遇到视频通话、面对面交流时，对方不懂手语，只能靠文字打字或找翻译员，沟通门槛高、实时性差",
+      "what_it_is": "SL2T 是一个能把视频里的手语动作直接转换成文字的 AI 模型，首发搭载在 Pixel 11 手机上，帮聋人和听障用户更方便地与外界文字沟通。",
+      "ai_role": "负责把视频流中的手语视觉信息实时解码成文本，替代传统的人工翻译或打字中转",
+      "implementation_idea": "核心思路是'视频理解+多语言翻译'：先让 AI 看懂手语视频里的手势、表情和身体姿态（多模态输入），再把这些视觉信息映射到对应文字。由于是'多语言'模型，意味着它可能支持不同国家的手语体系，而不是只学了一套手语。",
+      "hands_on_exercise": "打开你的手机相机，录一段 10 秒的自己比划手势的视频（不用标准手语，随意动作即可）。然后思考：如果让你设计一个程序来'看懂'这段视频，你需要提取哪些视觉特征？手势形状？运动轨迹？面部朝向？把这些特征列出来，再和 SL2T 的'多模态视频理解'思路对比，体会 AI 要处理的信息复杂度。",
+      "limitations_or_uncertainties": "具体支持哪些国家/地区的手语未公开；实时延迟多少毫秒未公开；是否需要联网运行还是端侧本地运行未公开；Pixel 11 以外设备何时可用未公开；对光线不佳、遮挡、快速手语的鲁棒性未公开",
+      "region": "global",
+      "score": 8.5,
+      "summary": "Google DeepMind 推出手语转文本模型 SL2T，为聋人和听障用户提供新功能。",
+      "title": "Google DeepMind 发布手语转文本模型，让 AI 读懂手语",
+      "url": "https://deepmind.google/blog/putting-sign-language-ai-into-users-hands/",
+      "sources": [
+        {
+          "url": "https://deepmind.google/blog/putting-sign-language-ai-into-users-hands/",
+          "title": "Putting sign language AI into users’ hands",
+          "source_type": "rss",
+          "published_at": "2026-08-12T14:01:59+00:00"
+        },
+        {
+          "url": "https://siliconangle.com/2026/08/12/google-debuts-sl2t-ai-model-thats-designed-understand-sign-language/",
+          "title": "Google debuts SL 2 T , an AI model that's designed to... - SiliconANGLE",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "deepmind-sign-language-ai-sl2t",
+          "date": "2026-08-13",
+          "title": "Google DeepMind 发布手语转文本模型，让 AI 读懂手语",
+          "summary": "Google DeepMind 推出手语转文本模型 SL2T，为聋人和听障用户提供新功能。",
+          "score": 8.5,
+          "url": "https://deepmind.google/blog/putting-sign-language-ai-into-users-hands/"
+        }
+      ],
+      "usage_flow": [
+        "用户打开 Pixel 11 手机的相机，对准手语使用者拍摄",
+        "SL2T 模型实时识别手语动作并转换成文字",
+        "文字显示在屏幕上，对方可以直接阅读",
+        "如需回复，听障用户可打字或继续用手语，形成双向沟通"
+      ],
+      "learning_points": [
+        "多模态模型：不只是处理文字，还能同时理解图片、视频、声音等多种信息，SL2T 就是让 AI'看视频'再'写文字'",
+        "Embedding：把不同形式的信息（手势、文字）变成同一套数学向量，让 AI 能比较'这个手势'和'这个词'是不是对应",
+        "端到端翻译：传统做法分两步（先识别手势→再查词典），SL2T 可能是直接从视频跳到文字，减少中间误差"
+      ],
+      "verticals": [],
+      "tags": [
+        "多模态",
+        "无障碍"
+      ]
+    },
+    {
+      "product_id": "product-65daefa7ee26447d",
+      "product_name": "Delta",
+      "builder_name": "khy",
+      "first_seen": "2026-08-13",
+      "last_seen": "2026-08-13",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "远程团队开发者、需要带教初级工程师的技术负责人、做代码审查的团队成员",
+      "user_problem": "远程协作时，代码审查只能看最终 PR 结果，看不到 AI 生成代码的过程；AI 对话是私人的，团队成员无法追溯或纠正其中的错误思路",
+      "what_it_is": "Zed 代码编辑器新增的一个功能模块，让多人能在同一份代码里实时协作，同时把 AI 对话也变成可以多人一起参与、 inline 评论的文档",
+      "ai_role": "AI Agent（内置智能体，能自动分析代码、生成修改、回答技术问题）参与实时协作流，其对话过程可被团队成员打断、评论和纠正",
+      "implementation_idea": "未公开。从功能描述推测，核心是把原本单人的 AI 对话变成\"可协作的文档对象\"，同时编辑器底层支持多人实时同步（类似 CRDT 或操作转换技术保证多人编辑不冲突），但具体技术方案 Zed 未披露",
+      "hands_on_exercise": "打开 Zed 编辑器（免费下载），创建一个新项目，尝试用内置的 AI Agent 功能让它解释一段代码；然后想象如果你要和同事一起修改这段代码，你会在 AI 的哪条回复旁加评论——用纸笔或文档写下 3 个你想追问 AI 的问题",
+      "limitations_or_uncertainties": "未公开具体技术架构；未公布是否支持离线编辑后同步；未确认免费/付费模式；社区存在争议（部分开发者认为\"编程是单人活动\"，多人协作编辑需求存疑）",
+      "region": "global",
+      "score": 8.2,
+      "summary": "Zed推出Delta，在代码编辑器中实现多人实时协作与AI对话，解决远程团队协作痛点，值得关注其产品设计。",
+      "title": "Zed 推出 Delta：代码编辑器里的多人实时协作 + AI 对话",
+      "url": "https://zed.dev/blog/introducing-delta",
+      "sources": [
+        {
+          "url": "https://zed.dev/blog/introducing-delta",
+          "title": "Delta",
+          "source_type": "hackernews",
+          "published_at": "2026-08-12T18:19:59+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "zed-delta-multiplayer-ai",
+          "date": "2026-08-13",
+          "title": "Zed 推出 Delta：代码编辑器里的多人实时协作 + AI 对话",
+          "summary": "Zed推出Delta，在代码编辑器中实现多人实时协作与AI对话，解决远程团队协作痛点，值得关注其产品设计。",
+          "score": 8.2,
+          "url": "https://zed.dev/blog/introducing-delta"
+        }
+      ],
+      "usage_flow": [
+        "在 Zed 编辑器里开启一个 Delta 会话，邀请团队成员加入同一份代码",
+        "像 Google Docs 一样实时看到其他人的光标和编辑，同时让 AI Agent 生成或修改代码",
+        "在 AI 对话的任意消息旁添加 inline 评论，指出遗漏或纠正逻辑",
+        "把完整对话过程保存为可回顾的文档，后续新人能看到\"当时为什么这么写\""
+      ],
+      "learning_points": [
+        "AI Agent：一种能自主执行任务的 AI，不只是回答问题，还能直接操作工具（如改代码、查文档）。Delta 里的 AI Agent 可以实时生成代码修改",
+        "CRDT（无冲突复制数据类型）：多人同时编辑同一份内容时，让所有人的修改自动合并、不丢数据的一种技术思路，是在线协作产品的底层核心",
+        "对话即文档（Conversation-as-document）：把 AI 交互过程变成结构化、可评论、可版本化的记录，解决\"黑盒生成\"不可追溯的问题"
+      ],
+      "verticals": [],
+      "tags": [
+        "AI编辑器",
+        "多人协作",
+        "实时对话"
+      ]
+    },
+    {
+      "product_id": "product-7f7811de59626bc9",
+      "product_name": "Claude Code",
+      "builder_name": "ashwin-ant",
+      "first_seen": "2026-07-26",
+      "last_seen": "2026-08-13",
+      "occurrence_count": 3,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "需要在终端或 IDE 里写代码、改代码、调试的开发者",
+      "user_problem": "开发者用 AI 辅助编程时，工具调用过程太嘈杂干扰思路；沙箱环境里怕敏感凭据泄露；旧版提示词在新模型上效果变差却难排查；并行工具调用的权限检查又慢又贵。",
+      "what_it_is": "Claude Code 发布 v2.1.229，新增远程控制恢复、插件市场命令源等多项功能。",
+      "ai_role": "理解用户意图后，自主决定读哪些文件、改哪几行、执行什么命令，并把执行过程和结果反馈给用户确认",
+      "implementation_idea": "Claude Code 本质上是一个 Agent（智能体）：它把用户的自然语言目标拆解成一步步操作，每步调用'工具'（如读文件、写文件、跑 Bash）。新版 Focus view 是在 UI 层把工具调用的详细日志折叠起来；沙箱凭据保护则是让 AI 在隔离环境里只能看到'假值'，真实密码在数据离开沙箱时才由代理层替换。",
+      "hands_on_exercise": "30 分钟体验：找一个本地 Git 项目，安装 Claude Code，让它解释一个复杂函数的实现；然后开启 Focus view（Ctrl+Alt+F）对比折叠前后的界面差异；最后故意写一条带模型版本假设的旧提示词，运行 `claude-api prompt-audit` 看它会报什么问题。",
+      "limitations_or_uncertainties": "macOS 上沙箱凭据 mask 功能回退到 deny 模式，具体限制范围未公开；prompt-audit 的检测规则和覆盖的'旧模型模式'清单未公开；背景会话（background sessions）的自动推送到远程仓库的具体策略细节未公开。",
+      "region": "global",
+      "score": 8.0,
+      "summary": "Claude Code 发布 v2.1.229，新增远程控制恢复、插件市场命令源等多项功能。",
+      "title": "anthropics/claude-code released v2.1.229",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.229",
+      "sources": [
+        {
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.219",
+          "title": "anthropics/claude-code released v2.1.219",
+          "source_type": "github",
+          "published_at": "2026-07-24T17:14:23+00:00"
+        },
+        {
+          "url": "https://claude.com/product/claude-code",
+          "title": "Claude Code by Anthropic | AI Coding Agent, Terminal, IDE",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.221",
+          "title": "anthropics/claude-code released v2.1.221",
+          "source_type": "github",
+          "published_at": "2026-08-04T00:14:23+00:00"
+        },
+        {
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.229",
+          "title": "anthropics/claude-code released v2.1.229",
+          "source_type": "github",
+          "published_at": "2026-08-12T20:56:22+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "claude-code-v2.1.219",
+          "date": "2026-07-26",
+          "title": "Claude Code v2.1.219：新增 Opus 5 模型支持与网络沙箱白名单",
+          "summary": "Claude Code v2.1.219新增Opus 5模型支持、网络沙箱白名单等多项功能。",
+          "score": 8.0,
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.219"
+        },
+        {
+          "update_id": "claude-code-v2.1.221-release",
+          "date": "2026-08-04",
+          "title": "Claude Code v2.1.221：新增专注视图、沙箱凭据保护和提示审计功能",
+          "summary": "Anthropic 发布 Claude Code v2.1.221，新增 Focus view 和 sandbox 凭据保护等功能，提升开发体验和安全性。",
+          "score": 8.5,
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.221"
+        },
+        {
+          "update_id": "claude-code-v2.1.229-release",
+          "date": "2026-08-13",
+          "title": "anthropics/claude-code released v2.1.229",
+          "summary": "Claude Code 发布 v2.1.229，新增远程控制恢复、插件市场命令源等多项功能。",
+          "score": 8.0,
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.229"
+        }
+      ],
+      "usage_flow": [
+        "在终端安装并启动 claude，用自然语言描述需求（如'给这个项目加登录功能'）",
+        "AI 自动分析代码库，必要时用 /add-dir 添加更多目录到上下文",
+        "AI 提出修改方案，经确认后自动编辑文件、运行命令",
+        "开发者检查 git diff，确认无误后提交代码",
+        "安装 Claude Code CLI，在代码仓库目录下运行 `claude` 启动对话",
+        "用自然语言描述需求（如'给这个函数加单元测试'），AI 自动读文件、改代码、跑命令",
+        "按 `Ctrl+Alt+F` 开启 Focus view，把工具执行细节折叠成可展开摘要，专注看对话",
+        "用 `claude-api prompt-audit` 检查旧提示词是否适合当前模型，确认后提交代码"
+      ],
+      "learning_points": [
+        "Context window（上下文窗口）：模型一次能'看'多少字，Opus 5 的 1M 约等于能塞进整本《三体》第一部，让 AI 分析大型代码库不丢线索",
+        "Agent（智能体）：不只是聊天回复，而是能自主决定'我要先读哪个文件、再改哪行、然后跑测试'的 AI 系统",
+        "Function calling（函数调用）：模型不直接生成答案，而是输出结构化指令（如'调用 read_file 工具'），由外部程序执行后再把结果喂回模型",
+        "Agent：不只是问答，而是能自主规划步骤、调用工具完成任务的 AI 系统",
+        "Function Calling（函数调用）：LLM 输出结构化指令让程序去执行具体操作，比如'读这个文件'或'运行这个测试'",
+        "Prompt 审计：不同模型对提示词的敏感度不同，旧提示词可能在新模型上失效，需要系统性检查"
+      ],
+      "verticals": [],
+      "tags": [
+        "工具更新",
+        "Claude Code",
+        "Opus 5",
+        "Agent",
+        "开发者工具",
+        "更新"
+      ]
+    },
+    {
+      "product_id": "product-d54da5fde4c06095",
+      "product_name": "Vercel AI Gateway",
+      "builder_name": "Jerilyn Zheng",
+      "first_seen": "2026-08-01",
+      "last_seen": "2026-08-13",
       "occurrence_count": 2,
-      "intelligence_type": "business_policy",
+      "intelligence_type": "product_case",
       "evidence_status": "first_party",
       "target_user": "未公开",
       "user_problem": "未公开",
-      "what_it_is": "OpenAI开始在ChatGPT中测试广告，以支持免费访问，但强调广告清晰标注、不影响回答独立性。",
+      "what_it_is": "Vercel AI Gateway 更新支持 DeepSeek V4 Pro 0813 权重，开发者可直接调用。",
       "ai_role": "未公开",
       "implementation_idea": "未公开",
       "hands_on_exercise": "未公开",
       "limitations_or_uncertainties": "未公开",
       "region": "global",
-      "score": 8.5,
-      "summary": "OpenAI开始在ChatGPT中测试广告，以支持免费访问，但强调广告清晰标注、不影响回答独立性。",
-      "title": "Testing ads in ChatGPT",
-      "url": "https://openai.com/index/testing-ads-in-chatgpt",
+      "score": 8.0,
+      "summary": "Vercel AI Gateway 更新支持 DeepSeek V4 Pro 0813 权重，开发者可直接调用。",
+      "title": "DeepSeek V4 Pro now runs updated weights on AI Gateway",
+      "url": "https://vercel.com/changelog/deepseek-v4-pro-now-runs-updated-weights-on-ai-gateway",
+      "sources": [
+        {
+          "url": "https://vercel.com/changelog/ai-gateway-spend-budgets-and-alerts",
+          "title": "AI Gateway now supports team and project spend budgets",
+          "source_type": "rss",
+          "published_at": "2026-07-31T17:00:00+00:00"
+        },
+        {
+          "url": "https://vercel.com/changelog/deepseek-v4-pro-now-runs-updated-weights-on-ai-gateway",
+          "title": "DeepSeek V4 Pro now runs updated weights on AI Gateway",
+          "source_type": "rss",
+          "published_at": "2026-08-12T07:00:00+00:00"
+        },
+        {
+          "url": "https://simonwillison.net/2026/Aug/12/deepseek-v4-pro-0813/",
+          "title": "DeepSeek V4 Pro 0813 (on OpenRouter)",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://openrouter.ai/deepseek/deepseek-v4-pro-0813",
+          "title": "DeepSeek V4 Pro 0813",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "vercel-ai-gateway-spend-budgets",
+          "date": "2026-08-01",
+          "title": "AI Gateway now supports team and project spend budgets",
+          "summary": "Vercel 的 AI Gateway 新增团队和项目级预算控制，帮助开发者限制 AI 调用成本，防止超支。",
+          "score": 7.5,
+          "url": "https://vercel.com/changelog/ai-gateway-spend-budgets-and-alerts"
+        },
+        {
+          "update_id": "vercel-ai-gateway-deepseek-v4-pro-0813",
+          "date": "2026-08-13",
+          "title": "DeepSeek V4 Pro now runs updated weights on AI Gateway",
+          "summary": "Vercel AI Gateway 更新支持 DeepSeek V4 Pro 0813 权重，开发者可直接调用。",
+          "score": 8.0,
+          "url": "https://vercel.com/changelog/deepseek-v4-pro-now-runs-updated-weights-on-ai-gateway"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "AI Gateway",
+        "成本控制",
+        "开发者工具",
+        "Vercel",
+        "DeepSeek"
+      ]
+    },
+    {
+      "product_id": "product-59f2ebd0c000bff1",
+      "product_name": "Azure Content Understanding",
+      "builder_name": "Joe Filcik, Krishnakumar Muthukrishnan",
+      "first_seen": "2026-08-13",
+      "last_seen": "2026-08-13",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "微软发布 Azure Content Understanding GPT-5 系列指南，涵盖模型选择、grounding 改进和置信度增强。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.0,
+      "summary": "微软发布 Azure Content Understanding GPT-5 系列指南，涵盖模型选择、grounding 改进和置信度增强。",
+      "title": "Azure Content Understanding GPT-5 Series Guide: Model Selection, Grounding Improvements, and Confidence Enhancements",
+      "url": "https://devblogs.microsoft.com/foundry/azure-content-understanding-gpt-5-series-guide-model-selection-grounding-improvements-and-confidence-enhancements/",
+      "sources": [
+        {
+          "url": "https://devblogs.microsoft.com/foundry/azure-content-understanding-gpt-5-series-guide-model-selection-grounding-improvements-and-confidence-enhancements/",
+          "title": "Azure Content Understanding GPT-5 Series Guide: Model Selection, Grounding Improvements, and Confidence Enhancements",
+          "source_type": "rss",
+          "published_at": "2026-08-12T18:42:25+00:00"
+        },
+        {
+          "url": "https://devblogs.microsoft.com/foundry/azure-content-understanding-updates-august-2026/",
+          "title": "From Sync APIs to support for the GPT-5 model series and agentic workflows: What’s new in Azure Content Understanding – August 2026",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "azure-content-understanding-gpt5-guide",
+          "date": "2026-08-13",
+          "title": "Azure Content Understanding GPT-5 Series Guide: Model Selection, Grounding Improvements, and Confidence Enhancements",
+          "summary": "微软发布 Azure Content Understanding GPT-5 系列指南，涵盖模型选择、grounding 改进和置信度增强。",
+          "score": 8.0,
+          "url": "https://devblogs.microsoft.com/foundry/azure-content-understanding-gpt-5-series-guide-model-selection-grounding-improvements-and-confidence-enhancements/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "企业应用",
+        "模型选择"
+      ]
+    },
+    {
+      "product_id": "product-5782102e96d16c30",
+      "product_name": "Grok Bot",
+      "builder_name": "Jess Weatherbed",
+      "first_seen": "2026-08-13",
+      "last_seen": "2026-08-13",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "SpaceXAI 推出 Grok Bot，一种常驻 AI 代理，可像团队成员一样自主完成多步骤工作任务。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.0,
+      "summary": "SpaceXAI 推出 Grok Bot，一种常驻 AI 代理，可像团队成员一样自主完成多步骤工作任务。",
+      "title": "Grok is now an AI ‘teammate’ you can assign work",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/978666/spacexai-grok-bot-ai-agent-beta-launch",
+      "sources": [
+        {
+          "url": "https://www.theverge.com/ai-artificial-intelligence/978666/spacexai-grok-bot-ai-agent-beta-launch",
+          "title": "Grok is now an AI ‘teammate’ you can assign work",
+          "source_type": "rss",
+          "published_at": "2026-08-12T11:58:54+00:00"
+        },
+        {
+          "url": "https://www.latent.space/p/ainews-spacexai-grok-46-and-grok",
+          "title": "[AINews] SpaceXAI Grok 4.6 and Grok @Bot",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "grok-bot-ai-teammate",
+          "date": "2026-08-13",
+          "title": "Grok is now an AI ‘teammate’ you can assign work",
+          "summary": "SpaceXAI 推出 Grok Bot，一种常驻 AI 代理，可像团队成员一样自主完成多步骤工作任务。",
+          "score": 8.0,
+          "url": "https://www.theverge.com/ai-artificial-intelligence/978666/spacexai-grok-bot-ai-agent-beta-launch"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "AI代理",
+        "Agent",
+        "Grok"
+      ]
+    },
+    {
+      "product_id": "product-92d1b297c66cce17",
+      "product_name": "ChatGPT",
+      "builder_name": "OpenAI News",
+      "first_seen": "2026-07-30",
+      "last_seen": "2026-08-13",
+      "occurrence_count": 3,
+      "intelligence_type": "market_signal",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "OpenAI 发布研究报告，揭示企业如何采用 agentic AI，使用 ChatGPT 和 Codex，前沿企业领先。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.5,
+      "summary": "OpenAI 发布研究报告，揭示企业如何采用 agentic AI，使用 ChatGPT 和 Codex，前沿企业领先。",
+      "title": "From assistance to execution: How enterprises put AI to work",
+      "url": "https://openai.com/index/how-enterprises-put-ai-to-work",
       "sources": [
         {
           "url": "https://openai.com/index/chatgpt-for-academic-researchers",
@@ -35,6 +438,12 @@
           "title": "Testing ads in ChatGPT",
           "source_type": "rss",
           "published_at": "2026-08-11T10:00:00+00:00"
+        },
+        {
+          "url": "https://openai.com/index/how-enterprises-put-ai-to-work",
+          "title": "From assistance to execution: How enterprises put AI to work",
+          "source_type": "rss",
+          "published_at": "2026-08-12T06:00:00+00:00"
         }
       ],
       "updates": [
@@ -53,6 +462,14 @@
           "summary": "OpenAI开始在ChatGPT中测试广告，以支持免费访问，但强调广告清晰标注、不影响回答独立性。",
           "score": 8.5,
           "url": "https://openai.com/index/testing-ads-in-chatgpt"
+        },
+        {
+          "update_id": "openai-enterprise-agentic-ai-report",
+          "date": "2026-08-13",
+          "title": "From assistance to execution: How enterprises put AI to work",
+          "summary": "OpenAI 发布研究报告，揭示企业如何采用 agentic AI，使用 ChatGPT 和 Codex，前沿企业领先。",
+          "score": 7.5,
+          "url": "https://openai.com/index/how-enterprises-put-ai-to-work"
         }
       ],
       "usage_flow": [],
@@ -63,7 +480,152 @@
         "ChatGPT",
         "学术",
         "广告",
-        "商业模式"
+        "商业模式",
+        "企业应用",
+        "Agent"
+      ]
+    },
+    {
+      "product_id": "product-7ef7fb92aac6a47b",
+      "product_name": "Unsloth Desktop",
+      "builder_name": "Zac Zuo",
+      "first_seen": "2026-08-13",
+      "last_seen": "2026-08-13",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Unsloth 推出桌面应用，让用户能在本地电脑上运行和训练 AI 模型，解决数据隐私和离线使用问题。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.5,
+      "summary": "Unsloth 推出桌面应用，让用户能在本地电脑上运行和训练 AI 模型，解决数据隐私和离线使用问题。",
+      "title": "Unsloth Desktop",
+      "url": "https://www.producthunt.com/products/unsloth",
+      "sources": [
+        {
+          "url": "https://www.producthunt.com/products/unsloth",
+          "title": "Unsloth Desktop",
+          "source_type": "rss",
+          "published_at": "2026-08-12T03:47:50+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "unsloth-desktop-launch",
+          "date": "2026-08-13",
+          "title": "Unsloth Desktop",
+          "summary": "Unsloth 推出桌面应用，让用户能在本地电脑上运行和训练 AI 模型，解决数据隐私和离线使用问题。",
+          "score": 7.5,
+          "url": "https://www.producthunt.com/products/unsloth"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "本地AI",
+        "训练",
+        "桌面应用"
+      ]
+    },
+    {
+      "product_id": "product-0582a905bf110287",
+      "product_name": "OpenRouter",
+      "builder_name": "OpenRouter Rankings",
+      "first_seen": "2026-08-13",
+      "last_seen": "2026-08-13",
+      "occurrence_count": 1,
+      "intelligence_type": "market_signal",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "OpenRouter 发布 AI 模型热度 Top 5，包括 DeepSeek V4 Flash、腾讯 Hy3、GPT-5.6 Luna 等，反映市场趋势。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.5,
+      "summary": "OpenRouter 发布 AI 模型热度 Top 5，包括 DeepSeek V4 Flash、腾讯 Hy3、GPT-5.6 Luna 等，反映市场趋势。",
+      "title": "OpenRouter AI 模型热度 Top 5",
+      "url": "https://openrouter.ai/rankings",
+      "sources": [
+        {
+          "url": "https://openrouter.ai/rankings",
+          "title": "OpenRouter AI 模型热度 Top 5",
+          "source_type": "public_web",
+          "published_at": "2026-08-13T02:46:21.981921+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "openrouter-top5-models-ranking",
+          "date": "2026-08-13",
+          "title": "OpenRouter AI 模型热度 Top 5",
+          "summary": "OpenRouter 发布 AI 模型热度 Top 5，包括 DeepSeek V4 Flash、腾讯 Hy3、GPT-5.6 Luna 等，反映市场趋势。",
+          "score": 7.5,
+          "url": "https://openrouter.ai/rankings"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "模型排行",
+        "市场趋势"
+      ]
+    },
+    {
+      "product_id": "product-0d571ded23669998",
+      "product_name": "Muse Glimmer",
+      "builder_name": "AI News",
+      "first_seen": "2026-08-13",
+      "last_seen": "2026-08-13",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Meta发布开源多模态模型Muse Glimmer并预告Spark 1.2，值得关注其开源策略。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.0,
+      "summary": "Meta发布开源多模态模型Muse Glimmer并预告Spark 1.2，值得关注其开源策略。",
+      "title": "not much happened today",
+      "url": "https://news.smol.ai/issues/26-08-10-not-much/",
+      "sources": [
+        {
+          "url": "https://news.smol.ai/issues/26-08-10-not-much/",
+          "title": "not much happened today",
+          "source_type": "newsletter",
+          "published_at": "2026-08-10T05:44:39+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "meta-muse-glimmer-spark-1.2-release",
+          "date": "2026-08-13",
+          "title": "not much happened today",
+          "summary": "Meta发布开源多模态模型Muse Glimmer并预告Spark 1.2，值得关注其开源策略。",
+          "score": 7.0,
+          "url": "https://news.smol.ai/issues/26-08-10-not-much/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "模型发布",
+        "Meta",
+        "开源"
       ]
     },
     {
@@ -3777,92 +4339,6 @@
       ]
     },
     {
-      "product_id": "product-7f7811de59626bc9",
-      "product_name": "Claude Code",
-      "builder_name": "ashwin-ant",
-      "first_seen": "2026-07-26",
-      "last_seen": "2026-08-04",
-      "occurrence_count": 2,
-      "intelligence_type": "product_case",
-      "evidence_status": "first_party",
-      "target_user": "需要在终端或 IDE 里写代码、改代码、调试的开发者",
-      "user_problem": "开发者用 AI 辅助编程时，工具调用过程太嘈杂干扰思路；沙箱环境里怕敏感凭据泄露；旧版提示词在新模型上效果变差却难排查；并行工具调用的权限检查又慢又贵。",
-      "what_it_is": "Anthropic 出的命令行 AI 编程助手，能读代码库、改文件、跑命令，像个住在终端里的程序员搭档。",
-      "ai_role": "理解用户意图后，自主决定读哪些文件、改哪几行、执行什么命令，并把执行过程和结果反馈给用户确认",
-      "implementation_idea": "Claude Code 本质上是一个 Agent（智能体）：它把用户的自然语言目标拆解成一步步操作，每步调用'工具'（如读文件、写文件、跑 Bash）。新版 Focus view 是在 UI 层把工具调用的详细日志折叠起来；沙箱凭据保护则是让 AI 在隔离环境里只能看到'假值'，真实密码在数据离开沙箱时才由代理层替换。",
-      "hands_on_exercise": "30 分钟体验：找一个本地 Git 项目，安装 Claude Code，让它解释一个复杂函数的实现；然后开启 Focus view（Ctrl+Alt+F）对比折叠前后的界面差异；最后故意写一条带模型版本假设的旧提示词，运行 `claude-api prompt-audit` 看它会报什么问题。",
-      "limitations_or_uncertainties": "macOS 上沙箱凭据 mask 功能回退到 deny 模式，具体限制范围未公开；prompt-audit 的检测规则和覆盖的'旧模型模式'清单未公开；背景会话（background sessions）的自动推送到远程仓库的具体策略细节未公开。",
-      "region": "global",
-      "score": 8.5,
-      "summary": "Anthropic 发布 Claude Code v2.1.221，新增 Focus view 和 sandbox 凭据保护等功能，提升开发体验和安全性。",
-      "title": "Claude Code v2.1.221：新增专注视图、沙箱凭据保护和提示审计功能",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.221",
-      "sources": [
-        {
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.219",
-          "title": "anthropics/claude-code released v2.1.219",
-          "source_type": "github",
-          "published_at": "2026-07-24T17:14:23+00:00"
-        },
-        {
-          "url": "https://claude.com/product/claude-code",
-          "title": "Claude Code by Anthropic | AI Coding Agent, Terminal, IDE",
-          "source_type": "supplemental",
-          "published_at": ""
-        },
-        {
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.221",
-          "title": "anthropics/claude-code released v2.1.221",
-          "source_type": "github",
-          "published_at": "2026-08-04T00:14:23+00:00"
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "claude-code-v2.1.219",
-          "date": "2026-07-26",
-          "title": "Claude Code v2.1.219：新增 Opus 5 模型支持与网络沙箱白名单",
-          "summary": "Claude Code v2.1.219新增Opus 5模型支持、网络沙箱白名单等多项功能。",
-          "score": 8.0,
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.219"
-        },
-        {
-          "update_id": "claude-code-v2.1.221-release",
-          "date": "2026-08-04",
-          "title": "Claude Code v2.1.221：新增专注视图、沙箱凭据保护和提示审计功能",
-          "summary": "Anthropic 发布 Claude Code v2.1.221，新增 Focus view 和 sandbox 凭据保护等功能，提升开发体验和安全性。",
-          "score": 8.5,
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.221"
-        }
-      ],
-      "usage_flow": [
-        "在终端安装并启动 claude，用自然语言描述需求（如'给这个项目加登录功能'）",
-        "AI 自动分析代码库，必要时用 /add-dir 添加更多目录到上下文",
-        "AI 提出修改方案，经确认后自动编辑文件、运行命令",
-        "开发者检查 git diff，确认无误后提交代码",
-        "安装 Claude Code CLI，在代码仓库目录下运行 `claude` 启动对话",
-        "用自然语言描述需求（如'给这个函数加单元测试'），AI 自动读文件、改代码、跑命令",
-        "按 `Ctrl+Alt+F` 开启 Focus view，把工具执行细节折叠成可展开摘要，专注看对话",
-        "用 `claude-api prompt-audit` 检查旧提示词是否适合当前模型，确认后提交代码"
-      ],
-      "learning_points": [
-        "Context window（上下文窗口）：模型一次能'看'多少字，Opus 5 的 1M 约等于能塞进整本《三体》第一部，让 AI 分析大型代码库不丢线索",
-        "Agent（智能体）：不只是聊天回复，而是能自主决定'我要先读哪个文件、再改哪行、然后跑测试'的 AI 系统",
-        "Function calling（函数调用）：模型不直接生成答案，而是输出结构化指令（如'调用 read_file 工具'），由外部程序执行后再把结果喂回模型",
-        "Agent：不只是问答，而是能自主规划步骤、调用工具完成任务的 AI 系统",
-        "Function Calling（函数调用）：LLM 输出结构化指令让程序去执行具体操作，比如'读这个文件'或'运行这个测试'",
-        "Prompt 审计：不同模型对提示词的敏感度不同，旧提示词可能在新模型上失效，需要系统性检查"
-      ],
-      "verticals": [],
-      "tags": [
-        "工具更新",
-        "Claude Code",
-        "Opus 5",
-        "Agent",
-        "开发者工具"
-      ]
-    },
-    {
       "product_id": "product-03c84cffde99f305",
       "product_name": "GPT-Live",
       "builder_name": "OpenAI News",
@@ -5325,54 +5801,6 @@
         "MCP",
         "工具",
         "开源"
-      ]
-    },
-    {
-      "product_id": "product-d54da5fde4c06095",
-      "product_name": "Vercel AI Gateway",
-      "builder_name": "Jerilyn Zheng",
-      "first_seen": "2026-08-01",
-      "last_seen": "2026-08-01",
-      "occurrence_count": 1,
-      "intelligence_type": "product_case",
-      "evidence_status": "first_party",
-      "target_user": "未公开",
-      "user_problem": "未公开",
-      "what_it_is": "Vercel 的 AI Gateway 新增团队和项目级预算控制，帮助开发者限制 AI 调用成本，防止超支。",
-      "ai_role": "未公开",
-      "implementation_idea": "未公开",
-      "hands_on_exercise": "未公开",
-      "limitations_or_uncertainties": "未公开",
-      "region": "global",
-      "score": 7.5,
-      "summary": "Vercel 的 AI Gateway 新增团队和项目级预算控制，帮助开发者限制 AI 调用成本，防止超支。",
-      "title": "AI Gateway now supports team and project spend budgets",
-      "url": "https://vercel.com/changelog/ai-gateway-spend-budgets-and-alerts",
-      "sources": [
-        {
-          "url": "https://vercel.com/changelog/ai-gateway-spend-budgets-and-alerts",
-          "title": "AI Gateway now supports team and project spend budgets",
-          "source_type": "rss",
-          "published_at": "2026-07-31T17:00:00+00:00"
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "vercel-ai-gateway-spend-budgets",
-          "date": "2026-08-01",
-          "title": "AI Gateway now supports team and project spend budgets",
-          "summary": "Vercel 的 AI Gateway 新增团队和项目级预算控制，帮助开发者限制 AI 调用成本，防止超支。",
-          "score": 7.5,
-          "url": "https://vercel.com/changelog/ai-gateway-spend-budgets-and-alerts"
-        }
-      ],
-      "usage_flow": [],
-      "learning_points": [],
-      "verticals": [],
-      "tags": [
-        "AI Gateway",
-        "成本控制",
-        "开发者工具"
       ]
     },
     {
