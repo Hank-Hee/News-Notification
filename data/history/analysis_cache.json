@@ -610,6 +610,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "07757563d92137512a75a251fc6ac9492e9d1d9b632d3efeb1d835334998191f": {
+      "created_at": "2026-08-14T02:45:44.146404+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "gemini-3.7-flash-introduction",
+        "evidence_status": "early_signal",
+        "follow_up": "获取 Gemini 3.7 Flash 的详细技术规格和应用场景",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:deepmind.google_blog_rss.xml:43643a3dd841363b",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Gemini 3.7 Flash",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Google DeepMind 官方发布 Gemini 3.7 Flash，属于模型能力的重要更新，但内容为空，需进一步获取详情。",
+        "region": "global",
+        "score": 8.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Google DeepMind 发布 Gemini 3.7 Flash，但官方博客内容为空，需关注后续详情。",
+        "tags": [
+          "Gemini",
+          "新模型"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "0834886114e0b66be08e6920277bfef890eea0727415184a652e68423bb76ed9": {
       "created_at": "2026-08-12T02:44:18.656153+00:00",
       "model": "kimi-k2.6",
@@ -795,6 +833,38 @@
         "verticals": []
       },
       "stage": "candidate_analysis"
+    },
+    "0996769d350d019b8bf7abea57df131e3096c60ab5103ccf071d3041af9bb8c3": {
+      "created_at": "2026-08-14T02:47:03.384704+00:00",
+      "model": "kimi-k2.6",
+      "prompt_version": "deep-v3-beginner",
+      "result": {
+        "ai_role": "AI 作为执行主体，既能独立处理用户指令，也能作为子代理被主会话调度，还能跨会话接收和响应消息",
+        "evidence_status": "first_party",
+        "hands_on_exercise": "安装 Claude Code 后开两个终端窗口各运行 `claude`，在 A 窗口输入 `@B窗口的名称 帮我看看这个报错` 测试跨会话消息；然后用 `/config` 把 B 的跨会话消息设为 'hold'，观察 A 的消息是否被暂存",
+        "implementation_idea": "核心是把单个 Claude 会话变成可分叉的进程——主会话像项目经理，可以派生子代理（fork）去后台干活，子代理带着完整对话记忆开工；同时给每个会话起唯一名字，让会话之间能通过 SendMessage 直接喊话，像企业微信 @同事一样",
+        "learning_points": [
+          "Agent（智能体）：能自主规划、调用工具、完成多步骤任务的 AI 程序，不只是聊天",
+          "Fork（分叉）：从现有进程复制出一个独立进程，子进程继承父进程的状态但之后各跑各的，互不干扰",
+          "Secret redaction（敏感信息脱敏）：自动识别并隐藏令牌、密码等，防止 AI 日志或输出里意外泄露"
+        ],
+        "limitations_or_uncertainties": "Fable 5 顾问功能仅限有组织级 Fable 访问权限的用户；Remote Control 部分修复涉及云端会话与本地桥接的复杂场景，普通用户难以验证；语音模式修复仅限 native 构建版本",
+        "product_name": "Claude Code",
+        "sources": [
+          "https://github.com/anthropics/claude-code/releases/tag/v2.1.232"
+        ],
+        "target_users": "需要在终端/命令行环境下写代码、改代码、调试的开发者",
+        "title_zh": "Claude Code v2.1.232：子代理分叉默认启用，新增跨会话消息与 GitLab 安全增强",
+        "usage_flow": [
+          "在终端运行 `claude` 启动会话，多个会话会自动获得唯一名称",
+          "在提示符里输入 `@会话名` 直接给另一个运行中的 Claude 会话发消息",
+          "调用子代理时自动在后台分叉运行，继承当前对话上下文但互不阻塞",
+          "通过 `/config` 设置跨会话消息的接收策略（接受/暂存/拒绝）和对话过期时间"
+        ],
+        "user_problem": "以前多个 Claude 会话之间互相隔离，无法直接通信；子代理需要手动配置才能分叉运行；GitLab 令牌等敏感信息缺乏自动脱敏保护",
+        "what_it_is": "Anthropic 推出的命令行 AI 编程助手，能在终端里理解代码库、改文件、跑命令、联网查资料"
+      },
+      "stage": "deep_analysis"
     },
     "09aade11a439649059e00fc59f7cf180dc5491c90c37f697d66277d19b83e84c": {
       "created_at": "2026-07-28T03:49:20.637561+00:00",
@@ -1141,6 +1211,40 @@
         "verticals": []
       },
       "stage": "candidate_analysis"
+    },
+    "0d576e3f5eed6e85761264b3473a26d832c2c156be4a3b0133799e0cab93567a": {
+      "created_at": "2026-08-14T02:46:43.013597+00:00",
+      "model": "kimi-k2.6",
+      "prompt_version": "deep-v3-beginner",
+      "result": {
+        "ai_role": "负责第一步的「从无到有」生成，以及把生成结果转换成可编辑的 MIDI/分轨格式，让用户能接手做精细调整",
+        "evidence_status": "first_party",
+        "hands_on_exercise": "打开 suno.com/studio-welcome，用免费额度生成一段 30 秒音乐，找到「导出 MIDI」或类似选项，把文件下载后用免费软件 GarageBand（Mac）或 Cakewalk（Windows）打开，尝试把其中一轨的钢琴换成贝斯，体会「AI 生成 + 人工精调」的协作流程",
+        "implementation_idea": "核心思路是「生成+编辑分离」：AI 先快速产出音乐素材，然后自动解析成 MIDI 事件（把声音变成数字乐谱），用户在浏览器里像操作 GarageBand/FL Studio 一样直接改音符。MIDI 是一种通用的电子音乐「说明书」格式，告诉设备哪个键什么时候按、按多响，所以能跨软件协作。",
+        "learning_points": [
+          "MIDI：不是声音文件，而是「演奏指令」，让 AI 生成结果能被人类编辑和跨软件使用",
+          "DAW（数字音频工作站）：专业音乐制作软件的总称，比如 Logic Pro、Ableton Live，核心是多轨道录音和精细编辑",
+          "生成式 AI 的产品演进路径：从「端到端黑盒输出」走向「可拆解、可干预的协作工作流」"
+        ],
+        "limitations_or_uncertainties": "未公开：MIDI 导出的具体格式细节（是否标准 MIDI 文件）、自定义效果器的具体种类和参数范围、是否支持外部 MIDI 控制器输入、免费/付费功能边界；The Verge 原文提到 MIDI 功能有省略号截断，可能存在使用限制",
+        "product_name": "Suno Studio 2.0",
+        "sources": [
+          "https://www.theverge.com/ai-artificial-intelligence/979345/suno-studio-2-0-midi-chatbot-custom-effects",
+          "https://suno.com/studio-welcome",
+          "https://suno.com/blog/suno-studio"
+        ],
+        "target_users": "AI 音乐创作者、想精细控制生成结果的业余/专业音乐人",
+        "title_zh": "Suno 推 Studio 2.0：从 AI 生成器向专业音乐工作站转型",
+        "usage_flow": [
+          "在浏览器打开 Suno Studio 2.0，用文本或音频提示让 AI 生成音乐草稿",
+          "把生成的内容转成 MIDI 轨道，逐音符编辑旋律、和弦或替换乐器",
+          "添加自定义效果器（custom effects）调整音色细节",
+          "导出成品或继续用传统 DAW 做后期混音"
+        ],
+        "user_problem": "Suno 之前只能生成完整音频，用户无法像专业软件那样修改单个音符、调整乐器轨道或导出标准音乐格式，导致「AI 生成什么就只能用什么」",
+        "what_it_is": "Suno Studio 2.0 是 AI 音乐生成平台 Suno 的新版本，加入了 MIDI 编辑等专业功能，目标从「一键出歌」变成能精细控制每个音符的浏览器版数字音频工作站（DAW）。"
+      },
+      "stage": "deep_analysis"
     },
     "0da5b3e5fa082963330367c5f8e95269e12b9e36660bfa7ee42c1a757083696b": {
       "created_at": "2026-08-05T03:32:19.709567+00:00",
@@ -2549,6 +2653,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "1b7dc78a0c0feadd8c26c38de02adce33e4c988b7f786d1740b67c6885a37c99": {
+      "created_at": "2026-08-14T02:46:12.435139+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "claude-code-release-v2.1.232",
+        "evidence_status": "first_party",
+        "follow_up": "观察子代理分叉和跨会话功能在实际开发中的使用效果。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "github:release:370225682",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Claude Code",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Claude Code 发布重要更新：子代理分叉默认开启、跨会话消息、GitLab 令牌脱敏等，提升 Agent 协作和安全性，对开发者有明确价值。",
+        "region": "global",
+        "score": 8.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Claude Code 更新至 v2.1.232，默认启用子代理分叉并支持跨会话消息，增强 Agent 协作和安全性。",
+        "tags": [
+          "Claude Code",
+          "Agent",
+          "release"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "1bab28b64deef41572857c8c50d85cdf22d160a3145e66393c94371bbeab83d7": {
       "created_at": "2026-07-25T16:38:29.699434+00:00",
       "model": "deepseek-v4-flash",
@@ -2657,6 +2800,82 @@
         "tags": [
           "安全",
           "基础设施"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "1e719228520492b965726536c438b7363b0487108e8f1c4866db465d2a52247d": {
+      "created_at": "2026-08-14T02:46:12.434593+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-codex-release-rust-v0.148.0-alpha.12",
+        "evidence_status": "first_party",
+        "follow_up": "关注后续版本是否有重要功能更新。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "github:release:369714214",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "OpenAI Codex",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI Codex 的常规 alpha 版本发布，无具体功能说明，信息量低，对初学者无明确增量。",
+        "region": "global",
+        "score": 5.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "OpenAI Codex 发布了 rust-v0.148.0-alpha.12 版本，但未提供具体更新内容，价值有限。",
+        "tags": [
+          "Codex",
+          "release"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "1e9b66d6955568dee1641c2fa9e19936daf280f1c6bdf91aaf0721e074fd4fb8": {
+      "created_at": "2026-08-14T02:46:12.435212+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "langchain-openai-release-1.5.0",
+        "evidence_status": "first_party",
+        "follow_up": "无特别关注点。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "github:release:369926976",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "LangChain",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "LangChain OpenAI 集成包更新，支持 OpenAI 3.0 SDK，属于依赖更新，对初学者无直接产品价值。",
+        "region": "global",
+        "score": 5.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "LangChain 的 langchain-openai 包更新至 1.5.0，支持 OpenAI 3.0 SDK。",
+        "tags": [
+          "LangChain",
+          "release"
         ],
         "target_user": "",
         "verticals": []
@@ -2876,6 +3095,45 @@
           "AI SDK",
           "Vercel",
           "Agent"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "221616c832b4c7f4fd4f5033156d868d89b64c9f80a2c397d53acbc35a2a0fe4": {
+      "created_at": "2026-08-14T02:45:44.146322+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "openai-gpt5.6-builders-guide",
+        "evidence_status": "first_party",
+        "follow_up": "关注指南中提到的具体应用案例和最佳实践",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:openai.com_news_rss.xml:6f8368ac763b7373",
+        "intelligence_type": "builder_insight",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "GPT-5.6",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI 官方发布 GPT-5.6 构建者指南，展示初创公司如何利用新能力构建更高效的 AI 代理，包含实际应用案例，对产品经理有直接参考价值。",
+        "region": "global",
+        "score": 8.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "OpenAI 发布 GPT-5.6 构建者指南，介绍初创公司如何用其构建更快、更省成本的 AI 代理。",
+        "tags": [
+          "GPT-5.6",
+          "Agent",
+          "开发者指南"
         ],
         "target_user": "",
         "verticals": []
@@ -3144,6 +3402,44 @@
         "tags": [
           "Agent",
           "Slack"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "27aecfc6e70b43386de6ec271c2700d062668dbde26f9f36cf0d8cdab86a7b6a": {
+      "created_at": "2026-08-14T02:46:00.691671+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "suno-studio-2.0-midi-2026",
+        "evidence_status": "reported",
+        "follow_up": "关注用户对MIDI功能的实际使用反馈。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:f52431329191815b",
+        "intelligence_type": "product_case",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Suno Studio",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Suno发布Studio 2.0，新增MIDI支持等专业音乐制作功能，向DAW靠拢，对AI音乐创作产品有重要参考价值。",
+        "region": "global",
+        "score": 8.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Suno发布Studio 2.0，新增MIDI支持等专业功能，向数字音频工作站靠拢，值得AI音乐创作者关注。",
+        "tags": [
+          "AI音乐",
+          "产品更新"
         ],
         "target_user": "",
         "verticals": []
@@ -3821,6 +4117,44 @@
         "tags": [
           "Codex",
           "版本发布"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "30a6ae7690b68a57b82d4300c916fda0a9a274e73ad28cc27c89cf5dd7433396": {
+      "created_at": "2026-08-14T02:46:00.691747+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "google-deepmind-reorg-debate-2026",
+        "evidence_status": "reported",
+        "follow_up": "关注Google DeepMind重组后的产品动向。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:a5f4c7bea8139eca",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "播客讨论Google是否在AI竞赛中落后，涉及DeepMind重组，属于行业观察，对了解竞争格局有参考价值。",
+        "region": "global",
+        "score": 6.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Decoder播客讨论Google是否在AI竞赛中落后，涉及DeepMind重组，属于行业观察。",
+        "tags": [
+          "Google",
+          "AI竞赛"
         ],
         "target_user": "",
         "verticals": []
@@ -5902,6 +6236,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "49baca1bb9ba4c54c47e87263676e027ededb571b544431b02c2a373facc64c8": {
+      "created_at": "2026-08-14T02:46:00.691491+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "ibm-openai-partnership-2026",
+        "evidence_status": "reported",
+        "follow_up": "关注合作的具体产品集成和客户案例。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:e763e56db97c17d9",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "IBM与OpenAI达成合作，计划培训和认证数万名顾问，推动企业AI应用。这是大型企业采用AI的重要信号，对理解企业级AI落地有参考价值。",
+        "region": "global",
+        "score": 7.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "IBM与OpenAI合作，培训数万名顾问以推广企业AI应用，值得关注企业级AI落地趋势。",
+        "tags": [
+          "企业AI",
+          "合作"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "4a6d7d772e470788b244ccc1f0adf1d4671ea206b726e81acfaae87e92e3a6bd": {
       "created_at": "2026-07-28T03:48:25.674657+00:00",
       "model": "deepseek-v4-flash",
@@ -7652,6 +8024,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "5bfe175437029692fea129ce663d245cb323d4e3ee10c7480ceba7a10d71c45c": {
+      "created_at": "2026-08-14T02:45:44.146456+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "writer-new-model-glm5.2-based",
+        "evidence_status": "reported",
+        "follow_up": "关注新模型的具体性能评测和定价",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:79df0d92267a5c8e",
+        "intelligence_type": "model_capability",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Writer AI",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Writer 推出基于 GLM-5.2 的新模型，强调低成本部署能力，属于模型能力更新，对成本敏感的产品有参考价值。",
+        "region": "global",
+        "score": 7.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Writer 推出基于 Z.ai 开源模型 GLM-5.2 的新 AI 模型，以更低价格提供部署就绪能力。",
+        "tags": [
+          "Writer",
+          "GLM-5.2",
+          "低成本模型"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "5c2fbd5f105a6743fd746ab4e46c08947472b27213fa0e81ca1e30c554834391": {
       "created_at": "2026-08-13T02:46:43.252311+00:00",
       "model": "deepseek-v4-flash",
@@ -9135,6 +9546,45 @@
         "summary_zh": "Vercel AI SDK修复Amazon Bedrock上Claude模型的tool strict和output_config.format兼容性问题。",
         "tags": [
           "SDK"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "6cef9a28bd752b27f039d0cc6efbc64ebf64b3ab70f16000d63f7b0a7a5422ed": {
+      "created_at": "2026-08-14T02:45:44.146356+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-ultrafast-preview",
+        "evidence_status": "early_signal",
+        "follow_up": "关注 Ultrafast 模式的正式发布和定价",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:openai.com_news_rss.xml:c0986f6628d189a1",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "GPT-5.6 Sol",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI 官方预告 Ultrafast 模式，GPT-5.6 Sol 速度提升 14 倍，由 Cerebras 驱动，这是新模型能力的重要更新，可能解锁新的产品体验。",
+        "region": "global",
+        "score": 8.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "OpenAI 预览 Ultrafast 模式，使 GPT-5.6 Sol 运行速度提升 14 倍，每秒输出高达 750 tokens。",
+        "tags": [
+          "GPT-5.6",
+          "速度优化",
+          "API"
         ],
         "target_user": "",
         "verticals": []
@@ -10647,6 +11097,44 @@
           "Agent",
           "融资",
           "个人代理"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "7a840b530712b962471ec54803256c011fed691fd099bcde51838a7850b693b8": {
+      "created_at": "2026-08-14T02:46:12.435428+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "cerebras-openai-gpt-5.6-sol-ultrafast",
+        "evidence_status": "first_party",
+        "follow_up": "关注该加速技术是否落地到实际产品。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:49289844",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "GPT-5.6 Sol",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Cerebras 与 OpenAI 合作加速 GPT-5.6 Sol，在 HLE 基准上速度提升 7 倍，展示推理速度对产品体验的潜在影响，但属于底层优化，对初学者直接价值有限。",
+        "region": "global",
+        "score": 7.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Cerebras 与 OpenAI 合作，将 GPT-5.6 Sol 推理速度提升近 7 倍，在 HLE 基准上表现优异。",
+        "tags": [
+          "推理加速",
+          "OpenAI"
         ],
         "target_user": "",
         "verticals": []
@@ -12490,6 +12978,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "8fc69d7704e866841fe546770b9d8e8798b20ca5e71600546b4c67bc68bdbc85": {
+      "created_at": "2026-08-14T02:46:00.691550+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "anthropic-multiagent-turf-war-2026",
+        "evidence_status": "reported",
+        "follow_up": "关注Anthropic后续的安全测试方法和建议。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:6040ef202a1dcecf",
+        "intelligence_type": "model_capability",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Anthropic研究揭示多智能体系统可能产生冲突、共谋等意外行为，对AI安全测试提出新问题。对理解多Agent系统的风险有重要价值。",
+        "region": "global",
+        "score": 8.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Anthropic研究发现AI智能体在同一任务上可能发生冲突和共谋，引发对多智能体安全测试的思考。",
+        "tags": [
+          "多智能体",
+          "AI安全"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "902afece0fa4dccdf5b2eea372b5f735d501868dbf3051a9205907e85ba8e6bb": {
       "created_at": "2026-07-26T04:07:29.874436+00:00",
       "model": "deepseek-v4-flash",
@@ -12863,6 +13389,44 @@
         "summary": null,
         "summary_zh": "OpenAI Codex 发布 rusty-v8 v150.4.0，但无发布说明。",
         "tags": [],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "92e1f21c8fb93857bb1708d9db29c3f6621c2e8943c028a81a949a775c8bcd68": {
+      "created_at": "2026-08-14T02:46:00.691705+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "higgsfield-ai-movie-human-2026",
+        "evidence_status": "reported",
+        "follow_up": "关注Higgsfield等AI电影工具的实际应用。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:35188ec8bd9216f7",
+        "intelligence_type": "product_case",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Higgsfield",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "文章探讨AI生成电影中人类创作的重要性，涉及AI在创意领域的应用，对理解AI内容创作有参考价值。",
+        "region": "global",
+        "score": 7.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "一篇关于AI生成电影的评论，指出最佳部分仍来自人类创作，引发对AI创意工具的思考。",
+        "tags": [
+          "AI电影",
+          "创意"
+        ],
         "target_user": "",
         "verticals": []
       },
@@ -13286,6 +13850,44 @@
           "融资",
           "算力差距",
           "地缘政治"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "969ad64675b9e6722428a89730097370b0cd297c2081a8e45039aaee37afdecb": {
+      "created_at": "2026-08-14T02:46:12.435300+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "gemini-3.7-flash-release",
+        "evidence_status": "first_party",
+        "follow_up": "关注 Gemini 3.7 Flash 在更多任务上的表现及定价变化。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:49289112",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Gemini 3.7 Flash",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Google 发布 Gemini 3.7 Flash 模型，社区有实际测试对比，显示其在视觉转 HTML 任务上表现优异，且定价策略引发讨论，对产品构建者有参考价值。",
+        "region": "global",
+        "score": 8.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Google 发布 Gemini 3.7 Flash 模型，社区测试显示其在图像转 HTML 任务上表现出色，且定价策略引发关注。",
+        "tags": [
+          "Gemini",
+          "模型发布"
         ],
         "target_user": "",
         "verticals": []
@@ -15214,6 +15816,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "a7e12cc8372d8f3e7a96c3963daf90f743f63cdbc5d9510e52e0f5bef8b7fae9": {
+      "created_at": "2026-08-14T02:45:44.146166+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "gemini-3-7-time-frontier-analysis",
+        "evidence_status": "reported",
+        "follow_up": "关注 Gemini 3.7 在实际产品中的应用案例",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "public_web:sitemap:6caec3faf53116d84358",
+        "intelligence_type": "model_capability",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Gemini 3.7",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Artificial Analysis 对 Gemini 3.7 的深度分析，属于高信噪比行业观察，提供模型能力对比和产品定位洞察，对初学者理解模型选择有参考价值。",
+        "region": "global",
+        "score": 8.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Artificial Analysis 发布 Gemini 3.7 的深度分析，探讨其时间前沿能力，帮助理解模型性能与产品定位。",
+        "tags": [
+          "Gemini",
+          "模型分析"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "a7eec11c4b19f3ad53af0488d26447413dbea5b34dcebd7c36796dc06790426a": {
       "created_at": "2026-08-02T03:52:32.504252+00:00",
       "model": "deepseek-v4-flash",
@@ -15673,6 +16313,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "aeb8dc50e6184f133dbfbb786ece703e7bae020fc53de9383f3671379b4b524a": {
+      "created_at": "2026-08-14T02:45:44.146483+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "databricks-funding-round",
+        "evidence_status": "reported",
+        "follow_up": "关注融资后 Databricks 的产品战略",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:eb2381f8fbd3bbf9",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Databricks",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Databricks 融资消息，属于商业动态，对产品和技术学习价值有限，但反映 AI 行业资本热度。",
+        "region": "global",
+        "score": 5.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Databricks 融资 50 亿美元，估值 1900 亿美元，反映 AI 行业投资热度。",
+        "tags": [
+          "Databricks",
+          "融资"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "af037768b9e4c175153acffc0122b1fb7c3190e859cb2f8e4c7648bb2336e1d7": {
       "created_at": "2026-08-10T02:34:30.029154+00:00",
       "model": "deepseek-v4-flash",
@@ -16021,6 +16699,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "b1aa3b04e50244b9348a6e259775312c9d06c8744f3a7d9501a26749ee9cc668": {
+      "created_at": "2026-08-14T02:45:44.146515+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-ultrafast-techcrunch",
+        "evidence_status": "reported",
+        "follow_up": "关注企业用户反馈和采用情况",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:a1da46af1f5c968d",
+        "intelligence_type": "model_capability",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "GPT-5.6 Sol",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "TechCrunch 报道 OpenAI 的 Ultrafast 模式，与官方信息一致，提供第三方视角，确认该功能面向企业用户。",
+        "region": "global",
+        "score": 7.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "TechCrunch 报道 OpenAI 推出 Ultrafast 模式，使 GPT-5.6 Sol 速度提升 14 倍，旨在吸引企业用户。",
+        "tags": [
+          "OpenAI",
+          "速度优化",
+          "企业"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "b21f7f50c1d44fb79c42914dac21d666dd3adaad829bc278b8798c5cf052391f": {
       "created_at": "2026-07-26T04:07:17.345673+00:00",
       "model": "deepseek-v4-flash",
@@ -16052,6 +16769,45 @@
         "summary_zh": "风闻文章讨论DeepSeek工资待遇，无实质产品内容。",
         "tags": [
           "行业评论"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "b2bed942156950829ba08ef89436fd0a7311a59413c0ca2aeb9c3859bd36df59": {
+      "created_at": "2026-08-14T02:46:12.435528+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "deepseek-harness-developer-preview",
+        "evidence_status": "first_party",
+        "follow_up": "关注 Harness 正式版发布及社区反馈。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:49285244",
+        "intelligence_type": "builder_insight",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "DeepSeek Harness",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "DeepSeek 发布 Harness 开发者预览版，提供可追溯的会话日志和轨迹回放功能，对 Agent 开发调试有重要价值，且作者亲自回应，属于一手信息。",
+        "region": "china",
+        "score": 8.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "DeepSeek 发布 Harness 开发者预览版，提供可追溯的会话日志和轨迹回放功能，助力 Agent 开发调试。",
+        "tags": [
+          "DeepSeek",
+          "Agent",
+          "开发者工具"
         ],
         "target_user": "",
         "verticals": []
@@ -16551,6 +17307,44 @@
         "tags": [
           "DeepSeek",
           "模型评测"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "b6b039937b910a020be1b491df4dd001acb0808ffbc4c95b257a7ea2f96b214d": {
+      "created_at": "2026-08-14T02:45:44.146280+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openrouter-top5-models-ranking",
+        "evidence_status": "verified",
+        "follow_up": "关注排名变化及新模型上榜情况",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "public_web:ranking:b0ab1ec5ca2d10da9cfa",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenRouter 官方排名展示当前热门模型，包含 DeepSeek、腾讯、OpenAI、小米等模型的关键参数和定位，对了解市场格局和模型选择有直接帮助。",
+        "region": "global",
+        "score": 7.5,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "OpenRouter 发布 AI 模型热度 Top 5，涵盖 DeepSeek V4、腾讯 Hy3、GPT-5.6 Luna 等，展示当前主流模型能力与定位。",
+        "tags": [
+          "模型排名",
+          "市场信号"
         ],
         "target_user": "",
         "verticals": []
@@ -17276,6 +18070,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "bec8af26bd01e9cb246399a9beb007f2b69411484f1439ab86ea939401a8c4d3": {
+      "created_at": "2026-08-14T02:46:00.691596+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "microsoft-copilot-mico-retired-2026",
+        "evidence_status": "reported",
+        "follow_up": "关注Mico在Learn Live平台的新用途。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:472ba443e11ae855",
+        "intelligence_type": "product_case",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Microsoft Copilot",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "微软将Copilot语音模式中的Mico角色移至Learn Live平台，属于产品界面调整，对AI产品设计有一定参考但增量有限。",
+        "region": "global",
+        "score": 5.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "微软将Copilot的Mico角色从语音模式移至Learn Live平台，属于产品界面调整。",
+        "tags": [
+          "Copilot",
+          "产品更新"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "bedc476593e5a58129f1852d76125fc0725ab1e0a0fd07553962fd1f69b6ef38": {
       "created_at": "2026-07-30T03:28:00.813618+00:00",
       "model": "deepseek-v4-flash",
@@ -17310,6 +18142,45 @@
           "Agent",
           "SDK",
           "Python"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "c087153207b0ce6296e95fd1fc7a4da46217017fd3e73630ad2336023db7420b": {
+      "created_at": "2026-08-14T02:45:44.146427+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "huggingface-strands-agents-lerobot",
+        "evidence_status": "early_signal",
+        "follow_up": "获取博客详细内容，了解具体工作流程",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:huggingface.co_blog_feed.xml:353217afc4f706b5",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Strands Agents",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Hugging Face 官方博客介绍 Strands Agents、LeRobot 和存储桶的集成，涉及机器人数据记录、训练和部署，对 AI 产品开发有参考价值，但内容为空。",
+        "region": "global",
+        "score": 7.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Hugging Face 发布博客，介绍如何用 Strands Agents、LeRobot 和存储桶实现数据记录、训练和部署一体化。",
+        "tags": [
+          "机器人",
+          "Agent",
+          "Hugging Face"
         ],
         "target_user": "",
         "verticals": []
@@ -17691,6 +18562,44 @@
           "AI伦理",
           "教育",
           "观点"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "c5a9b559e1b8b3f4f5bcad77d783168559dcdd89ebc27793c3fd1ef1adef9fff": {
+      "created_at": "2026-08-14T02:46:12.434555+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-codex-release-rust-v0.148.0-alpha.13",
+        "evidence_status": "first_party",
+        "follow_up": "关注后续版本是否有重要功能更新。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "github:release:370250201",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "OpenAI Codex",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI Codex 的常规 alpha 版本发布，无具体功能说明，信息量低，对初学者无明确增量。",
+        "region": "global",
+        "score": 5.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "OpenAI Codex 发布了 rust-v0.148.0-alpha.13 版本，但未提供具体更新内容，价值有限。",
+        "tags": [
+          "Codex",
+          "release"
         ],
         "target_user": "",
         "verticals": []
@@ -18454,6 +19363,82 @@
           "LLM",
           "后训练",
           "GPU"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "cf76073400df09a69c122041e17285f694fbc714485e7a3a732ae2358639fd36": {
+      "created_at": "2026-08-14T02:46:00.691633+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-executive-departure-2026",
+        "evidence_status": "reported",
+        "follow_up": "关注新任CRO对OpenAI商业化策略的影响。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:9504c5f7ac2c8321",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI首席营收官离职，属于高管变动，对了解公司战略方向有一定价值，但非产品技术核心动态。",
+        "region": "global",
+        "score": 6.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "OpenAI首席营收官Denise Dresser离职，由Wiz总裁接任，属于高管变动。",
+        "tags": [
+          "OpenAI",
+          "高管变动"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "cff51d50ae00930a699d2a02757e87096fd270afe4b885783c860ca60d101c1c": {
+      "created_at": "2026-08-14T02:46:00.691843+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "llm-gemini-0.33-release-2026",
+        "evidence_status": "first_party",
+        "follow_up": "关注Gemini 3.7 Flash的实际性能表现。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:simonwillison.net_atom_everything_:2024bc366264733d",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "llm-gemini",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Simon Willison发布llm-gemini 0.33，支持Gemini 3.7 Flash等新模型，并展示服务端工具调用示例，对开发者有直接实用价值。",
+        "region": "global",
+        "score": 8.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "llm-gemini 0.33发布，新增Gemini 3.7 Flash支持和服务端工具调用，开发者可快速体验新模型能力。",
+        "tags": [
+          "Gemini",
+          "开发者工具"
         ],
         "target_user": "",
         "verticals": []
@@ -21189,6 +22174,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "ec0eb9a89f6dfce5fc2ab1a1afac313dd9b3f86b54b8f7c827e4b4d9428a5dcd": {
+      "created_at": "2026-08-14T02:46:00.692472+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-codex-rust-v0.148.0-alpha.14-2026",
+        "evidence_status": "first_party",
+        "follow_up": "关注后续版本更新日志。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "github:release:370299999",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "OpenAI Codex",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI Codex发布新版本，但内容为空，仅版本号，属于常规更新，对初学者参考价值有限。",
+        "region": "global",
+        "score": 7.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "OpenAI Codex发布rust-v0.148.0-alpha.14版本，但无详细更新说明。",
+        "tags": [
+          "Codex",
+          "版本更新"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "ec3af3daf7663902dfb14ff12a7c42cf3542a5937ea712491249dd015d18b0a6": {
       "created_at": "2026-08-04T03:45:21.753151+00:00",
       "model": "deepseek-v4-flash",
@@ -21414,6 +22437,44 @@
           "Claude",
           "上下文工程",
           "提示词"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "ef042ea9bb0664c4e7a900f444b1d583ea350ab43d0715f525d02abb0e6f1052": {
+      "created_at": "2026-08-14T02:45:44.146384+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-cro-appointment",
+        "evidence_status": "first_party",
+        "follow_up": "关注新任 CRO 对 OpenAI 商业化的影响",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:openai.com_news_rss.xml:6eaab463a55def87",
+        "intelligence_type": "business_policy",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI 任命首席营收官，属于公司人事变动，对产品和技术学习价值较低，但可能影响未来商业策略。",
+        "region": "global",
+        "score": 5.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "OpenAI 任命 Dali Rajic 为首席营收官，领导全球营收组织。",
+        "tags": [
+          "OpenAI",
+          "人事变动"
         ],
         "target_user": "",
         "verticals": []
@@ -22960,6 +24021,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "fce8f9d6ca3b68dd33bebe4a229b3560d1bbd4648baf185ced40e1578d4a353f": {
+      "created_at": "2026-08-14T02:46:00.692444+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "vercel-intern-experience-2026",
+        "evidence_status": "first_party",
+        "follow_up": "无",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:vercel.com_changelog_rss:92712e2d3c6d4ba2",
+        "intelligence_type": "builder_insight",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": true,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Vercel实习生体验博客，主要展示公司文化，对AI产品构建者参考价值有限，且带有宣传性质。",
+        "region": "global",
+        "score": 5.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Vercel发布实习生体验博客，展示公司文化，对AI产品构建参考价值有限。",
+        "tags": [
+          "Vercel",
+          "公司文化"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "fd3255b03230837fb2770fcd42a7a2687bf945152a9cc75f3d98e13ed1d1ca41": {
       "created_at": "2026-08-09T02:28:36.839284+00:00",
       "model": "deepseek-v4-flash",
@@ -23256,6 +24355,44 @@
           "OpenAI",
           "Hugging Face",
           "AI安全"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "ff0fa40f3d4267a47a92bbe5a98918549738cf8655ba32f286a9d074fed7c6af": {
+      "created_at": "2026-08-14T02:46:12.435168+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "claude-code-release-v2.1.231",
+        "evidence_status": "first_party",
+        "follow_up": "无特别关注点。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "github:release:369766131",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Claude Code",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Claude Code 修复了 MCP OAuth 登录问题，属于小版本修复，增量有限。",
+        "region": "global",
+        "score": 6.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Claude Code 发布 v2.1.231，修复了 MCP OAuth 登录的重定向 URI 不匹配问题。",
+        "tags": [
+          "Claude Code",
+          "bugfix"
         ],
         "target_user": "",
         "verticals": []

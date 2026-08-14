@@ -1,7 +1,554 @@
 {
   "version": 1,
-  "updated_at": "2026-08-13T02:48:02.063874+00:00",
+  "updated_at": "2026-08-14T02:47:03.406349+00:00",
   "products": [
+    {
+      "product_id": "product-bb491b9edaadb0df",
+      "product_name": "Suno Studio 2.0",
+      "builder_name": "Terrence O’Brien",
+      "first_seen": "2026-08-14",
+      "last_seen": "2026-08-14",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "AI 音乐创作者、想精细控制生成结果的业余/专业音乐人",
+      "user_problem": "Suno 之前只能生成完整音频，用户无法像专业软件那样修改单个音符、调整乐器轨道或导出标准音乐格式，导致「AI 生成什么就只能用什么」",
+      "what_it_is": "Suno Studio 2.0 是 AI 音乐生成平台 Suno 的新版本，加入了 MIDI 编辑等专业功能，目标从「一键出歌」变成能精细控制每个音符的浏览器版数字音频工作站（DAW）。",
+      "ai_role": "负责第一步的「从无到有」生成，以及把生成结果转换成可编辑的 MIDI/分轨格式，让用户能接手做精细调整",
+      "implementation_idea": "核心思路是「生成+编辑分离」：AI 先快速产出音乐素材，然后自动解析成 MIDI 事件（把声音变成数字乐谱），用户在浏览器里像操作 GarageBand/FL Studio 一样直接改音符。MIDI 是一种通用的电子音乐「说明书」格式，告诉设备哪个键什么时候按、按多响，所以能跨软件协作。",
+      "hands_on_exercise": "打开 suno.com/studio-welcome，用免费额度生成一段 30 秒音乐，找到「导出 MIDI」或类似选项，把文件下载后用免费软件 GarageBand（Mac）或 Cakewalk（Windows）打开，尝试把其中一轨的钢琴换成贝斯，体会「AI 生成 + 人工精调」的协作流程",
+      "limitations_or_uncertainties": "未公开：MIDI 导出的具体格式细节（是否标准 MIDI 文件）、自定义效果器的具体种类和参数范围、是否支持外部 MIDI 控制器输入、免费/付费功能边界；The Verge 原文提到 MIDI 功能有省略号截断，可能存在使用限制",
+      "region": "global",
+      "score": 8.5,
+      "summary": "Suno发布Studio 2.0，新增MIDI支持等专业功能，向数字音频工作站靠拢，值得AI音乐创作者关注。",
+      "title": "Suno 推 Studio 2.0：从 AI 生成器向专业音乐工作站转型",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/979345/suno-studio-2-0-midi-chatbot-custom-effects",
+      "sources": [
+        {
+          "url": "https://www.theverge.com/ai-artificial-intelligence/979345/suno-studio-2-0-midi-chatbot-custom-effects",
+          "title": "Suno is trying to look more like a real music production tool",
+          "source_type": "rss",
+          "published_at": "2026-08-13T16:00:00+00:00"
+        },
+        {
+          "url": "https://suno.com/studio-welcome",
+          "title": "Suno Studio — Be a control freak",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://suno.com/blog/suno-studio",
+          "title": "Introducing Suno Studio",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "suno-studio-2.0-midi-2026",
+          "date": "2026-08-14",
+          "title": "Suno 推 Studio 2.0：从 AI 生成器向专业音乐工作站转型",
+          "summary": "Suno发布Studio 2.0，新增MIDI支持等专业功能，向数字音频工作站靠拢，值得AI音乐创作者关注。",
+          "score": 8.5,
+          "url": "https://www.theverge.com/ai-artificial-intelligence/979345/suno-studio-2-0-midi-chatbot-custom-effects"
+        }
+      ],
+      "usage_flow": [
+        "在浏览器打开 Suno Studio 2.0，用文本或音频提示让 AI 生成音乐草稿",
+        "把生成的内容转成 MIDI 轨道，逐音符编辑旋律、和弦或替换乐器",
+        "添加自定义效果器（custom effects）调整音色细节",
+        "导出成品或继续用传统 DAW 做后期混音"
+      ],
+      "learning_points": [
+        "MIDI：不是声音文件，而是「演奏指令」，让 AI 生成结果能被人类编辑和跨软件使用",
+        "DAW（数字音频工作站）：专业音乐制作软件的总称，比如 Logic Pro、Ableton Live，核心是多轨道录音和精细编辑",
+        "生成式 AI 的产品演进路径：从「端到端黑盒输出」走向「可拆解、可干预的协作工作流」"
+      ],
+      "verticals": [],
+      "tags": [
+        "AI音乐",
+        "产品更新"
+      ]
+    },
+    {
+      "product_id": "product-2e3a4f4b973c9e95",
+      "product_name": "Gemini 3.7",
+      "builder_name": "Artificial Analysis",
+      "first_seen": "2026-08-14",
+      "last_seen": "2026-08-14",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Artificial Analysis 发布 Gemini 3.7 的深度分析，探讨其时间前沿能力，帮助理解模型性能与产品定位。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.5,
+      "summary": "Artificial Analysis 发布 Gemini 3.7 的深度分析，探讨其时间前沿能力，帮助理解模型性能与产品定位。",
+      "title": "Gemini 3 7 Time Frontier",
+      "url": "https://artificialanalysis.ai/articles/gemini-3-7-time-frontier",
+      "sources": [
+        {
+          "url": "https://artificialanalysis.ai/articles/gemini-3-7-time-frontier",
+          "title": "Gemini 3 7 Time Frontier",
+          "source_type": "public_web",
+          "published_at": "2026-08-13T00:00:00+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "gemini-3-7-time-frontier-analysis",
+          "date": "2026-08-14",
+          "title": "Gemini 3 7 Time Frontier",
+          "summary": "Artificial Analysis 发布 Gemini 3.7 的深度分析，探讨其时间前沿能力，帮助理解模型性能与产品定位。",
+          "score": 8.5,
+          "url": "https://artificialanalysis.ai/articles/gemini-3-7-time-frontier"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Gemini",
+        "模型分析"
+      ]
+    },
+    {
+      "product_id": "product-7f7811de59626bc9",
+      "product_name": "Claude Code",
+      "builder_name": "ashwin-ant",
+      "first_seen": "2026-07-26",
+      "last_seen": "2026-08-14",
+      "occurrence_count": 4,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "需要在终端/命令行环境下写代码、改代码、调试的开发者",
+      "user_problem": "以前多个 Claude 会话之间互相隔离，无法直接通信；子代理需要手动配置才能分叉运行；GitLab 令牌等敏感信息缺乏自动脱敏保护",
+      "what_it_is": "Anthropic 推出的命令行 AI 编程助手，能在终端里理解代码库、改文件、跑命令、联网查资料",
+      "ai_role": "AI 作为执行主体，既能独立处理用户指令，也能作为子代理被主会话调度，还能跨会话接收和响应消息",
+      "implementation_idea": "核心是把单个 Claude 会话变成可分叉的进程——主会话像项目经理，可以派生子代理（fork）去后台干活，子代理带着完整对话记忆开工；同时给每个会话起唯一名字，让会话之间能通过 SendMessage 直接喊话，像企业微信 @同事一样",
+      "hands_on_exercise": "安装 Claude Code 后开两个终端窗口各运行 `claude`，在 A 窗口输入 `@B窗口的名称 帮我看看这个报错` 测试跨会话消息；然后用 `/config` 把 B 的跨会话消息设为 'hold'，观察 A 的消息是否被暂存",
+      "limitations_or_uncertainties": "Fable 5 顾问功能仅限有组织级 Fable 访问权限的用户；Remote Control 部分修复涉及云端会话与本地桥接的复杂场景，普通用户难以验证；语音模式修复仅限 native 构建版本",
+      "region": "global",
+      "score": 8.0,
+      "summary": "Claude Code 更新至 v2.1.232，默认启用子代理分叉并支持跨会话消息，增强 Agent 协作和安全性。",
+      "title": "Claude Code v2.1.232：子代理分叉默认启用，新增跨会话消息与 GitLab 安全增强",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.232",
+      "sources": [
+        {
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.219",
+          "title": "anthropics/claude-code released v2.1.219",
+          "source_type": "github",
+          "published_at": "2026-07-24T17:14:23+00:00"
+        },
+        {
+          "url": "https://claude.com/product/claude-code",
+          "title": "Claude Code by Anthropic | AI Coding Agent, Terminal, IDE",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.221",
+          "title": "anthropics/claude-code released v2.1.221",
+          "source_type": "github",
+          "published_at": "2026-08-04T00:14:23+00:00"
+        },
+        {
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.229",
+          "title": "anthropics/claude-code released v2.1.229",
+          "source_type": "github",
+          "published_at": "2026-08-12T20:56:22+00:00"
+        },
+        {
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.232",
+          "title": "anthropics/claude-code released v2.1.232",
+          "source_type": "github",
+          "published_at": "2026-08-13T23:29:59+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "claude-code-v2.1.219",
+          "date": "2026-07-26",
+          "title": "Claude Code v2.1.219：新增 Opus 5 模型支持与网络沙箱白名单",
+          "summary": "Claude Code v2.1.219新增Opus 5模型支持、网络沙箱白名单等多项功能。",
+          "score": 8.0,
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.219"
+        },
+        {
+          "update_id": "claude-code-v2.1.221-release",
+          "date": "2026-08-04",
+          "title": "Claude Code v2.1.221：新增专注视图、沙箱凭据保护和提示审计功能",
+          "summary": "Anthropic 发布 Claude Code v2.1.221，新增 Focus view 和 sandbox 凭据保护等功能，提升开发体验和安全性。",
+          "score": 8.5,
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.221"
+        },
+        {
+          "update_id": "claude-code-v2.1.229-release",
+          "date": "2026-08-13",
+          "title": "anthropics/claude-code released v2.1.229",
+          "summary": "Claude Code 发布 v2.1.229，新增远程控制恢复、插件市场命令源等多项功能。",
+          "score": 8.0,
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.229"
+        },
+        {
+          "update_id": "claude-code-release-v2.1.232",
+          "date": "2026-08-14",
+          "title": "Claude Code v2.1.232：子代理分叉默认启用，新增跨会话消息与 GitLab 安全增强",
+          "summary": "Claude Code 更新至 v2.1.232，默认启用子代理分叉并支持跨会话消息，增强 Agent 协作和安全性。",
+          "score": 8.0,
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.232"
+        }
+      ],
+      "usage_flow": [
+        "在终端安装并启动 claude，用自然语言描述需求（如'给这个项目加登录功能'）",
+        "AI 自动分析代码库，必要时用 /add-dir 添加更多目录到上下文",
+        "AI 提出修改方案，经确认后自动编辑文件、运行命令",
+        "开发者检查 git diff，确认无误后提交代码",
+        "安装 Claude Code CLI，在代码仓库目录下运行 `claude` 启动对话",
+        "用自然语言描述需求（如'给这个函数加单元测试'），AI 自动读文件、改代码、跑命令",
+        "按 `Ctrl+Alt+F` 开启 Focus view，把工具执行细节折叠成可展开摘要，专注看对话",
+        "用 `claude-api prompt-audit` 检查旧提示词是否适合当前模型，确认后提交代码",
+        "在终端运行 `claude` 启动会话，多个会话会自动获得唯一名称",
+        "在提示符里输入 `@会话名` 直接给另一个运行中的 Claude 会话发消息",
+        "调用子代理时自动在后台分叉运行，继承当前对话上下文但互不阻塞",
+        "通过 `/config` 设置跨会话消息的接收策略（接受/暂存/拒绝）和对话过期时间"
+      ],
+      "learning_points": [
+        "Context window（上下文窗口）：模型一次能'看'多少字，Opus 5 的 1M 约等于能塞进整本《三体》第一部，让 AI 分析大型代码库不丢线索",
+        "Agent（智能体）：不只是聊天回复，而是能自主决定'我要先读哪个文件、再改哪行、然后跑测试'的 AI 系统",
+        "Function calling（函数调用）：模型不直接生成答案，而是输出结构化指令（如'调用 read_file 工具'），由外部程序执行后再把结果喂回模型",
+        "Agent：不只是问答，而是能自主规划步骤、调用工具完成任务的 AI 系统",
+        "Function Calling（函数调用）：LLM 输出结构化指令让程序去执行具体操作，比如'读这个文件'或'运行这个测试'",
+        "Prompt 审计：不同模型对提示词的敏感度不同，旧提示词可能在新模型上失效，需要系统性检查",
+        "Agent（智能体）：能自主规划、调用工具、完成多步骤任务的 AI 程序，不只是聊天",
+        "Fork（分叉）：从现有进程复制出一个独立进程，子进程继承父进程的状态但之后各跑各的，互不干扰",
+        "Secret redaction（敏感信息脱敏）：自动识别并隐藏令牌、密码等，防止 AI 日志或输出里意外泄露"
+      ],
+      "verticals": [],
+      "tags": [
+        "工具更新",
+        "Claude Code",
+        "Opus 5",
+        "Agent",
+        "开发者工具",
+        "更新",
+        "release"
+      ]
+    },
+    {
+      "product_id": "product-1e46f20bebb7b354",
+      "product_name": "GPT-5.6",
+      "builder_name": "OpenAI News",
+      "first_seen": "2026-07-30",
+      "last_seen": "2026-08-14",
+      "occurrence_count": 2,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "OpenAI 发布 GPT-5.6 构建者指南，介绍初创公司如何用其构建更快、更省成本的 AI 代理。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.0,
+      "summary": "OpenAI 发布 GPT-5.6 构建者指南，介绍初创公司如何用其构建更快、更省成本的 AI 代理。",
+      "title": "The builder’s guide to GPT‑5.6",
+      "url": "https://openai.com/index/builders-guide-to-gpt-5-6",
+      "sources": [
+        {
+          "url": "https://openai.com/index/how-two-settings-tripled-our-arc-agi-3-scores",
+          "title": "How enabling two settings tripled our scores on the ARC-AGI-3 benchmark",
+          "source_type": "rss",
+          "published_at": "2026-07-29T15:00:00+00:00"
+        },
+        {
+          "url": "https://openai.com/index/builders-guide-to-gpt-5-6",
+          "title": "The builder’s guide to GPT‑5.6",
+          "source_type": "rss",
+          "published_at": "2026-08-13T11:00:00+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "openai-arc-agi-3-settings",
+          "date": "2026-07-30",
+          "title": "How enabling two settings tripled our scores on the ARC-AGI-3 benchmark",
+          "summary": "OpenAI发现两个API设置可大幅提升GPT-5.6在ARC-AGI-3上的表现，为AI产品优化提供新思路。",
+          "score": 9.0,
+          "url": "https://openai.com/index/how-two-settings-tripled-our-arc-agi-3-scores"
+        },
+        {
+          "update_id": "openai-gpt5.6-builders-guide",
+          "date": "2026-08-14",
+          "title": "The builder’s guide to GPT‑5.6",
+          "summary": "OpenAI 发布 GPT-5.6 构建者指南，介绍初创公司如何用其构建更快、更省成本的 AI 代理。",
+          "score": 8.0,
+          "url": "https://openai.com/index/builders-guide-to-gpt-5-6"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "OpenAI",
+        "ARC-AGI",
+        "模型能力",
+        "GPT-5.6",
+        "Agent",
+        "开发者指南"
+      ]
+    },
+    {
+      "product_id": "product-faa54b60c4c19b0f",
+      "product_name": "DeepSeek Harness",
+      "builder_name": "bjin",
+      "first_seen": "2026-08-14",
+      "last_seen": "2026-08-14",
+      "occurrence_count": 1,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "DeepSeek 发布 Harness 开发者预览版，提供可追溯的会话日志和轨迹回放功能，助力 Agent 开发调试。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "china",
+      "score": 8.0,
+      "summary": "DeepSeek 发布 Harness 开发者预览版，提供可追溯的会话日志和轨迹回放功能，助力 Agent 开发调试。",
+      "title": "DeepSeek Harness developer preview",
+      "url": "https://deepseek.com/harness/en/",
+      "sources": [
+        {
+          "url": "https://deepseek.com/harness/en/",
+          "title": "DeepSeek Harness developer preview",
+          "source_type": "hackernews",
+          "published_at": "2026-08-13T12:58:02+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "deepseek-harness-developer-preview",
+          "date": "2026-08-14",
+          "title": "DeepSeek Harness developer preview",
+          "summary": "DeepSeek 发布 Harness 开发者预览版，提供可追溯的会话日志和轨迹回放功能，助力 Agent 开发调试。",
+          "score": 8.0,
+          "url": "https://deepseek.com/harness/en/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "DeepSeek",
+        "Agent",
+        "开发者工具"
+      ]
+    },
+    {
+      "product_id": "product-dddb7b79c2bc1e7c",
+      "product_name": "llm-gemini",
+      "builder_name": "Simon Willison",
+      "first_seen": "2026-08-14",
+      "last_seen": "2026-08-14",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "llm-gemini 0.33发布，新增Gemini 3.7 Flash支持和服务端工具调用，开发者可快速体验新模型能力。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.0,
+      "summary": "llm-gemini 0.33发布，新增Gemini 3.7 Flash支持和服务端工具调用，开发者可快速体验新模型能力。",
+      "title": "llm-gemini 0.33",
+      "url": "https://simonwillison.net/2026/Aug/13/llm-gemini/",
+      "sources": [
+        {
+          "url": "https://simonwillison.net/2026/Aug/13/llm-gemini/",
+          "title": "llm-gemini 0.33",
+          "source_type": "rss",
+          "published_at": "2026-08-13T19:37:34+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "llm-gemini-0.33-release-2026",
+          "date": "2026-08-14",
+          "title": "llm-gemini 0.33",
+          "summary": "llm-gemini 0.33发布，新增Gemini 3.7 Flash支持和服务端工具调用，开发者可快速体验新模型能力。",
+          "score": 8.0,
+          "url": "https://simonwillison.net/2026/Aug/13/llm-gemini/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Gemini",
+        "开发者工具"
+      ]
+    },
+    {
+      "product_id": "product-bf84b36e01021d4d",
+      "product_name": "Gemini 3.7 Flash",
+      "builder_name": "thisisauserid",
+      "first_seen": "2026-08-14",
+      "last_seen": "2026-08-14",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Google 发布 Gemini 3.7 Flash 模型，社区测试显示其在图像转 HTML 任务上表现出色，且定价策略引发关注。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.0,
+      "summary": "Google 发布 Gemini 3.7 Flash 模型，社区测试显示其在图像转 HTML 任务上表现出色，且定价策略引发关注。",
+      "title": "Gemini 3.7 Flash",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/",
+      "sources": [
+        {
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/",
+          "title": "Gemini 3.7 Flash",
+          "source_type": "hackernews",
+          "published_at": "2026-08-13T17:23:22+00:00"
+        },
+        {
+          "url": "https://deepmind.google/blog/introducing-gemini-3-7-flash/",
+          "title": "Introducing Gemini 3.7 Flash",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "gemini-3.7-flash-release",
+          "date": "2026-08-14",
+          "title": "Gemini 3.7 Flash",
+          "summary": "Google 发布 Gemini 3.7 Flash 模型，社区测试显示其在图像转 HTML 任务上表现出色，且定价策略引发关注。",
+          "score": 8.0,
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Gemini",
+        "模型发布"
+      ]
+    },
+    {
+      "product_id": "product-280bc30baadc962f",
+      "product_name": "Writer AI",
+      "builder_name": "Russell Brandom",
+      "first_seen": "2026-08-14",
+      "last_seen": "2026-08-14",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Writer 推出基于 Z.ai 开源模型 GLM-5.2 的新 AI 模型，以更低价格提供部署就绪能力。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.5,
+      "summary": "Writer 推出基于 Z.ai 开源模型 GLM-5.2 的新 AI 模型，以更低价格提供部署就绪能力。",
+      "title": "Writer introduces new AI model and upgraded harness to contain token costs",
+      "url": "https://techcrunch.com/2026/08/13/writer-introduces-new-ai-model-and-upgraded-harness-to-contain-token-costs/",
+      "sources": [
+        {
+          "url": "https://techcrunch.com/2026/08/13/writer-introduces-new-ai-model-and-upgraded-harness-to-contain-token-costs/",
+          "title": "Writer introduces new AI model and upgraded harness to contain token costs",
+          "source_type": "rss",
+          "published_at": "2026-08-13T21:13:24+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "writer-new-model-glm5.2-based",
+          "date": "2026-08-14",
+          "title": "Writer introduces new AI model and upgraded harness to contain token costs",
+          "summary": "Writer 推出基于 Z.ai 开源模型 GLM-5.2 的新 AI 模型，以更低价格提供部署就绪能力。",
+          "score": 7.5,
+          "url": "https://techcrunch.com/2026/08/13/writer-introduces-new-ai-model-and-upgraded-harness-to-contain-token-costs/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Writer",
+        "GLM-5.2",
+        "低成本模型"
+      ]
+    },
+    {
+      "product_id": "product-0d571ded23669998",
+      "product_name": "Muse Glimmer",
+      "builder_name": "AI News",
+      "first_seen": "2026-08-13",
+      "last_seen": "2026-08-14",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Meta发布开源多模态模型Muse Glimmer并预告Spark 1.2，值得关注其开源策略。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.0,
+      "summary": "Meta发布开源多模态模型Muse Glimmer并预告Spark 1.2，值得关注其开源策略。",
+      "title": "not much happened today",
+      "url": "https://news.smol.ai/issues/26-08-10-not-much/",
+      "sources": [
+        {
+          "url": "https://news.smol.ai/issues/26-08-10-not-much/",
+          "title": "not much happened today",
+          "source_type": "newsletter",
+          "published_at": "2026-08-10T05:44:39+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "meta-muse-glimmer-spark-1.2-release",
+          "date": "2026-08-13",
+          "title": "not much happened today",
+          "summary": "Meta发布开源多模态模型Muse Glimmer并预告Spark 1.2，值得关注其开源策略。",
+          "score": 7.0,
+          "url": "https://news.smol.ai/issues/26-08-10-not-much/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "模型发布",
+        "Meta",
+        "开源"
+      ]
+    },
     {
       "product_id": "product-57ffcbb51df642bc",
       "product_name": "SL2T（sign-language-to-text）",
@@ -119,107 +666,6 @@
         "AI编辑器",
         "多人协作",
         "实时对话"
-      ]
-    },
-    {
-      "product_id": "product-7f7811de59626bc9",
-      "product_name": "Claude Code",
-      "builder_name": "ashwin-ant",
-      "first_seen": "2026-07-26",
-      "last_seen": "2026-08-13",
-      "occurrence_count": 3,
-      "intelligence_type": "product_case",
-      "evidence_status": "first_party",
-      "target_user": "需要在终端或 IDE 里写代码、改代码、调试的开发者",
-      "user_problem": "开发者用 AI 辅助编程时，工具调用过程太嘈杂干扰思路；沙箱环境里怕敏感凭据泄露；旧版提示词在新模型上效果变差却难排查；并行工具调用的权限检查又慢又贵。",
-      "what_it_is": "Claude Code 发布 v2.1.229，新增远程控制恢复、插件市场命令源等多项功能。",
-      "ai_role": "理解用户意图后，自主决定读哪些文件、改哪几行、执行什么命令，并把执行过程和结果反馈给用户确认",
-      "implementation_idea": "Claude Code 本质上是一个 Agent（智能体）：它把用户的自然语言目标拆解成一步步操作，每步调用'工具'（如读文件、写文件、跑 Bash）。新版 Focus view 是在 UI 层把工具调用的详细日志折叠起来；沙箱凭据保护则是让 AI 在隔离环境里只能看到'假值'，真实密码在数据离开沙箱时才由代理层替换。",
-      "hands_on_exercise": "30 分钟体验：找一个本地 Git 项目，安装 Claude Code，让它解释一个复杂函数的实现；然后开启 Focus view（Ctrl+Alt+F）对比折叠前后的界面差异；最后故意写一条带模型版本假设的旧提示词，运行 `claude-api prompt-audit` 看它会报什么问题。",
-      "limitations_or_uncertainties": "macOS 上沙箱凭据 mask 功能回退到 deny 模式，具体限制范围未公开；prompt-audit 的检测规则和覆盖的'旧模型模式'清单未公开；背景会话（background sessions）的自动推送到远程仓库的具体策略细节未公开。",
-      "region": "global",
-      "score": 8.0,
-      "summary": "Claude Code 发布 v2.1.229，新增远程控制恢复、插件市场命令源等多项功能。",
-      "title": "anthropics/claude-code released v2.1.229",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.229",
-      "sources": [
-        {
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.219",
-          "title": "anthropics/claude-code released v2.1.219",
-          "source_type": "github",
-          "published_at": "2026-07-24T17:14:23+00:00"
-        },
-        {
-          "url": "https://claude.com/product/claude-code",
-          "title": "Claude Code by Anthropic | AI Coding Agent, Terminal, IDE",
-          "source_type": "supplemental",
-          "published_at": ""
-        },
-        {
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.221",
-          "title": "anthropics/claude-code released v2.1.221",
-          "source_type": "github",
-          "published_at": "2026-08-04T00:14:23+00:00"
-        },
-        {
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.229",
-          "title": "anthropics/claude-code released v2.1.229",
-          "source_type": "github",
-          "published_at": "2026-08-12T20:56:22+00:00"
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "claude-code-v2.1.219",
-          "date": "2026-07-26",
-          "title": "Claude Code v2.1.219：新增 Opus 5 模型支持与网络沙箱白名单",
-          "summary": "Claude Code v2.1.219新增Opus 5模型支持、网络沙箱白名单等多项功能。",
-          "score": 8.0,
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.219"
-        },
-        {
-          "update_id": "claude-code-v2.1.221-release",
-          "date": "2026-08-04",
-          "title": "Claude Code v2.1.221：新增专注视图、沙箱凭据保护和提示审计功能",
-          "summary": "Anthropic 发布 Claude Code v2.1.221，新增 Focus view 和 sandbox 凭据保护等功能，提升开发体验和安全性。",
-          "score": 8.5,
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.221"
-        },
-        {
-          "update_id": "claude-code-v2.1.229-release",
-          "date": "2026-08-13",
-          "title": "anthropics/claude-code released v2.1.229",
-          "summary": "Claude Code 发布 v2.1.229，新增远程控制恢复、插件市场命令源等多项功能。",
-          "score": 8.0,
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.229"
-        }
-      ],
-      "usage_flow": [
-        "在终端安装并启动 claude，用自然语言描述需求（如'给这个项目加登录功能'）",
-        "AI 自动分析代码库，必要时用 /add-dir 添加更多目录到上下文",
-        "AI 提出修改方案，经确认后自动编辑文件、运行命令",
-        "开发者检查 git diff，确认无误后提交代码",
-        "安装 Claude Code CLI，在代码仓库目录下运行 `claude` 启动对话",
-        "用自然语言描述需求（如'给这个函数加单元测试'），AI 自动读文件、改代码、跑命令",
-        "按 `Ctrl+Alt+F` 开启 Focus view，把工具执行细节折叠成可展开摘要，专注看对话",
-        "用 `claude-api prompt-audit` 检查旧提示词是否适合当前模型，确认后提交代码"
-      ],
-      "learning_points": [
-        "Context window（上下文窗口）：模型一次能'看'多少字，Opus 5 的 1M 约等于能塞进整本《三体》第一部，让 AI 分析大型代码库不丢线索",
-        "Agent（智能体）：不只是聊天回复，而是能自主决定'我要先读哪个文件、再改哪行、然后跑测试'的 AI 系统",
-        "Function calling（函数调用）：模型不直接生成答案，而是输出结构化指令（如'调用 read_file 工具'），由外部程序执行后再把结果喂回模型",
-        "Agent：不只是问答，而是能自主规划步骤、调用工具完成任务的 AI 系统",
-        "Function Calling（函数调用）：LLM 输出结构化指令让程序去执行具体操作，比如'读这个文件'或'运行这个测试'",
-        "Prompt 审计：不同模型对提示词的敏感度不同，旧提示词可能在新模型上失效，需要系统性检查"
-      ],
-      "verticals": [],
-      "tags": [
-        "工具更新",
-        "Claude Code",
-        "Opus 5",
-        "Agent",
-        "开发者工具",
-        "更新"
       ]
     },
     {
@@ -578,54 +1024,6 @@
       "tags": [
         "模型排行",
         "市场趋势"
-      ]
-    },
-    {
-      "product_id": "product-0d571ded23669998",
-      "product_name": "Muse Glimmer",
-      "builder_name": "AI News",
-      "first_seen": "2026-08-13",
-      "last_seen": "2026-08-13",
-      "occurrence_count": 1,
-      "intelligence_type": "model_capability",
-      "evidence_status": "reported",
-      "target_user": "未公开",
-      "user_problem": "未公开",
-      "what_it_is": "Meta发布开源多模态模型Muse Glimmer并预告Spark 1.2，值得关注其开源策略。",
-      "ai_role": "未公开",
-      "implementation_idea": "未公开",
-      "hands_on_exercise": "未公开",
-      "limitations_or_uncertainties": "未公开",
-      "region": "global",
-      "score": 7.0,
-      "summary": "Meta发布开源多模态模型Muse Glimmer并预告Spark 1.2，值得关注其开源策略。",
-      "title": "not much happened today",
-      "url": "https://news.smol.ai/issues/26-08-10-not-much/",
-      "sources": [
-        {
-          "url": "https://news.smol.ai/issues/26-08-10-not-much/",
-          "title": "not much happened today",
-          "source_type": "newsletter",
-          "published_at": "2026-08-10T05:44:39+00:00"
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "meta-muse-glimmer-spark-1.2-release",
-          "date": "2026-08-13",
-          "title": "not much happened today",
-          "summary": "Meta发布开源多模态模型Muse Glimmer并预告Spark 1.2，值得关注其开源策略。",
-          "score": 7.0,
-          "url": "https://news.smol.ai/issues/26-08-10-not-much/"
-        }
-      ],
-      "usage_flow": [],
-      "learning_points": [],
-      "verticals": [],
-      "tags": [
-        "模型发布",
-        "Meta",
-        "开源"
       ]
     },
     {
@@ -6498,54 +6896,6 @@
       "tags": [
         "模型效率",
         "Inkling"
-      ]
-    },
-    {
-      "product_id": "product-1e46f20bebb7b354",
-      "product_name": "GPT-5.6",
-      "builder_name": "OpenAI News",
-      "first_seen": "2026-07-30",
-      "last_seen": "2026-07-30",
-      "occurrence_count": 1,
-      "intelligence_type": "model_capability",
-      "evidence_status": "first_party",
-      "target_user": "未公开",
-      "user_problem": "未公开",
-      "what_it_is": "OpenAI发现两个API设置可大幅提升GPT-5.6在ARC-AGI-3上的表现，为AI产品优化提供新思路。",
-      "ai_role": "未公开",
-      "implementation_idea": "未公开",
-      "hands_on_exercise": "未公开",
-      "limitations_or_uncertainties": "未公开",
-      "region": "global",
-      "score": 9.0,
-      "summary": "OpenAI发现两个API设置可大幅提升GPT-5.6在ARC-AGI-3上的表现，为AI产品优化提供新思路。",
-      "title": "How enabling two settings tripled our scores on the ARC-AGI-3 benchmark",
-      "url": "https://openai.com/index/how-two-settings-tripled-our-arc-agi-3-scores",
-      "sources": [
-        {
-          "url": "https://openai.com/index/how-two-settings-tripled-our-arc-agi-3-scores",
-          "title": "How enabling two settings tripled our scores on the ARC-AGI-3 benchmark",
-          "source_type": "rss",
-          "published_at": "2026-07-29T15:00:00+00:00"
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "openai-arc-agi-3-settings",
-          "date": "2026-07-30",
-          "title": "How enabling two settings tripled our scores on the ARC-AGI-3 benchmark",
-          "summary": "OpenAI发现两个API设置可大幅提升GPT-5.6在ARC-AGI-3上的表现，为AI产品优化提供新思路。",
-          "score": 9.0,
-          "url": "https://openai.com/index/how-two-settings-tripled-our-arc-agi-3-scores"
-        }
-      ],
-      "usage_flow": [],
-      "learning_points": [],
-      "verticals": [],
-      "tags": [
-        "OpenAI",
-        "ARC-AGI",
-        "模型能力"
       ]
     },
     {
