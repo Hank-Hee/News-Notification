@@ -686,6 +686,38 @@
       },
       "stage": "candidate_analysis"
     },
+    "0805f2ba674ccdb8070c5d98d311bd1ab01ea2fc8539bb13737157c472205a88": {
+      "created_at": "2026-08-17T01:55:41.036673+00:00",
+      "model": "kimi-k2.6",
+      "prompt_version": "deep-v3-beginner",
+      "result": {
+        "ai_role": "分析用户的操作时间线，学习行为模式，在收到请求时结合历史上下文理解意图，并生成自动化建议或续接任务",
+        "evidence_status": "reported",
+        "hands_on_exercise": "30 分钟体验：打开 macOS 的'屏幕使用时间'或任意按键记录工具，手动记录自己 1 小时内的重复操作（如打开固定网站、复制粘贴固定内容）；然后尝试用 ChatGPT 的 Codex 或任何自动化工具（如 Apple Shortcuts）写一个简单脚本完成其中一个重复任务，体会'让 AI 学习行为再自动化'的思路。",
+        "implementation_idea": "在本地持续监听用户的点击和键盘事件，把操作序列按时间整理成结构化日志；当用户提问时，将这些日志作为上下文（类似 RAG，即检索增强生成：先搜你的历史再回答）喂给模型，让 AI 推断出用户的习惯和工作流，再调用自动化工具执行。",
+        "learning_points": [
+          "RAG（检索增强生成）：AI 回答前先从你的个人操作记录里检索相关信息，而不是只靠训练时的记忆",
+          "AI Agent（AI 代理）：AI 不仅能回答问题，还能观察环境、做决定并执行实际操作",
+          "Function Calling（函数调用）：AI 判断需要做什么后，调用系统功能来完成自动化，比如模拟点击或执行脚本"
+        ],
+        "limitations_or_uncertainties": "该功能的具体隐私政策、数据存储位置（本地还是云端）、用户是否可选择性关闭/删除记录、是否支持所有 macOS 应用还是仅限部分应用，均未公开；目前仅为 The Verge 报道的产品功能更新，尚未确认是否已向所有用户推送。",
+        "product_name": "ChatGPT macOS 桌面应用",
+        "sources": [
+          "https://www.theverge.com/ai-artificial-intelligence/980742/chatgpts-computer-history-tracks-your-clicks-and-keystrokes"
+        ],
+        "target_users": "macOS 系统下的 ChatGPT 桌面应用用户，需要自动化重复工作流程的人",
+        "title_zh": "ChatGPT macOS 桌面应用新增 Computer History：记录点击和按键来训练 AI",
+        "usage_flow": [
+          "在 macOS 上安装并开启 ChatGPT 桌面应用的 Computer History 功能",
+          "正常使用电脑，功能后台记录点击、按键等操作，生成个人活动时间线",
+          "向 ChatGPT 或 Codex 发起请求时，AI 参考你的操作历史理解上下文",
+          "AI 根据学习到的习惯，主动推荐自动化流程或续接你未完成的工作"
+        ],
+        "user_problem": "用户每天重复大量手动操作（点击、输入、切换应用），AI 不了解你的工作上下文，无法主动帮你完成或续接未做完的任务",
+        "what_it_is": "ChatGPT macOS 桌面版的一个新功能，自动记录用户在电脑上的点击和键盘操作，生成时间线，让 AI 学习你的工作方式并推荐自动化操作。"
+      },
+      "stage": "deep_analysis"
+    },
     "0834886114e0b66be08e6920277bfef890eea0727415184a652e68423bb76ed9": {
       "created_at": "2026-08-12T02:44:18.656153+00:00",
       "model": "kimi-k2.6",
@@ -2539,6 +2571,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "187434e080a7d2d36f5f1a8e372354cf80172b6a67f315c1b5001f101c3bb81a": {
+      "created_at": "2026-08-17T01:54:46.250285+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-disbands-preparedness-team",
+        "evidence_status": "reported",
+        "follow_up": "关注OpenAI安全治理的后续安排。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:968e2ab8400f33b5",
+        "intelligence_type": "business_policy",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI解散预备团队，涉及AI安全治理，影响行业信任，但无直接产品功能。",
+        "region": "global",
+        "score": 7.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "OpenAI据报道解散了负责评估模型风险的预备团队，引发对AI安全治理的担忧。",
+        "tags": [
+          "OpenAI",
+          "AI安全",
+          "组织变动"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "18b6b7ed621ec8dad730634b48dd38af061d4c455a31d0f9ef27669ef11b1c18": {
       "created_at": "2026-08-13T02:47:09.863634+00:00",
       "model": "deepseek-v4-flash",
@@ -3151,6 +3222,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "1f5dd0df7fb83e211ee86de8e75e4bf757d20ae8ec93b8f7312718fa1c346cc0": {
+      "created_at": "2026-08-17T01:55:13.927289+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "shared-memory-ai-launch",
+        "evidence_status": "first_party",
+        "follow_up": "关注共享记忆带来的隐私和滥用问题，以及产品如何应对。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:49319814",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Wildstatic",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "构建者展示了一个共享记忆的AI产品，有真实用户反馈和讨论，涉及产品设计思路和潜在风险，对初学者理解AI产品有启发。",
+        "region": "global",
+        "score": 8.5,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "开发者展示了一个所有用户共享记忆的AI，旨在提高团队协作效率，但需警惕滥用风险。",
+        "tags": [
+          "AI",
+          "共享记忆",
+          "协作"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "1f789747e81ede0bb7e6533222a2326acafa3c55baed7448c06651748418a3ae": {
       "created_at": "2026-08-04T03:45:41.114816+00:00",
       "model": "deepseek-v4-flash",
@@ -3487,6 +3597,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "2249ef956f4637a46813820563a775659ce7925c4d152b35bb0f51adb70c0ba7": {
+      "created_at": "2026-08-17T01:55:01.823662+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "stripe-acquires-openrouter",
+        "evidence_status": "reported",
+        "follow_up": "关注收购后 OpenRouter 的独立性和定价变化。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:49323381",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "OpenRouter",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Stripe 收购 OpenRouter 是重大行业事件，涉及 AI 基础设施和支付，对理解 AI 生态有较高价值，但非产品案例。",
+        "region": "global",
+        "score": 7.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Stripe 以超 70 亿美元收购 AI 路由平台 OpenRouter，影响 AI 基础设施格局。",
+        "tags": [
+          "Stripe",
+          "OpenRouter",
+          "收购"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "22b12707f89bbc592714abd500a3691063deab806e2de17fd030d08da84717e8": {
       "created_at": "2026-08-16T01:57:45.685687+00:00",
       "model": "deepseek-v4-flash",
@@ -3558,6 +3707,45 @@
         "tags": [
           "AI SDK",
           "Vercel"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "2445423c557828ce4400aaad4825e9ec788c1c3cbed00ca36d7523e3da82cb05": {
+      "created_at": "2026-08-17T01:55:13.927624+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "punch-clock-household-workers",
+        "evidence_status": "first_party",
+        "follow_up": "关注产品的实际使用效果和用户反馈。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:49321046",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Punchy",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "构建者展示了解决家庭小时工打卡问题的产品，有明确的使用场景和痛点，但缺乏用户反馈。",
+        "region": "global",
+        "score": 7.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "开发者创建了一个打卡工具，帮助家庭记录小时工的工作时间，解决手动记录和计算麻烦的问题。",
+        "tags": [
+          "打卡",
+          "家庭",
+          "工具"
         ],
         "target_user": "",
         "verticals": []
@@ -3749,6 +3937,45 @@
         "tags": [
           "Agent",
           "Slack"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "27653cc420626d79a4ce08257fe6c0e2e7100408b45b347b21ff4fd6c058cdca": {
+      "created_at": "2026-08-17T01:55:01.823693+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "pyscrappy-show-hn",
+        "evidence_status": "first_party",
+        "follow_up": "关注其缓存策略和实际使用反馈。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:49317799",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "PyScrappy",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "PyScrappy 是自愈式网页抓取选择器并带 MCP 服务器，有明确产品形态和代码，但评论少，成熟度待验证。",
+        "region": "global",
+        "score": 7.5,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "PyScrappy 是一个自愈式网页抓取选择器，并提供 MCP 服务器，解决选择器失效问题。",
+        "tags": [
+          "网页抓取",
+          "MCP",
+          "开源"
         ],
         "target_user": "",
         "verticals": []
@@ -6422,6 +6649,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "447e8027eb786806c4594fdba1674b3a7381f5956554c163a3b884c2c0a5de05": {
+      "created_at": "2026-08-17T01:54:46.251792+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "dario-amodei-ai-trust-quote",
+        "evidence_status": "first_party",
+        "follow_up": "关注Anthropic如何通过产品兑现承诺。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:simonwillison.net_atom_everything_:e27bba9b0711b6a2",
+        "intelligence_type": "market_signal",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Anthropic CEO Dario Amodei的推文引用，强调AI信任危机和实际交付价值，提供行业领袖观点。",
+        "region": "global",
+        "score": 7.0,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "Anthropic CEO Dario Amodei表示AI反弹是信任危机，认为实际治愈癌症比营销更重要。",
+        "tags": [
+          "Anthropic",
+          "AI信任",
+          "行业观点"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "4569ae9f8e01f9a58c9e0b936a8590a411a5870c53bf9c47fdf516c025b6156e": {
       "created_at": "2026-08-15T01:49:36.492307+00:00",
       "model": "deepseek-v4-flash",
@@ -6570,6 +6836,45 @@
           "OpenAI",
           "苹果",
           "法律"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "46b63b88d5094dd9cf1c4cf59a44b653951d3c83664c72af059c49b9b55ca80c": {
+      "created_at": "2026-08-17T01:55:13.927744+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "deepseek-v4-api-pricing",
+        "evidence_status": "reported",
+        "follow_up": "关注调价对开发者生态的影响。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "google_news:article:ef7b61a09a1e42c8",
+        "intelligence_type": "business_policy",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "DeepSeek-V4 API",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "DeepSeek-V4系列API调价8月17日生效，采用峰谷定价最高涨幅1100%，与上一条重复，但信息一致。",
+        "region": "china",
+        "score": 8.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "DeepSeek-V4系列API调价8月17日生效，采用峰谷定价，最高涨幅1100%。",
+        "tags": [
+          "DeepSeek",
+          "定价",
+          "API"
         ],
         "target_user": "",
         "verticals": []
@@ -7146,6 +7451,45 @@
           "AI SDK",
           "Vercel",
           "Google Vertex"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "4b7054caabfc8903a4425497540301e03f24cb3ab6b0e7dc3096231e3029b941": {
+      "created_at": "2026-08-17T01:55:13.927697+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "deepseek-api-price-increase",
+        "evidence_status": "reported",
+        "follow_up": "关注调价后开发者的反应和模型使用量变化。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "google_news:article:5b1794b39440f85b",
+        "intelligence_type": "business_policy",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "DeepSeek API",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "DeepSeek调价正式生效，涨幅最高达1100%，采用峰谷定价，对开发者成本有重大影响。",
+        "region": "china",
+        "score": 8.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "DeepSeek API调价正式生效，最高涨幅达1100%，空闲时段价格减半，影响开发者成本。",
+        "tags": [
+          "DeepSeek",
+          "定价",
+          "API"
         ],
         "target_user": "",
         "verticals": []
@@ -9359,6 +9703,46 @@
       },
       "stage": "candidate_analysis"
     },
+    "5fa24e4f8ce5cac8c159a0bbcfa148ef40716407b68164465655ca464049a2b1": {
+      "created_at": "2026-08-17T01:54:46.250178+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "stripe-acquires-openrouter",
+        "evidence_status": "reported",
+        "follow_up": "关注收购完成后的产品整合和市场影响。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:024d539f16be9446",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "OpenRouter",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Stripe拟收购AI网关初创OpenRouter，金额超70亿美元，是重大行业整合信号，影响AI API分发格局。",
+        "region": "global",
+        "score": 8.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Stripe据报道将以70亿美元收购AI网关初创OpenRouter，影响AI API分发格局。",
+        "tags": [
+          "收购",
+          "Stripe",
+          "OpenRouter",
+          "AI网关"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "6032cebb95f41df71b6c9ef2c14ae185d4538a83586f5be7a2701c720d506aab": {
       "created_at": "2026-08-04T03:44:34.628254+00:00",
       "model": "deepseek-v4-flash",
@@ -9818,6 +10202,45 @@
           "Claude Code",
           "多Agent",
           "协作"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "649e86f483f74eb11237e1c9a1061427e97ba45dd239008416327cd5a50401f1": {
+      "created_at": "2026-08-17T01:55:01.823092+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "claude-system-prompts-update",
+        "evidence_status": "first_party",
+        "follow_up": "关注提示词变化对下游应用的影响。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:49319556",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Claude",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Anthropic 官方发布 Claude 系统提示词更新，对理解模型行为、构建 Agent 有直接参考价值，且 simonw 提供了 diff 便于追踪变化。",
+        "region": "global",
+        "score": 8.5,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Anthropic 更新了 Claude 的系统提示词，揭示了模型行为细节，对开发者有重要参考价值。",
+        "tags": [
+          "Claude",
+          "系统提示词",
+          "模型行为"
         ],
         "target_user": "",
         "verticals": []
@@ -10441,6 +10864,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "6ad7c9071783e9080823bb8d9e73d843836f9fad8c5327f062d36ec4b85ba812": {
+      "created_at": "2026-08-17T01:55:01.823522+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "nvidia-openai-financing-cut",
+        "evidence_status": "reported",
+        "follow_up": "关注对 OpenAI 算力布局的影响。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:49323686",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Nvidia 减少对 OpenAI 基础设施融资担保，涉及商业和算力，但属于融资/算力新闻，对产品经理直接价值有限。",
+        "region": "global",
+        "score": 5.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Nvidia 大幅减少对 OpenAI 数据中心融资的担保，涉及商业和算力。",
+        "tags": [
+          "Nvidia",
+          "OpenAI",
+          "融资"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "6b65e5f82a548f557da2ea0c14e9b238f979f0d57e4e4c86ba4b4c131efb4e2f": {
       "created_at": "2026-07-26T04:07:17.345785+00:00",
       "model": "deepseek-v4-flash",
@@ -11004,6 +11466,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "6f4435cfdbac0c84738c27f3c34e4c24b63420c79b462d6e5cd8c631cde5a424": {
+      "created_at": "2026-08-17T01:55:01.823219+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "ai-credit-resale-economy",
+        "evidence_status": "reported",
+        "follow_up": "关注平台对转售的打击措施。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:49320611",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "讨论 AI 额度转售经济，涉及滥用和商业模式，对理解 AI 生态有一定价值，但非核心产品动态。",
+        "region": "global",
+        "score": 6.5,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "文章探讨了 AI 额度转售的灰色市场，涉及滥用和商业模式。",
+        "tags": [
+          "AI经济",
+          "滥用"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "704370ef24e574df0cf0c00bccb064b42efa46a3a2c40beadf78e4252861306a": {
       "created_at": "2026-08-07T03:15:20.883203+00:00",
       "model": "deepseek-v4-flash",
@@ -11457,6 +11957,42 @@
         "verticals": []
       },
       "stage": "candidate_analysis"
+    },
+    "7335cc46c743a09cec643f35545db5bc07eb4ddf463a30149ef3dc3d0149ae05": {
+      "created_at": "2026-08-17T01:56:05.995069+00:00",
+      "model": "kimi-k2.6",
+      "prompt_version": "deep-v3-beginner",
+      "result": {
+        "ai_role": "作为团队的'公共终端'，持续学习所有人的对话，把历史上下文用于回答新用户的问题",
+        "evidence_status": "early_signal",
+        "hands_on_exercise": "用任意 LLM（ChatGPT/Claude/国产大模型）做对比实验：先新建一个对话问'我们团队做电商网站，推荐技术栈'，然后另开一个新对话问'继续，怎么部署'，观察 AI 是否记得'电商网站'；再在原对话里继续问，对比两种体验。思考：如果 10 个人共享同一个对话，好处和麻烦各是什么？",
+        "implementation_idea": "本质上是把通常'每个用户隔离'的聊天会话，改成'所有人共用同一份对话历史'。AI 每次回复时能看到之前所有用户说过的话，就像一块公共白板，所有人都在上面写字，后来者能看到前面写的内容。开发者 adjohu 提到会面临流量压力和 token 限制问题，说明底层仍是调用 LLM API，只是会话层做了共享设计。",
+        "learning_points": [
+          "上下文窗口（Context Window）：LLM 能'记住'的最近文字量有限，共享记忆多了会撑爆这个窗口，导致 AI 丢信息或选择性忽略",
+          "提示词注入/滥用风险：公共记忆意味着恶意用户可以通过对话给 AI'洗脑'，类似 2016 年微软 Tay.ai 被用户教坏的事件",
+          "RAG（检索增强生成）：一种让 AI 查外部数据库来补充记忆的技术，但 WildStatic 目前未公开是否用了 RAG，可能只是直接把历史对话塞进上下文"
+        ],
+        "limitations_or_uncertainties": "未公开技术架构（是否用 RAG、向量数据库、如何防篡改共享记忆）；未公开商业模式；高流量下的选择性忽略是临时限制还是设计取舍未说明；无独立第三方验证其'学习效率更高'的说法",
+        "product_name": "WildStatic",
+        "sources": [
+          "https://wildstatic.com/",
+          "https://www.techrepublic.com/article/why-microsofts-tay-ai-b...",
+          "https://milliondollarchat.com",
+          "https://github.com/adjohu",
+          "https://twitter.com/adjohu"
+        ],
+        "target_users": "开发团队、小团队协作场景；目前未公开更明确的用户画像",
+        "title_zh": "Show HN: 一个所有用户共享记忆的公共 AI",
+        "usage_flow": [
+          "打开公共网页，直接进入同一个共享会话",
+          "像聊天一样输入问题，AI 基于之前所有用户的对话历史回答",
+          "后续用户提问时，AI 自动引用已积累的记忆，减少重复解释",
+          "高流量时 AI 可能选择性忽略部分消息（开发者正在调整）"
+        ],
+        "user_problem": "团队成员各自开独立 AI 会话时，重复问相似问题、提示词冗余重叠，导致 AI 学习效率低、团队接受度差",
+        "what_it_is": "WildStatic 是一个公共聊天界面，所有人跟同一个 AI 对话，且 AI 会把所有对话历史当作共享记忆，后续用户能继承之前聊过的上下文。"
+      },
+      "stage": "deep_analysis"
     },
     "735375c6912f81652aa7b54edf6a45b207d2217d8fe820e89eed65108e2cc76b": {
       "created_at": "2026-08-13T02:48:02.044858+00:00",
@@ -14002,6 +14538,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "8a8259cfb7e2653fc552c6fb47b0c2f319a1f6668e5223bf67430667c323d634": {
+      "created_at": "2026-08-17T01:55:01.822650+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "browser-use-release-0.13.8",
+        "evidence_status": "first_party",
+        "follow_up": "关注后续版本是否引入新功能或重大变更。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "github:release:371405128",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "browser-use",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "browser-use 是活跃的开源 AI Agent 项目，本次发布包含多项修复和模型支持更新，对使用该库的开发者有直接价值，但属于常规迭代，增量有限。",
+        "region": "global",
+        "score": 7.5,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "browser-use 发布 0.13.8，修复了多个 Agent 和 DOM 处理问题，并更新了 Cerebras 模型支持。",
+        "tags": [
+          "Agent",
+          "开源",
+          "浏览器自动化"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "8bb69cf8ea8e46d90701a813f1b704c0d399eeec5366f06401339363c854d737": {
       "created_at": "2026-07-31T03:49:17.802189+00:00",
       "model": "deepseek-v4-flash",
@@ -14346,6 +14921,84 @@
           "机器人",
           "Gemini",
           "多机协作"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "8ed0eae8e8c519fb2b781f29edbdb46a71021fb79bffe4b8409bf464b91eab80": {
+      "created_at": "2026-08-17T01:55:13.927661+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "deepseek-v4-pro-supercomputing",
+        "evidence_status": "reported",
+        "follow_up": "关注该部署对模型使用和性能的影响。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "google_news:article:1a48c69c44674dff",
+        "intelligence_type": "model_capability",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "DeepSeek V4 Pro",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "国家超算互联网上线DeepSeek V4 Pro正式版，是模型部署的重要进展，但缺乏细节。",
+        "region": "china",
+        "score": 7.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "国家超算互联网上线了DeepSeek V4 Pro正式版，提供更强大的算力支持。",
+        "tags": [
+          "DeepSeek",
+          "超算",
+          "部署"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "8f41852039233ddfcae766d8da2c1c2945bad303e8e3d6c414ffb5c3fe732005": {
+      "created_at": "2026-08-17T01:54:46.250364+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "rogue-ai-not-science-fiction",
+        "evidence_status": "reported",
+        "follow_up": "无。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:ad19b7f0c6b8f3a8",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "关于OpenAI自主AI代理事件的评论文章，讨论AI安全，但无具体产品增量。",
+        "region": "global",
+        "score": 6.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "评论文章称流氓AI不再是科幻，讨论OpenAI自主代理的安全风险。",
+        "tags": [
+          "AI安全",
+          "OpenAI",
+          "自主代理"
         ],
         "target_user": "",
         "verticals": []
@@ -14802,6 +15455,45 @@
         "summary": null,
         "summary_zh": "OpenAI Codex 发布 rusty-v8 v150.4.0，但无发布说明。",
         "tags": [],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "92c93c49363d719becb373928d3a7e0a48359639ba31c5c192dcb7d7a698cb6c": {
+      "created_at": "2026-08-17T01:55:13.927434+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "deepseek-v4-flash-shrink-local",
+        "evidence_status": "first_party",
+        "follow_up": "关注压缩后的模型性能损失和实际应用场景。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:49321813",
+        "intelligence_type": "builder_insight",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "MoEspresso",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "构建者展示了将DeepSeek V4 Flash压缩到57GB并在Mac上运行，成功编写编译器，有Demo和代码，展示了模型压缩和本地部署的可行性。",
+        "region": "global",
+        "score": 8.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "开发者将DeepSeek V4 Flash压缩至57GB并在Mac上运行，成功编写编译器，展示了本地运行大模型的可能性。",
+        "tags": [
+          "模型压缩",
+          "本地部署",
+          "DeepSeek"
+        ],
         "target_user": "",
         "verticals": []
       },
@@ -16018,6 +16710,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "9bf120d97ef318a484dc23d183c8b61803ebc3a20265c62ebd8388ca11d9e986": {
+      "created_at": "2026-08-17T01:55:01.823433+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "mathcode-agent",
+        "evidence_status": "first_party",
+        "follow_up": "关注其许可和与 AUTOLEAN 的关系。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:49322330",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "MathCode",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "MathCode 是一个将自然语言数学问题转化为 Lean 4 定理并尝试证明的 AI 编码助手，有明确产品形态，但缺乏商业许可，且评论指出可能依赖其他项目。",
+        "region": "global",
+        "score": 7.0,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "MathCode 是一个将数学问题转化为 Lean 4 定理并尝试证明的 AI 编码助手，但缺乏商业许可。",
+        "tags": [
+          "数学",
+          "Lean",
+          "Agent"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "9c3e75bd3b3822db29ced401ca3c87d27356ff93b77794c0620c44f872f9bbe0": {
       "created_at": "2026-07-27T04:14:53.893771+00:00",
       "model": "deepseek-v4-flash",
@@ -17067,6 +17798,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "a4a9d91e1c0a97881555d6e1ce0d316c46f47ecd9fd52f71e317c62f10eccb0f": {
+      "created_at": "2026-08-17T01:54:46.250129+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "openai-head-of-design-interview",
+        "evidence_status": "reported",
+        "follow_up": "关注访谈中提到的具体设计方法和案例。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "newsletter:feed:ccac0c3245580d8fba62",
+        "intelligence_type": "builder_insight",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI设计负责人Ian Silber的访谈，提供设计在AI产品中的角色和最佳实践，对产品设计有启发，但无具体产品案例或数据。",
+        "region": "global",
+        "score": 7.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "OpenAI设计负责人Ian Silber访谈，讨论设计师在AI时代的最佳机遇，对AI产品设计有启发。",
+        "tags": [
+          "AI设计",
+          "OpenAI",
+          "访谈"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "a4d18337ca3001942342227c83259fbb87d0a8204d7da36939ad2de5204e384c": {
       "created_at": "2026-08-12T02:43:47.130880+00:00",
       "model": "deepseek-v4-flash",
@@ -17757,6 +18527,46 @@
         "tags": [
           "开发者工具",
           "内测"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "abd7f30585985fec553047bb3a57189bf7739bb63f9eda24c5735cabc52d573b": {
+      "created_at": "2026-08-17T01:54:46.251894+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-agents-python-v0.21.1",
+        "evidence_status": "first_party",
+        "follow_up": "关注新特性在Agent开发中的应用。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "github:release:371450583",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "openai-agents-python",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI Agents Python SDK发布v0.21.1，新增模型调用超时、沙箱工作目录等多项功能，对Agent开发有实际价值。",
+        "region": "global",
+        "score": 8.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "OpenAI Agents Python SDK v0.21.1发布，新增模型调用超时和沙箱工作目录等特性。",
+        "tags": [
+          "OpenAI",
+          "Agent",
+          "SDK",
+          "Python"
         ],
         "target_user": "",
         "verticals": []
@@ -18562,6 +19372,44 @@
         "tags": [
           "微软",
           "投资"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "b36aaa2adba7d6945af5889973005dacf7dbb8ffe3c1f09e32d72acce47db79d": {
+      "created_at": "2026-08-17T01:55:13.927460+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "grafana-agent-observability-hermes",
+        "evidence_status": "first_party",
+        "follow_up": "关注该集成的具体功能和实际效果。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:49318128",
+        "intelligence_type": "builder_insight",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "grafana-agento11y-hermes",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "展示了为Hermes Agent添加Grafana可观测性，但缺乏详细描述和用户反馈，价值有限。",
+        "region": "global",
+        "score": 6.5,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "开发者展示了为Hermes Agent添加Grafana可观测性，但信息不足。",
+        "tags": [
+          "可观测性",
+          "Agent"
         ],
         "target_user": "",
         "verticals": []
@@ -21042,6 +21890,85 @@
       },
       "stage": "candidate_analysis"
     },
+    "caefc2c55b0dd375003b5302b44527c66fbe51000362cd4ecc7dcd53c61621ee": {
+      "created_at": "2026-08-17T01:54:46.250326+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "chatgpt-computer-history-feature",
+        "evidence_status": "reported",
+        "follow_up": "关注该功能如何影响用户隐私和自动化体验。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:c006a557c86c26fd",
+        "intelligence_type": "product_case",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "ChatGPT",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "ChatGPT桌面应用新增Computer History功能，记录用户操作并用于训练和自动化，是重要的产品功能更新，展示AI代理方向。",
+        "region": "global",
+        "score": 8.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "ChatGPT macOS桌面应用新增Computer History功能，记录点击和键盘操作，用于学习用户习惯并建议自动化。",
+        "tags": [
+          "ChatGPT",
+          "桌面应用",
+          "自动化",
+          "AI代理"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "cb471cb36912d289bed8fa3eeef72c2edbdc93f1ac2f1fa313ef2ba08b4ab12b": {
+      "created_at": "2026-08-17T01:54:46.250248+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "anthropic-ceo-ai-trust-crisis",
+        "evidence_status": "reported",
+        "follow_up": "关注Anthropic后续如何通过产品建立信任。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:faecbda2f9a1a718",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Anthropic CEO Dario Amodei对AI反弹的回应，强调信任危机，提供行业领袖观点，但无产品增量。",
+        "region": "global",
+        "score": 7.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Anthropic CEO称AI反弹本质是信任危机，强调实际交付价值比营销更重要。",
+        "tags": [
+          "Anthropic",
+          "AI信任",
+          "行业观点"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "cc9fbf644052509c4c7a8b769dfe87bda3886094f0d1ec4d7e94a220517f09ea": {
       "created_at": "2026-08-06T03:35:45.969993+00:00",
       "model": "deepseek-v4-flash",
@@ -21150,6 +22077,45 @@
         "tags": [
           "Agent",
           "API"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "cdaa9a54f8b06dccbf26ebd68ff8ed4e892c336c0f4ecb8ed16ad1d4c232117b": {
+      "created_at": "2026-08-17T01:54:46.250216+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "zuckerberg-ai-future-skepticism",
+        "evidence_status": "reported",
+        "follow_up": "无。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:162bb674e603c0ec",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "关于公众对扎克伯格AI愿景的怀疑，泛行业评论，无具体产品增量。",
+        "region": "global",
+        "score": 5.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "讨论公众为何不买扎克伯格AI愿景的账，泛行业评论。",
+        "tags": [
+          "AI愿景",
+          "Meta",
+          "公众信任"
         ],
         "target_user": "",
         "verticals": []
@@ -21419,6 +22385,44 @@
           "AI安全",
           "水印",
           "Claude"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "d09c7c65fc9bc8d124c36e2985cce20b7541f012f2a2d5ed3aa900beda1c870f": {
+      "created_at": "2026-08-17T01:55:01.822773+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "direct-file-postmortem",
+        "evidence_status": "reported",
+        "follow_up": "无",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:49325185",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "关于政府项目 Direct File 的复盘报告，与 AI 产品无直接关联，对 AI 产品经理参考价值有限。",
+        "region": "global",
+        "score": 5.5,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "一份关于美国政府税务申报项目 Direct File 成败的复盘报告，与 AI 无关。",
+        "tags": [
+          "政府项目",
+          "复盘"
         ],
         "target_user": "",
         "verticals": []
@@ -24158,6 +25162,46 @@
       },
       "stage": "candidate_analysis"
     },
+    "ea1e8074716ec80f09e8a233a6da026c163d47c419994049236260076223d922": {
+      "created_at": "2026-08-17T01:54:46.251669+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "qwen-3.8-27b-release",
+        "evidence_status": "verified",
+        "follow_up": "关注独立基准测试和后续版本对过度思考的优化。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:simonwillison.net_atom_everything_:79efbb054d4af9fc",
+        "intelligence_type": "model_capability",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Qwen 3.8 27B",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Qwen 3.8 27B发布，Apache 2.0许可，Simon Willison实测指出其过度思考问题，提供一手体验，对本地模型部署有参考价值。",
+        "region": "china",
+        "score": 8.5,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "阿里Qwen 3.8 27B模型发布，Simon Willison实测发现其性能优秀但默认过度思考。",
+        "tags": [
+          "Qwen",
+          "开源模型",
+          "本地部署",
+          "评测"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "ea7b966ff70a8f5dcf731a10325b9c53ece168b81b360911187846b4627e97e7": {
       "created_at": "2026-07-28T03:48:25.674693+00:00",
       "model": "deepseek-v4-flash",
@@ -24916,6 +25960,44 @@
           "AI匹配",
           "约会应用",
           "Gen Z"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "f28759e18c50e5c8c6b18199fbd2da3d9ddd5abfbfecd2616ffb1489de799aea": {
+      "created_at": "2026-08-17T01:55:01.823375+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "models-getting-dumber",
+        "evidence_status": "reported",
+        "follow_up": "无",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:49322695",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "观点文章讨论模型故意变笨，但被评论指出过时，缺乏实证，价值有限。",
+        "region": "global",
+        "score": 6.0,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "一篇观点文章声称模型故意变笨，但被指数据过时，缺乏实证。",
+        "tags": [
+          "模型",
+          "观点"
         ],
         "target_user": "",
         "verticals": []
@@ -25768,6 +26850,44 @@
           "OpenAI",
           "Hugging Face",
           "AI安全"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "f7e5a5f322d9100bc80fdcc9795b25a726ff619a58fd1cbd4bf5033b917f1fc5": {
+      "created_at": "2026-08-17T01:55:01.822905+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "risc-v-embedded-response",
+        "evidence_status": "reported",
+        "follow_up": "无",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:49321717",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "关于 RISC-V 在嵌入式领域应用的讨论，与 AI 产品无关，对 AI 产品经理无直接价值。",
+        "region": "global",
+        "score": 4.5,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "一篇嵌入式工程师对 RISC-V 架构的回应文章，与 AI 无关。",
+        "tags": [
+          "RISC-V",
+          "嵌入式"
         ],
         "target_user": "",
         "verticals": []

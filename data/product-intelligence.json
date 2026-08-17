@@ -1,7 +1,618 @@
 {
   "version": 1,
-  "updated_at": "2026-08-16T01:58:29.067655+00:00",
+  "updated_at": "2026-08-17T01:56:06.026947+00:00",
   "products": [
+    {
+      "product_id": "product-04c37655061935be",
+      "product_name": "ChatGPT macOS 桌面应用",
+      "builder_name": "Terrence O’Brien",
+      "first_seen": "2026-08-17",
+      "last_seen": "2026-08-17",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "reported",
+      "target_user": "macOS 系统下的 ChatGPT 桌面应用用户，需要自动化重复工作流程的人",
+      "user_problem": "用户每天重复大量手动操作（点击、输入、切换应用），AI 不了解你的工作上下文，无法主动帮你完成或续接未做完的任务",
+      "what_it_is": "ChatGPT macOS 桌面版的一个新功能，自动记录用户在电脑上的点击和键盘操作，生成时间线，让 AI 学习你的工作方式并推荐自动化操作。",
+      "ai_role": "分析用户的操作时间线，学习行为模式，在收到请求时结合历史上下文理解意图，并生成自动化建议或续接任务",
+      "implementation_idea": "在本地持续监听用户的点击和键盘事件，把操作序列按时间整理成结构化日志；当用户提问时，将这些日志作为上下文（类似 RAG，即检索增强生成：先搜你的历史再回答）喂给模型，让 AI 推断出用户的习惯和工作流，再调用自动化工具执行。",
+      "hands_on_exercise": "30 分钟体验：打开 macOS 的'屏幕使用时间'或任意按键记录工具，手动记录自己 1 小时内的重复操作（如打开固定网站、复制粘贴固定内容）；然后尝试用 ChatGPT 的 Codex 或任何自动化工具（如 Apple Shortcuts）写一个简单脚本完成其中一个重复任务，体会'让 AI 学习行为再自动化'的思路。",
+      "limitations_or_uncertainties": "该功能的具体隐私政策、数据存储位置（本地还是云端）、用户是否可选择性关闭/删除记录、是否支持所有 macOS 应用还是仅限部分应用，均未公开；目前仅为 The Verge 报道的产品功能更新，尚未确认是否已向所有用户推送。",
+      "region": "global",
+      "score": 8.5,
+      "summary": "ChatGPT macOS桌面应用新增Computer History功能，记录点击和键盘操作，用于学习用户习惯并建议自动化。",
+      "title": "ChatGPT macOS 桌面应用新增 Computer History：记录点击和按键来训练 AI",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/980742/chatgpts-computer-history-tracks-your-clicks-and-keystrokes",
+      "sources": [
+        {
+          "url": "https://www.theverge.com/ai-artificial-intelligence/980742/chatgpts-computer-history-tracks-your-clicks-and-keystrokes",
+          "title": "ChatGPT’s Computer History tracks your clicks and keystrokes",
+          "source_type": "rss",
+          "published_at": "2026-08-16T14:56:40+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "chatgpt-computer-history-feature",
+          "date": "2026-08-17",
+          "title": "ChatGPT macOS 桌面应用新增 Computer History：记录点击和按键来训练 AI",
+          "summary": "ChatGPT macOS桌面应用新增Computer History功能，记录点击和键盘操作，用于学习用户习惯并建议自动化。",
+          "score": 8.5,
+          "url": "https://www.theverge.com/ai-artificial-intelligence/980742/chatgpts-computer-history-tracks-your-clicks-and-keystrokes"
+        }
+      ],
+      "usage_flow": [
+        "在 macOS 上安装并开启 ChatGPT 桌面应用的 Computer History 功能",
+        "正常使用电脑，功能后台记录点击、按键等操作，生成个人活动时间线",
+        "向 ChatGPT 或 Codex 发起请求时，AI 参考你的操作历史理解上下文",
+        "AI 根据学习到的习惯，主动推荐自动化流程或续接你未完成的工作"
+      ],
+      "learning_points": [
+        "RAG（检索增强生成）：AI 回答前先从你的个人操作记录里检索相关信息，而不是只靠训练时的记忆",
+        "AI Agent（AI 代理）：AI 不仅能回答问题，还能观察环境、做决定并执行实际操作",
+        "Function Calling（函数调用）：AI 判断需要做什么后，调用系统功能来完成自动化，比如模拟点击或执行脚本"
+      ],
+      "verticals": [],
+      "tags": [
+        "ChatGPT",
+        "桌面应用",
+        "自动化",
+        "AI代理"
+      ]
+    },
+    {
+      "product_id": "product-a3b9bb7d89a789cd",
+      "product_name": "WildStatic",
+      "builder_name": "adjohu",
+      "first_seen": "2026-08-17",
+      "last_seen": "2026-08-17",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "early_signal",
+      "target_user": "开发团队、小团队协作场景；目前未公开更明确的用户画像",
+      "user_problem": "团队成员各自开独立 AI 会话时，重复问相似问题、提示词冗余重叠，导致 AI 学习效率低、团队接受度差",
+      "what_it_is": "WildStatic 是一个公共聊天界面，所有人跟同一个 AI 对话，且 AI 会把所有对话历史当作共享记忆，后续用户能继承之前聊过的上下文。",
+      "ai_role": "作为团队的'公共终端'，持续学习所有人的对话，把历史上下文用于回答新用户的问题",
+      "implementation_idea": "本质上是把通常'每个用户隔离'的聊天会话，改成'所有人共用同一份对话历史'。AI 每次回复时能看到之前所有用户说过的话，就像一块公共白板，所有人都在上面写字，后来者能看到前面写的内容。开发者 adjohu 提到会面临流量压力和 token 限制问题，说明底层仍是调用 LLM API，只是会话层做了共享设计。",
+      "hands_on_exercise": "用任意 LLM（ChatGPT/Claude/国产大模型）做对比实验：先新建一个对话问'我们团队做电商网站，推荐技术栈'，然后另开一个新对话问'继续，怎么部署'，观察 AI 是否记得'电商网站'；再在原对话里继续问，对比两种体验。思考：如果 10 个人共享同一个对话，好处和麻烦各是什么？",
+      "limitations_or_uncertainties": "未公开技术架构（是否用 RAG、向量数据库、如何防篡改共享记忆）；未公开商业模式；高流量下的选择性忽略是临时限制还是设计取舍未说明；无独立第三方验证其'学习效率更高'的说法",
+      "region": "global",
+      "score": 8.5,
+      "summary": "开发者展示了一个所有用户共享记忆的AI，旨在提高团队协作效率，但需警惕滥用风险。",
+      "title": "Show HN: 一个所有用户共享记忆的公共 AI",
+      "url": "https://wildstatic.com/",
+      "sources": [
+        {
+          "url": "https://wildstatic.com/",
+          "title": "Show HN: A public AI whose memory is shared across all users",
+          "source_type": "hackernews",
+          "published_at": "2026-08-16T13:21:45+00:00"
+        },
+        {
+          "url": "https://github.com/adjohu",
+          "title": "adjohu (Adam Hutchinson) · GitHub",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://twitter.com/adjohu",
+          "title": "Adam Hutchinson (@ adjohu ) / Twitter",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "shared-memory-ai-launch",
+          "date": "2026-08-17",
+          "title": "Show HN: 一个所有用户共享记忆的公共 AI",
+          "summary": "开发者展示了一个所有用户共享记忆的AI，旨在提高团队协作效率，但需警惕滥用风险。",
+          "score": 8.5,
+          "url": "https://wildstatic.com/"
+        }
+      ],
+      "usage_flow": [
+        "打开公共网页，直接进入同一个共享会话",
+        "像聊天一样输入问题，AI 基于之前所有用户的对话历史回答",
+        "后续用户提问时，AI 自动引用已积累的记忆，减少重复解释",
+        "高流量时 AI 可能选择性忽略部分消息（开发者正在调整）"
+      ],
+      "learning_points": [
+        "上下文窗口（Context Window）：LLM 能'记住'的最近文字量有限，共享记忆多了会撑爆这个窗口，导致 AI 丢信息或选择性忽略",
+        "提示词注入/滥用风险：公共记忆意味着恶意用户可以通过对话给 AI'洗脑'，类似 2016 年微软 Tay.ai 被用户教坏的事件",
+        "RAG（检索增强生成）：一种让 AI 查外部数据库来补充记忆的技术，但 WildStatic 目前未公开是否用了 RAG，可能只是直接把历史对话塞进上下文"
+      ],
+      "verticals": [],
+      "tags": [
+        "AI",
+        "共享记忆",
+        "协作"
+      ]
+    },
+    {
+      "product_id": "product-2e12c5bd0a44574f",
+      "product_name": "Qwen 3.8 27B",
+      "builder_name": "Simon Willison",
+      "first_seen": "2026-08-17",
+      "last_seen": "2026-08-17",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "verified",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "阿里Qwen 3.8 27B模型发布，Simon Willison实测发现其性能优秀但默认过度思考。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "china",
+      "score": 8.5,
+      "summary": "阿里Qwen 3.8 27B模型发布，Simon Willison实测发现其性能优秀但默认过度思考。",
+      "title": "Qwen 3.8 27B is excellent, but it defaults to wildly overthinking things",
+      "url": "https://simonwillison.net/2026/Aug/16/qwen-38-27b/",
+      "sources": [
+        {
+          "url": "https://simonwillison.net/2026/Aug/16/qwen-38-27b/",
+          "title": "Qwen 3.8 27B is excellent, but it defaults to wildly overthinking things",
+          "source_type": "rss",
+          "published_at": "2026-08-16T22:00:39+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "qwen-3.8-27b-release",
+          "date": "2026-08-17",
+          "title": "Qwen 3.8 27B is excellent, but it defaults to wildly overthinking things",
+          "summary": "阿里Qwen 3.8 27B模型发布，Simon Willison实测发现其性能优秀但默认过度思考。",
+          "score": 8.5,
+          "url": "https://simonwillison.net/2026/Aug/16/qwen-38-27b/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Qwen",
+        "开源模型",
+        "本地部署",
+        "评测"
+      ]
+    },
+    {
+      "product_id": "product-6fe23352c981c250",
+      "product_name": "Claude",
+      "builder_name": "tosh",
+      "first_seen": "2026-08-17",
+      "last_seen": "2026-08-17",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Anthropic 更新了 Claude 的系统提示词，揭示了模型行为细节，对开发者有重要参考价值。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.5,
+      "summary": "Anthropic 更新了 Claude 的系统提示词，揭示了模型行为细节，对开发者有重要参考价值。",
+      "title": "Claude: System Prompts",
+      "url": "https://platform.claude.com/docs/en/release-notes/system-prompts",
+      "sources": [
+        {
+          "url": "https://platform.claude.com/docs/en/release-notes/system-prompts",
+          "title": "Claude: System Prompts",
+          "source_type": "hackernews",
+          "published_at": "2026-08-16T12:48:21+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "claude-system-prompts-update",
+          "date": "2026-08-17",
+          "title": "Claude: System Prompts",
+          "summary": "Anthropic 更新了 Claude 的系统提示词，揭示了模型行为细节，对开发者有重要参考价值。",
+          "score": 8.5,
+          "url": "https://platform.claude.com/docs/en/release-notes/system-prompts"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Claude",
+        "系统提示词",
+        "模型行为"
+      ]
+    },
+    {
+      "product_id": "product-b37b5909bb539dad",
+      "product_name": "openai-agents-python",
+      "builder_name": "seratch",
+      "first_seen": "2026-07-30",
+      "last_seen": "2026-08-17",
+      "occurrence_count": 4,
+      "intelligence_type": "model_capability",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "OpenAI Agents Python SDK v0.21.1发布，新增模型调用超时和沙箱工作目录等特性。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.0,
+      "summary": "OpenAI Agents Python SDK v0.21.1发布，新增模型调用超时和沙箱工作目录等特性。",
+      "title": "openai/openai-agents-python released v0.21.1",
+      "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.21.1",
+      "sources": [
+        {
+          "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.19.1",
+          "title": "openai/openai-agents-python released v0.19.1",
+          "source_type": "github",
+          "published_at": "2026-07-29T07:44:24+00:00"
+        },
+        {
+          "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.20.0",
+          "title": "openai/openai-agents-python released v0.20.0",
+          "source_type": "github",
+          "published_at": "2026-08-11T03:12:14+00:00"
+        },
+        {
+          "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.21.0",
+          "title": "openai/openai-agents-python released v0.21.0",
+          "source_type": "github",
+          "published_at": "2026-08-15T02:49:37+00:00"
+        },
+        {
+          "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.21.1",
+          "title": "openai/openai-agents-python released v0.21.1",
+          "source_type": "github",
+          "published_at": "2026-08-16T22:28:55+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "openai-agents-python-v0.19.1",
+          "date": "2026-07-30",
+          "title": "openai/openai-agents-python released v0.19.1",
+          "summary": "OpenAI发布agents-python v0.19.1，修复多项问题并支持原生主机路径。",
+          "score": 7.0,
+          "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.19.1"
+        },
+        {
+          "update_id": "openai-agents-python-v0.20.0",
+          "date": "2026-08-12",
+          "title": "openai/openai-agents-python released v0.20.0",
+          "summary": "OpenAI发布agents-python v0.20.0，更新默认模型并增强MCP支持，值得关注。",
+          "score": 8.5,
+          "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.20.0"
+        },
+        {
+          "update_id": "openai-agents-python-v0.21.0",
+          "date": "2026-08-16",
+          "title": "openai/openai-agents-python released v0.21.0",
+          "summary": "OpenAI发布agents-python v0.21.0，新增确定性测试工具并兼容OpenAI Python v3。",
+          "score": 8.0,
+          "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.21.0"
+        },
+        {
+          "update_id": "openai-agents-python-v0.21.1",
+          "date": "2026-08-17",
+          "title": "openai/openai-agents-python released v0.21.1",
+          "summary": "OpenAI Agents Python SDK v0.21.1发布，新增模型调用超时和沙箱工作目录等特性。",
+          "score": 8.0,
+          "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.21.1"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "OpenAI",
+        "Agent",
+        "SDK",
+        "Python",
+        "MCP",
+        "测试"
+      ]
+    },
+    {
+      "product_id": "product-02dfffd19187b96b",
+      "product_name": "MoEspresso",
+      "builder_name": "hacklas",
+      "first_seen": "2026-08-17",
+      "last_seen": "2026-08-17",
+      "occurrence_count": 1,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "开发者将DeepSeek V4 Flash压缩至57GB并在Mac上运行，成功编写编译器，展示了本地运行大模型的可能性。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.0,
+      "summary": "开发者将DeepSeek V4 Flash压缩至57GB并在Mac上运行，成功编写编译器，展示了本地运行大模型的可能性。",
+      "title": "Show HN: I shrank DeepSeek V4 Flash to 57GB and it wrote a compiler on my Mac",
+      "url": "https://huggingface.co/steadfastgaze/DeepSeek-V4-Flash-0731-Coder-56.8GB-MoEspressoV2",
+      "sources": [
+        {
+          "url": "https://huggingface.co/steadfastgaze/DeepSeek-V4-Flash-0731-Coder-56.8GB-MoEspressoV2",
+          "title": "Show HN: I shrank DeepSeek V4 Flash to 57GB and it wrote a compiler on my Mac",
+          "source_type": "hackernews",
+          "published_at": "2026-08-16T17:13:22+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "deepseek-v4-flash-shrink-local",
+          "date": "2026-08-17",
+          "title": "Show HN: I shrank DeepSeek V4 Flash to 57GB and it wrote a compiler on my Mac",
+          "summary": "开发者将DeepSeek V4 Flash压缩至57GB并在Mac上运行，成功编写编译器，展示了本地运行大模型的可能性。",
+          "score": 8.0,
+          "url": "https://huggingface.co/steadfastgaze/DeepSeek-V4-Flash-0731-Coder-56.8GB-MoEspressoV2"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "模型压缩",
+        "本地部署",
+        "DeepSeek"
+      ]
+    },
+    {
+      "product_id": "product-4fed0c59ec0ae7e1",
+      "product_name": "DeepSeek API",
+      "builder_name": "东方财富",
+      "first_seen": "2026-08-17",
+      "last_seen": "2026-08-17",
+      "occurrence_count": 1,
+      "intelligence_type": "business_policy",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "DeepSeek API调价正式生效，最高涨幅达1100%，空闲时段价格减半，影响开发者成本。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "china",
+      "score": 8.0,
+      "summary": "DeepSeek API调价正式生效，最高涨幅达1100%，空闲时段价格减半，影响开发者成本。",
+      "title": "DeepSeek调价今日正式生效 涨幅最高达1100% 空闲时段价格为高峰的一半 - 东方财富",
+      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBYS2Vuc2dZcjJZb1NIVkR5NkNQMU9peldUbm1TNXdzU2dNOTlxQU9pQ29ZM0VjS3dqV0V1ZTdLYnFWV09lSVZrbmZreFJlNHVHdHFTZkZXOEZRWlVFdzA3cXg2eVZ3Zw?oc=5",
+      "sources": [
+        {
+          "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBYS2Vuc2dZcjJZb1NIVkR5NkNQMU9peldUbm1TNXdzU2dNOTlxQU9pQ29ZM0VjS3dqV0V1ZTdLYnFWV09lSVZrbmZreFJlNHVHdHFTZkZXOEZRWlVFdzA3cXg2eVZ3Zw?oc=5",
+          "title": "DeepSeek调价今日正式生效 涨幅最高达1100% 空闲时段价格为高峰的一半 - 东方财富",
+          "source_type": "google_news",
+          "published_at": "2026-08-17T01:08:57+00:00"
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBOY3dRdkJIVmlYSDRUMEd4UFFfUllFNjRmS25rTzhaQVFTemhMbElTSjBieFhySGNXa1BzOTRCcDhVQ0RPSGQtRVhnTHZJMF9HbDZPUFZkV2xYRkoy?oc=5",
+          "title": "DeepSeek-V4系列API调价8月17日生效，采用峰谷定价最高涨幅1100% - eet-china.com",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "deepseek-api-price-increase",
+          "date": "2026-08-17",
+          "title": "DeepSeek调价今日正式生效 涨幅最高达1100% 空闲时段价格为高峰的一半 - 东方财富",
+          "summary": "DeepSeek API调价正式生效，最高涨幅达1100%，空闲时段价格减半，影响开发者成本。",
+          "score": 8.0,
+          "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBYS2Vuc2dZcjJZb1NIVkR5NkNQMU9peldUbm1TNXdzU2dNOTlxQU9pQ29ZM0VjS3dqV0V1ZTdLYnFWV09lSVZrbmZreFJlNHVHdHFTZkZXOEZRWlVFdzA3cXg2eVZ3Zw?oc=5"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "DeepSeek",
+        "定价",
+        "API"
+      ]
+    },
+    {
+      "product_id": "product-74fa894c1b640ab0",
+      "product_name": "browser-use",
+      "builder_name": "gregpr07",
+      "first_seen": "2026-08-17",
+      "last_seen": "2026-08-17",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "browser-use 发布 0.13.8，修复了多个 Agent 和 DOM 处理问题，并更新了 Cerebras 模型支持。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.5,
+      "summary": "browser-use 发布 0.13.8，修复了多个 Agent 和 DOM 处理问题，并更新了 Cerebras 模型支持。",
+      "title": "browser-use/browser-use released 0.13.8",
+      "url": "https://github.com/browser-use/browser-use/releases/tag/0.13.8",
+      "sources": [
+        {
+          "url": "https://github.com/browser-use/browser-use/releases/tag/0.13.8",
+          "title": "browser-use/browser-use released 0.13.8",
+          "source_type": "github",
+          "published_at": "2026-08-16T18:48:54+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "browser-use-release-0.13.8",
+          "date": "2026-08-17",
+          "title": "browser-use/browser-use released 0.13.8",
+          "summary": "browser-use 发布 0.13.8，修复了多个 Agent 和 DOM 处理问题，并更新了 Cerebras 模型支持。",
+          "score": 7.5,
+          "url": "https://github.com/browser-use/browser-use/releases/tag/0.13.8"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "开源",
+        "浏览器自动化"
+      ]
+    },
+    {
+      "product_id": "product-1f83963cbcdfbfe8",
+      "product_name": "PyScrappy",
+      "builder_name": "vedaant00",
+      "first_seen": "2026-08-17",
+      "last_seen": "2026-08-17",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "PyScrappy 是一个自愈式网页抓取选择器，并提供 MCP 服务器，解决选择器失效问题。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.5,
+      "summary": "PyScrappy 是一个自愈式网页抓取选择器，并提供 MCP 服务器，解决选择器失效问题。",
+      "title": "Show HN: PyScrappy, self-healing web scraping selectors plus an MCP server",
+      "url": "https://github.com/mldsveda/PyScrappy",
+      "sources": [
+        {
+          "url": "https://github.com/mldsveda/PyScrappy",
+          "title": "Show HN: PyScrappy, self-healing web scraping selectors plus an MCP server",
+          "source_type": "hackernews",
+          "published_at": "2026-08-16T07:46:40+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "pyscrappy-show-hn",
+          "date": "2026-08-17",
+          "title": "Show HN: PyScrappy, self-healing web scraping selectors plus an MCP server",
+          "summary": "PyScrappy 是一个自愈式网页抓取选择器，并提供 MCP 服务器，解决选择器失效问题。",
+          "score": 7.5,
+          "url": "https://github.com/mldsveda/PyScrappy"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "网页抓取",
+        "MCP",
+        "开源"
+      ]
+    },
+    {
+      "product_id": "product-8bdc489ea09f0ff9",
+      "product_name": "DeepSeek V4 Pro",
+      "builder_name": "观点网",
+      "first_seen": "2026-08-17",
+      "last_seen": "2026-08-17",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "国家超算互联网上线了DeepSeek V4 Pro正式版，提供更强大的算力支持。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "china",
+      "score": 7.5,
+      "summary": "国家超算互联网上线了DeepSeek V4 Pro正式版，提供更强大的算力支持。",
+      "title": "国家超算互联网上线DeepSeek V4 Pro正式版 - 观点网",
+      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBEd2wyVVJmVFRTcHJsUG5uMVRaLXJMZWVLd1J3aHRhNDhQXzh5UzhvQ25jczlxcW1zWUJJWGhKWUE5UXY3U3pfUXhPWF9XLTd4S2FuSElpdXhmbFJPQ0F1VEJB?oc=5",
+      "sources": [
+        {
+          "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBEd2wyVVJmVFRTcHJsUG5uMVRaLXJMZWVLd1J3aHRhNDhQXzh5UzhvQ25jczlxcW1zWUJJWGhKWUE5UXY3U3pfUXhPWF9XLTd4S2FuSElpdXhmbFJPQ0F1VEJB?oc=5",
+          "title": "国家超算互联网上线DeepSeek V4 Pro正式版 - 观点网",
+          "source_type": "google_news",
+          "published_at": "2026-08-16T23:48:25+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "deepseek-v4-pro-supercomputing",
+          "date": "2026-08-17",
+          "title": "国家超算互联网上线DeepSeek V4 Pro正式版 - 观点网",
+          "summary": "国家超算互联网上线了DeepSeek V4 Pro正式版，提供更强大的算力支持。",
+          "score": 7.5,
+          "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBEd2wyVVJmVFRTcHJsUG5uMVRaLXJMZWVLd1J3aHRhNDhQXzh5UzhvQ25jczlxcW1zWUJJWGhKWUE5UXY3U3pfUXhPWF9XLTd4S2FuSElpdXhmbFJPQ0F1VEJB?oc=5"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "DeepSeek",
+        "超算",
+        "部署"
+      ]
+    },
+    {
+      "product_id": "product-0d571ded23669998",
+      "product_name": "Muse Glimmer",
+      "builder_name": "AI News",
+      "first_seen": "2026-08-13",
+      "last_seen": "2026-08-17",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Meta发布开源多模态模型Muse Glimmer并预告Spark 1.2，值得关注其开源策略。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.0,
+      "summary": "Meta发布开源多模态模型Muse Glimmer并预告Spark 1.2，值得关注其开源策略。",
+      "title": "not much happened today",
+      "url": "https://news.smol.ai/issues/26-08-10-not-much/",
+      "sources": [
+        {
+          "url": "https://news.smol.ai/issues/26-08-10-not-much/",
+          "title": "not much happened today",
+          "source_type": "newsletter",
+          "published_at": "2026-08-10T05:44:39+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "meta-muse-glimmer-spark-1.2-release",
+          "date": "2026-08-13",
+          "title": "not much happened today",
+          "summary": "Meta发布开源多模态模型Muse Glimmer并预告Spark 1.2，值得关注其开源策略。",
+          "score": 7.0,
+          "url": "https://news.smol.ai/issues/26-08-10-not-much/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "模型发布",
+        "Meta",
+        "开源"
+      ]
+    },
     {
       "product_id": "product-d0994ab0811e3895",
       "product_name": "Knowable",
@@ -48,85 +659,6 @@
         "AI教育",
         "iOS",
         "视觉"
-      ]
-    },
-    {
-      "product_id": "product-b37b5909bb539dad",
-      "product_name": "openai-agents-python",
-      "builder_name": "seratch",
-      "first_seen": "2026-07-30",
-      "last_seen": "2026-08-16",
-      "occurrence_count": 3,
-      "intelligence_type": "model_capability",
-      "evidence_status": "first_party",
-      "target_user": "未公开",
-      "user_problem": "未公开",
-      "what_it_is": "OpenAI发布agents-python v0.21.0，新增确定性测试工具并兼容OpenAI Python v3。",
-      "ai_role": "未公开",
-      "implementation_idea": "未公开",
-      "hands_on_exercise": "未公开",
-      "limitations_or_uncertainties": "未公开",
-      "region": "global",
-      "score": 8.0,
-      "summary": "OpenAI发布agents-python v0.21.0，新增确定性测试工具并兼容OpenAI Python v3。",
-      "title": "openai/openai-agents-python released v0.21.0",
-      "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.21.0",
-      "sources": [
-        {
-          "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.19.1",
-          "title": "openai/openai-agents-python released v0.19.1",
-          "source_type": "github",
-          "published_at": "2026-07-29T07:44:24+00:00"
-        },
-        {
-          "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.20.0",
-          "title": "openai/openai-agents-python released v0.20.0",
-          "source_type": "github",
-          "published_at": "2026-08-11T03:12:14+00:00"
-        },
-        {
-          "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.21.0",
-          "title": "openai/openai-agents-python released v0.21.0",
-          "source_type": "github",
-          "published_at": "2026-08-15T02:49:37+00:00"
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "openai-agents-python-v0.19.1",
-          "date": "2026-07-30",
-          "title": "openai/openai-agents-python released v0.19.1",
-          "summary": "OpenAI发布agents-python v0.19.1，修复多项问题并支持原生主机路径。",
-          "score": 7.0,
-          "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.19.1"
-        },
-        {
-          "update_id": "openai-agents-python-v0.20.0",
-          "date": "2026-08-12",
-          "title": "openai/openai-agents-python released v0.20.0",
-          "summary": "OpenAI发布agents-python v0.20.0，更新默认模型并增强MCP支持，值得关注。",
-          "score": 8.5,
-          "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.20.0"
-        },
-        {
-          "update_id": "openai-agents-python-v0.21.0",
-          "date": "2026-08-16",
-          "title": "openai/openai-agents-python released v0.21.0",
-          "summary": "OpenAI发布agents-python v0.21.0，新增确定性测试工具并兼容OpenAI Python v3。",
-          "score": 8.0,
-          "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.21.0"
-        }
-      ],
-      "usage_flow": [],
-      "learning_points": [],
-      "verticals": [],
-      "tags": [
-        "OpenAI",
-        "Agent",
-        "SDK",
-        "Python",
-        "MCP",
-        "测试"
       ]
     },
     {
@@ -456,54 +988,6 @@
         "DeepSeek",
         "智能体",
         "解读"
-      ]
-    },
-    {
-      "product_id": "product-0d571ded23669998",
-      "product_name": "Muse Glimmer",
-      "builder_name": "AI News",
-      "first_seen": "2026-08-13",
-      "last_seen": "2026-08-16",
-      "occurrence_count": 1,
-      "intelligence_type": "model_capability",
-      "evidence_status": "reported",
-      "target_user": "未公开",
-      "user_problem": "未公开",
-      "what_it_is": "Meta发布开源多模态模型Muse Glimmer并预告Spark 1.2，值得关注其开源策略。",
-      "ai_role": "未公开",
-      "implementation_idea": "未公开",
-      "hands_on_exercise": "未公开",
-      "limitations_or_uncertainties": "未公开",
-      "region": "global",
-      "score": 7.0,
-      "summary": "Meta发布开源多模态模型Muse Glimmer并预告Spark 1.2，值得关注其开源策略。",
-      "title": "not much happened today",
-      "url": "https://news.smol.ai/issues/26-08-10-not-much/",
-      "sources": [
-        {
-          "url": "https://news.smol.ai/issues/26-08-10-not-much/",
-          "title": "not much happened today",
-          "source_type": "newsletter",
-          "published_at": "2026-08-10T05:44:39+00:00"
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "meta-muse-glimmer-spark-1.2-release",
-          "date": "2026-08-13",
-          "title": "not much happened today",
-          "summary": "Meta发布开源多模态模型Muse Glimmer并预告Spark 1.2，值得关注其开源策略。",
-          "score": 7.0,
-          "url": "https://news.smol.ai/issues/26-08-10-not-much/"
-        }
-      ],
-      "usage_flow": [],
-      "learning_points": [],
-      "verticals": [],
-      "tags": [
-        "模型发布",
-        "Meta",
-        "开源"
       ]
     },
     {
