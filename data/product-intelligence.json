@@ -1,7 +1,763 @@
 {
   "version": 1,
-  "updated_at": "2026-08-17T01:56:06.026947+00:00",
+  "updated_at": "2026-08-18T01:51:50.434275+00:00",
   "products": [
+    {
+      "product_id": "product-2e12c5bd0a44574f",
+      "product_name": "Qwen 3.8 27B",
+      "builder_name": "Simon Willison",
+      "first_seen": "2026-08-17",
+      "last_seen": "2026-08-18",
+      "occurrence_count": 2,
+      "intelligence_type": "model_capability",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Qwen 3.8 27B在Artificial Analysis Intelligence Index上得分52，与GPT-5.6 Luna持平，但参数远小。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "china",
+      "score": 8.5,
+      "summary": "Qwen 3.8 27B在Artificial Analysis Intelligence Index上得分52，与GPT-5.6 Luna持平，但参数远小。",
+      "title": "Qwen 3.8 27B scores 52 on the Artificial Analysis Intelligence Index",
+      "url": "https://simonwillison.net/2026/Aug/17/qwen-38-27b-scores-52/",
+      "sources": [
+        {
+          "url": "https://simonwillison.net/2026/Aug/16/qwen-38-27b/",
+          "title": "Qwen 3.8 27B is excellent, but it defaults to wildly overthinking things",
+          "source_type": "rss",
+          "published_at": "2026-08-16T22:00:39+00:00"
+        },
+        {
+          "url": "https://simonwillison.net/2026/Aug/17/qwen-38-27b-scores-52/",
+          "title": "Qwen 3.8 27B scores 52 on the Artificial Analysis Intelligence Index",
+          "source_type": "rss",
+          "published_at": "2026-08-17T23:58:14+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "qwen-3.8-27b-release",
+          "date": "2026-08-17",
+          "title": "Qwen 3.8 27B is excellent, but it defaults to wildly overthinking things",
+          "summary": "阿里Qwen 3.8 27B模型发布，Simon Willison实测发现其性能优秀但默认过度思考。",
+          "score": 8.5,
+          "url": "https://simonwillison.net/2026/Aug/16/qwen-38-27b/"
+        },
+        {
+          "update_id": "qwen-3.8-27b-benchmark",
+          "date": "2026-08-18",
+          "title": "Qwen 3.8 27B scores 52 on the Artificial Analysis Intelligence Index",
+          "summary": "Qwen 3.8 27B在Artificial Analysis Intelligence Index上得分52，与GPT-5.6 Luna持平，但参数远小。",
+          "score": 8.5,
+          "url": "https://simonwillison.net/2026/Aug/17/qwen-38-27b-scores-52/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Qwen",
+        "开源模型",
+        "本地部署",
+        "评测",
+        "模型能力",
+        "基准测试"
+      ]
+    },
+    {
+      "product_id": "product-30744df89361cf9c",
+      "product_name": "Yana Bana",
+      "builder_name": "Lenny Rachitsky",
+      "first_seen": "2026-08-18",
+      "last_seen": "2026-08-18",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "独立创业者、设计师、无技术背景但想做实体产品的人",
+      "user_problem": "创始人没有工程师团队，也不懂专业 3D 建模软件，但要把创意草图变成可生产的 3D 文件和能收钱的电商网站",
+      "what_it_is": "一期播客/文章，记录创始人 Yana Welinder 独自用 AI 工具完成从手绘草图到 3D 打印、电商网站上线的完整时尚品牌创业过程",
+      "ai_role": "ChatGPT 负责图像生成与风格还原；Codex 负责操控专业软件生成工程文件、写代码搭网站；两者共同替代了传统工程师和 3D 建模师",
+      "implementation_idea": "核心思路是'prompt 即产品规格书'——先把需求描述得极清楚，再让 AI 去执行。对于复杂软件，不是人去学界面操作，而是用 Codex 直接生成脚本/命令来驱动软件后台运行，相当于 AI 替你'按按钮'",
+      "hands_on_exercise": "30 分钟练习：在 ChatGPT/Claude 上传一张手绘草图（任何物品），用详细文字描述材质、光影、使用场景，让 AI 生成产品渲染图；再要求 AI 写一段 Python 或 HTML 代码，做一个简单的产品展示网页。体会'描述清晰度'与'输出质量'的关系",
+      "limitations_or_uncertainties": "未公开具体用了 Codex 的哪个版本（是 GitHub Copilot 还是 OpenAI Codex 新模型）；未公开 3D 打印最终成品率和成本；未说明网站是否自托管或用了现成建站工具；'AI-native fashion brand'是品牌自称，行业尚无统一标准",
+      "region": "global",
+      "score": 8.5,
+      "summary": "独立创始人 Yana Welinder 用 Codex 和 ChatGPT 作为技术联合创始人，从草图到 3D 打印和预售网站，打造了 AI 时尚品牌 Yana Bana。",
+      "title": "独立创始人如何用 Codex 和 ChatGPT 零工程师打造 AI 时尚品牌",
+      "url": "https://www.lennysnewsletter.com/p/how-i-ai-how-a-solo-founder-used",
+      "sources": [
+        {
+          "url": "https://www.lennysnewsletter.com/p/how-i-ai-how-a-solo-founder-used",
+          "title": "🎙️ How I AI: How a solo founder used Codex and ChatGPT to launch a fashion brand without engineers",
+          "source_type": "newsletter",
+          "published_at": "2026-08-17T15:03:16+00:00"
+        },
+        {
+          "url": "https://www.yanabana.com/",
+          "title": "yanabana — A new couture",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://www.lennysnewsletter.com/p/how-a-solo-founder-used-codex-and",
+          "title": "How a solo founder used Codex and ChatGPT to launch a fashion brand without engineers | Yana Welinder",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "yana-bana-solo-founder-codex-fashion",
+          "date": "2026-08-18",
+          "title": "独立创始人如何用 Codex 和 ChatGPT 零工程师打造 AI 时尚品牌",
+          "summary": "独立创始人 Yana Welinder 用 Codex 和 ChatGPT 作为技术联合创始人，从草图到 3D 打印和预售网站，打造了 AI 时尚品牌 Yana Bana。",
+          "score": 8.5,
+          "url": "https://www.lennysnewsletter.com/p/how-i-ai-how-a-solo-founder-used"
+        }
+      ],
+      "usage_flow": [
+        "用手绘草图+详细文字描述（prompt）定义设计：轮廓、面料动态、甚至声音",
+        "用 ChatGPT 将草图转成逼真产品图，保持原创风格而非生成俗套款式",
+        "用 Codex（AI 编程助手）操控专业 3D 软件 CLO，输出 3D 打印用的 CAD 文件",
+        "搭建含投票和支付功能的预售电商网站，并联系制造商"
+      ],
+      "learning_points": [
+        "Prompt Engineering（提示词工程）：给 AI 的指令越具体，输出越可控；这里甚至要描述'面料怎么动、发出什么声音'",
+        "Function Calling / Agent：AI 不只是聊天，可以调用外部工具（如操作 CLO 软件、生成代码），自动完成多步骤任务",
+        "人机协作边界：AI 擅长执行和扩展，但'什么算好设计'的审美判断仍由人把关"
+      ],
+      "verticals": [],
+      "tags": [
+        "AI产品",
+        "独立开发者",
+        "Codex",
+        "时尚"
+      ]
+    },
+    {
+      "product_id": "product-1e83c22348b31984",
+      "product_name": "GitHub Copilot Autofix",
+      "builder_name": "galnagli",
+      "first_seen": "2026-08-18",
+      "last_seen": "2026-08-18",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "reported",
+      "target_user": "使用GitHub进行代码安全扫描和自动修复的开发者、安全团队",
+      "user_problem": "开发者想快速修复代码扫描发现的安全漏洞，但手动修复耗时；然而盲目信任AI生成的修复代码，可能引入新的、更隐蔽的漏洞",
+      "what_it_is": "一起真实安全事件：Wiz研究团队发现，Snowflake员工使用GitHub Copilot Autofix自动修复功能时，AI生成的YAML工作流代码存在命令注入漏洞，被攻击者利用后入侵了Snowflake的内部Jira系统。",
+      "ai_role": "AI负责根据漏洞扫描结果自动生成修复代码建议，但本次事件中AI生成的代码引入了新的命令注入漏洞——具体是YAML工作流中通过echo处理用户输入时，特殊字符未正确转义",
+      "implementation_idea": "Copilot Autofix基于LLM分析代码扫描告警，生成针对性修复补丁。核心思路是让AI'理解'漏洞上下文并输出修复代码。但LLM可能只关注消除当前告警，而忽略修复方式本身的安全性（如用echo处理外部输入时未考虑shell注入风险）。",
+      "hands_on_exercise": "30分钟实验：在GitHub创建一个测试仓库，启用Code Scanning和Copilot Autofix，故意写一个存在template injection的GitHub Actions工作流（如将issue.title直接用于run命令），观察Autofix的建议是否真正安全。同时安装zizmor工具（社区推荐）进行静态分析对比，理解'AI建议'与'专用安全工具'的差异。",
+      "limitations_or_uncertainties": "社区存在争议：有用户指出被利用的漏洞相关PR中，Copilot co-authored的提交并不直接对应漏洞代码，具体AI生成代码与漏洞引入的精确关联未完全公开；Snowflake方面未独立确认事件细节；Wiz作为安全厂商披露，可能存在商业动机考量",
+      "region": "global",
+      "score": 8.5,
+      "summary": "Wiz披露AI生成的Copilot Autofix代码引入漏洞，导致Snowflake的Jira被入侵，警示AI编程需配合静态分析。",
+      "title": "AI生成的Copilot Autofix代码引入漏洞，导致Snowflake内部Jira被入侵",
+      "url": "https://www.wiz.io/blog/red-agent-snowflake-copilot-cicd-bug",
+      "sources": [
+        {
+          "url": "https://www.wiz.io/blog/red-agent-snowflake-copilot-cicd-bug",
+          "title": "AI-Generated GitHub Copilot “Autofix” Allowed Compromise of Snowflake's Jira",
+          "source_type": "hackernews",
+          "published_at": "2026-08-17T14:18:38+00:00"
+        },
+        {
+          "url": "https://github.blog/news-insights/product-news/secure-code-more-than-three-times-faster-with-copilot-autofix/",
+          "title": "Found means fixed: Secure code more than three times faster with Copilot Autofix - The GitHub Blog",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://docs.github.com/en/code-security/responsible-use/responsible-use-autofix-code-scanning",
+          "title": "Application card: GitHub security and quality AI features - GitHub Docs",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "snowflake-copilot-autofix-vuln",
+          "date": "2026-08-18",
+          "title": "AI生成的Copilot Autofix代码引入漏洞，导致Snowflake内部Jira被入侵",
+          "summary": "Wiz披露AI生成的Copilot Autofix代码引入漏洞，导致Snowflake的Jira被入侵，警示AI编程需配合静态分析。",
+          "score": 8.5,
+          "url": "https://www.wiz.io/blog/red-agent-snowflake-copilot-cicd-bug"
+        }
+      ],
+      "usage_flow": [
+        "GitHub Code Scanning检测到仓库中的安全漏洞（如敏感信息泄露）",
+        "Copilot Autofix自动生成修复建议代码，开发者一键采纳合并",
+        "AI生成的YAML工作流代码存在template injection漏洞，用户输入未正确转义",
+        "攻击者利用该漏洞执行任意命令，获取Jira系统的未授权访问"
+      ],
+      "learning_points": [
+        "Prompt Injection（提示注入）：LLM可能被误导或产生不安全输出，这里体现为AI生成的'修复'代码本身成为攻击面",
+        "CI/CD安全：YAML工作流中的template injection是一种常见漏洞，用户输入（如Issue标题、正文）直接拼接到shell命令中会被执行",
+        "RAG（检索增强生成）：Copilot Autofix可能结合了代码上下文检索来生成修复，但检索质量和安全约束不足时仍会出错"
+      ],
+      "verticals": [],
+      "tags": [
+        "AI安全",
+        "Copilot",
+        "漏洞"
+      ]
+    },
+    {
+      "product_id": "product-ba81d39816781fe6",
+      "product_name": "OpenRouter",
+      "builder_name": "Latent Space",
+      "first_seen": "2026-08-18",
+      "last_seen": "2026-08-18",
+      "occurrence_count": 1,
+      "intelligence_type": "market_signal",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "支付巨头Stripe以70亿美元收购AI模型路由平台OpenRouter，强化AI基础设施布局。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.5,
+      "summary": "支付巨头Stripe以70亿美元收购AI模型路由平台OpenRouter，强化AI基础设施布局。",
+      "title": "[AINews] Stripe buys OpenRouter for $7B",
+      "url": "https://www.latent.space/p/ainews-stripe-buys-openrouter-for",
+      "sources": [
+        {
+          "url": "https://www.latent.space/p/ainews-stripe-buys-openrouter-for",
+          "title": "[AINews] Stripe buys OpenRouter for $7B",
+          "source_type": "rss",
+          "published_at": "2026-08-17T23:13:41+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "stripe-acquires-openrouter",
+          "date": "2026-08-18",
+          "title": "[AINews] Stripe buys OpenRouter for $7B",
+          "summary": "支付巨头Stripe以70亿美元收购AI模型路由平台OpenRouter，强化AI基础设施布局。",
+          "score": 8.5,
+          "url": "https://www.latent.space/p/ainews-stripe-buys-openrouter-for"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "收购",
+        "AI基础设施"
+      ]
+    },
+    {
+      "product_id": "product-51d2f18f54204efd",
+      "product_name": "GitHub Copilot",
+      "builder_name": "Ayan Gupta",
+      "first_seen": "2026-08-18",
+      "last_seen": "2026-08-18",
+      "occurrence_count": 1,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "GitHub员工分享如何用canvases让AI代理工作流更可见、可操控且成本更低。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.2,
+      "summary": "GitHub员工分享如何用canvases让AI代理工作流更可见、可操控且成本更低。",
+      "title": "How canvases make agentic workflows visible, steerable, and cost-efficient",
+      "url": "https://github.blog/ai-and-ml/github-copilot/how-canvases-make-agentic-workflows-visible-steerable-and-cost-efficient/",
+      "sources": [
+        {
+          "url": "https://github.blog/ai-and-ml/github-copilot/how-canvases-make-agentic-workflows-visible-steerable-and-cost-efficient/",
+          "title": "How canvases make agentic workflows visible, steerable, and cost-efficient",
+          "source_type": "rss",
+          "published_at": "2026-08-17T16:00:00+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "github-canvas-agentic-workflows",
+          "date": "2026-08-18",
+          "title": "How canvases make agentic workflows visible, steerable, and cost-efficient",
+          "summary": "GitHub员工分享如何用canvases让AI代理工作流更可见、可操控且成本更低。",
+          "score": 8.2,
+          "url": "https://github.blog/ai-and-ml/github-copilot/how-canvases-make-agentic-workflows-visible-steerable-and-cost-efficient/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "GitHub",
+        "工作流"
+      ]
+    },
+    {
+      "product_id": "product-7f7811de59626bc9",
+      "product_name": "Claude Code",
+      "builder_name": "ashwin-ant",
+      "first_seen": "2026-07-26",
+      "last_seen": "2026-08-18",
+      "occurrence_count": 6,
+      "intelligence_type": "model_capability",
+      "evidence_status": "first_party",
+      "target_user": "需要在终端/命令行环境下写代码、改代码、调试的开发者",
+      "user_problem": "以前多个 Claude 会话之间互相隔离，无法直接通信；子代理需要手动配置才能分叉运行；GitLab 令牌等敏感信息缺乏自动脱敏保护",
+      "what_it_is": "Claude Code v2.1.234新增环境变量、GitLab MR徽章、自动续会话等功能，并修复安全漏洞。",
+      "ai_role": "AI 作为执行主体，既能独立处理用户指令，也能作为子代理被主会话调度，还能跨会话接收和响应消息",
+      "implementation_idea": "核心是把单个 Claude 会话变成可分叉的进程——主会话像项目经理，可以派生子代理（fork）去后台干活，子代理带着完整对话记忆开工；同时给每个会话起唯一名字，让会话之间能通过 SendMessage 直接喊话，像企业微信 @同事一样",
+      "hands_on_exercise": "安装 Claude Code 后开两个终端窗口各运行 `claude`，在 A 窗口输入 `@B窗口的名称 帮我看看这个报错` 测试跨会话消息；然后用 `/config` 把 B 的跨会话消息设为 'hold'，观察 A 的消息是否被暂存",
+      "limitations_or_uncertainties": "Fable 5 顾问功能仅限有组织级 Fable 访问权限的用户；Remote Control 部分修复涉及云端会话与本地桥接的复杂场景，普通用户难以验证；语音模式修复仅限 native 构建版本",
+      "region": "global",
+      "score": 8.0,
+      "summary": "Claude Code v2.1.234新增环境变量、GitLab MR徽章、自动续会话等功能，并修复安全漏洞。",
+      "title": "anthropics/claude-code released v2.1.234",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.234",
+      "sources": [
+        {
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.219",
+          "title": "anthropics/claude-code released v2.1.219",
+          "source_type": "github",
+          "published_at": "2026-07-24T17:14:23+00:00"
+        },
+        {
+          "url": "https://claude.com/product/claude-code",
+          "title": "Claude Code by Anthropic | AI Coding Agent, Terminal, IDE",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.221",
+          "title": "anthropics/claude-code released v2.1.221",
+          "source_type": "github",
+          "published_at": "2026-08-04T00:14:23+00:00"
+        },
+        {
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.229",
+          "title": "anthropics/claude-code released v2.1.229",
+          "source_type": "github",
+          "published_at": "2026-08-12T20:56:22+00:00"
+        },
+        {
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.232",
+          "title": "anthropics/claude-code released v2.1.232",
+          "source_type": "github",
+          "published_at": "2026-08-13T23:29:59+00:00"
+        },
+        {
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.233",
+          "title": "anthropics/claude-code released v2.1.233",
+          "source_type": "github",
+          "published_at": "2026-08-14T22:20:57+00:00"
+        },
+        {
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.234",
+          "title": "anthropics/claude-code released v2.1.234",
+          "source_type": "github",
+          "published_at": "2026-08-17T20:20:58+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "claude-code-v2.1.219",
+          "date": "2026-07-26",
+          "title": "Claude Code v2.1.219：新增 Opus 5 模型支持与网络沙箱白名单",
+          "summary": "Claude Code v2.1.219新增Opus 5模型支持、网络沙箱白名单等多项功能。",
+          "score": 8.0,
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.219"
+        },
+        {
+          "update_id": "claude-code-v2.1.221-release",
+          "date": "2026-08-04",
+          "title": "Claude Code v2.1.221：新增专注视图、沙箱凭据保护和提示审计功能",
+          "summary": "Anthropic 发布 Claude Code v2.1.221，新增 Focus view 和 sandbox 凭据保护等功能，提升开发体验和安全性。",
+          "score": 8.5,
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.221"
+        },
+        {
+          "update_id": "claude-code-v2.1.229-release",
+          "date": "2026-08-13",
+          "title": "anthropics/claude-code released v2.1.229",
+          "summary": "Claude Code 发布 v2.1.229，新增远程控制恢复、插件市场命令源等多项功能。",
+          "score": 8.0,
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.229"
+        },
+        {
+          "update_id": "claude-code-release-v2.1.232",
+          "date": "2026-08-14",
+          "title": "Claude Code v2.1.232：子代理分叉默认启用，新增跨会话消息与 GitLab 安全增强",
+          "summary": "Claude Code 更新至 v2.1.232，默认启用子代理分叉并支持跨会话消息，增强 Agent 协作和安全性。",
+          "score": 8.0,
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.232"
+        },
+        {
+          "update_id": "claude-code-v2.1.233",
+          "date": "2026-08-15",
+          "title": "anthropics/claude-code released v2.1.233",
+          "summary": "Claude Code v2.1.233发布，新增GitLab MR支持、用户身份转发和内存限制等多项功能。",
+          "score": 7.5,
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.233"
+        },
+        {
+          "update_id": "claude-code-v2.1.234",
+          "date": "2026-08-18",
+          "title": "anthropics/claude-code released v2.1.234",
+          "summary": "Claude Code v2.1.234新增环境变量、GitLab MR徽章、自动续会话等功能，并修复安全漏洞。",
+          "score": 8.0,
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.234"
+        }
+      ],
+      "usage_flow": [
+        "在终端安装并启动 claude，用自然语言描述需求（如'给这个项目加登录功能'）",
+        "AI 自动分析代码库，必要时用 /add-dir 添加更多目录到上下文",
+        "AI 提出修改方案，经确认后自动编辑文件、运行命令",
+        "开发者检查 git diff，确认无误后提交代码",
+        "安装 Claude Code CLI，在代码仓库目录下运行 `claude` 启动对话",
+        "用自然语言描述需求（如'给这个函数加单元测试'），AI 自动读文件、改代码、跑命令",
+        "按 `Ctrl+Alt+F` 开启 Focus view，把工具执行细节折叠成可展开摘要，专注看对话",
+        "用 `claude-api prompt-audit` 检查旧提示词是否适合当前模型，确认后提交代码",
+        "在终端运行 `claude` 启动会话，多个会话会自动获得唯一名称",
+        "在提示符里输入 `@会话名` 直接给另一个运行中的 Claude 会话发消息",
+        "调用子代理时自动在后台分叉运行，继承当前对话上下文但互不阻塞",
+        "通过 `/config` 设置跨会话消息的接收策略（接受/暂存/拒绝）和对话过期时间"
+      ],
+      "learning_points": [
+        "Context window（上下文窗口）：模型一次能'看'多少字，Opus 5 的 1M 约等于能塞进整本《三体》第一部，让 AI 分析大型代码库不丢线索",
+        "Agent（智能体）：不只是聊天回复，而是能自主决定'我要先读哪个文件、再改哪行、然后跑测试'的 AI 系统",
+        "Function calling（函数调用）：模型不直接生成答案，而是输出结构化指令（如'调用 read_file 工具'），由外部程序执行后再把结果喂回模型",
+        "Agent：不只是问答，而是能自主规划步骤、调用工具完成任务的 AI 系统",
+        "Function Calling（函数调用）：LLM 输出结构化指令让程序去执行具体操作，比如'读这个文件'或'运行这个测试'",
+        "Prompt 审计：不同模型对提示词的敏感度不同，旧提示词可能在新模型上失效，需要系统性检查",
+        "Agent（智能体）：能自主规划、调用工具、完成多步骤任务的 AI 程序，不只是聊天",
+        "Fork（分叉）：从现有进程复制出一个独立进程，子进程继承父进程的状态但之后各跑各的，互不干扰",
+        "Secret redaction（敏感信息脱敏）：自动识别并隐藏令牌、密码等，防止 AI 日志或输出里意外泄露"
+      ],
+      "verticals": [],
+      "tags": [
+        "工具更新",
+        "Claude Code",
+        "Opus 5",
+        "Agent",
+        "开发者工具",
+        "更新",
+        "release",
+        "版本更新"
+      ]
+    },
+    {
+      "product_id": "product-6b07f1c2139d1ca9",
+      "product_name": "Replit",
+      "builder_name": "Replit Blog",
+      "first_seen": "2026-08-04",
+      "last_seen": "2026-08-18",
+      "occurrence_count": 2,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Replit新增黑盒渗透测试功能，帮助开发者自动检测AI构建应用的安全漏洞。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.0,
+      "summary": "Replit新增黑盒渗透测试功能，帮助开发者自动检测AI构建应用的安全漏洞。",
+      "title": "Black-box pen tests on Replit",
+      "url": "https://replit.com/blog/black-box-pen-tests",
+      "sources": [
+        {
+          "url": "https://replit.com/blog/ai-adoption",
+          "title": "AI adoption starts with truth",
+          "source_type": "rss",
+          "published_at": "2026-08-03T16:15:17+00:00"
+        },
+        {
+          "url": "https://replit.com/blog/black-box-pen-tests",
+          "title": "Black-box pen tests on Replit",
+          "source_type": "rss",
+          "published_at": "2026-08-17T16:52:49+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "replit-semantic-layer-ai-adoption",
+          "date": "2026-08-04",
+          "title": "AI adoption starts with truth",
+          "summary": "Replit官方博客强调语义层是AI采用的基础，指出AI代理需要可靠的数据真相来源，对AI产品设计有重要参考价值。",
+          "score": 8.0,
+          "url": "https://replit.com/blog/ai-adoption"
+        },
+        {
+          "update_id": "replit-black-box-pen-tests",
+          "date": "2026-08-18",
+          "title": "Black-box pen tests on Replit",
+          "summary": "Replit新增黑盒渗透测试功能，帮助开发者自动检测AI构建应用的安全漏洞。",
+          "score": 8.0,
+          "url": "https://replit.com/blog/black-box-pen-tests"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Replit",
+        "语义层",
+        "AI采用",
+        "安全",
+        "AI应用"
+      ]
+    },
+    {
+      "product_id": "product-1e50e8680702c76a",
+      "product_name": "Whisker Litter Robot 5 Pro",
+      "builder_name": "Jennifer Pattison Tuohy",
+      "first_seen": "2026-08-18",
+      "last_seen": "2026-08-18",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "The Verge评测Whisker AI猫砂盆，AI识别猫咪如厕行为并提示健康问题。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.0,
+      "summary": "The Verge评测Whisker AI猫砂盆，AI识别猫咪如厕行为并提示健康问题。",
+      "title": "Whisker’s AI-powered litter robot thinks my cats swapped bodies",
+      "url": "https://www.theverge.com/tech/978323/whisker-litter-robot-5-pro-review",
+      "sources": [
+        {
+          "url": "https://www.theverge.com/tech/978323/whisker-litter-robot-5-pro-review",
+          "title": "Whisker’s AI-powered litter robot thinks my cats swapped bodies",
+          "source_type": "rss",
+          "published_at": "2026-08-17T11:00:00+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "whisker-litter-robot-5-pro-review",
+          "date": "2026-08-18",
+          "title": "Whisker’s AI-powered litter robot thinks my cats swapped bodies",
+          "summary": "The Verge评测Whisker AI猫砂盆，AI识别猫咪如厕行为并提示健康问题。",
+          "score": 8.0,
+          "url": "https://www.theverge.com/tech/978323/whisker-litter-robot-5-pro-review"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "AI硬件",
+        "宠物健康",
+        "评测"
+      ]
+    },
+    {
+      "product_id": "product-9323c209d168a5e4",
+      "product_name": "Microsoft Foundry",
+      "builder_name": "Haoran Cheng",
+      "first_seen": "2026-08-18",
+      "last_seen": "2026-08-18",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "微软 Foundry 为 Claude 模型新增结构化输出、网页搜索、MCP 连接器等五项能力，将模型端点升级为生产级代理平台。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.0,
+      "summary": "微软 Foundry 为 Claude 模型新增结构化输出、网页搜索、MCP 连接器等五项能力，将模型端点升级为生产级代理平台。",
+      "title": "From single call to agents: five new Claude capabilities now available in Microsoft Foundry",
+      "url": "https://devblogs.microsoft.com/foundry/five-new-claude-capabilities-now-available-in-foundry/",
+      "sources": [
+        {
+          "url": "https://devblogs.microsoft.com/foundry/five-new-claude-capabilities-now-available-in-foundry/",
+          "title": "From single call to agents: five new Claude capabilities now available in Microsoft Foundry",
+          "source_type": "rss",
+          "published_at": "2026-08-17T19:20:07+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "microsoft-foundry-claude-five-capabilities",
+          "date": "2026-08-18",
+          "title": "From single call to agents: five new Claude capabilities now available in Microsoft Foundry",
+          "summary": "微软 Foundry 为 Claude 模型新增结构化输出、网页搜索、MCP 连接器等五项能力，将模型端点升级为生产级代理平台。",
+          "score": 8.0,
+          "url": "https://devblogs.microsoft.com/foundry/five-new-claude-capabilities-now-available-in-foundry/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Microsoft Foundry",
+        "Claude",
+        "Agent",
+        "Azure"
+      ]
+    },
+    {
+      "product_id": "product-d732277fd97535bb",
+      "product_name": "GPT 5.6 Sol",
+      "builder_name": "plurby",
+      "first_seen": "2026-08-18",
+      "last_seen": "2026-08-18",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Roboflow评测显示OpenAI GPT 5.6 Sol视觉能力最强，但Gemini 3.5 Flash性价比更高，适合高吞吐检测。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.0,
+      "summary": "Roboflow评测显示OpenAI GPT 5.6 Sol视觉能力最强，但Gemini 3.5 Flash性价比更高，适合高吞吐检测。",
+      "title": "GPT 5.6 Sol is the best \"vision\" model OpenAI ever released",
+      "url": "https://blog.roboflow.com/openai-gpt-5-6/",
+      "sources": [
+        {
+          "url": "https://blog.roboflow.com/openai-gpt-5-6/",
+          "title": "GPT 5.6 Sol is the best \"vision\" model OpenAI ever released",
+          "source_type": "hackernews",
+          "published_at": "2026-08-17T12:09:42+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "openai-gpt-5.6-sol-vision",
+          "date": "2026-08-18",
+          "title": "GPT 5.6 Sol is the best \"vision\" model OpenAI ever released",
+          "summary": "Roboflow评测显示OpenAI GPT 5.6 Sol视觉能力最强，但Gemini 3.5 Flash性价比更高，适合高吞吐检测。",
+          "score": 8.0,
+          "url": "https://blog.roboflow.com/openai-gpt-5-6/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "视觉模型",
+        "OpenAI",
+        "Gemini"
+      ]
+    },
+    {
+      "product_id": "product-7614bd8a8d548196",
+      "product_name": "Claude",
+      "builder_name": "Jess Weatherbed",
+      "first_seen": "2026-08-18",
+      "last_seen": "2026-08-18",
+      "occurrence_count": 1,
+      "intelligence_type": "business_policy",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Anthropic公布Claude文本水印技术细节，采用SynthID-Text方案以符合欧盟AI透明度规则。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.8,
+      "summary": "Anthropic公布Claude文本水印技术细节，采用SynthID-Text方案以符合欧盟AI透明度规则。",
+      "title": "Anthropic explains how Claude&#8217;s invisible text watermarks will work",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/980869/anthropic-claude-watermarks-synthid-text-system",
+      "sources": [
+        {
+          "url": "https://www.theverge.com/ai-artificial-intelligence/980869/anthropic-claude-watermarks-synthid-text-system",
+          "title": "Anthropic explains how Claude&#8217;s invisible text watermarks will work",
+          "source_type": "rss",
+          "published_at": "2026-08-17T10:57:13+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "anthropic-claude-watermark-synthid",
+          "date": "2026-08-18",
+          "title": "Anthropic explains how Claude&#8217;s invisible text watermarks will work",
+          "summary": "Anthropic公布Claude文本水印技术细节，采用SynthID-Text方案以符合欧盟AI透明度规则。",
+          "score": 7.8,
+          "url": "https://www.theverge.com/ai-artificial-intelligence/980869/anthropic-claude-watermarks-synthid-text-system"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Anthropic",
+        "水印",
+        "透明度"
+      ]
+    },
+    {
+      "product_id": "product-1b4bfe12e31e25a8",
+      "product_name": "Relay",
+      "builder_name": "Lucas Ropek",
+      "first_seen": "2026-08-18",
+      "last_seen": "2026-08-18",
+      "occurrence_count": 1,
+      "intelligence_type": "market_signal",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "AI自动化初创公司Relay关闭，创始人加入Google Chrome团队，计划在Chrome中集成AI。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.5,
+      "summary": "AI自动化初创公司Relay关闭，创始人加入Google Chrome团队，计划在Chrome中集成AI。",
+      "title": "AI automation startup Relay shuts down, staff joins Google’s Chrome team",
+      "url": "https://techcrunch.com/2026/08/17/ai-automation-startup-relay-shuts-down-staff-joins-googles-chrome-team/",
+      "sources": [
+        {
+          "url": "https://techcrunch.com/2026/08/17/ai-automation-startup-relay-shuts-down-staff-joins-googles-chrome-team/",
+          "title": "AI automation startup Relay shuts down, staff joins Google’s Chrome team",
+          "source_type": "rss",
+          "published_at": "2026-08-17T21:27:05+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "relay-shutdown-google-chrome",
+          "date": "2026-08-18",
+          "title": "AI automation startup Relay shuts down, staff joins Google’s Chrome team",
+          "summary": "AI自动化初创公司Relay关闭，创始人加入Google Chrome团队，计划在Chrome中集成AI。",
+          "score": 7.5,
+          "url": "https://techcrunch.com/2026/08/17/ai-automation-startup-relay-shuts-down-staff-joins-googles-chrome-team/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "AI自动化",
+        "初创公司",
+        "Google"
+      ]
+    },
     {
       "product_id": "product-04c37655061935be",
       "product_name": "ChatGPT macOS 桌面应用",
@@ -127,55 +883,6 @@
         "AI",
         "共享记忆",
         "协作"
-      ]
-    },
-    {
-      "product_id": "product-2e12c5bd0a44574f",
-      "product_name": "Qwen 3.8 27B",
-      "builder_name": "Simon Willison",
-      "first_seen": "2026-08-17",
-      "last_seen": "2026-08-17",
-      "occurrence_count": 1,
-      "intelligence_type": "model_capability",
-      "evidence_status": "verified",
-      "target_user": "未公开",
-      "user_problem": "未公开",
-      "what_it_is": "阿里Qwen 3.8 27B模型发布，Simon Willison实测发现其性能优秀但默认过度思考。",
-      "ai_role": "未公开",
-      "implementation_idea": "未公开",
-      "hands_on_exercise": "未公开",
-      "limitations_or_uncertainties": "未公开",
-      "region": "china",
-      "score": 8.5,
-      "summary": "阿里Qwen 3.8 27B模型发布，Simon Willison实测发现其性能优秀但默认过度思考。",
-      "title": "Qwen 3.8 27B is excellent, but it defaults to wildly overthinking things",
-      "url": "https://simonwillison.net/2026/Aug/16/qwen-38-27b/",
-      "sources": [
-        {
-          "url": "https://simonwillison.net/2026/Aug/16/qwen-38-27b/",
-          "title": "Qwen 3.8 27B is excellent, but it defaults to wildly overthinking things",
-          "source_type": "rss",
-          "published_at": "2026-08-16T22:00:39+00:00"
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "qwen-3.8-27b-release",
-          "date": "2026-08-17",
-          "title": "Qwen 3.8 27B is excellent, but it defaults to wildly overthinking things",
-          "summary": "阿里Qwen 3.8 27B模型发布，Simon Willison实测发现其性能优秀但默认过度思考。",
-          "score": 8.5,
-          "url": "https://simonwillison.net/2026/Aug/16/qwen-38-27b/"
-        }
-      ],
-      "usage_flow": [],
-      "learning_points": [],
-      "verticals": [],
-      "tags": [
-        "Qwen",
-        "开源模型",
-        "本地部署",
-        "评测"
       ]
     },
     {
@@ -1297,144 +2004,6 @@
         "GLM",
         "Z.ai",
         "模型评测"
-      ]
-    },
-    {
-      "product_id": "product-7f7811de59626bc9",
-      "product_name": "Claude Code",
-      "builder_name": "ashwin-ant",
-      "first_seen": "2026-07-26",
-      "last_seen": "2026-08-15",
-      "occurrence_count": 5,
-      "intelligence_type": "product_case",
-      "evidence_status": "first_party",
-      "target_user": "需要在终端/命令行环境下写代码、改代码、调试的开发者",
-      "user_problem": "以前多个 Claude 会话之间互相隔离，无法直接通信；子代理需要手动配置才能分叉运行；GitLab 令牌等敏感信息缺乏自动脱敏保护",
-      "what_it_is": "Claude Code v2.1.233发布，新增GitLab MR支持、用户身份转发和内存限制等多项功能。",
-      "ai_role": "AI 作为执行主体，既能独立处理用户指令，也能作为子代理被主会话调度，还能跨会话接收和响应消息",
-      "implementation_idea": "核心是把单个 Claude 会话变成可分叉的进程——主会话像项目经理，可以派生子代理（fork）去后台干活，子代理带着完整对话记忆开工；同时给每个会话起唯一名字，让会话之间能通过 SendMessage 直接喊话，像企业微信 @同事一样",
-      "hands_on_exercise": "安装 Claude Code 后开两个终端窗口各运行 `claude`，在 A 窗口输入 `@B窗口的名称 帮我看看这个报错` 测试跨会话消息；然后用 `/config` 把 B 的跨会话消息设为 'hold'，观察 A 的消息是否被暂存",
-      "limitations_or_uncertainties": "Fable 5 顾问功能仅限有组织级 Fable 访问权限的用户；Remote Control 部分修复涉及云端会话与本地桥接的复杂场景，普通用户难以验证；语音模式修复仅限 native 构建版本",
-      "region": "global",
-      "score": 7.5,
-      "summary": "Claude Code v2.1.233发布，新增GitLab MR支持、用户身份转发和内存限制等多项功能。",
-      "title": "anthropics/claude-code released v2.1.233",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.233",
-      "sources": [
-        {
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.219",
-          "title": "anthropics/claude-code released v2.1.219",
-          "source_type": "github",
-          "published_at": "2026-07-24T17:14:23+00:00"
-        },
-        {
-          "url": "https://claude.com/product/claude-code",
-          "title": "Claude Code by Anthropic | AI Coding Agent, Terminal, IDE",
-          "source_type": "supplemental",
-          "published_at": ""
-        },
-        {
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.221",
-          "title": "anthropics/claude-code released v2.1.221",
-          "source_type": "github",
-          "published_at": "2026-08-04T00:14:23+00:00"
-        },
-        {
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.229",
-          "title": "anthropics/claude-code released v2.1.229",
-          "source_type": "github",
-          "published_at": "2026-08-12T20:56:22+00:00"
-        },
-        {
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.232",
-          "title": "anthropics/claude-code released v2.1.232",
-          "source_type": "github",
-          "published_at": "2026-08-13T23:29:59+00:00"
-        },
-        {
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.233",
-          "title": "anthropics/claude-code released v2.1.233",
-          "source_type": "github",
-          "published_at": "2026-08-14T22:20:57+00:00"
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "claude-code-v2.1.219",
-          "date": "2026-07-26",
-          "title": "Claude Code v2.1.219：新增 Opus 5 模型支持与网络沙箱白名单",
-          "summary": "Claude Code v2.1.219新增Opus 5模型支持、网络沙箱白名单等多项功能。",
-          "score": 8.0,
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.219"
-        },
-        {
-          "update_id": "claude-code-v2.1.221-release",
-          "date": "2026-08-04",
-          "title": "Claude Code v2.1.221：新增专注视图、沙箱凭据保护和提示审计功能",
-          "summary": "Anthropic 发布 Claude Code v2.1.221，新增 Focus view 和 sandbox 凭据保护等功能，提升开发体验和安全性。",
-          "score": 8.5,
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.221"
-        },
-        {
-          "update_id": "claude-code-v2.1.229-release",
-          "date": "2026-08-13",
-          "title": "anthropics/claude-code released v2.1.229",
-          "summary": "Claude Code 发布 v2.1.229，新增远程控制恢复、插件市场命令源等多项功能。",
-          "score": 8.0,
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.229"
-        },
-        {
-          "update_id": "claude-code-release-v2.1.232",
-          "date": "2026-08-14",
-          "title": "Claude Code v2.1.232：子代理分叉默认启用，新增跨会话消息与 GitLab 安全增强",
-          "summary": "Claude Code 更新至 v2.1.232，默认启用子代理分叉并支持跨会话消息，增强 Agent 协作和安全性。",
-          "score": 8.0,
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.232"
-        },
-        {
-          "update_id": "claude-code-v2.1.233",
-          "date": "2026-08-15",
-          "title": "anthropics/claude-code released v2.1.233",
-          "summary": "Claude Code v2.1.233发布，新增GitLab MR支持、用户身份转发和内存限制等多项功能。",
-          "score": 7.5,
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.233"
-        }
-      ],
-      "usage_flow": [
-        "在终端安装并启动 claude，用自然语言描述需求（如'给这个项目加登录功能'）",
-        "AI 自动分析代码库，必要时用 /add-dir 添加更多目录到上下文",
-        "AI 提出修改方案，经确认后自动编辑文件、运行命令",
-        "开发者检查 git diff，确认无误后提交代码",
-        "安装 Claude Code CLI，在代码仓库目录下运行 `claude` 启动对话",
-        "用自然语言描述需求（如'给这个函数加单元测试'），AI 自动读文件、改代码、跑命令",
-        "按 `Ctrl+Alt+F` 开启 Focus view，把工具执行细节折叠成可展开摘要，专注看对话",
-        "用 `claude-api prompt-audit` 检查旧提示词是否适合当前模型，确认后提交代码",
-        "在终端运行 `claude` 启动会话，多个会话会自动获得唯一名称",
-        "在提示符里输入 `@会话名` 直接给另一个运行中的 Claude 会话发消息",
-        "调用子代理时自动在后台分叉运行，继承当前对话上下文但互不阻塞",
-        "通过 `/config` 设置跨会话消息的接收策略（接受/暂存/拒绝）和对话过期时间"
-      ],
-      "learning_points": [
-        "Context window（上下文窗口）：模型一次能'看'多少字，Opus 5 的 1M 约等于能塞进整本《三体》第一部，让 AI 分析大型代码库不丢线索",
-        "Agent（智能体）：不只是聊天回复，而是能自主决定'我要先读哪个文件、再改哪行、然后跑测试'的 AI 系统",
-        "Function calling（函数调用）：模型不直接生成答案，而是输出结构化指令（如'调用 read_file 工具'），由外部程序执行后再把结果喂回模型",
-        "Agent：不只是问答，而是能自主规划步骤、调用工具完成任务的 AI 系统",
-        "Function Calling（函数调用）：LLM 输出结构化指令让程序去执行具体操作，比如'读这个文件'或'运行这个测试'",
-        "Prompt 审计：不同模型对提示词的敏感度不同，旧提示词可能在新模型上失效，需要系统性检查",
-        "Agent（智能体）：能自主规划、调用工具、完成多步骤任务的 AI 程序，不只是聊天",
-        "Fork（分叉）：从现有进程复制出一个独立进程，子进程继承父进程的状态但之后各跑各的，互不干扰",
-        "Secret redaction（敏感信息脱敏）：自动识别并隐藏令牌、密码等，防止 AI 日志或输出里意外泄露"
-      ],
-      "verticals": [],
-      "tags": [
-        "工具更新",
-        "Claude Code",
-        "Opus 5",
-        "Agent",
-        "开发者工具",
-        "更新",
-        "release",
-        "版本更新"
       ]
     },
     {
@@ -6343,54 +6912,6 @@
         "Steve Yegge",
         "编码代理",
         "Opus"
-      ]
-    },
-    {
-      "product_id": "product-6b07f1c2139d1ca9",
-      "product_name": "Replit",
-      "builder_name": "Replit Blog",
-      "first_seen": "2026-08-04",
-      "last_seen": "2026-08-04",
-      "occurrence_count": 1,
-      "intelligence_type": "builder_insight",
-      "evidence_status": "first_party",
-      "target_user": "未公开",
-      "user_problem": "未公开",
-      "what_it_is": "Replit官方博客强调语义层是AI采用的基础，指出AI代理需要可靠的数据真相来源，对AI产品设计有重要参考价值。",
-      "ai_role": "未公开",
-      "implementation_idea": "未公开",
-      "hands_on_exercise": "未公开",
-      "limitations_or_uncertainties": "未公开",
-      "region": "global",
-      "score": 8.0,
-      "summary": "Replit官方博客强调语义层是AI采用的基础，指出AI代理需要可靠的数据真相来源，对AI产品设计有重要参考价值。",
-      "title": "AI adoption starts with truth",
-      "url": "https://replit.com/blog/ai-adoption",
-      "sources": [
-        {
-          "url": "https://replit.com/blog/ai-adoption",
-          "title": "AI adoption starts with truth",
-          "source_type": "rss",
-          "published_at": "2026-08-03T16:15:17+00:00"
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "replit-semantic-layer-ai-adoption",
-          "date": "2026-08-04",
-          "title": "AI adoption starts with truth",
-          "summary": "Replit官方博客强调语义层是AI采用的基础，指出AI代理需要可靠的数据真相来源，对AI产品设计有重要参考价值。",
-          "score": 8.0,
-          "url": "https://replit.com/blog/ai-adoption"
-        }
-      ],
-      "usage_flow": [],
-      "learning_points": [],
-      "verticals": [],
-      "tags": [
-        "Replit",
-        "语义层",
-        "AI采用"
       ]
     },
     {
