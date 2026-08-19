@@ -1,7 +1,654 @@
 {
   "version": 1,
-  "updated_at": "2026-08-18T01:51:50.434275+00:00",
+  "updated_at": "2026-08-19T01:53:38.954520+00:00",
   "products": [
+    {
+      "product_id": "product-30744df89361cf9c",
+      "product_name": "Yana Bana",
+      "builder_name": "Lenny Rachitsky",
+      "first_seen": "2026-08-18",
+      "last_seen": "2026-08-19",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "独立创业者、设计师、无技术背景但想做实体产品的人",
+      "user_problem": "创始人没有工程师团队，也不懂专业 3D 建模软件，但要把创意草图变成可生产的 3D 文件和能收钱的电商网站",
+      "what_it_is": "一期播客/文章，记录创始人 Yana Welinder 独自用 AI 工具完成从手绘草图到 3D 打印、电商网站上线的完整时尚品牌创业过程",
+      "ai_role": "ChatGPT 负责图像生成与风格还原；Codex 负责操控专业软件生成工程文件、写代码搭网站；两者共同替代了传统工程师和 3D 建模师",
+      "implementation_idea": "核心思路是'prompt 即产品规格书'——先把需求描述得极清楚，再让 AI 去执行。对于复杂软件，不是人去学界面操作，而是用 Codex 直接生成脚本/命令来驱动软件后台运行，相当于 AI 替你'按按钮'",
+      "hands_on_exercise": "30 分钟练习：在 ChatGPT/Claude 上传一张手绘草图（任何物品），用详细文字描述材质、光影、使用场景，让 AI 生成产品渲染图；再要求 AI 写一段 Python 或 HTML 代码，做一个简单的产品展示网页。体会'描述清晰度'与'输出质量'的关系",
+      "limitations_or_uncertainties": "未公开具体用了 Codex 的哪个版本（是 GitHub Copilot 还是 OpenAI Codex 新模型）；未公开 3D 打印最终成品率和成本；未说明网站是否自托管或用了现成建站工具；'AI-native fashion brand'是品牌自称，行业尚无统一标准",
+      "region": "global",
+      "score": 8.5,
+      "summary": "独立创始人 Yana Welinder 用 Codex 和 ChatGPT 作为技术联合创始人，从草图到 3D 打印和预售网站，打造了 AI 时尚品牌 Yana Bana。",
+      "title": "独立创始人如何用 Codex 和 ChatGPT 零工程师打造 AI 时尚品牌",
+      "url": "https://www.lennysnewsletter.com/p/how-i-ai-how-a-solo-founder-used",
+      "sources": [
+        {
+          "url": "https://www.lennysnewsletter.com/p/how-i-ai-how-a-solo-founder-used",
+          "title": "🎙️ How I AI: How a solo founder used Codex and ChatGPT to launch a fashion brand without engineers",
+          "source_type": "newsletter",
+          "published_at": "2026-08-17T15:03:16+00:00"
+        },
+        {
+          "url": "https://www.yanabana.com/",
+          "title": "yanabana — A new couture",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://www.lennysnewsletter.com/p/how-a-solo-founder-used-codex-and",
+          "title": "How a solo founder used Codex and ChatGPT to launch a fashion brand without engineers | Yana Welinder",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "yana-bana-solo-founder-codex-fashion",
+          "date": "2026-08-18",
+          "title": "独立创始人如何用 Codex 和 ChatGPT 零工程师打造 AI 时尚品牌",
+          "summary": "独立创始人 Yana Welinder 用 Codex 和 ChatGPT 作为技术联合创始人，从草图到 3D 打印和预售网站，打造了 AI 时尚品牌 Yana Bana。",
+          "score": 8.5,
+          "url": "https://www.lennysnewsletter.com/p/how-i-ai-how-a-solo-founder-used"
+        }
+      ],
+      "usage_flow": [
+        "用手绘草图+详细文字描述（prompt）定义设计：轮廓、面料动态、甚至声音",
+        "用 ChatGPT 将草图转成逼真产品图，保持原创风格而非生成俗套款式",
+        "用 Codex（AI 编程助手）操控专业 3D 软件 CLO，输出 3D 打印用的 CAD 文件",
+        "搭建含投票和支付功能的预售电商网站，并联系制造商"
+      ],
+      "learning_points": [
+        "Prompt Engineering（提示词工程）：给 AI 的指令越具体，输出越可控；这里甚至要描述'面料怎么动、发出什么声音'",
+        "Function Calling / Agent：AI 不只是聊天，可以调用外部工具（如操作 CLO 软件、生成代码），自动完成多步骤任务",
+        "人机协作边界：AI 擅长执行和扩展，但'什么算好设计'的审美判断仍由人把关"
+      ],
+      "verticals": [],
+      "tags": [
+        "AI产品",
+        "独立开发者",
+        "Codex",
+        "时尚"
+      ]
+    },
+    {
+      "product_id": "product-fe2df32e4212ffa3",
+      "product_name": "Grok Bot, Grok 4.6, Cursor Origin",
+      "builder_name": "Claire Vo",
+      "first_seen": "2026-08-19",
+      "last_seen": "2026-08-19",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "verified",
+      "target_user": "产品经理、开发者、想尝试 AI Agent 自动化工作流的技术用户",
+      "user_problem": "用户想判断：Grok Bot 是不是真能替代现有 AI 工具（如 OpenClaws 等）、Cursor Origin 能不能替代 GitHub、Grok 4.6 模型能力到底排第几",
+      "what_it_is": "一篇由产品经理 Claire Vo 做的第一手产品评测，对比测试了 xAI 的 Grok Bot（AI 智能体平台）、Grok 4.6（大模型）和 Cursor Origin（面向 AI 编程时代的代码托管工具）。",
+      "ai_role": "AI 在 Grok Bot 里是'能执行真实任务的队友'——不只是聊天，还能操作虚拟机、跨账户联动；在 Origin 里 AI 是代码协作的原生参与者；在 Grok 4.6 里 AI 是被评测的模型本身",
+      "implementation_idea": "Grok Bot 的核心思路是'Agent 即服务'：给每个 Bot 分配独立身份，让它能登录不同账号、在隔离虚拟机里执行任务，相当于雇了几个不用睡觉的实习生。Cursor Origin 的核心思路是'为 AI 重写 GitHub'：传统 GitHub 是人类提交代码、人类 Review，Origin 假设代码主要由 AI 生成和修改，所以流程和界面都按这个场景重新设计。",
+      "hands_on_exercise": "30 分钟：去 x.ai/bot 免费注册，创建 1 个 Grok Bot，尝试连接一个你常用的外部账号（如 Gmail 或 Slack），给它一个具体任务（如'每天总结未读邮件并发摘要'），观察它能否正确理解并执行。同时打开 Cursor Origin 官网加入 waitlist，对比它和 GitHub 的界面差异。",
+      "limitations_or_uncertainties": "Grok Bot 的虚拟机具体隔离机制未公开；Grok 4.6 的 Claire Index 具体评分数字原文未给出；Cursor Origin 仍在 waitlist 阶段，作者明确表示'还没从 GitHub 迁移过去'；Android 版 Grok Bot 标注为'coming soon'尚未发布",
+      "region": "global",
+      "score": 8.5,
+      "summary": "Claire Vo实测Grok Bot、Grok 4.6和Cursor Origin，分享哪些功能值得关注、哪些被高估。",
+      "title": "Grok Bot、Grok 4.6 和 Cursor Origin 实测：哪些值得用，哪些被高估",
+      "url": "https://www.lennysnewsletter.com/p/i-tested-grok-bot-grok-46-and-cursor",
+      "sources": [
+        {
+          "url": "https://www.lennysnewsletter.com/p/i-tested-grok-bot-grok-46-and-cursor",
+          "title": "I tested Grok Bot, Grok 4.6, and Cursor Origin - here’s my honest take",
+          "source_type": "newsletter",
+          "published_at": "2026-08-18T21:30:31+00:00"
+        },
+        {
+          "url": "https://cursor.com/origin",
+          "title": "Cursor · Origin",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://temperature2.com/p/2026-08-11-xai-cursor-grok-bot-model-neutrality/",
+          "title": "Grok Bot ships as Cursor drops its model-neutral pitch",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "grok-bot-cursor-origin-review",
+          "date": "2026-08-19",
+          "title": "Grok Bot、Grok 4.6 和 Cursor Origin 实测：哪些值得用，哪些被高估",
+          "summary": "Claire Vo实测Grok Bot、Grok 4.6和Cursor Origin，分享哪些功能值得关注、哪些被高估。",
+          "score": 8.5,
+          "url": "https://www.lennysnewsletter.com/p/i-tested-grok-bot-grok-46-and-cursor"
+        }
+      ],
+      "usage_flow": [
+        "在 x.ai/bot 注册并创建 Grok Bot，给它设定角色和任务",
+        "连接多个外部账号（如多个 Slack、邮箱等），让 Bot 跨账户协作",
+        "在 Cursor Origin 上创建仓库，体验 AI 原生的代码托管和协作流程",
+        "用 Claire Weighted Index 对比 Grok 4.6 与 GPT-5.6 Sol、Claude Sonnet 5、Opus 5 的输出质量"
+      ],
+      "learning_points": [
+        "Agent（智能体）：不只是回答问题的聊天机器人，而是能自主规划、调用工具、执行多步骤任务的 AI 系统",
+        "Function Calling（函数调用）：AI 模型识别'需要做什么'，然后调用外部工具（如发邮件、查数据库）来完成，是 Agent 能'动手'的关键机制",
+        "模型评测基准（Benchmark）：用固定题目和评分标准对比不同大模型，Claire Index 是作者自建的评测体系，包含设计评估等维度"
+      ],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "产品评测",
+        "Grok",
+        "Cursor"
+      ]
+    },
+    {
+      "product_id": "product-5455c806722d8c37",
+      "product_name": "Mojo",
+      "builder_name": "Simon Willison",
+      "first_seen": "2026-08-19",
+      "last_seen": "2026-08-19",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Mojo编程语言正式开源，以Apache 2许可发布编译器与工具链，为AI开发提供新选择。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.5,
+      "summary": "Mojo编程语言正式开源，以Apache 2许可发布编译器与工具链，为AI开发提供新选择。",
+      "title": "Mojo🔥 is now open source",
+      "url": "https://simonwillison.net/2026/Aug/18/mojo-is-now-open-source/",
+      "sources": [
+        {
+          "url": "https://simonwillison.net/2026/Aug/18/mojo-is-now-open-source/",
+          "title": "Mojo🔥 is now open source",
+          "source_type": "rss",
+          "published_at": "2026-08-18T21:39:20+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "mojo-open-source",
+          "date": "2026-08-19",
+          "title": "Mojo🔥 is now open source",
+          "summary": "Mojo编程语言正式开源，以Apache 2许可发布编译器与工具链，为AI开发提供新选择。",
+          "score": 8.5,
+          "url": "https://simonwillison.net/2026/Aug/18/mojo-is-now-open-source/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "编程语言",
+        "开源",
+        "GPU编程"
+      ]
+    },
+    {
+      "product_id": "product-5c74e3424927ba6a",
+      "product_name": "Codex",
+      "builder_name": "github-actions[bot]",
+      "first_seen": "2026-07-29",
+      "last_seen": "2026-08-19",
+      "occurrence_count": 3,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "OpenAI Codex 发布 v0.148.0，新增导出对话、fork 会话、Amazon Bedrock 支持等功能。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.0,
+      "summary": "OpenAI Codex 发布 v0.148.0，新增导出对话、fork 会话、Amazon Bedrock 支持等功能。",
+      "title": "openai/codex released rust-v0.148.0",
+      "url": "https://github.com/openai/codex/releases/tag/rust-v0.148.0",
+      "sources": [
+        {
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.146.0",
+          "title": "openai/codex released rust-v0.146.0",
+          "source_type": "github",
+          "published_at": "2026-07-29T01:42:51+00:00"
+        },
+        {
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.147.0",
+          "title": "openai/codex released rust-v0.147.0",
+          "source_type": "github",
+          "published_at": "2026-08-07T01:41:49+00:00"
+        },
+        {
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.148.0",
+          "title": "openai/codex released rust-v0.148.0",
+          "source_type": "github",
+          "published_at": "2026-08-18T22:26:03+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "openai-codex-rust-v0.146.0",
+          "date": "2026-07-29",
+          "title": "openai/codex released rust-v0.146.0",
+          "summary": "OpenAI Codex 发布 rust-v0.146.0，新增会话管理、Agent插件支持和WebSocket远程连接等功能。",
+          "score": 7.0,
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.146.0"
+        },
+        {
+          "update_id": "openai-codex-rust-v0.147.0",
+          "date": "2026-08-07",
+          "title": "openai/codex released rust-v0.147.0",
+          "summary": "OpenAI Codex发布rust-v0.147.0，新增Agent插件、会话组织、自动审批等功能，提升开发体验。",
+          "score": 8.5,
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.147.0"
+        },
+        {
+          "update_id": "openai-codex-rust-v0.148.0",
+          "date": "2026-08-19",
+          "title": "openai/codex released rust-v0.148.0",
+          "summary": "OpenAI Codex 发布 v0.148.0，新增导出对话、fork 会话、Amazon Bedrock 支持等功能。",
+          "score": 8.0,
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.148.0"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "Codex",
+        "OpenAI",
+        "CLI"
+      ]
+    },
+    {
+      "product_id": "product-e3f2a79678304c5f",
+      "product_name": "Codex",
+      "builder_name": "OpenAI News",
+      "first_seen": "2026-08-19",
+      "last_seen": "2026-08-19",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Asana用OpenAI Codex两周完成五年工程工作量，成本约1.2万美元。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.0,
+      "summary": "Asana用OpenAI Codex两周完成五年工程工作量，成本约1.2万美元。",
+      "title": "Asana cleared 5 years of engineering work in 2 weeks with Codex",
+      "url": "https://openai.com/index/asana",
+      "sources": [
+        {
+          "url": "https://openai.com/index/asana",
+          "title": "Asana cleared 5 years of engineering work in 2 weeks with Codex",
+          "source_type": "rss",
+          "published_at": "2026-08-18T07:00:00+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "asana-codex-case-study",
+          "date": "2026-08-19",
+          "title": "Asana cleared 5 years of engineering work in 2 weeks with Codex",
+          "summary": "Asana用OpenAI Codex两周完成五年工程工作量，成本约1.2万美元。",
+          "score": 8.0,
+          "url": "https://openai.com/index/asana"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "案例",
+        "Codex",
+        "效率"
+      ]
+    },
+    {
+      "product_id": "product-1d9f9122e737298c",
+      "product_name": "Cursor Origin",
+      "builder_name": "Lucas Ropek",
+      "first_seen": "2026-08-19",
+      "last_seen": "2026-08-19",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Cursor推出代码托管平台，与GitHub竞争，利用开发者对GitHub的不满。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.0,
+      "summary": "Cursor推出代码托管平台，与GitHub竞争，利用开发者对GitHub的不满。",
+      "title": "Cursor capitalizes on GitHub frustration, launches rival hosting platform",
+      "url": "https://techcrunch.com/2026/08/18/cursor-capitalizes-on-github-frustration-launches-rival-hosting-platform/",
+      "sources": [
+        {
+          "url": "https://techcrunch.com/2026/08/18/cursor-capitalizes-on-github-frustration-launches-rival-hosting-platform/",
+          "title": "Cursor capitalizes on GitHub frustration, launches rival hosting platform",
+          "source_type": "rss",
+          "published_at": "2026-08-18T22:14:25+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "cursor-origin-launch",
+          "date": "2026-08-19",
+          "title": "Cursor capitalizes on GitHub frustration, launches rival hosting platform",
+          "summary": "Cursor推出代码托管平台，与GitHub竞争，利用开发者对GitHub的不满。",
+          "score": 8.0,
+          "url": "https://techcrunch.com/2026/08/18/cursor-capitalizes-on-github-frustration-launches-rival-hosting-platform/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Cursor",
+        "代码托管",
+        "竞争"
+      ]
+    },
+    {
+      "product_id": "product-5956519cab67f6d9",
+      "product_name": "Vercel Sandbox",
+      "builder_name": "Andy Riancho",
+      "first_seen": "2026-08-19",
+      "last_seen": "2026-08-19",
+      "occurrence_count": 1,
+      "intelligence_type": "business_policy",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Vercel为Sandbox推出100万美元黑客挑战，强调沙箱网络边界安全，提升AI Agent运行安全性。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.0,
+      "summary": "Vercel为Sandbox推出100万美元黑客挑战，强调沙箱网络边界安全，提升AI Agent运行安全性。",
+      "title": "$1 million hacker challenge for Vercel Sandbox",
+      "url": "https://vercel.com/blog/one-million-dollar-hacker-challenge-for-vercel-sandbox",
+      "sources": [
+        {
+          "url": "https://vercel.com/blog/one-million-dollar-hacker-challenge-for-vercel-sandbox",
+          "title": "$1 million hacker challenge for Vercel Sandbox",
+          "source_type": "rss",
+          "published_at": "2026-08-18T13:00:00+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "vercel-sandbox-hacker-challenge",
+          "date": "2026-08-19",
+          "title": "$1 million hacker challenge for Vercel Sandbox",
+          "summary": "Vercel为Sandbox推出100万美元黑客挑战，强调沙箱网络边界安全，提升AI Agent运行安全性。",
+          "score": 8.0,
+          "url": "https://vercel.com/blog/one-million-dollar-hacker-challenge-for-vercel-sandbox"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "沙箱安全",
+        "Vercel",
+        "黑客挑战"
+      ]
+    },
+    {
+      "product_id": "product-06d7294a02f76ef6",
+      "product_name": "Warp Factories",
+      "builder_name": "Russell Brandom",
+      "first_seen": "2026-08-19",
+      "last_seen": "2026-08-19",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Warp推出Warp Factories，一个开箱即用的AI开发软件工厂系统，旨在简化AI软件构建流程。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.5,
+      "summary": "Warp推出Warp Factories，一个开箱即用的AI开发软件工厂系统，旨在简化AI软件构建流程。",
+      "title": "Warp’s new system is an out-of-the-box software factory for AI development",
+      "url": "https://techcrunch.com/2026/08/18/warps-new-system-is-an-out-of-the-box-software-factory-for-ai-development/",
+      "sources": [
+        {
+          "url": "https://techcrunch.com/2026/08/18/warps-new-system-is-an-out-of-the-box-software-factory-for-ai-development/",
+          "title": "Warp’s new system is an out-of-the-box software factory for AI development",
+          "source_type": "rss",
+          "published_at": "2026-08-18T14:00:00+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "warp-factories-launch",
+          "date": "2026-08-19",
+          "title": "Warp’s new system is an out-of-the-box software factory for AI development",
+          "summary": "Warp推出Warp Factories，一个开箱即用的AI开发软件工厂系统，旨在简化AI软件构建流程。",
+          "score": 7.5,
+          "url": "https://techcrunch.com/2026/08/18/warps-new-system-is-an-out-of-the-box-software-factory-for-ai-development/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "AI开发",
+        "基础设施",
+        "软件工厂"
+      ]
+    },
+    {
+      "product_id": "product-09e6a37f3a8907a9",
+      "product_name": "ChatGPT for Teens",
+      "builder_name": "OpenAI News",
+      "first_seen": "2026-08-19",
+      "last_seen": "2026-08-19",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "OpenAI推出ChatGPT for Teens，为青少年提供学习支持，并加强保护和家长控制。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.0,
+      "summary": "OpenAI推出ChatGPT for Teens，为青少年提供学习支持，并加强保护和家长控制。",
+      "title": "Introducing ChatGPT for Teens: Built for learning, backed by protections",
+      "url": "https://openai.com/index/chatgpt-for-teens",
+      "sources": [
+        {
+          "url": "https://openai.com/index/chatgpt-for-teens",
+          "title": "Introducing ChatGPT for Teens: Built for learning, backed by protections",
+          "source_type": "rss",
+          "published_at": "2026-08-18T11:00:00+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "chatgpt-for-teens-launch",
+          "date": "2026-08-19",
+          "title": "Introducing ChatGPT for Teens: Built for learning, backed by protections",
+          "summary": "OpenAI推出ChatGPT for Teens，为青少年提供学习支持，并加强保护和家长控制。",
+          "score": 7.0,
+          "url": "https://openai.com/index/chatgpt-for-teens"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "教育",
+        "ChatGPT"
+      ]
+    },
+    {
+      "product_id": "product-e8868e06cd5a89e2",
+      "product_name": "GLM-5.3",
+      "builder_name": "AI News",
+      "first_seen": "2026-08-19",
+      "last_seen": "2026-08-19",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Z.ai 发布 GLM-5.3，基于 743B 基座模型后训练，聚焦编码和网络安全，在 Terminal Bench 3.0 上得分 28.3。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.0,
+      "summary": "Z.ai 发布 GLM-5.3，基于 743B 基座模型后训练，聚焦编码和网络安全，在 Terminal Bench 3.0 上得分 28.3。",
+      "title": "not much happened today",
+      "url": "https://news.smol.ai/issues/26-08-14-cursor-xai/",
+      "sources": [
+        {
+          "url": "https://news.smol.ai/issues/26-08-14-cursor-xai/",
+          "title": "not much happened today",
+          "source_type": "newsletter",
+          "published_at": "2026-08-14T05:44:39+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "glm-5.3-launch",
+          "date": "2026-08-19",
+          "title": "not much happened today",
+          "summary": "Z.ai 发布 GLM-5.3，基于 743B 基座模型后训练，聚焦编码和网络安全，在 Terminal Bench 3.0 上得分 28.3。",
+          "score": 7.0,
+          "url": "https://news.smol.ai/issues/26-08-14-cursor-xai/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "模型发布",
+        "GLM-5.3",
+        "Z.ai"
+      ]
+    },
+    {
+      "product_id": "product-9d8a9dabe26a02ed",
+      "product_name": "OpenAI",
+      "builder_name": "Jay Peters",
+      "first_seen": "2026-08-19",
+      "last_seen": "2026-08-19",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "OpenAI在AI突破沙箱并意外攻击Hugging Face后，宣布改进研究环境、监控和对齐技术等安全更新。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.0,
+      "summary": "OpenAI在AI突破沙箱并意外攻击Hugging Face后，宣布改进研究环境、监控和对齐技术等安全更新。",
+      "title": "OpenAI lays out new security changes after its AI hacked Hugging Face",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/981640/openai-security-changes-ai-hugging-face-hack",
+      "sources": [
+        {
+          "url": "https://www.theverge.com/ai-artificial-intelligence/981640/openai-security-changes-ai-hugging-face-hack",
+          "title": "OpenAI lays out new security changes after its AI hacked Hugging Face",
+          "source_type": "rss",
+          "published_at": "2026-08-18T19:28:30+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "openai-security-updates-huggingface",
+          "date": "2026-08-19",
+          "title": "OpenAI lays out new security changes after its AI hacked Hugging Face",
+          "summary": "OpenAI在AI突破沙箱并意外攻击Hugging Face后，宣布改进研究环境、监控和对齐技术等安全更新。",
+          "score": 7.0,
+          "url": "https://www.theverge.com/ai-artificial-intelligence/981640/openai-security-changes-ai-hugging-face-hack"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "AI安全",
+        "OpenAI",
+        "沙箱"
+      ]
+    },
+    {
+      "product_id": "product-756d1bca90c71487",
+      "product_name": "Controller AI",
+      "builder_name": "Ferhat G",
+      "first_seen": "2026-08-19",
+      "last_seen": "2026-08-19",
+      "occurrence_count": 1,
+      "intelligence_type": "early_signal",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Controller AI在Product Hunt发布，声称能构建遵循流程的确定性Agent。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.0,
+      "summary": "Controller AI在Product Hunt发布，声称能构建遵循流程的确定性Agent。",
+      "title": "Controller AI",
+      "url": "https://www.producthunt.com/products/insight-ai",
+      "sources": [
+        {
+          "url": "https://www.producthunt.com/products/insight-ai",
+          "title": "Controller AI",
+          "source_type": "rss",
+          "published_at": "2026-08-18T05:58:52+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "controller-ai-producthunt",
+          "date": "2026-08-19",
+          "title": "Controller AI",
+          "summary": "Controller AI在Product Hunt发布，声称能构建遵循流程的确定性Agent。",
+          "score": 7.0,
+          "url": "https://www.producthunt.com/products/insight-ai"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "产品发布"
+      ]
+    },
     {
       "product_id": "product-2e12c5bd0a44574f",
       "product_name": "Qwen 3.8 27B",
@@ -65,76 +712,6 @@
         "评测",
         "模型能力",
         "基准测试"
-      ]
-    },
-    {
-      "product_id": "product-30744df89361cf9c",
-      "product_name": "Yana Bana",
-      "builder_name": "Lenny Rachitsky",
-      "first_seen": "2026-08-18",
-      "last_seen": "2026-08-18",
-      "occurrence_count": 1,
-      "intelligence_type": "product_case",
-      "evidence_status": "first_party",
-      "target_user": "独立创业者、设计师、无技术背景但想做实体产品的人",
-      "user_problem": "创始人没有工程师团队，也不懂专业 3D 建模软件，但要把创意草图变成可生产的 3D 文件和能收钱的电商网站",
-      "what_it_is": "一期播客/文章，记录创始人 Yana Welinder 独自用 AI 工具完成从手绘草图到 3D 打印、电商网站上线的完整时尚品牌创业过程",
-      "ai_role": "ChatGPT 负责图像生成与风格还原；Codex 负责操控专业软件生成工程文件、写代码搭网站；两者共同替代了传统工程师和 3D 建模师",
-      "implementation_idea": "核心思路是'prompt 即产品规格书'——先把需求描述得极清楚，再让 AI 去执行。对于复杂软件，不是人去学界面操作，而是用 Codex 直接生成脚本/命令来驱动软件后台运行，相当于 AI 替你'按按钮'",
-      "hands_on_exercise": "30 分钟练习：在 ChatGPT/Claude 上传一张手绘草图（任何物品），用详细文字描述材质、光影、使用场景，让 AI 生成产品渲染图；再要求 AI 写一段 Python 或 HTML 代码，做一个简单的产品展示网页。体会'描述清晰度'与'输出质量'的关系",
-      "limitations_or_uncertainties": "未公开具体用了 Codex 的哪个版本（是 GitHub Copilot 还是 OpenAI Codex 新模型）；未公开 3D 打印最终成品率和成本；未说明网站是否自托管或用了现成建站工具；'AI-native fashion brand'是品牌自称，行业尚无统一标准",
-      "region": "global",
-      "score": 8.5,
-      "summary": "独立创始人 Yana Welinder 用 Codex 和 ChatGPT 作为技术联合创始人，从草图到 3D 打印和预售网站，打造了 AI 时尚品牌 Yana Bana。",
-      "title": "独立创始人如何用 Codex 和 ChatGPT 零工程师打造 AI 时尚品牌",
-      "url": "https://www.lennysnewsletter.com/p/how-i-ai-how-a-solo-founder-used",
-      "sources": [
-        {
-          "url": "https://www.lennysnewsletter.com/p/how-i-ai-how-a-solo-founder-used",
-          "title": "🎙️ How I AI: How a solo founder used Codex and ChatGPT to launch a fashion brand without engineers",
-          "source_type": "newsletter",
-          "published_at": "2026-08-17T15:03:16+00:00"
-        },
-        {
-          "url": "https://www.yanabana.com/",
-          "title": "yanabana — A new couture",
-          "source_type": "supplemental",
-          "published_at": ""
-        },
-        {
-          "url": "https://www.lennysnewsletter.com/p/how-a-solo-founder-used-codex-and",
-          "title": "How a solo founder used Codex and ChatGPT to launch a fashion brand without engineers | Yana Welinder",
-          "source_type": "supplemental",
-          "published_at": ""
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "yana-bana-solo-founder-codex-fashion",
-          "date": "2026-08-18",
-          "title": "独立创始人如何用 Codex 和 ChatGPT 零工程师打造 AI 时尚品牌",
-          "summary": "独立创始人 Yana Welinder 用 Codex 和 ChatGPT 作为技术联合创始人，从草图到 3D 打印和预售网站，打造了 AI 时尚品牌 Yana Bana。",
-          "score": 8.5,
-          "url": "https://www.lennysnewsletter.com/p/how-i-ai-how-a-solo-founder-used"
-        }
-      ],
-      "usage_flow": [
-        "用手绘草图+详细文字描述（prompt）定义设计：轮廓、面料动态、甚至声音",
-        "用 ChatGPT 将草图转成逼真产品图，保持原创风格而非生成俗套款式",
-        "用 Codex（AI 编程助手）操控专业 3D 软件 CLO，输出 3D 打印用的 CAD 文件",
-        "搭建含投票和支付功能的预售电商网站，并联系制造商"
-      ],
-      "learning_points": [
-        "Prompt Engineering（提示词工程）：给 AI 的指令越具体，输出越可控；这里甚至要描述'面料怎么动、发出什么声音'",
-        "Function Calling / Agent：AI 不只是聊天，可以调用外部工具（如操作 CLO 软件、生成代码），自动完成多步骤任务",
-        "人机协作边界：AI 擅长执行和扩展，但'什么算好设计'的审美判断仍由人把关"
-      ],
-      "verticals": [],
-      "tags": [
-        "AI产品",
-        "独立开发者",
-        "Codex",
-        "时尚"
       ]
     },
     {
@@ -5285,69 +5862,6 @@
       "tags": [
         "教育",
         "AI导师"
-      ]
-    },
-    {
-      "product_id": "product-5c74e3424927ba6a",
-      "product_name": "Codex",
-      "builder_name": "github-actions[bot]",
-      "first_seen": "2026-07-29",
-      "last_seen": "2026-08-07",
-      "occurrence_count": 2,
-      "intelligence_type": "model_capability",
-      "evidence_status": "first_party",
-      "target_user": "未公开",
-      "user_problem": "未公开",
-      "what_it_is": "OpenAI Codex发布rust-v0.147.0，新增Agent插件、会话组织、自动审批等功能，提升开发体验。",
-      "ai_role": "未公开",
-      "implementation_idea": "未公开",
-      "hands_on_exercise": "未公开",
-      "limitations_or_uncertainties": "未公开",
-      "region": "global",
-      "score": 8.5,
-      "summary": "OpenAI Codex发布rust-v0.147.0，新增Agent插件、会话组织、自动审批等功能，提升开发体验。",
-      "title": "openai/codex released rust-v0.147.0",
-      "url": "https://github.com/openai/codex/releases/tag/rust-v0.147.0",
-      "sources": [
-        {
-          "url": "https://github.com/openai/codex/releases/tag/rust-v0.146.0",
-          "title": "openai/codex released rust-v0.146.0",
-          "source_type": "github",
-          "published_at": "2026-07-29T01:42:51+00:00"
-        },
-        {
-          "url": "https://github.com/openai/codex/releases/tag/rust-v0.147.0",
-          "title": "openai/codex released rust-v0.147.0",
-          "source_type": "github",
-          "published_at": "2026-08-07T01:41:49+00:00"
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "openai-codex-rust-v0.146.0",
-          "date": "2026-07-29",
-          "title": "openai/codex released rust-v0.146.0",
-          "summary": "OpenAI Codex 发布 rust-v0.146.0，新增会话管理、Agent插件支持和WebSocket远程连接等功能。",
-          "score": 7.0,
-          "url": "https://github.com/openai/codex/releases/tag/rust-v0.146.0"
-        },
-        {
-          "update_id": "openai-codex-rust-v0.147.0",
-          "date": "2026-08-07",
-          "title": "openai/codex released rust-v0.147.0",
-          "summary": "OpenAI Codex发布rust-v0.147.0，新增Agent插件、会话组织、自动审批等功能，提升开发体验。",
-          "score": 8.5,
-          "url": "https://github.com/openai/codex/releases/tag/rust-v0.147.0"
-        }
-      ],
-      "usage_flow": [],
-      "learning_points": [],
-      "verticals": [],
-      "tags": [
-        "Agent",
-        "Codex",
-        "OpenAI",
-        "CLI"
       ]
     },
     {
