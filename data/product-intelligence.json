@@ -1,13 +1,13 @@
 {
   "version": 1,
-  "updated_at": "2026-08-19T01:53:38.954520+00:00",
+  "updated_at": "2026-08-20T01:52:14.212475+00:00",
   "products": [
     {
       "product_id": "product-30744df89361cf9c",
       "product_name": "Yana Bana",
       "builder_name": "Lenny Rachitsky",
       "first_seen": "2026-08-18",
-      "last_seen": "2026-08-19",
+      "last_seen": "2026-08-20",
       "occurrence_count": 1,
       "intelligence_type": "product_case",
       "evidence_status": "first_party",
@@ -70,6 +70,607 @@
         "独立开发者",
         "Codex",
         "时尚"
+      ]
+    },
+    {
+      "product_id": "product-6d088a1c8f8a0d4c",
+      "product_name": "OpenRouter",
+      "builder_name": "rvz",
+      "first_seen": "2026-08-20",
+      "last_seen": "2026-08-20",
+      "occurrence_count": 1,
+      "intelligence_type": "market_signal",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "OpenRouter宣布加入Stripe，成为其一部分，影响AI模型路由服务格局。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.5,
+      "summary": "OpenRouter宣布加入Stripe，成为其一部分，影响AI模型路由服务格局。",
+      "title": "OpenRouter is joining Stripe",
+      "url": "https://openrouter.ai/blog/announcements/openrouter-is-joining-stripe/",
+      "sources": [
+        {
+          "url": "https://openrouter.ai/blog/announcements/openrouter-is-joining-stripe/",
+          "title": "OpenRouter is joining Stripe",
+          "source_type": "hackernews",
+          "published_at": "2026-08-19T17:32:38+00:00"
+        },
+        {
+          "url": "https://techcrunch.com/2026/08/19/stripe-didnt-really-buy-openrouter-because-of-the-singularity/",
+          "title": "Stripe didn’t really buy OpenRouter because of the ‘singularity’",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "openrouter-joining-stripe",
+          "date": "2026-08-20",
+          "title": "OpenRouter is joining Stripe",
+          "summary": "OpenRouter宣布加入Stripe，成为其一部分，影响AI模型路由服务格局。",
+          "score": 8.5,
+          "url": "https://openrouter.ai/blog/announcements/openrouter-is-joining-stripe/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "OpenRouter",
+        "Stripe",
+        "收购",
+        "市场信号"
+      ]
+    },
+    {
+      "product_id": "product-b37b5909bb539dad",
+      "product_name": "openai-agents-python",
+      "builder_name": "seratch",
+      "first_seen": "2026-07-30",
+      "last_seen": "2026-08-20",
+      "occurrence_count": 5,
+      "intelligence_type": "model_capability",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "OpenAI Agents Python SDK 发布 v0.22.0，强化运行时并调整 provider 配置方式。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.0,
+      "summary": "OpenAI Agents Python SDK 发布 v0.22.0，强化运行时并调整 provider 配置方式。",
+      "title": "openai/openai-agents-python released v0.22.0",
+      "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.22.0",
+      "sources": [
+        {
+          "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.19.1",
+          "title": "openai/openai-agents-python released v0.19.1",
+          "source_type": "github",
+          "published_at": "2026-07-29T07:44:24+00:00"
+        },
+        {
+          "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.20.0",
+          "title": "openai/openai-agents-python released v0.20.0",
+          "source_type": "github",
+          "published_at": "2026-08-11T03:12:14+00:00"
+        },
+        {
+          "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.21.0",
+          "title": "openai/openai-agents-python released v0.21.0",
+          "source_type": "github",
+          "published_at": "2026-08-15T02:49:37+00:00"
+        },
+        {
+          "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.21.1",
+          "title": "openai/openai-agents-python released v0.21.1",
+          "source_type": "github",
+          "published_at": "2026-08-16T22:28:55+00:00"
+        },
+        {
+          "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.22.0",
+          "title": "openai/openai-agents-python released v0.22.0",
+          "source_type": "github",
+          "published_at": "2026-08-19T13:44:38+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "openai-agents-python-v0.19.1",
+          "date": "2026-07-30",
+          "title": "openai/openai-agents-python released v0.19.1",
+          "summary": "OpenAI发布agents-python v0.19.1，修复多项问题并支持原生主机路径。",
+          "score": 7.0,
+          "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.19.1"
+        },
+        {
+          "update_id": "openai-agents-python-v0.20.0",
+          "date": "2026-08-12",
+          "title": "openai/openai-agents-python released v0.20.0",
+          "summary": "OpenAI发布agents-python v0.20.0，更新默认模型并增强MCP支持，值得关注。",
+          "score": 8.5,
+          "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.20.0"
+        },
+        {
+          "update_id": "openai-agents-python-v0.21.0",
+          "date": "2026-08-16",
+          "title": "openai/openai-agents-python released v0.21.0",
+          "summary": "OpenAI发布agents-python v0.21.0，新增确定性测试工具并兼容OpenAI Python v3。",
+          "score": 8.0,
+          "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.21.0"
+        },
+        {
+          "update_id": "openai-agents-python-v0.21.1",
+          "date": "2026-08-17",
+          "title": "openai/openai-agents-python released v0.21.1",
+          "summary": "OpenAI Agents Python SDK v0.21.1发布，新增模型调用超时和沙箱工作目录等特性。",
+          "score": 8.0,
+          "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.21.1"
+        },
+        {
+          "update_id": "openai-agents-python-v0.22.0",
+          "date": "2026-08-20",
+          "title": "openai/openai-agents-python released v0.22.0",
+          "summary": "OpenAI Agents Python SDK 发布 v0.22.0，强化运行时并调整 provider 配置方式。",
+          "score": 8.0,
+          "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.22.0"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "OpenAI",
+        "Agent",
+        "SDK",
+        "Python",
+        "MCP",
+        "测试"
+      ]
+    },
+    {
+      "product_id": "product-2037db4cd5e4dd7e",
+      "product_name": "smolvm",
+      "builder_name": "Simon Willison",
+      "first_seen": "2026-08-20",
+      "last_seen": "2026-08-20",
+      "occurrence_count": 1,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Simon Willison 探索用 smolvm 作为沙箱安全运行不可信 Python 和 JavaScript，并测试其资源限制。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.0,
+      "summary": "Simon Willison 探索用 smolvm 作为沙箱安全运行不可信 Python 和 JavaScript，并测试其资源限制。",
+      "title": "smolmachines / smolvm as a sandbox for untrusted Python & JavaScript",
+      "url": "https://simonwillison.net/2026/Aug/19/smolmachines-untrusted-sandbox/",
+      "sources": [
+        {
+          "url": "https://simonwillison.net/2026/Aug/19/smolmachines-untrusted-sandbox/",
+          "title": "smolmachines / smolvm as a sandbox for untrusted Python & JavaScript",
+          "source_type": "rss",
+          "published_at": "2026-08-19T23:16:00+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "smolvm-untrusted-sandbox-research",
+          "date": "2026-08-20",
+          "title": "smolmachines / smolvm as a sandbox for untrusted Python & JavaScript",
+          "summary": "Simon Willison 探索用 smolvm 作为沙箱安全运行不可信 Python 和 JavaScript，并测试其资源限制。",
+          "score": 8.0,
+          "url": "https://simonwillison.net/2026/Aug/19/smolmachines-untrusted-sandbox/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "沙箱",
+        "安全",
+        "Claude"
+      ]
+    },
+    {
+      "product_id": "product-e29e9617cec6d5a2",
+      "product_name": "DFlash 2",
+      "builder_name": "mike-the-brain",
+      "first_seen": "2026-08-20",
+      "last_seen": "2026-08-20",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "verified",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "DFlash 2是一种并行草稿生成技术，能显著提升低内存带宽模型的解码速度，已有vLLM集成。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.0,
+      "summary": "DFlash 2是一种并行草稿生成技术，能显著提升低内存带宽模型的解码速度，已有vLLM集成。",
+      "title": "DFlash 2: Keep Drafting Parallel",
+      "url": "https://inco.ai/blog/dflash2/",
+      "sources": [
+        {
+          "url": "https://inco.ai/blog/dflash2/",
+          "title": "DFlash 2: Keep Drafting Parallel",
+          "source_type": "hackernews",
+          "published_at": "2026-08-19T20:28:43+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "dflash2-parallel-drafting",
+          "date": "2026-08-20",
+          "title": "DFlash 2: Keep Drafting Parallel",
+          "summary": "DFlash 2是一种并行草稿生成技术，能显著提升低内存带宽模型的解码速度，已有vLLM集成。",
+          "score": 8.0,
+          "url": "https://inco.ai/blog/dflash2/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "推理加速",
+        "vLLM",
+        "并行解码"
+      ]
+    },
+    {
+      "product_id": "product-d69a061b3a9c3a4d",
+      "product_name": "OpenAI API",
+      "builder_name": "OpenAI News",
+      "first_seen": "2026-08-20",
+      "last_seen": "2026-08-20",
+      "occurrence_count": 1,
+      "intelligence_type": "business_policy",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "OpenAI为API客户提供零数据保留，并预览私有安全处理，增强企业数据隐私。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.0,
+      "summary": "OpenAI为API客户提供零数据保留，并预览私有安全处理，增强企业数据隐私。",
+      "title": "Offering Zero Data Retention for frontier models",
+      "url": "https://openai.com/index/offering-zero-data-retention-for-frontier-models",
+      "sources": [
+        {
+          "url": "https://openai.com/index/offering-zero-data-retention-for-frontier-models",
+          "title": "Offering Zero Data Retention for frontier models",
+          "source_type": "rss",
+          "published_at": "2026-08-19T19:00:00+00:00"
+        },
+        {
+          "url": "https://techcrunch.com/2026/08/19/openai-seeks-to-one-up-anthropic-with-new-customer-privacy-protections/",
+          "title": "OpenAI seeks to one-up Anthropic with new customer privacy protections",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "openai-zero-data-retention-2026-08",
+          "date": "2026-08-20",
+          "title": "Offering Zero Data Retention for frontier models",
+          "summary": "OpenAI为API客户提供零数据保留，并预览私有安全处理，增强企业数据隐私。",
+          "score": 8.0,
+          "url": "https://openai.com/index/offering-zero-data-retention-for-frontier-models"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "OpenAI",
+        "隐私",
+        "企业"
+      ]
+    },
+    {
+      "product_id": "product-7f7811de59626bc9",
+      "product_name": "Claude Code",
+      "builder_name": "ashwin-ant",
+      "first_seen": "2026-07-26",
+      "last_seen": "2026-08-20",
+      "occurrence_count": 8,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "习惯用终端的开发者、需要批量处理代码任务的工程师、多会话并行工作的团队",
+      "user_problem": "每次新开 Claude Code 会话都要手动选模型；多个终端同时跑不同任务时，想等另一个会话闲下来再通知自己，只能靠人工盯着或反复切换窗口",
+      "what_it_is": "Anthropic发布Claude Code v2.1.237，新增简洁输出风格并修复提示缓存问题，提升编码效率。",
+      "ai_role": "Claude 作为编码 Agent（能自主执行多步骤任务的 AI 助手），在后台持续运行代码分析、文件修改和命令执行，并在空闲时触发通知机制",
+      "implementation_idea": "核心是两个状态管理：一是用环境变量做'全局默认值'，同时用本地配置文件存'/model 的个性化选择'，两者分层不冲突；二是跨会话通信走本地进程间消息通道，接收方注册一个'下次空闲时回调'，避免轮询浪费资源",
+      "hands_on_exercise": "30 分钟验证：打开两个终端窗口都运行 Claude Code，终端 1 设置 `export ANTHROPIC_DEFAULT_MODEL=claude-sonnet-4-20250514` 后启动新会话确认模型；终端 2 跑一个慢任务如 `sleep 60`，终端 1 用 `/send` 或相关命令请求'该会话空闲时通知我'，观察 60 秒后是否收到系统通知（macOS/Linux）",
+      "limitations_or_uncertainties": "跨会话通知 `notify_when_idle` 的具体触发命令格式未在 release note 中给出完整示例；Windows 不支持该通知功能；VS Code 扩展的屏幕阅读器支持为新增功能，实际兼容性未公开测试范围",
+      "region": "global",
+      "score": 7.5,
+      "summary": "Anthropic发布Claude Code v2.1.237，新增简洁输出风格并修复提示缓存问题，提升编码效率。",
+      "title": "anthropics/claude-code released v2.1.237",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.237",
+      "sources": [
+        {
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.219",
+          "title": "anthropics/claude-code released v2.1.219",
+          "source_type": "github",
+          "published_at": "2026-07-24T17:14:23+00:00"
+        },
+        {
+          "url": "https://claude.com/product/claude-code",
+          "title": "Claude Code by Anthropic | AI Coding Agent, Terminal, IDE",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.221",
+          "title": "anthropics/claude-code released v2.1.221",
+          "source_type": "github",
+          "published_at": "2026-08-04T00:14:23+00:00"
+        },
+        {
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.229",
+          "title": "anthropics/claude-code released v2.1.229",
+          "source_type": "github",
+          "published_at": "2026-08-12T20:56:22+00:00"
+        },
+        {
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.232",
+          "title": "anthropics/claude-code released v2.1.232",
+          "source_type": "github",
+          "published_at": "2026-08-13T23:29:59+00:00"
+        },
+        {
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.233",
+          "title": "anthropics/claude-code released v2.1.233",
+          "source_type": "github",
+          "published_at": "2026-08-14T22:20:57+00:00"
+        },
+        {
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.234",
+          "title": "anthropics/claude-code released v2.1.234",
+          "source_type": "github",
+          "published_at": "2026-08-17T20:20:58+00:00"
+        },
+        {
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.236",
+          "title": "anthropics/claude-code released v2.1.236",
+          "source_type": "github",
+          "published_at": "2026-08-19T20:02:05+00:00"
+        },
+        {
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.237",
+          "title": "anthropics/claude-code released v2.1.237",
+          "source_type": "github",
+          "published_at": "2026-08-20T00:54:41+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "claude-code-v2.1.219",
+          "date": "2026-07-26",
+          "title": "Claude Code v2.1.219：新增 Opus 5 模型支持与网络沙箱白名单",
+          "summary": "Claude Code v2.1.219新增Opus 5模型支持、网络沙箱白名单等多项功能。",
+          "score": 8.0,
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.219"
+        },
+        {
+          "update_id": "claude-code-v2.1.221-release",
+          "date": "2026-08-04",
+          "title": "Claude Code v2.1.221：新增专注视图、沙箱凭据保护和提示审计功能",
+          "summary": "Anthropic 发布 Claude Code v2.1.221，新增 Focus view 和 sandbox 凭据保护等功能，提升开发体验和安全性。",
+          "score": 8.5,
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.221"
+        },
+        {
+          "update_id": "claude-code-v2.1.229-release",
+          "date": "2026-08-13",
+          "title": "anthropics/claude-code released v2.1.229",
+          "summary": "Claude Code 发布 v2.1.229，新增远程控制恢复、插件市场命令源等多项功能。",
+          "score": 8.0,
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.229"
+        },
+        {
+          "update_id": "claude-code-release-v2.1.232",
+          "date": "2026-08-14",
+          "title": "Claude Code v2.1.232：子代理分叉默认启用，新增跨会话消息与 GitLab 安全增强",
+          "summary": "Claude Code 更新至 v2.1.232，默认启用子代理分叉并支持跨会话消息，增强 Agent 协作和安全性。",
+          "score": 8.0,
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.232"
+        },
+        {
+          "update_id": "claude-code-v2.1.233",
+          "date": "2026-08-15",
+          "title": "anthropics/claude-code released v2.1.233",
+          "summary": "Claude Code v2.1.233发布，新增GitLab MR支持、用户身份转发和内存限制等多项功能。",
+          "score": 7.5,
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.233"
+        },
+        {
+          "update_id": "claude-code-v2.1.234",
+          "date": "2026-08-18",
+          "title": "anthropics/claude-code released v2.1.234",
+          "summary": "Claude Code v2.1.234新增环境变量、GitLab MR徽章、自动续会话等功能，并修复安全漏洞。",
+          "score": 8.0,
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.234"
+        },
+        {
+          "update_id": "claude-code-v2.1.236",
+          "date": "2026-08-20",
+          "title": "Claude Code v2.1.236：新增默认模型设置与跨会话通知功能",
+          "summary": "Claude Code v2.1.236新增默认模型设置和跨会话空闲通知，优化多会话协作体验。",
+          "score": 8.0,
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.236"
+        },
+        {
+          "update_id": "claude-code-v2.1.237",
+          "date": "2026-08-20",
+          "title": "anthropics/claude-code released v2.1.237",
+          "summary": "Anthropic发布Claude Code v2.1.237，新增简洁输出风格并修复提示缓存问题，提升编码效率。",
+          "score": 7.5,
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.237"
+        }
+      ],
+      "usage_flow": [
+        "在终端安装并启动 claude，用自然语言描述需求（如'给这个项目加登录功能'）",
+        "AI 自动分析代码库，必要时用 /add-dir 添加更多目录到上下文",
+        "AI 提出修改方案，经确认后自动编辑文件、运行命令",
+        "开发者检查 git diff，确认无误后提交代码",
+        "安装 Claude Code CLI，在代码仓库目录下运行 `claude` 启动对话",
+        "用自然语言描述需求（如'给这个函数加单元测试'），AI 自动读文件、改代码、跑命令",
+        "按 `Ctrl+Alt+F` 开启 Focus view，把工具执行细节折叠成可展开摘要，专注看对话",
+        "用 `claude-api prompt-audit` 检查旧提示词是否适合当前模型，确认后提交代码",
+        "在终端运行 `claude` 启动会话，多个会话会自动获得唯一名称",
+        "在提示符里输入 `@会话名` 直接给另一个运行中的 Claude 会话发消息",
+        "调用子代理时自动在后台分叉运行，继承当前对话上下文但互不阻塞",
+        "通过 `/config` 设置跨会话消息的接收策略（接受/暂存/拒绝）和对话过期时间",
+        "设置环境变量 `export ANTHROPIC_DEFAULT_MODEL=claude-sonnet-4-20250514`，以后新会话默认用这个模型",
+        "在会话 A 里执行需要长时间运行的任务，然后发跨会话消息给会话 B：等 B 闲下来时通知我",
+        "会话 B 忙完后自动弹一条通知，会话 A 的用户收到提醒继续下一步",
+        "用 `/model` 临时切换当前会话模型，这个选择会记住，不受默认变量影响"
+      ],
+      "learning_points": [
+        "Context window（上下文窗口）：模型一次能'看'多少字，Opus 5 的 1M 约等于能塞进整本《三体》第一部，让 AI 分析大型代码库不丢线索",
+        "Agent（智能体）：不只是聊天回复，而是能自主决定'我要先读哪个文件、再改哪行、然后跑测试'的 AI 系统",
+        "Function calling（函数调用）：模型不直接生成答案，而是输出结构化指令（如'调用 read_file 工具'），由外部程序执行后再把结果喂回模型",
+        "Agent：不只是问答，而是能自主规划步骤、调用工具完成任务的 AI 系统",
+        "Function Calling（函数调用）：LLM 输出结构化指令让程序去执行具体操作，比如'读这个文件'或'运行这个测试'",
+        "Prompt 审计：不同模型对提示词的敏感度不同，旧提示词可能在新模型上失效，需要系统性检查",
+        "Agent（智能体）：能自主规划、调用工具、完成多步骤任务的 AI 程序，不只是聊天",
+        "Fork（分叉）：从现有进程复制出一个独立进程，子进程继承父进程的状态但之后各跑各的，互不干扰",
+        "Secret redaction（敏感信息脱敏）：自动识别并隐藏令牌、密码等，防止 AI 日志或输出里意外泄露",
+        "Environment variable（环境变量）：程序启动时从系统读取的配置，适合放团队统一的默认值",
+        "Agent：不只是聊天，能持续执行任务、操作文件、调用工具的 AI 系统",
+        "Function Calling：AI 识别需要调用外部功能（如发通知、读文件）并生成结构化请求，而非只输出文字"
+      ],
+      "verticals": [],
+      "tags": [
+        "工具更新",
+        "Claude Code",
+        "Opus 5",
+        "Agent",
+        "开发者工具",
+        "更新",
+        "release",
+        "版本更新",
+        "编码助手",
+        "功能更新"
+      ]
+    },
+    {
+      "product_id": "product-c83f21dafbd503b6",
+      "product_name": "Gemini",
+      "builder_name": "Terrence O’Brien",
+      "first_seen": "2026-08-20",
+      "last_seen": "2026-08-20",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Google 在 Gemini 中推出学生中心，提供研究收集、闪卡和练习测验等功能，方便学习。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.0,
+      "summary": "Google 在 Gemini 中推出学生中心，提供研究收集、闪卡和练习测验等功能，方便学习。",
+      "title": "Google Gemini is getting a dedicated student hub",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/982425/google-gemini-student-hub",
+      "sources": [
+        {
+          "url": "https://www.theverge.com/ai-artificial-intelligence/982425/google-gemini-student-hub",
+          "title": "Google Gemini is getting a dedicated student hub",
+          "source_type": "rss",
+          "published_at": "2026-08-19T19:00:00+00:00"
+        },
+        {
+          "url": "https://techcrunch.com/2026/08/19/google-launches-new-study-tools-for-students-across-search-and-gemini/",
+          "title": "Google packs Search and Gemini with new AI study tools",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "gemini-student-hub-launch",
+          "date": "2026-08-20",
+          "title": "Google Gemini is getting a dedicated student hub",
+          "summary": "Google 在 Gemini 中推出学生中心，提供研究收集、闪卡和练习测验等功能，方便学习。",
+          "score": 7.0,
+          "url": "https://www.theverge.com/ai-artificial-intelligence/982425/google-gemini-student-hub"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "教育",
+        "产品更新"
+      ]
+    },
+    {
+      "product_id": "product-4d45e45710e71236",
+      "product_name": "Meta AI",
+      "builder_name": "Emma Roth",
+      "first_seen": "2026-08-20",
+      "last_seen": "2026-08-20",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Meta 发布 Mac 版 AI 聊天应用，可共享屏幕获取建议并支持跨应用听写。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.0,
+      "summary": "Meta 发布 Mac 版 AI 聊天应用，可共享屏幕获取建议并支持跨应用听写。",
+      "title": "Meta AI is getting a Mac app",
+      "url": "https://www.theverge.com/tech/982270/meta-ai-mac-app",
+      "sources": [
+        {
+          "url": "https://www.theverge.com/tech/982270/meta-ai-mac-app",
+          "title": "Meta AI is getting a Mac app",
+          "source_type": "rss",
+          "published_at": "2026-08-19T17:00:00+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "meta-ai-mac-app-launch",
+          "date": "2026-08-20",
+          "title": "Meta AI is getting a Mac app",
+          "summary": "Meta 发布 Mac 版 AI 聊天应用，可共享屏幕获取建议并支持跨应用听写。",
+          "score": 7.0,
+          "url": "https://www.theverge.com/tech/982270/meta-ai-mac-app"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Meta",
+        "桌面应用"
       ]
     },
     {
@@ -879,158 +1480,6 @@
       ]
     },
     {
-      "product_id": "product-7f7811de59626bc9",
-      "product_name": "Claude Code",
-      "builder_name": "ashwin-ant",
-      "first_seen": "2026-07-26",
-      "last_seen": "2026-08-18",
-      "occurrence_count": 6,
-      "intelligence_type": "model_capability",
-      "evidence_status": "first_party",
-      "target_user": "需要在终端/命令行环境下写代码、改代码、调试的开发者",
-      "user_problem": "以前多个 Claude 会话之间互相隔离，无法直接通信；子代理需要手动配置才能分叉运行；GitLab 令牌等敏感信息缺乏自动脱敏保护",
-      "what_it_is": "Claude Code v2.1.234新增环境变量、GitLab MR徽章、自动续会话等功能，并修复安全漏洞。",
-      "ai_role": "AI 作为执行主体，既能独立处理用户指令，也能作为子代理被主会话调度，还能跨会话接收和响应消息",
-      "implementation_idea": "核心是把单个 Claude 会话变成可分叉的进程——主会话像项目经理，可以派生子代理（fork）去后台干活，子代理带着完整对话记忆开工；同时给每个会话起唯一名字，让会话之间能通过 SendMessage 直接喊话，像企业微信 @同事一样",
-      "hands_on_exercise": "安装 Claude Code 后开两个终端窗口各运行 `claude`，在 A 窗口输入 `@B窗口的名称 帮我看看这个报错` 测试跨会话消息；然后用 `/config` 把 B 的跨会话消息设为 'hold'，观察 A 的消息是否被暂存",
-      "limitations_or_uncertainties": "Fable 5 顾问功能仅限有组织级 Fable 访问权限的用户；Remote Control 部分修复涉及云端会话与本地桥接的复杂场景，普通用户难以验证；语音模式修复仅限 native 构建版本",
-      "region": "global",
-      "score": 8.0,
-      "summary": "Claude Code v2.1.234新增环境变量、GitLab MR徽章、自动续会话等功能，并修复安全漏洞。",
-      "title": "anthropics/claude-code released v2.1.234",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.234",
-      "sources": [
-        {
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.219",
-          "title": "anthropics/claude-code released v2.1.219",
-          "source_type": "github",
-          "published_at": "2026-07-24T17:14:23+00:00"
-        },
-        {
-          "url": "https://claude.com/product/claude-code",
-          "title": "Claude Code by Anthropic | AI Coding Agent, Terminal, IDE",
-          "source_type": "supplemental",
-          "published_at": ""
-        },
-        {
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.221",
-          "title": "anthropics/claude-code released v2.1.221",
-          "source_type": "github",
-          "published_at": "2026-08-04T00:14:23+00:00"
-        },
-        {
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.229",
-          "title": "anthropics/claude-code released v2.1.229",
-          "source_type": "github",
-          "published_at": "2026-08-12T20:56:22+00:00"
-        },
-        {
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.232",
-          "title": "anthropics/claude-code released v2.1.232",
-          "source_type": "github",
-          "published_at": "2026-08-13T23:29:59+00:00"
-        },
-        {
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.233",
-          "title": "anthropics/claude-code released v2.1.233",
-          "source_type": "github",
-          "published_at": "2026-08-14T22:20:57+00:00"
-        },
-        {
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.234",
-          "title": "anthropics/claude-code released v2.1.234",
-          "source_type": "github",
-          "published_at": "2026-08-17T20:20:58+00:00"
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "claude-code-v2.1.219",
-          "date": "2026-07-26",
-          "title": "Claude Code v2.1.219：新增 Opus 5 模型支持与网络沙箱白名单",
-          "summary": "Claude Code v2.1.219新增Opus 5模型支持、网络沙箱白名单等多项功能。",
-          "score": 8.0,
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.219"
-        },
-        {
-          "update_id": "claude-code-v2.1.221-release",
-          "date": "2026-08-04",
-          "title": "Claude Code v2.1.221：新增专注视图、沙箱凭据保护和提示审计功能",
-          "summary": "Anthropic 发布 Claude Code v2.1.221，新增 Focus view 和 sandbox 凭据保护等功能，提升开发体验和安全性。",
-          "score": 8.5,
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.221"
-        },
-        {
-          "update_id": "claude-code-v2.1.229-release",
-          "date": "2026-08-13",
-          "title": "anthropics/claude-code released v2.1.229",
-          "summary": "Claude Code 发布 v2.1.229，新增远程控制恢复、插件市场命令源等多项功能。",
-          "score": 8.0,
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.229"
-        },
-        {
-          "update_id": "claude-code-release-v2.1.232",
-          "date": "2026-08-14",
-          "title": "Claude Code v2.1.232：子代理分叉默认启用，新增跨会话消息与 GitLab 安全增强",
-          "summary": "Claude Code 更新至 v2.1.232，默认启用子代理分叉并支持跨会话消息，增强 Agent 协作和安全性。",
-          "score": 8.0,
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.232"
-        },
-        {
-          "update_id": "claude-code-v2.1.233",
-          "date": "2026-08-15",
-          "title": "anthropics/claude-code released v2.1.233",
-          "summary": "Claude Code v2.1.233发布，新增GitLab MR支持、用户身份转发和内存限制等多项功能。",
-          "score": 7.5,
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.233"
-        },
-        {
-          "update_id": "claude-code-v2.1.234",
-          "date": "2026-08-18",
-          "title": "anthropics/claude-code released v2.1.234",
-          "summary": "Claude Code v2.1.234新增环境变量、GitLab MR徽章、自动续会话等功能，并修复安全漏洞。",
-          "score": 8.0,
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.234"
-        }
-      ],
-      "usage_flow": [
-        "在终端安装并启动 claude，用自然语言描述需求（如'给这个项目加登录功能'）",
-        "AI 自动分析代码库，必要时用 /add-dir 添加更多目录到上下文",
-        "AI 提出修改方案，经确认后自动编辑文件、运行命令",
-        "开发者检查 git diff，确认无误后提交代码",
-        "安装 Claude Code CLI，在代码仓库目录下运行 `claude` 启动对话",
-        "用自然语言描述需求（如'给这个函数加单元测试'），AI 自动读文件、改代码、跑命令",
-        "按 `Ctrl+Alt+F` 开启 Focus view，把工具执行细节折叠成可展开摘要，专注看对话",
-        "用 `claude-api prompt-audit` 检查旧提示词是否适合当前模型，确认后提交代码",
-        "在终端运行 `claude` 启动会话，多个会话会自动获得唯一名称",
-        "在提示符里输入 `@会话名` 直接给另一个运行中的 Claude 会话发消息",
-        "调用子代理时自动在后台分叉运行，继承当前对话上下文但互不阻塞",
-        "通过 `/config` 设置跨会话消息的接收策略（接受/暂存/拒绝）和对话过期时间"
-      ],
-      "learning_points": [
-        "Context window（上下文窗口）：模型一次能'看'多少字，Opus 5 的 1M 约等于能塞进整本《三体》第一部，让 AI 分析大型代码库不丢线索",
-        "Agent（智能体）：不只是聊天回复，而是能自主决定'我要先读哪个文件、再改哪行、然后跑测试'的 AI 系统",
-        "Function calling（函数调用）：模型不直接生成答案，而是输出结构化指令（如'调用 read_file 工具'），由外部程序执行后再把结果喂回模型",
-        "Agent：不只是问答，而是能自主规划步骤、调用工具完成任务的 AI 系统",
-        "Function Calling（函数调用）：LLM 输出结构化指令让程序去执行具体操作，比如'读这个文件'或'运行这个测试'",
-        "Prompt 审计：不同模型对提示词的敏感度不同，旧提示词可能在新模型上失效，需要系统性检查",
-        "Agent（智能体）：能自主规划、调用工具、完成多步骤任务的 AI 程序，不只是聊天",
-        "Fork（分叉）：从现有进程复制出一个独立进程，子进程继承父进程的状态但之后各跑各的，互不干扰",
-        "Secret redaction（敏感信息脱敏）：自动识别并隐藏令牌、密码等，防止 AI 日志或输出里意外泄露"
-      ],
-      "verticals": [],
-      "tags": [
-        "工具更新",
-        "Claude Code",
-        "Opus 5",
-        "Agent",
-        "开发者工具",
-        "更新",
-        "release",
-        "版本更新"
-      ]
-    },
-    {
       "product_id": "product-6b07f1c2139d1ca9",
       "product_name": "Replit",
       "builder_name": "Replit Blog",
@@ -1508,99 +1957,6 @@
         "Claude",
         "系统提示词",
         "模型行为"
-      ]
-    },
-    {
-      "product_id": "product-b37b5909bb539dad",
-      "product_name": "openai-agents-python",
-      "builder_name": "seratch",
-      "first_seen": "2026-07-30",
-      "last_seen": "2026-08-17",
-      "occurrence_count": 4,
-      "intelligence_type": "model_capability",
-      "evidence_status": "first_party",
-      "target_user": "未公开",
-      "user_problem": "未公开",
-      "what_it_is": "OpenAI Agents Python SDK v0.21.1发布，新增模型调用超时和沙箱工作目录等特性。",
-      "ai_role": "未公开",
-      "implementation_idea": "未公开",
-      "hands_on_exercise": "未公开",
-      "limitations_or_uncertainties": "未公开",
-      "region": "global",
-      "score": 8.0,
-      "summary": "OpenAI Agents Python SDK v0.21.1发布，新增模型调用超时和沙箱工作目录等特性。",
-      "title": "openai/openai-agents-python released v0.21.1",
-      "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.21.1",
-      "sources": [
-        {
-          "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.19.1",
-          "title": "openai/openai-agents-python released v0.19.1",
-          "source_type": "github",
-          "published_at": "2026-07-29T07:44:24+00:00"
-        },
-        {
-          "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.20.0",
-          "title": "openai/openai-agents-python released v0.20.0",
-          "source_type": "github",
-          "published_at": "2026-08-11T03:12:14+00:00"
-        },
-        {
-          "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.21.0",
-          "title": "openai/openai-agents-python released v0.21.0",
-          "source_type": "github",
-          "published_at": "2026-08-15T02:49:37+00:00"
-        },
-        {
-          "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.21.1",
-          "title": "openai/openai-agents-python released v0.21.1",
-          "source_type": "github",
-          "published_at": "2026-08-16T22:28:55+00:00"
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "openai-agents-python-v0.19.1",
-          "date": "2026-07-30",
-          "title": "openai/openai-agents-python released v0.19.1",
-          "summary": "OpenAI发布agents-python v0.19.1，修复多项问题并支持原生主机路径。",
-          "score": 7.0,
-          "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.19.1"
-        },
-        {
-          "update_id": "openai-agents-python-v0.20.0",
-          "date": "2026-08-12",
-          "title": "openai/openai-agents-python released v0.20.0",
-          "summary": "OpenAI发布agents-python v0.20.0，更新默认模型并增强MCP支持，值得关注。",
-          "score": 8.5,
-          "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.20.0"
-        },
-        {
-          "update_id": "openai-agents-python-v0.21.0",
-          "date": "2026-08-16",
-          "title": "openai/openai-agents-python released v0.21.0",
-          "summary": "OpenAI发布agents-python v0.21.0，新增确定性测试工具并兼容OpenAI Python v3。",
-          "score": 8.0,
-          "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.21.0"
-        },
-        {
-          "update_id": "openai-agents-python-v0.21.1",
-          "date": "2026-08-17",
-          "title": "openai/openai-agents-python released v0.21.1",
-          "summary": "OpenAI Agents Python SDK v0.21.1发布，新增模型调用超时和沙箱工作目录等特性。",
-          "score": 8.0,
-          "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.21.1"
-        }
-      ],
-      "usage_flow": [],
-      "learning_points": [],
-      "verticals": [],
-      "tags": [
-        "OpenAI",
-        "Agent",
-        "SDK",
-        "Python",
-        "MCP",
-        "测试"
       ]
     },
     {
