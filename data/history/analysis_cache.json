@@ -763,6 +763,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "060be4fba70024829bcaffd35f6761a5907cb5efe6a757202222e63e3a2b6d79": {
+      "created_at": "2026-08-21T01:56:51.831310+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "greg-brockman-openai-role",
+        "evidence_status": "reported",
+        "follow_up": "关注Brockman角色变化对产品方向的影响。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:7e9e84f08e7c5273",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "The Verge报道Greg Brockman在OpenAI角色扩大，属于公司人事动态，对产品影响不直接。",
+        "region": "global",
+        "score": 6.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Greg Brockman在OpenAI的角色扩大，公司经历诉讼和IPO准备。",
+        "tags": [
+          "OpenAI",
+          "人事"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "06ba66e1ffd548ecfca78e7abf969c201edd53220d68141fcf393cca13d935e8": {
       "created_at": "2026-08-05T03:31:52.900028+00:00",
       "model": "deepseek-v4-flash",
@@ -4100,6 +4138,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "215a6c9a3f7da584d8aa3174b5b5298f2cd9dd2b2f015136964770e98b37c628": {
+      "created_at": "2026-08-21T01:57:22.200644+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "huzzah-ai-coding-editor",
+        "evidence_status": "first_party",
+        "follow_up": "关注其是否支持更多语言和实际用户反馈。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:49378768",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Huzzah",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "构建者展示AI编码编辑器Huzzah，采用伪代码同步生成源码的新范式，解决编码代理的复杂性限制，有Demo和安装说明，高价值。",
+        "region": "global",
+        "score": 8.5,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "开发者展示实验性编辑器Huzzah，通过伪代码同步生成源码，解决AI编码代理的复杂性限制，提供新的交互范式。",
+        "tags": [
+          "AI编程",
+          "编辑器",
+          "伪代码"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "2160f5830b536bf0224f7b406571974eb58c4a3b302437758866851bce818d27": {
       "created_at": "2026-08-19T01:52:38.105500+00:00",
       "model": "deepseek-v4-flash",
@@ -4477,6 +4554,45 @@
         "tags": [
           "AI SDK",
           "Vercel"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "231bb8ffbd0e062cc31b1960243fdc28aca3c3b6332400fcfb69181c113cc436": {
+      "created_at": "2026-08-21T01:57:06.408486+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "vercel-ai-6.0.261",
+        "evidence_status": "first_party",
+        "follow_up": "关注后续版本的功能更新",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "github:release:373999438",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Vercel AI SDK",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Vercel AI SDK补丁更新，修复mock问题，对开发者有轻微价值。",
+        "region": "global",
+        "score": 6.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Vercel AI SDK发布6.0.261补丁，修复数组mock返回顺序问题。",
+        "tags": [
+          "Vercel AI",
+          "SDK",
+          "补丁"
         ],
         "target_user": "",
         "verticals": []
@@ -5096,6 +5212,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "28959f43f9c980ffab25e92d1092c79bb16c840b88ac6ac24641e3e012aa3665": {
+      "created_at": "2026-08-21T01:57:22.200150+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "github-aug17-outage",
+        "evidence_status": "first_party",
+        "follow_up": "关注GitHub如何改进基础设施，以及是否影响Copilot用户。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:49378957",
+        "intelligence_type": "market_signal",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "GitHub Copilot",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "GitHub 官方博客分析8月17日故障，涉及Copilot Token Service，但主要是基础设施和运维，对AI产品构建者参考价值有限。",
+        "region": "global",
+        "score": 5.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "GitHub 发布8月17日故障分析，指出VS Code重试bug导致流量放大，影响Copilot服务恢复。",
+        "tags": [
+          "GitHub",
+          "故障",
+          "Copilot"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "28c2c9a554957284b0cffab68c2859882e866babb440d8b13ca0fd3748f09023": {
       "created_at": "2026-08-08T02:21:40.317260+00:00",
       "model": "deepseek-v4-flash",
@@ -5581,6 +5736,45 @@
         "summary": null,
         "summary_zh": "OpenAI Codex 发布 rust-v0.146.0-alpha.14 预发布版本，无详细说明。",
         "tags": [],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "2ec68efed403a139894f6fc8b9edc42575b284568b3aaf4a123da243c61e658a": {
+      "created_at": "2026-08-21T01:57:22.200774+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "midi-autocomplete-piano",
+        "evidence_status": "first_party",
+        "follow_up": "关注模型训练细节和用户反馈，以及是否扩展到其他乐器。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:49373456",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "MIDI Autocomplete",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "构建者训练125M模型实现钢琴MIDI自动补全，实时运行于iPhone，有Demo和免费应用，展示AI在音乐创作的具体应用，高价值。",
+        "region": "global",
+        "score": 9.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "开发者训练125M模型实现钢琴MIDI自动补全，在iPhone上实时运行，免费应用，展示AI辅助音乐创作的新可能。",
+        "tags": [
+          "音乐",
+          "MIDI",
+          "端侧模型"
+        ],
         "target_user": "",
         "verticals": []
       },
@@ -6151,6 +6345,44 @@
           "Vercel",
           "SDK",
           "更新"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "334c861059040a3b25593bb6518979bea90935e00e6c83a906ec9d48b19dfd20": {
+      "created_at": "2026-08-21T01:56:51.831093+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "liquidai-lfm25-dspark-inference-optimization",
+        "evidence_status": "reported",
+        "follow_up": "查看完整博客获取技术细节和基准测试。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:huggingface.co_blog_feed.xml:eab5285cfdebeb65",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "LFM2.5-DSpark",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Hugging Face博客发布，标题提到推理加速，但正文为空，缺乏具体技术细节和产品验证，价值有限。",
+        "region": "global",
+        "score": 6.0,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "LiquidAI发布LFM2.5-DSpark，声称推理速度提升3.2倍，但缺乏详细说明。",
+        "tags": [
+          "推理优化",
+          "LiquidAI"
         ],
         "target_user": "",
         "verticals": []
@@ -6941,6 +7173,45 @@
         "tags": [
           "AI助手",
           "汽车"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "3c162c8eeabec188920db8f3301a1a9f1518663259f53b8aceaaacdea5645b9d": {
+      "created_at": "2026-08-21T01:57:22.200226+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openrouter-stealth-model",
+        "evidence_status": "reported",
+        "follow_up": "关注该模型是否被识别，以及OpenRouter的审核机制。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:49381896",
+        "intelligence_type": "early_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Stealth Model",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenRouter上的匿名模型，来源不明，评论质疑其安全性和数据保留，缺乏可靠信息，噪音较大。",
+        "region": "global",
+        "score": 4.0,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "OpenRouter出现匿名模型'Stealth Model'，来源不明，引发关于数据安全和模型透明度的担忧。",
+        "tags": [
+          "OpenRouter",
+          "匿名模型",
+          "安全"
         ],
         "target_user": "",
         "verticals": []
@@ -9501,6 +9772,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "503b373c77177f9480b6ff5cb3bac355780a8fcc8e6ac4810bfb2c2547d59c63": {
+      "created_at": "2026-08-21T01:57:06.408196+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-codex-rust-v0.149.0-alpha.7",
+        "evidence_status": "early_signal",
+        "follow_up": "关注后续正式版本的功能变化",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "github:release:373945854",
+        "intelligence_type": "early_signal",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "OpenAI Codex",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "预发布版本，无具体内容，信息量低。",
+        "region": "global",
+        "score": 5.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "OpenAI Codex发布rust-v0.149.0-alpha.7预发布版本，无详细说明。",
+        "tags": [
+          "Codex",
+          "预发布"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "50a76f8c5f8bf72567d9fa87690c4e4efc63a1c2d4efc57c870c3565a14cddd9": {
       "created_at": "2026-08-16T01:57:21.976567+00:00",
       "model": "deepseek-v4-flash",
@@ -9723,6 +10032,45 @@
         "tags": [
           "本地部署",
           "Agent"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "51d84323a78511801719dbf9d6a67bd757c13b8f2dfc6faacdc8332cd2b3a809": {
+      "created_at": "2026-08-21T01:57:06.407011+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "chatgpt-search-site-operator-scale",
+        "evidence_status": "reported",
+        "follow_up": "观察site:操作符对搜索结果和流量分配的实际影响",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:simonwillison.net_atom_everything_:c8cbe369112d07d9",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "ChatGPT Search",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Simon Willison分析ChatGPT搜索大规模使用site:操作符，对SEO/GEO有重要影响，数据来自第三方监测，可信度较高。",
+        "region": "global",
+        "score": 8.0,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "ChatGPT搜索开始大规模使用site:操作符，影响生成式引擎优化（GEO）策略。",
+        "tags": [
+          "ChatGPT",
+          "搜索",
+          "GEO"
         ],
         "target_user": "",
         "verticals": []
@@ -10829,6 +11177,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "5b19e91e6ee37b98af6af6896eac30a9351065422be144ea9830bc60088f924d": {
+      "created_at": "2026-08-21T01:57:22.200069+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "eu-copyright-ai-content",
+        "evidence_status": "reported",
+        "follow_up": "关注具体法律条文和案例，评估对AI生成内容产品的影响。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:49382041",
+        "intelligence_type": "business_policy",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "讨论欧盟版权法不保护AI生成内容，涉及法律政策，对AI产品有潜在影响，但缺乏具体产品案例，且为二手讨论。",
+        "region": "global",
+        "score": 6.5,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "欧盟法律不保护AI生成内容的版权，引发关于人类创造性贡献的讨论，可能影响AI产品的内容策略。",
+        "tags": [
+          "版权",
+          "欧盟",
+          "政策"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "5b22f95681e7a5f25f1908f59b238698c672c6da610211807774fb2096d3ddfb": {
       "created_at": "2026-07-29T01:53:26.757478+00:00",
       "model": "deepseek-v4-flash",
@@ -11362,6 +11749,44 @@
       },
       "stage": "deep_analysis"
     },
+    "5e35c01fae95846eecb8bb00899a3b86ecf04bbfa5050c1b06c8bc77f0b5e6e8": {
+      "created_at": "2026-08-21T01:56:51.831050+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-ai-futures-blog-launch",
+        "evidence_status": "first_party",
+        "follow_up": "关注后续是否有具体政策或产品落地。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:openai.com_news_rss.xml:fc1a9abd82b35a9c",
+        "intelligence_type": "early_signal",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": true,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI官方博客发布，但内容为泛主题探讨，无具体产品、技术或可验证细节，属于预告性宣传，价值有限。",
+        "region": "global",
+        "score": 5.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "OpenAI推出新博客AI Futures，探讨AI对权力、治理、经济和自由的影响，但无具体产品信息。",
+        "tags": [
+          "OpenAI",
+          "博客"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "5e4d98be5cd2c556305d7326f1939e65e8afac4979ccb586f5ea5253eab256e3": {
       "created_at": "2026-08-12T02:43:58.737814+00:00",
       "model": "deepseek-v4-flash",
@@ -11669,6 +12094,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "613092caf47da27334b4ebae953c79b23690aead8801c013f00b02b37c885ebd": {
+      "created_at": "2026-08-21T01:57:06.407042+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "zai-glm5-posttraining-scaling",
+        "evidence_status": "early_signal",
+        "follow_up": "关注GLM 5.3的正式发布和技术细节",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:www.latent.space_feed:e8c330662717fd1a",
+        "intelligence_type": "model_capability",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "GLM",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Z.ai CEO谈GLM 5.3和新的后训练扩展定律，属于模型公司核心人员的一手动态，但内容摘要过简，缺乏具体细节。",
+        "region": "china",
+        "score": 7.0,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "Z.ai CEO讨论GLM 5.3及后训练扩展定律，暗示模型能力新方向。",
+        "tags": [
+          "GLM",
+          "后训练",
+          "扩展定律"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "6162f44e8562b07b9709450952b751c4a30f9bb660da725bc9f31327cb2f4b14": {
       "created_at": "2026-07-28T03:48:46.850797+00:00",
       "model": "deepseek-v4-flash",
@@ -11747,6 +12211,39 @@
         "verticals": []
       },
       "stage": "candidate_analysis"
+    },
+    "6212e45b3300b96f14e3fce6bec494618616dec87648e7b05f8e722ef79c2ae8": {
+      "created_at": "2026-08-21T01:57:42.589811+00:00",
+      "model": "deepseek-v4-pro",
+      "prompt_version": "deep-v3-beginner",
+      "result": {
+        "ai_role": "根据用户弹奏的前几个音符，预测并生成接下来的音符序列，类似代码自动补全。",
+        "evidence_status": "first_party",
+        "hands_on_exercise": "访问 Hugging Face Space（https://huggingface.co/spaces/caslabs/midi-autocompletion），在网页上弹几个虚拟钢琴键，观察模型如何续写旋律。记录不同输入长度对生成结果的影响。",
+        "implementation_idea": "训练一个 125M 参数的 Transformer 模型，输入是 MIDI 音符序列，输出是后续音符。模型被转换成 Core ML 格式，在 iPhone 上本地运行，无需联网。",
+        "learning_points": [
+          "Transformer：一种擅长处理序列数据的神经网络结构，是当前大语言模型的基础。",
+          "MIDI：一种音乐数字接口格式，记录音符、力度、时长等信息，适合作为模型输入。",
+          "端侧推理：模型直接在手机等设备上运行，不需要把数据发到云端，延迟低且保护隐私。"
+        ],
+        "limitations_or_uncertainties": "训练数据规模和来源未公开；模型只支持钢琴 MIDI，不支持其他乐器或音频输入；生成质量可能受限于训练数据风格。",
+        "product_name": "未公开（免费应用，未给出名称）",
+        "sources": [
+          "https://simedw.com/2026/08/20/midi-autocomplete/",
+          "https://huggingface.co/spaces/caslabs/midi-autocompletion"
+        ],
+        "target_users": "钢琴学习者、音乐创作者、对 AI 音乐生成感兴趣的开发者",
+        "title_zh": "我训练了一个 125M 模型在设备端自动补全钢琴演奏",
+        "usage_flow": [
+          "在 iPhone 上打开免费应用",
+          "用 MIDI 键盘弹几个音符",
+          "模型实时生成后续音符（约 108 音符/秒）",
+          "继续弹奏或接受生成的旋律"
+        ],
+        "user_problem": "弹钢琴时缺乏灵感，或者想快速探索旋律走向，但现有工具要么需要联网，要么延迟高、不自然。",
+        "what_it_is": "一个在 iPhone 上实时运行的钢琴 MIDI 自动补全模型，你弹几个音符，它接着往下编。"
+      },
+      "stage": "deep_analysis_fallback"
     },
     "628547bd41e5f59a0f97ac4be77054314f74267844d288b5a3c6d32233ba687e": {
       "created_at": "2026-08-08T02:21:40.316474+00:00",
@@ -12249,6 +12746,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "659842f80bc9b107c2a66674ee1fff7b7af0ca86337a5ecedb14921b74971d6f": {
+      "created_at": "2026-08-21T01:56:51.831351+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "ai-crisis-math-podcast",
+        "evidence_status": "reported",
+        "follow_up": "关注AI在数学研究中的实际应用。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:0849aff9aaebbd9e",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "The Verge播客讨论AI对数学领域的影响，属于泛行业评论，无具体产品增量。",
+        "region": "global",
+        "score": 5.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "播客讨论AI对数学领域的冲击，OpenAI发布数学问题解决方案引发争议。",
+        "tags": [
+          "AI",
+          "数学"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "65fdd34dbb28650c9b4f13999fcb18175c3e5fbb1c16351c2dc7695a3d3ff25d": {
       "created_at": "2026-08-01T03:49:24.198033+00:00",
       "model": "deepseek-v4-flash",
@@ -12281,6 +12816,45 @@
         "tags": [
           "AI安全",
           "行业评论"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "66724aba2c4cec9b04544632bc9d2c7d69fc310063a0a59bf2d17aa34968b9ac": {
+      "created_at": "2026-08-21T01:57:22.201103+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "praxos-team-messaging",
+        "evidence_status": "first_party",
+        "follow_up": "关注其实际使用效果和用户反馈，以及如何与现有工具集成。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:49380160",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Praxos",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "团队消息应用Praxos内置记忆，解决AI工作流中上下文分散问题，有产品页面和初步展示，但评论少，处于早期。",
+        "region": "global",
+        "score": 7.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "团队消息应用Praxos内置记忆，整合分散在多个工具中的上下文，解决AI时代团队协作的信息断裂问题。",
+        "tags": [
+          "团队协作",
+          "记忆",
+          "上下文"
         ],
         "target_user": "",
         "verticals": []
@@ -12821,6 +13395,45 @@
           "AI Agent",
           "代码",
           "Meta"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "6a585ccebb0e98ca93b057bf655263e851d06fdc64297663b8a512f67c401d00": {
+      "created_at": "2026-08-21T01:57:22.199890+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "langchain-anthropic-1.6.1-release",
+        "evidence_status": "first_party",
+        "follow_up": "观察是否有更重要的功能更新或新模型支持。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "github:release:373782994",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "langchain-anthropic",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "LangChain Anthropic 集成库的补丁版本，修复工具调用过滤问题，对初学者无直接产品启发，增量小。",
+        "region": "global",
+        "score": 5.5,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "LangChain 发布 anthropic 集成库 1.6.1，修复无效工具调用过滤问题，属于底层维护更新。",
+        "tags": [
+          "LangChain",
+          "Anthropic",
+          "工具调用"
         ],
         "target_user": "",
         "verticals": []
@@ -14143,6 +14756,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "73c6ee86096eadc553f9bc25a72d6f25eec90f9f05bef4bb68954972d97e4460": {
+      "created_at": "2026-08-21T01:56:51.831270+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "google-discover-ai-customization",
+        "evidence_status": "reported",
+        "follow_up": "关注功能上线后的用户体验和隐私问题。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:e8f7eaba3a8f4fa8",
+        "intelligence_type": "product_case",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Google Discover",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Google Discover将推出AI聊天机器人调优的个性化信息流，是具体产品功能更新，有明确用户价值。",
+        "region": "global",
+        "score": 7.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Google Discover将允许用户通过描述偏好，用AI自动定制信息流并记住偏好。",
+        "tags": [
+          "Google",
+          "AI",
+          "个性化"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "73cad1eb1b4e846358f73bb4468f831165b2f91a60b0dcd6f701d9aca12a44dc": {
       "created_at": "2026-08-18T01:50:29.176264+00:00",
       "model": "deepseek-v4-flash",
@@ -14521,6 +15173,45 @@
         "tags": [
           "Codex",
           "版本更新"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "75d374f41dddd06606b2a8a4cbfc583f88a0dcf2c9f0b25f05cfc6e11120adcb": {
+      "created_at": "2026-08-21T01:56:51.831238+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "google-publisher-preferred-source",
+        "evidence_status": "reported",
+        "follow_up": "观察该功能对出版商流量的实际影响。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:ac0d6f29f2c4bc48",
+        "intelligence_type": "product_case",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Google Search",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Google为出版商提供新按钮，让读者将其设为优先来源，以应对AI搜索流量损失，是具体产品功能，对内容生态有影响。",
+        "region": "global",
+        "score": 7.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Google推出新按钮，允许读者将出版商设为优先来源，以缓解AI搜索带来的流量下降。",
+        "tags": [
+          "Google",
+          "出版商",
+          "AI搜索"
         ],
         "target_user": "",
         "verticals": []
@@ -16505,6 +17196,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "85dfd0b8679bb0c4ed56a616deef13b0a3cd15a7bbb294017db824ca875f119c": {
+      "created_at": "2026-08-21T01:57:22.200945+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "vomit-clean-claude-output",
+        "evidence_status": "first_party",
+        "follow_up": "关注其是否被广泛采用，以及是否有更通用的解决方案。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:49375996",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Vomit",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "开源工具Vomit用另一个LLM清理Claude 5的输出，解决token输出格式问题，有代码和讨论，展示一种实用工作流，有可迁移增量。",
+        "region": "global",
+        "score": 7.5,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "开源工具Vomit利用另一个LLM清理Claude 5的token输出，解决格式问题，展示LLM协作的新思路。",
+        "tags": [
+          "LLM",
+          "Claude",
+          "工具"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "864bac8c0bbe99e24f3d03314dc5e8bc10e2b3826ee571ef1f365484316f2675": {
       "created_at": "2026-08-18T01:50:11.648633+00:00",
       "model": "deepseek-v4-flash",
@@ -16653,6 +17383,44 @@
         "tags": [
           "OpenAI",
           "战略"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "87f401bc625c6c0743c11ea7665249566007e0d3cf6f5fc7aed5d0dcaa02bdff": {
+      "created_at": "2026-08-21T01:56:51.831125+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "minimax-design-agent-team",
+        "evidence_status": "early_signal",
+        "follow_up": "关注产品页面获取详细功能和用户评价。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:www.producthunt.com_feed:338c28380c9d2c36",
+        "intelligence_type": "early_signal",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": true,
+        "market_signal": "",
+        "product_name": "MiniMax Design",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Product Hunt上发布，描述为'你的自主代理团队'，但缺乏具体功能、用户反馈或构建细节，属于产品发布预告。",
+        "region": "global",
+        "score": 7.0,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "MiniMax Design推出自主代理团队产品，用于开放式创作，但细节有限。",
+        "tags": [
+          "Agent",
+          "创作"
         ],
         "target_user": "",
         "verticals": []
@@ -18188,6 +18956,44 @@
         "tags": [
           "AI电影",
           "创意"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "9331c11c975ba12d8b6803151ae9626af4e5872cd847e45579ee84b4d094c37f": {
+      "created_at": "2026-08-21T01:57:06.408176+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-codex-rust-v0.150.0-alpha.1",
+        "evidence_status": "early_signal",
+        "follow_up": "关注后续正式版本的功能变化",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "github:release:374056840",
+        "intelligence_type": "early_signal",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "OpenAI Codex",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "预发布版本，无具体内容，信息量低。",
+        "region": "global",
+        "score": 5.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "OpenAI Codex发布rust-v0.150.0-alpha.1预发布版本，无详细说明。",
+        "tags": [
+          "Codex",
+          "预发布"
         ],
         "target_user": "",
         "verticals": []
@@ -20482,6 +21288,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "a241ac13555b0f9c00b2cb23ce0d795c7e352adef56651fc7d510f9976704c69": {
+      "created_at": "2026-08-21T01:57:24.801438+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "deepseek-v4-pro-test",
+        "evidence_status": "reported",
+        "follow_up": "核实DeepSeek V4 Pro是否真实存在，若有官方发布再关注。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "google_news:article:c46d735ca872ddf5",
+        "intelligence_type": "early_signal",
+        "is_first_party": false,
+        "is_new_event": false,
+        "is_promotional": true,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "标题党，内容仅为转载摘要，无实际产品细节、无用户反馈、无构建过程，且提及的模型名称（DeepSeek V4 Pro、Fable 5）无法核实，疑似虚构或混淆，属于低质量噪音。",
+        "region": "china",
+        "score": 2.0,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "爱范儿转载一篇标题夸大的DeepSeek V4 Pro测试文章，但无实质内容，不值得关注。",
+        "tags": [
+          "DeepSeek",
+          "模型评测"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "a253ce266389c2d1c0b41c92c459f105be9d041b92514f3e75791b2d4e0fe878": {
       "created_at": "2026-08-16T01:57:37.338165+00:00",
       "model": "deepseek-v4-flash",
@@ -21104,6 +21948,46 @@
       },
       "stage": "candidate_analysis"
     },
+    "a5f57b4f3dee480b3cd009162339658c6e5cd2fad665e001184f2194407210e2": {
+      "created_at": "2026-08-21T01:57:06.407487+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "v0-snowflake-auth-proxy",
+        "evidence_status": "first_party",
+        "follow_up": "关注该代理方案在其他集成中的复用和效果",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:vercel.com_changelog_rss:b47abbd1bd954433",
+        "intelligence_type": "builder_insight",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "v0",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Vercel官方博客详细说明v0如何通过代理解决AI生成代码的OAuth令牌安全问题，是重要的安全架构实践，对构建AI应用有直接参考价值。",
+        "region": "global",
+        "score": 8.5,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Vercel通过请求代理解决v0生成代码访问Snowflake时的OAuth令牌安全问题，避免凭证泄露。",
+        "tags": [
+          "安全",
+          "v0",
+          "Snowflake",
+          "代理"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "a6214488ab3b043bd6324133ad0ec4513d905015129c4c20dfbe6c1774654e12": {
       "created_at": "2026-07-31T03:49:17.802352+00:00",
       "model": "deepseek-v4-flash",
@@ -21252,6 +22136,45 @@
         "tags": [
           "地理空间",
           "推理"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "a7bf5119cb456bf5e38e3f5bee52e083d55bf47a094d96ac9a79317b361df7b9": {
+      "created_at": "2026-08-21T01:57:06.408460+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "claude-code-v2.1.238",
+        "evidence_status": "first_party",
+        "follow_up": "关注新功能的实际使用体验和稳定性",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "github:release:373927029",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Claude Code",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Claude Code发布新版本，新增keybindingFlavor、插件市场headersHelper等多项功能，官方发布，对开发者有实际价值。",
+        "region": "global",
+        "score": 8.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Claude Code发布v2.1.238，新增readline键位风格、插件市场headersHelper等多项改进。",
+        "tags": [
+          "Claude Code",
+          "CLI",
+          "插件"
         ],
         "target_user": "",
         "verticals": []
@@ -21599,6 +22522,45 @@
           "ChatGPT",
           "Linux",
           "桌面应用"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "aad3c786e9a8489303dd831dacd765846497446059bc04392ab6fae2900472cd": {
+      "created_at": "2026-08-21T01:57:06.406784+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "slack-code-launch",
+        "evidence_status": "reported",
+        "follow_up": "关注Slack Code的具体功能细节和用户反馈",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:b4cce22362d17a5f",
+        "intelligence_type": "product_case",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Slack Code",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Slack推出协作式vibe-coding频道，是面向团队AI协作的新产品功能，有明确使用场景，但细节有限，属于产品发布报道。",
+        "region": "global",
+        "score": 7.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Slack推出Slack Code，提供团队协作的vibe-coding频道，让AI代理在统一空间中共同编码。",
+        "tags": [
+          "协作",
+          "vibe-coding",
+          "AI代理"
         ],
         "target_user": "",
         "verticals": []
@@ -22413,6 +23375,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "b0ca89a51de10f3de897c0d4fef4e9914eb642f8d46233411539e3df5dfdb067": {
+      "created_at": "2026-08-21T01:56:51.831210+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "chatgpt-apple-messages-plugin",
+        "evidence_status": "reported",
+        "follow_up": "测试插件实际效果和用户接受度。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:320e8e1a406c135f",
+        "intelligence_type": "product_case",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "ChatGPT",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "ChatGPT新增Apple Messages插件，可代发短信，是具体产品功能更新，有明确使用场景，值得关注。",
+        "region": "global",
+        "score": 8.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "ChatGPT推出Apple Messages插件，可自动代发短信，提升日常便利性。",
+        "tags": [
+          "ChatGPT",
+          "插件",
+          "Apple"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "b10be245238ef7b8eab360fa57d295fc40cfffc4959bb8aa473fd2556d7405ec": {
       "created_at": "2026-08-11T02:27:24.065877+00:00",
       "model": "deepseek-v4-flash",
@@ -22636,6 +23637,43 @@
         "tags": [
           "可观测性",
           "Agent"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "b38e9f0422a03057a9b6b683c0f42cedf3cc5b10eb52c34283bc4580f5d239c2": {
+      "created_at": "2026-08-21T01:57:22.200861+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "smart-people-happier",
+        "evidence_status": "reported",
+        "follow_up": "无",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:49378446",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": false,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "2022年的心理学文章，与AI无关，低相关性。",
+        "region": "global",
+        "score": 1.0,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "一篇2022年的文章，探讨聪明人为何不更快乐，与AI无关。",
+        "tags": [
+          "心理学"
         ],
         "target_user": "",
         "verticals": []
@@ -25656,6 +26694,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "cf8b7fcee8edfd664ea4085d71aa5989330cb18149b44b754e4f9909c667fa7d": {
+      "created_at": "2026-08-21T01:56:51.831152+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "micro1-500m-run-rate",
+        "evidence_status": "reported",
+        "follow_up": "关注其商业模式和客户案例。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:1e34ad401279aa48",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Micro1",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "TechCrunch报道AI数据初创公司Micro1达到5亿美元毛收入运行率，属于市场信号，但缺乏产品细节和用户反馈。",
+        "region": "global",
+        "score": 6.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "AI数据初创公司Micro1因训练数据需求激增，达到5亿美元毛收入运行率。",
+        "tags": [
+          "AI数据",
+          "创业公司"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "cff51d50ae00930a699d2a02757e87096fd270afe4b885783c860ca60d101c1c": {
       "created_at": "2026-08-14T02:46:00.691843+00:00",
       "model": "deepseek-v4-flash",
@@ -27064,6 +28140,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "de36295f9f662045a4a75a6fb231150612a5088deae5f232730594e472b09b60": {
+      "created_at": "2026-08-21T01:56:51.831182+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-anthropic-business-users",
+        "evidence_status": "reported",
+        "follow_up": "关注后续市场份额变化。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:d05a3edd7c0fa4c1",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "TechCrunch报道OpenAI在企业用户上追赶Anthropic，属于市场动态，但无具体产品增量。",
+        "region": "global",
+        "score": 6.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "数据显示OpenAI在企业用户方面正追赶Anthropic，企业AI支出粘性存疑。",
+        "tags": [
+          "OpenAI",
+          "Anthropic",
+          "企业市场"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "dedbe03c778fd54e8332a6a17a017bdf2cf1b6fb6d8bad21133b2bd71e1eaab2": {
       "created_at": "2026-07-28T03:48:46.846696+00:00",
       "model": "deepseek-v4-flash",
@@ -27936,6 +29051,45 @@
         "tags": [
           "AI Moderation",
           "Reddit"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "e549967d755c1e002d2d91df7b9c05f0ae5598bb1434f001842aa140cef11853": {
+      "created_at": "2026-08-21T01:57:06.408151+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-codex-rust-v0.149.0",
+        "evidence_status": "first_party",
+        "follow_up": "关注新功能的实际使用体验和稳定性",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "github:release:374028976",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "OpenAI Codex",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI Codex发布新版本，新增agents仪表盘、队列等功能，是官方发布，对开发者有实际价值。",
+        "region": "global",
+        "score": 7.5,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "OpenAI Codex发布rust-v0.149.0，新增agents仪表盘、队列和更多Vim编辑命令。",
+        "tags": [
+          "Codex",
+          "Agent",
+          "CLI"
         ],
         "target_user": "",
         "verticals": []
@@ -30967,6 +32121,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "fac1d84fd9b99a9f1b4ab5d2c3366f01f9b3d4c2f7fa0509505eb918ea0e1c4b": {
+      "created_at": "2026-08-21T01:57:06.407095+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "vercel-cli-comments",
+        "evidence_status": "first_party",
+        "follow_up": "观察该功能在开发者社区的使用反馈",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:vercel.com_changelog_rss:da09492549570d3c",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Vercel CLI",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Vercel CLI新增管理Toolbar评论功能，提升开发者工作流效率，官方更新，有具体使用场景。",
+        "region": "global",
+        "score": 7.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Vercel CLI新增vercel comments命令，可在终端管理Toolbar评论，支持脚本和代理。",
+        "tags": [
+          "Vercel",
+          "CLI",
+          "开发者工具"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "fae320dba95b4c58b7f827cbee8398947e3d13b1c6b7da3501a62bb1b41530da": {
       "created_at": "2026-08-11T02:27:24.065907+00:00",
       "model": "deepseek-v4-flash",
@@ -31000,6 +32193,44 @@
           "语音",
           "多语言",
           "开源模型"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "faee71cdbf9379c2e8a1401432aa12929c09c6817c546e9261cf3f5e4dd4eb7e": {
+      "created_at": "2026-08-21T01:57:22.200360+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "should-have-loved-biology",
+        "evidence_status": "reported",
+        "follow_up": "无",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:49377853",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": false,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "2020年的旧文，关于生物学与教育，与AI产品无关，低相关性。",
+        "region": "global",
+        "score": 2.0,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "一篇2020年的文章，反思为何没爱上生物学，讨论教育问题，与AI无关。",
+        "tags": [
+          "生物学",
+          "教育"
         ],
         "target_user": "",
         "verticals": []
