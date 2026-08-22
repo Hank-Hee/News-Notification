@@ -1,76 +1,13 @@
 {
   "version": 1,
-  "updated_at": "2026-08-21T01:57:42.628549+00:00",
+  "updated_at": "2026-08-22T01:51:13.937368+00:00",
   "products": [
-    {
-      "product_id": "product-3a930b303b0bc625",
-      "product_name": "未公开（免费应用，未给出名称）",
-      "builder_name": "simedw",
-      "first_seen": "2026-08-21",
-      "last_seen": "2026-08-21",
-      "occurrence_count": 1,
-      "intelligence_type": "product_case",
-      "evidence_status": "first_party",
-      "target_user": "钢琴学习者、音乐创作者、对 AI 音乐生成感兴趣的开发者",
-      "user_problem": "弹钢琴时缺乏灵感，或者想快速探索旋律走向，但现有工具要么需要联网，要么延迟高、不自然。",
-      "what_it_is": "一个在 iPhone 上实时运行的钢琴 MIDI 自动补全模型，你弹几个音符，它接着往下编。",
-      "ai_role": "根据用户弹奏的前几个音符，预测并生成接下来的音符序列，类似代码自动补全。",
-      "implementation_idea": "训练一个 125M 参数的 Transformer 模型，输入是 MIDI 音符序列，输出是后续音符。模型被转换成 Core ML 格式，在 iPhone 上本地运行，无需联网。",
-      "hands_on_exercise": "访问 Hugging Face Space（https://huggingface.co/spaces/caslabs/midi-autocompletion），在网页上弹几个虚拟钢琴键，观察模型如何续写旋律。记录不同输入长度对生成结果的影响。",
-      "limitations_or_uncertainties": "训练数据规模和来源未公开；模型只支持钢琴 MIDI，不支持其他乐器或音频输入；生成质量可能受限于训练数据风格。",
-      "region": "global",
-      "score": 9.0,
-      "summary": "开发者训练125M模型实现钢琴MIDI自动补全，在iPhone上实时运行，免费应用，展示AI辅助音乐创作的新可能。",
-      "title": "我训练了一个 125M 模型在设备端自动补全钢琴演奏",
-      "url": "https://simedw.com/2026/08/20/midi-autocomplete/",
-      "sources": [
-        {
-          "url": "https://simedw.com/2026/08/20/midi-autocomplete/",
-          "title": "Show HN: I trained a 125M model to autocomplete piano on-device",
-          "source_type": "hackernews",
-          "published_at": "2026-08-20T12:04:38+00:00"
-        },
-        {
-          "url": "https://huggingface.co/spaces/caslabs/midi-autocompletion",
-          "title": "Midi Autocompletion - a Hugging Face Space by caslabs",
-          "source_type": "supplemental",
-          "published_at": ""
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "midi-autocomplete-piano",
-          "date": "2026-08-21",
-          "title": "我训练了一个 125M 模型在设备端自动补全钢琴演奏",
-          "summary": "开发者训练125M模型实现钢琴MIDI自动补全，在iPhone上实时运行，免费应用，展示AI辅助音乐创作的新可能。",
-          "score": 9.0,
-          "url": "https://simedw.com/2026/08/20/midi-autocomplete/"
-        }
-      ],
-      "usage_flow": [
-        "在 iPhone 上打开免费应用",
-        "用 MIDI 键盘弹几个音符",
-        "模型实时生成后续音符（约 108 音符/秒）",
-        "继续弹奏或接受生成的旋律"
-      ],
-      "learning_points": [
-        "Transformer：一种擅长处理序列数据的神经网络结构，是当前大语言模型的基础。",
-        "MIDI：一种音乐数字接口格式，记录音符、力度、时长等信息，适合作为模型输入。",
-        "端侧推理：模型直接在手机等设备上运行，不需要把数据发到云端，延迟低且保护隐私。"
-      ],
-      "verticals": [],
-      "tags": [
-        "音乐",
-        "MIDI",
-        "端侧模型"
-      ]
-    },
     {
       "product_id": "product-30744df89361cf9c",
       "product_name": "Yana Bana",
       "builder_name": "Lenny Rachitsky",
       "first_seen": "2026-08-18",
-      "last_seen": "2026-08-21",
+      "last_seen": "2026-08-22",
       "occurrence_count": 1,
       "intelligence_type": "product_case",
       "evidence_status": "first_party",
@@ -133,6 +70,717 @@
         "独立开发者",
         "Codex",
         "时尚"
+      ]
+    },
+    {
+      "product_id": "product-f2e9fce7ce97fd10",
+      "product_name": "Ora",
+      "builder_name": "Kevin Sundstrom",
+      "first_seen": "2026-08-22",
+      "last_seen": "2026-08-22",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "需要让自己的网站对 AI Agent 更友好的企业客户；同时也服务想对比不同 Agent 框架性能的开发者",
+      "user_problem": "AI Agent 越来越常访问网站，但 99% 的网站对 Agent 不友好——Agent 会在注册、支付等流程中卡住，企业不知道问题出在哪，也不知道该改什么",
+      "what_it_is": "Ora 是一个让各种 AI Agent 在真实网站上做任务（注册、集成、付费），并记录它们哪里会失败、花多少钱、用多少时间的测试平台。",
+      "ai_role": "AI Agent 是被测对象——Ora 本身不替客户做任务，而是让各种第三方 Agent 当'考生'，在真实网站上考试并打分",
+      "implementation_idea": "核心思路像'给 AI Agent 建一个驾校考场'：每个 Agent 框架需要不同的运行环境，Ora 就为每个框架单独搭一个 runtime（运行容器），让它们在同一批真实网站上做同样的题，然后统一记录步骤、成本和结果。整个系统前后端和 Agent runtime 都部署在 Vercel 上，日志和认证也走同一套。",
+      "hands_on_exercise": "打开 journey.ora.ai，找一个公开 Demo 或提交自己的测试网站，观察 Ora 如何展示不同 Agent 在完成同一任务时的步骤差异和失败点；然后对比 Claude Code 和 eve 的结果，理解 'native success'（Agent 能直接在客户网站上完成，而非退而求其次去搜网页）为什么重要",
+      "limitations_or_uncertainties": "未公开具体定价模式；未公开 99% '网站不 Agent-ready' 这一数字的测算方法；未公开除 eve 外其他 Agent 框架是否也有 sandbox override 机制；'hundreds of commits a day' 未说明是团队总计还是人均",
+      "region": "global",
+      "score": 8.5,
+      "summary": "Ora 在 Vercel 上推出 AI agent 基准测试平台，让 agent 在真实网站上执行任务并记录失败原因，帮助客户优化网站以提升 agent 兼容性。",
+      "title": "Ora 在 Vercel 上搭建 AI Agent 基准测试平台，实测主流 Agent 在真实网站上的表现",
+      "url": "https://vercel.com/blog/how-ora-benchmarks-every-major-ai-agent-on-vercel",
+      "sources": [
+        {
+          "url": "https://vercel.com/blog/how-ora-benchmarks-every-major-ai-agent-on-vercel",
+          "title": "How Ora benchmarks every major AI agent on Vercel",
+          "source_type": "rss",
+          "published_at": "2026-08-21T21:00:00+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "ora-agent-benchmark-platform",
+          "date": "2026-08-22",
+          "title": "Ora 在 Vercel 上搭建 AI Agent 基准测试平台，实测主流 Agent 在真实网站上的表现",
+          "summary": "Ora 在 Vercel 上推出 AI agent 基准测试平台，让 agent 在真实网站上执行任务并记录失败原因，帮助客户优化网站以提升 agent 兼容性。",
+          "score": 8.5,
+          "url": "https://vercel.com/blog/how-ora-benchmarks-every-major-ai-agent-on-vercel"
+        }
+      ],
+      "usage_flow": [
+        "客户在 journey.ora.ai 提交自己的网站和想测的任务（如'注册账号并完成付费'）",
+        "Ora 派出多个主流 Agent（Claude Code、ChatGPT、Gemini、eve 等）同时去真实网站上执行该任务",
+        "平台记录每个 Agent 花了多少钱、多少步、多少时间，以及在哪一步失败",
+        "客户看到对比报告和具体失败原因，按建议修改网站"
+      ],
+      "learning_points": [
+        "Agent = 大模型（负责思考）+ Harness（负责给工具、一步步驱动）。Harness 是 Agent 的'手脚和方向盘'，不同 Harness 需要不同的基础设施",
+        "Sandbox（沙盒）：Agent 运行时的隔离环境，默认安全但可能不方便监控；Ora 利用 eve 的 sandbox override 功能，把 Agent 换到自己能全程追踪的环境里",
+        "Prompt caching：把常用的提示词缓存起来复用，能显著降低调用成本。Ora 帮 eve 测出一个缓存 bug，修复后成本降了约 15%"
+      ],
+      "verticals": [],
+      "tags": [
+        "AI Agent",
+        "Benchmark",
+        "Web Readiness"
+      ]
+    },
+    {
+      "product_id": "product-471adf3c6c198017",
+      "product_name": "Proliferate",
+      "builder_name": "pablo24602",
+      "first_seen": "2026-08-22",
+      "last_seen": "2026-08-22",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Proliferate创始人发布开源自托管AI IDE，集成Claude Code、Codex等代理，解决多代理统一工作流问题。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.5,
+      "summary": "Proliferate创始人发布开源自托管AI IDE，集成Claude Code、Codex等代理，解决多代理统一工作流问题。",
+      "title": "Show HN: Proliferate- open-source, self-hostable Codex for any coding agent",
+      "url": "https://github.com/proliferate-ai/proliferate",
+      "sources": [
+        {
+          "url": "https://github.com/proliferate-ai/proliferate",
+          "title": "Show HN: Proliferate- open-source, self-hostable Codex for any coding agent",
+          "source_type": "hackernews",
+          "published_at": "2026-08-21T16:47:15+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "proliferate-open-source-ai-ide",
+          "date": "2026-08-22",
+          "title": "Show HN: Proliferate- open-source, self-hostable Codex for any coding agent",
+          "summary": "Proliferate创始人发布开源自托管AI IDE，集成Claude Code、Codex等代理，解决多代理统一工作流问题。",
+          "score": 8.5,
+          "url": "https://github.com/proliferate-ai/proliferate"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "AI IDE",
+        "开源",
+        "编码代理",
+        "自托管"
+      ]
+    },
+    {
+      "product_id": "product-7f7811de59626bc9",
+      "product_name": "Claude Code",
+      "builder_name": "ashwin-ant",
+      "first_seen": "2026-07-26",
+      "last_seen": "2026-08-22",
+      "occurrence_count": 10,
+      "intelligence_type": "model_capability",
+      "evidence_status": "first_party",
+      "target_user": "习惯用终端的开发者、需要批量处理代码任务的工程师、多会话并行工作的团队",
+      "user_problem": "每次新开 Claude Code 会话都要手动选模型；多个终端同时跑不同任务时，想等另一个会话闲下来再通知自己，只能靠人工盯着或反复切换窗口",
+      "what_it_is": "Claude Code v2.1.239 发布，新增成本估算、全屏渲染器、Python 迁移工具等多项功能更新。",
+      "ai_role": "Claude 作为编码 Agent（能自主执行多步骤任务的 AI 助手），在后台持续运行代码分析、文件修改和命令执行，并在空闲时触发通知机制",
+      "implementation_idea": "核心是两个状态管理：一是用环境变量做'全局默认值'，同时用本地配置文件存'/model 的个性化选择'，两者分层不冲突；二是跨会话通信走本地进程间消息通道，接收方注册一个'下次空闲时回调'，避免轮询浪费资源",
+      "hands_on_exercise": "30 分钟验证：打开两个终端窗口都运行 Claude Code，终端 1 设置 `export ANTHROPIC_DEFAULT_MODEL=claude-sonnet-4-20250514` 后启动新会话确认模型；终端 2 跑一个慢任务如 `sleep 60`，终端 1 用 `/send` 或相关命令请求'该会话空闲时通知我'，观察 60 秒后是否收到系统通知（macOS/Linux）",
+      "limitations_or_uncertainties": "跨会话通知 `notify_when_idle` 的具体触发命令格式未在 release note 中给出完整示例；Windows 不支持该通知功能；VS Code 扩展的屏幕阅读器支持为新增功能，实际兼容性未公开测试范围",
+      "region": "global",
+      "score": 8.0,
+      "summary": "Claude Code v2.1.239 发布，新增成本估算、全屏渲染器、Python 迁移工具等多项功能更新。",
+      "title": "anthropics/claude-code released v2.1.239",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.239",
+      "sources": [
+        {
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.219",
+          "title": "anthropics/claude-code released v2.1.219",
+          "source_type": "github",
+          "published_at": "2026-07-24T17:14:23+00:00"
+        },
+        {
+          "url": "https://claude.com/product/claude-code",
+          "title": "Claude Code by Anthropic | AI Coding Agent, Terminal, IDE",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.221",
+          "title": "anthropics/claude-code released v2.1.221",
+          "source_type": "github",
+          "published_at": "2026-08-04T00:14:23+00:00"
+        },
+        {
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.229",
+          "title": "anthropics/claude-code released v2.1.229",
+          "source_type": "github",
+          "published_at": "2026-08-12T20:56:22+00:00"
+        },
+        {
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.232",
+          "title": "anthropics/claude-code released v2.1.232",
+          "source_type": "github",
+          "published_at": "2026-08-13T23:29:59+00:00"
+        },
+        {
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.233",
+          "title": "anthropics/claude-code released v2.1.233",
+          "source_type": "github",
+          "published_at": "2026-08-14T22:20:57+00:00"
+        },
+        {
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.234",
+          "title": "anthropics/claude-code released v2.1.234",
+          "source_type": "github",
+          "published_at": "2026-08-17T20:20:58+00:00"
+        },
+        {
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.236",
+          "title": "anthropics/claude-code released v2.1.236",
+          "source_type": "github",
+          "published_at": "2026-08-19T20:02:05+00:00"
+        },
+        {
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.237",
+          "title": "anthropics/claude-code released v2.1.237",
+          "source_type": "github",
+          "published_at": "2026-08-20T00:54:41+00:00"
+        },
+        {
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.238",
+          "title": "anthropics/claude-code released v2.1.238",
+          "source_type": "github",
+          "published_at": "2026-08-20T20:33:51+00:00"
+        },
+        {
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.239",
+          "title": "anthropics/claude-code released v2.1.239",
+          "source_type": "github",
+          "published_at": "2026-08-21T19:54:23+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "claude-code-v2.1.219",
+          "date": "2026-07-26",
+          "title": "Claude Code v2.1.219：新增 Opus 5 模型支持与网络沙箱白名单",
+          "summary": "Claude Code v2.1.219新增Opus 5模型支持、网络沙箱白名单等多项功能。",
+          "score": 8.0,
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.219"
+        },
+        {
+          "update_id": "claude-code-v2.1.221-release",
+          "date": "2026-08-04",
+          "title": "Claude Code v2.1.221：新增专注视图、沙箱凭据保护和提示审计功能",
+          "summary": "Anthropic 发布 Claude Code v2.1.221，新增 Focus view 和 sandbox 凭据保护等功能，提升开发体验和安全性。",
+          "score": 8.5,
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.221"
+        },
+        {
+          "update_id": "claude-code-v2.1.229-release",
+          "date": "2026-08-13",
+          "title": "anthropics/claude-code released v2.1.229",
+          "summary": "Claude Code 发布 v2.1.229，新增远程控制恢复、插件市场命令源等多项功能。",
+          "score": 8.0,
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.229"
+        },
+        {
+          "update_id": "claude-code-release-v2.1.232",
+          "date": "2026-08-14",
+          "title": "Claude Code v2.1.232：子代理分叉默认启用，新增跨会话消息与 GitLab 安全增强",
+          "summary": "Claude Code 更新至 v2.1.232，默认启用子代理分叉并支持跨会话消息，增强 Agent 协作和安全性。",
+          "score": 8.0,
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.232"
+        },
+        {
+          "update_id": "claude-code-v2.1.233",
+          "date": "2026-08-15",
+          "title": "anthropics/claude-code released v2.1.233",
+          "summary": "Claude Code v2.1.233发布，新增GitLab MR支持、用户身份转发和内存限制等多项功能。",
+          "score": 7.5,
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.233"
+        },
+        {
+          "update_id": "claude-code-v2.1.234",
+          "date": "2026-08-18",
+          "title": "anthropics/claude-code released v2.1.234",
+          "summary": "Claude Code v2.1.234新增环境变量、GitLab MR徽章、自动续会话等功能，并修复安全漏洞。",
+          "score": 8.0,
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.234"
+        },
+        {
+          "update_id": "claude-code-v2.1.236",
+          "date": "2026-08-20",
+          "title": "Claude Code v2.1.236：新增默认模型设置与跨会话通知功能",
+          "summary": "Claude Code v2.1.236新增默认模型设置和跨会话空闲通知，优化多会话协作体验。",
+          "score": 8.0,
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.236"
+        },
+        {
+          "update_id": "claude-code-v2.1.237",
+          "date": "2026-08-20",
+          "title": "anthropics/claude-code released v2.1.237",
+          "summary": "Anthropic发布Claude Code v2.1.237，新增简洁输出风格并修复提示缓存问题，提升编码效率。",
+          "score": 7.5,
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.237"
+        },
+        {
+          "update_id": "claude-code-v2.1.238",
+          "date": "2026-08-21",
+          "title": "anthropics/claude-code released v2.1.238",
+          "summary": "Claude Code发布v2.1.238，新增readline键位风格、插件市场headersHelper等多项改进。",
+          "score": 8.0,
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.238"
+        },
+        {
+          "update_id": "claude-code-v2.1.239",
+          "date": "2026-08-22",
+          "title": "anthropics/claude-code released v2.1.239",
+          "summary": "Claude Code v2.1.239 发布，新增成本估算、全屏渲染器、Python 迁移工具等多项功能更新。",
+          "score": 8.0,
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.239"
+        }
+      ],
+      "usage_flow": [
+        "在终端安装并启动 claude，用自然语言描述需求（如'给这个项目加登录功能'）",
+        "AI 自动分析代码库，必要时用 /add-dir 添加更多目录到上下文",
+        "AI 提出修改方案，经确认后自动编辑文件、运行命令",
+        "开发者检查 git diff，确认无误后提交代码",
+        "安装 Claude Code CLI，在代码仓库目录下运行 `claude` 启动对话",
+        "用自然语言描述需求（如'给这个函数加单元测试'），AI 自动读文件、改代码、跑命令",
+        "按 `Ctrl+Alt+F` 开启 Focus view，把工具执行细节折叠成可展开摘要，专注看对话",
+        "用 `claude-api prompt-audit` 检查旧提示词是否适合当前模型，确认后提交代码",
+        "在终端运行 `claude` 启动会话，多个会话会自动获得唯一名称",
+        "在提示符里输入 `@会话名` 直接给另一个运行中的 Claude 会话发消息",
+        "调用子代理时自动在后台分叉运行，继承当前对话上下文但互不阻塞",
+        "通过 `/config` 设置跨会话消息的接收策略（接受/暂存/拒绝）和对话过期时间",
+        "设置环境变量 `export ANTHROPIC_DEFAULT_MODEL=claude-sonnet-4-20250514`，以后新会话默认用这个模型",
+        "在会话 A 里执行需要长时间运行的任务，然后发跨会话消息给会话 B：等 B 闲下来时通知我",
+        "会话 B 忙完后自动弹一条通知，会话 A 的用户收到提醒继续下一步",
+        "用 `/model` 临时切换当前会话模型，这个选择会记住，不受默认变量影响"
+      ],
+      "learning_points": [
+        "Context window（上下文窗口）：模型一次能'看'多少字，Opus 5 的 1M 约等于能塞进整本《三体》第一部，让 AI 分析大型代码库不丢线索",
+        "Agent（智能体）：不只是聊天回复，而是能自主决定'我要先读哪个文件、再改哪行、然后跑测试'的 AI 系统",
+        "Function calling（函数调用）：模型不直接生成答案，而是输出结构化指令（如'调用 read_file 工具'），由外部程序执行后再把结果喂回模型",
+        "Agent：不只是问答，而是能自主规划步骤、调用工具完成任务的 AI 系统",
+        "Function Calling（函数调用）：LLM 输出结构化指令让程序去执行具体操作，比如'读这个文件'或'运行这个测试'",
+        "Prompt 审计：不同模型对提示词的敏感度不同，旧提示词可能在新模型上失效，需要系统性检查",
+        "Agent（智能体）：能自主规划、调用工具、完成多步骤任务的 AI 程序，不只是聊天",
+        "Fork（分叉）：从现有进程复制出一个独立进程，子进程继承父进程的状态但之后各跑各的，互不干扰",
+        "Secret redaction（敏感信息脱敏）：自动识别并隐藏令牌、密码等，防止 AI 日志或输出里意外泄露",
+        "Environment variable（环境变量）：程序启动时从系统读取的配置，适合放团队统一的默认值",
+        "Agent：不只是聊天，能持续执行任务、操作文件、调用工具的 AI 系统",
+        "Function Calling：AI 识别需要调用外部功能（如发通知、读文件）并生成结构化请求，而非只输出文字"
+      ],
+      "verticals": [],
+      "tags": [
+        "工具更新",
+        "Claude Code",
+        "Opus 5",
+        "Agent",
+        "开发者工具",
+        "更新",
+        "release",
+        "版本更新",
+        "编码助手",
+        "功能更新",
+        "CLI",
+        "插件",
+        "Release",
+        "Developer Tools"
+      ]
+    },
+    {
+      "product_id": "product-c8668fecbf62c6ac",
+      "product_name": "llm-openrouter",
+      "builder_name": "Simon Willison",
+      "first_seen": "2026-08-22",
+      "last_seen": "2026-08-22",
+      "occurrence_count": 1,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "llm-openrouter插件更新，支持新API并新增Shell、WebFetch、WebSearch工具，提升AI代理能力。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.0,
+      "summary": "llm-openrouter插件更新，支持新API并新增Shell、WebFetch、WebSearch工具，提升AI代理能力。",
+      "title": "llm-openrouter 0.7",
+      "url": "https://simonwillison.net/2026/Aug/21/llm-openrouter/",
+      "sources": [
+        {
+          "url": "https://simonwillison.net/2026/Aug/21/llm-openrouter/",
+          "title": "llm-openrouter 0.7",
+          "source_type": "rss",
+          "published_at": "2026-08-21T16:58:19+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "llm-openrouter-0.7-release",
+          "date": "2026-08-22",
+          "title": "llm-openrouter 0.7",
+          "summary": "llm-openrouter插件更新，支持新API并新增Shell、WebFetch、WebSearch工具，提升AI代理能力。",
+          "score": 8.0,
+          "url": "https://simonwillison.net/2026/Aug/21/llm-openrouter/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "OpenRouter",
+        "插件",
+        "AI代理"
+      ]
+    },
+    {
+      "product_id": "product-cce0200870cbd463",
+      "product_name": "OzBrain",
+      "builder_name": "dariusmonsef",
+      "first_seen": "2026-08-22",
+      "last_seen": "2026-08-22",
+      "occurrence_count": 1,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "OzBrain 为 Agent 和团队提供共享知识库，解决 Agent 知识沉淀与协作问题。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.0,
+      "summary": "OzBrain 为 Agent 和团队提供共享知识库，解决 Agent 知识沉淀与协作问题。",
+      "title": "Show HN: OzBrain, a shared brain for knowledge between agents and your team",
+      "url": "https://ozbrain.com/",
+      "sources": [
+        {
+          "url": "https://ozbrain.com/",
+          "title": "Show HN: OzBrain, a shared brain for knowledge between agents and your team",
+          "source_type": "hackernews",
+          "published_at": "2026-08-21T23:09:06+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "ozbrain-agent-knowledge",
+          "date": "2026-08-22",
+          "title": "Show HN: OzBrain, a shared brain for knowledge between agents and your team",
+          "summary": "OzBrain 为 Agent 和团队提供共享知识库，解决 Agent 知识沉淀与协作问题。",
+          "score": 8.0,
+          "url": "https://ozbrain.com/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "知识管理"
+      ]
+    },
+    {
+      "product_id": "product-f6b013a52c3b734c",
+      "product_name": "Qwen3-TTS",
+      "builder_name": "toebee",
+      "first_seen": "2026-08-22",
+      "last_seen": "2026-08-22",
+      "occurrence_count": 1,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Nari Labs 优化 Qwen3-TTS 实现 34ms 首音频延迟，并开源实现和基准。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.0,
+      "summary": "Nari Labs 优化 Qwen3-TTS 实现 34ms 首音频延迟，并开源实现和基准。",
+      "title": "How we made a text-to-speech model respond in sub-50 ms",
+      "url": "https://nari-labs.com/blog/qwen3-tts-speed-cost-frontier/",
+      "sources": [
+        {
+          "url": "https://nari-labs.com/blog/qwen3-tts-speed-cost-frontier/",
+          "title": "How we made a text-to-speech model respond in sub-50 ms",
+          "source_type": "hackernews",
+          "published_at": "2026-08-21T15:51:10+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "qwen3-tts-sub50ms",
+          "date": "2026-08-22",
+          "title": "How we made a text-to-speech model respond in sub-50 ms",
+          "summary": "Nari Labs 优化 Qwen3-TTS 实现 34ms 首音频延迟，并开源实现和基准。",
+          "score": 8.0,
+          "url": "https://nari-labs.com/blog/qwen3-tts-speed-cost-frontier/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "TTS",
+        "低延迟",
+        "开源"
+      ]
+    },
+    {
+      "product_id": "product-10b268bd4559079f",
+      "product_name": "DeepSeek",
+      "builder_name": "dares2573",
+      "first_seen": "2026-08-22",
+      "last_seen": "2026-08-22",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "early_signal",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "DeepSeek 推出 v4-flash-vision-exp 视觉模型，支持图像输入，但存在识别局限。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "china",
+      "score": 8.0,
+      "summary": "DeepSeek 推出 v4-flash-vision-exp 视觉模型，支持图像输入，但存在识别局限。",
+      "title": "DeepSeek-v4-flash-vision-exp",
+      "url": "https://api-docs.deepseek.com/guides/vision/",
+      "sources": [
+        {
+          "url": "https://api-docs.deepseek.com/guides/vision/",
+          "title": "DeepSeek-v4-flash-vision-exp",
+          "source_type": "hackernews",
+          "published_at": "2026-08-21T10:33:56+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "deepseek-v4-flash-vision-exp",
+          "date": "2026-08-22",
+          "title": "DeepSeek-v4-flash-vision-exp",
+          "summary": "DeepSeek 推出 v4-flash-vision-exp 视觉模型，支持图像输入，但存在识别局限。",
+          "score": 8.0,
+          "url": "https://api-docs.deepseek.com/guides/vision/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "多模态",
+        "视觉模型"
+      ]
+    },
+    {
+      "product_id": "product-2e9811576c09680e",
+      "product_name": "llm",
+      "builder_name": "Simon Willison",
+      "first_seen": "2026-07-31",
+      "last_seen": "2026-08-22",
+      "occurrence_count": 3,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "llm命令行工具发布0.32.1修复依赖问题，确保工具可用。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.5,
+      "summary": "llm命令行工具发布0.32.1修复依赖问题，确保工具可用。",
+      "title": "llm 0.32.1",
+      "url": "https://simonwillison.net/2026/Aug/21/llm/",
+      "sources": [
+        {
+          "url": "https://simonwillison.net/2026/Jul/30/llm-rc2/#atom-everything",
+          "title": "llm 0.32rc2",
+          "source_type": "rss",
+          "published_at": "2026-07-30T22:52:06+00:00"
+        },
+        {
+          "url": "https://simonwillison.net/2026/Aug/4/new-release-of-llm/#atom-everything",
+          "title": "New release of LLM adds support for reasoning traces, OpenAI Responses, server-side tools, and smarter logging",
+          "source_type": "rss",
+          "published_at": "2026-08-04T23:58:24+00:00"
+        },
+        {
+          "url": "https://simonwillison.net/2026/Aug/4/llm/#atom-everything",
+          "title": "llm 0.32",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://simonwillison.net/2026/Aug/21/llm/",
+          "title": "llm 0.32.1",
+          "source_type": "rss",
+          "published_at": "2026-08-21T17:16:13+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "llm-0.32rc2-release",
+          "date": "2026-07-31",
+          "title": "llm 0.32rc2",
+          "summary": "llm 0.32rc2发布，默认模型改为GPT-5.6 Luna，并新增openai endpoint命令，提升CLI工具的灵活性和性能。",
+          "score": 8.0,
+          "url": "https://simonwillison.net/2026/Jul/30/llm-rc2/#atom-everything"
+        },
+        {
+          "update_id": "llm-0.32-release",
+          "date": "2026-08-05",
+          "title": "New release of LLM adds support for reasoning traces, OpenAI Responses, server-side tools, and smarter logging",
+          "summary": "Simon Willison发布LLM 0.32，新增推理轨迹显示、服务端工具和OpenAI Responses支持，提升AI应用开发效率。",
+          "score": 9.0,
+          "url": "https://simonwillison.net/2026/Aug/4/new-release-of-llm/#atom-everything"
+        },
+        {
+          "update_id": "llm-0.32.1-release",
+          "date": "2026-08-22",
+          "title": "llm 0.32.1",
+          "summary": "llm命令行工具发布0.32.1修复依赖问题，确保工具可用。",
+          "score": 7.5,
+          "url": "https://simonwillison.net/2026/Aug/21/llm/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "开发者工具",
+        "CLI",
+        "LLM",
+        "推理轨迹"
+      ]
+    },
+    {
+      "product_id": "product-2a135c3ef99d42f2",
+      "product_name": "Antigravity",
+      "builder_name": "Zac Zuo",
+      "first_seen": "2026-08-22",
+      "last_seen": "2026-08-22",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Antigravity IDE扩展让AI代理进入现有编辑器，为开发者提供新工具，但需更多实际使用反馈。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.5,
+      "summary": "Antigravity IDE扩展让AI代理进入现有编辑器，为开发者提供新工具，但需更多实际使用反馈。",
+      "title": "Antigravity IDE Extensions",
+      "url": "https://www.producthunt.com/products/google-antigravity",
+      "sources": [
+        {
+          "url": "https://www.producthunt.com/products/google-antigravity",
+          "title": "Antigravity IDE Extensions",
+          "source_type": "rss",
+          "published_at": "2026-08-21T06:58:44+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "antigravity-ide-extensions",
+          "date": "2026-08-22",
+          "title": "Antigravity IDE Extensions",
+          "summary": "Antigravity IDE扩展让AI代理进入现有编辑器，为开发者提供新工具，但需更多实际使用反馈。",
+          "score": 7.5,
+          "url": "https://www.producthunt.com/products/google-antigravity"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "IDE",
+        "AI代理",
+        "开发者工具"
+      ]
+    },
+    {
+      "product_id": "product-3a930b303b0bc625",
+      "product_name": "未公开（免费应用，未给出名称）",
+      "builder_name": "simedw",
+      "first_seen": "2026-08-21",
+      "last_seen": "2026-08-21",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "钢琴学习者、音乐创作者、对 AI 音乐生成感兴趣的开发者",
+      "user_problem": "弹钢琴时缺乏灵感，或者想快速探索旋律走向，但现有工具要么需要联网，要么延迟高、不自然。",
+      "what_it_is": "一个在 iPhone 上实时运行的钢琴 MIDI 自动补全模型，你弹几个音符，它接着往下编。",
+      "ai_role": "根据用户弹奏的前几个音符，预测并生成接下来的音符序列，类似代码自动补全。",
+      "implementation_idea": "训练一个 125M 参数的 Transformer 模型，输入是 MIDI 音符序列，输出是后续音符。模型被转换成 Core ML 格式，在 iPhone 上本地运行，无需联网。",
+      "hands_on_exercise": "访问 Hugging Face Space（https://huggingface.co/spaces/caslabs/midi-autocompletion），在网页上弹几个虚拟钢琴键，观察模型如何续写旋律。记录不同输入长度对生成结果的影响。",
+      "limitations_or_uncertainties": "训练数据规模和来源未公开；模型只支持钢琴 MIDI，不支持其他乐器或音频输入；生成质量可能受限于训练数据风格。",
+      "region": "global",
+      "score": 9.0,
+      "summary": "开发者训练125M模型实现钢琴MIDI自动补全，在iPhone上实时运行，免费应用，展示AI辅助音乐创作的新可能。",
+      "title": "我训练了一个 125M 模型在设备端自动补全钢琴演奏",
+      "url": "https://simedw.com/2026/08/20/midi-autocomplete/",
+      "sources": [
+        {
+          "url": "https://simedw.com/2026/08/20/midi-autocomplete/",
+          "title": "Show HN: I trained a 125M model to autocomplete piano on-device",
+          "source_type": "hackernews",
+          "published_at": "2026-08-20T12:04:38+00:00"
+        },
+        {
+          "url": "https://huggingface.co/spaces/caslabs/midi-autocompletion",
+          "title": "Midi Autocompletion - a Hugging Face Space by caslabs",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "midi-autocomplete-piano",
+          "date": "2026-08-21",
+          "title": "我训练了一个 125M 模型在设备端自动补全钢琴演奏",
+          "summary": "开发者训练125M模型实现钢琴MIDI自动补全，在iPhone上实时运行，免费应用，展示AI辅助音乐创作的新可能。",
+          "score": 9.0,
+          "url": "https://simedw.com/2026/08/20/midi-autocomplete/"
+        }
+      ],
+      "usage_flow": [
+        "在 iPhone 上打开免费应用",
+        "用 MIDI 键盘弹几个音符",
+        "模型实时生成后续音符（约 108 音符/秒）",
+        "继续弹奏或接受生成的旋律"
+      ],
+      "learning_points": [
+        "Transformer：一种擅长处理序列数据的神经网络结构，是当前大语言模型的基础。",
+        "MIDI：一种音乐数字接口格式，记录音符、力度、时长等信息，适合作为模型输入。",
+        "端侧推理：模型直接在手机等设备上运行，不需要把数据发到云端，延迟低且保护隐私。"
+      ],
+      "verticals": [],
+      "tags": [
+        "音乐",
+        "MIDI",
+        "端侧模型"
       ]
     },
     {
@@ -230,211 +878,6 @@
         "v0",
         "Snowflake",
         "代理"
-      ]
-    },
-    {
-      "product_id": "product-7f7811de59626bc9",
-      "product_name": "Claude Code",
-      "builder_name": "ashwin-ant",
-      "first_seen": "2026-07-26",
-      "last_seen": "2026-08-21",
-      "occurrence_count": 9,
-      "intelligence_type": "product_case",
-      "evidence_status": "first_party",
-      "target_user": "习惯用终端的开发者、需要批量处理代码任务的工程师、多会话并行工作的团队",
-      "user_problem": "每次新开 Claude Code 会话都要手动选模型；多个终端同时跑不同任务时，想等另一个会话闲下来再通知自己，只能靠人工盯着或反复切换窗口",
-      "what_it_is": "Claude Code发布v2.1.238，新增readline键位风格、插件市场headersHelper等多项改进。",
-      "ai_role": "Claude 作为编码 Agent（能自主执行多步骤任务的 AI 助手），在后台持续运行代码分析、文件修改和命令执行，并在空闲时触发通知机制",
-      "implementation_idea": "核心是两个状态管理：一是用环境变量做'全局默认值'，同时用本地配置文件存'/model 的个性化选择'，两者分层不冲突；二是跨会话通信走本地进程间消息通道，接收方注册一个'下次空闲时回调'，避免轮询浪费资源",
-      "hands_on_exercise": "30 分钟验证：打开两个终端窗口都运行 Claude Code，终端 1 设置 `export ANTHROPIC_DEFAULT_MODEL=claude-sonnet-4-20250514` 后启动新会话确认模型；终端 2 跑一个慢任务如 `sleep 60`，终端 1 用 `/send` 或相关命令请求'该会话空闲时通知我'，观察 60 秒后是否收到系统通知（macOS/Linux）",
-      "limitations_or_uncertainties": "跨会话通知 `notify_when_idle` 的具体触发命令格式未在 release note 中给出完整示例；Windows 不支持该通知功能；VS Code 扩展的屏幕阅读器支持为新增功能，实际兼容性未公开测试范围",
-      "region": "global",
-      "score": 8.0,
-      "summary": "Claude Code发布v2.1.238，新增readline键位风格、插件市场headersHelper等多项改进。",
-      "title": "anthropics/claude-code released v2.1.238",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.238",
-      "sources": [
-        {
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.219",
-          "title": "anthropics/claude-code released v2.1.219",
-          "source_type": "github",
-          "published_at": "2026-07-24T17:14:23+00:00"
-        },
-        {
-          "url": "https://claude.com/product/claude-code",
-          "title": "Claude Code by Anthropic | AI Coding Agent, Terminal, IDE",
-          "source_type": "supplemental",
-          "published_at": ""
-        },
-        {
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.221",
-          "title": "anthropics/claude-code released v2.1.221",
-          "source_type": "github",
-          "published_at": "2026-08-04T00:14:23+00:00"
-        },
-        {
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.229",
-          "title": "anthropics/claude-code released v2.1.229",
-          "source_type": "github",
-          "published_at": "2026-08-12T20:56:22+00:00"
-        },
-        {
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.232",
-          "title": "anthropics/claude-code released v2.1.232",
-          "source_type": "github",
-          "published_at": "2026-08-13T23:29:59+00:00"
-        },
-        {
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.233",
-          "title": "anthropics/claude-code released v2.1.233",
-          "source_type": "github",
-          "published_at": "2026-08-14T22:20:57+00:00"
-        },
-        {
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.234",
-          "title": "anthropics/claude-code released v2.1.234",
-          "source_type": "github",
-          "published_at": "2026-08-17T20:20:58+00:00"
-        },
-        {
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.236",
-          "title": "anthropics/claude-code released v2.1.236",
-          "source_type": "github",
-          "published_at": "2026-08-19T20:02:05+00:00"
-        },
-        {
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.237",
-          "title": "anthropics/claude-code released v2.1.237",
-          "source_type": "github",
-          "published_at": "2026-08-20T00:54:41+00:00"
-        },
-        {
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.238",
-          "title": "anthropics/claude-code released v2.1.238",
-          "source_type": "github",
-          "published_at": "2026-08-20T20:33:51+00:00"
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "claude-code-v2.1.219",
-          "date": "2026-07-26",
-          "title": "Claude Code v2.1.219：新增 Opus 5 模型支持与网络沙箱白名单",
-          "summary": "Claude Code v2.1.219新增Opus 5模型支持、网络沙箱白名单等多项功能。",
-          "score": 8.0,
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.219"
-        },
-        {
-          "update_id": "claude-code-v2.1.221-release",
-          "date": "2026-08-04",
-          "title": "Claude Code v2.1.221：新增专注视图、沙箱凭据保护和提示审计功能",
-          "summary": "Anthropic 发布 Claude Code v2.1.221，新增 Focus view 和 sandbox 凭据保护等功能，提升开发体验和安全性。",
-          "score": 8.5,
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.221"
-        },
-        {
-          "update_id": "claude-code-v2.1.229-release",
-          "date": "2026-08-13",
-          "title": "anthropics/claude-code released v2.1.229",
-          "summary": "Claude Code 发布 v2.1.229，新增远程控制恢复、插件市场命令源等多项功能。",
-          "score": 8.0,
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.229"
-        },
-        {
-          "update_id": "claude-code-release-v2.1.232",
-          "date": "2026-08-14",
-          "title": "Claude Code v2.1.232：子代理分叉默认启用，新增跨会话消息与 GitLab 安全增强",
-          "summary": "Claude Code 更新至 v2.1.232，默认启用子代理分叉并支持跨会话消息，增强 Agent 协作和安全性。",
-          "score": 8.0,
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.232"
-        },
-        {
-          "update_id": "claude-code-v2.1.233",
-          "date": "2026-08-15",
-          "title": "anthropics/claude-code released v2.1.233",
-          "summary": "Claude Code v2.1.233发布，新增GitLab MR支持、用户身份转发和内存限制等多项功能。",
-          "score": 7.5,
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.233"
-        },
-        {
-          "update_id": "claude-code-v2.1.234",
-          "date": "2026-08-18",
-          "title": "anthropics/claude-code released v2.1.234",
-          "summary": "Claude Code v2.1.234新增环境变量、GitLab MR徽章、自动续会话等功能，并修复安全漏洞。",
-          "score": 8.0,
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.234"
-        },
-        {
-          "update_id": "claude-code-v2.1.236",
-          "date": "2026-08-20",
-          "title": "Claude Code v2.1.236：新增默认模型设置与跨会话通知功能",
-          "summary": "Claude Code v2.1.236新增默认模型设置和跨会话空闲通知，优化多会话协作体验。",
-          "score": 8.0,
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.236"
-        },
-        {
-          "update_id": "claude-code-v2.1.237",
-          "date": "2026-08-20",
-          "title": "anthropics/claude-code released v2.1.237",
-          "summary": "Anthropic发布Claude Code v2.1.237，新增简洁输出风格并修复提示缓存问题，提升编码效率。",
-          "score": 7.5,
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.237"
-        },
-        {
-          "update_id": "claude-code-v2.1.238",
-          "date": "2026-08-21",
-          "title": "anthropics/claude-code released v2.1.238",
-          "summary": "Claude Code发布v2.1.238，新增readline键位风格、插件市场headersHelper等多项改进。",
-          "score": 8.0,
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.238"
-        }
-      ],
-      "usage_flow": [
-        "在终端安装并启动 claude，用自然语言描述需求（如'给这个项目加登录功能'）",
-        "AI 自动分析代码库，必要时用 /add-dir 添加更多目录到上下文",
-        "AI 提出修改方案，经确认后自动编辑文件、运行命令",
-        "开发者检查 git diff，确认无误后提交代码",
-        "安装 Claude Code CLI，在代码仓库目录下运行 `claude` 启动对话",
-        "用自然语言描述需求（如'给这个函数加单元测试'），AI 自动读文件、改代码、跑命令",
-        "按 `Ctrl+Alt+F` 开启 Focus view，把工具执行细节折叠成可展开摘要，专注看对话",
-        "用 `claude-api prompt-audit` 检查旧提示词是否适合当前模型，确认后提交代码",
-        "在终端运行 `claude` 启动会话，多个会话会自动获得唯一名称",
-        "在提示符里输入 `@会话名` 直接给另一个运行中的 Claude 会话发消息",
-        "调用子代理时自动在后台分叉运行，继承当前对话上下文但互不阻塞",
-        "通过 `/config` 设置跨会话消息的接收策略（接受/暂存/拒绝）和对话过期时间",
-        "设置环境变量 `export ANTHROPIC_DEFAULT_MODEL=claude-sonnet-4-20250514`，以后新会话默认用这个模型",
-        "在会话 A 里执行需要长时间运行的任务，然后发跨会话消息给会话 B：等 B 闲下来时通知我",
-        "会话 B 忙完后自动弹一条通知，会话 A 的用户收到提醒继续下一步",
-        "用 `/model` 临时切换当前会话模型，这个选择会记住，不受默认变量影响"
-      ],
-      "learning_points": [
-        "Context window（上下文窗口）：模型一次能'看'多少字，Opus 5 的 1M 约等于能塞进整本《三体》第一部，让 AI 分析大型代码库不丢线索",
-        "Agent（智能体）：不只是聊天回复，而是能自主决定'我要先读哪个文件、再改哪行、然后跑测试'的 AI 系统",
-        "Function calling（函数调用）：模型不直接生成答案，而是输出结构化指令（如'调用 read_file 工具'），由外部程序执行后再把结果喂回模型",
-        "Agent：不只是问答，而是能自主规划步骤、调用工具完成任务的 AI 系统",
-        "Function Calling（函数调用）：LLM 输出结构化指令让程序去执行具体操作，比如'读这个文件'或'运行这个测试'",
-        "Prompt 审计：不同模型对提示词的敏感度不同，旧提示词可能在新模型上失效，需要系统性检查",
-        "Agent（智能体）：能自主规划、调用工具、完成多步骤任务的 AI 程序，不只是聊天",
-        "Fork（分叉）：从现有进程复制出一个独立进程，子进程继承父进程的状态但之后各跑各的，互不干扰",
-        "Secret redaction（敏感信息脱敏）：自动识别并隐藏令牌、密码等，防止 AI 日志或输出里意外泄露",
-        "Environment variable（环境变量）：程序启动时从系统读取的配置，适合放团队统一的默认值",
-        "Agent：不只是聊天，能持续执行任务、操作文件、调用工具的 AI 系统",
-        "Function Calling：AI 识别需要调用外部功能（如发通知、读文件）并生成结构化请求，而非只输出文字"
-      ],
-      "verticals": [],
-      "tags": [
-        "工具更新",
-        "Claude Code",
-        "Opus 5",
-        "Agent",
-        "开发者工具",
-        "更新",
-        "release",
-        "版本更新",
-        "编码助手",
-        "功能更新",
-        "CLI",
-        "插件"
       ]
     },
     {
@@ -7582,75 +8025,6 @@
       "tags": [
         "Agent",
         "Browser Use"
-      ]
-    },
-    {
-      "product_id": "product-2e9811576c09680e",
-      "product_name": "LLM",
-      "builder_name": "Simon Willison",
-      "first_seen": "2026-07-31",
-      "last_seen": "2026-08-05",
-      "occurrence_count": 2,
-      "intelligence_type": "builder_insight",
-      "evidence_status": "first_party",
-      "target_user": "未公开",
-      "user_problem": "未公开",
-      "what_it_is": "Simon Willison发布LLM 0.32，新增推理轨迹显示、服务端工具和OpenAI Responses支持，提升AI应用开发效率。",
-      "ai_role": "未公开",
-      "implementation_idea": "未公开",
-      "hands_on_exercise": "未公开",
-      "limitations_or_uncertainties": "未公开",
-      "region": "global",
-      "score": 9.0,
-      "summary": "Simon Willison发布LLM 0.32，新增推理轨迹显示、服务端工具和OpenAI Responses支持，提升AI应用开发效率。",
-      "title": "New release of LLM adds support for reasoning traces, OpenAI Responses, server-side tools, and smarter logging",
-      "url": "https://simonwillison.net/2026/Aug/4/new-release-of-llm/#atom-everything",
-      "sources": [
-        {
-          "url": "https://simonwillison.net/2026/Jul/30/llm-rc2/#atom-everything",
-          "title": "llm 0.32rc2",
-          "source_type": "rss",
-          "published_at": "2026-07-30T22:52:06+00:00"
-        },
-        {
-          "url": "https://simonwillison.net/2026/Aug/4/new-release-of-llm/#atom-everything",
-          "title": "New release of LLM adds support for reasoning traces, OpenAI Responses, server-side tools, and smarter logging",
-          "source_type": "rss",
-          "published_at": "2026-08-04T23:58:24+00:00"
-        },
-        {
-          "url": "https://simonwillison.net/2026/Aug/4/llm/#atom-everything",
-          "title": "llm 0.32",
-          "source_type": "supplemental",
-          "published_at": ""
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "llm-0.32rc2-release",
-          "date": "2026-07-31",
-          "title": "llm 0.32rc2",
-          "summary": "llm 0.32rc2发布，默认模型改为GPT-5.6 Luna，并新增openai endpoint命令，提升CLI工具的灵活性和性能。",
-          "score": 8.0,
-          "url": "https://simonwillison.net/2026/Jul/30/llm-rc2/#atom-everything"
-        },
-        {
-          "update_id": "llm-0.32-release",
-          "date": "2026-08-05",
-          "title": "New release of LLM adds support for reasoning traces, OpenAI Responses, server-side tools, and smarter logging",
-          "summary": "Simon Willison发布LLM 0.32，新增推理轨迹显示、服务端工具和OpenAI Responses支持，提升AI应用开发效率。",
-          "score": 9.0,
-          "url": "https://simonwillison.net/2026/Aug/4/new-release-of-llm/#atom-everything"
-        }
-      ],
-      "usage_flow": [],
-      "learning_points": [],
-      "verticals": [],
-      "tags": [
-        "开发者工具",
-        "CLI",
-        "LLM",
-        "推理轨迹"
       ]
     },
     {
