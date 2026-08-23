@@ -1,13 +1,13 @@
 {
   "version": 1,
-  "updated_at": "2026-08-22T01:51:13.937368+00:00",
+  "updated_at": "2026-08-23T02:00:36.449343+00:00",
   "products": [
     {
       "product_id": "product-30744df89361cf9c",
       "product_name": "Yana Bana",
       "builder_name": "Lenny Rachitsky",
       "first_seen": "2026-08-18",
-      "last_seen": "2026-08-22",
+      "last_seen": "2026-08-23",
       "occurrence_count": 1,
       "intelligence_type": "product_case",
       "evidence_status": "first_party",
@@ -70,6 +70,391 @@
         "独立开发者",
         "Codex",
         "时尚"
+      ]
+    },
+    {
+      "product_id": "product-00492d7489e5eb58",
+      "product_name": "Munder Difflin",
+      "builder_name": "simonpure",
+      "first_seen": "2026-08-23",
+      "last_seen": "2026-08-23",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "verified",
+      "target_user": "已有 Claude Code / Codex / Gemini CLI 等订阅的开发者，想降低多步骤编码任务的 token 消耗、提高可预测性",
+      "user_problem": "用多个 AI 编码代理协作时，每次运行结果随机、反复调试消耗大量 token，且代理之间'各干各的'容易冲突",
+      "what_it_is": "一个开源桌面应用，把 Claude Code、Codex 等现有编码代理包装成能互相协作的'办公室团队'，在本地运行，不用消耗额外 token 就能模拟任务流程。",
+      "ai_role": "多个编码代理（Claude Code/Codex 等）作为'员工'执行具体代码任务；一个协调层（Michael）统一接收你的指令并分发给其他代理",
+      "implementation_idea": "在真实代理外面套一层' harness（马具/框架）'，先把你的任务在本地用确定性规则跑一遍模拟，确认步骤没问题再调用真正的 AI；代理之间通过一个共享的'最快内存层'交换消息和记忆，避免重复提问。",
+      "hands_on_exercise": "30 分钟：如果你有 Claude Code 或 Codex CLI，按 https://munderdiffl.in/blog/how-to-install-and-use-munder-difflin/ 安装 Munder Difflin v0.4.4，连接一个编码代理，尝试用它的模拟模式跑一个简单任务（如'给项目加 README'），对比直接调用 CLI 的 token 消耗差异。",
+      "limitations_or_uncertainties": "GitHub stars 具体数字在不同来源有出入（2,500 vs 未明确）；'最快内存层'的具体技术实现未公开；Windows/Linux 支持是否完善未经验证；长期记忆的实际召回效果缺乏独立测试",
+      "region": "global",
+      "score": 8.5,
+      "summary": "开发者Chaitanya构建了本地多智能体协调工具Munder Difflin，可包装现有编码代理，模拟确定性且节省token，一周内吸引2万用户。",
+      "title": "Munder Difflin——在本地运行一群'克隆同事'帮你写代码的多智能体工具",
+      "url": "https://munderdiffl.in/",
+      "sources": [
+        {
+          "url": "https://munderdiffl.in/",
+          "title": "Munder Difflin – Agent harness to run an office of your clones",
+          "source_type": "hackernews",
+          "published_at": "2026-08-22T09:49:14+00:00"
+        },
+        {
+          "url": "https://github.com/chaitanyagiri/munder-difflin",
+          "title": "GitHub - chaitanyagiri/munder-difflin: local multi-agent ...",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://www.coddykit.com/pages/blog-detail?id=513014&slug=munder-difflin-the-open-source-multi-agent-harness-with-2-500-github-stars-that-",
+          "title": "Munder Difflin: The Open-Source Multi-Agent Harness With ...",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "munder-difflin-agent-harness",
+          "date": "2026-08-23",
+          "title": "Munder Difflin——在本地运行一群'克隆同事'帮你写代码的多智能体工具",
+          "summary": "开发者Chaitanya构建了本地多智能体协调工具Munder Difflin，可包装现有编码代理，模拟确定性且节省token，一周内吸引2万用户。",
+          "score": 8.5,
+          "url": "https://munderdiffl.in/"
+        }
+      ],
+      "usage_flow": [
+        "安装桌面应用，连接已有的编码代理 CLI（如 Claude Code）",
+        "给不同代理分配'办公室角色'（如 Dwight 负责执行、Michael 负责对接你）",
+        "在可视化 2D 办公室界面下发任务，先本地模拟运行看效果",
+        "确认流程后让真实代理执行，代理间自动传递上下文和记忆"
+      ],
+      "learning_points": [
+        "Agent（智能体）：能自主执行多步骤任务的 AI 程序，不只是单次问答",
+        "多智能体协调：多个 Agent 分工合作时，需要有人'派活'和同步信息，否则会打架",
+        "确定性模拟：用固定规则预演流程，比直接让 AI '瞎跑'更省 token、结果更可预测"
+      ],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "多智能体",
+        "开源"
+      ]
+    },
+    {
+      "product_id": "product-2e9811576c09680e",
+      "product_name": "llm",
+      "builder_name": "Simon Willison",
+      "first_seen": "2026-07-31",
+      "last_seen": "2026-08-23",
+      "occurrence_count": 4,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Simon Willison 发布命令行工具 llm 0.33，升级 OpenAI 库并新增 --key 参数支持。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.0,
+      "summary": "Simon Willison 发布命令行工具 llm 0.33，升级 OpenAI 库并新增 --key 参数支持。",
+      "title": "llm 0.33",
+      "url": "https://simonwillison.net/2026/Aug/22/llm/",
+      "sources": [
+        {
+          "url": "https://simonwillison.net/2026/Jul/30/llm-rc2/#atom-everything",
+          "title": "llm 0.32rc2",
+          "source_type": "rss",
+          "published_at": "2026-07-30T22:52:06+00:00"
+        },
+        {
+          "url": "https://simonwillison.net/2026/Aug/4/new-release-of-llm/#atom-everything",
+          "title": "New release of LLM adds support for reasoning traces, OpenAI Responses, server-side tools, and smarter logging",
+          "source_type": "rss",
+          "published_at": "2026-08-04T23:58:24+00:00"
+        },
+        {
+          "url": "https://simonwillison.net/2026/Aug/4/llm/#atom-everything",
+          "title": "llm 0.32",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://simonwillison.net/2026/Aug/21/llm/",
+          "title": "llm 0.32.1",
+          "source_type": "rss",
+          "published_at": "2026-08-21T17:16:13+00:00"
+        },
+        {
+          "url": "https://simonwillison.net/2026/Aug/22/llm/",
+          "title": "llm 0.33",
+          "source_type": "rss",
+          "published_at": "2026-08-22T17:01:16+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "llm-0.32rc2-release",
+          "date": "2026-07-31",
+          "title": "llm 0.32rc2",
+          "summary": "llm 0.32rc2发布，默认模型改为GPT-5.6 Luna，并新增openai endpoint命令，提升CLI工具的灵活性和性能。",
+          "score": 8.0,
+          "url": "https://simonwillison.net/2026/Jul/30/llm-rc2/#atom-everything"
+        },
+        {
+          "update_id": "llm-0.32-release",
+          "date": "2026-08-05",
+          "title": "New release of LLM adds support for reasoning traces, OpenAI Responses, server-side tools, and smarter logging",
+          "summary": "Simon Willison发布LLM 0.32，新增推理轨迹显示、服务端工具和OpenAI Responses支持，提升AI应用开发效率。",
+          "score": 9.0,
+          "url": "https://simonwillison.net/2026/Aug/4/new-release-of-llm/#atom-everything"
+        },
+        {
+          "update_id": "llm-0.32.1-release",
+          "date": "2026-08-22",
+          "title": "llm 0.32.1",
+          "summary": "llm命令行工具发布0.32.1修复依赖问题，确保工具可用。",
+          "score": 7.5,
+          "url": "https://simonwillison.net/2026/Aug/21/llm/"
+        },
+        {
+          "update_id": "llm-0.33-release",
+          "date": "2026-08-23",
+          "title": "llm 0.33",
+          "summary": "Simon Willison 发布命令行工具 llm 0.33，升级 OpenAI 库并新增 --key 参数支持。",
+          "score": 8.0,
+          "url": "https://simonwillison.net/2026/Aug/22/llm/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "开发者工具",
+        "CLI",
+        "LLM",
+        "推理轨迹"
+      ]
+    },
+    {
+      "product_id": "product-3ebd8d23bd6ea422",
+      "product_name": "Faraday",
+      "builder_name": "Anna Heim",
+      "first_seen": "2026-08-23",
+      "last_seen": "2026-08-23",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "DeepMind 校友创立的 Inherent 发布 AI 智能体 Faraday，声称在复现科研论文方面超越 Anthropic 和 OpenAI。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.0,
+      "summary": "DeepMind 校友创立的 Inherent 发布 AI 智能体 Faraday，声称在复现科研论文方面超越 Anthropic 和 OpenAI。",
+      "title": "Inherent, founded by DeepMind alumni, says its AI ‘teammate’ just outperformed Anthropic and OpenAI at replicating research",
+      "url": "https://techcrunch.com/2026/08/22/inherent-founded-by-deepmind-alumni-says-its-ai-teammate-just-outperformed-anthropic-and-openai-at-replicating-research/",
+      "sources": [
+        {
+          "url": "https://techcrunch.com/2026/08/22/inherent-founded-by-deepmind-alumni-says-its-ai-teammate-just-outperformed-anthropic-and-openai-at-replicating-research/",
+          "title": "Inherent, founded by DeepMind alumni, says its AI ‘teammate’ just outperformed Anthropic and OpenAI at replicating research",
+          "source_type": "rss",
+          "published_at": "2026-08-22T19:00:00+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "inherent-faraday-ai-agent",
+          "date": "2026-08-23",
+          "title": "Inherent, founded by DeepMind alumni, says its AI ‘teammate’ just outperformed Anthropic and OpenAI at replicating research",
+          "summary": "DeepMind 校友创立的 Inherent 发布 AI 智能体 Faraday，声称在复现科研论文方面超越 Anthropic 和 OpenAI。",
+          "score": 8.0,
+          "url": "https://techcrunch.com/2026/08/22/inherent-founded-by-deepmind-alumni-says-its-ai-teammate-just-outperformed-anthropic-and-openai-at-replicating-research/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "科研",
+        "AI 智能体"
+      ]
+    },
+    {
+      "product_id": "product-f72e709087406552",
+      "product_name": "Vercel AI SDK",
+      "builder_name": "github-actions[bot]",
+      "first_seen": "2026-07-26",
+      "last_seen": "2026-08-23",
+      "occurrence_count": 2,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Vercel AI SDK 更新了 Deepgram 集成，修复转录参数并调整说话人分离默认行为，开发者需注意配置变化。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.5,
+      "summary": "Vercel AI SDK 更新了 Deepgram 集成，修复转录参数并调整说话人分离默认行为，开发者需注意配置变化。",
+      "title": "vercel/ai released @ai-sdk/deepgram@3.1.0",
+      "url": "https://github.com/vercel/ai/releases/tag/%40ai-sdk/deepgram%403.1.0",
+      "sources": [
+        {
+          "url": "https://github.com/vercel/ai/releases/tag/%40ai-sdk/anthropic%404.0.20",
+          "title": "vercel/ai released @ai-sdk/anthropic@4.0.20",
+          "source_type": "github",
+          "published_at": "2026-07-24T17:25:31+00:00"
+        },
+        {
+          "url": "https://github.com/vercel/ai/releases/tag/%40ai-sdk/anthropic%403.0.102",
+          "title": "vercel/ai released @ai-sdk/anthropic@3.0.102",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://github.com/vercel/ai/releases/tag/%40ai-sdk/anthropic%402.0.91",
+          "title": "vercel/ai released @ai-sdk/anthropic@2.0.91",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://github.com/vercel/ai/releases/tag/%40ai-sdk/deepgram%403.1.0",
+          "title": "vercel/ai released @ai-sdk/deepgram@3.1.0",
+          "source_type": "github",
+          "published_at": "2026-08-23T01:45:50+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "vercel-ai-sdk-anthropic-4.0.20-features",
+          "date": "2026-07-26",
+          "title": "vercel/ai released @ai-sdk/anthropic@4.0.20",
+          "summary": "Vercel AI SDK 的 Anthropic 包 v4.0.20 新增 Claude Opus 5 模型、安全回退和对话中工具变更支持。",
+          "score": 8.0,
+          "url": "https://github.com/vercel/ai/releases/tag/%40ai-sdk/anthropic%404.0.20"
+        },
+        {
+          "update_id": "vercel-ai-deepgram-3.1.0",
+          "date": "2026-08-23",
+          "title": "vercel/ai released @ai-sdk/deepgram@3.1.0",
+          "summary": "Vercel AI SDK 更新了 Deepgram 集成，修复转录参数并调整说话人分离默认行为，开发者需注意配置变化。",
+          "score": 7.5,
+          "url": "https://github.com/vercel/ai/releases/tag/%40ai-sdk/deepgram%403.1.0"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "AI SDK",
+        "Vercel",
+        "Anthropic",
+        "Claude Opus 5",
+        "Vercel AI SDK",
+        "Deepgram",
+        "语音识别"
+      ]
+    },
+    {
+      "product_id": "product-2d38b9f85593e9a0",
+      "product_name": "HBS Foundry",
+      "builder_name": "Anthony Ha",
+      "first_seen": "2026-08-23",
+      "last_seen": "2026-08-23",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "哈佛商学院推出 699 美元创业训练营，用 AI 化身在模拟路演和董事会会议中提供反馈。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.5,
+      "summary": "哈佛商学院推出 699 美元创业训练营，用 AI 化身在模拟路演和董事会会议中提供反馈。",
+      "title": "Harvard’s $699 startup bootcamp offers AI avatars of its instructors",
+      "url": "https://techcrunch.com/2026/08/22/harvards-699-startup-bootcamp-offers-ai-avatars-of-its-instructors/",
+      "sources": [
+        {
+          "url": "https://techcrunch.com/2026/08/22/harvards-699-startup-bootcamp-offers-ai-avatars-of-its-instructors/",
+          "title": "Harvard’s $699 startup bootcamp offers AI avatars of its instructors",
+          "source_type": "rss",
+          "published_at": "2026-08-22T21:46:56+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "harvard-ai-avatar-bootcamp",
+          "date": "2026-08-23",
+          "title": "Harvard’s $699 startup bootcamp offers AI avatars of its instructors",
+          "summary": "哈佛商学院推出 699 美元创业训练营，用 AI 化身在模拟路演和董事会会议中提供反馈。",
+          "score": 7.5,
+          "url": "https://techcrunch.com/2026/08/22/harvards-699-startup-bootcamp-offers-ai-avatars-of-its-instructors/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "教育",
+        "AI 化身"
+      ]
+    },
+    {
+      "product_id": "product-3d2ca9e21e8cdd67",
+      "product_name": "Ox Alpha",
+      "builder_name": "虎嗅",
+      "first_seen": "2026-08-23",
+      "last_seen": "2026-08-23",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "神秘模型Ox Alpha刷屏，实测推理能力接近GLM-5，引发关注但官方信息未明。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "china",
+      "score": 7.5,
+      "summary": "神秘模型Ox Alpha刷屏，实测推理能力接近GLM-5，引发关注但官方信息未明。",
+      "title": "神秘“牛来”模型Ox Alpha刷屏，抢了DeepSeek头条，实测推理能力接近GLM-5 - 虎嗅",
+      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE44eWtMZkhGN3VCbG5oSkVoeDBaMFQ5SWpPQS03YUVZeEtmd3N0TlJtZFRiNU11bS1SQnFIRzVQODE5WFZYLXRwZEVwUnJ5eWZkRjlEMA?oc=5",
+      "sources": [
+        {
+          "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE44eWtMZkhGN3VCbG5oSkVoeDBaMFQ5SWpPQS03YUVZeEtmd3N0TlJtZFRiNU11bS1SQnFIRzVQODE5WFZYLXRwZEVwUnJ5eWZkRjlEMA?oc=5",
+          "title": "神秘“牛来”模型Ox Alpha刷屏，抢了DeepSeek头条，实测推理能力接近GLM-5 - 虎嗅",
+          "source_type": "google_news",
+          "published_at": "2026-08-22T07:56:44+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "ox-alpha-model-benchmark",
+          "date": "2026-08-23",
+          "title": "神秘“牛来”模型Ox Alpha刷屏，抢了DeepSeek头条，实测推理能力接近GLM-5 - 虎嗅",
+          "summary": "神秘模型Ox Alpha刷屏，实测推理能力接近GLM-5，引发关注但官方信息未明。",
+          "score": 7.5,
+          "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE44eWtMZkhGN3VCbG5oSkVoeDBaMFQ5SWpPQS03YUVZeEtmd3N0TlJtZFRiNU11bS1SQnFIRzVQODE5WFZYLXRwZEVwUnJ5eWZkRjlEMA?oc=5"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Ox Alpha",
+        "模型评测"
       ]
     },
     {
@@ -587,89 +972,6 @@
       "tags": [
         "多模态",
         "视觉模型"
-      ]
-    },
-    {
-      "product_id": "product-2e9811576c09680e",
-      "product_name": "llm",
-      "builder_name": "Simon Willison",
-      "first_seen": "2026-07-31",
-      "last_seen": "2026-08-22",
-      "occurrence_count": 3,
-      "intelligence_type": "builder_insight",
-      "evidence_status": "first_party",
-      "target_user": "未公开",
-      "user_problem": "未公开",
-      "what_it_is": "llm命令行工具发布0.32.1修复依赖问题，确保工具可用。",
-      "ai_role": "未公开",
-      "implementation_idea": "未公开",
-      "hands_on_exercise": "未公开",
-      "limitations_or_uncertainties": "未公开",
-      "region": "global",
-      "score": 7.5,
-      "summary": "llm命令行工具发布0.32.1修复依赖问题，确保工具可用。",
-      "title": "llm 0.32.1",
-      "url": "https://simonwillison.net/2026/Aug/21/llm/",
-      "sources": [
-        {
-          "url": "https://simonwillison.net/2026/Jul/30/llm-rc2/#atom-everything",
-          "title": "llm 0.32rc2",
-          "source_type": "rss",
-          "published_at": "2026-07-30T22:52:06+00:00"
-        },
-        {
-          "url": "https://simonwillison.net/2026/Aug/4/new-release-of-llm/#atom-everything",
-          "title": "New release of LLM adds support for reasoning traces, OpenAI Responses, server-side tools, and smarter logging",
-          "source_type": "rss",
-          "published_at": "2026-08-04T23:58:24+00:00"
-        },
-        {
-          "url": "https://simonwillison.net/2026/Aug/4/llm/#atom-everything",
-          "title": "llm 0.32",
-          "source_type": "supplemental",
-          "published_at": ""
-        },
-        {
-          "url": "https://simonwillison.net/2026/Aug/21/llm/",
-          "title": "llm 0.32.1",
-          "source_type": "rss",
-          "published_at": "2026-08-21T17:16:13+00:00"
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "llm-0.32rc2-release",
-          "date": "2026-07-31",
-          "title": "llm 0.32rc2",
-          "summary": "llm 0.32rc2发布，默认模型改为GPT-5.6 Luna，并新增openai endpoint命令，提升CLI工具的灵活性和性能。",
-          "score": 8.0,
-          "url": "https://simonwillison.net/2026/Jul/30/llm-rc2/#atom-everything"
-        },
-        {
-          "update_id": "llm-0.32-release",
-          "date": "2026-08-05",
-          "title": "New release of LLM adds support for reasoning traces, OpenAI Responses, server-side tools, and smarter logging",
-          "summary": "Simon Willison发布LLM 0.32，新增推理轨迹显示、服务端工具和OpenAI Responses支持，提升AI应用开发效率。",
-          "score": 9.0,
-          "url": "https://simonwillison.net/2026/Aug/4/new-release-of-llm/#atom-everything"
-        },
-        {
-          "update_id": "llm-0.32.1-release",
-          "date": "2026-08-22",
-          "title": "llm 0.32.1",
-          "summary": "llm命令行工具发布0.32.1修复依赖问题，确保工具可用。",
-          "score": 7.5,
-          "url": "https://simonwillison.net/2026/Aug/21/llm/"
-        }
-      ],
-      "usage_flow": [],
-      "learning_points": [],
-      "verticals": [],
-      "tags": [
-        "开发者工具",
-        "CLI",
-        "LLM",
-        "推理轨迹"
       ]
     },
     {
@@ -11831,67 +12133,6 @@
         "Anthropic",
         "模型发布",
         "Claude"
-      ]
-    },
-    {
-      "product_id": "product-f72e709087406552",
-      "product_name": "Vercel AI SDK",
-      "builder_name": "github-actions[bot]",
-      "first_seen": "2026-07-26",
-      "last_seen": "2026-07-26",
-      "occurrence_count": 1,
-      "intelligence_type": "model_capability",
-      "evidence_status": "first_party",
-      "target_user": "未公开",
-      "user_problem": "未公开",
-      "what_it_is": "Vercel AI SDK 的 Anthropic 包 v4.0.20 新增 Claude Opus 5 模型、安全回退和对话中工具变更支持。",
-      "ai_role": "未公开",
-      "implementation_idea": "未公开",
-      "hands_on_exercise": "未公开",
-      "limitations_or_uncertainties": "未公开",
-      "region": "global",
-      "score": 8.0,
-      "summary": "Vercel AI SDK 的 Anthropic 包 v4.0.20 新增 Claude Opus 5 模型、安全回退和对话中工具变更支持。",
-      "title": "vercel/ai released @ai-sdk/anthropic@4.0.20",
-      "url": "https://github.com/vercel/ai/releases/tag/%40ai-sdk/anthropic%404.0.20",
-      "sources": [
-        {
-          "url": "https://github.com/vercel/ai/releases/tag/%40ai-sdk/anthropic%404.0.20",
-          "title": "vercel/ai released @ai-sdk/anthropic@4.0.20",
-          "source_type": "github",
-          "published_at": "2026-07-24T17:25:31+00:00"
-        },
-        {
-          "url": "https://github.com/vercel/ai/releases/tag/%40ai-sdk/anthropic%403.0.102",
-          "title": "vercel/ai released @ai-sdk/anthropic@3.0.102",
-          "source_type": "supplemental",
-          "published_at": ""
-        },
-        {
-          "url": "https://github.com/vercel/ai/releases/tag/%40ai-sdk/anthropic%402.0.91",
-          "title": "vercel/ai released @ai-sdk/anthropic@2.0.91",
-          "source_type": "supplemental",
-          "published_at": ""
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "vercel-ai-sdk-anthropic-4.0.20-features",
-          "date": "2026-07-26",
-          "title": "vercel/ai released @ai-sdk/anthropic@4.0.20",
-          "summary": "Vercel AI SDK 的 Anthropic 包 v4.0.20 新增 Claude Opus 5 模型、安全回退和对话中工具变更支持。",
-          "score": 8.0,
-          "url": "https://github.com/vercel/ai/releases/tag/%40ai-sdk/anthropic%404.0.20"
-        }
-      ],
-      "usage_flow": [],
-      "learning_points": [],
-      "verticals": [],
-      "tags": [
-        "AI SDK",
-        "Vercel",
-        "Anthropic",
-        "Claude Opus 5"
       ]
     },
     {
