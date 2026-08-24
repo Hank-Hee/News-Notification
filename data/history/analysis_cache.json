@@ -1399,6 +1399,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "0a7236965f89ef7c262780a27d2f3225100eeed3e6c5035fb05a498e5496f55c": {
+      "created_at": "2026-08-24T01:57:49.273504+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "deepseek-weekend-pricing-savings",
+        "evidence_status": "reported",
+        "follow_up": "查找官方价格表或用户实测数据。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "google_news:article:9be5a5546102620b",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": false,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "DeepSeek",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "标题询问DeepSeek周末调价后API调用能省多少钱，但无具体计算或数据，仅为标题党式提问，缺乏实质内容。",
+        "region": "china",
+        "score": 6.5,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "新浪财经提问DeepSeek周末调价后API调用能省多少钱，但未提供具体省钱计算或数据。",
+        "tags": [
+          "DeepSeek",
+          "API",
+          "定价"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "0b3489065b8560f82b896252823d43c49dac74da7af131156eb68f9ec3c4ca30": {
       "created_at": "2026-08-05T03:32:19.709767+00:00",
       "model": "deepseek-v4-flash",
@@ -1432,6 +1471,44 @@
           "OpenAI",
           "SDK",
           "Agent"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "0b8a51967b46a6c696b995c42e104160c2870b61f64736cdc55e9462217355a9": {
+      "created_at": "2026-08-24T01:57:40.759614+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "deepseek-harness-tutorial",
+        "evidence_status": "reported",
+        "follow_up": "关注Harness的实际应用案例。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "google_news:article:c47e5254d10d68e1",
+        "intelligence_type": "builder_insight",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "DeepSeek Harness",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "DeepSeek Harness入门教程，涉及工具使用，对初学者有学习价值，但非官方一手，且无产品案例或用户反馈。",
+        "region": "china",
+        "score": 7.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "凤凰网科技发布DeepSeek Harness入门教程，帮助用户从基础到进阶使用该工具。",
+        "tags": [
+          "DeepSeek",
+          "教程"
         ],
         "target_user": "",
         "verticals": []
@@ -2799,6 +2876,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "1625d70924ae2528c7767a1663dc2bab3a035dcd9e04aa2bfa3f9e8c1bd260c3": {
+      "created_at": "2026-08-24T01:57:11.205400+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "everything-i-own-owned-agent",
+        "evidence_status": "first_party",
+        "follow_up": "关注更多个人Agent应用案例。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:49413320",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Hacker News高赞帖，展示个人用Claude控制智能家居设备的实际案例，有具体操作和反馈，体现AI Agent在个人场景的应用，对初学者有启发。",
+        "region": "global",
+        "score": 8.5,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "用户分享用Claude直接控制WiFi插座并刷固件的经历，20分钟完成原本需数小时的研究。",
+        "tags": [
+          "Agent",
+          "智能家居",
+          "个人案例"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "174040a677687f5445eec8ee1001814c4ed2f2dfa72793dd6a9bb9acc3d2420a": {
       "created_at": "2026-08-01T03:49:24.198081+00:00",
       "model": "deepseek-v4-flash",
@@ -2987,6 +3103,41 @@
         "verticals": []
       },
       "stage": "candidate_analysis"
+    },
+    "17eb344f571ca928ca45021e103032b53a4d03672294e45aa0989811c7acd246": {
+      "created_at": "2026-08-24T01:58:12.152990+00:00",
+      "model": "kimi-k2.6",
+      "prompt_version": "deep-v3-beginner",
+      "result": {
+        "ai_role": "ChatGPT 负责创意可视化（图像生成、文案、研究），Codex 负责「代替人操作复杂软件」和写代码——相当于一个会编程的实习生帮你搞定专业工具和网站开发",
+        "evidence_status": "first_party",
+        "hands_on_exercise": "30 分钟练习：手绘一个简单物品（杯子/椅子/帽子），用 ChatGPT 的图像生成写一段详细描述（材质、光影、使用场景），对比「随便说」和「写规格书式提示词」的输出差异；再用 ChatGPT/Codex 尝试生成一个简单的 HTML 产品展示页",
+        "implementation_idea": "核心思路是「提示词即产品规格书」：先把设计意图描述得越精确，AI 输出越准；再用 Codex 这个 AI Agent（能自主规划步骤、调用工具的 AI 助手）绕过学习专业软件的高门槛，直接让 AI 替你点按钮、调参数、出文件",
+        "learning_points": [
+          "Prompt Engineering（提示词工程）：不是随便描述，而是把「好结果的标准」写清楚，AI 才能对齐你的意图",
+          "AI Agent：不只是聊天，而是能自主执行多步任务、操作外部工具的 AI，这里 Codex 就是帮你「用」软件而不是「学」软件",
+          "Image-to-3D 工作流：从 2D 草图到可制造的 3D 模型，中间需要精确的规格描述和格式转换，AI 缩短了但还没完全消灭这个鸿沟"
+        ],
+        "limitations_or_uncertainties": "未公开具体用了 Codex 的哪个版本（Claude 还是 OpenAI 的 Codex）、未公开 3D 打印最终是否成功量产、未公开电商网站的访问量和实际预售金额、未确认 CLO 文件是否需要人工后期修正",
+        "product_name": "Yana Bana",
+        "sources": [
+          "https://www.lennysnewsletter.com/p/how-i-ai-how-a-solo-founder-used",
+          "https://youtu.be/P03ZNceXe2A",
+          "https://open.spotify.com/episode/3rlEhq0kKimh7zaJRcKCLn",
+          "https://podcasts.apple.com/us/podcast/how-a-solo-founder-used-codex-and-chatgpt-to/id1809663079?i=1000783850948"
+        ],
+        "target_users": "想独立做产品的非技术创始人、设计师、创意工作者",
+        "title_zh": "独立创始人如何用 Codex 和 ChatGPT 零工程师打造 AI 时尚品牌",
+        "usage_flow": [
+          "手绘服装草图，用 ChatGPT 生成详细的「时尚提示词」（描述轮廓、面料动态、甚至声音）",
+          "ChatGPT Images 2.0 根据草图生成忠于原设计的产品效果图",
+          "用 Codex（AI 编程 Agent，能自动写代码并执行）操作专业 3D 软件 CLO，生成 3D 打印用的 CAD 文件",
+          "ChatGPT 辅助研究联系制造商，Codex 搭建含投票和支付功能的预售电商网站"
+        ],
+        "user_problem": "没有工程师团队，一个人无法把设计草图变成可生产的 3D 模型、产品图和电商网站",
+        "what_it_is": "一期播客/文章，记录 Yana Welinder 单人用 AI 工具完成从手绘草图到 3D 打印和电商网站的全流程创业"
+      },
+      "stage": "deep_analysis"
     },
     "17f5d7a7942e118d50cc4ebfbdd9c27495b64a0e12462b7b1320f34900eef6b3": {
       "created_at": "2026-08-02T03:52:32.503821+00:00",
@@ -4138,6 +4289,45 @@
           "LLM",
           "编码实践",
           "认知债务"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "1f7b30a7201922acc64952b67856598df4c2cd4be25d56fb98a057bb29d7e4ad": {
+      "created_at": "2026-08-24T01:57:11.205474+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "agent-md-llm-code-quality",
+        "evidence_status": "first_party",
+        "follow_up": "关注该规则集的实际效果和社区反馈。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:49410932",
+        "intelligence_type": "builder_insight",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "作者分享agent.md文件以提升LLM辅助代码质量，包含具体规则和社区讨论，对构建者有实用价值。",
+        "region": "global",
+        "score": 7.5,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "开发者分享agent.md规则集，用于指导LLM生成更规范的代码。",
+        "tags": [
+          "LLM",
+          "代码质量",
+          "构建者实践"
         ],
         "target_user": "",
         "verticals": []
@@ -5403,6 +5593,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "27cd16a237a9f75b347a8bbff035c363904435d9ad188acdc27635f9e342014c": {
+      "created_at": "2026-08-24T01:57:26.041421+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "gpt2-cmake-implementation",
+        "evidence_status": "first_party",
+        "follow_up": "无",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:49412909",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "用CMake实现GPT-2，属于技术趣味项目，但无实际产品价值，评论多质疑实用性，增量有限。",
+        "region": "global",
+        "score": 5.5,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "开发者用纯CMake实现GPT-2，属于技术趣味项目，但无实际产品价值，评论多质疑实用性，增量有限。",
+        "tags": [
+          "GPT-2",
+          "CMake",
+          "趣味项目"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "27e1c28aad58694966acbbc721620185931eb9213ac837c80cd3bfa0dc96d396": {
       "created_at": "2026-07-27T04:14:53.893710+00:00",
       "model": "deepseek-v4-flash",
@@ -5511,6 +5740,45 @@
         "tags": [
           "Codex",
           "版本发布"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "2891050fb11ab6b9ca9cd47c1f76cad99310d98a38595a221172ccb5dab2be65": {
+      "created_at": "2026-08-24T01:57:11.205069+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "ai-training-copyright-legal-analysis",
+        "evidence_status": "reported",
+        "follow_up": "关注相关法律政策变化。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:b9704339a98bb856",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "讨论AI训练版权法律问题，属于行业评论，无直接产品增量，价值较低。",
+        "region": "global",
+        "score": 5.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "文章探讨AI模型训练使用版权书籍的合法性问题，但无具体产品信息。",
+        "tags": [
+          "版权",
+          "法律",
+          "行业评论"
         ],
         "target_user": "",
         "verticals": []
@@ -5817,6 +6085,45 @@
           "Codex",
           "Agent",
           "alpha"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "2c1b845117f3ed00b33395ac86a1671a6f1dfab3b11c329fbbe1efc3f2eb91a4": {
+      "created_at": "2026-08-24T01:57:26.041775+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "vibe-tax-ai-coding",
+        "evidence_status": "first_party",
+        "follow_up": "关注后续对AI编码工具改进的讨论。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:49411199",
+        "intelligence_type": "builder_insight",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "作者提出“Vibe Tax”概念，讨论AI辅助编码的隐性成本，有实践观察和社区共鸣，对AI产品设计有启发。",
+        "region": "global",
+        "score": 8.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "作者提出“Vibe Tax”概念，讨论AI辅助编码的隐性成本，有实践观察和社区共鸣，对AI产品设计有启发。",
+        "tags": [
+          "AI编程",
+          "Vibe Tax",
+          "开发者体验"
         ],
         "target_user": "",
         "verticals": []
@@ -6455,6 +6762,44 @@
         "summary_zh": "文章介绍DeepSeek-V4-Flash正式版的技术亮点，但内容可能不完整。",
         "tags": [
           "模型技术"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "31149bec40e007781f633823cca32ea6f31c8a4bb3357c94fcb81f9e6e4f155f": {
+      "created_at": "2026-08-24T01:57:11.205277+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-codex-rust-v0.149.0-alpha.4.3",
+        "evidence_status": "first_party",
+        "follow_up": "关注正式版发布。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "github:release:375357603",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Codex",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI Codex的alpha版本更新，无实质内容，价值低。",
+        "region": "global",
+        "score": 4.5,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "OpenAI Codex发布alpha版本rust-v0.149.0-alpha.4.3。",
+        "tags": [
+          "Codex",
+          "版本更新"
         ],
         "target_user": "",
         "verticals": []
@@ -9118,6 +9463,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "46aad8e76d4e056a4814b7be3d5a42096bf4f79a7cb80477ee04d2fdba0dbe4d": {
+      "created_at": "2026-08-24T01:57:40.759761+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "deepseek-api-pricing-competitiveness",
+        "evidence_status": "reported",
+        "follow_up": "关注价格调整后的市场份额变化。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "google_news:article:602af9705382920f",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "DeepSeek",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "讨论DeepSeek API价格调整对市场竞争力的影响，属于行业评论，无产品增量。",
+        "region": "china",
+        "score": 6.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "分析DeepSeek API价格调整对其市场竞争力的影响。",
+        "tags": [
+          "API定价",
+          "DeepSeek"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "46b63b88d5094dd9cf1c4cf59a44b653951d3c83664c72af059c49b9b55ca80c": {
       "created_at": "2026-08-17T01:55:13.927744+00:00",
       "model": "deepseek-v4-flash",
@@ -10418,6 +10801,44 @@
           "AI SDK",
           "Moonshot",
           "工具调用"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "50bcbad4f3fbe26671163b1bb0b010e47e1fb1078d4abc36100d59a5ead0207c": {
+      "created_at": "2026-08-24T01:57:40.759465+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "deepseek-api-pricing-adjustment",
+        "evidence_status": "reported",
+        "follow_up": "关注调价后开发者使用量变化及市场反应。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "google_news:article:e1537c7bef886b26",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "DeepSeek",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "DeepSeek调价方案落地，涉及API定价调整，属于模型公司商业动态，但内容为财经媒体报道，无产品细节或用户反馈，对产品经理的增量有限。",
+        "region": "china",
+        "score": 6.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "DeepSeek调整API定价，引发国产大模型价格战拐点讨论，值得关注定价策略变化。",
+        "tags": [
+          "API定价",
+          "DeepSeek"
         ],
         "target_user": "",
         "verticals": []
@@ -11754,6 +12175,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "5ae6106a875a5225e86f1e45e1514476cd85076a8c700a6b99e85f3a1f81c180": {
+      "created_at": "2026-08-24T01:57:26.041885+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "deepseek-alternatives-list",
+        "evidence_status": "reported",
+        "follow_up": "无",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "google_news:article:f05ff804805a8b1e",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": false,
+        "is_promotional": true,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "标题党文章，列举DeepSeek替代品，无实质内容，低质量转载。",
+        "region": "china",
+        "score": 3.0,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "一篇标题党文章，列举DeepSeek替代品，无实质内容，低质量转载。",
+        "tags": [
+          "DeepSeek",
+          "替代品"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "5af513cdd9a89a89aabc8a723c99f451cd9549011ce926fbccf95122aac5c48d": {
       "created_at": "2026-08-02T03:52:45.120585+00:00",
       "model": "deepseek-v4-flash",
@@ -12548,6 +13007,45 @@
         "tags": [
           "AI协作",
           "观点"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "5ed62efb67dd62a5a73536463de5a2d1b673318ecb09fa125a58d20f3d8d6150": {
+      "created_at": "2026-08-24T01:57:26.041632+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "ai-infrastructure-engineering",
+        "evidence_status": "first_party",
+        "follow_up": "关注AI在基础设施领域的更多实践案例。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:49411024",
+        "intelligence_type": "builder_insight",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "作者分享AI对基础设施工程的影响，结合个人经验，有实践洞察，但偏个人感悟，可迁移性一般。",
+        "region": "global",
+        "score": 7.5,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "作者分享AI对基础设施工程的影响，结合个人经验，有实践洞察，但偏个人感悟，可迁移性一般。",
+        "tags": [
+          "AI",
+          "基础设施",
+          "工程实践"
         ],
         "target_user": "",
         "verticals": []
@@ -15716,6 +16214,82 @@
       },
       "stage": "candidate_analysis"
     },
+    "73677539f8c9090f2360084aa6e137f71146bb3f634baf4616cc8abae9917707": {
+      "created_at": "2026-08-24T01:57:49.273452+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "deepseek-v4-weekend-pricing",
+        "evidence_status": "reported",
+        "follow_up": "关注官方公告获取具体价格和适用范围。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "google_news:article:81de7f3f9eb696d5",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": false,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "DeepSeek V4",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "标题提及DeepSeek V4涨价后推出周末全天空闲价，但内容仅为新闻聚合标题，无具体价格数据、官方公告或产品细节，属于低信息量转载。",
+        "region": "china",
+        "score": 6.5,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "新浪网报道DeepSeek V4涨价后推出周末全天空闲价，但缺乏具体细节，价值有限。",
+        "tags": [
+          "DeepSeek",
+          "定价"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "7379e52d3fd532a1b2f537704fe14ecb17b55daf76c6ad96c74cbaed41523843": {
+      "created_at": "2026-08-24T01:57:11.205013+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "ox-alpha-stealth-model-speculation",
+        "evidence_status": "reported",
+        "follow_up": "关注Ox Alpha的正式发布或更多技术细节。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:357dc23c72f8aaf5",
+        "intelligence_type": "early_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Ox Alpha",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "TechCrunch报道神秘模型Ox Alpha引发猜测，但无实质信息，属于早期信号，价值有限。",
+        "region": "global",
+        "score": 5.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "TechCrunch报道神秘模型Ox Alpha引发网络猜测，但缺乏具体细节。",
+        "tags": [
+          "模型",
+          "早期信号"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "73c6ee86096eadc553f9bc25a72d6f25eec90f9f05bef4bb68954972d97e4460": {
       "created_at": "2026-08-21T01:56:51.831270+00:00",
       "model": "deepseek-v4-flash",
@@ -16939,6 +17513,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "7b530a0a2b51a0b7ac128fca6a61289cb102de4c0744d3642d5d820b69bf6577": {
+      "created_at": "2026-08-24T01:57:49.273601+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "deepseek-price-adjustment-again",
+        "evidence_status": "early_signal",
+        "follow_up": "关注官方公告获取具体调价内容。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "google_news:article:6a85f5a1b2797ad2",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": false,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "DeepSeek",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "标题'DeepSeek，再次调价'表明又一次调价，但无具体细节，与上一条重复，信息增量低。",
+        "region": "china",
+        "score": 6.5,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "新浪财经报道DeepSeek再次调价，但缺乏具体价格信息。",
+        "tags": [
+          "DeepSeek",
+          "定价"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "7ba2abd906a3440cb447b70c4ccbf8889f523e6ec68aed0063887fe60e692b6f": {
       "created_at": "2026-08-01T03:49:24.198264+00:00",
       "model": "deepseek-v4-flash",
@@ -17468,6 +18080,44 @@
           "OpenAI",
           "数学",
           "研究"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "7dfd219925d84b53b3627fdb1e0d01f26d27007f7a05728f34bf605f106aca56": {
+      "created_at": "2026-08-24T01:57:49.273567+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "deepseek-price-adjustment",
+        "evidence_status": "early_signal",
+        "follow_up": "关注官方公告获取具体调价幅度和影响。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "google_news:article:8b4a167f70fd56b8",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "DeepSeek",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "标题明确'今天起，DeepSeek调价'，表明有实际定价变动，但内容仅为标题，无具体价格细节，属于早期信号，但定价变动对开发者有实际影响。",
+        "region": "china",
+        "score": 7.0,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "新浪财经报道DeepSeek今日起调价，但未提供具体价格变化细节。",
+        "tags": [
+          "DeepSeek",
+          "定价"
         ],
         "target_user": "",
         "verticals": []
@@ -20119,6 +20769,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "918b3e8253e8c9e26364cff0c229bc966a1ae8996080b8097a8039e4b1cb5506": {
+      "created_at": "2026-08-24T01:57:26.041356+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "harness-accounting-agents-cli",
+        "evidence_status": "first_party",
+        "follow_up": "关注其CLI设计细节及后续对代理交互的改进。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:49409092",
+        "intelligence_type": "builder_insight",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "作者分享为会计代理构建内部CLI的经验，强调CLI对代理的价值，属于构建者一手实践，有明确场景和反馈。",
+        "region": "global",
+        "score": 8.2,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "作者分享为会计代理构建内部CLI的经验，强调CLI对代理的价值，属于构建者一手实践，有明确场景和反馈。",
+        "tags": [
+          "Agent",
+          "CLI",
+          "Harness"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "923d1e18832f4b096d2a5ebcd005d335eb956f9aa0c8d76cc27f0db2f1e496ac": {
       "created_at": "2026-07-28T03:49:03.132229+00:00",
       "model": "deepseek-v4-flash",
@@ -20151,6 +20840,45 @@
         "tags": [
           "语音",
           "编码代理"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "928c814ff2d00692e91bd39695f86094507998b352781d6ea47f031d73939180": {
+      "created_at": "2026-08-24T01:57:11.205042+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "linkdaze-smart-calendar-launch",
+        "evidence_status": "reported",
+        "follow_up": "观察用户反馈和产品迭代。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:4d20379390653b1f",
+        "intelligence_type": "product_case",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Linkdaze",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Linkdaze智能日历产品，包含AI膳食规划功能且不设付费墙，有明确产品功能和用户价值，属于可借鉴的产品案例。",
+        "region": "global",
+        "score": 7.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Linkdaze推出智能日历，内置AI膳食规划且免费，旨在管理家庭事务。",
+        "tags": [
+          "智能日历",
+          "AI膳食规划",
+          "产品案例"
         ],
         "target_user": "",
         "verticals": []
@@ -20609,6 +21337,44 @@
           "DeepSeek",
           "用户反馈",
           "讨论"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "956ecbe21d32ee6b9bb5ebf493405ed9bc4caa77d6bce080860831b4cde348b3": {
+      "created_at": "2026-08-24T01:57:11.205261+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-codex-rust-v0.149.1",
+        "evidence_status": "first_party",
+        "follow_up": "关注后续版本的功能改进。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "github:release:375371090",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Codex",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI Codex的常规版本更新，无重大功能变化，价值较低。",
+        "region": "global",
+        "score": 5.0,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "OpenAI Codex发布rust-v0.149.1版本，为常规更新。",
+        "tags": [
+          "Codex",
+          "版本更新"
         ],
         "target_user": "",
         "verticals": []
@@ -22092,6 +22858,46 @@
       },
       "stage": "candidate_analysis"
     },
+    "9e49e41748310ecb49270c2a82a5ed8db4aa69cb3c0314f30c17c96ea3cce94e": {
+      "created_at": "2026-08-24T01:57:11.205178+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "anthropic-openai-revenue-2026-07",
+        "evidence_status": "reported",
+        "follow_up": "关注后续季度营收和模型采用趋势。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:simonwillison.net_atom_everything_:99acd73254864f62",
+        "intelligence_type": "market_signal",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Simon Willison引用FT数据，提供Anthropic和OpenAI的营收、客户数等关键指标，以及Ramp AI指数，属于高价值市场信号。",
+        "region": "global",
+        "score": 8.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Anthropic年化收入达650亿美元，OpenAI超400亿，并引用Ramp AI指数分析模型采用情况。",
+        "tags": [
+          "Anthropic",
+          "OpenAI",
+          "营收",
+          "市场信号"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "9e915a45aa1e35bb910fa2100d422304b712b126688bbf89cc44acd186a28b1a": {
       "created_at": "2026-08-18T01:50:29.176116+00:00",
       "model": "deepseek-v4-flash",
@@ -22434,6 +23240,45 @@
           "Qwen",
           "模型能力",
           "基准测试"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "a1164bc52503ee0b755e1ecf8e9ca7769a3fcbd9607e40c4346e7849ad8ca0bc": {
+      "created_at": "2026-08-24T01:57:40.759686+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "deepseek-openai-api-price-cut",
+        "evidence_status": "reported",
+        "follow_up": "关注价格战对AI产品开发成本的影响。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "google_news:article:90f336d818821e46",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "DeepSeek",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "DeepSeek和OpenAI相继下调API价格，属于行业定价动态，对开发者成本有影响，但无产品细节。",
+        "region": "global",
+        "score": 6.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "DeepSeek和OpenAI相继下调大模型API价格，降低开发者使用成本。",
+        "tags": [
+          "API定价",
+          "DeepSeek",
+          "OpenAI"
         ],
         "target_user": "",
         "verticals": []
@@ -23871,6 +24716,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "a80b17a7915dc68e9c62bb3cde40d4093169740f7ed05de6905d5c5570edad63": {
+      "created_at": "2026-08-24T01:57:40.759660+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "deepseek-api-pricing-weekend-low",
+        "evidence_status": "reported",
+        "follow_up": "关注价格调整对开发者生态的影响。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "google_news:article:3488f3f479996722",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "DeepSeek",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "DeepSeek再调API计费，周末全天低谷价，属于定价策略，对开发者有影响，但无产品创新。",
+        "region": "china",
+        "score": 6.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "DeepSeek再次调整API计费，周末全天执行低谷价，降低调用成本。",
+        "tags": [
+          "API定价",
+          "DeepSeek"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "a811c3e534f41107ab3655175e232fe331c24b133196416968edf479b0141b39": {
       "created_at": "2026-08-07T03:15:46.703423+00:00",
       "model": "deepseek-v4-flash",
@@ -24175,6 +25058,44 @@
           "OpenAI",
           "Codex",
           "Agent"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "ab3bdf64c0b56d222ccf3b22c80eb1257eca6a2a62409cff31437dcbd8d7a70f": {
+      "created_at": "2026-08-24T01:57:11.204969+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openrouter-model-rankings-2026-08",
+        "evidence_status": "first_party",
+        "follow_up": "关注排名变化及新模型的实际应用案例。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "public_web:ranking:b0ab1ec5ca2d10da9cfa",
+        "intelligence_type": "market_signal",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenRouter官方模型热度排名，列出Ox Alpha、DeepSeek V4 Flash、小米MiMo-V2.5、腾讯Hy3等模型，但缺乏具体产品案例或用户反馈，信息密度低，仅作为市场信号参考。",
+        "region": "global",
+        "score": 6.5,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "OpenRouter发布模型热度Top5，展示当前热门模型，但无具体产品落地信息。",
+        "tags": [
+          "模型排行",
+          "市场信号"
         ],
         "target_user": "",
         "verticals": []
@@ -26131,6 +27052,45 @@
       },
       "stage": "deep_analysis"
     },
+    "b95c6d362aa2332a5c24643e86398eda398d1421c8f87e625690fab862a220d2": {
+      "created_at": "2026-08-24T01:57:26.041516+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "eeg-silent-reading-decoding",
+        "evidence_status": "reported",
+        "follow_up": "关注后续技术成熟度及伦理讨论。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:49412176",
+        "intelligence_type": "model_capability",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "非侵入式EEG解码默读，属于前沿研究，但无产品落地，且引发隐私担忧，对AI产品经理参考价值有限。",
+        "region": "global",
+        "score": 6.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "研究团队用非侵入式EEG解码默读，属于前沿研究，但无产品落地，且引发隐私担忧，对AI产品经理参考价值有限。",
+        "tags": [
+          "EEG",
+          "BCI",
+          "研究"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "b9941155e6727ea20d41c1ba7c394aa23102713bcea4ce7c26e05533fac28c16": {
       "created_at": "2026-07-30T03:27:45.921814+00:00",
       "model": "deepseek-v4-flash",
@@ -26162,6 +27122,44 @@
         "summary_zh": "AI新闻汇总，提及OpenAI agent安全事件，但信息零散。",
         "tags": [
           "AI新闻"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "ba50ee2b2b8992b6a98e581709e46bd73e815bb50c6fc10043c043edd2bc86ac": {
+      "created_at": "2026-08-24T01:57:40.759724+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "deepseek-value-pricing",
+        "evidence_status": "reported",
+        "follow_up": "关注价值定价对AI产品商业模式的影响。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "google_news:article:c5cfc60ce0c25f5f",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "DeepSeek",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "DeepSeek计费调整，大模型开启价值定价，属于行业分析，对理解定价趋势有帮助，但无产品案例。",
+        "region": "china",
+        "score": 6.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "DeepSeek调整计费，大模型开启价值定价，分析谁将受益。",
+        "tags": [
+          "API定价",
+          "DeepSeek"
         ],
         "target_user": "",
         "verticals": []
@@ -26962,6 +27960,45 @@
         "tags": [
           "隐私",
           "法律"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "c2187a511a5655cff6f30602575af566f476adc494fbeb38609f1ff14d430931": {
+      "created_at": "2026-08-24T01:57:26.041845+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "afterlid-macos-lid-closed",
+        "evidence_status": "first_party",
+        "follow_up": "关注其后续用户反馈和稳定性。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:49411044",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Afterlid",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Show HN展示macOS合盖运行工具，解决本地AI运行等场景，有明确产品逻辑和边界设计，但评论少，属于早期产品。",
+        "region": "global",
+        "score": 7.2,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "开发者展示macOS合盖运行工具Afterlid，解决本地AI运行等场景，有明确产品逻辑和边界设计，但评论少，属于早期产品。",
+        "tags": [
+          "macOS",
+          "本地AI",
+          "工具"
         ],
         "target_user": "",
         "verticals": []
@@ -27846,6 +28883,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "c86cd2791275a8b2e96455e1a2642dce538b80be2ed42925c296eda4a678a9cc": {
+      "created_at": "2026-08-24T01:57:26.041794+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "mnemosyne-memory-engine",
+        "evidence_status": "first_party",
+        "follow_up": "关注其后续用户反馈和功能迭代。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:49410254",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Mnemosyne",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Show HN展示本地分层记忆引擎，MCP原生，有明确产品形态，但评论少，反馈有限，属于早期信号。",
+        "region": "global",
+        "score": 7.0,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "开发者展示本地分层记忆引擎Mnemosyne，支持MCP原生，但评论少，反馈有限，属于早期信号。",
+        "tags": [
+          "记忆引擎",
+          "MCP",
+          "Agent"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "c8a5015472222379373697852456174788555043361243198612d150e2f4dfa4": {
       "created_at": "2026-07-25T16:38:29.697861+00:00",
       "model": "deepseek-v4-flash",
@@ -28037,6 +29113,39 @@
       },
       "stage": "candidate_analysis"
     },
+    "c9a4f11e9ebf1229e61b342aa93ac7e9b08faf7b65c66b9629158fe56f5fa367": {
+      "created_at": "2026-08-24T01:58:30.718151+00:00",
+      "model": "kimi-k2.6",
+      "prompt_version": "deep-v3-beginner",
+      "result": {
+        "ai_role": "AI 充当 Agent（智能体）：理解目标→自主搜索信息→生成并执行命令→调用外部工具完成固件刷写，用户只负责点'批准'",
+        "evidence_status": "reported",
+        "hands_on_exercise": "30 分钟体验：在本地装个 Python 环境，用 Claude 的 API 或网页版，让它帮你写一段'扫描家里同网段有哪些设备开了 80/22 端口'的脚本。你复制粘贴运行，把结果给它，再让它解释这些设备可能是啥。感受'给目标→AI 出方案→你执行→再反馈'的循环。不要真刷固件，先熟悉流程",
+        "implementation_idea": "核心是让 Claude 获得'命令执行权限'，变成能动手干活的 Agent。用户给目标（控制这个设备），AI 自己拆成步骤：探测设备→找对应刷写工具→下载固件→执行刷写。每次执行危险操作前问用户'可以吗'，形成'人机回环'。作者没写具体怎么接的，但关键是 Claude 能访问局域网、运行命令行工具",
+        "learning_points": [
+          "Agent：不只是聊天回答，而是能自己规划步骤、调用工具、完成多步任务的 AI",
+          "Function Calling / 工具调用：AI 生成'要运行某命令'的结构化请求，外部系统执行后把结果喂回给 AI，让它继续下一步",
+          "人机回环（Human-in-the-loop）：AI 做决策但关键操作要人点确认，防止搞坏设备——作者提到 8 次命令批准就是这个机制"
+        ],
+        "limitations_or_uncertainties": "作者未公开具体技术细节：Claude 是通过什么方式执行命令的（本地终端？SSH？某插件？）、用了哪个刷写库、设备具体型号；'20 分钟'和'8 次批准'是作者自述，无第三方验证；评论区有人提醒刷固件有变砖风险，作者案例成功不代表可复现",
+        "product_name": "Claude",
+        "sources": [
+          "https://schlarp.com/posts/everything-i-own-owned/",
+          "https://web.archive.org/web/20260823225933/https://schlarp.com/posts/everything-i-own-owned/"
+        ],
+        "target_users": "想折腾智能家居但不想花大量时间研究固件和命令行的个人用户",
+        "title_zh": "用 Claude 20 分钟给 WiFi 插座刷固件",
+        "usage_flow": [
+          "用户告诉 Claude：'LAN 上有个 WiFi 插座继电器，IP 是 xxx，直接控制它'",
+          "Claude 分析后向用户请求批准执行命令（约 8 次）",
+          "Claude 自己找到并调用现成的设备固件刷写库",
+          "20 分钟后新固件运行，插座可被控制"
+        ],
+        "user_problem": "作者有个 WiFi 插座继电器，想让它控制熔岩灯，但手动研究固件刷写需要数小时，过程枯燥且不想学",
+        "what_it_is": "一篇个人博客，记录作者让 Claude（Anthropic 的 AI 助手）直接控制局域网设备、自动完成固件研究和刷写的真实经历"
+      },
+      "stage": "deep_analysis"
+    },
     "c9b2a405adfc02f4f10dfa87067167d92fed3e18e60afc5dc77c1c0b120f2622": {
       "created_at": "2026-07-26T04:07:17.345834+00:00",
       "model": "deepseek-v4-flash",
@@ -28152,6 +29261,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "c9d00e835506d5c6c9109d06ea4a944d1e865080d543ceab0c1f5ba44e2acf6d": {
+      "created_at": "2026-08-24T01:57:40.759542+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "deepseek-api-pricing-adjustment-aug23",
+        "evidence_status": "reported",
+        "follow_up": "关注新计费规则对开发者成本结构的影响。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "google_news:article:dd205c62d865f28d",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "DeepSeek",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "DeepSeek API计费再调整，新规8月23日起执行，属于定价变动，对开发者有直接影响，但无产品层面增量。",
+        "region": "china",
+        "score": 6.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "DeepSeek调整API计费规则，新规8月23日执行，周末全天低谷价。",
+        "tags": [
+          "API定价",
+          "DeepSeek"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "c9fc6df5070adb5d26a00e3377ceb0351b885bd4b3bc1858f1ec4fa978333afe": {
       "created_at": "2026-07-28T03:48:25.674635+00:00",
       "model": "deepseek-v4-flash",
@@ -28182,6 +29329,44 @@
         "summary": null,
         "summary_zh": "Anthropic发布Cognizant相关新闻，但内容不详。",
         "tags": [],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "ca1d3e4fe893c7fffd6014b5109f36665b7a1abe03f0e1c82826dd33bfd75119": {
+      "created_at": "2026-08-24T01:57:49.273534+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "deepseek-air-conditioner-ranking",
+        "evidence_status": "reported",
+        "follow_up": "忽略此类内容。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "google_news:article:84be9e832f165c9f",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": false,
+        "is_promotional": true,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "标题为'DeepSeek分析:空调哪个品牌质量好?2025年空调品牌排行榜前十名'，明显是营销内容，与AI产品无关，无任何产品增量。",
+        "region": "china",
+        "score": 2.0,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "新浪网发布DeepSeek分析空调品牌排行榜的营销内容，与AI产品无关，价值极低。",
+        "tags": [
+          "营销",
+          "无关"
+        ],
         "target_user": "",
         "verticals": []
       },
@@ -28299,6 +29484,44 @@
           "Anthropic",
           "AI信任",
           "行业观点"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "cbe4936fb5023e74c4a17a86e001b6af9e5d86c8c1ce38ca9d70dec687bfd62f": {
+      "created_at": "2026-08-24T01:57:40.759504+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "deepseek-api-weekend-half-price",
+        "evidence_status": "reported",
+        "follow_up": "观察半价策略对API调用量的刺激效果。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "google_news:article:0d9132580720cc3f",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "DeepSeek",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "DeepSeek周末API半价，全天划入空闲时段，属于定价策略调整，对开发者成本有影响，但无产品创新或用户反馈。",
+        "region": "china",
+        "score": 6.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "DeepSeek推出周末API半价，将全天视为空闲时段，降低开发者调用成本。",
+        "tags": [
+          "API定价",
+          "DeepSeek"
         ],
         "target_user": "",
         "verticals": []
@@ -30640,6 +31863,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "df99e65ca2e08f36f8db4ed79799ad7816a812d483d8ee5dfb9e587a2f1f6ddd": {
+      "created_at": "2026-08-24T01:57:40.759785+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "deepseek-api-weekend-no-peak-valley",
+        "evidence_status": "reported",
+        "follow_up": "关注新计费规则对开发者使用模式的影响。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "google_news:article:5aa129da1ba25149",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "DeepSeek",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "DeepSeek再度调价，周末不再区分峰谷计费，属于定价调整，对开发者有影响，但无产品创新。",
+        "region": "china",
+        "score": 6.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "DeepSeek再度调价，周末不再区分峰谷计费，统一低价。",
+        "tags": [
+          "API定价",
+          "DeepSeek"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "dfaa046ed26da40b22eaa8d6ee810f7cd04e8514e8f4645562451680609fb082": {
       "created_at": "2026-08-01T03:49:24.197921+00:00",
       "model": "deepseek-v4-flash",
@@ -32810,6 +34071,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "ed054f07fd8c91bf32898cfb884be8a93fc404fe69c29294803a68c21adaec1a": {
+      "created_at": "2026-08-24T01:57:11.205241+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "drew-breunig-fable-moore-law",
+        "evidence_status": "first_party",
+        "follow_up": "关注Fable模型定价变化及开发者应对策略。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:simonwillison.net_atom_everything_:71343321c7660b7a",
+        "intelligence_type": "builder_insight",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Drew Breunig关于Fable模型成本与模型选择的思考，对构建者有启发，但无具体产品案例。",
+        "region": "global",
+        "score": 7.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Drew Breunig讨论Fable模型成本高昂，促使开发者思考工作分配。",
+        "tags": [
+          "模型成本",
+          "构建者思考"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "ed2449dabdd076feefebf555622781aa2b86d4f92ad742befbf863eb9cc9110b": {
       "created_at": "2026-08-22T01:50:05.526767+00:00",
       "model": "deepseek-v4-flash",
@@ -33813,6 +35112,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "f59ae29148c00e6fd354abf516400bf3ed27f9b7fc3cf6ca8238b7ed40b8b4bd": {
+      "created_at": "2026-08-24T01:57:26.041680+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "ai-chip-architectures",
+        "evidence_status": "reported",
+        "follow_up": "无",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:49405657",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "泛行业评论，内容被指AI生成，无具体产品增量，评分低。",
+        "region": "global",
+        "score": 5.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "一篇关于AI芯片架构的泛行业评论，内容被指AI生成，无具体产品增量，评分低。",
+        "tags": [
+          "AI芯片",
+          "架构"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "f5c83b7cd29514c50555a8fb11f7065932f2aecd55f50a398e2ebbeb58b5cc71": {
       "created_at": "2026-08-04T03:45:41.114937+00:00",
       "model": "deepseek-v4-flash",
@@ -34431,6 +35768,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "f80deedbdbd0cafb0e1feafe4ffa343564896a2f94978ca9efec5b0d02ccde4b": {
+      "created_at": "2026-08-24T01:57:26.041920+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "deepseek-pricing-weekend-discount",
+        "evidence_status": "reported",
+        "follow_up": "关注调价对用户使用量的影响。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "google_news:article:c96d847b89887e17",
+        "intelligence_type": "business_policy",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "DeepSeek",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "DeepSeek调价，周末低谷价计费，属于定价策略更新，对API用户有实际影响，但非产品功能增量。",
+        "region": "china",
+        "score": 7.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "DeepSeek再次调价，周末全天按低谷价计费，属于定价策略更新，对API用户有实际影响，但非产品功能增量。",
+        "tags": [
+          "DeepSeek",
+          "定价",
+          "API"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "f869cf93e1332297a659eadde6caac4482ce5a73eef7c4c0fc4312e6de9c3a4e": {
       "created_at": "2026-08-02T03:52:45.120373+00:00",
       "model": "deepseek-v4-flash",
@@ -34921,6 +36297,44 @@
         "summary_zh": "新浪财经称DeepSeek内部人士否认交流会纪要外泄影响融资，但消息未证实。",
         "tags": [
           "辟谣"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "fc1373e737b7d5b08b82554a083d5286e3bac6eef65378f3cb6f5b76f8f69f69": {
+      "created_at": "2026-08-24T01:57:40.759581+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "deepseek-api-weekend-discount-effective",
+        "evidence_status": "reported",
+        "follow_up": "观察调价后API使用量变化。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "google_news:article:5920c7df41d0cdf0",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "DeepSeek",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "DeepSeek周末打折调价今日生效，属于定价动态，对开发者有成本影响，但无产品创新。",
+        "region": "china",
+        "score": 6.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "DeepSeek周末打折调价今日生效，降低API使用成本。",
+        "tags": [
+          "API定价",
+          "DeepSeek"
         ],
         "target_user": "",
         "verticals": []

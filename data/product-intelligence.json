@@ -1,23 +1,23 @@
 {
   "version": 1,
-  "updated_at": "2026-08-23T02:00:36.449343+00:00",
+  "updated_at": "2026-08-24T01:58:30.752576+00:00",
   "products": [
     {
       "product_id": "product-30744df89361cf9c",
       "product_name": "Yana Bana",
       "builder_name": "Lenny Rachitsky",
       "first_seen": "2026-08-18",
-      "last_seen": "2026-08-23",
+      "last_seen": "2026-08-24",
       "occurrence_count": 1,
       "intelligence_type": "product_case",
       "evidence_status": "first_party",
-      "target_user": "独立创业者、设计师、无技术背景但想做实体产品的人",
-      "user_problem": "创始人没有工程师团队，也不懂专业 3D 建模软件，但要把创意草图变成可生产的 3D 文件和能收钱的电商网站",
-      "what_it_is": "一期播客/文章，记录创始人 Yana Welinder 独自用 AI 工具完成从手绘草图到 3D 打印、电商网站上线的完整时尚品牌创业过程",
-      "ai_role": "ChatGPT 负责图像生成与风格还原；Codex 负责操控专业软件生成工程文件、写代码搭网站；两者共同替代了传统工程师和 3D 建模师",
-      "implementation_idea": "核心思路是'prompt 即产品规格书'——先把需求描述得极清楚，再让 AI 去执行。对于复杂软件，不是人去学界面操作，而是用 Codex 直接生成脚本/命令来驱动软件后台运行，相当于 AI 替你'按按钮'",
-      "hands_on_exercise": "30 分钟练习：在 ChatGPT/Claude 上传一张手绘草图（任何物品），用详细文字描述材质、光影、使用场景，让 AI 生成产品渲染图；再要求 AI 写一段 Python 或 HTML 代码，做一个简单的产品展示网页。体会'描述清晰度'与'输出质量'的关系",
-      "limitations_or_uncertainties": "未公开具体用了 Codex 的哪个版本（是 GitHub Copilot 还是 OpenAI Codex 新模型）；未公开 3D 打印最终成品率和成本；未说明网站是否自托管或用了现成建站工具；'AI-native fashion brand'是品牌自称，行业尚无统一标准",
+      "target_user": "想独立做产品的非技术创始人、设计师、创意工作者",
+      "user_problem": "没有工程师团队，一个人无法把设计草图变成可生产的 3D 模型、产品图和电商网站",
+      "what_it_is": "一期播客/文章，记录 Yana Welinder 单人用 AI 工具完成从手绘草图到 3D 打印和电商网站的全流程创业",
+      "ai_role": "ChatGPT 负责创意可视化（图像生成、文案、研究），Codex 负责「代替人操作复杂软件」和写代码——相当于一个会编程的实习生帮你搞定专业工具和网站开发",
+      "implementation_idea": "核心思路是「提示词即产品规格书」：先把设计意图描述得越精确，AI 输出越准；再用 Codex 这个 AI Agent（能自主规划步骤、调用工具的 AI 助手）绕过学习专业软件的高门槛，直接让 AI 替你点按钮、调参数、出文件",
+      "hands_on_exercise": "30 分钟练习：手绘一个简单物品（杯子/椅子/帽子），用 ChatGPT 的图像生成写一段详细描述（材质、光影、使用场景），对比「随便说」和「写规格书式提示词」的输出差异；再用 ChatGPT/Codex 尝试生成一个简单的 HTML 产品展示页",
+      "limitations_or_uncertainties": "未公开具体用了 Codex 的哪个版本（Claude 还是 OpenAI 的 Codex）、未公开 3D 打印最终是否成功量产、未公开电商网站的访问量和实际预售金额、未确认 CLO 文件是否需要人工后期修正",
       "region": "global",
       "score": 8.5,
       "summary": "独立创始人 Yana Welinder 用 Codex 和 ChatGPT 作为技术联合创始人，从草图到 3D 打印和预售网站，打造了 AI 时尚品牌 Yana Bana。",
@@ -57,12 +57,19 @@
         "用手绘草图+详细文字描述（prompt）定义设计：轮廓、面料动态、甚至声音",
         "用 ChatGPT 将草图转成逼真产品图，保持原创风格而非生成俗套款式",
         "用 Codex（AI 编程助手）操控专业 3D 软件 CLO，输出 3D 打印用的 CAD 文件",
-        "搭建含投票和支付功能的预售电商网站，并联系制造商"
+        "搭建含投票和支付功能的预售电商网站，并联系制造商",
+        "手绘服装草图，用 ChatGPT 生成详细的「时尚提示词」（描述轮廓、面料动态、甚至声音）",
+        "ChatGPT Images 2.0 根据草图生成忠于原设计的产品效果图",
+        "用 Codex（AI 编程 Agent，能自动写代码并执行）操作专业 3D 软件 CLO，生成 3D 打印用的 CAD 文件",
+        "ChatGPT 辅助研究联系制造商，Codex 搭建含投票和支付功能的预售电商网站"
       ],
       "learning_points": [
         "Prompt Engineering（提示词工程）：给 AI 的指令越具体，输出越可控；这里甚至要描述'面料怎么动、发出什么声音'",
         "Function Calling / Agent：AI 不只是聊天，可以调用外部工具（如操作 CLO 软件、生成代码），自动完成多步骤任务",
-        "人机协作边界：AI 擅长执行和扩展，但'什么算好设计'的审美判断仍由人把关"
+        "人机协作边界：AI 擅长执行和扩展，但'什么算好设计'的审美判断仍由人把关",
+        "Prompt Engineering（提示词工程）：不是随便描述，而是把「好结果的标准」写清楚，AI 才能对齐你的意图",
+        "AI Agent：不只是聊天，而是能自主执行多步任务、操作外部工具的 AI，这里 Codex 就是帮你「用」软件而不是「学」软件",
+        "Image-to-3D 工作流：从 2D 草图到可制造的 3D 模型，中间需要精确的规格描述和格式转换，AI 缩短了但还没完全消灭这个鸿沟"
       ],
       "verticals": [],
       "tags": [
@@ -70,6 +77,222 @@
         "独立开发者",
         "Codex",
         "时尚"
+      ]
+    },
+    {
+      "product_id": "product-9f403ec3695fc38f",
+      "product_name": "Claude",
+      "builder_name": "schlarpc",
+      "first_seen": "2026-08-24",
+      "last_seen": "2026-08-24",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "reported",
+      "target_user": "想折腾智能家居但不想花大量时间研究固件和命令行的个人用户",
+      "user_problem": "作者有个 WiFi 插座继电器，想让它控制熔岩灯，但手动研究固件刷写需要数小时，过程枯燥且不想学",
+      "what_it_is": "一篇个人博客，记录作者让 Claude（Anthropic 的 AI 助手）直接控制局域网设备、自动完成固件研究和刷写的真实经历",
+      "ai_role": "AI 充当 Agent（智能体）：理解目标→自主搜索信息→生成并执行命令→调用外部工具完成固件刷写，用户只负责点'批准'",
+      "implementation_idea": "核心是让 Claude 获得'命令执行权限'，变成能动手干活的 Agent。用户给目标（控制这个设备），AI 自己拆成步骤：探测设备→找对应刷写工具→下载固件→执行刷写。每次执行危险操作前问用户'可以吗'，形成'人机回环'。作者没写具体怎么接的，但关键是 Claude 能访问局域网、运行命令行工具",
+      "hands_on_exercise": "30 分钟体验：在本地装个 Python 环境，用 Claude 的 API 或网页版，让它帮你写一段'扫描家里同网段有哪些设备开了 80/22 端口'的脚本。你复制粘贴运行，把结果给它，再让它解释这些设备可能是啥。感受'给目标→AI 出方案→你执行→再反馈'的循环。不要真刷固件，先熟悉流程",
+      "limitations_or_uncertainties": "作者未公开具体技术细节：Claude 是通过什么方式执行命令的（本地终端？SSH？某插件？）、用了哪个刷写库、设备具体型号；'20 分钟'和'8 次批准'是作者自述，无第三方验证；评论区有人提醒刷固件有变砖风险，作者案例成功不代表可复现",
+      "region": "global",
+      "score": 8.5,
+      "summary": "用户分享用Claude直接控制WiFi插座并刷固件的经历，20分钟完成原本需数小时的研究。",
+      "title": "用 Claude 20 分钟给 WiFi 插座刷固件",
+      "url": "https://schlarp.com/posts/everything-i-own-owned/",
+      "sources": [
+        {
+          "url": "https://schlarp.com/posts/everything-i-own-owned/",
+          "title": "Everything I own, owned",
+          "source_type": "hackernews",
+          "published_at": "2026-08-23T22:41:04+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "everything-i-own-owned-agent",
+          "date": "2026-08-24",
+          "title": "用 Claude 20 分钟给 WiFi 插座刷固件",
+          "summary": "用户分享用Claude直接控制WiFi插座并刷固件的经历，20分钟完成原本需数小时的研究。",
+          "score": 8.5,
+          "url": "https://schlarp.com/posts/everything-i-own-owned/"
+        }
+      ],
+      "usage_flow": [
+        "用户告诉 Claude：'LAN 上有个 WiFi 插座继电器，IP 是 xxx，直接控制它'",
+        "Claude 分析后向用户请求批准执行命令（约 8 次）",
+        "Claude 自己找到并调用现成的设备固件刷写库",
+        "20 分钟后新固件运行，插座可被控制"
+      ],
+      "learning_points": [
+        "Agent：不只是聊天回答，而是能自己规划步骤、调用工具、完成多步任务的 AI",
+        "Function Calling / 工具调用：AI 生成'要运行某命令'的结构化请求，外部系统执行后把结果喂回给 AI，让它继续下一步",
+        "人机回环（Human-in-the-loop）：AI 做决策但关键操作要人点确认，防止搞坏设备——作者提到 8 次命令批准就是这个机制"
+      ],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "智能家居",
+        "个人案例"
+      ]
+    },
+    {
+      "product_id": "product-6c26fab238ba08ce",
+      "product_name": "DeepSeek Harness",
+      "builder_name": "凤凰网科技",
+      "first_seen": "2026-08-02",
+      "last_seen": "2026-08-24",
+      "occurrence_count": 2,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "凤凰网科技发布DeepSeek Harness入门教程，帮助用户从基础到进阶使用该工具。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "china",
+      "score": 7.5,
+      "summary": "凤凰网科技发布DeepSeek Harness入门教程，帮助用户从基础到进阶使用该工具。",
+      "title": "从毛坯到精装，DeepSeek Harness的入门教程来了 - 凤凰网科技",
+      "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBQeXR4TzN5VDc4MVo3YVBxakpuNXMzaUQzTVlBS0RBWWJ2bklkTmxQaU5rRlpCNjBRc2RkRnZSNFI5V055bG9vbmp4RDU?oc=5",
+      "sources": [
+        {
+          "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBLSDlOVHBPSmluRE16OFM1SVhFLXNwTUdacE9GYlNwbVpmLWFBcjBoOGNuQ0xWd2xIZUtPbWxpLVNOY3NYeW9kTHFGZFk?oc=5",
+          "title": "DeepSeek Harness启动内测，面向开源开发者开放招募 - 凤凰网科技",
+          "source_type": "google_news",
+          "published_at": "2026-08-02T02:01:27+00:00"
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBQeXR4TzN5VDc4MVo3YVBxakpuNXMzaUQzTVlBS0RBWWJ2bklkTmxQaU5rRlpCNjBRc2RkRnZSNFI5V055bG9vbmp4RDU?oc=5",
+          "title": "从毛坯到精装，DeepSeek Harness的入门教程来了 - 凤凰网科技",
+          "source_type": "google_news",
+          "published_at": "2026-08-23T16:01:00+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "deepseek-harness-beta",
+          "date": "2026-08-02",
+          "title": "DeepSeek Harness启动内测，面向开源开发者开放招募 - 凤凰网科技",
+          "summary": "DeepSeek推出Harness工具并启动内测，面向开源开发者，值得关注其功能和应用场景。",
+          "score": 7.0,
+          "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBLSDlOVHBPSmluRE16OFM1SVhFLXNwTUdacE9GYlNwbVpmLWFBcjBoOGNuQ0xWd2xIZUtPbWxpLVNOY3NYeW9kTHFGZFk?oc=5"
+        },
+        {
+          "update_id": "deepseek-harness-tutorial",
+          "date": "2026-08-24",
+          "title": "从毛坯到精装，DeepSeek Harness的入门教程来了 - 凤凰网科技",
+          "summary": "凤凰网科技发布DeepSeek Harness入门教程，帮助用户从基础到进阶使用该工具。",
+          "score": 7.5,
+          "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBQeXR4TzN5VDc4MVo3YVBxakpuNXMzaUQzTVlBS0RBWWJ2bklkTmxQaU5rRlpCNjBRc2RkRnZSNFI5V055bG9vbmp4RDU?oc=5"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "开发者工具",
+        "内测",
+        "DeepSeek",
+        "教程"
+      ]
+    },
+    {
+      "product_id": "product-d99348328a0a6eb4",
+      "product_name": "Linkdaze",
+      "builder_name": "Lauren Forristal",
+      "first_seen": "2026-08-24",
+      "last_seen": "2026-08-24",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Linkdaze推出智能日历，内置AI膳食规划且免费，旨在管理家庭事务。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.5,
+      "summary": "Linkdaze推出智能日历，内置AI膳食规划且免费，旨在管理家庭事务。",
+      "title": "Linkdaze’s smart calendar is built to run a household, not just track a schedule",
+      "url": "https://techcrunch.com/2026/08/23/linkdazes-smart-calendar-is-built-to-run-a-household-not-just-track-a-schedule/",
+      "sources": [
+        {
+          "url": "https://techcrunch.com/2026/08/23/linkdazes-smart-calendar-is-built-to-run-a-household-not-just-track-a-schedule/",
+          "title": "Linkdaze’s smart calendar is built to run a household, not just track a schedule",
+          "source_type": "rss",
+          "published_at": "2026-08-23T19:14:08+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "linkdaze-smart-calendar-launch",
+          "date": "2026-08-24",
+          "title": "Linkdaze’s smart calendar is built to run a household, not just track a schedule",
+          "summary": "Linkdaze推出智能日历，内置AI膳食规划且免费，旨在管理家庭事务。",
+          "score": 7.5,
+          "url": "https://techcrunch.com/2026/08/23/linkdazes-smart-calendar-is-built-to-run-a-household-not-just-track-a-schedule/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "智能日历",
+        "AI膳食规划",
+        "产品案例"
+      ]
+    },
+    {
+      "product_id": "product-6c9c8e17d8d695b9",
+      "product_name": "Afterlid",
+      "builder_name": "rjsajnani",
+      "first_seen": "2026-08-24",
+      "last_seen": "2026-08-24",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "开发者展示macOS合盖运行工具Afterlid，解决本地AI运行等场景，有明确产品逻辑和边界设计，但评论少，属于早期产品。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.2,
+      "summary": "开发者展示macOS合盖运行工具Afterlid，解决本地AI运行等场景，有明确产品逻辑和边界设计，但评论少，属于早期产品。",
+      "title": "Show HN: Afterlid, guarded lid closed work for macOS",
+      "url": "https://afterlid.com/",
+      "sources": [
+        {
+          "url": "https://afterlid.com/",
+          "title": "Show HN: Afterlid, guarded lid closed work for macOS",
+          "source_type": "hackernews",
+          "published_at": "2026-08-23T18:10:45+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "afterlid-macos-lid-closed",
+          "date": "2026-08-24",
+          "title": "Show HN: Afterlid, guarded lid closed work for macOS",
+          "summary": "开发者展示macOS合盖运行工具Afterlid，解决本地AI运行等场景，有明确产品逻辑和边界设计，但评论少，属于早期产品。",
+          "score": 7.2,
+          "url": "https://afterlid.com/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "macOS",
+        "本地AI",
+        "工具"
       ]
     },
     {
@@ -9733,53 +9956,6 @@
         "LLM",
         "后训练",
         "GPU"
-      ]
-    },
-    {
-      "product_id": "product-6c26fab238ba08ce",
-      "product_name": "DeepSeek Harness",
-      "builder_name": "凤凰网科技",
-      "first_seen": "2026-08-02",
-      "last_seen": "2026-08-02",
-      "occurrence_count": 1,
-      "intelligence_type": "early_signal",
-      "evidence_status": "reported",
-      "target_user": "未公开",
-      "user_problem": "未公开",
-      "what_it_is": "DeepSeek推出Harness工具并启动内测，面向开源开发者，值得关注其功能和应用场景。",
-      "ai_role": "未公开",
-      "implementation_idea": "未公开",
-      "hands_on_exercise": "未公开",
-      "limitations_or_uncertainties": "未公开",
-      "region": "china",
-      "score": 7.0,
-      "summary": "DeepSeek推出Harness工具并启动内测，面向开源开发者，值得关注其功能和应用场景。",
-      "title": "DeepSeek Harness启动内测，面向开源开发者开放招募 - 凤凰网科技",
-      "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBLSDlOVHBPSmluRE16OFM1SVhFLXNwTUdacE9GYlNwbVpmLWFBcjBoOGNuQ0xWd2xIZUtPbWxpLVNOY3NYeW9kTHFGZFk?oc=5",
-      "sources": [
-        {
-          "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBLSDlOVHBPSmluRE16OFM1SVhFLXNwTUdacE9GYlNwbVpmLWFBcjBoOGNuQ0xWd2xIZUtPbWxpLVNOY3NYeW9kTHFGZFk?oc=5",
-          "title": "DeepSeek Harness启动内测，面向开源开发者开放招募 - 凤凰网科技",
-          "source_type": "google_news",
-          "published_at": "2026-08-02T02:01:27+00:00"
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "deepseek-harness-beta",
-          "date": "2026-08-02",
-          "title": "DeepSeek Harness启动内测，面向开源开发者开放招募 - 凤凰网科技",
-          "summary": "DeepSeek推出Harness工具并启动内测，面向开源开发者，值得关注其功能和应用场景。",
-          "score": 7.0,
-          "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBLSDlOVHBPSmluRE16OFM1SVhFLXNwTUdacE9GYlNwbVpmLWFBcjBoOGNuQ0xWd2xIZUtPbWxpLVNOY3NYeW9kTHFGZFk?oc=5"
-        }
-      ],
-      "usage_flow": [],
-      "learning_points": [],
-      "verticals": [],
-      "tags": [
-        "开发者工具",
-        "内测"
       ]
     },
     {
