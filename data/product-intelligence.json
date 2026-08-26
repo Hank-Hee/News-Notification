@@ -1,28 +1,391 @@
 {
   "version": 1,
-  "updated_at": "2026-08-25T01:53:00.093531+00:00",
+  "updated_at": "2026-08-26T01:59:29.808800+00:00",
   "products": [
+    {
+      "product_id": "product-af7c634f36fe154e",
+      "product_name": "Run SDK",
+      "builder_name": "Aayush Kapoor",
+      "first_seen": "2026-08-26",
+      "last_seen": "2026-08-26",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "用 Vercel AI SDK 开发 Agent 的开发者；需要让用户/客户代码安全运行的产品团队",
+      "user_problem": "Agent 越来越会自己写 TypeScript 代码来调工具，但直接用 eval 执行等于给它你服务器的全部钥匙——能看密钥、能调内部服务、还没法中途喊停让人审批",
+      "what_it_is": "一个让 AI Agent 写的代码安全运行的工具包，Agent 碰不到你的主程序和网络，想干敏感操作还得你点头",
+      "ai_role": "生成需要在沙箱里执行的 TypeScript/JavaScript 代码，把多个工具调用和逻辑编排成一段可运行程序",
+      "implementation_idea": "把 Agent 的代码关进一个叫 QuickJS 的轻量级 JavaScript 引擎里，这个引擎跑在独立的 worker 线程中，和主程序彻底隔离。主程序像开窗口一样，只让沙箱看到几个指定的函数。沙箱和主程序之间传数据全靠序列化，沙箱里代码连不上 Node.js、连不上网。每次调用都是全新的干净环境，防止之前运行的代码留下后门。",
+      "hands_on_exercise": "访问 https://www.run-sdk.dev/playground，在在线沙箱里写一段调用 host 函数的代码，观察哪些操作被允许、哪些被阻断；然后本地 npm install 跑一个最小 Demo，尝试让代码触发超时或内存限制，看沙箱如何兜底",
+      "limitations_or_uncertainties": "未公开具体定价和商用许可条款；未公开是否支持除 JS/TS 外的其他语言；未公开大规模并发下的性能基准；需要操作系统级隔离的场景明确建议改用 Vercel Sandbox 而非 Run SDK",
+      "region": "global",
+      "score": 9.0,
+      "summary": "Vercel发布Run SDK，安全执行Agent编写的代码，支持权限控制和人工审批。",
+      "title": "Vercel 发布 Run SDK：给 AI Agent 加一道安全沙箱",
+      "url": "https://vercel.com/blog/introducing-run",
+      "sources": [
+        {
+          "url": "https://vercel.com/blog/introducing-run",
+          "title": "Introducing Run SDK: secure eval for your agents",
+          "source_type": "rss",
+          "published_at": "2026-08-25T04:00:00+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "vercel-run-sdk",
+          "date": "2026-08-26",
+          "title": "Vercel 发布 Run SDK：给 AI Agent 加一道安全沙箱",
+          "summary": "Vercel发布Run SDK，安全执行Agent编写的代码，支持权限控制和人工审批。",
+          "score": 9.0,
+          "url": "https://vercel.com/blog/introducing-run"
+        }
+      ],
+      "usage_flow": [
+        "开发者用 createRunner() 建一个沙箱，只暴露几个精选的 hostFunctions（比如 store.listOrders()）",
+        "Agent 生成代码，在沙箱里运行，只能调用你允许的那些函数",
+        "代码走到敏感操作（如退款）时，hostFunction 抛中断，等人工审批或认证",
+        "审批通过后，用签名 token 恢复运行，已完成的步骤不会重复执行"
+      ],
+      "learning_points": [
+        "Sandbox（沙箱）：给不可信代码造一个'玻璃房'，让它能干活但逃不出来、碰不到外面的系统",
+        "Human-in-the-loop（人机协同）：AI 跑到关键步骤自动暂停，等人批准后再继续，不是一次性跑到底",
+        "Serialization（序列化）：沙箱内外传数据只能走'复印件'，不能直接给对象引用，防止代码顺着指针爬出来"
+      ],
+      "verticals": [],
+      "tags": [
+        "Vercel",
+        "SDK",
+        "Agent",
+        "安全"
+      ]
+    },
+    {
+      "product_id": "product-baed90eff596f955",
+      "product_name": "Dify",
+      "builder_name": "wylswz",
+      "first_seen": "2026-08-26",
+      "last_seen": "2026-08-26",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "需要快速搭建生产级 AI Agent 的开发者、企业技术团队",
+      "user_problem": "开发者搭建 Agent 时遇到三个痛点：1）代码执行环境不安全或只能本地跑；2）Agent 发布后运行环境跟开发时不一致，依赖丢失；3）团队里做好的工具/能力没法复用，每次都要重写",
+      "what_it_is": "Dify 是一个开源的 AI 应用开发平台，让你用可视化界面搭建 Agent（能自主调用工具的 AI 助手）、工作流和知识库，可私有化部署。",
+      "ai_role": "Agent 作为自主决策者，根据用户输入判断何时调用 Skill、何时执行代码，Dify 负责管理它的运行环境和工具链",
+      "implementation_idea": "E2B 沙箱相当于给 Agent 租了一个隔离的云端 Docker 容器跑代码，不用怕本地中毒；Home 快照就是发布时把容器整个文件系统拍张照，以后每次启动都从这个状态恢复，保证'开发啥样运行啥样'；Skill 管理则是把代码+工具定义打包成可版本控制的模块，像 npm 包一样共享给团队",
+      "hands_on_exercise": "30 分钟练习：本地 Docker 启动 Dify 1.17.0，创建一个能执行 Python 代码的 Agent，安装一个第三方库（如 requests），发布后用快照功能验证重新运行时库仍在；再创建一个简单 Skill（如查询天气的 HTTP 请求），从另一个 Agent 调用它",
+      "limitations_or_uncertainties": "E2B 云沙箱的实际计费模式、性能延迟数据未公开；Context-aware history compaction 的具体压缩策略细节未公开；Azure Key Vault KMS 是否支持其他云厂商未说明",
+      "region": "global",
+      "score": 8.5,
+      "summary": "Dify 发布 1.17.0，新增 E2B 云沙箱、构建时快照和技能管理，提升 Agent 开发体验。",
+      "title": "Dify 1.17.0 发布：Agent 云沙箱、构建快照与技能管理",
+      "url": "https://github.com/langgenius/dify/releases/tag/1.17.0",
+      "sources": [
+        {
+          "url": "https://github.com/langgenius/dify/releases/tag/1.17.0",
+          "title": "langgenius/dify released 1.17.0",
+          "source_type": "github",
+          "published_at": "2026-08-25T11:28:25+00:00"
+        },
+        {
+          "url": "https://dify.ai/",
+          "title": "Dify - The Platform for Production-Ready Agentic Workflows",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "dify-1.17.0",
+          "date": "2026-08-26",
+          "title": "Dify 1.17.0 发布：Agent 云沙箱、构建快照与技能管理",
+          "summary": "Dify 发布 1.17.0，新增 E2B 云沙箱、构建时快照和技能管理，提升 Agent 开发体验。",
+          "score": 8.5,
+          "url": "https://github.com/langgenius/dify/releases/tag/1.17.0"
+        }
+      ],
+      "usage_flow": [
+        "在 Dify 平台创建 Agent，选择 E2B 云沙箱作为代码执行后端",
+        "开发时安装依赖、准备文件，发布后平台自动打快照锁定环境",
+        "把常用能力封装成 Skill（技能），设置版本并发布到工作空间",
+        "其他 Agent 直接调用已发布的 Skill，无需重复配置"
+      ],
+      "learning_points": [
+        "Sandbox（沙箱）：给 AI 一个隔离的'实验厨房'，代码跑坏了也不影响主机",
+        "Skill / Tool：把 AI 能调用的能力封装成标准接口，Agent 像插乐高一样组合使用",
+        "Context Window（上下文窗口）：大模型一次能处理的文字量有限，需要压缩历史对话避免爆掉"
+      ],
+      "verticals": [],
+      "tags": [
+        "Dify",
+        "Agent",
+        "沙箱",
+        "技能管理"
+      ]
+    },
+    {
+      "product_id": "product-76c41627e47accfe",
+      "product_name": "ambient-context",
+      "builder_name": "Dramatize",
+      "first_seen": "2026-08-26",
+      "last_seen": "2026-08-26",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "开发者发布macOS应用ambient-context，通过读取窗口文本生成Markdown记忆，供AI查询工作历史。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.5,
+      "summary": "开发者发布macOS应用ambient-context，通过读取窗口文本生成Markdown记忆，供AI查询工作历史。",
+      "title": "Show HN: Screen memory without screenshots, just text to Markdown",
+      "url": "https://github.com/dragthelake/ambient-context",
+      "sources": [
+        {
+          "url": "https://github.com/dragthelake/ambient-context",
+          "title": "Show HN: Screen memory without screenshots, just text to Markdown",
+          "source_type": "hackernews",
+          "published_at": "2026-08-25T04:33:24+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "ambient-context-screen-memory",
+          "date": "2026-08-26",
+          "title": "Show HN: Screen memory without screenshots, just text to Markdown",
+          "summary": "开发者发布macOS应用ambient-context，通过读取窗口文本生成Markdown记忆，供AI查询工作历史。",
+          "score": 8.5,
+          "url": "https://github.com/dragthelake/ambient-context"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "AI记忆",
+        "macOS",
+        "Claude Code"
+      ]
+    },
+    {
+      "product_id": "product-eb3dd027d73f0d42",
+      "product_name": "Claude Cowork",
+      "builder_name": "Sarah Perez",
+      "first_seen": "2026-08-26",
+      "last_seen": "2026-08-26",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Anthropic为Claude Cowork引入共享记忆，用户无需重复告知项目背景。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.0,
+      "summary": "Anthropic为Claude Cowork引入共享记忆，用户无需重复告知项目背景。",
+      "title": "Claude Cowork finally remembers what you told the app in chat",
+      "url": "https://techcrunch.com/2026/08/25/claude-cowork-finally-remembers-what-you-told-the-app-in-chat/",
+      "sources": [
+        {
+          "url": "https://techcrunch.com/2026/08/25/claude-cowork-finally-remembers-what-you-told-the-app-in-chat/",
+          "title": "Claude Cowork finally remembers what you told the app in chat",
+          "source_type": "rss",
+          "published_at": "2026-08-25T17:50:33+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "claude-cowork-shared-memory",
+          "date": "2026-08-26",
+          "title": "Claude Cowork finally remembers what you told the app in chat",
+          "summary": "Anthropic为Claude Cowork引入共享记忆，用户无需重复告知项目背景。",
+          "score": 8.0,
+          "url": "https://techcrunch.com/2026/08/25/claude-cowork-finally-remembers-what-you-told-the-app-in-chat/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Anthropic",
+        "Claude",
+        "记忆",
+        "Agent"
+      ]
+    },
+    {
+      "product_id": "product-1c8176027f12f98d",
+      "product_name": "Vercel Connect",
+      "builder_name": "Dima Voytenko",
+      "first_seen": "2026-08-26",
+      "last_seen": "2026-08-26",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Vercel Connect正式发布，用短期令牌解决Agent凭证管理问题。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.0,
+      "summary": "Vercel Connect正式发布，用短期令牌解决Agent凭证管理问题。",
+      "title": "The end of credential sprawl for agents",
+      "url": "https://vercel.com/blog/the-end-of-credential-sprawl-for-agents",
+      "sources": [
+        {
+          "url": "https://vercel.com/blog/the-end-of-credential-sprawl-for-agents",
+          "title": "The end of credential sprawl for agents",
+          "source_type": "rss",
+          "published_at": "2026-08-25T04:00:00+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "vercel-connect-ga",
+          "date": "2026-08-26",
+          "title": "The end of credential sprawl for agents",
+          "summary": "Vercel Connect正式发布，用短期令牌解决Agent凭证管理问题。",
+          "score": 8.0,
+          "url": "https://vercel.com/blog/the-end-of-credential-sprawl-for-agents"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Vercel",
+        "凭证管理",
+        "Agent"
+      ]
+    },
+    {
+      "product_id": "product-47b1039000ed6d5e",
+      "product_name": "TeXbrain",
+      "builder_name": "swimmingbrain",
+      "first_seen": "2026-08-26",
+      "last_seen": "2026-08-26",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "开发者展示 TeXbrain，一个基于 WASM 的浏览器 LaTeX 编辑器，支持本地文件访问和 git 集成。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.0,
+      "summary": "开发者展示 TeXbrain，一个基于 WASM 的浏览器 LaTeX 编辑器，支持本地文件访问和 git 集成。",
+      "title": "Show HN: TeXbrain, a LaTeX editor that runs pdfTeX in the browser via WASM",
+      "url": "https://github.com/swimmingbrain/texbrain",
+      "sources": [
+        {
+          "url": "https://github.com/swimmingbrain/texbrain",
+          "title": "Show HN: TeXbrain, a LaTeX editor that runs pdfTeX in the browser via WASM",
+          "source_type": "hackernews",
+          "published_at": "2026-08-25T22:08:50+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "texbrain-latex-editor",
+          "date": "2026-08-26",
+          "title": "Show HN: TeXbrain, a LaTeX editor that runs pdfTeX in the browser via WASM",
+          "summary": "开发者展示 TeXbrain，一个基于 WASM 的浏览器 LaTeX 编辑器，支持本地文件访问和 git 集成。",
+          "score": 8.0,
+          "url": "https://github.com/swimmingbrain/texbrain"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "LaTeX",
+        "WASM",
+        "开发者工具"
+      ]
+    },
+    {
+      "product_id": "product-47b392c035a46a48",
+      "product_name": "fDeploy",
+      "builder_name": "dt3ft",
+      "first_seen": "2026-08-26",
+      "last_seen": "2026-08-26",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "开发者发布自托管部署自动化工具fDeploy，面向Windows和IIS，提供免费商用版本。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.0,
+      "summary": "开发者发布自托管部署自动化工具fDeploy，面向Windows和IIS，提供免费商用版本。",
+      "title": "Show HN: I built self-hosted deployment automation tool for Windows and IIS",
+      "url": "https://fdeploy.com/",
+      "sources": [
+        {
+          "url": "https://fdeploy.com/",
+          "title": "Show HN: I built self-hosted deployment automation tool for Windows and IIS",
+          "source_type": "hackernews",
+          "published_at": "2026-08-25T07:32:11+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "fdeploy-selfhosted-deployment-tool",
+          "date": "2026-08-26",
+          "title": "Show HN: I built self-hosted deployment automation tool for Windows and IIS",
+          "summary": "开发者发布自托管部署自动化工具fDeploy，面向Windows和IIS，提供免费商用版本。",
+          "score": 8.0,
+          "url": "https://fdeploy.com/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "DevOps",
+        "自托管",
+        "独立开发"
+      ]
+    },
     {
       "product_id": "product-7f7811de59626bc9",
       "product_name": "Claude Code",
       "builder_name": "ashwin-ant",
       "first_seen": "2026-07-26",
-      "last_seen": "2026-08-25",
-      "occurrence_count": 11,
+      "last_seen": "2026-08-26",
+      "occurrence_count": 12,
       "intelligence_type": "product_case",
       "evidence_status": "first_party",
       "target_user": "习惯用终端的开发者、需要批量处理代码任务的工程师、多会话并行工作的团队",
       "user_problem": "每次新开 Claude Code 会话都要手动选模型；多个终端同时跑不同任务时，想等另一个会话闲下来再通知自己，只能靠人工盯着或反复切换窗口",
-      "what_it_is": "Anthropic 发布 Claude Code v2.1.243，新增用量统计、模型选择器自定义、提示缓存时长设置和无 API key 登录等多项功能，让开发者更精细地控制成本与使用。",
+      "what_it_is": "Anthropic 发布 Claude Code v2.1.246，新增权限管理和性能修复，提升终端 AI 编程体验。",
       "ai_role": "Claude 作为编码 Agent（能自主执行多步骤任务的 AI 助手），在后台持续运行代码分析、文件修改和命令执行，并在空闲时触发通知机制",
       "implementation_idea": "核心是两个状态管理：一是用环境变量做'全局默认值'，同时用本地配置文件存'/model 的个性化选择'，两者分层不冲突；二是跨会话通信走本地进程间消息通道，接收方注册一个'下次空闲时回调'，避免轮询浪费资源",
       "hands_on_exercise": "30 分钟验证：打开两个终端窗口都运行 Claude Code，终端 1 设置 `export ANTHROPIC_DEFAULT_MODEL=claude-sonnet-4-20250514` 后启动新会话确认模型；终端 2 跑一个慢任务如 `sleep 60`，终端 1 用 `/send` 或相关命令请求'该会话空闲时通知我'，观察 60 秒后是否收到系统通知（macOS/Linux）",
       "limitations_or_uncertainties": "跨会话通知 `notify_when_idle` 的具体触发命令格式未在 release note 中给出完整示例；Windows 不支持该通知功能；VS Code 扩展的屏幕阅读器支持为新增功能，实际兼容性未公开测试范围",
       "region": "global",
-      "score": 8.5,
-      "summary": "Anthropic 发布 Claude Code v2.1.243，新增用量统计、模型选择器自定义、提示缓存时长设置和无 API key 登录等多项功能，让开发者更精细地控制成本与使用。",
-      "title": "anthropics/claude-code released v2.1.243",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.243",
+      "score": 7.5,
+      "summary": "Anthropic 发布 Claude Code v2.1.246，新增权限管理和性能修复，提升终端 AI 编程体验。",
+      "title": "anthropics/claude-code released v2.1.246",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.246",
       "sources": [
         {
           "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.219",
@@ -95,6 +458,12 @@
           "title": "anthropics/claude-code released v2.1.243",
           "source_type": "github",
           "published_at": "2026-08-24T23:40:26+00:00"
+        },
+        {
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.246",
+          "title": "anthropics/claude-code released v2.1.246",
+          "source_type": "github",
+          "published_at": "2026-08-25T22:31:52+00:00"
         }
       ],
       "updates": [
@@ -185,6 +554,14 @@
           "summary": "Anthropic 发布 Claude Code v2.1.243，新增用量统计、模型选择器自定义、提示缓存时长设置和无 API key 登录等多项功能，让开发者更精细地控制成本与使用。",
           "score": 8.5,
           "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.243"
+        },
+        {
+          "update_id": "claude-code-v2.1.246",
+          "date": "2026-08-26",
+          "title": "anthropics/claude-code released v2.1.246",
+          "summary": "Anthropic 发布 Claude Code v2.1.246，新增权限管理和性能修复，提升终端 AI 编程体验。",
+          "score": 7.5,
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.246"
         }
       ],
       "usage_flow": [
@@ -235,7 +612,55 @@
         "插件",
         "Release",
         "Developer Tools",
-        "成本控制"
+        "成本控制",
+        "AI编程"
+      ]
+    },
+    {
+      "product_id": "product-ce917ce9d365554c",
+      "product_name": "Ornith-1.5",
+      "builder_name": "AI News",
+      "first_seen": "2026-08-26",
+      "last_seen": "2026-08-26",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Ornith-1.5开源模型发布，提供9B、35B MoE和397B MoE变体，支持多种量化格式。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.0,
+      "summary": "Ornith-1.5开源模型发布，提供9B、35B MoE和397B MoE变体，支持多种量化格式。",
+      "title": "not much happened today",
+      "url": "https://news.smol.ai/issues/26-08-19-not-much/",
+      "sources": [
+        {
+          "url": "https://news.smol.ai/issues/26-08-19-not-much/",
+          "title": "not much happened today",
+          "source_type": "newsletter",
+          "published_at": "2026-08-19T05:44:39+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "ornith-1.5-open-weight-models",
+          "date": "2026-08-26",
+          "title": "not much happened today",
+          "summary": "Ornith-1.5开源模型发布，提供9B、35B MoE和397B MoE变体，支持多种量化格式。",
+          "score": 7.0,
+          "url": "https://news.smol.ai/issues/26-08-19-not-much/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "开源模型",
+        "Ornith-1.5"
       ]
     },
     {

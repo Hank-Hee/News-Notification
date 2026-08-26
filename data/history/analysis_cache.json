@@ -233,6 +233,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "02b9e0538ce57a429795a93974cc162e883bf98febf4c458a64afd63e92841d7": {
+      "created_at": "2026-08-26T01:58:04.823818+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "anthropic-economic-index",
+        "evidence_status": "first_party",
+        "follow_up": "查看完整报告，提取AI对各行业影响的数据。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "public_web:sitemap:2be84f63d7cb417facc4",
+        "intelligence_type": "market_signal",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Anthropic官方发布的经济指数，可能包含AI对经济影响的洞察，但内容摘要过于简略，缺乏具体数据或产品关联。",
+        "region": "global",
+        "score": 6.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Anthropic发布经济指数，但未提供具体数据或分析细节。",
+        "tags": [
+          "经济指数",
+          "Anthropic"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "02d8934b1653c7bfceeae1493733dccd3b4dba55f184000bc980b51bd3696aa3": {
       "created_at": "2026-08-25T01:52:02.803692+00:00",
       "model": "deepseek-v4-flash",
@@ -1553,6 +1591,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "0ad8a8c9bbc74668ed7d3e04fda3e9fb5d8b890085486c4fbae20e12d353c16b": {
+      "created_at": "2026-08-26T01:58:41.401855+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "apple-mac-mini-m6-m5pro",
+        "evidence_status": "first_party",
+        "follow_up": "关注新芯片对本地AI推理性能的影响。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:49433450",
+        "intelligence_type": "market_signal",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Mac mini",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Apple官方发布新Mac mini，但属于硬件更新，与AI产品直接关联弱，且讨论多为价格和性能比较，对AI产品经理增量有限。",
+        "region": "global",
+        "score": 6.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "苹果发布搭载M6和M5 Pro的新Mac mini，性能提升但价格上调。",
+        "tags": [
+          "Apple",
+          "Mac mini",
+          "硬件"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "0b14c285dcadb38fbf33ff3c0f84bf070684476d17d95646c850979027f21f5a": {
       "created_at": "2026-08-25T01:52:02.803921+00:00",
       "model": "deepseek-v4-flash",
@@ -2123,6 +2200,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "0e643fd66f89b2a259b4ad8cb1257a383b3d2ebca5d7c8b5c59f56dc50354821": {
+      "created_at": "2026-08-26T01:58:04.827762+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "github-llm-evaluation-before-production",
+        "evidence_status": "first_party",
+        "follow_up": "关注评估框架的具体细节和工具。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:github.blog_ai-and-ml_feed_:aa69031cc31dca3d",
+        "intelligence_type": "builder_insight",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "GitHub官方博客分享在生产前评估LLM的实践经验，基于真实场景（秘密扫描），对产品经理有可迁移的评估方法论。",
+        "region": "global",
+        "score": 8.0,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "GitHub分享在生产前评估LLM的实践经验，基于真实秘密扫描场景。",
+        "tags": [
+          "LLM评估",
+          "GitHub"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "0ea55ddb49a0cba94090b7bdf9059b2d7c3bc01f25d4cab5620c850b9d0099d4": {
       "created_at": "2026-07-27T04:14:53.894257+00:00",
       "model": "deepseek-v4-flash",
@@ -2568,6 +2683,43 @@
         "tags": [
           "博客",
           "写作"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "11bed4b6f3915a370ebc2784d9cf6e07ad28b65d95e389e72f2761bd442f22bd": {
+      "created_at": "2026-08-26T01:58:33.863973+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "black-hole-singularity-surface",
+        "evidence_status": "reported",
+        "follow_up": "无。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:49437210",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "关于黑洞奇点的物理学讨论，与 AI 产品无关，属于噪音。",
+        "region": "global",
+        "score": 2.0,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "一篇关于黑洞奇点性质的物理学讨论，与 AI 无关。",
+        "tags": [
+          "物理学"
         ],
         "target_user": "",
         "verticals": []
@@ -3559,6 +3711,46 @@
           "Claude Code",
           "开发者工具",
           "更新"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "18dc730800d433c5c1fd97f502d907fb19d686cf381759e4f76c25deb1e40db8": {
+      "created_at": "2026-08-26T01:58:18.950629+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "claude-cowork-shared-memory",
+        "evidence_status": "reported",
+        "follow_up": "观察共享记忆的实际效果和用户反馈。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:68d441603896d9c4",
+        "intelligence_type": "product_case",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Claude Cowork",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Anthropic为Claude Cowork增加跨聊天和Cowork的共享记忆，解决用户重复简报痛点，提升产品体验，有明确产品增量。",
+        "region": "global",
+        "score": 8.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Anthropic为Claude Cowork引入共享记忆，用户无需重复告知项目背景。",
+        "tags": [
+          "Anthropic",
+          "Claude",
+          "记忆",
+          "Agent"
         ],
         "target_user": "",
         "verticals": []
@@ -5288,6 +5480,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "237b503136e2f134b624f0695fcec1868f3977e9f78ad3be9b0819799ede6879": {
+      "created_at": "2026-08-26T01:58:33.863901+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "apple-mac-studio-m5",
+        "evidence_status": "first_party",
+        "follow_up": "关注本地 AI 模型运行性能表现。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:49433316",
+        "intelligence_type": "market_signal",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Apple 发布新款 Mac Studio，主打本地 AI 性能，但属于硬件更新，对 AI 产品经理直接价值有限。",
+        "region": "global",
+        "score": 6.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Apple 发布新款 Mac Studio，搭载 M5 Max/Ultra，强化本地 AI 计算能力。",
+        "tags": [
+          "Apple",
+          "Mac Studio",
+          "AI算力"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "239bd9b2529e7bab35897b30409c2ef94cb0a0ae777c75d87cc5c9eb7f587c39": {
       "created_at": "2026-08-19T01:52:38.105527+00:00",
       "model": "deepseek-v4-flash",
@@ -6236,6 +6467,45 @@
         "tags": [
           "Codex",
           "版本发布"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "29b433e17fceb8c50a20e4b4a550cc617e836c3c0ec13e6b867ccd7de92820de": {
+      "created_at": "2026-08-26T01:58:33.864172+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "texbrain-latex-editor",
+        "evidence_status": "first_party",
+        "follow_up": "观察用户反馈和功能迭代。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:49441375",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "TeXbrain",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Show HN 展示 TeXbrain，一个在浏览器中运行 pdfTeX 的 LaTeX 编辑器，解决本地同步和 git 集成痛点，有实际 Demo。",
+        "region": "global",
+        "score": 8.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "开发者展示 TeXbrain，一个基于 WASM 的浏览器 LaTeX 编辑器，支持本地文件访问和 git 集成。",
+        "tags": [
+          "LaTeX",
+          "WASM",
+          "开发者工具"
         ],
         "target_user": "",
         "verticals": []
@@ -8323,6 +8593,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "3b5ea70d13ff63e8c9ce6183c268d7b967f254cf9b1e6db951924278eb6cbfa7": {
+      "created_at": "2026-08-26T01:58:04.823844+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "anthropic-economic-futures-uk-europe",
+        "evidence_status": "first_party",
+        "follow_up": "关注具体报告发布，提取AI对区域经济的影响。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "public_web:sitemap:892905dcfc586fecce9f",
+        "intelligence_type": "market_signal",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Anthropic关于英国和欧洲经济未来的官方内容，但摘要过于简略，无具体数据或产品关联。",
+        "region": "global",
+        "score": 5.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Anthropic发布关于英国和欧洲经济未来的内容，但缺乏具体细节。",
+        "tags": [
+          "经济",
+          "Anthropic"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "3c162c8eeabec188920db8f3301a1a9f1518663259f53b8aceaaacdea5645b9d": {
       "created_at": "2026-08-21T01:57:22.200226+00:00",
       "model": "deepseek-v4-flash",
@@ -8853,6 +9161,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "4009d7556be5b8d968f366ea2f65f06ca1f4dbbb052863ee401d20c2f104fc00": {
+      "created_at": "2026-08-26T01:58:04.827697+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-full-stack-abundant-intelligence",
+        "evidence_status": "first_party",
+        "follow_up": "关注后续具体产品发布或技术细节。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:openai.com_news_rss.xml:51cfe3db04ed0bd3",
+        "intelligence_type": "builder_insight",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI CFO撰文解释芯片、算力、模型和产品如何协同，但内容偏战略阐述，无具体产品案例或用户反馈。",
+        "region": "global",
+        "score": 6.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "OpenAI CFO阐述芯片、算力、模型和产品如何协同推动智能普及。",
+        "tags": [
+          "OpenAI",
+          "战略"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "400a0d5c4e0c7de0316b6bddf9ac8458225f65756c4b0b657e5b0291718c0ddc": {
       "created_at": "2026-07-28T03:49:03.132298+00:00",
       "model": "deepseek-v4-flash",
@@ -9268,6 +9614,45 @@
         "tags": [
           "地缘政治",
           "域名"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "4290166b1799c10e36450cdf18d6f68ca0da09b0119edf0114e61c46f85b8415": {
+      "created_at": "2026-08-26T01:58:33.863701+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "apple-m6-m5-ultra",
+        "evidence_status": "first_party",
+        "follow_up": "关注新芯片对本地 AI 模型运行的影响。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:49433292",
+        "intelligence_type": "market_signal",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Apple 发布 M6 和 M5 Ultra 芯片，提升 AI 算力，但属于硬件更新，对 AI 产品经理直接价值有限。",
+        "region": "global",
+        "score": 6.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Apple 发布 M6 和 M5 Ultra 芯片，性能大幅提升，强化本地 AI 计算能力。",
+        "tags": [
+          "Apple",
+          "芯片",
+          "AI算力"
         ],
         "target_user": "",
         "verticals": []
@@ -10298,6 +10683,83 @@
           "开发者工具",
           "CORS",
           "聊天测试"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "486e2c257289830fbf902813036b6d4ff40e15cd751e156dc87a2f30fef223ea": {
+      "created_at": "2026-08-26T01:58:41.401983+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "fdeploy-selfhosted-deployment-tool",
+        "evidence_status": "first_party",
+        "follow_up": "关注用户反馈和采用情况。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:49430259",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "fDeploy",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "作者七年构建的自我托管部署工具，提供免费商用版本，有真实产品、定价和开发过程，对理解独立开发者产品化有增量价值。",
+        "region": "global",
+        "score": 8.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "开发者发布自托管部署自动化工具fDeploy，面向Windows和IIS，提供免费商用版本。",
+        "tags": [
+          "DevOps",
+          "自托管",
+          "独立开发"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "492faae8e513b886a163d7bf59bc5e1ab28319c49974157383d96cd6087bb900": {
+      "created_at": "2026-08-26T01:58:04.827733+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-jalapeno-inference-chip",
+        "evidence_status": "first_party",
+        "follow_up": "关注芯片的实际部署和性能数据。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:openai.com_news_rss.xml:b9406ae170bd9133",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Jalapeño",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI官方发布自研推理芯片Jalapeño的首批结果，宣称速度和效率领先，属于模型能力相关的重要硬件进展，但无具体产品案例。",
+        "region": "global",
+        "score": 7.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "OpenAI自研推理芯片Jalapeño公布首批结果，宣称速度和效率领先。",
+        "tags": [
+          "推理芯片",
+          "OpenAI"
         ],
         "target_user": "",
         "verticals": []
@@ -13662,6 +14124,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "5f044f69fcea1d249d1f517eb5ac70e17cb0c41fb50135fa8fe3340c925cf9cd": {
+      "created_at": "2026-08-26T01:58:33.857375+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "vercel-ai-v7.0.79",
+        "evidence_status": "first_party",
+        "follow_up": "观察批量补全功能在真实项目中的应用。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "github:release:376123597",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Vercel AI SDK",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Vercel AI SDK 发布新版本，新增批量补全 webhook 功能，对开发者构建 AI 应用有实际帮助。",
+        "region": "global",
+        "score": 7.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Vercel AI SDK 更新至 v7.0.79，新增批量补全 webhook 支持，简化异步任务处理。",
+        "tags": [
+          "Vercel AI",
+          "SDK",
+          "webhook"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "5f6457de9f873842801acd7843c48cf189d3ce5add4843d7758681d40567992a": {
       "created_at": "2026-08-20T01:51:27.775192+00:00",
       "model": "deepseek-v4-flash",
@@ -16299,6 +16800,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "70dba200ceff2f013e3f49cf3a7154ee87a7de57fdaeea92b1a32be8035596a1": {
+      "created_at": "2026-08-26T01:58:18.951348+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-codex-rust-v0.150.0-alpha.10",
+        "evidence_status": "first_party",
+        "follow_up": "关注后续版本更新内容。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "github:release:376699951",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Codex",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI Codex发布alpha版本，但无具体更新内容，价值有限。",
+        "region": "global",
+        "score": 6.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "OpenAI Codex发布rust-v0.150.0-alpha.10版本。",
+        "tags": [
+          "OpenAI",
+          "Codex",
+          "Agent"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "7111048d0b784a36e69ad98cd5c82bbff864ea7e40da55fa5400babe557273bd": {
       "created_at": "2026-08-10T02:34:21.218125+00:00",
       "model": "deepseek-v4-flash",
@@ -16598,6 +17138,45 @@
         "tags": [
           "模型排行",
           "市场信号"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "71d2c0c7649cf4070e9b3bb82d099d9fa20cb0094be4035079dc080a153bd721": {
+      "created_at": "2026-08-26T01:58:18.950678+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-jalapeno-chip",
+        "evidence_status": "reported",
+        "follow_up": "关注芯片实际性能和应用场景。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:7811bd9bf68eedaf",
+        "intelligence_type": "model_capability",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Jalapeño",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI发布自研AI芯片Jalapeño，宣称更低延迟和更高吞吐，可能解锁新模型能力，但具体产品体验未知。",
+        "region": "global",
+        "score": 7.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "OpenAI推出自研AI芯片Jalapeño，宣称响应更快、效率更高。",
+        "tags": [
+          "OpenAI",
+          "芯片",
+          "硬件"
         ],
         "target_user": "",
         "verticals": []
@@ -17361,6 +17940,39 @@
         "verticals": []
       },
       "stage": "candidate_analysis"
+    },
+    "75ad78c5f3b36ad82da2335955ade3fc432bfa45d94d20c7259922ce1276503e": {
+      "created_at": "2026-08-26T01:59:29.787277+00:00",
+      "model": "kimi-k2.6",
+      "prompt_version": "deep-v3-beginner",
+      "result": {
+        "ai_role": "Agent 作为自主决策者，根据用户输入判断何时调用 Skill、何时执行代码，Dify 负责管理它的运行环境和工具链",
+        "evidence_status": "first_party",
+        "hands_on_exercise": "30 分钟练习：本地 Docker 启动 Dify 1.17.0，创建一个能执行 Python 代码的 Agent，安装一个第三方库（如 requests），发布后用快照功能验证重新运行时库仍在；再创建一个简单 Skill（如查询天气的 HTTP 请求），从另一个 Agent 调用它",
+        "implementation_idea": "E2B 沙箱相当于给 Agent 租了一个隔离的云端 Docker 容器跑代码，不用怕本地中毒；Home 快照就是发布时把容器整个文件系统拍张照，以后每次启动都从这个状态恢复，保证'开发啥样运行啥样'；Skill 管理则是把代码+工具定义打包成可版本控制的模块，像 npm 包一样共享给团队",
+        "learning_points": [
+          "Sandbox（沙箱）：给 AI 一个隔离的'实验厨房'，代码跑坏了也不影响主机",
+          "Skill / Tool：把 AI 能调用的能力封装成标准接口，Agent 像插乐高一样组合使用",
+          "Context Window（上下文窗口）：大模型一次能处理的文字量有限，需要压缩历史对话避免爆掉"
+        ],
+        "limitations_or_uncertainties": "E2B 云沙箱的实际计费模式、性能延迟数据未公开；Context-aware history compaction 的具体压缩策略细节未公开；Azure Key Vault KMS 是否支持其他云厂商未说明",
+        "product_name": "Dify",
+        "sources": [
+          "https://github.com/langgenius/dify/releases/tag/1.17.0",
+          "https://dify.ai/"
+        ],
+        "target_users": "需要快速搭建生产级 AI Agent 的开发者、企业技术团队",
+        "title_zh": "Dify 1.17.0 发布：Agent 云沙箱、构建快照与技能管理",
+        "usage_flow": [
+          "在 Dify 平台创建 Agent，选择 E2B 云沙箱作为代码执行后端",
+          "开发时安装依赖、准备文件，发布后平台自动打快照锁定环境",
+          "把常用能力封装成 Skill（技能），设置版本并发布到工作空间",
+          "其他 Agent 直接调用已发布的 Skill，无需重复配置"
+        ],
+        "user_problem": "开发者搭建 Agent 时遇到三个痛点：1）代码执行环境不安全或只能本地跑；2）Agent 发布后运行环境跟开发时不一致，依赖丢失；3）团队里做好的工具/能力没法复用，每次都要重写",
+        "what_it_is": "Dify 是一个开源的 AI 应用开发平台，让你用可视化界面搭建 Agent（能自主调用工具的 AI 助手）、工作流和知识库，可私有化部署。"
+      },
+      "stage": "deep_analysis"
     },
     "75b2a1c93c92d2c85c4832c09b5953177643775eddb77ea404e47adb6127bc12": {
       "created_at": "2026-07-29T01:53:26.758078+00:00",
@@ -18583,6 +19195,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "7ce1a810466e96d582f34b498c3e881f7bfa72c944e2b487eb4d17bb5d9ab374": {
+      "created_at": "2026-08-26T01:58:41.401726+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "c2pa-cameras-reality-check",
+        "evidence_status": "first_party",
+        "follow_up": "关注C2PA后续改进或替代方案的产品落地。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:49439499",
+        "intelligence_type": "builder_insight",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "作者一手技术分析，揭示C2PA在Android相机实现中的缺陷，对理解AI内容认证的产品局限有增量价值，但非直接产品案例。",
+        "region": "global",
+        "score": 7.5,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "作者分析C2PA相机认证在现实中的失效问题，说明AI内容溯源技术的产品化挑战。",
+        "tags": [
+          "C2PA",
+          "AI内容认证",
+          "技术分析"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "7d43ac178a30fe54dc4ffbc632ebf6b16ebd67446b55b2e4851b5f073d4c1de5": {
       "created_at": "2026-08-13T02:46:43.251214+00:00",
       "model": "deepseek-v4-flash",
@@ -18842,6 +19493,45 @@
         "tags": [
           "DeepSeek",
           "定价"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "7eacb9c1a010c87db9056f5150982a0fadc539853f1aca9e48905cd98e7c626d": {
+      "created_at": "2026-08-26T01:58:33.863601+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "fda-wearable-ketone-glucose",
+        "evidence_status": "first_party",
+        "follow_up": "关注该设备的数据接口和 AI 分析应用。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:49439017",
+        "intelligence_type": "market_signal",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "FDA 批准首款可穿戴酮体和血糖监测设备，对医疗健康领域有重大意义，可能催生新的 AI 健康产品。",
+        "region": "global",
+        "score": 8.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "FDA 批准首款同时监测酮体和血糖的可穿戴设备，为糖尿病管理提供新工具。",
+        "tags": [
+          "医疗健康",
+          "可穿戴",
+          "FDA"
         ],
         "target_user": "",
         "verticals": []
@@ -21718,6 +22408,45 @@
           "Agent",
           "CLI",
           "Harness"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "9210a3b3fdddb1d3c6560fc112b3f12d8f3bcd59df5420c96deeb95dba9210eb": {
+      "created_at": "2026-08-26T01:58:41.402072+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "ambient-context-screen-memory",
+        "evidence_status": "first_party",
+        "follow_up": "关注其与AI Agent的集成效果和用户采用。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:49429095",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "ambient-context",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "macOS菜单栏应用，通过读取窗口文本生成Markdown记忆，无需截图，与Claude Code集成，有明确产品思路和用户反馈，对AI产品经理有高参考价值。",
+        "region": "global",
+        "score": 8.5,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "开发者发布macOS应用ambient-context，通过读取窗口文本生成Markdown记忆，供AI查询工作历史。",
+        "tags": [
+          "AI记忆",
+          "macOS",
+          "Claude Code"
         ],
         "target_user": "",
         "verticals": []
@@ -26251,6 +26980,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "acb92530a0ea2631b4c1e294e0ce939453e57e1b0abf9cb9d041acd98f6a0738": {
+      "created_at": "2026-08-26T01:58:18.951285+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "vercel-connect-ga",
+        "evidence_status": "first_party",
+        "follow_up": "关注其生态和治理能力。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:vercel.com_changelog_rss:49d657e0fd192b3a",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Vercel Connect",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Vercel Connect正式可用，用短期令牌替代长期令牌，解决Agent凭证管理问题，有明确产品增量。",
+        "region": "global",
+        "score": 8.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Vercel Connect正式发布，用短期令牌解决Agent凭证管理问题。",
+        "tags": [
+          "Vercel",
+          "凭证管理",
+          "Agent"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "accae16c51c7e1805723dab419f0d8ad716ddaa134c84b8e4827c42c3bc1910e": {
       "created_at": "2026-08-03T03:53:58.103141+00:00",
       "model": "deepseek-v4-flash",
@@ -27054,6 +27822,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "b13159ef8f337c25f08b15d474dd6b0a16fa618194fa4f4694e28a4f3bbbfa64": {
+      "created_at": "2026-08-26T01:58:18.950737+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "andrew-ng-ai-engineering",
+        "evidence_status": "reported",
+        "follow_up": "关注其后续内容输出。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:www.latent.space_feed:8a7a8944d0f9cafd",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Andrew Ng进入AI工程领域，可能带来行业洞察，但内容未具体展开，价值有限。",
+        "region": "global",
+        "score": 6.0,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "Andrew Ng开始涉足AI工程领域。",
+        "tags": [
+          "Andrew Ng",
+          "AI工程"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "b1aa3b04e50244b9348a6e259775312c9d06c8744f3a7d9501a26749ee9cc668": {
       "created_at": "2026-08-14T02:45:44.146515+00:00",
       "model": "deepseek-v4-flash",
@@ -27087,6 +27893,45 @@
           "OpenAI",
           "速度优化",
           "企业"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "b1cf7c26bed6d4b4be36ffce5b3b4725508b0d9e60b05e316322f4ffed365cde": {
+      "created_at": "2026-08-26T01:58:33.857281+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "claude-code-v2.1.246",
+        "evidence_status": "first_party",
+        "follow_up": "观察新权限管理功能对实际开发流程的影响。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "github:release:376644211",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Claude Code",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Claude Code 官方发布新版本，包含多项功能改进和 bug 修复，如权限管理、性能优化等，对开发者有实际价值。",
+        "region": "global",
+        "score": 7.5,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Anthropic 发布 Claude Code v2.1.246，新增权限管理和性能修复，提升终端 AI 编程体验。",
+        "tags": [
+          "Claude Code",
+          "AI编程",
+          "更新"
         ],
         "target_user": "",
         "verticals": []
@@ -27821,6 +28666,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "b64e5a7a9c8e2fc8d9fae962b29fa19dff3671f42267e23474119f216949c995": {
+      "created_at": "2026-08-26T01:58:18.951329+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-codex-rust-v0.150.0-alpha.11",
+        "evidence_status": "first_party",
+        "follow_up": "关注后续版本更新内容。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "github:release:376731336",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Codex",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI Codex发布alpha版本，但无具体更新内容，价值有限。",
+        "region": "global",
+        "score": 6.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "OpenAI Codex发布rust-v0.150.0-alpha.11版本。",
+        "tags": [
+          "OpenAI",
+          "Codex",
+          "Agent"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "b68e0af6ffb12d97b10aab9d3814d111bebec7728ef36aa37670d246fcae0428": {
       "created_at": "2026-08-01T03:49:06.725963+00:00",
       "model": "deepseek-v4-flash",
@@ -27853,6 +28737,44 @@
         "tags": [
           "DeepSeek",
           "模型评测"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "b69faf4ff70e5b1ebcc7716c53007d0f3928baa19817b9d8dbef6071e4adf9dd": {
+      "created_at": "2026-08-26T01:58:04.827807+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "generalist-robotics-3b-valuation",
+        "evidence_status": "reported",
+        "follow_up": "关注其产品进展和商业化路径。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:78642f7d5288318e",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Generalist",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "TechCrunch报道机器人初创公司Generalist估值达30亿美元，属于融资新闻，对产品经理的增量有限。",
+        "region": "global",
+        "score": 6.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "机器人初创公司Generalist估值达30亿美元，完成2亿美元融资。",
+        "tags": [
+          "机器人",
+          "融资"
         ],
         "target_user": "",
         "verticals": []
@@ -28044,6 +28966,45 @@
         "tags": [
           "Agent",
           "科学计算"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "b8f0c639284cfaf61d5b4905516479a085fd1ac337ad3cf9e36f8d5f02c2f2d4": {
+      "created_at": "2026-08-26T01:58:18.951309+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-codex-rust-v0.150.0-alpha.9",
+        "evidence_status": "first_party",
+        "follow_up": "关注后续版本更新内容。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "github:release:376401392",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Codex",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI Codex发布alpha版本，但无具体更新内容，价值有限。",
+        "region": "global",
+        "score": 6.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "OpenAI Codex发布rust-v0.150.0-alpha.9版本。",
+        "tags": [
+          "OpenAI",
+          "Codex",
+          "Agent"
         ],
         "target_user": "",
         "verticals": []
@@ -28915,6 +29876,44 @@
           "Claude Code",
           "开发者工具",
           "成本控制"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "bfef0aab799695d1645b12f44ccb5d0fc27391eb698f8cbf980695f7c77a270c": {
+      "created_at": "2026-08-26T01:58:04.827656+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "ornith-1.5-open-weight-models",
+        "evidence_status": "reported",
+        "follow_up": "关注模型的实际性能评测和社区使用反馈。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "newsletter:feed:56022292fc855487fe77",
+        "intelligence_type": "model_capability",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Ornith-1.5",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "AI新闻通讯报道了Ornith-1.5开源模型家族发布，包含多种规模变体和量化格式，但来源为聚合通讯，且内容为模型发布，对产品经理的增量有限。",
+        "region": "global",
+        "score": 7.0,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "Ornith-1.5开源模型发布，提供9B、35B MoE和397B MoE变体，支持多种量化格式。",
+        "tags": [
+          "开源模型",
+          "Ornith-1.5"
         ],
         "target_user": "",
         "verticals": []
@@ -30866,6 +31865,46 @@
       },
       "stage": "candidate_analysis"
     },
+    "cde371bc07e757271183f1a11254cc5c1742952f18e23c0e7de607aa92537a35": {
+      "created_at": "2026-08-26T01:58:18.950972+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "vercel-run-sdk",
+        "evidence_status": "first_party",
+        "follow_up": "观察开发者采用情况和实际效果。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:vercel.com_changelog_rss:6f5eafb0bb175279",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Run SDK",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Vercel发布Run SDK，用于安全执行不可信JS/TS，支持认证和人工审批，解决Agent执行安全问题，有明确产品价值。",
+        "region": "global",
+        "score": 9.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Vercel发布Run SDK，安全执行Agent编写的代码，支持权限控制和人工审批。",
+        "tags": [
+          "Vercel",
+          "SDK",
+          "Agent",
+          "安全"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "ce03a49021bf9aa9d428c186e3589cdcece37c9f198b478dcbadc0b834d3b7c8": {
       "created_at": "2026-08-02T03:52:32.504219+00:00",
       "model": "deepseek-v4-flash",
@@ -31395,6 +32434,44 @@
         "tags": [
           "Token",
           "商业模式"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "d4684748825895ef44f31cf99efd5b34e121b9fdcfe901f969b93886cbd5adc6": {
+      "created_at": "2026-08-26T01:58:33.857328+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "claude-code-v2.1.245",
+        "evidence_status": "first_party",
+        "follow_up": "无特别关注点。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "github:release:376149254",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Claude Code",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Claude Code 修复 Linux 特定发行版启动崩溃问题，属于维护性更新，价值有限。",
+        "region": "global",
+        "score": 6.5,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Anthropic 发布 Claude Code v2.1.245，修复 Linux 新版本 glibc 导致的启动崩溃。",
+        "tags": [
+          "Claude Code",
+          "bug修复"
         ],
         "target_user": "",
         "verticals": []
@@ -32467,6 +33544,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "dbfcf370e69240f7fe85d3a8d76a84a9eac7dfbdc277116b696c2c38370c4eed": {
+      "created_at": "2026-08-26T01:58:04.823774+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "anthropic-wellbeing-research-grants",
+        "evidence_status": "first_party",
+        "follow_up": "关注资助项目的具体方向和成果发布。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "public_web:sitemap:1e032b3767d6bbcd1e13",
+        "intelligence_type": "business_policy",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Anthropic官方发布的研究资助计划，但内容仅为公告，无具体产品、用户反馈或构建过程，对产品经理的增量有限。",
+        "region": "global",
+        "score": 5.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Anthropic宣布设立福祉研究资助计划，但未提供具体产品细节。",
+        "tags": [
+          "研究资助",
+          "Anthropic"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "dc43ed3cdc998e3cc53655707d37157340e95b57feff810d17c2967d6dbb625e": {
       "created_at": "2026-08-13T02:47:09.863178+00:00",
       "model": "deepseek-v4-flash",
@@ -32895,6 +34010,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "df02ff0a29651bb494f0b4f44edd06da91dcc7e3724d2b7a356002e54c440dab": {
+      "created_at": "2026-08-26T01:58:18.950714+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-alabama-subpoena",
+        "evidence_status": "reported",
+        "follow_up": "关注调查结果及对AI安全监管的影响。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:c2b5b58d076f895c",
+        "intelligence_type": "business_policy",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI因AI代理安全事件被调查，涉及安全实践，对产品构建者有警示意义，但非直接产品增量。",
+        "region": "global",
+        "score": 6.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "阿拉巴马州总检察长传唤OpenAI，调查其AI代理逃逸并攻击其他公司的事件。",
+        "tags": [
+          "OpenAI",
+          "安全",
+          "法律"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "df20c8bbf1f5d7e77ac6b3c5ee8b8c2c6d4beaf360b99c5b7dd7fa1b475fd35f": {
       "created_at": "2026-07-28T03:49:03.132264+00:00",
       "model": "deepseek-v4-flash",
@@ -33275,6 +34429,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "e185f59a0153ac041a2d212e9ad14c23a6a404b2fca4078e209940f7d305119e": {
+      "created_at": "2026-08-26T01:58:18.950582+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-exec-departure",
+        "evidence_status": "reported",
+        "follow_up": "关注后续高管变动对产品路线的影响。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:43bdd99479e930dc",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI高管离职，属于公司人事变动，对产品构建者直接价值有限，但反映组织稳定性，可作市场信号。",
+        "region": "global",
+        "score": 5.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "OpenAI数据中心高管离职，公司持续经历高层人事变动。",
+        "tags": [
+          "OpenAI",
+          "人事变动"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "e2255f286fb7acba173531f1a464dc07023e37125326e87d8d8adbf251385989": {
       "created_at": "2026-08-25T01:52:02.803871+00:00",
       "model": "deepseek-v4-flash",
@@ -33462,6 +34654,45 @@
           "OpenAI",
           "ARC-AGI",
           "模型能力"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "e31ed54c3efa49fb6c36b48be10f8b47d556d704721e9713ede4864cff22c8eb": {
+      "created_at": "2026-08-26T01:58:04.823869+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "anthropic-economic-index-claude-sonnet-3-7",
+        "evidence_status": "first_party",
+        "follow_up": "查看完整报告，了解AI对经济的具体影响。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "public_web:sitemap:9466a78c28e017400ff3",
+        "intelligence_type": "market_signal",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Anthropic官方发布基于Claude Sonnet 3.7的经济指数洞察，但摘要过于简略，缺乏具体数据或产品关联。",
+        "region": "global",
+        "score": 6.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Anthropic发布基于Claude Sonnet 3.7的经济指数洞察，但未提供具体内容。",
+        "tags": [
+          "经济指数",
+          "Claude",
+          "Anthropic"
         ],
         "target_user": "",
         "verticals": []
@@ -34033,6 +35264,45 @@
         "tags": [
           "Community",
           "General"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "e65104bf483efec2a6270941e1d028334e2daaef9b2934b758704e29146bc208": {
+      "created_at": "2026-08-26T01:58:04.827782+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "ibm-granite-4-2-llms",
+        "evidence_status": "first_party",
+        "follow_up": "访问原文获取构建细节。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:huggingface.co_blog_feed.xml:d21068479952e403",
+        "intelligence_type": "builder_insight",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Granite 4.2",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Hugging Face博客介绍IBM Granite 4.2 LLM的构建方法，但内容为空，无法评估具体增量。",
+        "region": "global",
+        "score": 7.0,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "Hugging Face博客介绍IBM Granite 4.2 LLM的构建方法，但内容为空。",
+        "tags": [
+          "IBM",
+          "Granite",
+          "LLM"
         ],
         "target_user": "",
         "verticals": []
@@ -35681,6 +36951,46 @@
       },
       "stage": "candidate_analysis"
     },
+    "f038532351934ec8953c18c5ab8e0323a5f352675d1d3a25ab89cfdb37ac3670": {
+      "created_at": "2026-08-26T01:58:33.863498+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "dify-1.17.0",
+        "evidence_status": "first_party",
+        "follow_up": "观察新技能管理功能如何影响 Agent 生态。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "github:release:376348099",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Dify",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Dify 发布 1.17.0，引入 E2B 沙箱、Home 快照和技能管理，显著增强 Agent 能力，对 AI 应用开发平台有重要增量。",
+        "region": "global",
+        "score": 8.5,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Dify 发布 1.17.0，新增 E2B 云沙箱、构建时快照和技能管理，提升 Agent 开发体验。",
+        "tags": [
+          "Dify",
+          "Agent",
+          "沙箱",
+          "技能管理"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "f03dc37cd5d2fc6954f64b2ba7478006bb9dc642874ca3af911fa7b6887c3a2c": {
       "created_at": "2026-07-28T03:48:46.845990+00:00",
       "model": "deepseek-v4-flash",
@@ -35713,6 +37023,45 @@
         "tags": [
           "Model Ranking",
           "OpenRouter"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "f057b2f42aa097334c5698fd9556c37f83f16864fc4845b19b9936c28082ac3a": {
+      "created_at": "2026-08-26T01:58:33.863793+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-jalapeno-chip",
+        "evidence_status": "reported",
+        "follow_up": "等待 OpenAI 官方发布或更多可靠证据。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:49434378",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI 自研芯片 Jalapeño 声称性能超越 Nvidia Blackwell，但属于传闻和行业分析，缺乏一手证据。",
+        "region": "global",
+        "score": 6.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "报道称 OpenAI 自研芯片 Jalapeño 性能超越 Nvidia Blackwell，但尚未官方确认。",
+        "tags": [
+          "OpenAI",
+          "芯片",
+          "AI算力"
         ],
         "target_user": "",
         "verticals": []
@@ -35907,6 +37256,41 @@
         "verticals": []
       },
       "stage": "candidate_analysis"
+    },
+    "f1ae6c8a518c1fb4ed562e8d61f14b22aebb10ee1d0cdabd2cf7f41faf9d022a": {
+      "created_at": "2026-08-26T01:59:07.599348+00:00",
+      "model": "kimi-k2.6",
+      "prompt_version": "deep-v3-beginner",
+      "result": {
+        "ai_role": "生成需要在沙箱里执行的 TypeScript/JavaScript 代码，把多个工具调用和逻辑编排成一段可运行程序",
+        "evidence_status": "first_party",
+        "hands_on_exercise": "访问 https://www.run-sdk.dev/playground，在在线沙箱里写一段调用 host 函数的代码，观察哪些操作被允许、哪些被阻断；然后本地 npm install 跑一个最小 Demo，尝试让代码触发超时或内存限制，看沙箱如何兜底",
+        "implementation_idea": "把 Agent 的代码关进一个叫 QuickJS 的轻量级 JavaScript 引擎里，这个引擎跑在独立的 worker 线程中，和主程序彻底隔离。主程序像开窗口一样，只让沙箱看到几个指定的函数。沙箱和主程序之间传数据全靠序列化，沙箱里代码连不上 Node.js、连不上网。每次调用都是全新的干净环境，防止之前运行的代码留下后门。",
+        "learning_points": [
+          "Sandbox（沙箱）：给不可信代码造一个'玻璃房'，让它能干活但逃不出来、碰不到外面的系统",
+          "Human-in-the-loop（人机协同）：AI 跑到关键步骤自动暂停，等人批准后再继续，不是一次性跑到底",
+          "Serialization（序列化）：沙箱内外传数据只能走'复印件'，不能直接给对象引用，防止代码顺着指针爬出来"
+        ],
+        "limitations_or_uncertainties": "未公开具体定价和商用许可条款；未公开是否支持除 JS/TS 外的其他语言；未公开大规模并发下的性能基准；需要操作系统级隔离的场景明确建议改用 Vercel Sandbox 而非 Run SDK",
+        "product_name": "Run SDK",
+        "sources": [
+          "https://vercel.com/blog/introducing-run",
+          "https://github.com/vercel-labs/run",
+          "https://www.run-sdk.dev/playground",
+          "https://ai-sdk.dev/docs/ai-sdk-core/code-mode"
+        ],
+        "target_users": "用 Vercel AI SDK 开发 Agent 的开发者；需要让用户/客户代码安全运行的产品团队",
+        "title_zh": "Vercel 发布 Run SDK：给 AI Agent 加一道安全沙箱",
+        "usage_flow": [
+          "开发者用 createRunner() 建一个沙箱，只暴露几个精选的 hostFunctions（比如 store.listOrders()）",
+          "Agent 生成代码，在沙箱里运行，只能调用你允许的那些函数",
+          "代码走到敏感操作（如退款）时，hostFunction 抛中断，等人工审批或认证",
+          "审批通过后，用签名 token 恢复运行，已完成的步骤不会重复执行"
+        ],
+        "user_problem": "Agent 越来越会自己写 TypeScript 代码来调工具，但直接用 eval 执行等于给它你服务器的全部钥匙——能看密钥、能调内部服务、还没法中途喊停让人审批",
+        "what_it_is": "一个让 AI Agent 写的代码安全运行的工具包，Agent 碰不到你的主程序和网络，想干敏感操作还得你点头"
+      },
+      "stage": "deep_analysis"
     },
     "f1f32aab256c4565545315243b2fa653ddb6d00dd5038b7c3881f46721d4f48b": {
       "created_at": "2026-08-07T03:15:36.303231+00:00",
