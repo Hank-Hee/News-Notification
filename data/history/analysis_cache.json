@@ -349,6 +349,46 @@
       },
       "stage": "candidate_analysis"
     },
+    "03a02acb5335553af304066f5735f54766dc181580e37a53e2463b9af4336597": {
+      "created_at": "2026-08-28T11:23:03.952677+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "claude-code-restricted-mode-release",
+        "evidence_status": "first_party",
+        "follow_up": "观察受限模式的实际使用反馈和企业采用情况",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "github:release:378106990",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Claude Code",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Claude Code 新增 --restricted 模式、缓存 TTL 配置、自托管 runner 标签覆盖等多项实用功能，对 Agent 安全性和企业部署有明确增量，值得关注。",
+        "region": "global",
+        "score": 8.5,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Claude Code 发布 v2.1.248，新增受限模式、缓存 TTL 配置和自托管 runner 标签覆盖等功能，提升安全性和企业可用性。",
+        "tags": [
+          "Agent",
+          "Claude Code",
+          "安全",
+          "企业"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "03ab626e714a1e52e8d13c8cd69e80cf5027098d13ba624f9d2507ae97d8b735": {
       "created_at": "2026-07-25T16:38:29.698710+00:00",
       "model": "deepseek-v4-flash",
@@ -1364,6 +1404,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "09066414f08d12b8cb8c3743d76132e7e74930080a03c5002e58036d2e852a91": {
+      "created_at": "2026-08-28T11:22:42.197850+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "enterprise-ai-agent-complexity",
+        "evidence_status": "reported",
+        "follow_up": "无",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:venturebeat.com_category_ai_feed_:1a416b6027843809",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": true,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "VentureBeat文章讨论企业AI代理复杂性，但由Gravitee赞助，有营销性质，且无具体产品案例，价值一般。",
+        "region": "global",
+        "score": 6.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "文章指出企业AI代理之间的复杂性是真正风险，但内容偏概念且含赞助，无具体产品案例。",
+        "tags": [
+          "企业AI",
+          "Agent"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "0933b88c62d0328c5ae1928c89d329200d066a0c1588c4c73488246716c5224e": {
       "created_at": "2026-08-12T02:43:31.539229+00:00",
       "model": "deepseek-v4-flash",
@@ -1506,6 +1584,82 @@
           "模型发布",
           "开源",
           "Kimi"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "09e19ed6a7ddff4bbd9007861584d4b7af3c5f3866b3c2d118a54dfed43df2d6": {
+      "created_at": "2026-08-28T11:22:26.162693+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "deepmind-double-blind-ai-evaluations",
+        "evidence_status": "first_party",
+        "follow_up": "关注评估方法、结果及对行业的影响。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:deepmind.google_blog_rss.xml:71c43cf780d371ee",
+        "intelligence_type": "market_signal",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Google DeepMind官方宣布试点双盲AI评估，属于官方一手动态，但内容摘要过于简略，缺乏具体细节，故评分中等偏上。",
+        "region": "global",
+        "score": 7.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Google DeepMind试点全球首个双盲AI评估，但具体方法未详述。",
+        "tags": [
+          "AI评估",
+          "DeepMind"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "09e2946f7db82f3494b034e026cb9395f27ba55e97b3e6d31dbc439759c79e1e": {
+      "created_at": "2026-08-28T11:22:42.197490+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "rogue-ai-cybersecurity-call",
+        "evidence_status": "reported",
+        "follow_up": "关注后续具体措施和合作。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:fa7496fee1db6f9a",
+        "intelligence_type": "business_policy",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "多家公司联合呼吁防御恶意AI，属于行业倡议，但无具体产品落地，价值一般。",
+        "region": "global",
+        "score": 5.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "OpenAI、Anthropic、Google等100家公司联合呼吁采取行动防御恶意AI，但无具体产品细节。",
+        "tags": [
+          "AI安全",
+          "政策"
         ],
         "target_user": "",
         "verticals": []
@@ -2429,6 +2583,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "0f90f5c761d226ec343a09137bbf004a49b52eca238c717794c823a9f4aa1316": {
+      "created_at": "2026-08-28T11:22:57.242405+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "gemini-notebook-expert-intelligence-books",
+        "evidence_status": "reported",
+        "follow_up": "观察该功能实际使用反馈及对学习场景的影响。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:43543e9f0b9dfaef",
+        "intelligence_type": "product_case",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Gemini Notebook",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Google Gemini Notebook新增从Google Play Books导入书籍并交互的功能，是具体产品功能更新，有明确用户场景。",
+        "region": "global",
+        "score": 8.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Google的AI笔记应用Gemini Notebook新增Expert Intelligence功能，可导入Google Play Books书籍并提问、生成计划等。",
+        "tags": [
+          "Google",
+          "笔记应用",
+          "书籍"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "0fd27a39a63575f29bd0a74906fb7d25910bd703f72fc2e2f63ccd2550bbcd7e": {
       "created_at": "2026-08-07T03:15:20.883122+00:00",
       "model": "deepseek-v4-flash",
@@ -2461,6 +2654,45 @@
         "tags": [
           "基准测试",
           "模型评估"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "1008a3311df50fc5e439cf5a45287285f9e18e0ac4f19a1da728eeb5470bb4e1": {
+      "created_at": "2026-08-28T11:22:26.162519+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "anthropic-claude-for-education",
+        "evidence_status": "first_party",
+        "follow_up": "关注教育场景的具体产品功能、合作院校及用户反馈。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "public_web:sitemap:89df73f468616e60a907",
+        "intelligence_type": "market_signal",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Claude",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Anthropic官方推进Claude在教育领域的应用，属于官方一手动态，但内容摘要过于简略，缺乏具体细节，故评分中等偏上。",
+        "region": "global",
+        "score": 7.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Anthropic宣布推进Claude在教育领域的应用，但具体功能或合作未详述。",
+        "tags": [
+          "Anthropic",
+          "教育",
+          "Claude"
         ],
         "target_user": "",
         "verticals": []
@@ -3329,6 +3561,44 @@
           "Agent",
           "智能家居",
           "个人案例"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "16aed2b013962dc71facf65dc15dcfbc7b80161ba599296b9afa573d7b455173": {
+      "created_at": "2026-08-28T11:22:26.162624+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openrouter-ai-model-rankings",
+        "evidence_status": "reported",
+        "follow_up": "关注排名变化趋势及新模型上榜。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "public_web:ranking:b0ab1ec5ca2d10da9cfa",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": false,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenRouter模型热度排名，属于聚合数据，缺乏深度分析，且多为已知模型，增量有限，故评分较低。",
+        "region": "global",
+        "score": 6.0,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "OpenRouter列出AI模型热度Top5，包括DeepSeek、小米、腾讯等，但仅为排名，无深度信息。",
+        "tags": [
+          "模型排名",
+          "OpenRouter"
         ],
         "target_user": "",
         "verticals": []
@@ -4558,6 +4828,45 @@
           "n8n",
           "beta",
           "补丁"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "1dac41c534c0a04d2e3e728d7634a9740de1f1566438e1a96af49c6988b2abe7": {
+      "created_at": "2026-08-28T11:22:42.197555+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "huggingface-microduck-robot",
+        "evidence_status": "verified",
+        "follow_up": "关注Microduck的开发者社区反馈和实际应用场景。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:58685c909b1a9268",
+        "intelligence_type": "product_case",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Microduck",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Hugging Face推出开源机器人Microduck，可用强化学习教新技巧，有具体产品和开源属性，对AI教育有启发，价值较高。",
+        "region": "global",
+        "score": 7.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Hugging Face推出399美元的开源机器人Microduck，可通过强化学习教新技巧，是AI硬件产品案例。",
+        "tags": [
+          "机器人",
+          "开源",
+          "Hugging Face"
         ],
         "target_user": "",
         "verticals": []
@@ -6086,6 +6395,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "267f7e545be9108a13c7cdc70f8c3c71a52d443cbe022ab1c33926884db6131a": {
+      "created_at": "2026-08-28T11:23:03.952144+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-codex-rust-alpha-release",
+        "evidence_status": "first_party",
+        "follow_up": "关注后续版本是否有实质功能更新",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "github:release:377806495",
+        "intelligence_type": "early_signal",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Codex",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI Codex 的 Rust 版本 alpha 发布，但内容为空，无具体功能说明，属于低信息量版本更新，对初学者无实质增量。",
+        "region": "global",
+        "score": 5.5,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "OpenAI Codex 发布了 Rust 版本的 alpha 更新，但未提供具体变更内容。",
+        "tags": [
+          "Agent",
+          "Codex"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "270cb87242fc6fa27f8cfc5d5ff3e4b959bc27d8605748725563166c110275c3": {
       "created_at": "2026-08-09T02:28:23.071693+00:00",
       "model": "deepseek-v4-flash",
@@ -7077,6 +7424,45 @@
           "Agent",
           "多智能体",
           "开源"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "2d287352d3287371645434b2b785662c878365a842ab6ca14177a1e9cd2e0e0f": {
+      "created_at": "2026-08-28T11:22:42.197526+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "google-ai-mode-travel-booking",
+        "evidence_status": "verified",
+        "follow_up": "观察用户对AI Mode预订功能的接受度和实际使用情况。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:716c1c39b1c1b786",
+        "intelligence_type": "product_case",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Google AI Mode",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "TechCrunch报道Google AI Mode新增航班价格追踪和酒店预订功能，与官方博客一致，确认产品更新，高价值。",
+        "region": "global",
+        "score": 8.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Google AI Mode新增航班价格追踪和酒店预订功能，向AI旅行代理演进，值得关注。",
+        "tags": [
+          "AI Mode",
+          "旅行",
+          "Google"
         ],
         "target_user": "",
         "verticals": []
@@ -8375,6 +8761,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "36adc58a1a5f4dd6608adc3eb21108b75b991343115e430e32c01f0d1680f76a": {
+      "created_at": "2026-08-28T11:22:42.197406+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "gemini-omni-1.1-flash-release",
+        "evidence_status": "first_party",
+        "follow_up": "关注后续版本是否解决音频同步问题，以及开发者实际应用案例。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:49467922",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Gemini Omni 1.1 Flash",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Google发布Gemini Omni 1.1 Flash，是模型能力更新，但评论指出其无法同步生成视频到已有音频，存在局限，但仍是重要模型动态。",
+        "region": "global",
+        "score": 8.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Google发布Gemini Omni 1.1 Flash，但用户反馈其无法将生成视频同步到已有音频，模型能力有局限，但仍是重要更新。",
+        "tags": [
+          "Gemini",
+          "多模态",
+          "Google"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "36e9b454f577ae7dbb48632bee00d8c4ec21e18232fb7d71d4645adfbc6cb353": {
       "created_at": "2026-08-18T01:50:11.648698+00:00",
       "model": "deepseek-v4-flash",
@@ -8643,6 +9068,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "39cf330d9f679e2bfcdd840be57ad51d4111d3d37ae91784e82fc8618f1221c7": {
+      "created_at": "2026-08-28T11:22:57.242515+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "hugging-face-microduck-robot",
+        "evidence_status": "reported",
+        "follow_up": "关注实际发货和用户反馈。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:0127b8fe60ac15a5",
+        "intelligence_type": "product_case",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Microduck",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Hugging Face推出新机器人Microduck，有具体产品、价格和发货时间，但属于硬件产品，与AI软件产品关联度一般。",
+        "region": "global",
+        "score": 7.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Hugging Face的Pollen Robotics推出第二款可爱AI机器人Microduck，售价399美元，预计2026年发货。",
+        "tags": [
+          "机器人",
+          "Hugging Face"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "3a57ed69352014d02eba32833c06ae541479d13f56269673b24b8a5c5fbbf492": {
       "created_at": "2026-08-19T01:52:38.105475+00:00",
       "model": "deepseek-v4-flash",
@@ -8788,6 +9251,44 @@
         "what_it_is": "Anthropic 出的命令行 AI 编程助手，能读代码库、改文件、跑命令，像个住在终端里的程序员搭档。"
       },
       "stage": "deep_analysis"
+    },
+    "3b3477c5bda2d26478d41ab5af5232fc4ad34fbd1900654eacfa86c638977d16": {
+      "created_at": "2026-08-28T11:23:03.952092+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-codex-rust-alpha-release",
+        "evidence_status": "first_party",
+        "follow_up": "关注后续版本是否有实质功能更新",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "github:release:378264138",
+        "intelligence_type": "early_signal",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Codex",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI Codex 的 Rust 版本 alpha 发布，但内容为空，无具体功能说明，属于低信息量版本更新，对初学者无实质增量。",
+        "region": "global",
+        "score": 5.5,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "OpenAI Codex 发布了 Rust 版本的 alpha 更新，但未提供具体变更内容。",
+        "tags": [
+          "Agent",
+          "Codex"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
     },
     "3b3abf2bf8986cebda12cacd45c2e5991463d0c3750ee1cc6b09f32616363140": {
       "created_at": "2026-08-11T02:27:10.144037+00:00",
@@ -10800,6 +11301,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "46e9e8b7dae2aca09f03d2d208dfd20031887fff32a0f41600d9181915f182cd": {
+      "created_at": "2026-08-28T11:22:26.162469+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "anthropic-model-hardware-standard",
+        "evidence_status": "early_signal",
+        "follow_up": "关注标准何时开源、具体实现细节及首批支持设备。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:49468834",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Model Hardware Standard",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Anthropic发布模型硬件标准预览，是官方一手动态，且社区讨论指出标准尚未公开，需申请访问，属于早期信号但具有高价值，能解锁新的硬件交互产品体验。",
+        "region": "global",
+        "score": 8.5,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Anthropic预览模型硬件标准，让AI代理通过标准化命令控制硬件设备，但标准尚未公开，需申请访问。",
+        "tags": [
+          "硬件标准",
+          "Anthropic",
+          "Agent"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "473e44c2b675c2b1df9ac3244ef8b96bccf277d0292960d674a1a3e1ce2547e3": {
       "created_at": "2026-08-02T03:52:32.504303+00:00",
       "model": "deepseek-v4-flash",
@@ -11026,6 +11566,45 @@
         "tags": [
           "AI安全",
           "Agent"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "48054097f1c888a99facea3d75695685b3c81da7d683819c05dc3f751e6b5e97": {
+      "created_at": "2026-08-28T11:22:57.242652+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "claude-code-opus5-auto-mode-prompt-injection",
+        "evidence_status": "first_party",
+        "follow_up": "关注Anthropic的修复措施和Auto Mode的改进。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:simonwillison.net_atom_everything_:bc6639b3f24621f6",
+        "intelligence_type": "builder_insight",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Claude Code",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Simon Willison报道了针对Claude Code Auto Mode的提示注入攻击，由知名研究者发现，涉及安全漏洞，对构建者重要。",
+        "region": "global",
+        "score": 9.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "研究者发现针对Claude Code Auto Mode的提示注入攻击，成功率80%，可绕过安全机制执行恶意代码。",
+        "tags": [
+          "Claude Code",
+          "安全",
+          "提示注入"
         ],
         "target_user": "",
         "verticals": []
@@ -12565,6 +13144,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "529747a4eb2eb92089504d5ba8b7c56153e4db304a0867203518ee1fbdd6f7a1": {
+      "created_at": "2026-08-28T11:22:42.197333+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "opentag-ai-coworker",
+        "evidence_status": "reported",
+        "follow_up": "查看OpenTag的详细产品页面和用户评论。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:www.producthunt.com_feed:56ba5189cba4316f",
+        "intelligence_type": "early_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "OpenTag",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Product Hunt上展示的AI同事产品，集成Slack和Teams，定位明确，但缺乏详细信息和用户反馈，价值有限。",
+        "region": "global",
+        "score": 7.0,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "OpenTag是一个在Slack和Teams上运行的AI同事，但信息不足，需进一步了解其功能和实际效果。",
+        "tags": [
+          "AI coworker",
+          "Slack",
+          "Teams"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "52fcfdb975ac92069323220934a35aa7dffb20752fe5a33531f22b7b7cf09161": {
       "created_at": "2026-08-09T02:28:23.072069+00:00",
       "model": "deepseek-v4-flash",
@@ -14088,6 +14706,83 @@
       },
       "stage": "candidate_analysis"
     },
+    "5bca0c5180fa9cfa69b007d1bf989c186bbcb41d3f27d7890060f910153867f6": {
+      "created_at": "2026-08-28T11:22:57.242784+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "cursor-ai-sdk-harness-adapter",
+        "evidence_status": "first_party",
+        "follow_up": "关注更多harness适配器及开发者反馈。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:vercel.com_changelog_rss:c93cc4f914bde20b",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "AI SDK",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Vercel官方发布，AI SDK harness层支持Cursor，提供统一接口切换不同编码代理，对开发者有实际价值。",
+        "region": "global",
+        "score": 8.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Vercel的AI SDK harness层新增Cursor适配器，允许通过统一接口运行Cursor等编码代理。",
+        "tags": [
+          "Cursor",
+          "AI SDK",
+          "编码代理"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "5bfd5574faa059e828c3344d71e970033bdd1544cdefa909be8c7cf166781271": {
+      "created_at": "2026-08-28T11:22:26.162496+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "anthropic-ai-for-science-program",
+        "evidence_status": "first_party",
+        "follow_up": "关注项目具体资助方向、合作机构及成果。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "public_web:sitemap:b36ba38b0f97a9f8abd3",
+        "intelligence_type": "market_signal",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Anthropic官方AI for Science项目，属于官方一手动态，但内容摘要过于简略，缺乏具体细节，故评分中等偏上。",
+        "region": "global",
+        "score": 7.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Anthropic推出AI for Science项目，旨在支持科学研究，但具体内容未详述。",
+        "tags": [
+          "Anthropic",
+          "AI for Science"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "5bfe175437029692fea129ce663d245cb323d4e3ee10c7480ceba7a10d71c45c": {
       "created_at": "2026-08-14T02:45:44.146456+00:00",
       "model": "deepseek-v4-flash",
@@ -14576,6 +15271,44 @@
           "AI",
           "基础设施",
           "工程实践"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "5ee5b41722df4d295f082ee2f5249f562581e7f5b55721fa000e6727212deb45": {
+      "created_at": "2026-08-28T11:22:42.197306+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "almanac-agent-second-brain",
+        "evidence_status": "reported",
+        "follow_up": "查看Almanac的详细产品页面和用户评论。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:www.producthunt.com_feed:2e533ce221d12067",
+        "intelligence_type": "early_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Almanac",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Product Hunt上展示的AI代理产品，定位为'带第二大脑的代理'，但缺乏详细描述和用户反馈，仅有概念，价值有限。",
+        "region": "global",
+        "score": 7.0,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "Almanac是一个自称拥有第二大脑的AI代理产品，但信息不足，需进一步了解其功能和实际效果。",
+        "tags": [
+          "Agent",
+          "Product Hunt"
         ],
         "target_user": "",
         "verticals": []
@@ -15770,6 +16503,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "65e618a941be61578901f52b70a3649e304c8ed2b4c57c0b9e572d93c10271a6": {
+      "created_at": "2026-08-28T11:22:42.197460+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "barret-zoph-google",
+        "evidence_status": "reported",
+        "follow_up": "关注Zoph在Google的具体角色和项目。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:878b4f64d40c8a33",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Barret Zoph加入Google，是人才流动新闻，对产品开发有潜在影响，但无具体产品信息，价值中等。",
+        "region": "global",
+        "score": 6.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Thinking Machines联合创始人Barret Zoph离开OpenAI后加入Google，可能影响其AI研发方向。",
+        "tags": [
+          "人才流动",
+          "Google"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "65fdd34dbb28650c9b4f13999fcb18175c3e5fbb1c16351c2dc7695a3d3ff25d": {
       "created_at": "2026-08-01T03:49:24.198033+00:00",
       "model": "deepseek-v4-flash",
@@ -16073,6 +16844,44 @@
           "AI",
           "法律",
           "社会"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "6795472823571078c204f01b15838a8e3194e8b435886f2133e30d2d7cf57b05": {
+      "created_at": "2026-08-28T11:22:57.242673+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "ainews-openai-agi-2026",
+        "evidence_status": "reported",
+        "follow_up": "无",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:www.latent.space_feed:a425a975157b3226",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": false,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "标题党，内容空洞，无实质信息，低质量。",
+        "region": "global",
+        "score": 4.0,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "Latent Space的AINews简报标题称OpenAI将在2026年底达到AGI，但内容无实质信息。",
+        "tags": [
+          "OpenAI",
+          "AGI"
         ],
         "target_user": "",
         "verticals": []
@@ -16949,6 +17758,44 @@
           "评估",
           "工具",
           "开源"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "6db4a2c84324f2615edfc79b0816f077e3e666d8b8d9518a9cc24b93f6f4d12b": {
+      "created_at": "2026-08-28T11:22:26.162351+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "anthropic-scientist-support",
+        "evidence_status": "first_party",
+        "follow_up": "关注具体支持形式、合作机构及对科研AI产品的影响。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "public_web:sitemap:3368e02f484edc23efd1",
+        "intelligence_type": "market_signal",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Anthropic官方发布面向科学家的支持扩展，属于官方一手动态，可能涉及新产品或合作，但内容摘要过于简略，缺乏具体细节，故评分略低于8。",
+        "region": "global",
+        "score": 7.5,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Anthropic官方宣布扩展对科学家的支持，但具体内容未详述，值得关注其后续细节。",
+        "tags": [
+          "Anthropic",
+          "科学家支持"
         ],
         "target_user": "",
         "verticals": []
@@ -22526,6 +23373,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "8e9bc8d80ce76a51633cb985b9535cd14141eedf55fbe70e6ef985851be78e2b": {
+      "created_at": "2026-08-28T11:23:03.952165+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "claude-code-bugfix-release",
+        "evidence_status": "first_party",
+        "follow_up": "关注后续版本是否有新功能",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "github:release:378158541",
+        "intelligence_type": "early_signal",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Claude Code",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Claude Code 发布小版本更新，仅包含 bug 修复和可靠性改进，无新功能，对初学者价值有限。",
+        "region": "global",
+        "score": 6.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Claude Code 发布了 v2.1.250，主要进行 bug 修复和可靠性改进。",
+        "tags": [
+          "Agent",
+          "Claude Code"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "8ed0eae8e8c519fb2b781f29edbdb46a71021fb79bffe4b8409bf464b91eab80": {
       "created_at": "2026-08-17T01:55:13.927661+00:00",
       "model": "deepseek-v4-flash",
@@ -24812,6 +25697,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "9ac53c9d1d06872e0a2c95282662ea1ed7cb8443ad4aefbca7171364c9ee0579": {
+      "created_at": "2026-08-28T11:22:26.162673+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "gemini-omni-1-1-flash",
+        "evidence_status": "first_party",
+        "follow_up": "关注模型具体能力、API细节及开发者反馈。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:deepmind.google_blog_rss.xml:74b1125af8681de1",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Gemini Omni 1.1 Flash",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Google DeepMind官方发布Gemini Omni 1.1 Flash，属于官方一手动态，新模型能力可能解锁新应用，但内容摘要为空，缺乏细节，故评分略低于8.5。",
+        "region": "global",
+        "score": 8.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Google DeepMind发布Gemini Omni 1.1 Flash，提供更多构建控制能力，但具体细节未详述。",
+        "tags": [
+          "Gemini",
+          "模型发布"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "9b1588c81c533177fd5a2da7c908ad249080b17821c3bf1b63ef74c021630982": {
       "created_at": "2026-08-11T02:27:24.066123+00:00",
       "model": "deepseek-v4-flash",
@@ -26032,6 +26955,45 @@
         "tags": [
           "AI药物发现",
           "行业综述"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "a25b698f5229dea9cdfe7b7ba10cd7bd439dc58ac0e06022459973b33f5ba6a0": {
+      "created_at": "2026-08-28T11:22:26.162539+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "anthropic-claude-for-life-sciences",
+        "evidence_status": "first_party",
+        "follow_up": "关注生命科学场景的具体应用、合作机构及案例。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "public_web:sitemap:f1584024fd99c557cc16",
+        "intelligence_type": "market_signal",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Claude",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Anthropic官方发布Claude for Life Sciences，属于官方一手动态，且生命科学垂直领域符合兴趣优先级，但内容摘要过于简略，缺乏具体细节，故评分中等偏上。",
+        "region": "global",
+        "score": 7.5,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Anthropic推出Claude for Life Sciences，面向生命科学领域，但具体功能未详述。",
+        "tags": [
+          "Anthropic",
+          "生命科学",
+          "Claude"
         ],
         "target_user": "",
         "verticals": []
@@ -28814,6 +29776,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "b25508e3f6dfc684c9d87cbcb72eb4cfebe1ce05c631f49a02a02edff17d0260": {
+      "created_at": "2026-08-28T11:22:57.242442+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "nvidia-agi-senseless",
+        "evidence_status": "reported",
+        "follow_up": "无",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:52f6a38599527534",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": false,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "黄仁勋关于AGI的言论，无实质产品信息，属于行业评论，信噪比低。",
+        "region": "global",
+        "score": 4.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "黄仁勋在财报电话会议上称Nvidia已实现AGI，但随即表示这毫无意义，引发对AGI定义的讨论。",
+        "tags": [
+          "Nvidia",
+          "AGI"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "b2bed942156950829ba08ef89436fd0a7311a59413c0ca2aeb9c3859bd36df59": {
       "created_at": "2026-08-14T02:46:12.435528+00:00",
       "model": "deepseek-v4-flash",
@@ -30758,6 +31758,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "bf11ea47d525fa5ede1f451d43caeb04fb3eadbada36606c226e072ad3295669": {
+      "created_at": "2026-08-28T11:22:57.242363+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "anthropic-pentagon-blacklist-ruling",
+        "evidence_status": "reported",
+        "follow_up": "关注后续对Anthropic业务的影响。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:e01514775b6d9e5e",
+        "intelligence_type": "business_policy",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Anthropic与特朗普政府法律纠纷的进展，属于商业政策事件，对产品构建者参考价值有限。",
+        "region": "global",
+        "score": 6.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "法院裁定五角大楼将Anthropic列入黑名单违宪，Anthropic在与特朗普政府的法律战中获胜。",
+        "tags": [
+          "Anthropic",
+          "政策",
+          "法律"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "bf7a4f47917b4aabefb4cabf33c6f342a56c514c0a28e8ea07010b5b6b4cfac8": {
       "created_at": "2026-08-25T01:52:18.802763+00:00",
       "model": "deepseek-v4-flash",
@@ -30945,6 +31984,44 @@
         "tags": [
           "Codex",
           "版本发布"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "c12c9bac3acb9976b4059acb6fa041bea397662b7998397797134ecc0e0a27f2": {
+      "created_at": "2026-08-28T11:22:57.242306+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "agent-governance-data-layer",
+        "evidence_status": "reported",
+        "follow_up": "无",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:venturebeat.com_category_ai_feed_:204d761883ccd421",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": false,
+        "is_promotional": true,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "赞助内容，泛泛讨论agent治理，无具体产品、案例或可验证实践，信噪比低。",
+        "region": "global",
+        "score": 5.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "一篇由EDB赞助的评论文章，讨论AI代理自主行动时治理需嵌入数据层，但无具体产品案例。",
+        "tags": [
+          "Agent",
+          "治理"
         ],
         "target_user": "",
         "verticals": []
@@ -31869,6 +32946,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "c834f1732a3e09101ed69010ad9f194e03f8a607a33c5197e7524638bc5e8cb6": {
+      "created_at": "2026-08-28T11:22:42.197248+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "google-ai-mode-travel-booking",
+        "evidence_status": "first_party",
+        "follow_up": "观察AI Mode在旅行场景的实际使用反馈和预订转化率。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:blog.google_innovation-and-ai_technology_ai_rss_:a1c9c66d73112465",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Google AI Mode",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Google官方发布AI Mode新增旅行规划和预订功能，从信息检索扩展到实际任务处理，有明确产品更新和用户价值，属于高价值产品案例。",
+        "region": "global",
+        "score": 8.5,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Google在AI Mode中新增航班价格追踪和酒店预订功能，将AI从信息搜索升级为旅行代理，值得关注其如何改变用户旅行规划方式。",
+        "tags": [
+          "AI Mode",
+          "旅行",
+          "Google"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "c849b971b9d38c7d626e9e67fdaa16e06f2dd9e6d4ac033f321c7364c076d55f": {
       "created_at": "2026-08-22T01:50:45.764266+00:00",
       "model": "deepseek-v4-flash",
@@ -32361,6 +33477,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "c9d631494336511c37a40608ae4dc5c8eee21c2253d2d981afddea63b4725333": {
+      "created_at": "2026-08-28T11:23:03.952125+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-codex-rust-alpha-release",
+        "evidence_status": "first_party",
+        "follow_up": "关注后续版本是否有实质功能更新",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "github:release:378154378",
+        "intelligence_type": "early_signal",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Codex",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI Codex 的 Rust 版本 alpha 发布，但内容为空，无具体功能说明，属于低信息量版本更新，对初学者无实质增量。",
+        "region": "global",
+        "score": 5.5,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "OpenAI Codex 发布了 Rust 版本的 alpha 更新，但未提供具体变更内容。",
+        "tags": [
+          "Agent",
+          "Codex"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "c9fc6df5070adb5d26a00e3377ceb0351b885bd4b3bc1858f1ec4fa978333afe": {
       "created_at": "2026-07-28T03:48:25.674635+00:00",
       "model": "deepseek-v4-flash",
@@ -32584,6 +33738,44 @@
           "Anthropic",
           "AI信任",
           "行业观点"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "cb50645cafc0e4ac6fa9f008bdd5cdb5c2e55931693fab072f14724450d73021": {
+      "created_at": "2026-08-28T11:22:57.242481+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-executive-exodus-brockman",
+        "evidence_status": "reported",
+        "follow_up": "无",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:af3da6624cf8461d",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": false,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "关于OpenAI高管离职和权力集中的播客讨论，属于组织动态，对产品构建者参考价值有限。",
+        "region": "global",
+        "score": 5.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Decoder播客讨论OpenAI高管离职潮，认为权力正集中于联合创始人Greg Brockman。",
+        "tags": [
+          "OpenAI",
+          "组织"
         ],
         "target_user": "",
         "verticals": []
@@ -32851,6 +34043,44 @@
         "tags": [
           "LangChain",
           "Framework"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "cdda912d2a68da1b664e0ad83ada99bdd67c45e43e1585087c32dff7124afecc": {
+      "created_at": "2026-08-28T11:22:26.162560+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "agnes-ai-agnes-2-5-pro-beta",
+        "evidence_status": "reported",
+        "follow_up": "关注模型具体能力、基准测试及产品应用。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "public_web:sitemap:245f364d9a16d2f059f6",
+        "intelligence_type": "model_capability",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Agnes 2.5 Pro",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Artificial Analysis报道Agnes AI发布Agnes 2.5 Pro Beta，属于第三方报道，但涉及新模型发布，可能解锁新能力，但缺乏具体细节，故评分中等。",
+        "region": "global",
+        "score": 7.0,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "Agnes AI发布Agnes 2.5 Pro Beta，但具体能力未详述。",
+        "tags": [
+          "Agnes AI",
+          "模型发布"
         ],
         "target_user": "",
         "verticals": []
@@ -33383,6 +34613,45 @@
         "summary": null,
         "summary_zh": "Anthropic新闻页面标题为Tino Cuellar，但无正文内容，缺乏可分析信息。",
         "tags": [],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "d34c9ce956a83a3f875656faf147d2ffe856021f512a8d01551ec44f71ddd97b": {
+      "created_at": "2026-08-28T11:22:26.162653+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "openai-thailand-ai-startups",
+        "evidence_status": "first_party",
+        "follow_up": "关注入选初创企业及产品落地情况。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:openai.com_news_rss.xml:cb1db0d5c74b6e9e",
+        "intelligence_type": "market_signal",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI官方宣布支持泰国AI初创企业，属于官方一手动态，涉及健康、教育等垂直领域，但具体细节有限，故评分中等偏上。",
+        "region": "global",
+        "score": 7.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "OpenAI与泰国MHESI合作，为10家健康、教育初创企业提供加速器支持。",
+        "tags": [
+          "OpenAI",
+          "泰国",
+          "初创加速"
+        ],
         "target_user": "",
         "verticals": []
       },
@@ -36371,6 +37640,41 @@
       },
       "stage": "candidate_analysis"
     },
+    "e58287f56e3f6bd9889e0f75957cd37f781e67609a116932c1af28e7aec8e922": {
+      "created_at": "2026-08-28T11:25:15.651506+00:00",
+      "model": "kimi-k2.6",
+      "prompt_version": "deep-v3-beginner",
+      "result": {
+        "ai_role": "AI 作为'旅行代理'（Agent，能自主执行任务的 AI 助手），负责理解需求、检索实时信息、比较选项、执行预订动作，并持续监控价格变化主动提醒用户。",
+        "evidence_status": "first_party",
+        "hands_on_exercise": "打开 Google 搜索（需美国 IP 和 Google 账号），尝试用 AI Mode 输入一个具体旅行问题，对比它和普通搜索的结果差异；然后换不同问法（如加入预算、日期限制），观察 AI 如何调整回答，记录它是否给出了可点击的预订链接或追踪按钮。",
+        "implementation_idea": "底层用 Gemini 模型做理解和推理，把用户的口语化请求转成结构化查询；再调用航班/酒店的实时数据 API 获取价格和空房信息；最后用 Function Calling（让 AI 能调用外部工具完成具体动作，比如下单、设提醒）来实际执行预订和追踪任务。",
+        "learning_points": [
+          "Agent：不只是回答问题，还能自己动手完成任务的 AI，比如这里 AI 自己去查价、下单、发提醒",
+          "Function Calling：给 AI 配'工具箱'，让它能调用外部系统的功能（如订票接口），从'说'变成'做'",
+          "RAG（检索增强生成）：AI 不是瞎编航班信息，而是实时去查最新的数据库/网页，再组织成回答"
+        ],
+        "limitations_or_uncertainties": "未公开具体覆盖哪些航空公司/酒店平台、是否收取服务费、价格追踪的精确频率、以及美国以外地区的上线时间；目前仍为实验性功能，依赖 Search Labs 逐步开放。",
+        "product_name": "Google AI Mode",
+        "sources": [
+          "https://blog.google/products-and-platforms/products/search/book-travel-ai-mode/",
+          "https://en.wikipedia.org/wiki/Google_AI_Mode",
+          "https://search.google/ways-to-search/ai-mode/",
+          "https://publicpolicy.google/ai-mode-starter-kit/"
+        ],
+        "target_users": "需要规划旅行、预订航班和酒店的 Google 搜索用户；目前主要面向美国 Google One AI Premium 订阅用户",
+        "title_zh": "Google 搜索 AI Mode 新增三种旅行规划与预订方式",
+        "usage_flow": [
+          "用户在 Google 搜索中打开 AI Mode，用自然语言描述旅行需求（如'下周去东京的便宜航班'）",
+          "AI 展示航班或酒店选项，用户可直接选择并追踪价格变动",
+          "价格达到预期时，AI 主动通知用户",
+          "用户通过 AI Mode 完成预订流程，无需跳转多个网站"
+        ],
+        "user_problem": "以前搜旅行信息时，AI 只能给一堆链接和摘要，用户还得自己跳转到订票网站比价、下单；价格变了也不会提醒，得反复手动查询。",
+        "what_it_is": "Google 搜索里的 AI Mode（AI 模式）新增了订机票、追价格、订酒店的功能，让 AI 不只是帮你搜信息，还能帮你处理旅行事务。"
+      },
+      "stage": "deep_analysis"
+    },
     "e5964ccb7b7312d7c6147c82345962cff644f3607fa74f347fb660e6a2b00f0e": {
       "created_at": "2026-08-11T02:27:24.066051+00:00",
       "model": "deepseek-v4-flash",
@@ -38771,6 +40075,39 @@
       },
       "stage": "candidate_analysis"
     },
+    "f32c3e0cb92bfa6b51d4e346df5a6fc5aaa6c0358b65da9410b8462a3fae504b": {
+      "created_at": "2026-08-28T11:25:38.614394+00:00",
+      "model": "kimi-k2.6",
+      "prompt_version": "deep-v3-beginner",
+      "result": {
+        "ai_role": "在受限模式下，AI 只能做文件操作（读、写、搜索），不能执行系统命令或抓取网页；用户明确授权后才解除限制",
+        "evidence_status": "first_party",
+        "hands_on_exercise": "30 分钟动手：安装 Claude Code，创建一个测试文件夹，用 `claude --restricted` 启动，尝试让 AI 读文件夹内的文件（应该成功），再让它执行 `ls` 命令或访问网页（应该被拒绝），体验受限模式的安全边界；然后查看 `~/.claude/CLAUDE.md` 了解 frontmatter 配置格式",
+        "implementation_idea": "通过启动参数和环境变量做'能力开关'——`--restricted` 相当于给 AI 一把'受限钥匙'，内部把危险工具（执行命令、网页抓取）从可用列表里删掉；缓存 TTL 是每次发请求时告诉模型'这段对话记忆保留多久'；runner 标签覆盖是在注册时把默认的主机名换成自定义标识，方便企业在面板里辨认",
+        "learning_points": [
+          "Agent（智能体）：让 AI 不仅能聊天，还能调用工具（如读文件、执行命令）自主完成任务的系统",
+          "Prompt Cache（提示缓存）：把已经处理过的长对话上下文存起来，下次直接复用，省时间和算钱；TTL 是'存活时间'，到期就扔掉重算",
+          "Function Calling（函数调用）：AI 不直接干活，而是生成'我要调用某某工具'的结构化请求，由外部系统安全地执行"
+        ],
+        "limitations_or_uncertainties": "未公开 `--restricted` 模式在企业 SSO/审计场景下的具体合规认证；`experimental.cacheTtl` 的'5m'/'1h' 之外是否支持其他时长未明确；跨会话消息（`SendMessage`/`ListAgents`）的 Bedrock/Vertex 实现细节未公开",
+        "product_name": "Claude Code",
+        "sources": [
+          "https://github.com/anthropics/claude-code/releases/tag/v2.1.248",
+          "https://claude.com/product/claude-code"
+        ],
+        "target_users": "开发者、企业 IT/安全团队、需要自托管部署的组织",
+        "title_zh": "Claude Code v2.1.248：新增受限模式、缓存配置与企业部署增强",
+        "usage_flow": [
+          "安装 Claude Code CLI，用 `claude` 启动会话",
+          "需要安全环境时加 `--restricted` 启动，限制 AI 只能读写工作目录内的文件",
+          "在 agent 配置文件的 frontmatter 里加 `experimental.cacheTtl` 控制提示缓存多久失效",
+          "企业用户用 `claude self-hosted-runner --client-label` 给自托管 runner 打自定义标签，方便识别"
+        ],
+        "user_problem": "AI 编程工具权限太大（能随便执行命令、访问网络），企业不敢用；多会话协作困难；缓存策略不可控；自托管 runner 标识混乱",
+        "what_it_is": "Anthropic 开发的命令行 AI 编程助手，能在终端里理解代码库、改文件、跑命令"
+      },
+      "stage": "deep_analysis"
+    },
     "f3c8e5e08f6208316933bbffa5ea3c0ed522b39f4ffe9361edbd005e43c2f771": {
       "created_at": "2026-08-01T03:49:36.124342+00:00",
       "model": "deepseek-v4-flash",
@@ -39661,6 +40998,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "f79823f6f01d2503923cd990ae15a7c2b47b8b43935fbc50b35c73aaa6297a4b": {
+      "created_at": "2026-08-28T11:22:57.242737+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "claude-managed-agents-chat-sdk",
+        "evidence_status": "first_party",
+        "follow_up": "观察开发者采用情况和实际应用案例。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:vercel.com_changelog_rss:12897e900a36c00f",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Chat SDK",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Vercel官方发布，Claude Managed Agents与Chat SDK集成，提供具体功能，对开发者构建agent应用有直接帮助。",
+        "region": "global",
+        "score": 8.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Vercel宣布Claude Managed Agents现可通过Chat SDK运行，支持流式响应、活动源和跨平台部署。",
+        "tags": [
+          "Claude",
+          "Agent",
+          "SDK"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "f7ba9b774d87ceb32648fba3152a2c35e168e490d4182300f4d61b1aefc633a4": {
       "created_at": "2026-08-09T02:28:23.071968+00:00",
       "model": "deepseek-v4-flash",
@@ -40077,6 +41453,44 @@
         "tags": [
           "工作流自动化",
           "稳定性修复"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "f9b1d8767bd3ddab1cfb515e96d453afd8a1db38b5d62a08e54db01185defcc5": {
+      "created_at": "2026-08-28T11:22:42.197435+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "techcrunch-disrupt-2026-ai-stage",
+        "evidence_status": "reported",
+        "follow_up": "无",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:8272b42ef55944fe",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": true,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "TechCrunch活动宣传，无实质产品信息，属于营销内容，价值低。",
+        "region": "global",
+        "score": 4.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Anthropic和OpenAI将参加TechCrunch Disrupt 2026的AI舞台，但仅为活动宣传，无实质内容。",
+        "tags": [
+          "会议",
+          "TechCrunch"
         ],
         "target_user": "",
         "verticals": []
