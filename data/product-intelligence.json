@@ -1,78 +1,244 @@
 {
   "version": 1,
-  "updated_at": "2026-08-28T11:25:38.634628+00:00",
+  "updated_at": "2026-08-29T07:04:39.848784+00:00",
   "products": [
     {
-      "product_id": "product-97a104e5a93a2b88",
-      "product_name": "Claude Code",
-      "builder_name": "Simon Willison",
-      "first_seen": "2026-08-09",
-      "last_seen": "2026-08-28",
-      "occurrence_count": 2,
-      "intelligence_type": "builder_insight",
+      "product_id": "product-85085aded4e1f9b1",
+      "product_name": "Claude For Teachers",
+      "builder_name": "Anthropic News",
+      "first_seen": "2026-08-29",
+      "last_seen": "2026-08-29",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
       "evidence_status": "first_party",
-      "target_user": "Pro、Max、Team 订阅计划的开发者；Anthropic 内部员工",
-      "user_problem": "开发者用 AI 编程助手时，每步操作都要人工点'确认'，导致'确认疲劳'，反而更容易草率通过危险操作；同时担心 AI 被恶意指令劫持（提示注入攻击）后自动执行有害命令",
-      "what_it_is": "研究者发现针对Claude Code Auto Mode的提示注入攻击，成功率80%，可绕过安全机制执行恶意代码。",
-      "ai_role": "AI 充当'能自主执行但带安全刹车的编程代理'（Agent）：自己分解任务、运行命令、读写文件，同时用内置安全评估过滤危险操作",
-      "implementation_idea": "核心思路是给 AI 配一个'安全护栏层'——不是让人类逐条审批，而是让 AI 自己用另一套规则判断'这个命令会不会删数据、会不会把代码发给外部'。Anthropic 称他们用大量攻击场景训练了这套判断能力，并引入第三方独立测试验证。",
-      "hands_on_exercise": "打开 Claude Code（需订阅 Pro/Max/Team），在设置里确认 auto mode 已开启，让它帮你初始化一个 Python 项目（创建虚拟环境、安装依赖、跑通测试）。观察它哪些操作自动执行了、哪些停下来问你——对比之前手动逐条确认的体验。",
-      "limitations_or_uncertainties": "第三方测试由 Trajectory Labs 执行，但具体测试方法、72 个攻击场景的详细设计未完全公开；11% 的危险操作仍可能漏过；Simon Willison 提出一种攻击场景（恶意包伪装成正常命令链）尚未见公开测试结果；Claude Fable 5/Opus 5/Sonnet 5 的具体模型版本信息未详细披露",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Anthropic推出Claude For Teachers，为教师提供AI教学辅助工具，值得关注其具体功能与落地场景。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
       "region": "global",
-      "score": 9.0,
-      "summary": "研究者发现针对Claude Code Auto Mode的提示注入攻击，成功率80%，可绕过安全机制执行恶意代码。",
-      "title": "Breaking Claude Code Opus 5 Auto Mode",
-      "url": "https://simonwillison.net/2026/Aug/27/breaking-claude-code-opus-5-auto-mode/",
+      "score": 8.5,
+      "summary": "Anthropic推出Claude For Teachers，为教师提供AI教学辅助工具，值得关注其具体功能与落地场景。",
+      "title": "Claude For Teachers",
+      "url": "https://www.anthropic.com/news/claude-for-teachers",
       "sources": [
         {
-          "url": "https://simonwillison.net/2026/Aug/8/auto-mode/#atom-everything",
-          "title": "Auto mode is now the default in Claude Code for Pro, Max, and Team plans",
-          "source_type": "rss",
-          "published_at": "2026-08-08T22:36:03+00:00"
-        },
-        {
-          "url": "https://simonwillison.net/2026/Aug/27/breaking-claude-code-opus-5-auto-mode/",
-          "title": "Breaking Claude Code Opus 5 Auto Mode",
-          "source_type": "rss",
-          "published_at": "2026-08-27T22:50:25+00:00"
+          "url": "https://www.anthropic.com/news/claude-for-teachers",
+          "title": "Claude For Teachers",
+          "source_type": "public_web",
+          "published_at": "2026-08-28T15:01:10+00:00"
         }
       ],
       "updates": [
         {
-          "update_id": "claude-code-auto-mode-default",
-          "date": "2026-08-09",
-          "title": "Claude Code 将自动模式设为默认：Anthropic 称已大幅缓解提示注入风险",
-          "summary": "Anthropic 宣布 Claude Code 的 auto mode 将成为 Pro、Max 和 Team 计划的默认模式，并透露内部几乎全员使用，值得关注其安全性和效率提升。",
+          "update_id": "anthropic-claude-for-teachers",
+          "date": "2026-08-29",
+          "title": "Claude For Teachers",
+          "summary": "Anthropic推出Claude For Teachers，为教师提供AI教学辅助工具，值得关注其具体功能与落地场景。",
           "score": 8.5,
-          "url": "https://simonwillison.net/2026/Aug/8/auto-mode/#atom-everything"
-        },
-        {
-          "update_id": "claude-code-opus5-auto-mode-prompt-injection",
-          "date": "2026-08-28",
-          "title": "Breaking Claude Code Opus 5 Auto Mode",
-          "summary": "研究者发现针对Claude Code Auto Mode的提示注入攻击，成功率80%，可绕过安全机制执行恶意代码。",
-          "score": 9.0,
-          "url": "https://simonwillison.net/2026/Aug/27/breaking-claude-code-opus-5-auto-mode/"
+          "url": "https://www.anthropic.com/news/claude-for-teachers"
         }
       ],
-      "usage_flow": [
-        "开发者用自然语言描述需求，Claude Code 规划并执行多步骤任务",
-        "自动模式下，AI 自行判断命令风险等级，低风险直接执行，高风险拦截或请示",
-        "AI 读取外部代码、文档、依赖包时，自动模式尝试识别并阻断隐藏的恶意指令",
-        "开发者事后审计 AI 执行记录，必要时回滚操作"
-      ],
-      "learning_points": [
-        "Agent（智能体）：LLM 不只是聊天，还能自己动手操作电脑、运行程序、完成任务",
-        "Prompt injection（提示注入）：攻击者把恶意指令藏在 AI 要读取的网页、邮件、代码里，骗 AI 执行",
-        "Confirmation fatigue（确认疲劳）：让人类点太多'同意'，人会麻木点错，反而降低安全性"
-      ],
+      "usage_flow": [],
+      "learning_points": [],
       "verticals": [],
       "tags": [
-        "Claude Code",
-        "auto mode",
-        "Anthropic",
-        "安全",
-        "提示注入"
+        "教育",
+        "官方产品"
+      ]
+    },
+    {
+      "product_id": "product-e3d3d16482975c7e",
+      "product_name": "LangChain",
+      "builder_name": "github-actions[bot]",
+      "first_seen": "2026-08-29",
+      "last_seen": "2026-08-29",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "LangChain 发布 MCP 适配器，可将任何 MCP 服务器转为 LangChain 工具，简化集成。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.5,
+      "summary": "LangChain 发布 MCP 适配器，可将任何 MCP 服务器转为 LangChain 工具，简化集成。",
+      "title": "langchain-ai/langchain released langchain==1.4.0a2",
+      "url": "https://github.com/langchain-ai/langchain/releases/tag/langchain%3D%3D1.4.0a2",
+      "sources": [
+        {
+          "url": "https://github.com/langchain-ai/langchain/releases/tag/langchain%3D%3D1.4.0a2",
+          "title": "langchain-ai/langchain released langchain==1.4.0a2",
+          "source_type": "github",
+          "published_at": "2026-08-28T16:19:22+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "langchain-mcp-adapter-alpha",
+          "date": "2026-08-29",
+          "title": "langchain-ai/langchain released langchain==1.4.0a2",
+          "summary": "LangChain 发布 MCP 适配器，可将任何 MCP 服务器转为 LangChain 工具，简化集成。",
+          "score": 8.5,
+          "url": "https://github.com/langchain-ai/langchain/releases/tag/langchain%3D%3D1.4.0a2"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "LangChain",
+        "MCP",
+        "AI代理"
+      ]
+    },
+    {
+      "product_id": "product-d26aff850a531bf8",
+      "product_name": "GLM-5.3",
+      "builder_name": "jeudesprits",
+      "first_seen": "2026-08-29",
+      "last_seen": "2026-08-29",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "智谱发布开源权重模型GLM-5.3，性能接近Kimi且更易运行，为开发者提供新选择。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "china",
+      "score": 8.5,
+      "summary": "智谱发布开源权重模型GLM-5.3，性能接近Kimi且更易运行，为开发者提供新选择。",
+      "title": "GLM-5.3 is now open-weight",
+      "url": "https://huggingface.co/zai-org/GLM-5.3",
+      "sources": [
+        {
+          "url": "https://huggingface.co/zai-org/GLM-5.3",
+          "title": "GLM-5.3 is now open-weight",
+          "source_type": "hackernews",
+          "published_at": "2026-08-28T15:20:13+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "glm-5.3-open-weight",
+          "date": "2026-08-29",
+          "title": "GLM-5.3 is now open-weight",
+          "summary": "智谱发布开源权重模型GLM-5.3，性能接近Kimi且更易运行，为开发者提供新选择。",
+          "score": 8.5,
+          "url": "https://huggingface.co/zai-org/GLM-5.3"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "模型",
+        "开源",
+        "智谱"
+      ]
+    },
+    {
+      "product_id": "product-ba630f517e45c48a",
+      "product_name": "Cursor",
+      "builder_name": "Latent Space",
+      "first_seen": "2026-08-29",
+      "last_seen": "2026-08-29",
+      "occurrence_count": 1,
+      "intelligence_type": "business_policy",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "OpenAI 因 Cursor 被 SpaceX 收购而切断其访问，影响开发者工具生态，值得关注。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.5,
+      "summary": "OpenAI 因 Cursor 被 SpaceX 收购而切断其访问，影响开发者工具生态，值得关注。",
+      "title": "[AINews] OpenAI shuts off Cursor",
+      "url": "https://www.latent.space/p/ainews-openai-shuts-off-cursor",
+      "sources": [
+        {
+          "url": "https://www.latent.space/p/ainews-openai-shuts-off-cursor",
+          "title": "[AINews] OpenAI shuts off Cursor",
+          "source_type": "rss",
+          "published_at": "2026-08-29T05:11:52+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "openai-shuts-off-cursor",
+          "date": "2026-08-29",
+          "title": "[AINews] OpenAI shuts off Cursor",
+          "summary": "OpenAI 因 Cursor 被 SpaceX 收购而切断其访问，影响开发者工具生态，值得关注。",
+          "score": 8.5,
+          "url": "https://www.latent.space/p/ainews-openai-shuts-off-cursor"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "OpenAI",
+        "Cursor",
+        "商业政策"
+      ]
+    },
+    {
+      "product_id": "product-ba39534f2c430303",
+      "product_name": "Cursor",
+      "builder_name": "meetpateltech",
+      "first_seen": "2026-08-29",
+      "last_seen": "2026-08-29",
+      "occurrence_count": 1,
+      "intelligence_type": "business_policy",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "OpenAI 因 Cursor 被 SpaceX 收购而切断其访问，影响开发者工具生态，值得关注。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.5,
+      "summary": "OpenAI 因 Cursor 被 SpaceX 收购而切断其访问，影响开发者工具生态，值得关注。",
+      "title": "Our decision on Cursor following its acquisition by SpaceX",
+      "url": "https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex/",
+      "sources": [
+        {
+          "url": "https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex/",
+          "title": "Our decision on Cursor following its acquisition by SpaceX",
+          "source_type": "hackernews",
+          "published_at": "2026-08-29T01:47:53+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "openai-cursor-spacex-acquisition",
+          "date": "2026-08-29",
+          "title": "Our decision on Cursor following its acquisition by SpaceX",
+          "summary": "OpenAI 因 Cursor 被 SpaceX 收购而切断其访问，影响开发者工具生态，值得关注。",
+          "score": 8.5,
+          "url": "https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "OpenAI",
+        "Cursor",
+        "商业政策"
       ]
     },
     {
@@ -80,22 +246,22 @@
       "product_name": "Claude Code",
       "builder_name": "ashwin-ant",
       "first_seen": "2026-07-26",
-      "last_seen": "2026-08-28",
-      "occurrence_count": 14,
-      "intelligence_type": "product_case",
+      "last_seen": "2026-08-29",
+      "occurrence_count": 15,
+      "intelligence_type": "model_capability",
       "evidence_status": "first_party",
       "target_user": "开发者、企业 IT/安全团队、需要自托管部署的组织",
       "user_problem": "AI 编程工具权限太大（能随便执行命令、访问网络），企业不敢用；多会话协作困难；缓存策略不可控；自托管 runner 标识混乱",
-      "what_it_is": "Anthropic 开发的命令行 AI 编程助手，能在终端里理解代码库、改文件、跑命令",
+      "what_it_is": "Claude Code 更新，新增模型切换钩子、远程控制流式传输和费用限制功能，提升开发体验。",
       "ai_role": "在受限模式下，AI 只能做文件操作（读、写、搜索），不能执行系统命令或抓取网页；用户明确授权后才解除限制",
       "implementation_idea": "通过启动参数和环境变量做'能力开关'——`--restricted` 相当于给 AI 一把'受限钥匙'，内部把危险工具（执行命令、网页抓取）从可用列表里删掉；缓存 TTL 是每次发请求时告诉模型'这段对话记忆保留多久'；runner 标签覆盖是在注册时把默认的主机名换成自定义标识，方便企业在面板里辨认",
       "hands_on_exercise": "30 分钟动手：安装 Claude Code，创建一个测试文件夹，用 `claude --restricted` 启动，尝试让 AI 读文件夹内的文件（应该成功），再让它执行 `ls` 命令或访问网页（应该被拒绝），体验受限模式的安全边界；然后查看 `~/.claude/CLAUDE.md` 了解 frontmatter 配置格式",
       "limitations_or_uncertainties": "未公开 `--restricted` 模式在企业 SSO/审计场景下的具体合规认证；`experimental.cacheTtl` 的'5m'/'1h' 之外是否支持其他时长未明确；跨会话消息（`SendMessage`/`ListAgents`）的 Bedrock/Vertex 实现细节未公开",
       "region": "global",
-      "score": 8.5,
-      "summary": "Claude Code 发布 v2.1.248，新增受限模式、缓存 TTL 配置和自托管 runner 标签覆盖等功能，提升安全性和企业可用性。",
-      "title": "Claude Code v2.1.248：新增受限模式、缓存配置与企业部署增强",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.248",
+      "score": 8.0,
+      "summary": "Claude Code 更新，新增模型切换钩子、远程控制流式传输和费用限制功能，提升开发体验。",
+      "title": "anthropics/claude-code released v2.1.251",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.251",
       "sources": [
         {
           "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.219",
@@ -186,6 +352,12 @@
           "title": "anthropics/claude-code released v2.1.248",
           "source_type": "github",
           "published_at": "2026-08-27T22:12:20+00:00"
+        },
+        {
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.251",
+          "title": "anthropics/claude-code released v2.1.251",
+          "source_type": "github",
+          "published_at": "2026-08-28T18:19:32+00:00"
         }
       ],
       "updates": [
@@ -300,6 +472,14 @@
           "summary": "Claude Code 发布 v2.1.248，新增受限模式、缓存 TTL 配置和自托管 runner 标签覆盖等功能，提升安全性和企业可用性。",
           "score": 8.5,
           "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.248"
+        },
+        {
+          "update_id": "claude-code-v2.1.251",
+          "date": "2026-08-29",
+          "title": "anthropics/claude-code released v2.1.251",
+          "summary": "Claude Code 更新，新增模型切换钩子、远程控制流式传输和费用限制功能，提升开发体验。",
+          "score": 8.0,
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.251"
         }
       ],
       "usage_flow": [
@@ -367,7 +547,177 @@
         "成本控制",
         "AI编程",
         "安全",
-        "企业"
+        "企业",
+        "Anthropic"
+      ]
+    },
+    {
+      "product_id": "product-2e1a6d87673249b3",
+      "product_name": "GLM-5.3-Flash",
+      "builder_name": "AI News",
+      "first_seen": "2026-08-28",
+      "last_seen": "2026-08-29",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Z.ai正式发布GLM-5.3-Flash，原生多模态，1M上下文，320B参数，MIT许可，提供权重和API。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.0,
+      "summary": "Z.ai正式发布GLM-5.3-Flash，原生多模态，1M上下文，320B参数，MIT许可，提供权重和API。",
+      "title": "not much happened today",
+      "url": "https://news.smol.ai/issues/26-08-26-not-much/",
+      "sources": [
+        {
+          "url": "https://news.smol.ai/issues/26-08-26-not-much/",
+          "title": "not much happened today",
+          "source_type": "newsletter",
+          "published_at": "2026-08-26T05:44:39+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "glm-5.3-flash-launch",
+          "date": "2026-08-28",
+          "title": "not much happened today",
+          "summary": "Z.ai正式发布GLM-5.3-Flash，原生多模态，1M上下文，320B参数，MIT许可，提供权重和API。",
+          "score": 8.0,
+          "url": "https://news.smol.ai/issues/26-08-26-not-much/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "GLM",
+        "多模态",
+        "开源"
+      ]
+    },
+    {
+      "product_id": "product-81b7233df46705c4",
+      "product_name": "Conduct",
+      "builder_name": "sudhendra1",
+      "first_seen": "2026-08-29",
+      "last_seen": "2026-08-29",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "verified",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Conduct是一个开源防护层，阻止LLM和MCP工具调用泄露凭证或越权，保护Agent安全。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.5,
+      "summary": "Conduct是一个开源防护层，阻止LLM和MCP工具调用泄露凭证或越权，保护Agent安全。",
+      "title": "Show HN: Conduct, open-source guardrails for LLM and MCP tool calls",
+      "url": "https://github.com/sseshachala/conductai",
+      "sources": [
+        {
+          "url": "https://github.com/sseshachala/conductai",
+          "title": "Show HN: Conduct, open-source guardrails for LLM and MCP tool calls",
+          "source_type": "hackernews",
+          "published_at": "2026-08-28T19:29:20+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "conduct-llm-guardrails",
+          "date": "2026-08-29",
+          "title": "Show HN: Conduct, open-source guardrails for LLM and MCP tool calls",
+          "summary": "Conduct是一个开源防护层，阻止LLM和MCP工具调用泄露凭证或越权，保护Agent安全。",
+          "score": 7.5,
+          "url": "https://github.com/sseshachala/conductai"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "安全",
+        "LLM",
+        "MCP"
+      ]
+    },
+    {
+      "product_id": "product-97a104e5a93a2b88",
+      "product_name": "Claude Code",
+      "builder_name": "Simon Willison",
+      "first_seen": "2026-08-09",
+      "last_seen": "2026-08-28",
+      "occurrence_count": 2,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "first_party",
+      "target_user": "Pro、Max、Team 订阅计划的开发者；Anthropic 内部员工",
+      "user_problem": "开发者用 AI 编程助手时，每步操作都要人工点'确认'，导致'确认疲劳'，反而更容易草率通过危险操作；同时担心 AI 被恶意指令劫持（提示注入攻击）后自动执行有害命令",
+      "what_it_is": "研究者发现针对Claude Code Auto Mode的提示注入攻击，成功率80%，可绕过安全机制执行恶意代码。",
+      "ai_role": "AI 充当'能自主执行但带安全刹车的编程代理'（Agent）：自己分解任务、运行命令、读写文件，同时用内置安全评估过滤危险操作",
+      "implementation_idea": "核心思路是给 AI 配一个'安全护栏层'——不是让人类逐条审批，而是让 AI 自己用另一套规则判断'这个命令会不会删数据、会不会把代码发给外部'。Anthropic 称他们用大量攻击场景训练了这套判断能力，并引入第三方独立测试验证。",
+      "hands_on_exercise": "打开 Claude Code（需订阅 Pro/Max/Team），在设置里确认 auto mode 已开启，让它帮你初始化一个 Python 项目（创建虚拟环境、安装依赖、跑通测试）。观察它哪些操作自动执行了、哪些停下来问你——对比之前手动逐条确认的体验。",
+      "limitations_or_uncertainties": "第三方测试由 Trajectory Labs 执行，但具体测试方法、72 个攻击场景的详细设计未完全公开；11% 的危险操作仍可能漏过；Simon Willison 提出一种攻击场景（恶意包伪装成正常命令链）尚未见公开测试结果；Claude Fable 5/Opus 5/Sonnet 5 的具体模型版本信息未详细披露",
+      "region": "global",
+      "score": 9.0,
+      "summary": "研究者发现针对Claude Code Auto Mode的提示注入攻击，成功率80%，可绕过安全机制执行恶意代码。",
+      "title": "Breaking Claude Code Opus 5 Auto Mode",
+      "url": "https://simonwillison.net/2026/Aug/27/breaking-claude-code-opus-5-auto-mode/",
+      "sources": [
+        {
+          "url": "https://simonwillison.net/2026/Aug/8/auto-mode/#atom-everything",
+          "title": "Auto mode is now the default in Claude Code for Pro, Max, and Team plans",
+          "source_type": "rss",
+          "published_at": "2026-08-08T22:36:03+00:00"
+        },
+        {
+          "url": "https://simonwillison.net/2026/Aug/27/breaking-claude-code-opus-5-auto-mode/",
+          "title": "Breaking Claude Code Opus 5 Auto Mode",
+          "source_type": "rss",
+          "published_at": "2026-08-27T22:50:25+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "claude-code-auto-mode-default",
+          "date": "2026-08-09",
+          "title": "Claude Code 将自动模式设为默认：Anthropic 称已大幅缓解提示注入风险",
+          "summary": "Anthropic 宣布 Claude Code 的 auto mode 将成为 Pro、Max 和 Team 计划的默认模式，并透露内部几乎全员使用，值得关注其安全性和效率提升。",
+          "score": 8.5,
+          "url": "https://simonwillison.net/2026/Aug/8/auto-mode/#atom-everything"
+        },
+        {
+          "update_id": "claude-code-opus5-auto-mode-prompt-injection",
+          "date": "2026-08-28",
+          "title": "Breaking Claude Code Opus 5 Auto Mode",
+          "summary": "研究者发现针对Claude Code Auto Mode的提示注入攻击，成功率80%，可绕过安全机制执行恶意代码。",
+          "score": 9.0,
+          "url": "https://simonwillison.net/2026/Aug/27/breaking-claude-code-opus-5-auto-mode/"
+        }
+      ],
+      "usage_flow": [
+        "开发者用自然语言描述需求，Claude Code 规划并执行多步骤任务",
+        "自动模式下，AI 自行判断命令风险等级，低风险直接执行，高风险拦截或请示",
+        "AI 读取外部代码、文档、依赖包时，自动模式尝试识别并阻断隐藏的恶意指令",
+        "开发者事后审计 AI 执行记录，必要时回滚操作"
+      ],
+      "learning_points": [
+        "Agent（智能体）：LLM 不只是聊天，还能自己动手操作电脑、运行程序、完成任务",
+        "Prompt injection（提示注入）：攻击者把恶意指令藏在 AI 要读取的网页、邮件、代码里，骗 AI 执行",
+        "Confirmation fatigue（确认疲劳）：让人类点太多'同意'，人会麻木点错，反而降低安全性"
+      ],
+      "verticals": [],
+      "tags": [
+        "Claude Code",
+        "auto mode",
+        "Anthropic",
+        "安全",
+        "提示注入"
       ]
     },
     {
@@ -635,54 +985,6 @@
         "Cursor",
         "AI SDK",
         "编码代理"
-      ]
-    },
-    {
-      "product_id": "product-2e1a6d87673249b3",
-      "product_name": "GLM-5.3-Flash",
-      "builder_name": "AI News",
-      "first_seen": "2026-08-28",
-      "last_seen": "2026-08-28",
-      "occurrence_count": 1,
-      "intelligence_type": "model_capability",
-      "evidence_status": "reported",
-      "target_user": "未公开",
-      "user_problem": "未公开",
-      "what_it_is": "Z.ai正式发布GLM-5.3-Flash，原生多模态，1M上下文，320B参数，MIT许可，提供权重和API。",
-      "ai_role": "未公开",
-      "implementation_idea": "未公开",
-      "hands_on_exercise": "未公开",
-      "limitations_or_uncertainties": "未公开",
-      "region": "global",
-      "score": 8.0,
-      "summary": "Z.ai正式发布GLM-5.3-Flash，原生多模态，1M上下文，320B参数，MIT许可，提供权重和API。",
-      "title": "not much happened today",
-      "url": "https://news.smol.ai/issues/26-08-26-not-much/",
-      "sources": [
-        {
-          "url": "https://news.smol.ai/issues/26-08-26-not-much/",
-          "title": "not much happened today",
-          "source_type": "newsletter",
-          "published_at": "2026-08-26T05:44:39+00:00"
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "glm-5.3-flash-launch",
-          "date": "2026-08-28",
-          "title": "not much happened today",
-          "summary": "Z.ai正式发布GLM-5.3-Flash，原生多模态，1M上下文，320B参数，MIT许可，提供权重和API。",
-          "score": 8.0,
-          "url": "https://news.smol.ai/issues/26-08-26-not-much/"
-        }
-      ],
-      "usage_flow": [],
-      "learning_points": [],
-      "verticals": [],
-      "tags": [
-        "GLM",
-        "多模态",
-        "开源"
       ]
     },
     {
