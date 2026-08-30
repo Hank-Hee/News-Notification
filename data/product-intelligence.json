@@ -1,7 +1,404 @@
 {
   "version": 1,
-  "updated_at": "2026-08-29T07:04:39.848784+00:00",
+  "updated_at": "2026-08-30T05:24:30.099862+00:00",
   "products": [
+    {
+      "product_id": "product-f17006213d6ccee7",
+      "product_name": "Hy4",
+      "builder_name": "shenli3514",
+      "first_seen": "2026-08-30",
+      "last_seen": "2026-08-30",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "腾讯发布并开源Hy4预览版，模型在OpenRouter上迅速获得大量使用，并首次参与自身训练优化形成递归自我改进循环。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "china",
+      "score": 9.0,
+      "summary": "腾讯发布并开源Hy4预览版，模型在OpenRouter上迅速获得大量使用，并首次参与自身训练优化形成递归自我改进循环。",
+      "title": "Hy4 preview",
+      "url": "https://www.tencent.com/tencent-releases-and-open-sources-tencent-hy4-preview/",
+      "sources": [
+        {
+          "url": "https://www.tencent.com/tencent-releases-and-open-sources-tencent-hy4-preview/",
+          "title": "Hy4 preview",
+          "source_type": "hackernews",
+          "published_at": "2026-08-29T19:33:23+00:00"
+        },
+        {
+          "url": "https://simonwillison.net/2026/Aug/29/hy4/",
+          "title": "Introducing Hy4 Preview",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "tencent-hy4-preview-release",
+          "date": "2026-08-30",
+          "title": "Hy4 preview",
+          "summary": "腾讯发布并开源Hy4预览版，模型在OpenRouter上迅速获得大量使用，并首次参与自身训练优化形成递归自我改进循环。",
+          "score": 9.0,
+          "url": "https://www.tencent.com/tencent-releases-and-open-sources-tencent-hy4-preview/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "模型发布",
+        "开源",
+        "递归自我改进"
+      ]
+    },
+    {
+      "product_id": "product-2e1a6d87673249b3",
+      "product_name": "GLM-5.3-Flash",
+      "builder_name": "AI News",
+      "first_seen": "2026-08-28",
+      "last_seen": "2026-08-30",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Z.ai正式发布GLM-5.3-Flash，原生多模态，1M上下文，320B参数，MIT许可，提供权重和API。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.0,
+      "summary": "Z.ai正式发布GLM-5.3-Flash，原生多模态，1M上下文，320B参数，MIT许可，提供权重和API。",
+      "title": "not much happened today",
+      "url": "https://news.smol.ai/issues/26-08-26-not-much/",
+      "sources": [
+        {
+          "url": "https://news.smol.ai/issues/26-08-26-not-much/",
+          "title": "not much happened today",
+          "source_type": "newsletter",
+          "published_at": "2026-08-26T05:44:39+00:00"
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTE1OWllSS3czelZyZV9oN2NxVFh2bTA5eGdzclAtU29VWV9uaDlYRVFZVnBtZ0s5RjFGMTJidWVvTFY1T0E?oc=5",
+          "title": "实测GLM-5.3: 在神仙打架的一周杀回国模顶流，还按下了重置键 - 爱范儿",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "glm-5.3-flash-launch",
+          "date": "2026-08-28",
+          "title": "not much happened today",
+          "summary": "Z.ai正式发布GLM-5.3-Flash，原生多模态，1M上下文，320B参数，MIT许可，提供权重和API。",
+          "score": 8.0,
+          "url": "https://news.smol.ai/issues/26-08-26-not-much/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "GLM",
+        "多模态",
+        "开源"
+      ]
+    },
+    {
+      "product_id": "product-1e9b8bbdeb596e93",
+      "product_name": "OpenAI Codex",
+      "builder_name": "github-actions[bot]",
+      "first_seen": "2026-08-21",
+      "last_seen": "2026-08-30",
+      "occurrence_count": 2,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "需要在终端/命令行中使用 AI 辅助编程的开发者，尤其是关注自动化工具链和沙盒安全的技术团队",
+      "user_problem": "开发者在使用 AI 编程助手时，常遇到：① MCP 工具（外部 AI 可调用服务）启动慢或不稳定导致任务失败；② 插件来源混乱，难以区分官方与第三方；③ 切换 AI 模型时工具权限和推理能力意外丢失；④ 多轮对话中沙盒权限被意外降级，存在安全隐患",
+      "what_it_is": "OpenAI Codex 是一个命令行 AI 编程助手（CLI Agent），能在本地沙盒环境中理解代码、调用工具并自动执行开发任务；本次是其 Rust 重写版本的第 151 次迭代更新。",
+      "ai_role": "作为 Agent（智能体，即能自主规划并调用工具的 AI）在沙盒中解析用户意图，选择并执行 MCP 工具，管理多轮对话状态与权限",
+      "implementation_idea": "本次更新核心是让'工具发现更宽容、插件管理更精细、沙盒边界更牢固'：给可选 MCP 服务加了可配置启动等待期，避免稍慢的服务被跳过；允许插件在工具结果传给 AI 前做拦截改写；插件目录现在按仓库级别合并配置，遇到坏掉的市场只报错不隐藏其他有效插件；同时修复了模型切换时工具计划和推理力度丢失、远程沙盒路径/OS 识别不准等问题",
+      "hands_on_exercise": "30 分钟练习：① 安装 Codex CLI 并运行 `codex --help`；② 在 `~/.codex/config.yaml` 中配置一个本地 MCP 服务器（如官方示例的 filesystem MCP），故意把 grace period 设为 10 秒观察启动日志；③ 发起一个需要读文件的简单任务（如'总结当前目录的 README'），验证工具是否被调用；④ 尝试切换模型（如从 o4-mini 到 gpt-4o）并观察工具可用性是否保持",
+      "limitations_or_uncertainties": "未公开：本次更新是否涉及底层模型能力变化（如 Codex 专用模型版本）；远程执行器（remote executor）的具体部署方式和定价未说明；插件目录的'per-repository configuration'具体格式和覆盖规则文档未在 Release 中详述",
+      "region": "global",
+      "score": 8.0,
+      "summary": "OpenAI Codex 发布 v0.151.0，增强 MCP 工具发现和插件管理。",
+      "title": "OpenAI Codex CLI 发布 Rust 版 v0.151.0：强化 MCP 工具发现与插件管理",
+      "url": "https://github.com/openai/codex/releases/tag/rust-v0.151.0",
+      "sources": [
+        {
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.149.0",
+          "title": "openai/codex released rust-v0.149.0",
+          "source_type": "github",
+          "published_at": "2026-08-20T21:04:55+00:00"
+        },
+        {
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.151.0",
+          "title": "openai/codex released rust-v0.151.0",
+          "source_type": "github",
+          "published_at": "2026-08-29T09:55:39+00:00"
+        },
+        {
+          "url": "https://learn.chatgpt.com/docs/plugins?surface=app",
+          "title": "Browse, install, and use plugins on supported ChatGPT and Codex ...",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "openai-codex-rust-v0.149.0",
+          "date": "2026-08-21",
+          "title": "openai/codex released rust-v0.149.0",
+          "summary": "OpenAI Codex发布rust-v0.149.0，新增agents仪表盘、队列和更多Vim编辑命令。",
+          "score": 7.5,
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.149.0"
+        },
+        {
+          "update_id": "openai-codex-rust-v0.151.0",
+          "date": "2026-08-30",
+          "title": "OpenAI Codex CLI 发布 Rust 版 v0.151.0：强化 MCP 工具发现与插件管理",
+          "summary": "OpenAI Codex 发布 v0.151.0，增强 MCP 工具发现和插件管理。",
+          "score": 8.0,
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.151.0"
+        }
+      ],
+      "usage_flow": [
+        "在终端安装/更新 Codex CLI：`npm install -g @openai/codex` 或从 GitHub Release 获取",
+        "配置 MCP 服务器（如文件系统、数据库等外部工具），设置可选的启动等待时间（grace period）",
+        "在对话中让 Codex 调用工具完成任务，必要时通过插件扩展拦截或修改工具返回结果",
+        "通过插件目录（plugin catalog）按仓库级别管理插件来源，过滤无效市场"
+      ],
+      "learning_points": [
+        "MCP（Model Context Protocol）：一种让 AI 应用统一调用外部工具/数据的标准协议，类似 AI 的'USB 接口'",
+        "Agent 与单次问答的区别：Agent 能自主分解任务、多次调用工具、根据中间结果调整下一步，不只是'问一答一'",
+        "Sandbox（沙盒）：给 AI 执行环境加限制（如不能随意读/写特定路径），防止自动化操作破坏真实系统"
+      ],
+      "verticals": [],
+      "tags": [
+        "Codex",
+        "Agent",
+        "CLI"
+      ]
+    },
+    {
+      "product_id": "product-23f41884ebe2224d",
+      "product_name": "remove-your-data",
+      "builder_name": "k7peak",
+      "first_seen": "2026-08-30",
+      "last_seen": "2026-08-30",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "early_signal",
+      "target_user": "想从网上删除个人电话、地址、车辆信息，但不愿或无力支付订阅费的用户",
+      "user_problem": "作者付费使用了数据删除服务，结果没效果；同时这类服务通常需要持续订阅，用户缺乏透明度和控制权",
+      "what_it_is": "一个开源的 GitHub 仓库，提供结构化指令，指导 AI 代理（Agent）自动执行数据删除流程，替代人工操作或付费订阅服务。",
+      "ai_role": "AI 代理（Agent）负责读取仓库中的结构化指令，自动浏览网页、填写表单、提交删除请求。Agent 在这里指能自主执行多步骤任务的 AI 程序，不只是回答问题。",
+      "implementation_idea": "核心是把'怎么删'的经验写成机器能读懂的剧本（工作流），让 AI 代理像人一样逐个网站操作，但不用人手动点。本质是'用代码代替重复劳动'，而非开发新算法。",
+      "hands_on_exercise": "30 分钟：在 GitHub 上找到 remove-your-data 仓库，阅读 README 里的一个数据经纪商删除流程；然后用免费版的 ChatGPT/Claude，把该流程的 3 个步骤用自然语言描述给它，观察它能否正确拆解成操作指令。记录哪里理解对了、哪里需要人工纠正。",
+      "limitations_or_uncertainties": "未公开：具体覆盖多少家数据经纪商、成功率数据、是否需要人工处理验证码/邮件验证、是否支持非美国地区用户、AI 代理实际运行需要的技术环境（API 费用、浏览器自动化工具等）。项目处于 Show HN 阶段，用户验证规模有限。",
+      "region": "global",
+      "score": 8.0,
+      "summary": "作者开源了一个工具，指导AI代理自动删除数据经纪商上的个人信息，无需订阅付费服务。",
+      "title": "开源工具：让 AI 代理自动帮你从数据经纪商删除个人信息，无需订阅付费服务",
+      "url": "https://github.com/k7cfo/remove-your-data",
+      "sources": [
+        {
+          "url": "https://github.com/k7cfo/remove-your-data",
+          "title": "Show HN: Delete yourself from data brokers without a subscription",
+          "source_type": "hackernews",
+          "published_at": "2026-08-29T22:31:56+00:00"
+        },
+        {
+          "url": "https://www.pcmag.com/picks/the-best-personal-data-removal-services",
+          "title": "The Best Personal Data Removal Services for 2026 - PCMag",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://www.zdnet.com/article/free-ways-to-remove-your-data-without-a-service/",
+          "title": "I tried to wipe my digital footprint without paying for a data ... - ZDNET",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "remove-your-data-open-source",
+          "date": "2026-08-30",
+          "title": "开源工具：让 AI 代理自动帮你从数据经纪商删除个人信息，无需订阅付费服务",
+          "summary": "作者开源了一个工具，指导AI代理自动删除数据经纪商上的个人信息，无需订阅付费服务。",
+          "score": 8.0,
+          "url": "https://github.com/k7cfo/remove-your-data"
+        }
+      ],
+      "usage_flow": [
+        "用户把仓库克隆到本地或自己的环境",
+        "用户提供需要删除的个人信息（电话、地址等）给 AI 代理",
+        "AI 代理按照仓库里的指令，自动访问各数据经纪商网站提交 opt-out（退出）请求",
+        "用户跟踪删除进度，必要时补充验证"
+      ],
+      "learning_points": [
+        "Agent：不只是聊天的 AI，而是能自己规划步骤、调用工具完成任务的程序",
+        "Opt-out：法律或平台提供的'拒绝被收集/展示信息'机制，是隐私保护的实际操作入口",
+        "开源替代商业服务：把人工经验结构化后公开，降低个人使用门槛"
+      ],
+      "verticals": [],
+      "tags": [
+        "隐私",
+        "AI代理",
+        "开源"
+      ]
+    },
+    {
+      "product_id": "product-40f4540c69384779",
+      "product_name": "NocoBase",
+      "builder_name": "OSCHINA",
+      "first_seen": "2026-08-30",
+      "last_seen": "2026-08-30",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "开源无代码平台NocoBase新增DeepSeek V4 Flash支持，支持推理续调与联网搜索，方便开发者集成。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "china",
+      "score": 8.0,
+      "summary": "开源无代码平台NocoBase新增DeepSeek V4 Flash支持，支持推理续调与联网搜索，方便开发者集成。",
+      "title": "🔥 新增 DeepSeek V4 Flash，支持推理续调与联网搜索：开源 AI 无代码平台 NocoBase - OSCHINA",
+      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE9ZWUYtU3h2RkFTSVpNLWR0QUdoVTg3aTZMM1N1a3YxZWJsbHB6UTYwalQzeGl3U2ZUZnBxUWNhclY5djdrZU5qdDV6dw?oc=5",
+      "sources": [
+        {
+          "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE9ZWUYtU3h2RkFTSVpNLWR0QUdoVTg3aTZMM1N1a3YxZWJsbHB6UTYwalQzeGl3U2ZUZnBxUWNhclY5djdrZU5qdDV6dw?oc=5",
+          "title": "🔥 新增 DeepSeek V4 Flash，支持推理续调与联网搜索：开源 AI 无代码平台 NocoBase - OSCHINA",
+          "source_type": "google_news",
+          "published_at": "2026-08-29T09:01:52+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "nocobase-deepseek-v4-flash-integration",
+          "date": "2026-08-30",
+          "title": "🔥 新增 DeepSeek V4 Flash，支持推理续调与联网搜索：开源 AI 无代码平台 NocoBase - OSCHINA",
+          "summary": "开源无代码平台NocoBase新增DeepSeek V4 Flash支持，支持推理续调与联网搜索，方便开发者集成。",
+          "score": 8.0,
+          "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE9ZWUYtU3h2RkFTSVpNLWR0QUdoVTg3aTZMM1N1a3YxZWJsbHB6UTYwalQzeGl3U2ZUZnBxUWNhclY5djdrZU5qdDV6dw?oc=5"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "NocoBase",
+        "DeepSeek",
+        "无代码"
+      ]
+    },
+    {
+      "product_id": "product-fd9017ea7ea5ecf6",
+      "product_name": "AgentSky",
+      "builder_name": "搜狐网",
+      "first_seen": "2026-08-30",
+      "last_seen": "2026-08-30",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "AgentSky平台让多个Agent执行相同任务并对比时间与成本，发现成本差可达75倍，直观展示Agent性能差异。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "china",
+      "score": 7.5,
+      "summary": "AgentSky平台让多个Agent执行相同任务并对比时间与成本，发现成本差可达75倍，直观展示Agent性能差异。",
+      "title": "两个Agent做同一任务 成本差出75倍？ Agent也迎来了自己的竞技场！AgentSky将多个Agent放进同一竞技场，执行相同真实任务并对比时间与成本，直观看出不同Agent的实际表现。 #Agent #AgentSky #Claude #DeepSeek - 搜狐网",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPM0Z2SVFkTHFXQXpPOFBFYTJscEQzRm9SM1l2WExHb1lYeUtGamRZYUhIMlBqbENjWHpjTTgtUzBrLVAwSTRQVlhZVmt6MUdyckU5UWgxTGdLMmV4X05XTlpHWjdNRjhQSlk4N0J3WDVNRjZJRVVSM3prQWozaVY5aDZ5bFphRC1MbDBXNQ?oc=5",
+      "sources": [
+        {
+          "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPM0Z2SVFkTHFXQXpPOFBFYTJscEQzRm9SM1l2WExHb1lYeUtGamRZYUhIMlBqbENjWHpjTTgtUzBrLVAwSTRQVlhZVmt6MUdyckU5UWgxTGdLMmV4X05XTlpHWjdNRjhQSlk4N0J3WDVNRjZJRVVSM3prQWozaVY5aDZ5bFphRC1MbDBXNQ?oc=5",
+          "title": "两个Agent做同一任务 成本差出75倍？ Agent也迎来了自己的竞技场！AgentSky将多个Agent放进同一竞技场，执行相同真实任务并对比时间与成本，直观看出不同Agent的实际表现。 #Agent #AgentSky #Claude #DeepSeek - 搜狐网",
+          "source_type": "google_news",
+          "published_at": "2026-08-30T01:25:19+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "agentsky-agent-benchmark",
+          "date": "2026-08-30",
+          "title": "两个Agent做同一任务 成本差出75倍？ Agent也迎来了自己的竞技场！AgentSky将多个Agent放进同一竞技场，执行相同真实任务并对比时间与成本，直观看出不同Agent的实际表现。 #Agent #AgentSky #Claude #DeepSeek - 搜狐网",
+          "summary": "AgentSky平台让多个Agent执行相同任务并对比时间与成本，发现成本差可达75倍，直观展示Agent性能差异。",
+          "score": 7.5,
+          "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPM0Z2SVFkTHFXQXpPOFBFYTJscEQzRm9SM1l2WExHb1lYeUtGamRZYUhIMlBqbENjWHpjTTgtUzBrLVAwSTRQVlhZVmt6MUdyckU5UWgxTGdLMmV4X05XTlpHWjdNRjhQSlk4N0J3WDVNRjZJRVVSM3prQWozaVY5aDZ5bFphRC1MbDBXNQ?oc=5"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "AgentSky",
+        "基准测试"
+      ]
+    },
+    {
+      "product_id": "product-822cc938fff0309c",
+      "product_name": "Qwen 3.8 Flash",
+      "builder_name": "智源社区",
+      "first_seen": "2026-08-30",
+      "last_seen": "2026-08-30",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "智源社区实测Qwen 3.8 Flash，称其比DeepSeek更便宜且性能强劲，值得关注其性价比优势。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "china",
+      "score": 7.0,
+      "summary": "智源社区实测Qwen 3.8 Flash，称其比DeepSeek更便宜且性能强劲，值得关注其性价比优势。",
+      "title": "实测比DeepSeek便宜的Qwen 3.8 Flash，卷飞了 - 智源社区",
+      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE0wTEZwRnYtaUFIUzBwWHVrR21jN0V2T1hBMjJuWEs4enZkV052YlRnNVc5d3ZJSFI2MUxRTldmazlJX1ViUW5Pag?oc=5",
+      "sources": [
+        {
+          "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE0wTEZwRnYtaUFIUzBwWHVrR21jN0V2T1hBMjJuWEs4enZkV052YlRnNVc5d3ZJSFI2MUxRTldmazlJX1ViUW5Pag?oc=5",
+          "title": "实测比DeepSeek便宜的Qwen 3.8 Flash，卷飞了 - 智源社区",
+          "source_type": "google_news",
+          "published_at": "2026-08-29T11:00:00+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "qwen-3.8-flash-test",
+          "date": "2026-08-30",
+          "title": "实测比DeepSeek便宜的Qwen 3.8 Flash，卷飞了 - 智源社区",
+          "summary": "智源社区实测Qwen 3.8 Flash，称其比DeepSeek更便宜且性能强劲，值得关注其性价比优势。",
+          "score": 7.0,
+          "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE0wTEZwRnYtaUFIUzBwWHVrR21jN0V2T1hBMjJuWEs4enZkV052YlRnNVc5d3ZJSFI2MUxRTldmazlJX1ViUW5Pag?oc=5"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Qwen",
+        "模型评测"
+      ]
+    },
     {
       "product_id": "product-85085aded4e1f9b1",
       "product_name": "Claude For Teachers",
@@ -549,54 +946,6 @@
         "安全",
         "企业",
         "Anthropic"
-      ]
-    },
-    {
-      "product_id": "product-2e1a6d87673249b3",
-      "product_name": "GLM-5.3-Flash",
-      "builder_name": "AI News",
-      "first_seen": "2026-08-28",
-      "last_seen": "2026-08-29",
-      "occurrence_count": 1,
-      "intelligence_type": "model_capability",
-      "evidence_status": "reported",
-      "target_user": "未公开",
-      "user_problem": "未公开",
-      "what_it_is": "Z.ai正式发布GLM-5.3-Flash，原生多模态，1M上下文，320B参数，MIT许可，提供权重和API。",
-      "ai_role": "未公开",
-      "implementation_idea": "未公开",
-      "hands_on_exercise": "未公开",
-      "limitations_or_uncertainties": "未公开",
-      "region": "global",
-      "score": 8.0,
-      "summary": "Z.ai正式发布GLM-5.3-Flash，原生多模态，1M上下文，320B参数，MIT许可，提供权重和API。",
-      "title": "not much happened today",
-      "url": "https://news.smol.ai/issues/26-08-26-not-much/",
-      "sources": [
-        {
-          "url": "https://news.smol.ai/issues/26-08-26-not-much/",
-          "title": "not much happened today",
-          "source_type": "newsletter",
-          "published_at": "2026-08-26T05:44:39+00:00"
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "glm-5.3-flash-launch",
-          "date": "2026-08-28",
-          "title": "not much happened today",
-          "summary": "Z.ai正式发布GLM-5.3-Flash，原生多模态，1M上下文，320B参数，MIT许可，提供权重和API。",
-          "score": 8.0,
-          "url": "https://news.smol.ai/issues/26-08-26-not-much/"
-        }
-      ],
-      "usage_flow": [],
-      "learning_points": [],
-      "verticals": [],
-      "tags": [
-        "GLM",
-        "多模态",
-        "开源"
       ]
     },
     {
@@ -3811,54 +4160,6 @@
         "协作",
         "vibe-coding",
         "AI代理"
-      ]
-    },
-    {
-      "product_id": "product-1e9b8bbdeb596e93",
-      "product_name": "OpenAI Codex",
-      "builder_name": "github-actions[bot]",
-      "first_seen": "2026-08-21",
-      "last_seen": "2026-08-21",
-      "occurrence_count": 1,
-      "intelligence_type": "product_case",
-      "evidence_status": "first_party",
-      "target_user": "未公开",
-      "user_problem": "未公开",
-      "what_it_is": "OpenAI Codex发布rust-v0.149.0，新增agents仪表盘、队列和更多Vim编辑命令。",
-      "ai_role": "未公开",
-      "implementation_idea": "未公开",
-      "hands_on_exercise": "未公开",
-      "limitations_or_uncertainties": "未公开",
-      "region": "global",
-      "score": 7.5,
-      "summary": "OpenAI Codex发布rust-v0.149.0，新增agents仪表盘、队列和更多Vim编辑命令。",
-      "title": "openai/codex released rust-v0.149.0",
-      "url": "https://github.com/openai/codex/releases/tag/rust-v0.149.0",
-      "sources": [
-        {
-          "url": "https://github.com/openai/codex/releases/tag/rust-v0.149.0",
-          "title": "openai/codex released rust-v0.149.0",
-          "source_type": "github",
-          "published_at": "2026-08-20T21:04:55+00:00"
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "openai-codex-rust-v0.149.0",
-          "date": "2026-08-21",
-          "title": "openai/codex released rust-v0.149.0",
-          "summary": "OpenAI Codex发布rust-v0.149.0，新增agents仪表盘、队列和更多Vim编辑命令。",
-          "score": 7.5,
-          "url": "https://github.com/openai/codex/releases/tag/rust-v0.149.0"
-        }
-      ],
-      "usage_flow": [],
-      "learning_points": [],
-      "verticals": [],
-      "tags": [
-        "Codex",
-        "Agent",
-        "CLI"
       ]
     },
     {
