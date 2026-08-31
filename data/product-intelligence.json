@@ -1,7 +1,346 @@
 {
   "version": 1,
-  "updated_at": "2026-08-30T05:24:30.099862+00:00",
+  "updated_at": "2026-08-31T05:34:20.453938+00:00",
   "products": [
+    {
+      "product_id": "product-05a30f983ca9fcea",
+      "product_name": "Cogram Studio",
+      "builder_name": "alexvboe",
+      "first_seen": "2026-08-31",
+      "last_seen": "2026-08-31",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "建筑师、结构/机电工程师、需要三维建模和工程制图的专业人员，以及想用 AI 辅助 CAD 工作的开发者",
+      "user_problem": "传统 CAD/BIM 工作重复繁琐，AI 无法直接操作专业建模软件；工程师需要手动完成大量标准化绘图、改图、出图工作",
+      "what_it_is": "一个基于开源 FreeCAD 的在线三维建模平台，AI 代理可以通过 MCP 协议直接操控它画图、建模型、出工程图纸",
+      "ai_role": "AI 作为'操作员'，通过 MCP 协议直接执行 FreeCAD 的建模指令，替代人类点击菜单和输入参数",
+      "implementation_idea": "把开源三维引擎 FreeCAD 放在服务器后台运行，不显示界面；然后给 AI 开一套'遥控器'（MCP server），AI 发出的文字指令会被翻译成 FreeCAD 能懂的代码，人类再通过网页看结果、提修改意见",
+      "hands_on_exercise": "30 分钟体验：访问 studio.cogram.com，选择'Use built-in agent'，用免费 50 credits 输入 prompt：'Create a simple bookshelf with two dimensioned sheets'，观察 AI 如何分步建模；然后打开 https://studio.cogram.com/view/shr_1agb21nd4 对比官方示例，理解迭代修改 vs 一次生成复杂模型的区别",
+      "limitations_or_uncertainties": "复杂模型需人工迭代修正，'一键生成'长任务不可靠；免费额度用完后定价未公开；内置 agent 基于 Pi 框架但具体模型版本未公开；MCP server 的具体工具清单需查看 skill.md 文档",
+      "region": "global",
+      "score": 8.5,
+      "summary": "Cogram 推出 Cogram Studio，一个让 AI 代理通过 MCP 协议操作 FreeCAD 进行三维建模和制图的 CAD/BIM 工作空间，值得关注其如何将 AI 融入专业设计流程。",
+      "title": "Cogram Studio：让人类和 AI 代理一起画三维图纸的 CAD/BIM 工作空间",
+      "url": "https://studio.cogram.com/",
+      "sources": [
+        {
+          "url": "https://studio.cogram.com/",
+          "title": "Show HN: Cogram Studio – CAD and BIM workspace for humans and agents",
+          "source_type": "hackernews",
+          "published_at": "2026-08-30T18:49:39+00:00"
+        },
+        {
+          "url": "https://cogram.com/studio",
+          "title": "Cogram Studio",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://cogram.com/",
+          "title": "Cogram — The AI Platform for Architects and Engineers",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "cogram-studio-cad-bim-workspace",
+          "date": "2026-08-31",
+          "title": "Cogram Studio：让人类和 AI 代理一起画三维图纸的 CAD/BIM 工作空间",
+          "summary": "Cogram 推出 Cogram Studio，一个让 AI 代理通过 MCP 协议操作 FreeCAD 进行三维建模和制图的 CAD/BIM 工作空间，值得关注其如何将 AI 融入专业设计流程。",
+          "score": 8.5,
+          "url": "https://studio.cogram.com/"
+        }
+      ],
+      "usage_flow": [
+        "选择方式：接入自己的 AI（Claude Code/Codex 等）或用内置 AI 代理",
+        "用自然语言描述需求（如'画一个带尺寸标注的书架'）",
+        "AI 通过 MCP 协议调用 FreeCAD 自动建模、生成视图和图纸",
+        "在浏览器中查看、测量、修改三维模型，确认后保存"
+      ],
+      "learning_points": [
+        "MCP（Model Context Protocol）：一种让 AI 代理安全调用外部工具的通用'插线板'，类似 USB-C 接口标准，让 Claude、ChatGPT 等都能连上同一个软件",
+        "Agent（AI 代理）：不只是聊天回答，而是能自主规划步骤、调用工具、完成多步任务的 AI 系统",
+        "Headless 运行：软件在后台无界面运行，靠代码操控，适合让 AI 自动化操作"
+      ],
+      "verticals": [],
+      "tags": [
+        "CAD",
+        "BIM",
+        "MCP",
+        "AI Agent"
+      ]
+    },
+    {
+      "product_id": "product-6fdbba16fd2f7448",
+      "product_name": "ChatGPT Work",
+      "builder_name": "Simon Willison",
+      "first_seen": "2026-08-31",
+      "last_seen": "2026-08-31",
+      "occurrence_count": 1,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "verified",
+      "target_user": "每月付 20 美元以上的 ChatGPT Plus/Pro 订阅者；免费用户和 8 美元 Go 档用户无法使用",
+      "user_problem": "普通 ChatGPT 只能对话生成文字，无法直接联网装软件、操作网页、保存文件到下次再用，遇到需要查实时数据、跑代码分析、反复迭代文档的工作流时得人工来回搬运",
+      "what_it_is": "OpenAI 在 2026 年 7 月推出的付费功能，把 ChatGPT 从「聊天问答」扩展成「能联网执行代码、操作浏览器、自动运行任务」的工作台，分为云端版和桌面本地版两种形态",
+      "ai_role": "作为能调用工具的执行代理（Agent，白话：不只是说话，还能动手办事的 AI），根据目标自主拆解步骤、联网获取信息、运行代码、生成可交付文件",
+      "implementation_idea": "云端给每个用户分配一个带网络权限的隔离容器（类似轻量级虚拟机），里面预装 Python 等环境，AI 可以像人一样打开浏览器爬网页、装第三方库、读写文件；这些文件跨对话保留，形成「工作空间」",
+      "hands_on_exercise": "用 ChatGPT Work Cloud（需 20 美元/月订阅）执行一次完整任务：让 AI 联网搜索某行业最新数据 → 用 Python 整理成表格 → 生成简要分析文档 → 查看文件是否保存在 Work 文件系统中，下次新对话能否直接读取",
+      "limitations_or_uncertainties": "定时自动化功能是否同时存在于 ChatGPT Chat 尚不确定；Ultra 模式的具体计费方式和「更积极委派子代理」的机制未公开细节；Work Local（桌面版）与旧 Codex 的关系、功能边界未在本文展开；GPT-5.6 Pro 模型为何只在 Chat 模式提供、Work 模式没有，官方未解释",
+      "region": "global",
+      "score": 8.5,
+      "summary": "Simon Willison详细解析ChatGPT Work，区分云和本地版本，帮助理解其功能与使用场景。",
+      "title": "ChatGPT Work 拆解：云版与本地版到底有什么区别",
+      "url": "https://simonwillison.net/2026/Aug/30/understanding-chatgpt-work/",
+      "sources": [
+        {
+          "url": "https://simonwillison.net/2026/Aug/30/understanding-chatgpt-work/",
+          "title": "Understanding ChatGPT Work",
+          "source_type": "rss",
+          "published_at": "2026-08-30T23:59:47+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "chatgpt-work-understanding",
+          "date": "2026-08-31",
+          "title": "ChatGPT Work 拆解：云版与本地版到底有什么区别",
+          "summary": "Simon Willison详细解析ChatGPT Work，区分云和本地版本，帮助理解其功能与使用场景。",
+          "score": 8.5,
+          "url": "https://simonwillison.net/2026/Aug/30/understanding-chatgpt-work/"
+        }
+      ],
+      "usage_flow": [
+        "在 chatgpt.com 或 App 里切换到「Work」标签（与「Chat」标签并列）",
+        "选择模型和推理等级（Sol/Luna/Terra 等），输入带明确目标的任务，如「分析这份销售数据并生成 PPT」",
+        "AI 在云端容器里联网查资料、运行代码、操作无头浏览器，结果存入共享文件系统",
+        "任务完成后可发布为 ChatGPT Site 供他人查看，或设置定时自动化重复执行"
+      ],
+      "learning_points": [
+        "Agent：AI 不再只给答案，而是能自己规划多步操作、调用工具完成任务",
+        "无头浏览器（Headless Chrome）：没有界面的后台浏览器，AI 用它自动访问网页、填表、截图，就像看不见的机器人",
+        "推理等级（Reasoning Level）：同一模型可选不同「思考深度」，Light 更快更便宜，Ultra 更慢但更擅长分解复杂任务并调用子代理"
+      ],
+      "verticals": [],
+      "tags": [
+        "ChatGPT Work",
+        "产品分析"
+      ]
+    },
+    {
+      "product_id": "product-2e1a6d87673249b3",
+      "product_name": "GLM-5.3-Flash",
+      "builder_name": "AI News",
+      "first_seen": "2026-08-28",
+      "last_seen": "2026-08-31",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Z.ai正式发布GLM-5.3-Flash，原生多模态，1M上下文，320B参数，MIT许可，提供权重和API。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.0,
+      "summary": "Z.ai正式发布GLM-5.3-Flash，原生多模态，1M上下文，320B参数，MIT许可，提供权重和API。",
+      "title": "not much happened today",
+      "url": "https://news.smol.ai/issues/26-08-26-not-much/",
+      "sources": [
+        {
+          "url": "https://news.smol.ai/issues/26-08-26-not-much/",
+          "title": "not much happened today",
+          "source_type": "newsletter",
+          "published_at": "2026-08-26T05:44:39+00:00"
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTE1OWllSS3czelZyZV9oN2NxVFh2bTA5eGdzclAtU29VWV9uaDlYRVFZVnBtZ0s5RjFGMTJidWVvTFY1T0E?oc=5",
+          "title": "实测GLM-5.3: 在神仙打架的一周杀回国模顶流，还按下了重置键 - 爱范儿",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "glm-5.3-flash-launch",
+          "date": "2026-08-28",
+          "title": "not much happened today",
+          "summary": "Z.ai正式发布GLM-5.3-Flash，原生多模态，1M上下文，320B参数，MIT许可，提供权重和API。",
+          "score": 8.0,
+          "url": "https://news.smol.ai/issues/26-08-26-not-much/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "GLM",
+        "多模态",
+        "开源"
+      ]
+    },
+    {
+      "product_id": "product-2ccca7db6a3ff38a",
+      "product_name": "Storyteller",
+      "builder_name": "smoores",
+      "first_seen": "2026-08-31",
+      "last_seen": "2026-08-31",
+      "occurrence_count": 1,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "开发者重新实现 Storyteller 的强制对齐算法，让有声书与文本逐句高亮同步，提升沉浸式阅读体验。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.0,
+      "summary": "开发者重新实现 Storyteller 的强制对齐算法，让有声书与文本逐句高亮同步，提升沉浸式阅读体验。",
+      "title": "Automating Immersive Reading",
+      "url": "https://smoores.dev/post/automating_immersive_reading/",
+      "sources": [
+        {
+          "url": "https://smoores.dev/post/automating_immersive_reading/",
+          "title": "Automating Immersive Reading",
+          "source_type": "hackernews",
+          "published_at": "2026-08-30T11:46:23+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "storyteller-forced-alignment",
+          "date": "2026-08-31",
+          "title": "Automating Immersive Reading",
+          "summary": "开发者重新实现 Storyteller 的强制对齐算法，让有声书与文本逐句高亮同步，提升沉浸式阅读体验。",
+          "score": 8.0,
+          "url": "https://smoores.dev/post/automating_immersive_reading/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "有声书",
+        "强制对齐",
+        "开源"
+      ]
+    },
+    {
+      "product_id": "product-f72e709087406552",
+      "product_name": "Vercel AI SDK",
+      "builder_name": "github-actions[bot]",
+      "first_seen": "2026-07-26",
+      "last_seen": "2026-08-31",
+      "occurrence_count": 4,
+      "intelligence_type": "model_capability",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Vercel AI SDK发布7.0.85版本，修复多项问题并新增图像生成调用功能。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.0,
+      "summary": "Vercel AI SDK发布7.0.85版本，修复多项问题并新增图像生成调用功能。",
+      "title": "vercel/ai released ai@7.0.85",
+      "url": "https://github.com/vercel/ai/releases/tag/ai%407.0.85",
+      "sources": [
+        {
+          "url": "https://github.com/vercel/ai/releases/tag/%40ai-sdk/anthropic%404.0.20",
+          "title": "vercel/ai released @ai-sdk/anthropic@4.0.20",
+          "source_type": "github",
+          "published_at": "2026-07-24T17:25:31+00:00"
+        },
+        {
+          "url": "https://github.com/vercel/ai/releases/tag/%40ai-sdk/anthropic%403.0.102",
+          "title": "vercel/ai released @ai-sdk/anthropic@3.0.102",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://github.com/vercel/ai/releases/tag/%40ai-sdk/anthropic%402.0.91",
+          "title": "vercel/ai released @ai-sdk/anthropic@2.0.91",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://github.com/vercel/ai/releases/tag/%40ai-sdk/deepgram%403.1.0",
+          "title": "vercel/ai released @ai-sdk/deepgram@3.1.0",
+          "source_type": "github",
+          "published_at": "2026-08-23T01:45:50+00:00"
+        },
+        {
+          "url": "https://github.com/vercel/ai/releases/tag/ai%406.0.272",
+          "title": "vercel/ai released ai@6.0.272",
+          "source_type": "github",
+          "published_at": "2026-08-30T08:52:49+00:00"
+        },
+        {
+          "url": "https://github.com/vercel/ai/releases/tag/ai%407.0.85",
+          "title": "vercel/ai released ai@7.0.85",
+          "source_type": "github",
+          "published_at": "2026-08-30T08:04:57+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "vercel-ai-sdk-anthropic-4.0.20-features",
+          "date": "2026-07-26",
+          "title": "vercel/ai released @ai-sdk/anthropic@4.0.20",
+          "summary": "Vercel AI SDK 的 Anthropic 包 v4.0.20 新增 Claude Opus 5 模型、安全回退和对话中工具变更支持。",
+          "score": 8.0,
+          "url": "https://github.com/vercel/ai/releases/tag/%40ai-sdk/anthropic%404.0.20"
+        },
+        {
+          "update_id": "vercel-ai-deepgram-3.1.0",
+          "date": "2026-08-23",
+          "title": "vercel/ai released @ai-sdk/deepgram@3.1.0",
+          "summary": "Vercel AI SDK 更新了 Deepgram 集成，修复转录参数并调整说话人分离默认行为，开发者需注意配置变化。",
+          "score": 7.5,
+          "url": "https://github.com/vercel/ai/releases/tag/%40ai-sdk/deepgram%403.1.0"
+        },
+        {
+          "update_id": "vercel-ai-release-6.0.272",
+          "date": "2026-08-31",
+          "title": "vercel/ai released ai@6.0.272",
+          "summary": "Vercel AI SDK 发布 6.0.272，修复工具调用违规时响应处理并暴露错误内容，方便开发者恢复。",
+          "score": 7.5,
+          "url": "https://github.com/vercel/ai/releases/tag/ai%406.0.272"
+        },
+        {
+          "update_id": "vercel-ai-v7.0.85",
+          "date": "2026-08-31",
+          "title": "vercel/ai released ai@7.0.85",
+          "summary": "Vercel AI SDK发布7.0.85版本，修复多项问题并新增图像生成调用功能。",
+          "score": 7.0,
+          "url": "https://github.com/vercel/ai/releases/tag/ai%407.0.85"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "AI SDK",
+        "Vercel",
+        "Anthropic",
+        "Claude Opus 5",
+        "Vercel AI SDK",
+        "Deepgram",
+        "语音识别",
+        "工具调用",
+        "Agent",
+        "Vercel AI",
+        "SDK",
+        "版本发布"
+      ]
+    },
     {
       "product_id": "product-f17006213d6ccee7",
       "product_name": "Hy4",
@@ -54,60 +393,6 @@
         "模型发布",
         "开源",
         "递归自我改进"
-      ]
-    },
-    {
-      "product_id": "product-2e1a6d87673249b3",
-      "product_name": "GLM-5.3-Flash",
-      "builder_name": "AI News",
-      "first_seen": "2026-08-28",
-      "last_seen": "2026-08-30",
-      "occurrence_count": 1,
-      "intelligence_type": "model_capability",
-      "evidence_status": "reported",
-      "target_user": "未公开",
-      "user_problem": "未公开",
-      "what_it_is": "Z.ai正式发布GLM-5.3-Flash，原生多模态，1M上下文，320B参数，MIT许可，提供权重和API。",
-      "ai_role": "未公开",
-      "implementation_idea": "未公开",
-      "hands_on_exercise": "未公开",
-      "limitations_or_uncertainties": "未公开",
-      "region": "global",
-      "score": 8.0,
-      "summary": "Z.ai正式发布GLM-5.3-Flash，原生多模态，1M上下文，320B参数，MIT许可，提供权重和API。",
-      "title": "not much happened today",
-      "url": "https://news.smol.ai/issues/26-08-26-not-much/",
-      "sources": [
-        {
-          "url": "https://news.smol.ai/issues/26-08-26-not-much/",
-          "title": "not much happened today",
-          "source_type": "newsletter",
-          "published_at": "2026-08-26T05:44:39+00:00"
-        },
-        {
-          "url": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTE1OWllSS3czelZyZV9oN2NxVFh2bTA5eGdzclAtU29VWV9uaDlYRVFZVnBtZ0s5RjFGMTJidWVvTFY1T0E?oc=5",
-          "title": "实测GLM-5.3: 在神仙打架的一周杀回国模顶流，还按下了重置键 - 爱范儿",
-          "source_type": "supplemental",
-          "published_at": ""
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "glm-5.3-flash-launch",
-          "date": "2026-08-28",
-          "title": "not much happened today",
-          "summary": "Z.ai正式发布GLM-5.3-Flash，原生多模态，1M上下文，320B参数，MIT许可，提供权重和API。",
-          "score": 8.0,
-          "url": "https://news.smol.ai/issues/26-08-26-not-much/"
-        }
-      ],
-      "usage_flow": [],
-      "learning_points": [],
-      "verticals": [],
-      "tags": [
-        "GLM",
-        "多模态",
-        "开源"
       ]
     },
     {
@@ -3340,84 +3625,6 @@
       "tags": [
         "科研",
         "AI 智能体"
-      ]
-    },
-    {
-      "product_id": "product-f72e709087406552",
-      "product_name": "Vercel AI SDK",
-      "builder_name": "github-actions[bot]",
-      "first_seen": "2026-07-26",
-      "last_seen": "2026-08-23",
-      "occurrence_count": 2,
-      "intelligence_type": "product_case",
-      "evidence_status": "first_party",
-      "target_user": "未公开",
-      "user_problem": "未公开",
-      "what_it_is": "Vercel AI SDK 更新了 Deepgram 集成，修复转录参数并调整说话人分离默认行为，开发者需注意配置变化。",
-      "ai_role": "未公开",
-      "implementation_idea": "未公开",
-      "hands_on_exercise": "未公开",
-      "limitations_or_uncertainties": "未公开",
-      "region": "global",
-      "score": 7.5,
-      "summary": "Vercel AI SDK 更新了 Deepgram 集成，修复转录参数并调整说话人分离默认行为，开发者需注意配置变化。",
-      "title": "vercel/ai released @ai-sdk/deepgram@3.1.0",
-      "url": "https://github.com/vercel/ai/releases/tag/%40ai-sdk/deepgram%403.1.0",
-      "sources": [
-        {
-          "url": "https://github.com/vercel/ai/releases/tag/%40ai-sdk/anthropic%404.0.20",
-          "title": "vercel/ai released @ai-sdk/anthropic@4.0.20",
-          "source_type": "github",
-          "published_at": "2026-07-24T17:25:31+00:00"
-        },
-        {
-          "url": "https://github.com/vercel/ai/releases/tag/%40ai-sdk/anthropic%403.0.102",
-          "title": "vercel/ai released @ai-sdk/anthropic@3.0.102",
-          "source_type": "supplemental",
-          "published_at": ""
-        },
-        {
-          "url": "https://github.com/vercel/ai/releases/tag/%40ai-sdk/anthropic%402.0.91",
-          "title": "vercel/ai released @ai-sdk/anthropic@2.0.91",
-          "source_type": "supplemental",
-          "published_at": ""
-        },
-        {
-          "url": "https://github.com/vercel/ai/releases/tag/%40ai-sdk/deepgram%403.1.0",
-          "title": "vercel/ai released @ai-sdk/deepgram@3.1.0",
-          "source_type": "github",
-          "published_at": "2026-08-23T01:45:50+00:00"
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "vercel-ai-sdk-anthropic-4.0.20-features",
-          "date": "2026-07-26",
-          "title": "vercel/ai released @ai-sdk/anthropic@4.0.20",
-          "summary": "Vercel AI SDK 的 Anthropic 包 v4.0.20 新增 Claude Opus 5 模型、安全回退和对话中工具变更支持。",
-          "score": 8.0,
-          "url": "https://github.com/vercel/ai/releases/tag/%40ai-sdk/anthropic%404.0.20"
-        },
-        {
-          "update_id": "vercel-ai-deepgram-3.1.0",
-          "date": "2026-08-23",
-          "title": "vercel/ai released @ai-sdk/deepgram@3.1.0",
-          "summary": "Vercel AI SDK 更新了 Deepgram 集成，修复转录参数并调整说话人分离默认行为，开发者需注意配置变化。",
-          "score": 7.5,
-          "url": "https://github.com/vercel/ai/releases/tag/%40ai-sdk/deepgram%403.1.0"
-        }
-      ],
-      "usage_flow": [],
-      "learning_points": [],
-      "verticals": [],
-      "tags": [
-        "AI SDK",
-        "Vercel",
-        "Anthropic",
-        "Claude Opus 5",
-        "Vercel AI SDK",
-        "Deepgram",
-        "语音识别"
       ]
     },
     {
