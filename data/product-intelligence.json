@@ -1,7 +1,522 @@
 {
   "version": 1,
-  "updated_at": "2026-08-31T05:34:20.453938+00:00",
+  "updated_at": "2026-09-01T06:14:55.969290+00:00",
   "products": [
+    {
+      "product_id": "product-0e4926d32fba01ff",
+      "product_name": "Almanac",
+      "builder_name": "kushagrchitkar",
+      "first_seen": "2026-09-01",
+      "last_seen": "2026-09-01",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "需要管理大量分散信息的知识工作者、创业公司团队、以及想减少重复沟通的小企业",
+      "user_problem": "创始人想搭建一个懂公司上下文的 AI（Hermes），结果要自己逐个接 OAuth、手动喂数据、还要解决 AI 记不住事的默认缺陷；同批 YC 创始人都遇到同样麻烦",
+      "what_it_is": "一个开箱即用的 AI 代理（Agent，能自主执行任务的 AI 程序），自动整合你的邮件、日历、文档等信息，形成个人和公司两本\"活百科\"，让你不用反复交代背景就能提问和自动化任务。",
+      "ai_role": "持续维护两本动态百科（记忆层），并基于百科内容回答问题、执行长周期任务、主动推荐自动化",
+      "implementation_idea": "核心思路是\"预编译知识层\"：不是每次提问时临时去各平台抓信息，而是提前花算力把分散信息整理成结构化的 wiki，让 AI 有稳定的长期记忆。这样 AI 能跨天追踪项目进度，而不是聊完就忘。",
+      "hands_on_exercise": "用免费工具复刻最小版 Almanac：1）在 Notion 建两页——\"关于我\"和\"关于我的工作\"；2）手动粘贴最近 5 封邮件主题、3 个日历事件、1 个项目文档摘要；3）用任意 AI（ChatGPT/Claude）上传这两页作为\"系统提示\"；4）测试问\"我这周优先级是什么\"\"项目卡在哪了\"，观察 AI 是否需要反复追问背景。30 分钟完成。",
+      "limitations_or_uncertainties": "未公开底层使用哪个 LLM 模型（社区 jedberg 追问未获答复）；未公开预编译 wiki 的具体更新频率和成本；多模型支持未确认；企业级安全审计细节未公开；与 Claude Desktop 功能重叠程度待用户实测对比",
+      "region": "global",
+      "score": 8.5,
+      "summary": "Almanac 发布了一款能了解公司一切信息的 AI 代理，解决企业知识管理难题，值得关注其产品设计和市场验证。",
+      "title": "Almanac：能记住公司一切的 AI 代理，YC S26 新品",
+      "url": "https://usealmanac.com/",
+      "sources": [
+        {
+          "url": "https://usealmanac.com/",
+          "title": "Launch HN: Almanac (YC S26) – AI that knows your company",
+          "source_type": "hackernews",
+          "published_at": "2026-08-31T15:34:34+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "almanac-launch",
+          "date": "2026-09-01",
+          "title": "Almanac：能记住公司一切的 AI 代理，YC S26 新品",
+          "summary": "Almanac 发布了一款能了解公司一切信息的 AI 代理，解决企业知识管理难题，值得关注其产品设计和市场验证。",
+          "score": 8.5,
+          "url": "https://usealmanac.com/"
+        }
+      ],
+      "usage_flow": [
+        "注册后一键连接现有账户（Gmail、Calendar、PostHog 等）",
+        "系统自动从连接源提取信息，生成\"个人百科\"和\"公司百科\"",
+        "向 AI 提问或让它执行任务，它基于两本百科作答",
+        "后台持续监控可自动化的任务，主动推送建议（如\"已草拟好融资 PPT，要看吗？\"）"
+      ],
+      "learning_points": [
+        "Agent（AI 代理）：不只是回答问题的聊天机器人，是能调用工具、执行多步骤任务的 AI 程序",
+        "RAG（检索增强生成）：AI 回答前先查外部知识库，Almanac 的 wiki 就是一种高度结构化的 RAG 数据源",
+        "长期记忆 vs 会话记忆：普通 AI 每次对话重新开始，Almanac 用 wiki 实现跨会话的持续记忆"
+      ],
+      "verticals": [],
+      "tags": [
+        "AI Agent",
+        "企业知识管理",
+        "YC"
+      ]
+    },
+    {
+      "product_id": "product-5e793a60ea727aff",
+      "product_name": "Claude",
+      "builder_name": "Lenny Rachitsky",
+      "first_seen": "2026-09-01",
+      "last_seen": "2026-09-01",
+      "occurrence_count": 1,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "PM Daniel Blum分享用Claude自动化70-80%工作的方法，展示个人AI基础设施的构建实践。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.5,
+      "summary": "PM Daniel Blum分享用Claude自动化70-80%工作的方法，展示个人AI基础设施的构建实践。",
+      "title": "🎙️ How I AI: How this PM uses Claude to handle 70% to 80% of his workday",
+      "url": "https://www.lennysnewsletter.com/p/how-i-ai-how-this-pm-uses-claude",
+      "sources": [
+        {
+          "url": "https://www.lennysnewsletter.com/p/how-i-ai-how-this-pm-uses-claude",
+          "title": "🎙️ How I AI: How this PM uses Claude to handle 70% to 80% of his workday",
+          "source_type": "newsletter",
+          "published_at": "2026-08-31T15:01:58+00:00"
+        },
+        {
+          "url": "https://www.lennysnewsletter.com/p/how-i-turned-claude-into-a-self-improving",
+          "title": "How I turned Claude into a self-improving PM assistant | Daniel Blum (PM, Melio)",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "pm-claude-workflow-lenny",
+          "date": "2026-09-01",
+          "title": "🎙️ How I AI: How this PM uses Claude to handle 70% to 80% of his workday",
+          "summary": "PM Daniel Blum分享用Claude自动化70-80%工作的方法，展示个人AI基础设施的构建实践。",
+          "score": 8.5,
+          "url": "https://www.lennysnewsletter.com/p/how-i-ai-how-this-pm-uses-claude"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Claude",
+        "工作流",
+        "产品经理"
+      ]
+    },
+    {
+      "product_id": "product-487fa6548df24b0e",
+      "product_name": "BirdNET-Go",
+      "builder_name": "speckx",
+      "first_seen": "2026-09-01",
+      "last_seen": "2026-09-01",
+      "occurrence_count": 1,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "作者用BirdNET-Go和现有安全摄像头构建了自动鸟类识别系统，展示了AI在边缘设备上的实际应用。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.5,
+      "summary": "作者用BirdNET-Go和现有安全摄像头构建了自动鸟类识别系统，展示了AI在边缘设备上的实际应用。",
+      "title": "I turned my security cameras into an automatic bird identification system",
+      "url": "https://jasontucker.blog/how-i-turned-my-security-cameras-into-an-automatic-bird-identification-system-with-birdnet-go/",
+      "sources": [
+        {
+          "url": "https://jasontucker.blog/how-i-turned-my-security-cameras-into-an-automatic-bird-identification-system-with-birdnet-go/",
+          "title": "I turned my security cameras into an automatic bird identification system",
+          "source_type": "hackernews",
+          "published_at": "2026-08-31T16:47:11+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "birdnet-go-security-camera-bird-id",
+          "date": "2026-09-01",
+          "title": "I turned my security cameras into an automatic bird identification system",
+          "summary": "作者用BirdNET-Go和现有安全摄像头构建了自动鸟类识别系统，展示了AI在边缘设备上的实际应用。",
+          "score": 8.5,
+          "url": "https://jasontucker.blog/how-i-turned-my-security-cameras-into-an-automatic-bird-identification-system-with-birdnet-go/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "BirdNET",
+        "边缘AI",
+        "DIY"
+      ]
+    },
+    {
+      "product_id": "product-2e1a6d87673249b3",
+      "product_name": "GLM-5.3-Flash",
+      "builder_name": "AI News",
+      "first_seen": "2026-08-28",
+      "last_seen": "2026-09-01",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Z.ai正式发布GLM-5.3-Flash，原生多模态，1M上下文，320B参数，MIT许可，提供权重和API。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.0,
+      "summary": "Z.ai正式发布GLM-5.3-Flash，原生多模态，1M上下文，320B参数，MIT许可，提供权重和API。",
+      "title": "not much happened today",
+      "url": "https://news.smol.ai/issues/26-08-26-not-much/",
+      "sources": [
+        {
+          "url": "https://news.smol.ai/issues/26-08-26-not-much/",
+          "title": "not much happened today",
+          "source_type": "newsletter",
+          "published_at": "2026-08-26T05:44:39+00:00"
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTE1OWllSS3czelZyZV9oN2NxVFh2bTA5eGdzclAtU29VWV9uaDlYRVFZVnBtZ0s5RjFGMTJidWVvTFY1T0E?oc=5",
+          "title": "实测GLM-5.3: 在神仙打架的一周杀回国模顶流，还按下了重置键 - 爱范儿",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "glm-5.3-flash-launch",
+          "date": "2026-08-28",
+          "title": "not much happened today",
+          "summary": "Z.ai正式发布GLM-5.3-Flash，原生多模态，1M上下文，320B参数，MIT许可，提供权重和API。",
+          "score": 8.0,
+          "url": "https://news.smol.ai/issues/26-08-26-not-much/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "GLM",
+        "多模态",
+        "开源"
+      ]
+    },
+    {
+      "product_id": "product-3bea673a49723eb9",
+      "product_name": "ChatGPT Work",
+      "builder_name": "Lenny Rachitsky",
+      "first_seen": "2026-09-01",
+      "last_seen": "2026-09-01",
+      "occurrence_count": 1,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "ChatGPT Work产品负责人Tara Seshan分享AI第三时代：持久化AI同事的崛起，探讨产品趋势。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.0,
+      "summary": "ChatGPT Work产品负责人Tara Seshan分享AI第三时代：持久化AI同事的崛起，探讨产品趋势。",
+      "title": "AI’s third era: the rise of persistent AI coworkers | Tara Seshan (Product Lead ChatGPT Work)",
+      "url": "https://www.lennysnewsletter.com/p/ais-third-era-the-rise-of-persistent",
+      "sources": [
+        {
+          "url": "https://www.lennysnewsletter.com/p/ais-third-era-the-rise-of-persistent",
+          "title": "AI’s third era: the rise of persistent AI coworkers | Tara Seshan (Product Lead ChatGPT Work)",
+          "source_type": "newsletter",
+          "published_at": "2026-08-30T12:31:30+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "persistent-ai-coworkers-era",
+          "date": "2026-09-01",
+          "title": "AI’s third era: the rise of persistent AI coworkers | Tara Seshan (Product Lead ChatGPT Work)",
+          "summary": "ChatGPT Work产品负责人Tara Seshan分享AI第三时代：持久化AI同事的崛起，探讨产品趋势。",
+          "score": 8.0,
+          "url": "https://www.lennysnewsletter.com/p/ais-third-era-the-rise-of-persistent"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "AI同事",
+        "产品趋势"
+      ]
+    },
+    {
+      "product_id": "product-861d3bb56c0ca33e",
+      "product_name": "Wrapture",
+      "builder_name": "Simon Willison",
+      "first_seen": "2026-09-01",
+      "last_seen": "2026-09-01",
+      "occurrence_count": 1,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Graham Dumpleton发布Wrapture，扩展wrapt实现函数包装、测试和追踪，支持OpenTelemetry。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.0,
+      "summary": "Graham Dumpleton发布Wrapture，扩展wrapt实现函数包装、测试和追踪，支持OpenTelemetry。",
+      "title": "Introducing wrapture",
+      "url": "https://simonwillison.net/2026/Aug/31/introducing-wrapture/",
+      "sources": [
+        {
+          "url": "https://simonwillison.net/2026/Aug/31/introducing-wrapture/",
+          "title": "Introducing wrapture",
+          "source_type": "rss",
+          "published_at": "2026-08-31T23:59:36+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "wrapture-introduction",
+          "date": "2026-09-01",
+          "title": "Introducing wrapture",
+          "summary": "Graham Dumpleton发布Wrapture，扩展wrapt实现函数包装、测试和追踪，支持OpenTelemetry。",
+          "score": 8.0,
+          "url": "https://simonwillison.net/2026/Aug/31/introducing-wrapture/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "开发者工具",
+        "Python",
+        "测试"
+      ]
+    },
+    {
+      "product_id": "product-592d3f9c68df8b05",
+      "product_name": "ChatGPT Work",
+      "builder_name": "ijidak",
+      "first_seen": "2026-09-01",
+      "last_seen": "2026-09-01",
+      "occurrence_count": 1,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "verified",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Simon Willison整理并分享了ChatGPT Work的工具和技能参考，其中控制浏览器的技能展示了如何通过Playwright实现自动化操作。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.0,
+      "summary": "Simon Willison整理并分享了ChatGPT Work的工具和技能参考，其中控制浏览器的技能展示了如何通过Playwright实现自动化操作。",
+      "title": "ChatGPT Work Tool and Skill Reference",
+      "url": "https://codex-tool-reference.simonw.chatgpt.site/",
+      "sources": [
+        {
+          "url": "https://codex-tool-reference.simonw.chatgpt.site/",
+          "title": "ChatGPT Work Tool and Skill Reference",
+          "source_type": "hackernews",
+          "published_at": "2026-08-31T14:07:15+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "chatgpt-work-tool-skill-reference",
+          "date": "2026-09-01",
+          "title": "ChatGPT Work Tool and Skill Reference",
+          "summary": "Simon Willison整理并分享了ChatGPT Work的工具和技能参考，其中控制浏览器的技能展示了如何通过Playwright实现自动化操作。",
+          "score": 8.0,
+          "url": "https://codex-tool-reference.simonw.chatgpt.site/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "ChatGPT",
+        "Agent",
+        "工具使用"
+      ]
+    },
+    {
+      "product_id": "product-7c2db388fd7430cb",
+      "product_name": "SlideOps",
+      "builder_name": "lukicov",
+      "first_seen": "2026-09-01",
+      "last_seen": "2026-09-01",
+      "occurrence_count": 1,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "SlideOps 将代码仓库转化为带溯源信息的幻灯片，并自动检测代码漂移，解决 AI 文档维护难题，值得借鉴其思路。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.0,
+      "summary": "SlideOps 将代码仓库转化为带溯源信息的幻灯片，并自动检测代码漂移，解决 AI 文档维护难题，值得借鉴其思路。",
+      "title": "Show HN: SlideOps – slides from a repo that flag when they drift from the code",
+      "url": "https://github.com/glukicov/slideops",
+      "sources": [
+        {
+          "url": "https://github.com/glukicov/slideops",
+          "title": "Show HN: SlideOps – slides from a repo that flag when they drift from the code",
+          "source_type": "hackernews",
+          "published_at": "2026-08-31T12:15:10+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "slideops-launch",
+          "date": "2026-09-01",
+          "title": "Show HN: SlideOps – slides from a repo that flag when they drift from the code",
+          "summary": "SlideOps 将代码仓库转化为带溯源信息的幻灯片，并自动检测代码漂移，解决 AI 文档维护难题，值得借鉴其思路。",
+          "score": 8.0,
+          "url": "https://github.com/glukicov/slideops"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "AI 文档",
+        "代码漂移",
+        "Claude Code"
+      ]
+    },
+    {
+      "product_id": "product-87cd554620cb7a04",
+      "product_name": "Polimill（未公开具体产品子名称）",
+      "builder_name": "OpenAI News",
+      "first_seen": "2026-09-01",
+      "last_seen": "2026-09-01",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "日本地方政府（市町村）的行政人员、政策制定者",
+      "user_problem": "日本各地议会的会议记录格式不统一、分散在各处，行政人员想查其他城市的类似案例或政策依据时，找不到、搜不准、耗时长",
+      "what_it_is": "一个帮日本地方政府把分散的议会会议记录统一整理、加上标签，变成能跨城市搜索的行政知识基础设施",
+      "ai_role": "GPT 负责理解会议记录内容并生成结构化标签（metadata），让搜索更精准；Codex 帮助开发者写代码，加快整个系统的开发速度",
+      "implementation_idea": "核心思路是'先统一数据，再让 AI 读懂数据'——把各地格式各异的会议记录变成机器能理解的结构化信息，这样搜索时就能匹配到真正相关的内容，而不是只靠关键词撞运气",
+      "hands_on_exercise": "用 ChatGPT 上传 3 份不同格式的会议记录，让 AI 提取'议题、决议、负责部门'三个字段并统一成表格，然后测试用自然语言提问（如'去年关于预算调整的决议'）能否准确找到对应内容",
+      "limitations_or_uncertainties": "未公开具体覆盖的地方政府数量、会议记录总量、AI 标注的准确率数据、是否已大规模上线运行还是试点阶段、Codex 的具体使用场景和占比",
+      "region": "global",
+      "score": 7.5,
+      "summary": "Polimill利用OpenAI GPT和Codex为日本市政构建公共AI基础设施，提升行政知识检索效率。",
+      "title": "Polimill 用 GPT 和 Codex 帮日本地方政府建公共 AI 知识库",
+      "url": "https://openai.com/index/polimill",
+      "sources": [
+        {
+          "url": "https://openai.com/index/polimill",
+          "title": "Polimill builds Japan's next-generation public AI infrastructure",
+          "source_type": "rss",
+          "published_at": "2026-08-31T07:00:00+00:00"
+        },
+        {
+          "url": "https://polimill.jp/",
+          "title": "Polimill 株式会社 - のこしたいみらいを ともにつくる",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "polimill-public-ai-infrastructure",
+          "date": "2026-09-01",
+          "title": "Polimill 用 GPT 和 Codex 帮日本地方政府建公共 AI 知识库",
+          "summary": "Polimill利用OpenAI GPT和Codex为日本市政构建公共AI基础设施，提升行政知识检索效率。",
+          "score": 7.5,
+          "url": "https://openai.com/index/polimill"
+        }
+      ],
+      "usage_flow": [
+        "Polimill 从各地方政府收集原始的议会会议记录",
+        "用 AI 自动给这些记录加标签、标准化格式，建立统一的知识库",
+        "行政人员用自然语言搜索，跨城市查找相关政策和先例",
+        "开发人员用 Codex 加速构建基于这些数据的政务应用"
+      ],
+      "learning_points": [
+        "RAG（检索增强生成）：先让 AI 从大量文档里找到相关片段，再回答问题，比直接让 AI 瞎猜更准确",
+        "Embedding（嵌入）：把文字变成数字向量，让语义相近的内容在数学上'离得更近'，实现'找意思相关的'而不是'找字一样的'",
+        "Function Calling（函数调用）：让 LLM 不只是聊天，还能触发查数据库、调搜索等外部工具，完成实际任务"
+      ],
+      "verticals": [],
+      "tags": [
+        "公共AI",
+        "政务",
+        "GPT"
+      ]
+    },
+    {
+      "product_id": "product-b448f39d41bcc4f6",
+      "product_name": "Blue Voice",
+      "builder_name": "Marina Temkin",
+      "first_seen": "2026-09-01",
+      "last_seen": "2026-09-01",
+      "occurrence_count": 1,
+      "intelligence_type": "early_signal",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "哈佛法学院辍学生为Blue Voice融资600万美元，打造面向警察的AI助手，解决通用AI无法访问部门特定法规的问题。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.5,
+      "summary": "哈佛法学院辍学生为Blue Voice融资600万美元，打造面向警察的AI助手，解决通用AI无法访问部门特定法规的问题。",
+      "title": "Harvard Law dropout raises $6M for Blue Voice to build a ‘Harvey for police officers’",
+      "url": "https://techcrunch.com/2026/08/31/harvard-law-dropout-raises-6m-for-blue-voice-to-build-a-harvey-for-police-officers/",
+      "sources": [
+        {
+          "url": "https://techcrunch.com/2026/08/31/harvard-law-dropout-raises-6m-for-blue-voice-to-build-a-harvey-for-police-officers/",
+          "title": "Harvard Law dropout raises $6M for Blue Voice to build a ‘Harvey for police officers’",
+          "source_type": "rss",
+          "published_at": "2026-08-31T18:35:11+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "blue-voice-funding-6m",
+          "date": "2026-09-01",
+          "title": "Harvard Law dropout raises $6M for Blue Voice to build a ‘Harvey for police officers’",
+          "summary": "哈佛法学院辍学生为Blue Voice融资600万美元，打造面向警察的AI助手，解决通用AI无法访问部门特定法规的问题。",
+          "score": 7.5,
+          "url": "https://techcrunch.com/2026/08/31/harvard-law-dropout-raises-6m-for-blue-voice-to-build-a-harvey-for-police-officers/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "垂直AI",
+        "融资",
+        "法律"
+      ]
+    },
     {
       "product_id": "product-05a30f983ca9fcea",
       "product_name": "Cogram Studio",
@@ -126,60 +641,6 @@
       "tags": [
         "ChatGPT Work",
         "产品分析"
-      ]
-    },
-    {
-      "product_id": "product-2e1a6d87673249b3",
-      "product_name": "GLM-5.3-Flash",
-      "builder_name": "AI News",
-      "first_seen": "2026-08-28",
-      "last_seen": "2026-08-31",
-      "occurrence_count": 1,
-      "intelligence_type": "model_capability",
-      "evidence_status": "reported",
-      "target_user": "未公开",
-      "user_problem": "未公开",
-      "what_it_is": "Z.ai正式发布GLM-5.3-Flash，原生多模态，1M上下文，320B参数，MIT许可，提供权重和API。",
-      "ai_role": "未公开",
-      "implementation_idea": "未公开",
-      "hands_on_exercise": "未公开",
-      "limitations_or_uncertainties": "未公开",
-      "region": "global",
-      "score": 8.0,
-      "summary": "Z.ai正式发布GLM-5.3-Flash，原生多模态，1M上下文，320B参数，MIT许可，提供权重和API。",
-      "title": "not much happened today",
-      "url": "https://news.smol.ai/issues/26-08-26-not-much/",
-      "sources": [
-        {
-          "url": "https://news.smol.ai/issues/26-08-26-not-much/",
-          "title": "not much happened today",
-          "source_type": "newsletter",
-          "published_at": "2026-08-26T05:44:39+00:00"
-        },
-        {
-          "url": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTE1OWllSS3czelZyZV9oN2NxVFh2bTA5eGdzclAtU29VWV9uaDlYRVFZVnBtZ0s5RjFGMTJidWVvTFY1T0E?oc=5",
-          "title": "实测GLM-5.3: 在神仙打架的一周杀回国模顶流，还按下了重置键 - 爱范儿",
-          "source_type": "supplemental",
-          "published_at": ""
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "glm-5.3-flash-launch",
-          "date": "2026-08-28",
-          "title": "not much happened today",
-          "summary": "Z.ai正式发布GLM-5.3-Flash，原生多模态，1M上下文，320B参数，MIT许可，提供权重和API。",
-          "score": 8.0,
-          "url": "https://news.smol.ai/issues/26-08-26-not-much/"
-        }
-      ],
-      "usage_flow": [],
-      "learning_points": [],
-      "verticals": [],
-      "tags": [
-        "GLM",
-        "多模态",
-        "开源"
       ]
     },
     {

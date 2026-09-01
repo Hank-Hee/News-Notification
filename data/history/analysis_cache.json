@@ -1744,6 +1744,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "0a1e8648f0946ab32393b67c84a0b94bad3ac868dc120fdee3b18254f10038f7": {
+      "created_at": "2026-09-01T06:13:24.341371+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "polimill-public-ai-infrastructure",
+        "evidence_status": "first_party",
+        "follow_up": "关注其部署效果和扩展计划。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:openai.com_news_rss.xml:0b5a688ac44522d6",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Polimill",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI官方案例，Polimill使用GPT和Codex构建日本公共AI基础设施，帮助市政搜索行政知识，有明确应用场景和产品价值。",
+        "region": "global",
+        "score": 7.5,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Polimill利用OpenAI GPT和Codex为日本市政构建公共AI基础设施，提升行政知识检索效率。",
+        "tags": [
+          "公共AI",
+          "政务",
+          "GPT"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "0a5b1c519c239cbcbd96baf4e089fe1be7e9eb58028335a79709b7e53d30efec": {
       "created_at": "2026-08-30T05:23:17.797140+00:00",
       "model": "deepseek-v4-flash",
@@ -1820,6 +1859,39 @@
       },
       "stage": "candidate_analysis"
     },
+    "0a6d745f192dd2e9d7f18197cf6e8d1b3449d59c8a69a62d6d4099a38e16afc0": {
+      "created_at": "2026-09-01T06:14:55.950326+00:00",
+      "model": "kimi-k2.6",
+      "prompt_version": "deep-v3-beginner",
+      "result": {
+        "ai_role": "GPT 负责理解会议记录内容并生成结构化标签（metadata），让搜索更精准；Codex 帮助开发者写代码，加快整个系统的开发速度",
+        "evidence_status": "first_party",
+        "hands_on_exercise": "用 ChatGPT 上传 3 份不同格式的会议记录，让 AI 提取'议题、决议、负责部门'三个字段并统一成表格，然后测试用自然语言提问（如'去年关于预算调整的决议'）能否准确找到对应内容",
+        "implementation_idea": "核心思路是'先统一数据，再让 AI 读懂数据'——把各地格式各异的会议记录变成机器能理解的结构化信息，这样搜索时就能匹配到真正相关的内容，而不是只靠关键词撞运气",
+        "learning_points": [
+          "RAG（检索增强生成）：先让 AI 从大量文档里找到相关片段，再回答问题，比直接让 AI 瞎猜更准确",
+          "Embedding（嵌入）：把文字变成数字向量，让语义相近的内容在数学上'离得更近'，实现'找意思相关的'而不是'找字一样的'",
+          "Function Calling（函数调用）：让 LLM 不只是聊天，还能触发查数据库、调搜索等外部工具，完成实际任务"
+        ],
+        "limitations_or_uncertainties": "未公开具体覆盖的地方政府数量、会议记录总量、AI 标注的准确率数据、是否已大规模上线运行还是试点阶段、Codex 的具体使用场景和占比",
+        "product_name": "Polimill（未公开具体产品子名称）",
+        "sources": [
+          "https://openai.com/index/polimill",
+          "https://polimill.jp/"
+        ],
+        "target_users": "日本地方政府（市町村）的行政人员、政策制定者",
+        "title_zh": "Polimill 用 GPT 和 Codex 帮日本地方政府建公共 AI 知识库",
+        "usage_flow": [
+          "Polimill 从各地方政府收集原始的议会会议记录",
+          "用 AI 自动给这些记录加标签、标准化格式，建立统一的知识库",
+          "行政人员用自然语言搜索，跨城市查找相关政策和先例",
+          "开发人员用 Codex 加速构建基于这些数据的政务应用"
+        ],
+        "user_problem": "日本各地议会的会议记录格式不统一、分散在各处，行政人员想查其他城市的类似案例或政策依据时，找不到、搜不准、耗时长",
+        "what_it_is": "一个帮日本地方政府把分散的议会会议记录统一整理、加上标签，变成能跨城市搜索的行政知识基础设施"
+      },
+      "stage": "deep_analysis"
+    },
     "0a7236965f89ef7c262780a27d2f3225100eeed3e6c5035fb05a498e5496f55c": {
       "created_at": "2026-08-24T01:57:49.273504+00:00",
       "model": "deepseek-v4-flash",
@@ -1853,6 +1925,44 @@
           "DeepSeek",
           "API",
           "定价"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "0a78f54ccc1cfbbcd116e8aebfcc9206eb786ec20add69dcf0e04643da0baf1e": {
+      "created_at": "2026-09-01T06:13:51.970490+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "runescape-56k-dialup-technical",
+        "evidence_status": "reported",
+        "follow_up": "无。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:49516699",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "技术历史回顾，与AI无关，对AI产品经理无直接价值。",
+        "region": "global",
+        "score": 5.0,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "一篇关于2004年RuneScape如何在56k拨号网络下实现多人RPG的技术文章，与AI无关。",
+        "tags": [
+          "RuneScape",
+          "网络技术"
         ],
         "target_user": "",
         "verticals": []
@@ -2658,6 +2768,44 @@
         "what_it_is": "Datasette 的一个插件，让你能在 Datasette 平台里创建、托管和编辑小型网页应用（HTML/CSS/JS 单文件），最新版加了两个工具让 AI Agent 可以自动调试和列出应用。"
       },
       "stage": "deep_analysis"
+    },
+    "0f8058419da7b55b7ddc3d41ead55930bbd2c503c966e7fb216a2414c50f66b9": {
+      "created_at": "2026-09-01T06:13:51.970347+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "gpu-world-discussion",
+        "evidence_status": "reported",
+        "follow_up": "无明确后续观察点。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:49517584",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "泛行业评论，无具体产品、数据或可验证信息，信噪比低。",
+        "region": "global",
+        "score": 4.0,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "Hacker News上关于GPU世界未来的讨论，缺乏具体产品案例或数据支撑。",
+        "tags": [
+          "GPU",
+          "行业讨论"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
     },
     "0f860daa836eac0b26245ec2d5c730744dbc77aee9fd12807178fe29efdb883c": {
       "created_at": "2026-08-11T02:27:24.066087+00:00",
@@ -3635,6 +3783,44 @@
         "tags": [
           "模型发布",
           "Anthropic"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "154923a0778d52a5ce99f0ccb9c402bf8a0fe27c851a7f452011c9a900811b56": {
+      "created_at": "2026-09-01T06:13:37.417870+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "instagram-ai-account-policy",
+        "evidence_status": "reported",
+        "follow_up": "无",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:07853f585ff2125f",
+        "intelligence_type": "business_policy",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Instagram",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "平台政策调整，与AI产品构建关联弱。",
+        "region": "global",
+        "score": 5.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Instagram打击伪装成人类的AI账号，并重命名标签。",
+        "tags": [
+          "平台政策",
+          "AI账号"
         ],
         "target_user": "",
         "verticals": []
@@ -6052,6 +6238,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "22317f6abcf62608c445b26272982fef913daa9406aecd933bfbfd2bc169be9c": {
+      "created_at": "2026-09-01T06:13:58.226487+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "slideops-launch",
+        "evidence_status": "first_party",
+        "follow_up": "关注其在不同 AI 编码工具中的兼容性和实际使用效果。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:49508735",
+        "intelligence_type": "builder_insight",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "SlideOps",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "开发者展示 SlideOps，解决 AI 生成文档与代码漂移问题，提供可验证的 GitHub 项目和详细技术说明，属于高价值构建者实践。",
+        "region": "global",
+        "score": 8.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "SlideOps 将代码仓库转化为带溯源信息的幻灯片，并自动检测代码漂移，解决 AI 文档维护难题，值得借鉴其思路。",
+        "tags": [
+          "AI 文档",
+          "代码漂移",
+          "Claude Code"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "2249ef956f4637a46813820563a775659ce7925c4d152b35bb0f51adb70c0ba7": {
       "created_at": "2026-08-17T01:55:01.823662+00:00",
       "model": "deepseek-v4-flash",
@@ -6700,6 +6925,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "252000ea6e61f52a213711c1614cc55407e1b0a61775db1784b149432001ab1d": {
+      "created_at": "2026-09-01T06:13:24.341351+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-support-california-sb1119",
+        "evidence_status": "first_party",
+        "follow_up": "关注法案通过后对AI产品合规的影响。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:openai.com_news_rss.xml:4862f3d2c68fb1ad",
+        "intelligence_type": "business_policy",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI支持加州青少年AI安全法案，属于政策表态，对产品构建无直接增量，但反映行业合规趋势。",
+        "region": "global",
+        "score": 6.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "OpenAI公开支持加州SB 1119法案，加强青少年AI安全保护。",
+        "tags": [
+          "政策",
+          "AI安全"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "252e611caca840915a970a77b57921a4de22ef5cedf503893b0b4e8d2d20a224": {
       "created_at": "2026-08-03T03:53:58.102280+00:00",
       "model": "deepseek-v4-flash",
@@ -6845,6 +7108,45 @@
         "tags": [
           "教育",
           "ChatGPT"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "259b579346abad16a20a74b04f1cd95bb245331de29bfb7de0b61659fe199b6d": {
+      "created_at": "2026-09-01T06:13:58.226301+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "almanac-launch",
+        "evidence_status": "first_party",
+        "follow_up": "关注其用户增长和实际使用反馈，以及如何与现有企业工具竞争。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:49511007",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Almanac",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "YC S26 创业公司发布 AI 代理产品，解决企业知识管理痛点，提供一键连接和共享/个人账户，有真实用户反馈（HN 讨论），属于一手产品案例。",
+        "region": "global",
+        "score": 8.5,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Almanac 发布了一款能了解公司一切信息的 AI 代理，解决企业知识管理难题，值得关注其产品设计和市场验证。",
+        "tags": [
+          "AI Agent",
+          "企业知识管理",
+          "YC"
         ],
         "target_user": "",
         "verticals": []
@@ -8071,6 +8373,44 @@
         "tags": [
           "汇编",
           "书籍"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "2dc4b512cdb5ad2f1d5d1f69d9ad47342b1b8e45be1748790dcbcf17f358236b": {
+      "created_at": "2026-09-01T06:13:24.341446+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "instagram-ai-profile-limits",
+        "evidence_status": "reported",
+        "follow_up": "关注其他平台是否跟进类似政策。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:d241000301d91928",
+        "intelligence_type": "business_policy",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Instagram限制未披露AI账号的传播，属于平台政策调整，对AI产品构建无直接增量，但反映AI内容监管趋势。",
+        "region": "global",
+        "score": 5.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Instagram对未披露的AI账号实施传播限制，以应对AI网红问题。",
+        "tags": [
+          "平台政策",
+          "AI内容"
         ],
         "target_user": "",
         "verticals": []
@@ -10354,6 +10694,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "3c5019985e4dbef6329d3ec57848de8dd0fdb0e7481a0447672643ee45a6b2c9": {
+      "created_at": "2026-09-01T06:13:24.340693+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openrouter-top5-models",
+        "evidence_status": "reported",
+        "follow_up": "关注排名变化及新模型的实际应用案例。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "public_web:ranking:b0ab1ec5ca2d10da9cfa",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenRouter模型热度排名，展示多款新模型（DeepSeek V4 Flash、GPT-5.6 Luna等）的能力和定位，但来源为聚合排名，信息密度中等，对产品启发有限。",
+        "region": "global",
+        "score": 7.0,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "OpenRouter发布热门模型Top5，包括DeepSeek V4 Flash、GPT-5.6 Luna等，反映当前模型趋势。",
+        "tags": [
+          "模型排行",
+          "多模态"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "3ca3c37d0493d82220d3da3fd3978d08fdb0783a181028c09d17935d50b6c417": {
       "created_at": "2026-07-26T04:07:17.345915+00:00",
       "model": "deepseek-v4-flash",
@@ -12600,6 +12978,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "47ef2963546818945c7422f5654831a22fc190a0386e659d8b6ad641e86428d9": {
+      "created_at": "2026-09-01T06:13:37.417709+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "blue-voice-funding-6m",
+        "evidence_status": "reported",
+        "follow_up": "关注产品是否上线及用户反馈。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:ea07d666f1f0198a",
+        "intelligence_type": "early_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Blue Voice",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "垂直领域AI产品（面向警察），有融资和明确产品定位，但缺乏用户反馈和产品细节，属于早期信号。",
+        "region": "global",
+        "score": 7.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "哈佛法学院辍学生为Blue Voice融资600万美元，打造面向警察的AI助手，解决通用AI无法访问部门特定法规的问题。",
+        "tags": [
+          "垂直AI",
+          "融资",
+          "法律"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "48054097f1c888a99facea3d75695685b3c81da7d683819c05dc3f751e6b5e97": {
       "created_at": "2026-08-28T11:22:57.242652+00:00",
       "model": "deepseek-v4-flash",
@@ -12978,6 +13395,44 @@
         "tags": [
           "安全",
           "DeepSeek"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "4a42015ccc714bb00df47e457fbc954e967455457f071d7995a3672207de8ac4": {
+      "created_at": "2026-09-01T06:13:37.417843+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "chatgpt-eu-dsa-regulation",
+        "evidence_status": "reported",
+        "follow_up": "关注OpenAI如何应对合规。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:63df6b9ecca9976f",
+        "intelligence_type": "business_policy",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "ChatGPT",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "监管动态，影响ChatGPT产品，但非直接产品案例，对初学者参考有限。",
+        "region": "global",
+        "score": 6.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "欧盟将ChatGPT视为超大型在线搜索引擎，面临更严格监管。",
+        "tags": [
+          "监管",
+          "ChatGPT"
         ],
         "target_user": "",
         "verticals": []
@@ -17918,6 +18373,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "659a303cb03b4f0fa54c3ac476c2c5050824903dc0989ecb04e0a50e49cb74de": {
+      "created_at": "2026-09-01T06:13:51.970422+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "birdnet-go-security-camera-bird-id",
+        "evidence_status": "first_party",
+        "follow_up": "关注作者后续是否分享更多优化细节或扩展应用。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:49511856",
+        "intelligence_type": "builder_insight",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "BirdNET-Go",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "一手构建案例，展示如何用BirdNET-Go和现有摄像头实现自动鸟类识别，有具体技术细节和用户反馈，对初学者有启发。",
+        "region": "global",
+        "score": 8.5,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "作者用BirdNET-Go和现有安全摄像头构建了自动鸟类识别系统，展示了AI在边缘设备上的实际应用。",
+        "tags": [
+          "BirdNET",
+          "边缘AI",
+          "DIY"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "65e618a941be61578901f52b70a3649e304c8ed2b4c57c0b9e572d93c10271a6": {
       "created_at": "2026-08-28T11:22:42.197460+00:00",
       "model": "deepseek-v4-flash",
@@ -22028,6 +22522,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "7b9f4a4ea295f9b93e509c5a5d13d56233ba40f4b07cdc7a1eaf30d96901bbc2": {
+      "created_at": "2026-09-01T06:13:24.341415+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "pentagon-ai-tools-chatgpt-grok",
+        "evidence_status": "reported",
+        "follow_up": "关注具体应用场景和效果。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:1cc58b7ba9a92b4a",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "五角大楼将ChatGPT和Grok加入AI工具门户，反映AI在政府领域的应用扩展，但缺乏产品细节，对初学者启发有限。",
+        "region": "global",
+        "score": 6.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "五角大楼将ChatGPT和Grok纳入其AI工具门户，扩展政府AI应用。",
+        "tags": [
+          "政府",
+          "AI应用"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "7ba2abd906a3440cb447b70c4ccbf8889f523e6ec68aed0063887fe60e692b6f": {
       "created_at": "2026-08-01T03:49:24.198264+00:00",
       "model": "deepseek-v4-flash",
@@ -22099,6 +22631,45 @@
         "tags": [
           "硬件",
           "历史"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "7bbb6bd9eac4b50d8f0182acb6b48f3caca57349381a0e1c8c8e3cfa9ccd968b": {
+      "created_at": "2026-09-01T06:13:37.417747+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "clipto-valuation-250m",
+        "evidence_status": "reported",
+        "follow_up": "关注产品功能和技术细节。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:a553a77fba3b1e88",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Clipto",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "AI视频搜索产品，有ARR和盈利数据，但缺乏产品细节和用户反馈，价值有限。",
+        "region": "global",
+        "score": 7.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "AI视频搜索初创公司Clipto估值达2.5亿美元，年经常性收入1500万美元并实现盈利。",
+        "tags": [
+          "视频搜索",
+          "融资",
+          "ARR"
         ],
         "target_user": "",
         "verticals": []
@@ -22369,6 +22940,45 @@
           "C2PA",
           "AI内容认证",
           "技术分析"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "7cf5e51438b64ed6b725b03a1fcecc3354e27cbe2c081379d6bdfc873081ee82": {
+      "created_at": "2026-09-01T06:13:51.970780+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "chatgpt-work-tool-skill-reference",
+        "evidence_status": "verified",
+        "follow_up": "关注该参考的更新和社区反馈。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:49510000",
+        "intelligence_type": "builder_insight",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "ChatGPT Work",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Simon Willison分享的ChatGPT Work工具和技能参考，包含控制浏览器的技能，对理解Agent工具使用有实际价值。",
+        "region": "global",
+        "score": 8.0,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "Simon Willison整理并分享了ChatGPT Work的工具和技能参考，其中控制浏览器的技能展示了如何通过Playwright实现自动化操作。",
+        "tags": [
+          "ChatGPT",
+          "Agent",
+          "工具使用"
         ],
         "target_user": "",
         "verticals": []
@@ -23753,6 +24363,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "84b362d5251531cff8c2be3ecc0fa53f29d5addd4bae87054705153364649e1b": {
+      "created_at": "2026-09-01T06:13:51.970207+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "claude-code-v2.1.252-bugfix",
+        "evidence_status": "first_party",
+        "follow_up": "关注后续版本是否引入新功能或性能提升。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "github:release:379920975",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Claude Code",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "官方发布，但仅修复若干bug，无新功能或产品体验增量，对初学者无直接启发。",
+        "region": "global",
+        "score": 6.5,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Anthropic发布Claude Code v2.1.252，修复了Mac上Bash命令失败、设置保存和远程会话卡顿等问题，属于常规维护更新。",
+        "tags": [
+          "Claude Code",
+          "bugfix"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "84d5a1b6cb219fc2141df0e96b3a94f3b5683a667de0c8642b2856925b03da3f": {
       "created_at": "2026-08-08T02:21:24.413986+00:00",
       "model": "deepseek-v4-flash",
@@ -23785,6 +24433,44 @@
         "tags": [
           "AI代理",
           "桌面应用"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "84f0b44fb8c784366c093b44141d5f0b908fc518b36187e61edfd975a0abf257": {
+      "created_at": "2026-09-01T06:13:24.340618+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "anthropic-alignment-security-update",
+        "evidence_status": "first_party",
+        "follow_up": "关注具体技术方案和实际效果评估。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "public_web:sitemap:8ed1599eb95bc766b101",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Anthropic官方发布对齐安全改进，属于模型能力安全层面的重要更新，但未提供具体技术细节或产品案例，对初学者可迁移性有限。",
+        "region": "global",
+        "score": 7.5,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Anthropic官方宣布改进AI对齐安全措施，提升模型安全性，值得关注其后续技术细节。",
+        "tags": [
+          "AI安全",
+          "对齐"
         ],
         "target_user": "",
         "verticals": []
@@ -24592,6 +25278,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "8c12387546934df567457dbd7defc2c1d7f688873e59c9e91d4f32ba1aff0f19": {
+      "created_at": "2026-09-01T06:13:51.970737+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "darling-macos-on-linux",
+        "evidence_status": "reported",
+        "follow_up": "无。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:49515830",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Darling",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "技术项目，但进展缓慢，与AI无关，对AI产品经理价值低。",
+        "region": "global",
+        "score": 4.5,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "Darling项目旨在让macOS软件在Linux上运行，但进展有限，与AI无关。",
+        "tags": [
+          "Darling",
+          "兼容层"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "8c5591b47fcc52f18c641f2590b56a146f07ee6a8d922813cb4a4d00f48096ed": {
       "created_at": "2026-07-31T03:49:36.342144+00:00",
       "model": "deepseek-v4-flash",
@@ -24663,6 +25387,44 @@
         "tags": [
           "能源",
           "AI"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "8c813d173f703a48b838c5f58019b735e80fbb46f7a4fbb4644a7e11b5a141ad": {
+      "created_at": "2026-09-01T06:13:58.226386+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "corporate-mind-games-launch",
+        "evidence_status": "first_party",
+        "follow_up": "无特别关注点。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:49511400",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Corporate Mind Games",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "个人开发者发布趣味逻辑谜题游戏，有创意但无 AI 元素，与 AI 产品关联弱，价值有限。",
+        "region": "global",
+        "score": 6.5,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "开发者发布了一个以企业为主题的讽刺逻辑谜题游戏，但缺乏 AI 相关元素，对 AI 产品经理参考价值有限。",
+        "tags": [
+          "游戏",
+          "趣味"
         ],
         "target_user": "",
         "verticals": []
@@ -29146,6 +29908,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "a28e0716a375f7af3b515d09ed1876387bde3c1290b56b7f033b92d947586914": {
+      "created_at": "2026-09-01T06:13:24.341326+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "persistent-ai-coworkers-era",
+        "evidence_status": "reported",
+        "follow_up": "关注ChatGPT Work如何实现持久化AI同事。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "newsletter:feed:36df19e78abff1e582b2",
+        "intelligence_type": "builder_insight",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "ChatGPT Work",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "ChatGPT Work产品负责人Tara Seshan讨论AI第三时代：持久化AI同事，提供行业趋势和产品视角，对理解AI产品演进有增量价值。",
+        "region": "global",
+        "score": 8.0,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "ChatGPT Work产品负责人Tara Seshan分享AI第三时代：持久化AI同事的崛起，探讨产品趋势。",
+        "tags": [
+          "AI同事",
+          "产品趋势"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "a2c2b1e70935e4f474b48f7f20383f5ee71db4264432d50a7cd7d5a37c8343b2": {
       "created_at": "2026-07-31T03:49:41.270861+00:00",
       "model": "deepseek-v4-flash",
@@ -29217,6 +30017,45 @@
         "tags": [
           "DeepSeek",
           "R1"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "a2ee739c5561c0fdea097dee9dd4d3b30887ae16f56a9fad3cbe91309a78b602": {
+      "created_at": "2026-09-01T06:13:51.970591+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "apple-mac-mini-ai-demand",
+        "evidence_status": "reported",
+        "follow_up": "关注苹果官方是否回应或发布相关数据。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:49508982",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": true,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "媒体报道，但被评论质疑为营销，缺乏可靠数据，且与AI产品构建无直接关联。",
+        "region": "global",
+        "score": 6.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "有报道称苹果对Mac Mini和Mac Studio的AI需求感到意外，但评论怀疑是营销炒作。",
+        "tags": [
+          "Apple",
+          "硬件",
+          "AI需求"
         ],
         "target_user": "",
         "verticals": []
@@ -29915,6 +30754,44 @@
           "OpenAI",
           "硬件",
           "设备"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "a5d2088203bfa7f71d5ac327b78629af391fe40d30d15239ceaff37ed01e6d66": {
+      "created_at": "2026-09-01T06:13:37.417781+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "debian-ai-policy",
+        "evidence_status": "reported",
+        "follow_up": "无",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:894562f15cd78bef",
+        "intelligence_type": "business_policy",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "开源社区政策，与AI产品构建关联度低，对初学者无直接增量。",
+        "region": "global",
+        "score": 5.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Debian投票允许开发者使用AI工具，但未设特殊规则。",
+        "tags": [
+          "开源",
+          "政策"
         ],
         "target_user": "",
         "verticals": []
@@ -30648,6 +31525,45 @@
         "tags": [
           "融资",
           "算力"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "aa61510adcf386e51955dd5068b9d0c7cb68afdca251f7573feae3d8ec28dadb": {
+      "created_at": "2026-09-01T06:13:51.970241+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "vercel-ai-v7.0.86-signed-tool-approvals",
+        "evidence_status": "first_party",
+        "follow_up": "观察该功能在社区中的使用反馈和文档更新。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "github:release:379995592",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Vercel AI SDK",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Vercel AI SDK新增签名工具审批功能，对构建Agent工作流有实际价值，属于开发者工具的重要更新。",
+        "region": "global",
+        "score": 7.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Vercel AI SDK v7.0.86新增WorkflowAgent的签名工具审批支持，提升Agent工具调用的安全性和可控性。",
+        "tags": [
+          "AI SDK",
+          "Agent",
+          "工具审批"
         ],
         "target_user": "",
         "verticals": []
@@ -34513,6 +35429,39 @@
       },
       "stage": "candidate_analysis"
     },
+    "bf82b943438849ee85592798a1a1fc5dfd9c8b949e468068dbd4a26e451b7d9b": {
+      "created_at": "2026-09-01T06:14:33.133469+00:00",
+      "model": "kimi-k2.6",
+      "prompt_version": "deep-v3-beginner",
+      "result": {
+        "ai_role": "持续维护两本动态百科（记忆层），并基于百科内容回答问题、执行长周期任务、主动推荐自动化",
+        "evidence_status": "first_party",
+        "hands_on_exercise": "用免费工具复刻最小版 Almanac：1）在 Notion 建两页——\"关于我\"和\"关于我的工作\"；2）手动粘贴最近 5 封邮件主题、3 个日历事件、1 个项目文档摘要；3）用任意 AI（ChatGPT/Claude）上传这两页作为\"系统提示\"；4）测试问\"我这周优先级是什么\"\"项目卡在哪了\"，观察 AI 是否需要反复追问背景。30 分钟完成。",
+        "implementation_idea": "核心思路是\"预编译知识层\"：不是每次提问时临时去各平台抓信息，而是提前花算力把分散信息整理成结构化的 wiki，让 AI 有稳定的长期记忆。这样 AI 能跨天追踪项目进度，而不是聊完就忘。",
+        "learning_points": [
+          "Agent（AI 代理）：不只是回答问题的聊天机器人，是能调用工具、执行多步骤任务的 AI 程序",
+          "RAG（检索增强生成）：AI 回答前先查外部知识库，Almanac 的 wiki 就是一种高度结构化的 RAG 数据源",
+          "长期记忆 vs 会话记忆：普通 AI 每次对话重新开始，Almanac 用 wiki 实现跨会话的持续记忆"
+        ],
+        "limitations_or_uncertainties": "未公开底层使用哪个 LLM 模型（社区 jedberg 追问未获答复）；未公开预编译 wiki 的具体更新频率和成本；多模型支持未确认；企业级安全审计细节未公开；与 Claude Desktop 功能重叠程度待用户实测对比",
+        "product_name": "Almanac",
+        "sources": [
+          "https://usealmanac.com/",
+          "https://www.youtube.com/watch?v=ajXP5PHuK18"
+        ],
+        "target_users": "需要管理大量分散信息的知识工作者、创业公司团队、以及想减少重复沟通的小企业",
+        "title_zh": "Almanac：能记住公司一切的 AI 代理，YC S26 新品",
+        "usage_flow": [
+          "注册后一键连接现有账户（Gmail、Calendar、PostHog 等）",
+          "系统自动从连接源提取信息，生成\"个人百科\"和\"公司百科\"",
+          "向 AI 提问或让它执行任务，它基于两本百科作答",
+          "后台持续监控可自动化的任务，主动推送建议（如\"已草拟好融资 PPT，要看吗？\"）"
+        ],
+        "user_problem": "创始人想搭建一个懂公司上下文的 AI（Hermes），结果要自己逐个接 OAuth、手动喂数据、还要解决 AI 记不住事的默认缺陷；同批 YC 创始人都遇到同样麻烦",
+        "what_it_is": "一个开箱即用的 AI 代理（Agent，能自主执行任务的 AI 程序），自动整合你的邮件、日历、文档等信息，形成个人和公司两本\"活百科\"，让你不用反复交代背景就能提问和自动化任务。"
+      },
+      "stage": "deep_analysis"
+    },
     "bfef0aab799695d1645b12f44ccb5d0fc27391eb698f8cbf980695f7c77a270c": {
       "created_at": "2026-08-26T01:58:04.827656+00:00",
       "model": "deepseek-v4-flash",
@@ -34545,6 +35494,45 @@
         "tags": [
           "开源模型",
           "Ornith-1.5"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "c06b5035326d78dd40c75144150ff587ae46d674080b81cc9df6e8823053df68": {
+      "created_at": "2026-09-01T06:13:37.418018+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "wrapture-introduction",
+        "evidence_status": "first_party",
+        "follow_up": "关注社区采用和文档完善。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:simonwillison.net_atom_everything_:bf3e1e0703c07305",
+        "intelligence_type": "builder_insight",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Wrapture",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "构建者发布新工具，提供测试和追踪能力，对AI应用调试有实用价值。",
+        "region": "global",
+        "score": 8.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Graham Dumpleton发布Wrapture，扩展wrapt实现函数包装、测试和追踪，支持OpenTelemetry。",
+        "tags": [
+          "开发者工具",
+          "Python",
+          "测试"
         ],
         "target_user": "",
         "verticals": []
@@ -35234,6 +36222,45 @@
           "Claude",
           "Game Dev",
           "Demo"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "c53c87827ac8ba3239ce12eec18c91f68f4c39dd9a49d517b8a59f89b1d0516c": {
+      "created_at": "2026-09-01T06:13:51.970663+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "google-antigravity-boost-deep-reasoning",
+        "evidence_status": "first_party",
+        "follow_up": "观察该功能是否改善用户体验及实际效果。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:49517537",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Google Antigravity",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "官方发布新功能，但用户反馈褒贬不一，且功能本质是增加推理深度，对产品经理有参考价值。",
+        "region": "global",
+        "score": 7.5,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Google Antigravity推出Boost深度推理功能，但用户评价不一，部分认为只是增加token消耗。",
+        "tags": [
+          "Google",
+          "Antigravity",
+          "推理"
         ],
         "target_user": "",
         "verticals": []
@@ -38826,6 +39853,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "da49c601447b752184c7e83f3a0cfa7d78ffbe9b3446c52bfe4080a5e9dae99a": {
+      "created_at": "2026-09-01T06:13:37.418285+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-codex-rust-v0.153.0-alpha.1",
+        "evidence_status": "early_signal",
+        "follow_up": "关注正式版发布。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "github:release:380216566",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Codex",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "预发布版本，无实质内容，价值低。",
+        "region": "global",
+        "score": 5.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "OpenAI Codex发布rust-v0.153.0-alpha.1预发布版本。",
+        "tags": [
+          "Codex",
+          "预发布"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "da4bb19988dcb08a6f91f542074a2ae37be59ff2d7304fc0c33a67951c796bb0": {
       "created_at": "2026-08-18T01:50:45.740041+00:00",
       "model": "deepseek-v4-flash",
@@ -39277,6 +40342,45 @@
           "AI开发",
           "认知债务",
           "行业观察"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "dcaba262983932ce2d18fd2b8a607c5677d64049d0064e49a4d6a11b7d125a61": {
+      "created_at": "2026-09-01T06:13:24.340945+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "pm-claude-workflow-lenny",
+        "evidence_status": "reported",
+        "follow_up": "深入了解其自改进循环和Workstation插件的具体实现。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "newsletter:feed:92a0f520cc3ec53a223a",
+        "intelligence_type": "builder_insight",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Claude",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Lenny Rachitsky的播客，PM Daniel Blum分享如何用Claude处理70-80%工作，包含具体工作流和系统构建，对AI产品经理有高参考价值。",
+        "region": "global",
+        "score": 8.5,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "PM Daniel Blum分享用Claude自动化70-80%工作的方法，展示个人AI基础设施的构建实践。",
+        "tags": [
+          "Claude",
+          "工作流",
+          "产品经理"
         ],
         "target_user": "",
         "verticals": []
@@ -41621,6 +42725,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "e85c65e7e3386ad0d5be7a75581033b81354dda4d706dd2d8b26853ef6036eda": {
+      "created_at": "2026-09-01T06:13:51.970277+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "n8n-v2.37.6-bugfix",
+        "evidence_status": "first_party",
+        "follow_up": "关注后续版本是否引入新的AI集成或工作流功能。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "github:release:379708725",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "n8n",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "仅修复动态凭据存储的线程问题，属于常规bug修复，无显著增量。",
+        "region": "global",
+        "score": 5.5,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "n8n发布v2.37.6，修复了动态凭据存储中的线程执行问题，属于常规维护更新。",
+        "tags": [
+          "n8n",
+          "bugfix"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "e88c55cc681b6fa81a07109f9a7fb2f76814563b8bdbc289a05a9bb8af50171e": {
       "created_at": "2026-08-08T02:22:24.118825+00:00",
       "model": "kimi-k2.6",
@@ -42101,6 +43243,45 @@
         "tags": [
           "编程教育",
           "Python"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "eb338e847bf19bf30a2e4a0405b95933cb20ec936117990feabda07ecb43bc2d": {
+      "created_at": "2026-09-01T06:13:37.418268+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-codex-rust-v0.152.0",
+        "evidence_status": "first_party",
+        "follow_up": "关注新功能实际使用反馈。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "github:release:380164108",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Codex",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI Codex正式版本更新，新增Vim搜索、速率限制等实用功能，对开发者有直接价值。",
+        "region": "global",
+        "score": 7.5,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "OpenAI Codex发布rust-v0.152.0，新增Vim搜索、速率限制操作和MCP工具增强。",
+        "tags": [
+          "Codex",
+          "开发者工具",
+          "更新"
         ],
         "target_user": "",
         "verticals": []
@@ -43479,6 +44660,44 @@
       },
       "stage": "deep_analysis"
     },
+    "f2c6f57912b6242be9caaedac1a575310b0874703c7adc3b4ff0d8e6ac4b155f": {
+      "created_at": "2026-09-01T06:13:24.341395+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "apple-employee-data-theft",
+        "evidence_status": "reported",
+        "follow_up": "无。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:ef1a3ca82c4ddd63",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "苹果前员工窃取数据给OpenAI的新闻，涉及法律纠纷，与AI产品构建无直接关联，信息价值低。",
+        "region": "global",
+        "score": 4.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "苹果指控前员工窃取公司数据给OpenAI，涉及法律纠纷。",
+        "tags": [
+          "法律",
+          "数据安全"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "f2fd603be37b5046d55b615cb626988db0514bb7740e413ede340637be6c1d39": {
       "created_at": "2026-08-09T02:28:36.839337+00:00",
       "model": "deepseek-v4-flash",
@@ -44324,6 +45543,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "f6e768fad67e51ffe4ee6c476ac1b4f9b0dc0d2a89eaa17fe316392aa0510fcc": {
+      "created_at": "2026-09-01T06:13:24.341096+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "claude-self-improving-pm-assistant",
+        "evidence_status": "reported",
+        "follow_up": "关注其自改进循环的具体机制和插件设计。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "newsletter:feed:22948cdcf902dedf4ade",
+        "intelligence_type": "builder_insight",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Claude",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "同一播客的详细文字版，深入介绍Daniel Blum如何将Claude变成自改进的PM助手，包括管理Notion、处理Slack和邮件，以及15分钟上手的Workstation插件，实践性强。",
+        "region": "global",
+        "score": 8.5,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "Daniel Blum详细讲解如何将Claude打造成自改进的PM助手，并开发了15分钟上手的员工插件。",
+        "tags": [
+          "Claude",
+          "自改进",
+          "PM助手"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "f6f35b299f8650051d11362e76eba4f6ee599fb07ced91aff7d28dca841b8ada": {
       "created_at": "2026-08-31T05:33:16.310732+00:00",
       "model": "deepseek-v4-flash",
@@ -44748,6 +46006,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "f8bc07abbb2a59b378d0eff8d430c24e9fb49d720fed5159b19badf4ba1d4020": {
+      "created_at": "2026-09-01T06:13:37.417816+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "hochul-ai-policy-podcast",
+        "evidence_status": "reported",
+        "follow_up": "无",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:ccc004fccba94339",
+        "intelligence_type": "business_policy",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "政治人物访谈，与AI产品构建无关，低价值。",
+        "region": "global",
+        "score": 4.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "纽约州长Hochul在播客中讨论AI政策，认为AI应‘少些邪恶’。",
+        "tags": [
+          "政策",
+          "访谈"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "f8f1b12fab27366fdd35fd11fdcb924393115452c908b83bae0af4a8940eab8b": {
       "created_at": "2026-08-12T02:43:58.737722+00:00",
       "model": "deepseek-v4-flash",
@@ -45125,6 +46421,44 @@
         "tags": [
           "模型排行",
           "MoE"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "fa42c2028e8c13304b3a7f00296292da2c2424b9050c6469867cf758d9b90ea0": {
+      "created_at": "2026-09-01T06:13:37.418301+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-codex-rust-v0.152.0-alpha.7.2",
+        "evidence_status": "early_signal",
+        "follow_up": "关注正式版发布。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "github:release:380137572",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Codex",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "预发布版本，无实质内容，价值低。",
+        "region": "global",
+        "score": 5.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "OpenAI Codex发布rust-v0.152.0-alpha.7.2预发布版本。",
+        "tags": [
+          "Codex",
+          "预发布"
         ],
         "target_user": "",
         "verticals": []
