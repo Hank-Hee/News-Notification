@@ -1,7 +1,594 @@
 {
   "version": 1,
-  "updated_at": "2026-09-01T06:14:55.969290+00:00",
+  "updated_at": "2026-09-02T04:33:06.042423+00:00",
   "products": [
+    {
+      "product_id": "product-7f02a38806a030f2",
+      "product_name": "ChatGPT（医疗数据连接功能）",
+      "builder_name": "OpenAI News",
+      "first_seen": "2026-09-02",
+      "last_seen": "2026-09-02",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "临床医生、医疗机构工作人员",
+      "user_problem": "医生问诊或做决策时，需要在多个系统间切换查找患者病史、检验结果和最新医学研究，耗时且容易遗漏关键信息",
+      "what_it_is": "OpenAI 官方推出的医疗数据连接功能，让 ChatGPT 能安全读取医院 EHR 系统和权威医学数据库",
+      "ai_role": "把医生的自然语言问题翻译成对 EHR 和医学数据库的查询请求，并将返回的原始数据整理成易读的临床摘要",
+      "implementation_idea": "本质是在 ChatGPT 背后加装一个'医疗数据适配器'——医生提问时，AI 先判断需要查哪个数据源，通过标准化接口（如 HL7 FHIR）调取脱敏后的患者记录或 PubMed 等医学文献，再用 LLM 把零散数据组织成连贯回答。RAG（检索增强生成，即'先查资料再回答，不瞎编'）是核心机制，确保回答有据可查。",
+      "hands_on_exercise": "用 Python + LangChain 搭建一个迷你 RAG 演示：把 5 篇 PDF 医学论文导入向量数据库，向 ChatGPT API 提问并观察'直接问'vs'先检索再回答'的答案差异，30 分钟可完成",
+      "limitations_or_uncertainties": "未公开具体支持哪些 EHR 厂商（如 Epic、Cerner 是否直接对接）、数据是否实时同步、患者授权流程细节、以及是否通过 HIPAA 正式认证",
+      "region": "global",
+      "score": 9.0,
+      "summary": "OpenAI宣布ChatGPT可连接电子健康记录和医疗数据，帮助临床医生安全获取患者上下文和医学研究。",
+      "title": "ChatGPT 接入电子健康记录与医疗数据源",
+      "url": "https://openai.com/index/chatgpt-connects-health-records-and-healthcare-sources",
+      "sources": [
+        {
+          "url": "https://openai.com/index/chatgpt-connects-health-records-and-healthcare-sources",
+          "title": "Healthcare organizations can now connect EHR and additional industry data to ChatGPT",
+          "source_type": "rss",
+          "published_at": "2026-09-01T12:00:00+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "openai-chatgpt-ehr-connect",
+          "date": "2026-09-02",
+          "title": "ChatGPT 接入电子健康记录与医疗数据源",
+          "summary": "OpenAI宣布ChatGPT可连接电子健康记录和医疗数据，帮助临床医生安全获取患者上下文和医学研究。",
+          "score": 9.0,
+          "url": "https://openai.com/index/chatgpt-connects-health-records-and-healthcare-sources"
+        }
+      ],
+      "usage_flow": [
+        "医疗机构管理员配置 ChatGPT 与院内 EHR 系统及外部医学数据库的安全连接",
+        "医生在 ChatGPT 界面用自然语言提问，例如'这位患者过去两年的糖尿病用药记录是什么'",
+        "ChatGPT 实时查询授权范围内的患者数据和医学文献",
+        "医生获得带引用来源的整合回答，用于辅助临床决策"
+      ],
+      "learning_points": [
+        "RAG：让 AI 先检索真实数据库再生成回答，减少'幻觉'（编造假信息）",
+        "EHR 集成：AI 产品进入传统行业必须对接现有数据系统，而非让用户迁移数据",
+        "医疗合规：患者数据涉及 HIPAA 等法规，AI 需要权限控制和审计追踪"
+      ],
+      "verticals": [],
+      "tags": [
+        "医疗",
+        "ChatGPT",
+        "EHR"
+      ]
+    },
+    {
+      "product_id": "product-5e793a60ea727aff",
+      "product_name": "Claude",
+      "builder_name": "Lenny Rachitsky",
+      "first_seen": "2026-09-01",
+      "last_seen": "2026-09-02",
+      "occurrence_count": 1,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "PM Daniel Blum分享用Claude自动化70-80%工作的方法，展示个人AI基础设施的构建实践。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.5,
+      "summary": "PM Daniel Blum分享用Claude自动化70-80%工作的方法，展示个人AI基础设施的构建实践。",
+      "title": "🎙️ How I AI: How this PM uses Claude to handle 70% to 80% of his workday",
+      "url": "https://www.lennysnewsletter.com/p/how-i-ai-how-this-pm-uses-claude",
+      "sources": [
+        {
+          "url": "https://www.lennysnewsletter.com/p/how-i-ai-how-this-pm-uses-claude",
+          "title": "🎙️ How I AI: How this PM uses Claude to handle 70% to 80% of his workday",
+          "source_type": "newsletter",
+          "published_at": "2026-08-31T15:01:58+00:00"
+        },
+        {
+          "url": "https://www.lennysnewsletter.com/p/how-i-turned-claude-into-a-self-improving",
+          "title": "How I turned Claude into a self-improving PM assistant | Daniel Blum (PM, Melio)",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "pm-claude-workflow-lenny",
+          "date": "2026-09-01",
+          "title": "🎙️ How I AI: How this PM uses Claude to handle 70% to 80% of his workday",
+          "summary": "PM Daniel Blum分享用Claude自动化70-80%工作的方法，展示个人AI基础设施的构建实践。",
+          "score": 8.5,
+          "url": "https://www.lennysnewsletter.com/p/how-i-ai-how-this-pm-uses-claude"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Claude",
+        "工作流",
+        "产品经理"
+      ]
+    },
+    {
+      "product_id": "product-75b530f756175cc4",
+      "product_name": "Claude Text Watermark",
+      "builder_name": "Anthropic News",
+      "first_seen": "2026-08-15",
+      "last_seen": "2026-09-02",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "内容平台审核者、出版机构、教育工作者、普通用户（需要判断文本是否 AI 生成的人）",
+      "user_problem": "AI 生成的文本和人类写的越来越像，普通人难以分辨，导致虚假信息、学术作弊、版权纠纷等问题难以追溯源头。",
+      "what_it_is": "Anthropic 为 Claude 推出的文本水印功能，能在 AI 生成的文字里嵌入隐形标记，方便后续识别这段内容是否来自 Claude。",
+      "ai_role": "AI 在生成文本时负责嵌入水印标记，不改变文本的可读性和语义。",
+      "implementation_idea": "核心思路类似数字水印：在 AI 预测下一个词（token）的概率分布上做微小、有规律的调整，让生成的文本携带统计特征。这些调整人眼完全看不出来，但用特定算法可以检测出这种模式。",
+      "hands_on_exercise": "用 Claude 生成一段 200 字的产品介绍，复制到剪贴板。搜索 Anthropic 是否已开放水印检测 API 或工具（目前新闻刚发布，可能尚未开放），若未开放则记录：假设你是平台审核员，设计一个用户通知文案，说明'检测到 AI 生成内容'时如何平衡透明度和用户体验。",
+      "limitations_or_uncertainties": "具体水印嵌入的技术细节（如是否所有 Claude 版本都支持、对多语言/代码的效果、是否会被改写破坏）未公开；检测工具的开放时间和使用条件未公开；水印对短文本（如一两句话）是否有效未公开。",
+      "region": "global",
+      "score": 8.5,
+      "summary": "Anthropic推出Claude文本水印功能，用于识别AI生成文本，提升内容透明度。",
+      "title": "Claude 文本水印：让 AI 生成内容可被识别",
+      "url": "https://www.anthropic.com/news/claude-text-watermark",
+      "sources": [
+        {
+          "url": "https://www.anthropic.com/news/claude-text-watermark",
+          "title": "Claude Text Watermark",
+          "source_type": "public_web",
+          "published_at": "2026-08-14T20:06:43+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "anthropic-claude-text-watermark",
+          "date": "2026-08-15",
+          "title": "Claude 文本水印：让 AI 生成内容可被识别",
+          "summary": "Anthropic推出Claude文本水印功能，用于识别AI生成文本，提升内容透明度。",
+          "score": 8.5,
+          "url": "https://www.anthropic.com/news/claude-text-watermark"
+        }
+      ],
+      "usage_flow": [
+        "Claude 生成文本时自动嵌入隐形水印",
+        "用户复制、转发或发布这段文本",
+        "检测方使用 Anthropic 提供的检测工具扫描文本",
+        "工具返回结果：是否包含 Claude 水印及置信度"
+      ],
+      "learning_points": [
+        "Token：大模型处理文本的最小单位，可以是一个字、一个词或一部分词，模型每次预测下一个 token 来生成内容",
+        "LLM 文本检测：通过统计规律判断文本是否 AI 生成，水印是一种主动的、可验证的检测方式",
+        "AI 安全与溯源：让 AI 输出可被追踪，是防止滥用和提升透明度的关键手段"
+      ],
+      "verticals": [],
+      "tags": [
+        "AI安全",
+        "水印",
+        "Anthropic"
+      ]
+    },
+    {
+      "product_id": "product-aa505d6aa551d8ce",
+      "product_name": "Claude",
+      "builder_name": "Claire Vo",
+      "first_seen": "2026-09-02",
+      "last_seen": "2026-09-02",
+      "occurrence_count": 1,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Daniel Blum详细讲解如何将Claude打造成自改进的PM助手，并开发了15分钟上手的员工插件。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.5,
+      "summary": "Daniel Blum详细讲解如何将Claude打造成自改进的PM助手，并开发了15分钟上手的员工插件。",
+      "title": "How I turned Claude into a self-improving PM assistant | Daniel Blum (PM, Melio)",
+      "url": "https://www.lennysnewsletter.com/p/how-i-turned-claude-into-a-self-improving",
+      "sources": [
+        {
+          "url": "https://www.lennysnewsletter.com/p/how-i-turned-claude-into-a-self-improving",
+          "title": "How I turned Claude into a self-improving PM assistant | Daniel Blum (PM, Melio)",
+          "source_type": "newsletter",
+          "published_at": "2026-08-31T12:04:18+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "claude-self-improving-pm-assistant",
+          "date": "2026-09-02",
+          "title": "How I turned Claude into a self-improving PM assistant | Daniel Blum (PM, Melio)",
+          "summary": "Daniel Blum详细讲解如何将Claude打造成自改进的PM助手，并开发了15分钟上手的员工插件。",
+          "score": 8.5,
+          "url": "https://www.lennysnewsletter.com/p/how-i-turned-claude-into-a-self-improving"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Claude",
+        "自改进",
+        "PM助手"
+      ]
+    },
+    {
+      "product_id": "product-d578bf49a8742fcf",
+      "product_name": "Astra",
+      "builder_name": "jithinraj",
+      "first_seen": "2026-09-02",
+      "last_seen": "2026-09-02",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "OpenAI发布Path to Astra，介绍其关键能力和前沿安全防护，引发社区对安全策略的讨论。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.5,
+      "summary": "OpenAI发布Path to Astra，介绍其关键能力和前沿安全防护，引发社区对安全策略的讨论。",
+      "title": "Path to Astra: critical capabilities and frontier safeguards",
+      "url": "https://openai.com/index/path-to-astra/",
+      "sources": [
+        {
+          "url": "https://openai.com/index/path-to-astra/",
+          "title": "Path to Astra: critical capabilities and frontier safeguards",
+          "source_type": "hackernews",
+          "published_at": "2026-09-01T20:20:41+00:00"
+        },
+        {
+          "url": "https://techcrunch.com/2026/09/01/open-ais-astra-model-is-on-the-way-and-very-good-at-breaking-into-computer-systems/",
+          "title": "OpenAI’s Astra model is on the way — and very good at breaking into computer systems",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://www.theverge.com/ai-artificial-intelligence/987695/openai-astra-unreleased-model-cybersecurity-delay",
+          "title": "OpenAI delayed its new model’s development after the Hugging Face hack",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "openai-path-to-astra",
+          "date": "2026-09-02",
+          "title": "Path to Astra: critical capabilities and frontier safeguards",
+          "summary": "OpenAI发布Path to Astra，介绍其关键能力和前沿安全防护，引发社区对安全策略的讨论。",
+          "score": 8.5,
+          "url": "https://openai.com/index/path-to-astra/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "OpenAI",
+        "安全",
+        "前沿模型"
+      ]
+    },
+    {
+      "product_id": "product-0f803f53a9cc0f4c",
+      "product_name": "Claude Fable 5.1",
+      "builder_name": "Simon Willison",
+      "first_seen": "2026-09-02",
+      "last_seen": "2026-09-02",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Anthropic发布Claude Fable 5.1，Simon Willison实测其编码和科学推理能力，并提到新基准Terminal-Bench-Science。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.5,
+      "summary": "Anthropic发布Claude Fable 5.1，Simon Willison实测其编码和科学推理能力，并提到新基准Terminal-Bench-Science。",
+      "title": "Claude Fable 5.1 made me a really nice animated pelican",
+      "url": "https://simonwillison.net/2026/Sep/1/claude-fable-5-1/",
+      "sources": [
+        {
+          "url": "https://simonwillison.net/2026/Sep/1/claude-fable-5-1/",
+          "title": "Claude Fable 5.1 made me a really nice animated pelican",
+          "source_type": "rss",
+          "published_at": "2026-09-01T23:57:28+00:00"
+        },
+        {
+          "url": "https://www.theverge.com/ai-artificial-intelligence/987830/anthropic-claude-fable-mythos-5-1",
+          "title": "Anthropic launches Claude Fable 5.1 and says it&#8217;s up to 45 percent cheaper for agentic work",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://artificialanalysis.ai/articles/claude-fable-5-1",
+          "title": "Claude Fable 5 1",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://techcrunch.com/2026/09/01/anthropics-new-fable-release-is-cheaper-less-restrictive/",
+          "title": "Anthropic’s new Fable release is cheaper, less restrictive",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "anthropic-claude-fable-5.1-release",
+          "date": "2026-09-02",
+          "title": "Claude Fable 5.1 made me a really nice animated pelican",
+          "summary": "Anthropic发布Claude Fable 5.1，Simon Willison实测其编码和科学推理能力，并提到新基准Terminal-Bench-Science。",
+          "score": 8.5,
+          "url": "https://simonwillison.net/2026/Sep/1/claude-fable-5-1/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Claude",
+        "模型发布",
+        "基准测试"
+      ]
+    },
+    {
+      "product_id": "product-2e1a6d87673249b3",
+      "product_name": "GLM-5.3-Flash",
+      "builder_name": "AI News",
+      "first_seen": "2026-08-28",
+      "last_seen": "2026-09-02",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Z.ai正式发布GLM-5.3-Flash，原生多模态，1M上下文，320B参数，MIT许可，提供权重和API。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.0,
+      "summary": "Z.ai正式发布GLM-5.3-Flash，原生多模态，1M上下文，320B参数，MIT许可，提供权重和API。",
+      "title": "not much happened today",
+      "url": "https://news.smol.ai/issues/26-08-26-not-much/",
+      "sources": [
+        {
+          "url": "https://news.smol.ai/issues/26-08-26-not-much/",
+          "title": "not much happened today",
+          "source_type": "newsletter",
+          "published_at": "2026-08-26T05:44:39+00:00"
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTE1OWllSS3czelZyZV9oN2NxVFh2bTA5eGdzclAtU29VWV9uaDlYRVFZVnBtZ0s5RjFGMTJidWVvTFY1T0E?oc=5",
+          "title": "实测GLM-5.3: 在神仙打架的一周杀回国模顶流，还按下了重置键 - 爱范儿",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "glm-5.3-flash-launch",
+          "date": "2026-08-28",
+          "title": "not much happened today",
+          "summary": "Z.ai正式发布GLM-5.3-Flash，原生多模态，1M上下文，320B参数，MIT许可，提供权重和API。",
+          "score": 8.0,
+          "url": "https://news.smol.ai/issues/26-08-26-not-much/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "GLM",
+        "多模态",
+        "开源"
+      ]
+    },
+    {
+      "product_id": "product-3bea673a49723eb9",
+      "product_name": "ChatGPT Work",
+      "builder_name": "Lenny Rachitsky",
+      "first_seen": "2026-09-01",
+      "last_seen": "2026-09-02",
+      "occurrence_count": 1,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "ChatGPT Work产品负责人Tara Seshan分享AI第三时代：持久化AI同事的崛起，探讨产品趋势。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.0,
+      "summary": "ChatGPT Work产品负责人Tara Seshan分享AI第三时代：持久化AI同事的崛起，探讨产品趋势。",
+      "title": "AI’s third era: the rise of persistent AI coworkers | Tara Seshan (Product Lead ChatGPT Work)",
+      "url": "https://www.lennysnewsletter.com/p/ais-third-era-the-rise-of-persistent",
+      "sources": [
+        {
+          "url": "https://www.lennysnewsletter.com/p/ais-third-era-the-rise-of-persistent",
+          "title": "AI’s third era: the rise of persistent AI coworkers | Tara Seshan (Product Lead ChatGPT Work)",
+          "source_type": "newsletter",
+          "published_at": "2026-08-30T12:31:30+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "persistent-ai-coworkers-era",
+          "date": "2026-09-01",
+          "title": "AI’s third era: the rise of persistent AI coworkers | Tara Seshan (Product Lead ChatGPT Work)",
+          "summary": "ChatGPT Work产品负责人Tara Seshan分享AI第三时代：持久化AI同事的崛起，探讨产品趋势。",
+          "score": 8.0,
+          "url": "https://www.lennysnewsletter.com/p/ais-third-era-the-rise-of-persistent"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "AI同事",
+        "产品趋势"
+      ]
+    },
+    {
+      "product_id": "product-07f17225ee7db631",
+      "product_name": "How AI-native companies turn workflows into operating capability",
+      "builder_name": "OpenAI News",
+      "first_seen": "2026-09-02",
+      "last_seen": "2026-09-02",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "OpenAI官方文章介绍Basis、Clay、Exa Labs等AI原生公司如何用AI代理优化工作流，提升运营能力。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.0,
+      "summary": "OpenAI官方文章介绍Basis、Clay、Exa Labs等AI原生公司如何用AI代理优化工作流，提升运营能力。",
+      "title": "How AI-native companies turn workflows into operating capability",
+      "url": "https://openai.com/index/ai-native-company-workflows",
+      "sources": [
+        {
+          "url": "https://openai.com/index/ai-native-company-workflows",
+          "title": "How AI-native companies turn workflows into operating capability",
+          "source_type": "rss",
+          "published_at": "2026-09-01T17:00:00+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "openai-ai-native-workflows",
+          "date": "2026-09-02",
+          "title": "How AI-native companies turn workflows into operating capability",
+          "summary": "OpenAI官方文章介绍Basis、Clay、Exa Labs等AI原生公司如何用AI代理优化工作流，提升运营能力。",
+          "score": 8.0,
+          "url": "https://openai.com/index/ai-native-company-workflows"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "AI原生",
+        "工作流",
+        "企业应用"
+      ]
+    },
+    {
+      "product_id": "product-41adeea8631d1d06",
+      "product_name": "GeoJSON Map Viewer",
+      "builder_name": "Simon Willison",
+      "first_seen": "2026-09-02",
+      "last_seen": "2026-09-02",
+      "occurrence_count": 1,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Simon Willison用AI构建了一个GeoJSON地图查看器，并展示了从需求到工具的迭代过程。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.0,
+      "summary": "Simon Willison用AI构建了一个GeoJSON地图查看器，并展示了从需求到工具的迭代过程。",
+      "title": "GeoJSON Map Viewer",
+      "url": "https://simonwillison.net/2026/Sep/1/geojson/",
+      "sources": [
+        {
+          "url": "https://simonwillison.net/2026/Sep/1/geojson/",
+          "title": "GeoJSON Map Viewer",
+          "source_type": "rss",
+          "published_at": "2026-09-01T18:05:45+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "simonwillison-geojson-map-viewer",
+          "date": "2026-09-02",
+          "title": "GeoJSON Map Viewer",
+          "summary": "Simon Willison用AI构建了一个GeoJSON地图查看器，并展示了从需求到工具的迭代过程。",
+          "score": 8.0,
+          "url": "https://simonwillison.net/2026/Sep/1/geojson/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "AI辅助开发",
+        "GeoJSON",
+        "工具"
+      ]
+    },
+    {
+      "product_id": "product-588ce820efcbdb0f",
+      "product_name": "Gemini",
+      "builder_name": "Google DeepMind",
+      "first_seen": "2026-09-02",
+      "last_seen": "2026-09-02",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Google DeepMind推出Gemini的代理式视频理解功能，增强AI对视频内容的理解和交互能力。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.0,
+      "summary": "Google DeepMind推出Gemini的代理式视频理解功能，增强AI对视频内容的理解和交互能力。",
+      "title": "Introducing agentic video understanding with Gemini",
+      "url": "https://deepmind.google/blog/introducing-agentic-video-in-gemini/",
+      "sources": [
+        {
+          "url": "https://deepmind.google/blog/introducing-agentic-video-in-gemini/",
+          "title": "Introducing agentic video understanding with Gemini",
+          "source_type": "rss",
+          "published_at": "2026-09-01T17:08:51+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "gemini-agentic-video-understanding",
+          "date": "2026-09-02",
+          "title": "Introducing agentic video understanding with Gemini",
+          "summary": "Google DeepMind推出Gemini的代理式视频理解功能，增强AI对视频内容的理解和交互能力。",
+          "score": 8.0,
+          "url": "https://deepmind.google/blog/introducing-agentic-video-in-gemini/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Gemini",
+        "视频理解",
+        "Agent"
+      ]
+    },
     {
       "product_id": "product-0e4926d32fba01ff",
       "product_name": "Almanac",
@@ -60,60 +647,6 @@
       ]
     },
     {
-      "product_id": "product-5e793a60ea727aff",
-      "product_name": "Claude",
-      "builder_name": "Lenny Rachitsky",
-      "first_seen": "2026-09-01",
-      "last_seen": "2026-09-01",
-      "occurrence_count": 1,
-      "intelligence_type": "builder_insight",
-      "evidence_status": "reported",
-      "target_user": "未公开",
-      "user_problem": "未公开",
-      "what_it_is": "PM Daniel Blum分享用Claude自动化70-80%工作的方法，展示个人AI基础设施的构建实践。",
-      "ai_role": "未公开",
-      "implementation_idea": "未公开",
-      "hands_on_exercise": "未公开",
-      "limitations_or_uncertainties": "未公开",
-      "region": "global",
-      "score": 8.5,
-      "summary": "PM Daniel Blum分享用Claude自动化70-80%工作的方法，展示个人AI基础设施的构建实践。",
-      "title": "🎙️ How I AI: How this PM uses Claude to handle 70% to 80% of his workday",
-      "url": "https://www.lennysnewsletter.com/p/how-i-ai-how-this-pm-uses-claude",
-      "sources": [
-        {
-          "url": "https://www.lennysnewsletter.com/p/how-i-ai-how-this-pm-uses-claude",
-          "title": "🎙️ How I AI: How this PM uses Claude to handle 70% to 80% of his workday",
-          "source_type": "newsletter",
-          "published_at": "2026-08-31T15:01:58+00:00"
-        },
-        {
-          "url": "https://www.lennysnewsletter.com/p/how-i-turned-claude-into-a-self-improving",
-          "title": "How I turned Claude into a self-improving PM assistant | Daniel Blum (PM, Melio)",
-          "source_type": "supplemental",
-          "published_at": ""
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "pm-claude-workflow-lenny",
-          "date": "2026-09-01",
-          "title": "🎙️ How I AI: How this PM uses Claude to handle 70% to 80% of his workday",
-          "summary": "PM Daniel Blum分享用Claude自动化70-80%工作的方法，展示个人AI基础设施的构建实践。",
-          "score": 8.5,
-          "url": "https://www.lennysnewsletter.com/p/how-i-ai-how-this-pm-uses-claude"
-        }
-      ],
-      "usage_flow": [],
-      "learning_points": [],
-      "verticals": [],
-      "tags": [
-        "Claude",
-        "工作流",
-        "产品经理"
-      ]
-    },
-    {
       "product_id": "product-487fa6548df24b0e",
       "product_name": "BirdNET-Go",
       "builder_name": "speckx",
@@ -159,107 +692,6 @@
         "BirdNET",
         "边缘AI",
         "DIY"
-      ]
-    },
-    {
-      "product_id": "product-2e1a6d87673249b3",
-      "product_name": "GLM-5.3-Flash",
-      "builder_name": "AI News",
-      "first_seen": "2026-08-28",
-      "last_seen": "2026-09-01",
-      "occurrence_count": 1,
-      "intelligence_type": "model_capability",
-      "evidence_status": "reported",
-      "target_user": "未公开",
-      "user_problem": "未公开",
-      "what_it_is": "Z.ai正式发布GLM-5.3-Flash，原生多模态，1M上下文，320B参数，MIT许可，提供权重和API。",
-      "ai_role": "未公开",
-      "implementation_idea": "未公开",
-      "hands_on_exercise": "未公开",
-      "limitations_or_uncertainties": "未公开",
-      "region": "global",
-      "score": 8.0,
-      "summary": "Z.ai正式发布GLM-5.3-Flash，原生多模态，1M上下文，320B参数，MIT许可，提供权重和API。",
-      "title": "not much happened today",
-      "url": "https://news.smol.ai/issues/26-08-26-not-much/",
-      "sources": [
-        {
-          "url": "https://news.smol.ai/issues/26-08-26-not-much/",
-          "title": "not much happened today",
-          "source_type": "newsletter",
-          "published_at": "2026-08-26T05:44:39+00:00"
-        },
-        {
-          "url": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTE1OWllSS3czelZyZV9oN2NxVFh2bTA5eGdzclAtU29VWV9uaDlYRVFZVnBtZ0s5RjFGMTJidWVvTFY1T0E?oc=5",
-          "title": "实测GLM-5.3: 在神仙打架的一周杀回国模顶流，还按下了重置键 - 爱范儿",
-          "source_type": "supplemental",
-          "published_at": ""
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "glm-5.3-flash-launch",
-          "date": "2026-08-28",
-          "title": "not much happened today",
-          "summary": "Z.ai正式发布GLM-5.3-Flash，原生多模态，1M上下文，320B参数，MIT许可，提供权重和API。",
-          "score": 8.0,
-          "url": "https://news.smol.ai/issues/26-08-26-not-much/"
-        }
-      ],
-      "usage_flow": [],
-      "learning_points": [],
-      "verticals": [],
-      "tags": [
-        "GLM",
-        "多模态",
-        "开源"
-      ]
-    },
-    {
-      "product_id": "product-3bea673a49723eb9",
-      "product_name": "ChatGPT Work",
-      "builder_name": "Lenny Rachitsky",
-      "first_seen": "2026-09-01",
-      "last_seen": "2026-09-01",
-      "occurrence_count": 1,
-      "intelligence_type": "builder_insight",
-      "evidence_status": "reported",
-      "target_user": "未公开",
-      "user_problem": "未公开",
-      "what_it_is": "ChatGPT Work产品负责人Tara Seshan分享AI第三时代：持久化AI同事的崛起，探讨产品趋势。",
-      "ai_role": "未公开",
-      "implementation_idea": "未公开",
-      "hands_on_exercise": "未公开",
-      "limitations_or_uncertainties": "未公开",
-      "region": "global",
-      "score": 8.0,
-      "summary": "ChatGPT Work产品负责人Tara Seshan分享AI第三时代：持久化AI同事的崛起，探讨产品趋势。",
-      "title": "AI’s third era: the rise of persistent AI coworkers | Tara Seshan (Product Lead ChatGPT Work)",
-      "url": "https://www.lennysnewsletter.com/p/ais-third-era-the-rise-of-persistent",
-      "sources": [
-        {
-          "url": "https://www.lennysnewsletter.com/p/ais-third-era-the-rise-of-persistent",
-          "title": "AI’s third era: the rise of persistent AI coworkers | Tara Seshan (Product Lead ChatGPT Work)",
-          "source_type": "newsletter",
-          "published_at": "2026-08-30T12:31:30+00:00"
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "persistent-ai-coworkers-era",
-          "date": "2026-09-01",
-          "title": "AI’s third era: the rise of persistent AI coworkers | Tara Seshan (Product Lead ChatGPT Work)",
-          "summary": "ChatGPT Work产品负责人Tara Seshan分享AI第三时代：持久化AI同事的崛起，探讨产品趋势。",
-          "score": 8.0,
-          "url": "https://www.lennysnewsletter.com/p/ais-third-era-the-rise-of-persistent"
-        }
-      ],
-      "usage_flow": [],
-      "learning_points": [],
-      "verticals": [],
-      "tags": [
-        "AI同事",
-        "产品趋势"
       ]
     },
     {
@@ -3120,63 +3552,6 @@
       "tags": [
         "开源模型",
         "Ornith-1.5"
-      ]
-    },
-    {
-      "product_id": "product-75b530f756175cc4",
-      "product_name": "Claude Text Watermark",
-      "builder_name": "Anthropic News",
-      "first_seen": "2026-08-15",
-      "last_seen": "2026-08-25",
-      "occurrence_count": 1,
-      "intelligence_type": "product_case",
-      "evidence_status": "first_party",
-      "target_user": "内容平台审核者、出版机构、教育工作者、普通用户（需要判断文本是否 AI 生成的人）",
-      "user_problem": "AI 生成的文本和人类写的越来越像，普通人难以分辨，导致虚假信息、学术作弊、版权纠纷等问题难以追溯源头。",
-      "what_it_is": "Anthropic 为 Claude 推出的文本水印功能，能在 AI 生成的文字里嵌入隐形标记，方便后续识别这段内容是否来自 Claude。",
-      "ai_role": "AI 在生成文本时负责嵌入水印标记，不改变文本的可读性和语义。",
-      "implementation_idea": "核心思路类似数字水印：在 AI 预测下一个词（token）的概率分布上做微小、有规律的调整，让生成的文本携带统计特征。这些调整人眼完全看不出来，但用特定算法可以检测出这种模式。",
-      "hands_on_exercise": "用 Claude 生成一段 200 字的产品介绍，复制到剪贴板。搜索 Anthropic 是否已开放水印检测 API 或工具（目前新闻刚发布，可能尚未开放），若未开放则记录：假设你是平台审核员，设计一个用户通知文案，说明'检测到 AI 生成内容'时如何平衡透明度和用户体验。",
-      "limitations_or_uncertainties": "具体水印嵌入的技术细节（如是否所有 Claude 版本都支持、对多语言/代码的效果、是否会被改写破坏）未公开；检测工具的开放时间和使用条件未公开；水印对短文本（如一两句话）是否有效未公开。",
-      "region": "global",
-      "score": 8.5,
-      "summary": "Anthropic推出Claude文本水印功能，用于识别AI生成文本，提升内容透明度。",
-      "title": "Claude 文本水印：让 AI 生成内容可被识别",
-      "url": "https://www.anthropic.com/news/claude-text-watermark",
-      "sources": [
-        {
-          "url": "https://www.anthropic.com/news/claude-text-watermark",
-          "title": "Claude Text Watermark",
-          "source_type": "public_web",
-          "published_at": "2026-08-14T20:06:43+00:00"
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "anthropic-claude-text-watermark",
-          "date": "2026-08-15",
-          "title": "Claude 文本水印：让 AI 生成内容可被识别",
-          "summary": "Anthropic推出Claude文本水印功能，用于识别AI生成文本，提升内容透明度。",
-          "score": 8.5,
-          "url": "https://www.anthropic.com/news/claude-text-watermark"
-        }
-      ],
-      "usage_flow": [
-        "Claude 生成文本时自动嵌入隐形水印",
-        "用户复制、转发或发布这段文本",
-        "检测方使用 Anthropic 提供的检测工具扫描文本",
-        "工具返回结果：是否包含 Claude 水印及置信度"
-      ],
-      "learning_points": [
-        "Token：大模型处理文本的最小单位，可以是一个字、一个词或一部分词，模型每次预测下一个 token 来生成内容",
-        "LLM 文本检测：通过统计规律判断文本是否 AI 生成，水印是一种主动的、可验证的检测方式",
-        "AI 安全与溯源：让 AI 输出可被追踪，是防止滥用和提升透明度的关键手段"
-      ],
-      "verticals": [],
-      "tags": [
-        "AI安全",
-        "水印",
-        "Anthropic"
       ]
     },
     {
