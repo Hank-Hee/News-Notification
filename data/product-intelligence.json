@@ -1,28 +1,28 @@
 {
   "version": 1,
-  "updated_at": "2026-09-03T04:23:32.097449+00:00",
+  "updated_at": "2026-09-04T04:32:16.290544+00:00",
   "products": [
     {
       "product_id": "product-7f7811de59626bc9",
       "product_name": "Claude Code",
       "builder_name": "ashwin-ant",
       "first_seen": "2026-07-26",
-      "last_seen": "2026-09-03",
-      "occurrence_count": 16,
+      "last_seen": "2026-09-04",
+      "occurrence_count": 17,
       "intelligence_type": "product_case",
       "evidence_status": "first_party",
-      "target_user": "开发者、团队管理员、CI/CD 运维人员",
-      "user_problem": "团队里每个人自己配 MCP 服务器（AI 能调的外部工具）容易乱；CI 环境跑 Claude Code 时弹权限确认会卡住；多开会话时配置互相覆盖丢失",
-      "what_it_is": "Anthropic 出的命令行 AI 编程助手，能在终端里理解代码库、改文件、跑命令",
-      "ai_role": "执行代码编辑、命令运行、工具调用，按组织策略限制可访问的外部能力",
-      "implementation_idea": "把 MCP 服务器配置从个人文件抽成组织级托管设置，像公司 IT 统一装软件；无头模式就是把\"弹窗问你要不要\"改成\"默认拒绝\"，适合机器自动跑",
-      "hands_on_exercise": "30 分钟：本地装 Claude Code，创建一个 `.mcp.json` 配一个简单 MCP 服务器（如文件系统工具），然后加 `--permission-prompts none` 跑一条让它读文件的命令，观察自动拒绝行为；再试去掉该参数看对比",
-      "limitations_or_uncertainties": "组织级 MCP 仅支持 HTTP/SSE 协议，本地命令式服务器被跳过；`managedMcpServers` 的具体配置格式和 MDM/组策略集成细节未公开完整文档；无头模式下\"自动拒绝\"是否影响正常自动模式决策逻辑未详细说明",
+      "target_user": "习惯在终端工作的开发者，尤其是需要频繁修改代码、审查变更、管理多文件项目的软件工程师",
+      "user_problem": "用 AI 改代码时，不知道 AI 具体改了哪些地方；AI 调用成本突然变高却找不到原因；插件、模型切换、权限规则等边缘情况频繁出错或卡住",
+      "what_it_is": "Anthropic 推出的终端 AI 编程助手，能在命令行里理解代码库、改文件、跑命令、帮你写代码",
+      "ai_role": "作为'结对程序员'，主动读取代码上下文、提出修改方案、执行文件编辑和终端命令，并在用户确认后提交变更",
+      "implementation_idea": "Claude Code 本质上是一个包裹了 Claude 大模型的'智能终端'。它通过 MCP（Model Context Protocol，一种让 AI 连接外部工具的标准协议）与你的代码编辑器、文件系统、Git 等打通。这次更新相当于给这个终端加了'可视化 diff 看板'和'成本 debugger'——diff 面板直接调用 Git 的 uncommitted changes 数据流，缓存诊断则是把 Anthropic API 的 prompt cache 状态暴露给用户看。",
+      "hands_on_exercise": "30 分钟练习：安装 Claude Code（需 Anthropic API key），打开一个自己的 Git 项目，让 Claude 修改一个函数，期间按 `/diff` 观察变更面板，然后故意修改 `.claude/settings.json` 里的工具定义，再用 `/cost` 看缓存未命中提示是否出现",
+      "limitations_or_uncertainties": "未公开：具体缓存 TTL（生存时间）数值、diff 面板是否支持三路合并、Fable 5.1 的完整模型规格、企业版'托管设置'的详细配置方式",
       "region": "global",
       "score": 8.5,
-      "summary": "Claude Code v2.1.259发布，新增组织级MCP服务器管理和无头模式等特性。",
-      "title": "Claude Code v2.1.259：新增组织级 MCP 服务器管理和无头模式",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.259",
+      "summary": "Claude Code 发布 v2.1.260，新增 diff 面板和缓存未命中原因提示，提升编码效率。",
+      "title": "Claude Code v2.1.260：新增 diff 面板与缓存诊断，修复 30+ 项开发体验问题",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.260",
       "sources": [
         {
           "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.219",
@@ -125,6 +125,12 @@
           "title": "anthropics/claude-code released v2.1.259",
           "source_type": "github",
           "published_at": "2026-09-02T22:33:51+00:00"
+        },
+        {
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.260",
+          "title": "anthropics/claude-code released v2.1.260",
+          "source_type": "github",
+          "published_at": "2026-09-03T23:48:12+00:00"
         }
       ],
       "updates": [
@@ -255,6 +261,14 @@
           "summary": "Claude Code v2.1.259发布，新增组织级MCP服务器管理和无头模式等特性。",
           "score": 8.5,
           "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.259"
+        },
+        {
+          "update_id": "claude-code-v2.1.260",
+          "date": "2026-09-04",
+          "title": "Claude Code v2.1.260：新增 diff 面板与缓存诊断，修复 30+ 项开发体验问题",
+          "summary": "Claude Code 发布 v2.1.260，新增 diff 面板和缓存未命中原因提示，提升编码效率。",
+          "score": 8.5,
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.260"
         }
       ],
       "usage_flow": [
@@ -285,7 +299,11 @@
         "管理员在组织配置里写 `managedMcpServers`，统一指定团队可用的 HTTP/SSE MCP 服务器",
         "开发者本地或服务器上跑 `claude`，无头环境加 `--permission-prompts none` 自动拒绝需确认的权限请求",
         "Claude Code 自动连上组织配好的 MCP 服务器，开发者直接调用工具",
-        "团队用 `--json` 输出做自动化验证和流水线集成"
+        "团队用 `--json` 输出做自动化验证和流水线集成",
+        "在终端输入 `claude` 启动，进入全屏对话界面",
+        "用自然语言描述需求，Claude 自动读取、编辑、运行代码",
+        "按 `/diff` 打开侧边 diff 面板，实时查看未提交的修改",
+        "用 `/cost` 检查费用，若缓存未命中会提示具体原因（如工具定义变了、闲置超时）"
       ],
       "learning_points": [
         "Context window（上下文窗口）：模型一次能'看'多少字，Opus 5 的 1M 约等于能塞进整本《三体》第一部，让 AI 分析大型代码库不丢线索",
@@ -308,7 +326,10 @@
         "Function Calling（函数调用）：AI 不直接干活，而是生成'我要调用某某工具'的结构化请求，由外部系统安全地执行",
         "MCP（Model Context Protocol）：一种让 AI 助手安全调用外部工具（如查数据库、发消息）的标准接口，类似 USB 让不同设备能连电脑",
         "无头模式（Headless）：没有屏幕、没人看着跑，程序自己处理所有交互，常用于服务器和自动化流水线",
-        "权限提示（Permission Prompt）：AI 要执行危险操作前弹窗问人，无头环境里没人点就会卡住"
+        "权限提示（Permission Prompt）：AI 要执行危险操作前弹窗问人，无头环境里没人点就会卡住",
+        "Prompt Caching：LLM 对话中，把之前说过的话'缓存'起来避免重复计费，但如果系统提示或工具定义变了，缓存就会失效（cache miss），需要重新花钱",
+        "Diff：代码变更前后的对比视图，程序员靠它确认 AI 改对了没有",
+        "Headless session：没有图形界面的后台运行模式，比如桌面应用调 Claude Code 或脚本自动化时使用"
       ],
       "verticals": [],
       "tags": [
@@ -330,7 +351,486 @@
         "AI编程",
         "安全",
         "企业",
-        "Anthropic"
+        "Anthropic",
+        "diff"
+      ]
+    },
+    {
+      "product_id": "product-38e4161c296117e3",
+      "product_name": "GPT-6 Astra",
+      "builder_name": "Simon Willison",
+      "first_seen": "2026-09-04",
+      "last_seen": "2026-09-04",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Simon Willison详细分析了GPT-6 Astra的定价、基准测试和ARC-AGI得分，指出其99.9%得分依赖特定测试环境。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.5,
+      "summary": "Simon Willison详细分析了GPT-6 Astra的定价、基准测试和ARC-AGI得分，指出其99.9%得分依赖特定测试环境。",
+      "title": "GPT‑6 Astra",
+      "url": "https://simonwillison.net/2026/Sep/3/gpt6-astra/",
+      "sources": [
+        {
+          "url": "https://simonwillison.net/2026/Sep/3/gpt6-astra/",
+          "title": "GPT‑6 Astra",
+          "source_type": "rss",
+          "published_at": "2026-09-03T20:18:41+00:00"
+        },
+        {
+          "url": "https://www.lennysnewsletter.com/p/gpt-6-astra-is-a-banger-heres-everything",
+          "title": "GPT-6 Astra is a banger - here’s everything I’ve built",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://www.theverge.com/ai-artificial-intelligence/989601/openai-gpt-6-astra-release",
+          "title": "OpenAI’s next big AI model has ‘entered the AGI era’",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://www.latent.space/p/astra",
+          "title": "GPT-6 Astra: an automated AI Engineer you can hire for <$6 an hour",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "openai-gpt6-astra-release",
+          "date": "2026-09-04",
+          "title": "GPT‑6 Astra",
+          "summary": "Simon Willison详细分析了GPT-6 Astra的定价、基准测试和ARC-AGI得分，指出其99.9%得分依赖特定测试环境。",
+          "score": 8.5,
+          "url": "https://simonwillison.net/2026/Sep/3/gpt6-astra/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "模型",
+        "OpenAI",
+        "基准测试"
+      ]
+    },
+    {
+      "product_id": "product-ae4d9ea512696f10",
+      "product_name": "Gmail Live、Docs Live、Keep Live",
+      "builder_name": "Jess Weatherbed",
+      "first_seen": "2026-09-04",
+      "last_seen": "2026-09-04",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "reported",
+      "target_user": "已订阅 Google AI Plus/Pro/Ultra 的 Android 和 iOS 用户，且需使用英语",
+      "user_problem": "在手机上处理邮件、写文档、记笔记时，打字慢、双手被占用、操作步骤繁琐",
+      "what_it_is": "Google 在三个办公应用里新增了实时语音对话功能，用户可以直接说话让 AI 帮忙处理邮件、文档和笔记",
+      "ai_role": "听懂用户的语音指令，实时理解上下文，调用应用内的功能完成操作并语音回复",
+      "implementation_idea": "把 Gemini 的实时语音对话能力（类似 Gemini Live）接到具体应用里，让 AI 能'看见'当前邮件/文档/笔记的内容，再用语音和用户来回沟通。核心是把'通用聊天机器人'变成'懂业务的应用内助手'",
+      "hands_on_exercise": "打开 Gemini App，试用 Gemini Live 的语音对话功能（免费版可用），体验'边说边改'的感觉；然后对比：在 Gmail 里手动整理收件箱 vs 想象用语音说'把上周的报销邮件找出来标星'，记录哪些步骤语音能省掉",
+      "limitations_or_uncertainties": "目前仅支持英语；需要付费订阅 Google AI Plus/Pro/Ultra；The Verge 报道为产品发布新闻，但缺乏实际用户体验反馈；未公开是否支持离线使用、语音识别的准确率数据、以及具体能执行哪些操作指令",
+      "region": "global",
+      "score": 8.0,
+      "summary": "Google为Gmail、Docs和Keep推出实时语音助手模式，用户可通过语音管理应用。",
+      "title": "Google 为 Gmail、Docs、Keep 推出实时语音助手模式",
+      "url": "https://www.theverge.com/tech/989508/google-gmail-docs-keep-live-voice-modes-gemini",
+      "sources": [
+        {
+          "url": "https://www.theverge.com/tech/989508/google-gmail-docs-keep-live-voice-modes-gemini",
+          "title": "Google now lets you chat with Gmail, Docs, and Keep",
+          "source_type": "rss",
+          "published_at": "2026-09-03T16:00:00+00:00"
+        },
+        {
+          "url": "https://9to5google.com/2026/09/03/gmail-docs-keep-live/",
+          "title": "Google rolling out Gmail Live , Docs Live , and Keep Live",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "google-gmail-docs-keep-live-voice",
+          "date": "2026-09-04",
+          "title": "Google 为 Gmail、Docs、Keep 推出实时语音助手模式",
+          "summary": "Google为Gmail、Docs和Keep推出实时语音助手模式，用户可通过语音管理应用。",
+          "score": 8.0,
+          "url": "https://www.theverge.com/tech/989508/google-gmail-docs-keep-live-voice-modes-gemini"
+        }
+      ],
+      "usage_flow": [
+        "打开 Gmail/Docs/Keep，点击搜索栏新增的 Live 图标",
+        "用自然语音说出需求，比如'总结这封邮件'或'新建一个购物清单'",
+        "AI 实时回应并执行操作",
+        "对话结束后，修改或保存 AI 处理的结果"
+      ],
+      "learning_points": [
+        "Function Calling：AI 不只会说话，还能'动手'调用软件里的功能，比如发邮件、建文档",
+        "多模态交互：AI 同时处理语音输入、理解屏幕上的文字内容、再用语音回复，不只是文字聊天",
+        "Agent 概念：AI 从'回答问题'进化到'帮你完成任务'，在应用里自主执行多步操作"
+      ],
+      "verticals": [],
+      "tags": [
+        "语音助手",
+        "Google",
+        "办公应用"
+      ]
+    },
+    {
+      "product_id": "product-dcf22ed3fe085f17",
+      "product_name": "Vercel Sandbox",
+      "builder_name": "Allen Zhou",
+      "first_seen": "2026-09-04",
+      "last_seen": "2026-09-04",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Vercel宣布Cursor Cloud Agents现可在Vercel Sandbox中运行，提供隔离的微VM环境。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.0,
+      "summary": "Vercel宣布Cursor Cloud Agents现可在Vercel Sandbox中运行，提供隔离的微VM环境。",
+      "title": "Cursor Cloud Agents can now run in Vercel Sandbox",
+      "url": "https://vercel.com/changelog/run-cursor-cloud-agents-vercel-sandbox",
+      "sources": [
+        {
+          "url": "https://vercel.com/changelog/run-cursor-cloud-agents-vercel-sandbox",
+          "title": "Cursor Cloud Agents can now run in Vercel Sandbox",
+          "source_type": "rss",
+          "published_at": "2026-09-03T15:00:00+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "cursor-cloud-agents-vercel-sandbox",
+          "date": "2026-09-04",
+          "title": "Cursor Cloud Agents can now run in Vercel Sandbox",
+          "summary": "Vercel宣布Cursor Cloud Agents现可在Vercel Sandbox中运行，提供隔离的微VM环境。",
+          "score": 8.0,
+          "url": "https://vercel.com/changelog/run-cursor-cloud-agents-vercel-sandbox"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "Vercel",
+        "Cursor"
+      ]
+    },
+    {
+      "product_id": "product-6c6929781b7d4d2b",
+      "product_name": "Daybreak",
+      "builder_name": "OpenAI News",
+      "first_seen": "2026-08-12",
+      "last_seen": "2026-09-04",
+      "occurrence_count": 2,
+      "intelligence_type": "business_policy",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "OpenAI 推出 Daybreak for Frontline Defenders，承诺 10 亿美元支持关键服务的网络安全 AI。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.5,
+      "summary": "OpenAI 推出 Daybreak for Frontline Defenders，承诺 10 亿美元支持关键服务的网络安全 AI。",
+      "title": "Daybreak for Frontline Defenders: $1B to protect essential services",
+      "url": "https://openai.com/index/daybreak-for-frontline-defenders",
+      "sources": [
+        {
+          "url": "https://openai.com/index/daybreak-models-are-now-available-on-aws",
+          "title": "Daybreak models are now available on AWS",
+          "source_type": "rss",
+          "published_at": "2026-08-11T10:00:00+00:00"
+        },
+        {
+          "url": "https://openai.com/index/daybreak-for-frontline-defenders",
+          "title": "Daybreak for Frontline Defenders: $1B to protect essential services",
+          "source_type": "rss",
+          "published_at": "2026-09-03T13:15:00+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "openai-daybreak-models-on-aws",
+          "date": "2026-08-12",
+          "title": "Daybreak models are now available on AWS",
+          "summary": "OpenAI的Daybreak网络安全模型现已在AWS Bedrock上提供，支持企业安全流程。",
+          "score": 8.0,
+          "url": "https://openai.com/index/daybreak-models-are-now-available-on-aws"
+        },
+        {
+          "update_id": "openai-daybreak-frontline-defenders",
+          "date": "2026-09-04",
+          "title": "Daybreak for Frontline Defenders: $1B to protect essential services",
+          "summary": "OpenAI 推出 Daybreak for Frontline Defenders，承诺 10 亿美元支持关键服务的网络安全 AI。",
+          "score": 7.5,
+          "url": "https://openai.com/index/daybreak-for-frontline-defenders"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "OpenAI",
+        "AWS",
+        "网络安全",
+        "商业政策"
+      ]
+    },
+    {
+      "product_id": "product-a428081b74d347b5",
+      "product_name": "GitHub Copilot",
+      "builder_name": "Kayla Cinnamon",
+      "first_seen": "2026-09-04",
+      "last_seen": "2026-09-04",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "GitHub 官方教程讲解如何在 Copilot app 中同时运行多个 agent，提升开发效率。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.5,
+      "summary": "GitHub 官方教程讲解如何在 Copilot app 中同时运行多个 agent，提升开发效率。",
+      "title": "GitHub Copilot app for Beginners: Run several agents at once",
+      "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-run-several-agents-at-once/",
+      "sources": [
+        {
+          "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-run-several-agents-at-once/",
+          "title": "GitHub Copilot app for Beginners: Run several agents at once",
+          "source_type": "rss",
+          "published_at": "2026-09-03T16:00:00+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "github-copilot-parallel-agents",
+          "date": "2026-09-04",
+          "title": "GitHub Copilot app for Beginners: Run several agents at once",
+          "summary": "GitHub 官方教程讲解如何在 Copilot app 中同时运行多个 agent，提升开发效率。",
+          "score": 7.5,
+          "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-run-several-agents-at-once/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "GitHub Copilot",
+        "Agent",
+        "教程"
+      ]
+    },
+    {
+      "product_id": "product-c47369b5544573da",
+      "product_name": "Muse Spark",
+      "builder_name": "Tim Fernholz",
+      "first_seen": "2026-09-04",
+      "last_seen": "2026-09-04",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Meta为Muse Spark模型提供约95%折扣，换取用户共享提示和输出以改进未来模型。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.5,
+      "summary": "Meta为Muse Spark模型提供约95%折扣，换取用户共享提示和输出以改进未来模型。",
+      "title": "Meta is paying to peek at how you use their latest AI model",
+      "url": "https://techcrunch.com/2026/09/03/meta-is-paying-to-peek-at-how-you-use-their-latest-ai-model/",
+      "sources": [
+        {
+          "url": "https://techcrunch.com/2026/09/03/meta-is-paying-to-peek-at-how-you-use-their-latest-ai-model/",
+          "title": "Meta is paying to peek at how you use their latest AI model",
+          "source_type": "rss",
+          "published_at": "2026-09-03T18:19:56+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "meta-muse-spark-discount",
+          "date": "2026-09-04",
+          "title": "Meta is paying to peek at how you use their latest AI model",
+          "summary": "Meta为Muse Spark模型提供约95%折扣，换取用户共享提示和输出以改进未来模型。",
+          "score": 7.5,
+          "url": "https://techcrunch.com/2026/09/03/meta-is-paying-to-peek-at-how-you-use-their-latest-ai-model/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "模型",
+        "定价",
+        "数据共享"
+      ]
+    },
+    {
+      "product_id": "product-0ae143580dcd9955",
+      "product_name": "Qwen 3.8",
+      "builder_name": "altertable",
+      "first_seen": "2026-09-04",
+      "last_seen": "2026-09-04",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Qwen 3.8 27B 在 Cerebras 上达到 1500 tokens/s，但用户反馈速率限制和成本较高。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.5,
+      "summary": "Qwen 3.8 27B 在 Cerebras 上达到 1500 tokens/s，但用户反馈速率限制和成本较高。",
+      "title": "Qwen 3.8 27B available on Cerebras at 1500 tokens/s",
+      "url": "https://inference-docs.cerebras.ai/models/overview",
+      "sources": [
+        {
+          "url": "https://inference-docs.cerebras.ai/models/overview",
+          "title": "Qwen 3.8 27B available on Cerebras at 1500 tokens/s",
+          "source_type": "hackernews",
+          "published_at": "2026-09-03T18:32:13+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "qwen3.8-cerebras-1500tps",
+          "date": "2026-09-04",
+          "title": "Qwen 3.8 27B available on Cerebras at 1500 tokens/s",
+          "summary": "Qwen 3.8 27B 在 Cerebras 上达到 1500 tokens/s，但用户反馈速率限制和成本较高。",
+          "score": 7.5,
+          "url": "https://inference-docs.cerebras.ai/models/overview"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Qwen",
+        "Cerebras",
+        "推理速度"
+      ]
+    },
+    {
+      "product_id": "product-fae978f2eaf4091d",
+      "product_name": "Gemini 3 8 Flash",
+      "builder_name": "Artificial Analysis",
+      "first_seen": "2026-09-04",
+      "last_seen": "2026-09-04",
+      "occurrence_count": 1,
+      "intelligence_type": "early_signal",
+      "evidence_status": "early_signal",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Artificial Analysis发布Gemini 3 8 Flash分析文章，但内容为空，仅标题，缺乏实质信息，属于早期信号。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.5,
+      "summary": "Artificial Analysis发布Gemini 3 8 Flash分析文章，但内容为空，仅标题，缺乏实质信息，属于早期信号。",
+      "title": "Gemini 3 8 Flash",
+      "url": "https://artificialanalysis.ai/articles/gemini-3-8-flash",
+      "sources": [
+        {
+          "url": "https://artificialanalysis.ai/articles/gemini-3-8-flash",
+          "title": "Gemini 3 8 Flash",
+          "source_type": "public_web",
+          "published_at": "2026-09-02T00:00:00+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "gemini-3-8-flash-announcement",
+          "date": "2026-09-04",
+          "title": "Gemini 3 8 Flash",
+          "summary": "Artificial Analysis发布Gemini 3 8 Flash分析文章，但内容为空，仅标题，缺乏实质信息，属于早期信号。",
+          "score": 7.5,
+          "url": "https://artificialanalysis.ai/articles/gemini-3-8-flash"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Gemini",
+        "模型分析"
+      ]
+    },
+    {
+      "product_id": "product-412638f6e7b97488",
+      "product_name": "Claude Fable 5.1",
+      "builder_name": "Artificial Analysis",
+      "first_seen": "2026-09-04",
+      "last_seen": "2026-09-04",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Artificial Analysis发布了Claude Fable 5.1的评测分析，提供模型性能参考。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.0,
+      "summary": "Artificial Analysis发布了Claude Fable 5.1的评测分析，提供模型性能参考。",
+      "title": "Claude Fable 5 1",
+      "url": "https://artificialanalysis.ai/articles/claude-fable-5-1",
+      "sources": [
+        {
+          "url": "https://artificialanalysis.ai/articles/claude-fable-5-1",
+          "title": "Claude Fable 5 1",
+          "source_type": "public_web",
+          "published_at": "2026-09-01T00:00:00+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "claude-fable-5-1-analysis",
+          "date": "2026-09-04",
+          "title": "Claude Fable 5 1",
+          "summary": "Artificial Analysis发布了Claude Fable 5.1的评测分析，提供模型性能参考。",
+          "score": 7.0,
+          "url": "https://artificialanalysis.ai/articles/claude-fable-5-1"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "模型评测",
+        "Claude"
       ]
     },
     {
@@ -9613,54 +10113,6 @@
         "AI编程",
         "Vercel Eve",
         "代码审查"
-      ]
-    },
-    {
-      "product_id": "product-6c6929781b7d4d2b",
-      "product_name": "Daybreak",
-      "builder_name": "OpenAI News",
-      "first_seen": "2026-08-12",
-      "last_seen": "2026-08-12",
-      "occurrence_count": 1,
-      "intelligence_type": "product_case",
-      "evidence_status": "first_party",
-      "target_user": "未公开",
-      "user_problem": "未公开",
-      "what_it_is": "OpenAI的Daybreak网络安全模型现已在AWS Bedrock上提供，支持企业安全流程。",
-      "ai_role": "未公开",
-      "implementation_idea": "未公开",
-      "hands_on_exercise": "未公开",
-      "limitations_or_uncertainties": "未公开",
-      "region": "global",
-      "score": 8.0,
-      "summary": "OpenAI的Daybreak网络安全模型现已在AWS Bedrock上提供，支持企业安全流程。",
-      "title": "Daybreak models are now available on AWS",
-      "url": "https://openai.com/index/daybreak-models-are-now-available-on-aws",
-      "sources": [
-        {
-          "url": "https://openai.com/index/daybreak-models-are-now-available-on-aws",
-          "title": "Daybreak models are now available on AWS",
-          "source_type": "rss",
-          "published_at": "2026-08-11T10:00:00+00:00"
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "openai-daybreak-models-on-aws",
-          "date": "2026-08-12",
-          "title": "Daybreak models are now available on AWS",
-          "summary": "OpenAI的Daybreak网络安全模型现已在AWS Bedrock上提供，支持企业安全流程。",
-          "score": 8.0,
-          "url": "https://openai.com/index/daybreak-models-are-now-available-on-aws"
-        }
-      ],
-      "usage_flow": [],
-      "learning_points": [],
-      "verticals": [],
-      "tags": [
-        "OpenAI",
-        "AWS",
-        "网络安全"
       ]
     },
     {
