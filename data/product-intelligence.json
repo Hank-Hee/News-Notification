@@ -1,28 +1,97 @@
 {
   "version": 1,
-  "updated_at": "2026-09-05T04:27:41.379935+00:00",
+  "updated_at": "2026-09-06T04:38:17.417885+00:00",
   "products": [
+    {
+      "product_id": "product-4da9faac6cb2f1ac",
+      "product_name": "Fast Cut Video",
+      "builder_name": "Modecir",
+      "first_seen": "2026-09-06",
+      "last_seen": "2026-09-06",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "用 AI Agent 做视频工作流（如自动剪辑、生成视频内容）但发现 Agent 剪辑不准，需要人工快速修正的创作者或开发者",
+      "user_problem": "Agent 只靠语音转录文字来剪视频时，时间点和节奏经常切不准；但为此打开 Premiere 或 DaVinci Resolve 这种重型软件又太重、太慢，打断工作流",
+      "what_it_is": "一个开源的轻量级 Mac 视频剪辑小工具，专门让人类快速介入修正 AI Agent 剪坏的视频片段，再输出给 Agent 继续后续工作流。",
+      "ai_role": "Agent 负责前期自动剪辑和后期接续处理；人类用这个小工具做中间环节的快速修正，形成人机协作循环",
+      "implementation_idea": "本质上是一个精简的'人工作业台'：Agent 通过某种方式（可能是命令行或协议）唤起这个 App 并传入视频，用户做完剪切后，App 输出标准化片段让 Agent 读回去。开发者用 OpenAI Codex（AI 编程助手）几小时就写完了主要代码。",
+      "hands_on_exercise": "30 分钟：去 GitHub 仓库下载 Fast Cut Video，找一个你手机里的视频，手动模拟'Agent 剪坏了'的场景——故意从中间某句话切开，然后用这个工具重新对准说话节奏剪好，观察它比专业软件快多少、功能少哪些。",
+      "limitations_or_uncertainties": "目前只在 Apple Silicon Mac 上测试过，Windows/Intel Mac 兼容性未验证；Agent 如何自动唤起 App、传视频的具体机制未公开；没有 MCP 集成，是独立小工具而非 Agent 直接控制的插件",
+      "region": "global",
+      "score": 8.5,
+      "summary": "开发者用AI编码工具快速构建并开源了Fast Cut Video，为AI视频工作流提供轻量剪辑工具，解决Agent无法精准剪辑的问题。",
+      "title": "Fast Cut Video：为 AI Agent 设计的轻量视频剪辑工具",
+      "url": "https://github.com/modecir/fast-cutvid",
+      "sources": [
+        {
+          "url": "https://github.com/modecir/fast-cutvid",
+          "title": "Show HN: Fast Cut Video tool for cutting video for Agents",
+          "source_type": "hackernews",
+          "published_at": "2026-09-05T21:06:05+00:00"
+        },
+        {
+          "url": "https://modecir.com/",
+          "title": "Jose Enrique Gonzalez Modecir - Lead UX Designer",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://www.linkedin.com/company/modecir",
+          "title": "Modecir - LinkedIn",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "fast-cutvid-launch",
+          "date": "2026-09-06",
+          "title": "Fast Cut Video：为 AI Agent 设计的轻量视频剪辑工具",
+          "summary": "开发者用AI编码工具快速构建并开源了Fast Cut Video，为AI视频工作流提供轻量剪辑工具，解决Agent无法精准剪辑的问题。",
+          "score": 8.5,
+          "url": "https://github.com/modecir/fast-cutvid"
+        }
+      ],
+      "usage_flow": [
+        "Agent 把视频自动加载到 Fast Cut Video 的时间线",
+        "用户快速手动调整剪切点和时长",
+        "导出为 Agent 能继续处理的格式",
+        "Agent 拿到修正后的片段继续后续工作流（如加字幕、发布等）"
+      ],
+      "learning_points": [
+        "Agent：能自主执行多步骤任务的 AI，不只是聊天，还能调用工具、操作文件——这里 Agent 负责跑整个视频工作流",
+        "MCP（Model Context Protocol）：一种让 AI 和外部软件'互通有无'的标准协议，评论里提到 DaVinci Resolve 在 MCP 上走得比较前，意味着未来 Agent 可能直接控制专业剪辑软件",
+        "人机回环（Human-in-the-loop）：AI 做不到位的地方，设计一个轻量环节让人快速介入，比硬让 AI 全自动化更务实"
+      ],
+      "verticals": [],
+      "tags": [
+        "视频剪辑",
+        "Agent",
+        "开源"
+      ]
+    },
     {
       "product_id": "product-38e4161c296117e3",
       "product_name": "GPT-6 Astra",
       "builder_name": "Simon Willison",
       "first_seen": "2026-09-04",
-      "last_seen": "2026-09-05",
-      "occurrence_count": 2,
+      "last_seen": "2026-09-06",
+      "occurrence_count": 3,
       "intelligence_type": "model_capability",
-      "evidence_status": "first_party",
+      "evidence_status": "early_signal",
       "target_user": "未公开",
       "user_problem": "未公开",
-      "what_it_is": "Simon Willison用GPT-6 Astra生成SVG鹈鹕，对比不同推理级别，发现Astra图像生成质量显著优于GPT-5.6。",
+      "what_it_is": "Simon Willison介绍GPT-6 Astra，强调其3D建模能力，可生成复杂3D场景。",
       "ai_role": "未公开",
       "implementation_idea": "未公开",
       "hands_on_exercise": "未公开",
       "limitations_or_uncertainties": "未公开",
       "region": "global",
-      "score": 8.5,
-      "summary": "Simon Willison用GPT-6 Astra生成SVG鹈鹕，对比不同推理级别，发现Astra图像生成质量显著优于GPT-5.6。",
-      "title": "The Pelican comparison grid for Astra is pretty interesting",
-      "url": "https://simonwillison.net/2026/Sep/4/astra-pelicans/",
+      "score": 8.0,
+      "summary": "Simon Willison介绍GPT-6 Astra，强调其3D建模能力，可生成复杂3D场景。",
+      "title": "Introducing GPT-6 Astra for developers",
+      "url": "https://simonwillison.net/2026/Sep/5/introducing-gpt-6-astra-for-developers/",
       "sources": [
         {
           "url": "https://simonwillison.net/2026/Sep/3/gpt6-astra/",
@@ -59,6 +128,18 @@
           "title": "GPT-6 Astra on OpenRouter",
           "source_type": "supplemental",
           "published_at": ""
+        },
+        {
+          "url": "https://simonwillison.net/2026/Sep/5/introducing-gpt-6-astra-for-developers/",
+          "title": "Introducing GPT-6 Astra for developers",
+          "source_type": "rss",
+          "published_at": "2026-09-05T23:27:48+00:00"
+        },
+        {
+          "url": "https://openai.robocurve.org/gpt-6-astra/",
+          "title": "GPT-6 Astra on robot arms",
+          "source_type": "supplemental",
+          "published_at": ""
         }
       ],
       "updates": [
@@ -77,6 +158,14 @@
           "summary": "Simon Willison用GPT-6 Astra生成SVG鹈鹕，对比不同推理级别，发现Astra图像生成质量显著优于GPT-5.6。",
           "score": 8.5,
           "url": "https://simonwillison.net/2026/Sep/4/astra-pelicans/"
+        },
+        {
+          "update_id": "gpt-6-astra-developers",
+          "date": "2026-09-06",
+          "title": "Introducing GPT-6 Astra for developers",
+          "summary": "Simon Willison介绍GPT-6 Astra，强调其3D建模能力，可生成复杂3D场景。",
+          "score": 8.0,
+          "url": "https://simonwillison.net/2026/Sep/5/introducing-gpt-6-astra-for-developers/"
         }
       ],
       "usage_flow": [],
@@ -88,7 +177,250 @@
         "基准测试",
         "GPT-6",
         "图像生成",
-        "模型评测"
+        "模型评测",
+        "3D建模"
+      ]
+    },
+    {
+      "product_id": "product-bff1747855b2d85d",
+      "product_name": "OKF Agent Memory",
+      "builder_name": "okf_memory",
+      "first_seen": "2026-09-06",
+      "last_seen": "2026-09-06",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "开发 AI 编码 Agent 的程序员、想让自己的 AI 助手有长期记忆的开源项目维护者",
+      "user_problem": "AI 编码助手每次新开对话就\"失忆\"，开发者不得不反复交代项目背景、代码结构，浪费大量 Token 和时间；现有方案要么依赖外部数据库增加复杂度，要么记忆零散难以跨项目复用",
+      "what_it_is": "一个开源工具，让 AI 编码助手（Agent）能像人一样\"记住\"项目细节，下次打开还能接着聊，不用从头解释。",
+      "ai_role": "AI 负责生成和更新结构化的知识记录（OKF 格式），并在新会话开始时根据当前任务检索最相关的历史记忆",
+      "implementation_idea": "核心思路是\"用 Git 当数据库，用 Markdown+YAML 当记忆格式\"。它遵循 Google 提出的 OKF（Open Knowledge Format，开放知识格式）标准，把项目知识拆成标准化的片段存在文件系统里。搜索时不用联网调外部服务，而是在内存里用 BM25 算法（一种经典的关键词相关性打分方法，类似搜索引擎的基础技术）快速匹配，号称 300 微秒内响应。同时内置了 MCP server（Model Context Protocol，一种让 AI 工具互相通信的开放协议），让不同 Agent 能统一读写这份记忆。",
+      "hands_on_exercise": "30 分钟体验：① 克隆仓库 `git clone https://github.com/okf-memory/okf-agent-memory` 并编译运行；② 用一个简单的 Go 或 Python 项目作为测试目标，让 OKF Agent Memory 扫描生成记忆文件；③ 查看生成的 `.okf/` 目录结构，理解它如何把代码知识转成 Markdown+YAML；④ 修改几行代码后重新扫描，用 `git diff` 观察记忆如何版本化更新。若无法编译，直接阅读仓库中的 `README` 和示例目录即可。",
+      "limitations_or_uncertainties": "社区讨论中提到的跨项目记忆（cross-project memory）尚未确认是否原生支持；与 OpenAI Symphony 的 Token 效率和任务完成率对比未公开实测数据；BM25 的\"sub-300µs\"性能数据未看到第三方独立验证；项目处于早期阶段，OKF v0.2 标准本身也在演进中",
+      "region": "global",
+      "score": 8.0,
+      "summary": "OKF Agent Memory是一个开源项目，为AI编码代理提供Git原生持久记忆，解决跨会话记忆问题。",
+      "title": "OKF Agent Memory：用 Git 给 AI 编码助手建一个跨会话的长期记忆库",
+      "url": "https://github.com/okf-memory/okf-agent-memory",
+      "sources": [
+        {
+          "url": "https://github.com/okf-memory/okf-agent-memory",
+          "title": "OKF Agent Memory – Git-native persistent memory for AI coding agents",
+          "source_type": "hackernews",
+          "published_at": "2026-09-05T22:15:52+00:00"
+        },
+        {
+          "url": "https://medium.com/data-science-collective/stop-wasting-llm-tokens-building-a-self-updating-codebase-knowledge-graph-with-okf-20284060c1b1",
+          "title": "Standardizing Agent Memory: Building a Self-Updating Codebase Knowledge Graph with Google’s OKF | by Udaykiran Estari | Data Science Collective | Medium",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://github.com/EliaszDev/hermes-okf",
+          "title": "GitHub - EliaszDev/hermes-okf: Universal OKF-based memory system for Hermes agent - structured, persistent, agent-readable knowledge storage. · GitHub",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "okf-agent-memory",
+          "date": "2026-09-06",
+          "title": "OKF Agent Memory：用 Git 给 AI 编码助手建一个跨会话的长期记忆库",
+          "summary": "OKF Agent Memory是一个开源项目，为AI编码代理提供Git原生持久记忆，解决跨会话记忆问题。",
+          "score": 8.0,
+          "url": "https://github.com/okf-memory/okf-agent-memory"
+        }
+      ],
+      "usage_flow": [
+        "把 OKF Agent Memory 接入你的 AI 编码 Agent（如 Cursor、Claude Code 或自研 Agent）",
+        "Agent 自动将代码结构、关键决策、对话上下文按 OKF 格式写成 Markdown+YAML 文件，提交到 Git",
+        "下次启动时，Agent 通过内置的 BM25 搜索快速召回相关记忆，无需外部数据库",
+        "记忆文件随代码一起版本控制，可回滚、可 diff、可跨项目共享"
+      ],
+      "learning_points": [
+        "Agent Memory（Agent 记忆）：让 AI 不只是\"聊完就忘\"，而是能保存和调用历史信息的能力，分短期记忆（当前对话）和长期记忆（跨会话持久化）",
+        "RAG（检索增强生成）：AI 回答前先查资料库找相关片段，OKF Agent Memory 本质上就是一个专为代码项目定制的 RAG 知识库",
+        "Git-native 设计：把记忆存在 Git 里而非数据库，好处是自带版本历史、无需额外部署、开发者熟悉工具链；代价是大数据量时性能可能受限"
+      ],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "记忆",
+        "开源"
+      ]
+    },
+    {
+      "product_id": "product-d228f9f3e44a07ef",
+      "product_name": "Blender",
+      "builder_name": "Simon Willison",
+      "first_seen": "2026-09-06",
+      "last_seen": "2026-09-06",
+      "occurrence_count": 1,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Simon Willison演示在macOS上使用Blender和编码代理生成3D图像，展示AI辅助创意工作流。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.0,
+      "summary": "Simon Willison演示在macOS上使用Blender和编码代理生成3D图像，展示AI辅助创意工作流。",
+      "title": "Using Blender with coding agents on macOS",
+      "url": "https://simonwillison.net/2026/Sep/5/blender-coding-agents-macos/",
+      "sources": [
+        {
+          "url": "https://simonwillison.net/2026/Sep/5/blender-coding-agents-macos/",
+          "title": "Using Blender with coding agents on macOS",
+          "source_type": "rss",
+          "published_at": "2026-09-05T15:51:09+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "blender-coding-agents-macos",
+          "date": "2026-09-06",
+          "title": "Using Blender with coding agents on macOS",
+          "summary": "Simon Willison演示在macOS上使用Blender和编码代理生成3D图像，展示AI辅助创意工作流。",
+          "score": 8.0,
+          "url": "https://simonwillison.net/2026/Sep/5/blender-coding-agents-macos/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Blender",
+        "编码代理"
+      ]
+    },
+    {
+      "product_id": "product-f72e709087406552",
+      "product_name": "Vercel AI SDK",
+      "builder_name": "github-actions[bot]",
+      "first_seen": "2026-07-26",
+      "last_seen": "2026-09-06",
+      "occurrence_count": 5,
+      "intelligence_type": "model_capability",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Vercel AI SDK更新，增加GPT-6推理配置支持。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.0,
+      "summary": "Vercel AI SDK更新，增加GPT-6推理配置支持。",
+      "title": "vercel/ai released @ai-sdk/openai@4.0.60",
+      "url": "https://github.com/vercel/ai/releases/tag/%40ai-sdk/openai%404.0.60",
+      "sources": [
+        {
+          "url": "https://github.com/vercel/ai/releases/tag/%40ai-sdk/anthropic%404.0.20",
+          "title": "vercel/ai released @ai-sdk/anthropic@4.0.20",
+          "source_type": "github",
+          "published_at": "2026-07-24T17:25:31+00:00"
+        },
+        {
+          "url": "https://github.com/vercel/ai/releases/tag/%40ai-sdk/anthropic%403.0.102",
+          "title": "vercel/ai released @ai-sdk/anthropic@3.0.102",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://github.com/vercel/ai/releases/tag/%40ai-sdk/anthropic%402.0.91",
+          "title": "vercel/ai released @ai-sdk/anthropic@2.0.91",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://github.com/vercel/ai/releases/tag/%40ai-sdk/deepgram%403.1.0",
+          "title": "vercel/ai released @ai-sdk/deepgram@3.1.0",
+          "source_type": "github",
+          "published_at": "2026-08-23T01:45:50+00:00"
+        },
+        {
+          "url": "https://github.com/vercel/ai/releases/tag/ai%406.0.272",
+          "title": "vercel/ai released ai@6.0.272",
+          "source_type": "github",
+          "published_at": "2026-08-30T08:52:49+00:00"
+        },
+        {
+          "url": "https://github.com/vercel/ai/releases/tag/ai%407.0.85",
+          "title": "vercel/ai released ai@7.0.85",
+          "source_type": "github",
+          "published_at": "2026-08-30T08:04:57+00:00"
+        },
+        {
+          "url": "https://github.com/vercel/ai/releases/tag/%40ai-sdk/openai%404.0.60",
+          "title": "vercel/ai released @ai-sdk/openai@4.0.60",
+          "source_type": "github",
+          "published_at": "2026-09-05T18:26:03+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "vercel-ai-sdk-anthropic-4.0.20-features",
+          "date": "2026-07-26",
+          "title": "vercel/ai released @ai-sdk/anthropic@4.0.20",
+          "summary": "Vercel AI SDK 的 Anthropic 包 v4.0.20 新增 Claude Opus 5 模型、安全回退和对话中工具变更支持。",
+          "score": 8.0,
+          "url": "https://github.com/vercel/ai/releases/tag/%40ai-sdk/anthropic%404.0.20"
+        },
+        {
+          "update_id": "vercel-ai-deepgram-3.1.0",
+          "date": "2026-08-23",
+          "title": "vercel/ai released @ai-sdk/deepgram@3.1.0",
+          "summary": "Vercel AI SDK 更新了 Deepgram 集成，修复转录参数并调整说话人分离默认行为，开发者需注意配置变化。",
+          "score": 7.5,
+          "url": "https://github.com/vercel/ai/releases/tag/%40ai-sdk/deepgram%403.1.0"
+        },
+        {
+          "update_id": "vercel-ai-release-6.0.272",
+          "date": "2026-08-31",
+          "title": "vercel/ai released ai@6.0.272",
+          "summary": "Vercel AI SDK 发布 6.0.272，修复工具调用违规时响应处理并暴露错误内容，方便开发者恢复。",
+          "score": 7.5,
+          "url": "https://github.com/vercel/ai/releases/tag/ai%406.0.272"
+        },
+        {
+          "update_id": "vercel-ai-v7.0.85",
+          "date": "2026-08-31",
+          "title": "vercel/ai released ai@7.0.85",
+          "summary": "Vercel AI SDK发布7.0.85版本，修复多项问题并新增图像生成调用功能。",
+          "score": 7.0,
+          "url": "https://github.com/vercel/ai/releases/tag/ai%407.0.85"
+        },
+        {
+          "update_id": "ai-sdk-openai-4.0.60",
+          "date": "2026-09-06",
+          "title": "vercel/ai released @ai-sdk/openai@4.0.60",
+          "summary": "Vercel AI SDK更新，增加GPT-6推理配置支持。",
+          "score": 7.0,
+          "url": "https://github.com/vercel/ai/releases/tag/%40ai-sdk/openai%404.0.60"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "AI SDK",
+        "Vercel",
+        "Anthropic",
+        "Claude Opus 5",
+        "Vercel AI SDK",
+        "Deepgram",
+        "语音识别",
+        "工具调用",
+        "Agent",
+        "Vercel AI",
+        "SDK",
+        "版本发布",
+        "GPT-6"
       ]
     },
     {
@@ -2835,117 +3167,6 @@
         "有声书",
         "强制对齐",
         "开源"
-      ]
-    },
-    {
-      "product_id": "product-f72e709087406552",
-      "product_name": "Vercel AI SDK",
-      "builder_name": "github-actions[bot]",
-      "first_seen": "2026-07-26",
-      "last_seen": "2026-08-31",
-      "occurrence_count": 4,
-      "intelligence_type": "model_capability",
-      "evidence_status": "first_party",
-      "target_user": "未公开",
-      "user_problem": "未公开",
-      "what_it_is": "Vercel AI SDK发布7.0.85版本，修复多项问题并新增图像生成调用功能。",
-      "ai_role": "未公开",
-      "implementation_idea": "未公开",
-      "hands_on_exercise": "未公开",
-      "limitations_or_uncertainties": "未公开",
-      "region": "global",
-      "score": 7.0,
-      "summary": "Vercel AI SDK发布7.0.85版本，修复多项问题并新增图像生成调用功能。",
-      "title": "vercel/ai released ai@7.0.85",
-      "url": "https://github.com/vercel/ai/releases/tag/ai%407.0.85",
-      "sources": [
-        {
-          "url": "https://github.com/vercel/ai/releases/tag/%40ai-sdk/anthropic%404.0.20",
-          "title": "vercel/ai released @ai-sdk/anthropic@4.0.20",
-          "source_type": "github",
-          "published_at": "2026-07-24T17:25:31+00:00"
-        },
-        {
-          "url": "https://github.com/vercel/ai/releases/tag/%40ai-sdk/anthropic%403.0.102",
-          "title": "vercel/ai released @ai-sdk/anthropic@3.0.102",
-          "source_type": "supplemental",
-          "published_at": ""
-        },
-        {
-          "url": "https://github.com/vercel/ai/releases/tag/%40ai-sdk/anthropic%402.0.91",
-          "title": "vercel/ai released @ai-sdk/anthropic@2.0.91",
-          "source_type": "supplemental",
-          "published_at": ""
-        },
-        {
-          "url": "https://github.com/vercel/ai/releases/tag/%40ai-sdk/deepgram%403.1.0",
-          "title": "vercel/ai released @ai-sdk/deepgram@3.1.0",
-          "source_type": "github",
-          "published_at": "2026-08-23T01:45:50+00:00"
-        },
-        {
-          "url": "https://github.com/vercel/ai/releases/tag/ai%406.0.272",
-          "title": "vercel/ai released ai@6.0.272",
-          "source_type": "github",
-          "published_at": "2026-08-30T08:52:49+00:00"
-        },
-        {
-          "url": "https://github.com/vercel/ai/releases/tag/ai%407.0.85",
-          "title": "vercel/ai released ai@7.0.85",
-          "source_type": "github",
-          "published_at": "2026-08-30T08:04:57+00:00"
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "vercel-ai-sdk-anthropic-4.0.20-features",
-          "date": "2026-07-26",
-          "title": "vercel/ai released @ai-sdk/anthropic@4.0.20",
-          "summary": "Vercel AI SDK 的 Anthropic 包 v4.0.20 新增 Claude Opus 5 模型、安全回退和对话中工具变更支持。",
-          "score": 8.0,
-          "url": "https://github.com/vercel/ai/releases/tag/%40ai-sdk/anthropic%404.0.20"
-        },
-        {
-          "update_id": "vercel-ai-deepgram-3.1.0",
-          "date": "2026-08-23",
-          "title": "vercel/ai released @ai-sdk/deepgram@3.1.0",
-          "summary": "Vercel AI SDK 更新了 Deepgram 集成，修复转录参数并调整说话人分离默认行为，开发者需注意配置变化。",
-          "score": 7.5,
-          "url": "https://github.com/vercel/ai/releases/tag/%40ai-sdk/deepgram%403.1.0"
-        },
-        {
-          "update_id": "vercel-ai-release-6.0.272",
-          "date": "2026-08-31",
-          "title": "vercel/ai released ai@6.0.272",
-          "summary": "Vercel AI SDK 发布 6.0.272，修复工具调用违规时响应处理并暴露错误内容，方便开发者恢复。",
-          "score": 7.5,
-          "url": "https://github.com/vercel/ai/releases/tag/ai%406.0.272"
-        },
-        {
-          "update_id": "vercel-ai-v7.0.85",
-          "date": "2026-08-31",
-          "title": "vercel/ai released ai@7.0.85",
-          "summary": "Vercel AI SDK发布7.0.85版本，修复多项问题并新增图像生成调用功能。",
-          "score": 7.0,
-          "url": "https://github.com/vercel/ai/releases/tag/ai%407.0.85"
-        }
-      ],
-      "usage_flow": [],
-      "learning_points": [],
-      "verticals": [],
-      "tags": [
-        "AI SDK",
-        "Vercel",
-        "Anthropic",
-        "Claude Opus 5",
-        "Vercel AI SDK",
-        "Deepgram",
-        "语音识别",
-        "工具调用",
-        "Agent",
-        "Vercel AI",
-        "SDK",
-        "版本发布"
       ]
     },
     {
