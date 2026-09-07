@@ -1,7 +1,189 @@
 {
   "version": 1,
-  "updated_at": "2026-09-06T04:38:17.417885+00:00",
+  "updated_at": "2026-09-07T04:40:26.996742+00:00",
   "products": [
+    {
+      "product_id": "product-41ace201e3236aeb",
+      "product_name": "国家反诈AI APP",
+      "builder_name": "珠海网",
+      "first_seen": "2026-09-07",
+      "last_seen": "2026-09-07",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "reported",
+      "target_user": "普通群众，尤其是需要防范电信诈骗的手机用户",
+      "user_problem": "老百姓遇到可疑电话、短信、链接时，分不清是不是诈骗，缺乏即时、专业的判断渠道",
+      "what_it_is": "公安部刑侦局指导、上海市公安局自主研发的一款用AI帮老百姓识别电信诈骗的手机应用",
+      "ai_role": "AI负责接收用户输入的多模态信息，用大语言模型做风险分析，判断是否为诈骗并给出解释",
+      "implementation_idea": "把反诈知识库和常见诈骗套路'教'给大语言模型，用户描述情况时，AI像咨询员一样比对已知案例，输出风险评级和提醒。多模态指能同时处理文字、语音、图片等多种输入形式。",
+      "hands_on_exercise": "打开任意一个大模型APP（如Kimi、文心一言），模拟输入一段可疑短信内容，观察它能否识别诈骗特征；再对比官方'国家反诈中心'APP的功能差异，记录AI回答的准确度和局限性",
+      "limitations_or_uncertainties": "具体技术架构未公开；是否已全国推广、用户量、实际拦截效果均未披露；'智能体技术'的具体实现方式未说明；目前信息主要来自地方媒体和科技媒体转载，未见公安部官方详细发布",
+      "region": "china",
+      "score": 7.5,
+      "summary": "国家反诈AI APP正式上线，利用AI技术辅助反诈骗，但具体功能细节待披露。",
+      "title": "“国家反诈AI”APP上线",
+      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE15RlhNRjdvTzhqVlBYMDZnSUxuS3lnTXNPaldYYVJPbFZWTFp3cFJXN0NvUG5BVHlqMFFhRFF4eXBEVFBDaVhfMGk0RjVta3BWcGVVZlRVQ3ROemtldk1zVW16UUY1ekd4NzF2bjNmX3pWSmRQMVNn?oc=5",
+      "sources": [
+        {
+          "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE15RlhNRjdvTzhqVlBYMDZnSUxuS3lnTXNPaldYYVJPbFZWTFp3cFJXN0NvUG5BVHlqMFFhRFF4eXBEVFBDaVhfMGk0RjVta3BWcGVVZlRVQ3ROemtldk1zVW16UUY1ekd4NzF2bjNmX3pWSmRQMVNn?oc=5",
+          "title": "“国家反诈AI”APP上线！ - 珠海网",
+          "source_type": "google_news",
+          "published_at": "2026-09-06T06:49:00+00:00"
+        },
+        {
+          "url": "https://finance.eastmoney.com/a/202609073866196147.html",
+          "title": "AI 早报 | Kimi、MiniMax即将在天猫开店；“ 国 家 反 诈 AI ”APP...",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://post.smzdm.com/p/agg4pdxm/",
+          "title": "国 家 反 诈 AI ...",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "national-anti-fraud-ai-app-launch",
+          "date": "2026-09-07",
+          "title": "“国家反诈AI”APP上线",
+          "summary": "国家反诈AI APP正式上线，利用AI技术辅助反诈骗，但具体功能细节待披露。",
+          "score": 7.5,
+          "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE15RlhNRjdvTzhqVlBYMDZnSUxuS3lnTXNPaldYYVJPbFZWTFp3cFJXN0NvUG5BVHlqMFFhRFF4eXBEVFBDaVhfMGk0RjVta3BWcGVVZlRVQ3ROemtldk1zVW16UUY1ekd4NzF2bjNmX3pWSmRQMVNn?oc=5"
+        }
+      ],
+      "usage_flow": [
+        "用户在手机下载安装APP",
+        "输入或描述遇到的疑似诈骗场景（文字、语音或图片）",
+        "APP进行风险研判，识别诈骗套路",
+        "系统推送典型案例和防范建议"
+      ],
+      "learning_points": [
+        "多模态模型：能同时看懂文字、听懂语音、识别图片的AI，不只是聊天打字",
+        "RAG（检索增强生成）：AI回答前先查专业数据库，避免胡说，这里可能是查反诈案例库",
+        "Agent（智能体）：AI不只是回答问题，还能主动完成一系列任务，比如研判→识别→推送建议"
+      ],
+      "verticals": [],
+      "tags": [
+        "反诈",
+        "政府"
+      ]
+    },
+    {
+      "product_id": "product-b87a8e4ad86d9cf3",
+      "product_name": "GET Together",
+      "builder_name": "nchudleigh",
+      "first_seen": "2026-09-07",
+      "last_seen": "2026-09-07",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "early_signal",
+      "target_user": "喜欢 HTTP 协议梗的开发者、追求极简交互的技术爱好者、想快速分享文字而不想注册复杂平台的用户",
+      "user_problem": "传统社交网络注册流程繁琐、需要学习各种界面操作；开发者想玩一个关于 HTTP GET/POST 双关语的极客梗（GET 请求 = 获取数据，但这里用来 'Post' 发帖）",
+      "what_it_is": "一个极简社交网络，用户通过构造 URL 参数（GET 请求）来发布内容，完全不用 POST 等传统提交方式。",
+      "ai_role": "未使用 AI。这是一个纯 HTTP 协议创意项目，没有 LLM、推荐算法或内容生成环节。",
+      "implementation_idea": "核心是个'反着来'的设计：正常网站用 POST 提交表单数据（比如发微博点'发布'按钮），但这里把发帖动作也变成'打开一个链接'。技术上就是在服务器端写一个路由，收到 GET 请求时不去'读取'内容，而是把 URL 里的参数'写入'数据库。这违反了 HTTP 设计惯例（GET 应该是安全的、只读的），所以是个故意搞怪的技术梗。",
+      "hands_on_exercise": "30 分钟练习：用 Python + Flask 搭一个极简版。① 写个 /post?msg=你好 路由，收到请求就把 msg 存进列表；② 写个 / 路由，用 GET 返回列表里所有内容；③ 在浏览器里直接输入 URL 发几条'帖子'；④ 观察：刷新页面会不会重复发帖？（这是 GET 写入的经典坑）思考怎么用最简单的方式避免。",
+      "limitations_or_uncertainties": "具体防刷机制未公开；是否持久化存储（数据库还是内存）未公开；实际运行状态和规模未公开；开发者身份仅能从 GitHub 用户名 nchudleigh 推测，未确认与项目的直接关联",
+      "region": "global",
+      "score": 7.0,
+      "summary": "开发者展示了一个仅用GET请求的社交网络GET Together，创意新颖但无AI功能。",
+      "title": "GET Together：一个只用 GET 请求就能发帖的社交网络",
+      "url": "https://gettogether.dev/",
+      "sources": [
+        {
+          "url": "https://gettogether.dev/",
+          "title": "Show HN: GET Together – A social network where you don't need POST to Post",
+          "source_type": "hackernews",
+          "published_at": "2026-09-07T01:41:11+00:00"
+        },
+        {
+          "url": "https://github.com/nchudleigh",
+          "title": "nchudleigh (Neil Chudleigh ) · GitHub",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://huggingface.co/nchudleigh",
+          "title": "nchudleigh (Neil)",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "get-together-social-network",
+          "date": "2026-09-07",
+          "title": "GET Together：一个只用 GET 请求就能发帖的社交网络",
+          "summary": "开发者展示了一个仅用GET请求的社交网络GET Together，创意新颖但无AI功能。",
+          "score": 7.0,
+          "url": "https://gettogether.dev/"
+        }
+      ],
+      "usage_flow": [
+        "用户在浏览器地址栏输入特定格式的 URL，把想发的内容放进查询参数里",
+        "服务器接收这个 GET 请求，解析参数并保存为一条新帖子",
+        "其他用户访问首页或特定 URL，服务器用 GET 返回所有已保存的帖子列表",
+        "（推测）分享这个 URL 即可让别人看到你的帖子"
+      ],
+      "learning_points": [
+        "HTTP 方法：GET 是'要数据'，POST 是'给数据'，这个项目故意打破这个规矩来制造双关效果",
+        "URL 查询参数：?name=value 这种形式不只是搜索框在用，任何信息都可以塞进 URL 里传递",
+        "RESTful 设计原则：为什么正常开发要避免用 GET 做写入操作（涉及安全性、缓存、浏览器预加载等风险）"
+      ],
+      "verticals": [],
+      "tags": [
+        "社交网络"
+      ]
+    },
+    {
+      "product_id": "product-6aa222d758e25e71",
+      "product_name": "MINI Spike",
+      "builder_name": "汽车之家",
+      "first_seen": "2026-09-07",
+      "last_seen": "2026-09-07",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "MINI Spike车型引入阿里和DeepSeek双AI模型，实现AI双核驱动，但具体功能未详述。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "china",
+      "score": 7.0,
+      "summary": "MINI Spike车型引入阿里和DeepSeek双AI模型，实现AI双核驱动，但具体功能未详述。",
+      "title": "【视频】MINI Spike进AI双核时代！阿里DeepSeek双模型上车 - 汽车之家",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9OLXVlYWJuUU1MdUVLVkZtSFpBYldsQ0ZUa2JjdVpnbGhFX3RVTUZyZjFJMURNY0JKMXFGQTlYVkNzcU1oUWpFbmFrTmtNMHhrb2RkVjRVOGtwQXA5Sl9HejJJa1ZLN1lyNEM0?oc=5",
+      "sources": [
+        {
+          "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9OLXVlYWJuUU1MdUVLVkZtSFpBYldsQ0ZUa2JjdVpnbGhFX3RVTUZyZjFJMURNY0JKMXFGQTlYVkNzcU1oUWpFbmFrTmtNMHhrb2RkVjRVOGtwQXA5Sl9HejJJa1ZLN1lyNEM0?oc=5",
+          "title": "【视频】MINI Spike进AI双核时代！阿里DeepSeek双模型上车 - 汽车之家",
+          "source_type": "google_news",
+          "published_at": "2026-09-07T00:20:32+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "mini-spike-ai-dual-model",
+          "date": "2026-09-07",
+          "title": "【视频】MINI Spike进AI双核时代！阿里DeepSeek双模型上车 - 汽车之家",
+          "summary": "MINI Spike车型引入阿里和DeepSeek双AI模型，实现AI双核驱动，但具体功能未详述。",
+          "score": 7.0,
+          "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9OLXVlYWJuUU1MdUVLVkZtSFpBYldsQ0ZUa2JjdVpnbGhFX3RVTUZyZjFJMURNY0JKMXFGQTlYVkNzcU1oUWpFbmFrTmtNMHhrb2RkVjRVOGtwQXA5Sl9HejJJa1ZLN1lyNEM0?oc=5"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "汽车",
+        "多模型"
+      ]
+    },
     {
       "product_id": "product-4da9faac6cb2f1ac",
       "product_name": "Fast Cut Video",
