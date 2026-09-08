@@ -499,6 +499,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "048b3a01030e1828d8f095bdc0b53241fd0c4baa43571e075643fefe9f7d3717": {
+      "created_at": "2026-09-08T04:34:08.627746+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "rsa-ca-factor-90s",
+        "evidence_status": "reported",
+        "follow_up": "无。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:49604637",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "关于破解 90 年代 RSA 证书的技术文章，与 AI 产品无关，且涉及 LLM 辅助但非核心。",
+        "region": "global",
+        "score": 4.0,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "一篇关于破解 90 年代 RSA 证书的技术文章，与 AI 产品无关。",
+        "tags": [
+          "安全",
+          "RSA"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "04a14c2859c5db0e8a80e40eae6ac37bcd91ada30b460a27c3cdddce7ffb3d51": {
       "created_at": "2026-09-06T04:37:36.318379+00:00",
       "model": "deepseek-v4-flash",
@@ -3593,6 +3631,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "11ae29ce0cc7f124807398083dd2691d8db89c5848c00386149a81318ee0a7e4": {
+      "created_at": "2026-09-08T04:34:08.627882+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "jellyfin-12.0-release",
+        "evidence_status": "reported",
+        "follow_up": "查看官方发布说明了解新功能。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:49604861",
+        "intelligence_type": "product_case",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Jellyfin",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Jellyfin 12.0 发布，但内容主要是用户评论，无具体新功能细节，且与 AI 关联弱。",
+        "region": "global",
+        "score": 5.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Jellyfin 12.0 发布，但缺乏具体功能细节，与 AI 产品关联弱。",
+        "tags": [
+          "媒体服务器",
+          "开源"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "11bed4b6f3915a370ebc2784d9cf6e07ad28b65d95e389e72f2761bd442f22bd": {
       "created_at": "2026-08-26T01:58:33.863973+00:00",
       "model": "deepseek-v4-flash",
@@ -3662,6 +3738,45 @@
         "what_it_is": "一篇第三方博客文章，从外部反推 ChatGPT Work 的 Agent 能力设计，包括记忆、主动执行、定时任务、浏览器操作等模块"
       },
       "stage": "deep_analysis"
+    },
+    "12c4ec307b5864b988e6857d858e813128471b7ca1fe5fe3282cf569b37cbcee": {
+      "created_at": "2026-09-08T04:33:57.304655+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "simonw-equal-earth-map-tool",
+        "evidence_status": "first_party",
+        "follow_up": "关注GPT-6 Astra在更多场景下的应用表现。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:simonwillison.net_atom_everything_:960f861c32aa6064",
+        "intelligence_type": "builder_insight",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Mercator ↔ Equal Earth",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Simon Willison使用GPT-6 Astra构建地图投影转换工具，展示了新模型在具体产品开发中的应用，有实际Demo，对理解模型能力有直接价值。",
+        "region": "global",
+        "score": 8.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Simon Willison用GPT-6 Astra构建了Mercator与Equal Earth地图投影转换工具，展示了新模型的编程能力。",
+        "tags": [
+          "AI编程",
+          "GPT-6 Astra",
+          "工具"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
     },
     "12d95a5d888303e42efe88d9ddaa7bd5f2cc710bbb59eb9909b78d8567175b8d": {
       "created_at": "2026-08-18T01:50:29.176068+00:00",
@@ -4002,6 +4117,44 @@
           "Product",
           "OpenAI",
           "Scaling"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "14b70c3339a215d463dd2809c2960f020d795714c584d7a6891a0858e2f7e3d1": {
+      "created_at": "2026-09-08T04:33:57.304445+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "llm-0.35-release",
+        "evidence_status": "first_party",
+        "follow_up": "关注llm工具后续更新及GPT-6 Astra的实际使用体验。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:simonwillison.net_atom_everything_:af3eb01e61119dd3",
+        "intelligence_type": "builder_insight",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "llm",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Simon Willison发布llm工具0.35版本，新增对GPT-6 Astra模型的支持，属于开发者工具更新，对使用llm的开发者有直接价值。",
+        "region": "global",
+        "score": 7.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Simon Willison发布llm 0.35，新增支持OpenAI的GPT-6 Astra模型。",
+        "tags": [
+          "开发者工具",
+          "模型支持"
         ],
         "target_user": "",
         "verticals": []
@@ -5726,6 +5879,41 @@
           "Hardware",
           "OpenAI"
         ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "1c649fc48ddf195cdc170ccf172370604c698b0cc39182bd63b9215f17cfa163": {
+      "created_at": "2026-09-08T04:34:20.989670+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "unknown-sina-news",
+        "evidence_status": "reported",
+        "follow_up": "",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "google_news:article:b24e7abe8ae2508c",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": false,
+        "is_promotional": true,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "标题和内容为空，无有效信息，属于噪音。",
+        "region": "china",
+        "score": 0.0,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "无有效内容。",
+        "tags": [],
         "target_user": "",
         "verticals": []
       },
@@ -10542,6 +10730,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "3382518aa8d3d3ff47ce152e709f4dfbc8c4c56fcfcda904adc612def9d01e38": {
+      "created_at": "2026-09-08T04:34:08.628432+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "economist-ai-jobs",
+        "evidence_status": "reported",
+        "follow_up": "无。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:49596610",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "经济学人关于 AI 对就业影响的文章，泛行业评论，无具体产品案例。",
+        "region": "global",
+        "score": 4.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "经济学人文章称 AI 对就业的初步影响积极，但缺乏具体产品案例。",
+        "tags": [
+          "就业",
+          "经济"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "33a964de1fbf03f3d90f7afd3e4ef8bc3ff57c9bdcc77ab19b25f88d1ae74373": {
       "created_at": "2026-08-20T01:51:42.044278+00:00",
       "model": "deepseek-v4-flash",
@@ -11069,6 +11295,45 @@
           "LLM",
           "程序分析",
           "构建者经验"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "3613cfbce82d9cf9a26641a9111dee40e4b31348744aa1de4f67d3176103a585": {
+      "created_at": "2026-09-08T04:34:08.628167+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "caltech-mathathon-ai",
+        "evidence_status": "reported",
+        "follow_up": "关注活动成果和 AI 在数学研究中的应用。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:49596055",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Caltech 数学黑客松，鼓励 AI 用于数学研究，但无具体产品案例，属于活动信息。",
+        "region": "global",
+        "score": 6.0,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "Caltech 举办首个数学研究黑客松，鼓励 AI 用于数学，但无具体产品案例。",
+        "tags": [
+          "数学",
+          "黑客松",
+          "AI"
         ],
         "target_user": "",
         "verticals": []
@@ -13548,6 +13813,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "4251fa05fc5fa33bbf4ba3e2ec5930d194dce2baee5345d872676003623017c8": {
+      "created_at": "2026-09-08T04:33:57.303293+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openbmb-minicpm5-2b-release",
+        "evidence_status": "reported",
+        "follow_up": "关注MiniCPM5 2B的实际性能评测和端侧应用案例。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "public_web:sitemap:e12f0aa9fa0d5b095df3",
+        "intelligence_type": "model_capability",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "MiniCPM5 2B",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenBMB发布MiniCPM5 2B模型，属于模型能力更新，但来源为第三方分析，缺乏详细技术细节和产品应用案例，评分中等偏上。",
+        "region": "china",
+        "score": 7.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "OpenBMB发布了MiniCPM5 2B模型，值得关注其端侧部署潜力。",
+        "tags": [
+          "模型发布",
+          "端侧AI"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "42527df2006e4c3eef0baa5e418e40cb6030025488d55ff485fc60a9b7682bfc": {
       "created_at": "2026-09-06T04:37:27.095552+00:00",
       "model": "deepseek-v4-flash",
@@ -14756,6 +15059,38 @@
       },
       "stage": "candidate_analysis"
     },
+    "46fc1b0e85b32455cfc8df7e9bce716e6752b02a3be0bb8d63af33fbd59848eb": {
+      "created_at": "2026-09-08T04:34:56.941952+00:00",
+      "model": "kimi-k2.6",
+      "prompt_version": "deep-v3-beginner",
+      "result": {
+        "ai_role": "在远程服务器上执行需要浏览器的 AI 任务（比如自动填表、抓取信息、操作网页），Brw 负责把画面和操作通道打通，让人能远程监督",
+        "evidence_status": "early_signal",
+        "hands_on_exercise": "30 分钟练习：在本地电脑安装 Playwright，写一段脚本自动打开一个网站并截图；再用 ngrok 或本地 SSH 反向隧道，尝试在另一台设备（或手机）上查看这个截图。体会'远端执行、本地观看'的感觉。",
+        "implementation_idea": "本质上是'浏览器自动化 + 远程桌面'的组合：底层用类似 Puppeteer/Playwright 的方式控制浏览器，再通过 SSH 隧道把浏览器的图形界面或视频流传回本地，让你像看直播一样监控远端的自动化过程",
+        "learning_points": [
+          "浏览器自动化（Browser Automation）：让代码代替人手去点击网页、填表、抓数据，像有个看不见的机器人在操作浏览器",
+          "SSH 隧道：一种加密通道，让你安全地访问远端电脑上的服务，就像给两地拉了一条专属网线",
+          "Agent（智能体）：AI 不只是聊天，还能调用工具（如浏览器）去实际完成任务，Brw 就是给这种 Agent 提供了'手和眼睛'"
+        ],
+        "limitations_or_uncertainties": "未公开：具体支持哪些浏览器自动化框架（Puppeteer/Playwright/Selenium？）、SSH 传输的是完整桌面还是仅浏览器标签页、是否开源、定价、实际性能与稳定性；目前仅有 Show HN 帖子，无独立用户深度评测",
+        "product_name": "Brw",
+        "sources": [
+          "https://brw.donworks.co.uk/"
+        ],
+        "target_users": "需要远程运行浏览器自动化任务的人，比如管理多个社交账号、让服务器跑 AI 任务但想在笔记本上监控进度的人",
+        "title_zh": "Brw：可远程 SSH 操控的浏览器自动化工具，自称比 Claude 的浏览器功能更强",
+        "usage_flow": [
+          "在远程服务器（'big rig'）上启动 Brw，让它打开浏览器并执行自动化脚本",
+          "通过 SSH 把浏览器画面隧道传输到自己的笔记本",
+          "在本地实时观看浏览器操作，必要时人工介入或调整",
+          "AI 任务完成后，在本地查看结果或继续下一步"
+        ],
+        "user_problem": "现有工具（如 Claude 内置的浏览器功能）要么不能远程操控，要么无法在本地实时看到远端浏览器在干什么；如果 AI 任务需要跑在性能更强的远程机器上，用户很难边跑边看、及时干预",
+        "what_it_is": "一个让你用代码远程控制浏览器、并在本地电脑实时观看操作画面的工具，主打 AI 任务场景。"
+      },
+      "stage": "deep_analysis"
+    },
     "4714bbdc084cafacc53b84eab4b035d559a43be79cd5b218ea04a278cb932c59": {
       "created_at": "2026-09-04T04:31:13.385204+00:00",
       "model": "deepseek-v4-flash",
@@ -15442,6 +15777,45 @@
         "tags": [
           "企业AI",
           "合作"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "49d96a0195c999084fc26ece1c074530bc413e025186321fcd62da00692c7542": {
+      "created_at": "2026-09-08T04:34:20.989309+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "isle-managed-app-envs-showhn",
+        "evidence_status": "first_party",
+        "follow_up": "关注其具体功能、定价和用户采用情况。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:49600473",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Isle",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Show HN 展示为 computer-use agents 提供托管应用环境，但缺乏详细功能描述和用户反馈，仅有简单评论，价值有限。",
+        "region": "global",
+        "score": 7.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "开发者展示 Isle，为 computer-use agents 提供托管应用环境，解决代理运行环境管理问题。",
+        "tags": [
+          "Agent",
+          "Infrastructure",
+          "Show HN"
         ],
         "target_user": "",
         "verticals": []
@@ -18815,6 +19189,46 @@
       },
       "stage": "candidate_analysis"
     },
+    "5b9a8b90d03dd43435372b5c4131b0aaef850034e4a59d84fc912a0cf20c7d71": {
+      "created_at": "2026-09-08T04:34:20.989640+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "pc-ai-models-deepseek-qwen-zhipu",
+        "evidence_status": "reported",
+        "follow_up": "关注 PC 厂商与模型公司的具体合作产品。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "google_news:article:150cc12c04f60d1c",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "讨论 DeepSeek、千问、智谱等模型对 PC 厂商的意义，涉及 AI PC 趋势，有一定行业观察价值，但无具体产品案例。",
+        "region": "china",
+        "score": 7.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "DeepSeek、千问、智谱等模型为 PC 厂商提供 AI 能力，推动 AI PC 发展。",
+        "tags": [
+          "AI PC",
+          "DeepSeek",
+          "千问",
+          "智谱"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "5bc53b134d9d77fd2a0369abfdd96d749f9ba30d221ae6f9bcae49a6553fbfd0": {
       "created_at": "2026-08-22T01:49:51.778165+00:00",
       "model": "deepseek-v4-flash",
@@ -20114,6 +20528,44 @@
           "Qwen",
           "DeepSeek",
           "Geopolitics"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "618b6b87a2cd3f3bddf1d6fcd7707bc93f6d8f85c1c587d63bc9388a3519e908": {
+      "created_at": "2026-09-08T04:34:20.989552+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "deepseek-hiring-150-backend",
+        "evidence_status": "reported",
+        "follow_up": "关注负责人具体发言内容。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "google_news:article:21223646ecd2e21d",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "DeepSeek 团队负责人发声，但内容未提供具体细节，价值有限。",
+        "region": "china",
+        "score": 6.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "DeepSeek 大扩招，团队负责人发声说明招聘意图。",
+        "tags": [
+          "DeepSeek",
+          "招聘"
         ],
         "target_user": "",
         "verticals": []
@@ -22368,6 +22820,44 @@
           "AI设计",
           "协作",
           "产品"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "6caca4cb9479ee3278850f2d81cf3d0c1b446f9ba6d70ad478db16a4571e795f": {
+      "created_at": "2026-09-08T04:33:57.304512+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-chief-scientist-ai-defense",
+        "evidence_status": "first_party",
+        "follow_up": "关注OpenAI在防御性AI方面的具体部署和产品。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:simonwillison.net_atom_everything_:c63c028916285fc2",
+        "intelligence_type": "model_capability",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI首席科学家Jakub Pachocki关于AI防御的言论，属于观点分享，对理解OpenAI战略有一定价值，但缺乏具体产品信息。",
+        "region": "global",
+        "score": 6.5,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "OpenAI首席科学家强调需要训练更强大的模型来构建防御系统，以应对AI风险。",
+        "tags": [
+          "AI安全",
+          "OpenAI"
         ],
         "target_user": "",
         "verticals": []
@@ -26526,6 +27016,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "7f4beb75829b9e72214617add8a27cf6447f087b026bea159aa6a1d9ff180d50": {
+      "created_at": "2026-09-08T04:34:08.627619+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "n8n-release-2.38.4",
+        "evidence_status": "first_party",
+        "follow_up": "关注后续版本是否引入新的 AI 相关功能。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "github:release:383918498",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "n8n",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "n8n 的常规补丁版本，主要修复 bug，无新功能或重大更新，对 AI 产品构建者价值有限。",
+        "region": "global",
+        "score": 5.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "n8n 发布 2.38.4 补丁版本，修复了任务超时、外部密钥等 bug，无新功能，价值有限。",
+        "tags": [
+          "工作流",
+          "开源"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "7f6740a0e38b7b55a0c725c5a80225610a0c495e91e773478cd7f74c36458083": {
       "created_at": "2026-08-07T03:15:46.703524+00:00",
       "model": "deepseek-v4-flash",
@@ -27135,6 +27663,44 @@
           "n8n",
           "工作流自动化",
           "补丁"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "82c81636f066e5e0bb5f7643ee851426b4e3bfd2b4a928eb8bd44f74c608d4cd": {
+      "created_at": "2026-09-08T04:33:57.304679+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-codex-rust-v0.154.0-alpha.6",
+        "evidence_status": "first_party",
+        "follow_up": "关注该版本的详细变更日志和实际使用反馈。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "github:release:384251520",
+        "intelligence_type": "builder_insight",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Codex",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI Codex发布新版本，属于开发者工具更新，但缺乏具体变更内容，信息有限。",
+        "region": "global",
+        "score": 7.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "OpenAI Codex发布rust-v0.154.0-alpha.6版本，但未提供详细更新说明。",
+        "tags": [
+          "开发者工具",
+          "Codex"
         ],
         "target_user": "",
         "verticals": []
@@ -27816,6 +28382,44 @@
           "模型发布",
           "开源",
           "Qwen"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "86eacf23199833d2c669b7f9d34fd5e5303d4608937071780d70eb69ca5295cd": {
+      "created_at": "2026-09-08T04:34:08.628022+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "broadcom-vddk-pulled",
+        "evidence_status": "reported",
+        "follow_up": "无。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:49602699",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "关于 VMware 和 Broadcom 的商业新闻，与 AI 产品无关。",
+        "region": "global",
+        "score": 3.0,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "Broadcom 撤下 VDDK 下载，加剧 VMware 迁移难度，与 AI 无关。",
+        "tags": [
+          "VMware",
+          "商业"
         ],
         "target_user": "",
         "verticals": []
@@ -30432,6 +31036,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "92a22bc1dcb230d6aaa1ca3e293fabc1ec433756f434036862cf910b5b7e04b5": {
+      "created_at": "2026-09-08T04:34:20.989595+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "deepseek-hiring-150-backend",
+        "evidence_status": "reported",
+        "follow_up": "无新意。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "google_news:article:49baf201e507709f",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "重复 DeepSeek 扩招新闻，强调 0 个 AI 研究岗，信息重复。",
+        "region": "china",
+        "score": 6.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "DeepSeek 一口气扩招 150 人，但 0 个 AI 研究岗。",
+        "tags": [
+          "DeepSeek",
+          "招聘"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "92a7b92e3203462a9c4a8367eb8e8c7ced10e3d9e34d0a89730d53d3fd82b011": {
       "created_at": "2026-09-04T04:32:16.264319+00:00",
       "model": "kimi-k2.6",
@@ -31185,6 +31827,45 @@
         "tags": [
           "OpenAI",
           "行业观点"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "959b3a9a4d0236ebd20dc2410cd8e3c7049e1db8b0c7a2087f5dd3da502b3735": {
+      "created_at": "2026-09-08T04:34:20.989427+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "deepseek-hiring-150-backend",
+        "evidence_status": "reported",
+        "follow_up": "关注 DeepSeek 后续新产品或技术方向。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "google_news:article:5b9265e41462667c",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "DeepSeek 大规模招聘后端工程师，反映公司发展方向，但无具体产品细节，对产品经理参考价值有限。",
+        "region": "china",
+        "score": 6.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "DeepSeek 开放 150 个后端/服务端工程师岗位，显示公司扩张和产品开发需求。",
+        "tags": [
+          "DeepSeek",
+          "招聘",
+          "公司动态"
         ],
         "target_user": "",
         "verticals": []
@@ -33208,6 +33889,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "9e70f4b1df83f32a75b7cff9ac85bd166d7a4924b94321194552bc8a209b5858": {
+      "created_at": "2026-09-08T04:33:57.304217+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "grok-bot-vs-openclaw-agent-stack",
+        "evidence_status": "reported",
+        "follow_up": "关注Grok Bot与OpenClaw的详细对比和实际使用反馈。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "newsletter:feed:18890259a206549a8a20",
+        "intelligence_type": "builder_insight",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "播客讨论Grok Bot与OpenClaw的对比，涉及agent工具链的实践经验，但内容为访谈形式，缺乏具体技术细节和可验证的案例。",
+        "region": "global",
+        "score": 7.0,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "播客讨论为何用Grok Bot替换OpenClaw，分享agent工具链的选型经验。",
+        "tags": [
+          "Agent",
+          "工具链"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "9e915a45aa1e35bb910fa2100d422304b712b126688bbf89cc44acd186a28b1a": {
       "created_at": "2026-08-18T01:50:29.176116+00:00",
       "model": "deepseek-v4-flash",
@@ -33591,6 +34310,45 @@
         "tags": [
           "AI音乐",
           "版权"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "a03cd465465c6b585ee6e928a95be6c91a910cb0ab7298b5487ea4c793ccc060": {
+      "created_at": "2026-09-08T04:34:20.989505+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "deepseek-hiring-150-backend",
+        "evidence_status": "reported",
+        "follow_up": "关注 DeepSeek 产品化进展。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "google_news:article:571808751b97d693",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "指出 DeepSeek 扩招岗位全部非 AI 研究方向，暗示产品化转型，有一定洞察，但仍是招聘新闻。",
+        "region": "china",
+        "score": 6.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "DeepSeek 扩招 150 个岗位全部非 AI 研究方向，显示公司重心转向工程和产品化。",
+        "tags": [
+          "DeepSeek",
+          "招聘",
+          "战略"
         ],
         "target_user": "",
         "verticals": []
@@ -34700,6 +35458,45 @@
           "LangChain",
           "OpenAI",
           "异常处理"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "a3b2688a72579cb4c68fe648526454242e19a45d7f233081905506b139790a83": {
+      "created_at": "2026-09-08T04:33:57.304597+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "simonw-video-compressor-tool",
+        "evidence_status": "first_party",
+        "follow_up": "关注该工具的实际使用效果和AI编程的更多案例。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:simonwillison.net_atom_everything_:656c3dbba15803a8",
+        "intelligence_type": "builder_insight",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Video compressor",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Simon Willison使用Claude Code构建视频压缩工具，展示了AI辅助开发的实际案例，有具体工具和构建过程，对初学者理解AI编程有较高价值。",
+        "region": "global",
+        "score": 8.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Simon Willison用Claude Code构建了一个视频压缩工具，展示了AI辅助开发的实践。",
+        "tags": [
+          "AI编程",
+          "工具",
+          "案例"
         ],
         "target_user": "",
         "verticals": []
@@ -36639,6 +37436,46 @@
       },
       "stage": "candidate_analysis"
     },
+    "ad995ac4c0dc6a2c94df7f787c942d84748a669cc14520f267fc8390c7e21381": {
+      "created_at": "2026-09-08T04:34:20.989371+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "animaxxing-agent-skills-gsap-showhn",
+        "evidence_status": "first_party",
+        "follow_up": "关注技能包是否开源及实际应用效果。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:49603561",
+        "intelligence_type": "builder_insight",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Animaxxing",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "构建者详细说明为 coding agents 创建 GSAP 技能，用于网页动画，有实际 demo 和用户正面评论，展示构建者实践，对 AI 产品开发者有启发。",
+        "region": "global",
+        "score": 7.8,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "开发者展示 Animaxxing，通过为编码代理创建 GSAP 技能实现网站动画，解决代理生成复杂动画的问题。",
+        "tags": [
+          "Agent",
+          "GSAP",
+          "Animation",
+          "Show HN"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "ad9a30e1c924040ae00284e086cf1121eb890b643df1e88d8f5aac241107003a": {
       "created_at": "2026-08-11T02:28:07.731293+00:00",
       "model": "kimi-k2.6",
@@ -37399,6 +38236,38 @@
         "verticals": []
       },
       "stage": "candidate_analysis"
+    },
+    "b0e55419a41aa91fe4610308bc0326c45d36fe3f472f4dbce249d55fef087003": {
+      "created_at": "2026-09-08T04:34:39.355775+00:00",
+      "model": "kimi-k2.6",
+      "prompt_version": "deep-v3-beginner",
+      "result": {
+        "ai_role": "AI 负责在每次对话时自动检索相关历史记忆，并基于摘要理解之前的决策和代码变更，无需用户手动复制粘贴",
+        "evidence_status": "verified",
+        "hands_on_exercise": "30 分钟练习：① 克隆 Engrim 仓库并安装；② 用它配置一个你常用的 AI CLI（如 Claude Code）；③ 进行 2-3 轮对话，然后新开会话测试 AI 是否记得之前的上下文；④ 用 SQLite 浏览器打开本地数据库，看看记忆是怎么存的",
+        "implementation_idea": "在 AI CLI 和底层模型之间加一层「记忆中间件」——用 SQLite 做轻量本地数据库，通过 hook 机制拦截对话内容，自动做摘要和索引，下次对话时把相关片段喂给模型。类似给 AI 配了一个本地笔记本。",
+        "learning_points": [
+          "Local-first（本地优先）：数据默认存在自己电脑，不上传云端，解决隐私和离线问题",
+          "RAG（检索增强生成）：不把所有历史都塞给模型，而是先搜相关的片段再喂给 AI，省 token 又精准",
+          "Embedding（嵌入）：把文字转成数字向量，让电脑能「语义搜索」找到意思相近的内容，不只是关键词匹配"
+        ],
+        "limitations_or_uncertainties": "未公开具体支持的 AI CLI 工具有哪些（官方说「自动检测」，但完整列表未确认）；未公开摘要生成的具体策略和 token 消耗； uninstall 脚本是否内置未明确回应；Stop hooks 的阻塞机制细节未在文档中详述",
+        "product_name": "Engrim",
+        "sources": [
+          "https://github.com/timgordontg/engrim"
+        ],
+        "target_users": "经常使用 AI CLI 工具写代码的开发者，特别是需要 AI 记住跨项目、跨会话上下文的人",
+        "title_zh": "Engrim：为 AI 命令行工具打造的本地优先 SQLite 记忆引擎",
+        "usage_flow": [
+          "安装后运行 `engrim setup`，自动检测并配置已安装的 AI CLI 环境",
+          "正常使用 AI CLI 工具，Engrim 在后台自动把对话内容存入本地 SQLite",
+          "新会话开始时，AI 自动读取相关历史摘要，继续之前的上下文",
+          "用户可查看或管理决策摘要、会话记录等记忆数据"
+        ],
+        "user_problem": "AI CLI 工具默认每次新开对话都是「失忆」状态，用户得重复交代项目背景；或者依赖云端记忆，有隐私和成本顾虑",
+        "what_it_is": "一个开源工具，让 AI 命令行工具（如 Claude Code、Aider 等）能把对话历史自动存到本地 SQLite 数据库，实现跨会话的长期记忆。"
+      },
+      "stage": "deep_analysis"
     },
     "b10be245238ef7b8eab360fa57d295fc40cfffc4959bb8aa473fd2556d7405ec": {
       "created_at": "2026-08-11T02:27:24.065877+00:00",
@@ -39340,6 +40209,44 @@
         "summary_zh": "AI新闻汇总，提及OpenAI agent安全事件，但信息零散。",
         "tags": [
           "AI新闻"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "ba1d3bcf78eb2684c51d3e5f2e1e53f633813853b060508fe02baeeca9a339b3": {
+      "created_at": "2026-09-08T04:33:57.303388+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openrouter-model-rankings-top5",
+        "evidence_status": "verified",
+        "follow_up": "关注排名变化背后的原因及新模型的市场表现。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "public_web:ranking:b0ab1ec5ca2d10da9cfa",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": false,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenRouter模型热度排名，反映市场趋势，但缺乏深度分析和产品案例，信息增量有限。",
+        "region": "global",
+        "score": 6.0,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "OpenRouter模型热度榜显示腾讯、OpenAI、DeepSeek等模型领先，反映当前市场偏好。",
+        "tags": [
+          "模型排行",
+          "市场趋势"
         ],
         "target_user": "",
         "verticals": []
@@ -41289,6 +42196,43 @@
           "AI芯片",
           "融资",
           "集群系统"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "c44875b49e117980ad20cbdc2d309ef7a1bd02aeba718a4f9c351af49efbc878": {
+      "created_at": "2026-09-08T04:34:08.628678+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "de-brainrot-vacations",
+        "evidence_status": "reported",
+        "follow_up": "无。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:49597907",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "个人随笔关于数字排毒，与 AI 产品无关。",
+        "region": "global",
+        "score": 3.0,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "个人随笔关于度假时远离网络，与 AI 产品无关。",
+        "tags": [
+          "生活方式"
         ],
         "target_user": "",
         "verticals": []
@@ -46418,6 +47362,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "de69c1a43e3e1ce6eb7f66502ce9f931d27127098df91491caeb5a7c62d9c81b": {
+      "created_at": "2026-09-08T04:33:57.304378+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "stripe-kai-enterprise-ai-agent",
+        "evidence_status": "reported",
+        "follow_up": "关注Kai的架构设计、治理和技能层实现细节。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "newsletter:feed:222825618a28462d98e5",
+        "intelligence_type": "builder_insight",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Kai",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Stripe工程团队分享构建内部AI agent Kai的经验，涉及企业级AI落地的实际案例，有具体使用规模（1万员工），对理解企业AI产品有较高价值。",
+        "region": "global",
+        "score": 8.0,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "Stripe工程经理分享内部AI agent Kai的构建经验，该agent每周被超1万名员工使用，展示了企业级AI落地的实践。",
+        "tags": [
+          "企业AI",
+          "Agent",
+          "案例"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "de8b88edf8648b0b15e4b7237dba09121fb3398f2cae87f12be3c67683589237": {
       "created_at": "2026-08-23T01:59:48.741451+00:00",
       "model": "deepseek-v4-flash",
@@ -50280,6 +51263,43 @@
       },
       "stage": "candidate_analysis"
     },
+    "ee66bddcba72eb5e828bbb5c895e7ebae963945d411e5051e6e2bd8d983a4c3a": {
+      "created_at": "2026-09-08T04:34:08.628546+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "fable5-economics",
+        "evidence_status": "reported",
+        "follow_up": "无。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:49603086",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "个人博客关于经济学理论，与 AI 无关。",
+        "region": "global",
+        "score": 3.0,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "个人博客讨论经济学理论，与 AI 无关。",
+        "tags": [
+          "经济学"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "ef02543a5115f713a2d3fc5e864bea84fe6c32de767561b33d939cd85f635666": {
       "created_at": "2026-08-31T05:33:16.310974+00:00",
       "model": "deepseek-v4-flash",
@@ -52615,6 +53635,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "f83f6063643a07445ca93d48dfb3848638cac76c249ccb6da3a25aad0ca117de": {
+      "created_at": "2026-09-08T04:34:08.628269+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "vllm-speculative-decoding-amd",
+        "evidence_status": "first_party",
+        "follow_up": "关注 AMD GPU 推理性能提升对成本的影响。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:49596054",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "vLLM",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "vLLM 在 AMD GPU 上的投机解码技术博客，属于底层推理优化，对产品经理价值有限。",
+        "region": "global",
+        "score": 5.0,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "vLLM 博客介绍在 AMD GPU 上的投机解码，属于底层推理优化，对产品经理价值有限。",
+        "tags": [
+          "推理优化",
+          "AMD",
+          "vLLM"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "f869cf93e1332297a659eadde6caac4482ce5a73eef7c4c0fc4312e6de9c3a4e": {
       "created_at": "2026-08-02T03:52:45.120373+00:00",
       "model": "deepseek-v4-flash",
@@ -52646,6 +53705,44 @@
         "summary_zh": "报道DeepSeek在草原建设1GW算力项目，属于基础设施投资，无产品层面信息。",
         "tags": [
           "算力"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "f8731a417d4fa3dbe3389e6cfdb56b3c1ba2825a17ef0e5562bf9296d1ae7ba3": {
+      "created_at": "2026-09-08T04:33:57.304414+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "ai-terms-glossary",
+        "evidence_status": "reported",
+        "follow_up": "无",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:29dd19b8eeec3426",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": false,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "AI术语表，属于科普内容，对初学者有一定价值，但缺乏深度和产品关联，信息增量低。",
+        "region": "global",
+        "score": 5.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "TechCrunch发布AI术语表，解释常见AI词汇，适合初学者入门。",
+        "tags": [
+          "AI术语",
+          "科普"
         ],
         "target_user": "",
         "verticals": []
@@ -52684,6 +53781,44 @@
         "tags": [
           "政策",
           "访谈"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "f8d20186fd20ff8447e2a2d778df6e3b312ea88f5783f2be3e84f028dcdf4bdb": {
+      "created_at": "2026-09-08T04:34:20.989461+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "deepseek-hiring-150-backend",
+        "evidence_status": "reported",
+        "follow_up": "关注招聘背后的产品规划。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "google_news:article:d024121491fdc23e",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "与上一条重复，DeepSeek 扩招约 150 人，面向资深工程师，信息增量有限。",
+        "region": "china",
+        "score": 6.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "DeepSeek 扩招约 150 人，重点面向 2-10 年资深工程师。",
+        "tags": [
+          "DeepSeek",
+          "招聘"
         ],
         "target_user": "",
         "verticals": []
@@ -53143,6 +54278,46 @@
         "tags": [
           "Codex",
           "预发布"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "faad60b76ff0f557f3c1094f114bf10ae7f5cbf0230c1c9fc4d06fec407d0c95": {
+      "created_at": "2026-09-08T04:34:08.628753+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "engrim-sqlite-memory-ai",
+        "evidence_status": "first_party",
+        "follow_up": "关注其与现有记忆方案的对比和用户采纳情况。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:49594008",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Engrim",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Show HN 展示 Engrim，一个本地优先的 SQLite 记忆引擎，用于 AI CLI，有实际代码和用户反馈，对 AI 产品构建者有参考价值。",
+        "region": "global",
+        "score": 8.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Engrim 是一个本地优先的 SQLite 记忆引擎，为 AI CLI 提供持久记忆，有真实用户反馈。",
+        "tags": [
+          "AI",
+          "记忆",
+          "SQLite",
+          "CLI"
         ],
         "target_user": "",
         "verticals": []
@@ -54085,6 +55260,45 @@
           "OpenAI",
           "Hugging Face",
           "AI安全"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "fef6a6ff9aee3e59f66220f8e81d5521d45b0f7532e041a110370e54ba4ba53c": {
+      "created_at": "2026-09-08T04:34:20.989259+00:00",
+      "model": "deepseek-v4-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "brw-browser-automation-showhn",
+        "evidence_status": "first_party",
+        "follow_up": "关注其与 Claude chrome 的具体差异和实际应用案例。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:49604261",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Brw",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Show HN 展示浏览器自动化工具，支持远程 SSH 查看，有用户评论表示正需要此类工具，但缺乏详细技术说明和实际使用反馈，评分中等偏上。",
+        "region": "global",
+        "score": 7.5,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "开发者展示 Brw 浏览器自动化工具，支持远程 SSH 操作，解决远程控制浏览器执行 AI 任务的需求。",
+        "tags": [
+          "Browser Automation",
+          "Agent",
+          "Show HN"
         ],
         "target_user": "",
         "verticals": []
