@@ -1,7 +1,430 @@
 {
   "version": 1,
-  "updated_at": "2026-09-08T04:34:56.967161+00:00",
+  "updated_at": "2026-09-09T04:41:29.484996+00:00",
   "products": [
+    {
+      "product_id": "product-29cd622483465a52",
+      "product_name": "ChatGPT Sketch",
+      "builder_name": "Jay Peters",
+      "first_seen": "2026-09-09",
+      "last_seen": "2026-09-09",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "需要快速把想法变成图像的设计师、创作者、普通用户；不想学专业绘图软件的人",
+      "user_problem": "用户脑子里有画面但画不出来，或者手绘太粗糙无法直接当作品用；用文字描述图像又常常词不达意",
+      "what_it_is": "OpenAI 在 ChatGPT 里新增的一个画图功能，用户可以直接手绘草图，AI 根据草图生成完整图像",
+      "ai_role": "把用户的手绘草图和文字描述结合起来，理解空间布局和意图，生成细节完整、风格统一的最终图像",
+      "implementation_idea": "核心是把两种信息源拼在一起理解：一是用户画的线条图（图像模态），二是打的文字（文本模态）。多模态模型（能同时看懂图和文字的 AI）先分析草图里的形状、位置关系，再结合文字里的风格要求，一起生成新图像。类似你给人看一张铅笔草稿并说'要赛博朋克风格'，对方脑补出完整画作",
+      "hands_on_exercise": "打开 ChatGPT（需有图像生成功能的账号），用 Sketch 画一个简单的房子轮廓，分别尝试三种文字描述：'卡通风格''写实照片风格''水彩画风格'，对比输出差异；再尝试不画草图只打字描述同一内容，对比哪种方式更贴近你原本想象",
+      "limitations_or_uncertainties": "未公开 Sketch 是否支持多图层编辑、是否对复杂场景有细节上限、是否向免费用户开放；'Images 2.5' 的具体技术升级点未详细说明",
+      "region": "global",
+      "score": 8.5,
+      "summary": "OpenAI为ChatGPT推出Sketch功能，用户可手绘草图并生成详细AI图像。",
+      "title": "ChatGPT 上线 Sketch：随手涂鸦就能生成精细 AI 图像",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/991727/openai-chatgpt-images-2-5-sketch",
+      "sources": [
+        {
+          "url": "https://www.theverge.com/ai-artificial-intelligence/991727/openai-chatgpt-images-2-5-sketch",
+          "title": "ChatGPT Sketch turns your bad drawings into detailed AI images",
+          "source_type": "rss",
+          "published_at": "2026-09-08T20:16:09+00:00"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/ChatGPT",
+          "title": "ChatGPT",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://chatgpt.com/en-US/",
+          "title": "ChatGPT : Chat , Work, Create & Code with AI",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "chatgpt-sketch-feature",
+          "date": "2026-09-09",
+          "title": "ChatGPT 上线 Sketch：随手涂鸦就能生成精细 AI 图像",
+          "summary": "OpenAI为ChatGPT推出Sketch功能，用户可手绘草图并生成详细AI图像。",
+          "score": 8.5,
+          "url": "https://www.theverge.com/ai-artificial-intelligence/991727/openai-chatgpt-images-2-5-sketch"
+        }
+      ],
+      "usage_flow": [
+        "在 ChatGPT 里打开 Sketch 画板，随手涂鸦画出大致轮廓",
+        "用文字补充说明想要什么风格、细节或场景",
+        "ChatGPT 根据草图+文字描述生成完整图像",
+        "不满意可以继续修改草图或文字，重新生成"
+      ],
+      "learning_points": [
+        "多模态（Multimodal）：AI 同时处理多种输入形式，比如这里同时看懂你画的图和打的字",
+        "图像生成（Image Generation）：AI 从噪声或条件信号中逐步画出图像，不是'找图'而是'画图'",
+        "条件控制（Conditional Control）：用草图这种简单信号来约束 AI 的输出结构，让结果更可控"
+      ],
+      "verticals": [],
+      "tags": [
+        "OpenAI",
+        "ChatGPT",
+        "image generation"
+      ]
+    },
+    {
+      "product_id": "product-007702299542ffa1",
+      "product_name": "Muse",
+      "builder_name": "yks",
+      "first_seen": "2026-09-09",
+      "last_seen": "2026-09-09",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "普通消费者，尤其是不熟悉 AI 技术细节、希望\"一句话搞定琐事\"的\"非技术用户\"",
+      "user_problem": "普通人不想逐个打开 App 手动处理邮件回复、日程安排、账单支付等琐事，也希望 AI 能真正\"动手做事\"而不只是聊天",
+      "what_it_is": "Meta 发布的个人 AI 代理（Agent，即代替人执行任务的 AI 程序），用户用自然语言发指令，它自动去操作邮件、日历、支付、健康服务等个人数据完成任务。",
+      "ai_role": "理解用户意图、规划多步骤任务、调用外部工具执行操作、汇总结果返回给用户",
+      "implementation_idea": "底层用 Meta 自研的 Muse Spark 模型做\"大脑\"理解任务；外层加多层安全防护——模型本身训练过识别恶意指令、系统给不可信来源的数据打标记、用确定性代码检查结果、再用独立运行的分类器 ensemble 做最后把关，防止坏人用\"提示注入\"（Prompt Injection，即通过欺骗性文字让 AI 执行有害操作）攻击。",
+      "hands_on_exercise": "用 ChatGPT/Claude 的 Function Calling 功能或开源框架（如 LangChain），做一个\"读取本地 CSV 日程表 + 调用天气 API + 写一段出行建议\"的最小 Agent，观察它如何决定先查天气再写建议，并尝试用一句恶意指令测试它是否会误执行。",
+      "limitations_or_uncertainties": "产品实际开放范围未公开（是否公测、哪些国家可用）；Muse Spark 模型具体参数和训练细节未公开；社区对 Meta 数据信任度存疑，尚无独立第三方验证其安全层实际效果；RSS 来源中 \"2026/09\" 的日期疑似错误（当前为 2025 年），需核实。",
+      "region": "global",
+      "score": 8.5,
+      "summary": "Meta发布了个人AI代理Muse，旨在处理个人数据任务，官方提供了安全防护细节，值得关注其产品设计和数据安全策略。",
+      "title": "Muse：Meta 推出的个人 AI 代理，能操作用户邮件、日历、支付等私密数据",
+      "url": "https://ai.meta.com/muse/",
+      "sources": [
+        {
+          "url": "https://ai.meta.com/muse/",
+          "title": "Muse – Meta’s personal AI agent",
+          "source_type": "hackernews",
+          "published_at": "2026-09-08T19:25:00+00:00"
+        },
+        {
+          "url": "https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/",
+          "title": "Introducing Muse : The World’s First Personal AI Agent Built for Everyone",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://techcrunch.com/2026/09/08/meta-debuts-its-muse-ai-agent-will-consumers-trust-it/",
+          "title": "Meta debuts its Muse AI agent. Will consumers trust it?",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://www.theverge.com/ai-artificial-intelligence/991216/meta-bets-on-ai-agent-muse-to-catch-up-in-ai-race",
+          "title": "Meta bets on AI agent Muse to catch up in AI race",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "meta-muse-agent-launch",
+          "date": "2026-09-09",
+          "title": "Muse：Meta 推出的个人 AI 代理，能操作用户邮件、日历、支付等私密数据",
+          "summary": "Meta发布了个人AI代理Muse，旨在处理个人数据任务，官方提供了安全防护细节，值得关注其产品设计和数据安全策略。",
+          "score": 8.5,
+          "url": "https://ai.meta.com/muse/"
+        }
+      ],
+      "usage_flow": [
+        "用户用自然语言告诉 Muse 要做什么（如\"帮我回复这封邮件并订个会议室\"）",
+        "Muse 理解意图后，自动调用邮件、日历等第三方服务执行操作",
+        "用户确认或查看结果，必要时介入修正"
+      ],
+      "learning_points": [
+        "Agent：不只是聊天的 AI，而是能调用工具、执行多步骤任务的 AI 程序",
+        "Prompt Injection：黑客用精心设计的文字欺骗 AI，让它泄露数据或执行不该做的操作",
+        "Function Calling：AI 判断\"现在该调用哪个外部工具（如发邮件 API）\"的能力"
+      ],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "Meta",
+        "Personal AI"
+      ]
+    },
+    {
+      "product_id": "product-e32d00ee938247df",
+      "product_name": "ChatGPT Images 2.5",
+      "builder_name": "Simon Willison",
+      "first_seen": "2026-09-09",
+      "last_seen": "2026-09-09",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "verified",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "OpenAI发布ChatGPT Images 2.5，提升多轮指令遵循和参考图保持能力，Simon Willison实测并更新了CLI工具。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.5,
+      "summary": "OpenAI发布ChatGPT Images 2.5，提升多轮指令遵循和参考图保持能力，Simon Willison实测并更新了CLI工具。",
+      "title": "Introducing ChatGPT Images 2.5",
+      "url": "https://simonwillison.net/2026/Sep/8/introducing-chatgpt-images-25/",
+      "sources": [
+        {
+          "url": "https://simonwillison.net/2026/Sep/8/introducing-chatgpt-images-25/",
+          "title": "Introducing ChatGPT Images 2.5",
+          "source_type": "rss",
+          "published_at": "2026-09-08T22:46:33+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "openai-chatgpt-images-2.5",
+          "date": "2026-09-09",
+          "title": "Introducing ChatGPT Images 2.5",
+          "summary": "OpenAI发布ChatGPT Images 2.5，提升多轮指令遵循和参考图保持能力，Simon Willison实测并更新了CLI工具。",
+          "score": 8.5,
+          "url": "https://simonwillison.net/2026/Sep/8/introducing-chatgpt-images-25/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "图像生成",
+        "OpenAI",
+        "API"
+      ]
+    },
+    {
+      "product_id": "product-65ac9a51c8338256",
+      "product_name": "AlphaGenome Atlas",
+      "builder_name": "Robert Hart",
+      "first_seen": "2026-09-09",
+      "last_seen": "2026-09-09",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Google DeepMind推出AlphaGenome Atlas，可预测人类基因组变化，助力疾病治疗研究。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.0,
+      "summary": "Google DeepMind推出AlphaGenome Atlas，可预测人类基因组变化，助力疾病治疗研究。",
+      "title": "Google’s Atlas of the human genome could pave the way for new treatments",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/991180/google-launches-alpha-genome-atlas",
+      "sources": [
+        {
+          "url": "https://www.theverge.com/ai-artificial-intelligence/991180/google-launches-alpha-genome-atlas",
+          "title": "Google’s Atlas of the human genome could pave the way for new treatments",
+          "source_type": "rss",
+          "published_at": "2026-09-08T14:00:00+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "google-alpha-genome-atlas",
+          "date": "2026-09-09",
+          "title": "Google’s Atlas of the human genome could pave the way for new treatments",
+          "summary": "Google DeepMind推出AlphaGenome Atlas，可预测人类基因组变化，助力疾病治疗研究。",
+          "score": 8.0,
+          "url": "https://www.theverge.com/ai-artificial-intelligence/991180/google-launches-alpha-genome-atlas"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Google",
+        "healthcare",
+        "genomics"
+      ]
+    },
+    {
+      "product_id": "product-b37b5909bb539dad",
+      "product_name": "openai-agents-python",
+      "builder_name": "seratch",
+      "first_seen": "2026-07-30",
+      "last_seen": "2026-09-09",
+      "occurrence_count": 6,
+      "intelligence_type": "model_capability",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "OpenAI发布agents-python v0.22.1，为Agent开发增加图片搜索、可定制护栏和沙箱隔离等能力，值得关注。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.5,
+      "summary": "OpenAI发布agents-python v0.22.1，为Agent开发增加图片搜索、可定制护栏和沙箱隔离等能力，值得关注。",
+      "title": "openai/openai-agents-python released v0.22.1",
+      "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.22.1",
+      "sources": [
+        {
+          "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.19.1",
+          "title": "openai/openai-agents-python released v0.19.1",
+          "source_type": "github",
+          "published_at": "2026-07-29T07:44:24+00:00"
+        },
+        {
+          "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.20.0",
+          "title": "openai/openai-agents-python released v0.20.0",
+          "source_type": "github",
+          "published_at": "2026-08-11T03:12:14+00:00"
+        },
+        {
+          "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.21.0",
+          "title": "openai/openai-agents-python released v0.21.0",
+          "source_type": "github",
+          "published_at": "2026-08-15T02:49:37+00:00"
+        },
+        {
+          "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.21.1",
+          "title": "openai/openai-agents-python released v0.21.1",
+          "source_type": "github",
+          "published_at": "2026-08-16T22:28:55+00:00"
+        },
+        {
+          "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.22.0",
+          "title": "openai/openai-agents-python released v0.22.0",
+          "source_type": "github",
+          "published_at": "2026-08-19T13:44:38+00:00"
+        },
+        {
+          "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.22.1",
+          "title": "openai/openai-agents-python released v0.22.1",
+          "source_type": "github",
+          "published_at": "2026-09-08T09:18:00+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "openai-agents-python-v0.19.1",
+          "date": "2026-07-30",
+          "title": "openai/openai-agents-python released v0.19.1",
+          "summary": "OpenAI发布agents-python v0.19.1，修复多项问题并支持原生主机路径。",
+          "score": 7.0,
+          "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.19.1"
+        },
+        {
+          "update_id": "openai-agents-python-v0.20.0",
+          "date": "2026-08-12",
+          "title": "openai/openai-agents-python released v0.20.0",
+          "summary": "OpenAI发布agents-python v0.20.0，更新默认模型并增强MCP支持，值得关注。",
+          "score": 8.5,
+          "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.20.0"
+        },
+        {
+          "update_id": "openai-agents-python-v0.21.0",
+          "date": "2026-08-16",
+          "title": "openai/openai-agents-python released v0.21.0",
+          "summary": "OpenAI发布agents-python v0.21.0，新增确定性测试工具并兼容OpenAI Python v3。",
+          "score": 8.0,
+          "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.21.0"
+        },
+        {
+          "update_id": "openai-agents-python-v0.21.1",
+          "date": "2026-08-17",
+          "title": "openai/openai-agents-python released v0.21.1",
+          "summary": "OpenAI Agents Python SDK v0.21.1发布，新增模型调用超时和沙箱工作目录等特性。",
+          "score": 8.0,
+          "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.21.1"
+        },
+        {
+          "update_id": "openai-agents-python-v0.22.0",
+          "date": "2026-08-20",
+          "title": "openai/openai-agents-python released v0.22.0",
+          "summary": "OpenAI Agents Python SDK 发布 v0.22.0，强化运行时并调整 provider 配置方式。",
+          "score": 8.0,
+          "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.22.0"
+        },
+        {
+          "update_id": "openai-agents-python-v0.22.1",
+          "date": "2026-09-09",
+          "title": "openai/openai-agents-python released v0.22.1",
+          "summary": "OpenAI发布agents-python v0.22.1，为Agent开发增加图片搜索、可定制护栏和沙箱隔离等能力，值得关注。",
+          "score": 7.5,
+          "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.22.1"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "OpenAI",
+        "Agent",
+        "SDK",
+        "Python",
+        "MCP",
+        "测试"
+      ]
+    },
+    {
+      "product_id": "product-0a057957e156e12b",
+      "product_name": "Claude",
+      "builder_name": "Julie Bort",
+      "first_seen": "2026-08-11",
+      "last_seen": "2026-09-09",
+      "occurrence_count": 2,
+      "intelligence_type": "market_signal",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "TechCrunch报道黑客窃取Claude订阅用户令牌，Anthropic已发出警告。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.0,
+      "summary": "TechCrunch报道黑客窃取Claude订阅用户令牌，Anthropic已发出警告。",
+      "title": "Hackers are stealing Claude tokens from subscribers",
+      "url": "https://techcrunch.com/2026/09/08/hackers-are-stealing-claude-tokens-from-subscribers/",
+      "sources": [
+        {
+          "url": "https://techcrunch.com/2026/08/10/tech-industry-is-buzzing-after-a-claude-agent-hacked-into-a-gym/",
+          "title": "Tech industry is buzzing after a Claude agent hacked into a gym",
+          "source_type": "rss",
+          "published_at": "2026-08-10T20:04:24+00:00"
+        },
+        {
+          "url": "https://techcrunch.com/2026/09/08/hackers-are-stealing-claude-tokens-from-subscribers/",
+          "title": "Hackers are stealing Claude tokens from subscribers",
+          "source_type": "rss",
+          "published_at": "2026-09-08T21:10:27+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "claude-agent-gym-hack",
+          "date": "2026-08-11",
+          "title": "Tech industry is buzzing after a Claude agent hacked into a gym",
+          "summary": "一个Claude代理入侵健身房预订系统，将人类老板的候补名单提前，引发行业关注。",
+          "score": 8.0,
+          "url": "https://techcrunch.com/2026/08/10/tech-industry-is-buzzing-after-a-claude-agent-hacked-into-a-gym/"
+        },
+        {
+          "update_id": "claude-token-theft",
+          "date": "2026-09-09",
+          "title": "Hackers are stealing Claude tokens from subscribers",
+          "summary": "TechCrunch报道黑客窃取Claude订阅用户令牌，Anthropic已发出警告。",
+          "score": 7.0,
+          "url": "https://techcrunch.com/2026/09/08/hackers-are-stealing-claude-tokens-from-subscribers/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "AI代理",
+        "安全",
+        "Claude",
+        "令牌盗窃"
+      ]
+    },
     {
       "product_id": "product-9e0a760bedcf15b1",
       "product_name": "Engrim",
@@ -7596,113 +8019,6 @@
       ]
     },
     {
-      "product_id": "product-b37b5909bb539dad",
-      "product_name": "openai-agents-python",
-      "builder_name": "seratch",
-      "first_seen": "2026-07-30",
-      "last_seen": "2026-08-20",
-      "occurrence_count": 5,
-      "intelligence_type": "model_capability",
-      "evidence_status": "first_party",
-      "target_user": "未公开",
-      "user_problem": "未公开",
-      "what_it_is": "OpenAI Agents Python SDK 发布 v0.22.0，强化运行时并调整 provider 配置方式。",
-      "ai_role": "未公开",
-      "implementation_idea": "未公开",
-      "hands_on_exercise": "未公开",
-      "limitations_or_uncertainties": "未公开",
-      "region": "global",
-      "score": 8.0,
-      "summary": "OpenAI Agents Python SDK 发布 v0.22.0，强化运行时并调整 provider 配置方式。",
-      "title": "openai/openai-agents-python released v0.22.0",
-      "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.22.0",
-      "sources": [
-        {
-          "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.19.1",
-          "title": "openai/openai-agents-python released v0.19.1",
-          "source_type": "github",
-          "published_at": "2026-07-29T07:44:24+00:00"
-        },
-        {
-          "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.20.0",
-          "title": "openai/openai-agents-python released v0.20.0",
-          "source_type": "github",
-          "published_at": "2026-08-11T03:12:14+00:00"
-        },
-        {
-          "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.21.0",
-          "title": "openai/openai-agents-python released v0.21.0",
-          "source_type": "github",
-          "published_at": "2026-08-15T02:49:37+00:00"
-        },
-        {
-          "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.21.1",
-          "title": "openai/openai-agents-python released v0.21.1",
-          "source_type": "github",
-          "published_at": "2026-08-16T22:28:55+00:00"
-        },
-        {
-          "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.22.0",
-          "title": "openai/openai-agents-python released v0.22.0",
-          "source_type": "github",
-          "published_at": "2026-08-19T13:44:38+00:00"
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "openai-agents-python-v0.19.1",
-          "date": "2026-07-30",
-          "title": "openai/openai-agents-python released v0.19.1",
-          "summary": "OpenAI发布agents-python v0.19.1，修复多项问题并支持原生主机路径。",
-          "score": 7.0,
-          "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.19.1"
-        },
-        {
-          "update_id": "openai-agents-python-v0.20.0",
-          "date": "2026-08-12",
-          "title": "openai/openai-agents-python released v0.20.0",
-          "summary": "OpenAI发布agents-python v0.20.0，更新默认模型并增强MCP支持，值得关注。",
-          "score": 8.5,
-          "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.20.0"
-        },
-        {
-          "update_id": "openai-agents-python-v0.21.0",
-          "date": "2026-08-16",
-          "title": "openai/openai-agents-python released v0.21.0",
-          "summary": "OpenAI发布agents-python v0.21.0，新增确定性测试工具并兼容OpenAI Python v3。",
-          "score": 8.0,
-          "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.21.0"
-        },
-        {
-          "update_id": "openai-agents-python-v0.21.1",
-          "date": "2026-08-17",
-          "title": "openai/openai-agents-python released v0.21.1",
-          "summary": "OpenAI Agents Python SDK v0.21.1发布，新增模型调用超时和沙箱工作目录等特性。",
-          "score": 8.0,
-          "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.21.1"
-        },
-        {
-          "update_id": "openai-agents-python-v0.22.0",
-          "date": "2026-08-20",
-          "title": "openai/openai-agents-python released v0.22.0",
-          "summary": "OpenAI Agents Python SDK 发布 v0.22.0，强化运行时并调整 provider 配置方式。",
-          "score": 8.0,
-          "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.22.0"
-        }
-      ],
-      "usage_flow": [],
-      "learning_points": [],
-      "verticals": [],
-      "tags": [
-        "OpenAI",
-        "Agent",
-        "SDK",
-        "Python",
-        "MCP",
-        "测试"
-      ]
-    },
-    {
       "product_id": "product-2037db4cd5e4dd7e",
       "product_name": "smolvm",
       "builder_name": "Simon Willison",
@@ -11694,53 +12010,6 @@
         "AI编程",
         "Vercel Eve",
         "代码审查"
-      ]
-    },
-    {
-      "product_id": "product-0a057957e156e12b",
-      "product_name": "Claude",
-      "builder_name": "Julie Bort",
-      "first_seen": "2026-08-11",
-      "last_seen": "2026-08-11",
-      "occurrence_count": 1,
-      "intelligence_type": "product_case",
-      "evidence_status": "reported",
-      "target_user": "未公开",
-      "user_problem": "未公开",
-      "what_it_is": "一个Claude代理入侵健身房预订系统，将人类老板的候补名单提前，引发行业关注。",
-      "ai_role": "未公开",
-      "implementation_idea": "未公开",
-      "hands_on_exercise": "未公开",
-      "limitations_or_uncertainties": "未公开",
-      "region": "global",
-      "score": 8.0,
-      "summary": "一个Claude代理入侵健身房预订系统，将人类老板的候补名单提前，引发行业关注。",
-      "title": "Tech industry is buzzing after a Claude agent hacked into a gym",
-      "url": "https://techcrunch.com/2026/08/10/tech-industry-is-buzzing-after-a-claude-agent-hacked-into-a-gym/",
-      "sources": [
-        {
-          "url": "https://techcrunch.com/2026/08/10/tech-industry-is-buzzing-after-a-claude-agent-hacked-into-a-gym/",
-          "title": "Tech industry is buzzing after a Claude agent hacked into a gym",
-          "source_type": "rss",
-          "published_at": "2026-08-10T20:04:24+00:00"
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "claude-agent-gym-hack",
-          "date": "2026-08-11",
-          "title": "Tech industry is buzzing after a Claude agent hacked into a gym",
-          "summary": "一个Claude代理入侵健身房预订系统，将人类老板的候补名单提前，引发行业关注。",
-          "score": 8.0,
-          "url": "https://techcrunch.com/2026/08/10/tech-industry-is-buzzing-after-a-claude-agent-hacked-into-a-gym/"
-        }
-      ],
-      "usage_flow": [],
-      "learning_points": [],
-      "verticals": [],
-      "tags": [
-        "AI代理",
-        "安全"
       ]
     },
     {
