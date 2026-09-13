@@ -143,17 +143,11 @@ jobs:
         if: steps.daily_guard.outputs.should_run == 'true' && (github.event_name == 'schedule' || inputs.run_mode == 'full')
         shell: bash
         run: |
+          set -euo pipefail
+
           test -n "$DEEPSEEK_API_KEY" || { echo "Missing repository secret: DEEPSEEK_API_KEY"; exit 1; }
           test "$DEEPSEEK_BASE_URL" = "https://api.deepseek.com" || {
             echo "DEEPSEEK_BASE_URL must use the official China API: https://api.deepseek.com"
-            exit 1
-          }
-          test "$DEEPSEEK_CANDIDATE_MODEL" = "deepseek-v4-flash" || {
-            echo "DEEPSEEK_CANDIDATE_MODEL must be deepseek-v4-flash"
-            exit 1
-          }
-          test "$DEEPSEEK_FALLBACK_MODEL" = "deepseek-v4-pro" || {
-            echo "DEEPSEEK_FALLBACK_MODEL must be deepseek-v4-pro"
             exit 1
           }
 
@@ -168,14 +162,63 @@ jobs:
             echo "DeepSeek API preflight failed: HTTP $http_status ($error_type)"
             exit 1
           fi
-          for model in "$DEEPSEEK_CANDIDATE_MODEL" "$DEEPSEEK_FALLBACK_MODEL"; do
-            jq -e --arg model "$model" '.data[] | select(.id == $model)' \
-              "$response_file" >/dev/null || {
-                echo "DeepSeek API preflight failed: model $model is unavailable to this key"
-                exit 1
-              }
-          done
-          echo "DeepSeek API preflight passed for $DEEPSEEK_CANDIDATE_MODEL and $DEEPSEEK_FALLBACK_MODEL"
+
+          available_models=$(jq -r '.data[]?.id' "$response_file")
+          if [ -z "$available_models" ]; then
+            echo "DeepSeek API preflight failed: /models returned no usable model IDs"
+            exit 1
+          fi
+
+          model_is_available() {
+            jq -e --arg model "$1" '.data[]? | select(.id == $model)' \
+              "$response_file" >/dev/null
+          }
+
+          select_available_model() {
+            local requested="$1"
+            shift
+
+            for model in "$requested" "$@"; do
+              if [ -n "$model" ] && model_is_available "$model"; then
+                echo "$model"
+                return 0
+              fi
+            done
+
+            jq -r '[.data[]?.id | select(
+              startswith("deepseek-") and
+              (contains("vision") | not) and
+              (contains("embedding") | not) and
+              (contains("rerank") | not)
+            )] | first // empty' "$response_file"
+          }
+
+          requested_candidate_model="$DEEPSEEK_CANDIDATE_MODEL"
+          requested_fallback_model="$DEEPSEEK_FALLBACK_MODEL"
+          selected_candidate_model=$(select_available_model \
+            "$requested_candidate_model" "deepseek-v4-flash" "deepseek-chat")
+          selected_fallback_model=$(select_available_model \
+            "$requested_fallback_model" "deepseek-v4-pro" \
+            "$selected_candidate_model" "deepseek-reasoner")
+
+          if [ -z "$selected_candidate_model" ] || [ -z "$selected_fallback_model" ]; then
+            echo "DeepSeek API preflight failed: no compatible text model is available to this key"
+            echo "Available model IDs: $(echo "$available_models" | paste -sd ',' -)"
+            exit 1
+          fi
+
+          if [ "$selected_candidate_model" != "$requested_candidate_model" ]; then
+            echo "WARNING: requested DeepSeek candidate model '$requested_candidate_model' is unavailable; using '$selected_candidate_model'."
+          fi
+          if [ "$selected_fallback_model" != "$requested_fallback_model" ]; then
+            echo "WARNING: requested DeepSeek fallback model '$requested_fallback_model' is unavailable; using '$selected_fallback_model'."
+          fi
+
+          {
+            echo "DEEPSEEK_CANDIDATE_MODEL=$selected_candidate_model"
+            echo "DEEPSEEK_FALLBACK_MODEL=$selected_fallback_model"
+          } >> "$GITHUB_ENV"
+          echo "DeepSeek API preflight passed with candidate=$selected_candidate_model fallback=$selected_fallback_model"
 
       - name: Prepare runtime configuration
         if: steps.daily_guard.outputs.should_run == 'true'
