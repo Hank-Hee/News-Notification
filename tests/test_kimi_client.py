@@ -193,6 +193,12 @@ def test_personal_config_and_workflow_pin_kimi_and_node24_actions():
     assert "Kimi API preflight passed" in workflow
     assert "DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}" in workflow
     assert "DeepSeek API preflight passed" in workflow
+    assert 'available_models=$(jq -r' in workflow
+    assert "select_available_model()" in workflow
+    assert "DEEPSEEK_CANDIDATE_MODEL=$selected_candidate_model" in workflow
+    assert "DEEPSEEK_FALLBACK_MODEL=$selected_fallback_model" in workflow
+    assert "requested DeepSeek candidate model" in workflow
+    assert "no compatible text model is available to this key" in workflow
     assert 'cron: "17 0 * * *"' in workflow
     assert 'cron: "7 1 * * *"' in workflow
     assert "timezone:" not in workflow
