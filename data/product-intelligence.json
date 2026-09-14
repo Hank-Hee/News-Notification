@@ -1,7 +1,181 @@
 {
   "version": 1,
-  "updated_at": "2026-09-09T04:41:29.484996+00:00",
+  "updated_at": "2026-09-14T04:55:34.361003+00:00",
   "products": [
+    {
+      "product_id": "product-fc614d0d27d557d1",
+      "product_name": "commit-rewriter",
+      "builder_name": "Simon Willison",
+      "first_seen": "2026-09-14",
+      "last_seen": "2026-09-14",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "需要把 AI 辅助生成的代码提交到公开仓库的开发者，尤其是维护开源项目的人",
+      "user_problem": "AI 编码代理（比如 Claude Code、Cursor 等自动写代码的工具）生成的 commit message 往往包含大量无意义的调试痕迹、内部 issue 编号、或者私有仓库的引用，直接公开会泄露信息或显得不专业",
+      "what_it_is": "一个用 Python 写的本地网页工具，帮你批量编辑 Git 仓库里的 commit message，特别适合清理 AI 编码代理留下的啰嗦或包含敏感信息的提交信息。",
+      "ai_role": "AI 是问题的来源而非工具本身的功能——这个工具解决的是 AI 编码代理留下的'烂摊子'，改写过程由人工操作",
+      "implementation_idea": "本质上是一个 Git 历史改写器：它用 `git rebase` 或类似机制，从用户指定的最早修改点开始，逐条重新应用 commit 并替换 message，同时先创建一个备份分支防止改坏。网页界面只是让人更方便地浏览和编辑，不用记复杂的 Git 命令。",
+      "hands_on_exercise": "找一个你自己用 AI 工具生成过 commit 的 Git 仓库，安装 uv（`curl -LsSf https://astral.sh/uv/install.sh | sh`），运行 `uvx commit-rewriter .`，尝试把几条 AI 生成的啰嗦 commit message 改写成简洁专业的描述，观察备份分支是否生成，再用 `git log` 对比改写前后的历史",
+      "limitations_or_uncertainties": "未公开是否支持多人协作场景下的历史改写冲突处理；未公开是否只能改写未 push 的本地历史；未公开对大型仓库的性能表现",
+      "region": "global",
+      "score": 7.5,
+      "summary": "Simon Willison 发布 commit-rewriter 0.1，用来清理 AI 编码代理留下的杂乱提交信息，方便开源发布。",
+      "title": "commit-rewriter 0.1：清理 AI 编码代理杂乱提交信息的小工具",
+      "url": "https://simonwillison.net/2026/Sep/14/commit-rewriter/",
+      "sources": [
+        {
+          "url": "https://simonwillison.net/2026/Sep/14/commit-rewriter/",
+          "title": "commit-rewriter 0.1",
+          "source_type": "rss",
+          "published_at": "2026-09-14T00:28:10+00:00"
+        },
+        {
+          "url": "https://pypi.org/project/commit-rewriter/",
+          "title": "commit - rewriter · PyPI",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "commit-rewriter-0-1-release",
+          "date": "2026-09-14",
+          "title": "commit-rewriter 0.1：清理 AI 编码代理杂乱提交信息的小工具",
+          "summary": "Simon Willison 发布 commit-rewriter 0.1，用来清理 AI 编码代理留下的杂乱提交信息，方便开源发布。",
+          "score": 7.5,
+          "url": "https://simonwillison.net/2026/Sep/14/commit-rewriter/"
+        }
+      ],
+      "usage_flow": [
+        "在终端运行 `uvx commit-rewriter path/to/repo` 启动工具（已在仓库目录里可省略路径）",
+        "在打开的网页界面里浏览提交历史，点击想修改的 commit 直接编辑 message",
+        "点击 \"Rewrite commit messages\" 提交修改",
+        "工具自动创建带时间戳的备份分支，然后从最早修改的那条 commit 开始重写整个历史"
+      ],
+      "learning_points": [
+        "Git rebase（变基）：一种改写 commit 历史的技术，可以改变过去的提交信息或合并多个提交",
+        "AI 编码代理（AI Coding Agent）：能自动写代码、运行测试、提交 Git 的 AI 工具，但输出质量不稳定",
+        "uv/uvx：Python 社区新兴的包管理工具，能快速运行 Python 程序而不用手动安装依赖"
+      ],
+      "verticals": [],
+      "tags": [
+        "AI 编程",
+        "开发者工具",
+        "开源"
+      ]
+    },
+    {
+      "product_id": "product-8cc09ec4fcf5eb18",
+      "product_name": "TableForge",
+      "builder_name": "david927",
+      "first_seen": "2026-09-14",
+      "last_seen": "2026-09-14",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "reported",
+      "target_user": "想玩 D&D 5e 但凑不齐真人主持人（DM）的玩家，或想异步/实时线上跑团的单人/多人玩家",
+      "user_problem": "跑团需要真人 DM 主持，时间难凑；纯 AI 跑团容易瞎编规则，角色卡、法术、物品管理混乱",
+      "what_it_is": "Hacker News 每月一次的「你在做什么」讨论帖，其中 TableForge 展示了用 AI 当龙与地下城（D&D 5e）主持人，并通过确定性工具管理角色数据的游戏方式。",
+      "ai_role": "AI 当主持人（DM），负责讲故事和剧情反应；但所有规则判定（掷骰、伤害计算、角色卡更新）走确定性工具，不由 AI 随意编造",
+      "implementation_idea": "把 AI 的'创意'和'规则计算'拆成两路：AI 只负责叙事和决策意图，具体的骰子结果、属性加减、法术效果全部走预定义好的 5e 规则工具（类似计算器），确保不出错。角色卡存在服务器上，AI 通过工具调用来读写，不能随口乱改。",
+      "hands_on_exercise": "用任意支持 Function Calling 的 LLM API（如 OpenAI、Claude），写一个简单的'战斗回合'脚本：用户输入'我挥剑攻击地精'，AI 决定'请求掷骰工具'，你的代码实际随机生成 d20 结果并返回，AI 再根据结果描述命中或失手。全程 AI 不直接生成随机数。",
+      "limitations_or_uncertainties": "TableForge 的具体技术架构（用什么模型、工具调用协议、记忆如何长期存储）未公开；Google Play 上的 TableForge 显示为 Warhammer 相关应用，与 HN 帖中描述的 D&D 5e 产品是否为同一团队或已转型，未确认；帖子为社区自述，无独立第三方验证产品已上线规模。",
+      "region": "global",
+      "score": 7.2,
+      "summary": "HN 九月『你在做什么』帖中，开发者展示 TableForge 等产品，其中 AI 作为 DM 通过确定性工具管理角色卡和骰子，值得看 AI 如何嵌入具体玩法。",
+      "title": "HN 九月构建者帖：TableForge 用 AI 当 D&D 主持人，工具调用跑团",
+      "url": "https://news.ycombinator.com/item?id=49686380",
+      "sources": [
+        {
+          "url": "https://news.ycombinator.com/item?id=49686380",
+          "title": "Ask HN: What are you working on? (September 2026)",
+          "source_type": "hackernews",
+          "published_at": "2026-09-13T17:31:38+00:00"
+        },
+        {
+          "url": "https://tableforge.gg/",
+          "title": "TableForge: AI Dungeon Master for D&D 5e",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "ask-hn-what-are-you-working-on-2026-09",
+          "date": "2026-09-14",
+          "title": "HN 九月构建者帖：TableForge 用 AI 当 D&D 主持人，工具调用跑团",
+          "summary": "HN 九月『你在做什么』帖中，开发者展示 TableForge 等产品，其中 AI 作为 DM 通过确定性工具管理角色卡和骰子，值得看 AI 如何嵌入具体玩法。",
+          "score": 7.2,
+          "url": "https://news.ycombinator.com/item?id=49686380"
+        }
+      ],
+      "usage_flow": [
+        "玩家在浏览器里创建或加载角色卡（真实服务器资源，非 AI 瞎编）",
+        "AI DM 根据玩家行动，用内置的确定性工具掷骰、计算伤害、更新角色状态",
+        "AI DM 同时负责叙事和根据规则做出剧情反应",
+        "玩家可实时联机或异步进行，随时继续进度"
+      ],
+      "learning_points": [
+        "Agent：AI 不只是聊天，还能'扮演角色'并主动调用工具完成任务",
+        "Function Calling（工具调用）：让 AI 按固定格式请求外部功能（如掷骰、改血量），而不是自己瞎算",
+        "确定性系统 vs 生成式 AI：创意部分给 AI，数学和规则部分给代码，降低幻觉风险"
+      ],
+      "verticals": [],
+      "tags": [
+        "AI产品",
+        "构建者",
+        "Agent"
+      ]
+    },
+    {
+      "product_id": "product-38254e6a950be4b9",
+      "product_name": "Fable 5.1",
+      "builder_name": "u1hcw9nx",
+      "first_seen": "2026-09-14",
+      "last_seen": "2026-09-14",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Fable 5.1 被用来破解一个 370 年历史的密码，展示了 LLM 在冷门历史难题上的推理能力。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.0,
+      "summary": "Fable 5.1 被用来破解一个 370 年历史的密码，展示了 LLM 在冷门历史难题上的推理能力。",
+      "title": "Fable 5.1 Solves the Cyphral Distich, a 370-year-old cipher",
+      "url": "https://www.vals.ai/blogs/fable-solves-cyphral-distich",
+      "sources": [
+        {
+          "url": "https://www.vals.ai/blogs/fable-solves-cyphral-distich",
+          "title": "Fable 5.1 Solves the Cyphral Distich, a 370-year-old cipher",
+          "source_type": "hackernews",
+          "published_at": "2026-09-13T21:06:13+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "fable-5-1-cyphral-distich-cipher",
+          "date": "2026-09-14",
+          "title": "Fable 5.1 Solves the Cyphral Distich, a 370-year-old cipher",
+          "summary": "Fable 5.1 被用来破解一个 370 年历史的密码，展示了 LLM 在冷门历史难题上的推理能力。",
+          "score": 7.0,
+          "url": "https://www.vals.ai/blogs/fable-solves-cyphral-distich"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "LLM 能力",
+        "推理",
+        "密码学"
+      ]
+    },
     {
       "product_id": "product-29cd622483465a52",
       "product_name": "ChatGPT Sketch",
