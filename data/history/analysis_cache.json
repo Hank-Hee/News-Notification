@@ -500,6 +500,45 @@
       },
       "stage": "deep_analysis"
     },
+    "03f766406b454d129c1078e344283ffec34d975c5fc130b8c745eaa236831646": {
+      "created_at": "2026-09-16T04:48:06.498934+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "good-start-labs-game-transfer-training",
+        "evidence_status": "reported",
+        "follow_up": "查看论文或代码，确认训练设计差异的具体做法。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:www.latent.space_feed:eb64bf46642bd168",
+        "intelligence_type": "builder_insight",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Good Start Labs",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Latent Space 报道 Good Start Labs 用铁路游戏训练 AI，其中一版在金融研究任务上表现提升，差异来自训练设计，属于可迁移的模型训练与能力迁移实践，对理解 AI 能力边界有帮助。",
+        "region": "global",
+        "score": 7.4,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "Good Start Labs 用铁路游戏训练 AI，其中一版在金融研究任务上变强，作者认为关键差别在训练设计而非游戏本身。",
+        "tags": [
+          "训练方法",
+          "能力迁移",
+          "研究"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "044e4166c0cbaa3e00789c38816cc8b5e9852ff625e72857f9f906bcbff2667f": {
       "created_at": "2026-07-28T03:49:03.132201+00:00",
       "model": "deepseek-v4-flash",
@@ -2421,6 +2460,44 @@
           "Apple",
           "Mac mini",
           "硬件"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "0b0b9cb769b28f14386b4b8c509f767f2bec7f616130982778c3640cfb959c96": {
+      "created_at": "2026-09-16T04:48:24.034028+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-codex-rust-v0.155.0-alpha.8",
+        "evidence_status": "first_party",
+        "follow_up": "无，除非出现正式版说明。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "github:release:389518357",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "OpenAI Codex",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "同系列 alpha 补丁，正文仅版本号，无实质信息，重复度高。",
+        "region": "global",
+        "score": 3.5,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "OpenAI 自动发布 Codex 的 Rust 版 0.155.0-alpha.8，内容为空，没有可拆解信息。",
+        "tags": [
+          "Coding Agent",
+          "Release"
         ],
         "target_user": "",
         "verticals": []
@@ -11159,6 +11236,46 @@
       },
       "stage": "candidate_analysis"
     },
+    "30d1b11a25f59a05cf3f541e1d7ccc8b1dd04b52595b34067ee0775147901391": {
+      "created_at": "2026-09-16T04:48:24.034609+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "vercel-ai-sdk-7.0.102-realtime-webrtc",
+        "evidence_status": "first_party",
+        "follow_up": "关注该实验 API 是否转正，以及是否有开发者用它做出可体验的语音产品。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "github:release:389337825",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Vercel AI SDK",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Vercel AI SDK 新增实验性浏览器直连 WebRTC 与 OpenAI Live 实时语音支持，明确了客户端委托、会话所有权、麦克风轨道归属等产品级约束。对做语音 Agent 产品的初学者有直接可迁移价值：能理解实时语音会话中服务端与客户端如何分工，但仍是实验性功能，需标注成熟度。",
+        "region": "global",
+        "score": 7.6,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "Vercel AI SDK 加入实验性浏览器直连 WebRTC 和 OpenAI 实时语音支持，让开发者能在自己的应用里搭建可委托上下文的实时语音 Agent。",
+        "tags": [
+          "AI SDK",
+          "实时语音",
+          "WebRTC",
+          "Agent"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "31023adbccd2eef66bb30ce2c669904f659bf79b27946fe84210b19e15806347": {
       "created_at": "2026-08-02T03:52:45.120631+00:00",
       "model": "deepseek-v4-flash",
@@ -11463,6 +11580,44 @@
           "Agent",
           "开源",
           "YAML"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "3265bf8ae8ca0482c698f6c0b3a9468c0ad809985a4e18f0ad4adeda97d5cb81": {
+      "created_at": "2026-09-16T04:48:24.035697+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "n8n-beta-2.40.0",
+        "evidence_status": "first_party",
+        "follow_up": "无。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "github:release:389044141",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": false,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "n8n",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "beta 标签指向与 2.40.0 完全相同的发布内容，属于同一事件的重复条目，无新增信息。",
+        "region": "global",
+        "score": 3.0,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "n8n 的 beta 标签内容与 2.40.0 正式版完全相同，是重复发布。",
+        "tags": [
+          "工作流自动化",
+          "重复"
         ],
         "target_user": "",
         "verticals": []
@@ -12545,6 +12700,39 @@
       },
       "stage": "candidate_analysis"
     },
+    "370bed4a9bd745228a5d4e1540c5f084d8554a6e03ca60a03166a7ea120ee215": {
+      "created_at": "2026-09-16T04:48:46.030037+00:00",
+      "model": "kimi-k2.6",
+      "prompt_version": "deep-v3-beginner",
+      "result": {
+        "ai_role": "编码 Agent（Coding Agent）——一种能帮你写代码、改 bug、或自动生成代码片段的 AI 助手，这里指安装器为它准备好了运行所需的环境和工具链",
+        "evidence_status": "first_party",
+        "hands_on_exercise": "30 分钟练习：在 Windows 终端运行 winget install Microsoft.FoundryDevPack，装完后打开 VS Code，新建一个 Python 文件，尝试让内置的编码 Agent 帮你写一段调用 OpenAI API 的简单代码，观察 Agent 是否能正常响应",
+        "implementation_idea": "本质上是一个软件包管理器脚本，像装一个大型 App 一样，把分散的工具（命令行 CLI、编辑器插件、Agent 的运行依赖）打包成一键安装，省去用户逐个下载配置的麻烦",
+        "learning_points": [
+          "Agent：能自动帮你完成任务的 AI 程序，这里特指能辅助写代码的编码 Agent",
+          "CLI（命令行界面）：用打字输入指令来操作电脑的方式，开发者常用它来运行安装和构建命令",
+          "开发环境：写代码前需要的一套工具组合，包括编辑器、运行库、配置文件等"
+        ],
+        "limitations_or_uncertainties": "未公开：目前是否支持 macOS/Linux 未明确；编码 Agent 具体指哪个产品（GitHub Copilot、Azure AI Agent 还是其他）未说明；安装包具体包含哪些工具清单未详细列出",
+        "product_name": "Foundry Dev Pack",
+        "sources": [
+          "https://devblogs.microsoft.com/foundry/foundry-devpack-announcement/",
+          "https://learn.microsoft.com/en-us/azure/foundry/how-to/develop/install-cli-sdk",
+          "https://winstall.app/apps/Microsoft.FoundryDevPack"
+        ],
+        "target_users": "刚开始学用 Microsoft Foundry 做 AI 产品的开发者，尤其是不想手动配环境的初学者",
+        "title_zh": "微软发布 Foundry Dev Pack：一条命令搭好 AI 开发环境",
+        "usage_flow": [
+          "在终端运行一条安装命令（如 WinGet 的 winget install Microsoft.FoundryDevPack）",
+          "等待安装器自动下载并配置终端、VS Code 和编码 Agent 所需工具",
+          "打开 VS Code，开始用配好的环境写 AI 应用代码"
+        ],
+        "user_problem": "新手搭建 AI 开发环境时要分别安装终端工具、VS Code 插件、Agent 依赖等，步骤多、容易配错，还没写代码就卡在环境上",
+        "what_it_is": "一个一键安装器，把终端、VS Code 和编码 Agent 需要的工具一次性配好，让你能快速开始用 Microsoft Foundry 做 AI 开发。"
+      },
+      "stage": "deep_analysis"
+    },
     "3713490fbd7ebd5cac6dbda45fe39cecc1f1e9387f4e7ce985746479fa6e713e": {
       "created_at": "2026-07-25T16:38:46.367907+00:00",
       "model": "deepseek-v4-flash",
@@ -12846,6 +13034,45 @@
           "独立开发者",
           "Codex",
           "时尚"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "38e726fab2e8dba4a71471fcf10e7f80db5caa6e32bd4b9d0baea45d63698a6a": {
+      "created_at": "2026-09-16T04:47:53.112069+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "google-ai-societal-impact-collection",
+        "evidence_status": "first_party",
+        "follow_up": "若后续放出具体医疗或教育落地案例再评估。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:blog.google_innovation-and-ai_technology_ai_rss_:970c94673769027a",
+        "intelligence_type": "market_signal",
+        "is_first_party": true,
+        "is_new_event": false,
+        "is_promotional": true,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Google 官方品牌宣传页，仅一句概述加配图，无具体产品、用户或数据，属泛社会影响宣传，按规则扣分。",
+        "region": "global",
+        "score": 4.5,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Google 发布 AI 社会影响案例合集，展示专家和地方组织如何用 AI，但页面只有宣传语，没有可拆解的产品细节。",
+        "tags": [
+          "Google",
+          "社会影响",
+          "宣传"
         ],
         "target_user": "",
         "verticals": []
@@ -21240,6 +21467,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "5de1263a552294b6525fb8661ae770ad2936701a68f89e79bb0ac3751abc400e": {
+      "created_at": "2026-09-16T04:48:24.033986+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-codex-rust-v0.155.0-alpha.9",
+        "evidence_status": "first_party",
+        "follow_up": "等待正式版 changelog 或功能说明，否则持续忽略此类 alpha 自动发布。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "github:release:389580732",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "OpenAI Codex",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI Codex 的 Rust 版本 alpha 补丁发布，正文只有版本号，无任何变更说明、功能或用户反馈，属于高频自动发布噪音，对产品经理无迁移价值。",
+        "region": "global",
+        "score": 3.5,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "OpenAI 自动发布了 Codex 的 Rust 版 0.155.0-alpha.9，但没有任何变更说明，看不出解决了什么问题。",
+        "tags": [
+          "Coding Agent",
+          "Release"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "5e11825403d45514dc6b48bc188774a27c24fe561df7f1d6c66f097d233e77b1": {
       "created_at": "2026-08-04T03:46:28.990495+00:00",
       "model": "kimi-k2.6",
@@ -22612,6 +22877,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "63ca49c7815c3956f33ff54201aac0060b734f4cd8e3fbd60129527992dfcd94": {
+      "created_at": "2026-09-16T04:48:06.498746+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "meta-one-subscription-launch",
+        "evidence_status": "reported",
+        "follow_up": "观察各档定价与 AI 用量限制，判断 AI 订阅打包模式是否成立。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:78421fa2cf76f38b",
+        "intelligence_type": "business_policy",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Meta One",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Meta 推出 Meta One 订阅捆绑，把社交应用订阅与额外 AI 用量打包，属于 AI 产品商业化定价事件，有真实增量，但对个人产品构建者的可迁移方法有限。",
+        "region": "global",
+        "score": 6.8,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Meta 在全球上线 Meta One 订阅，把旗下应用订阅与额外 AI 使用额度打包，面向个人、创作者和企业分档收费。",
+        "tags": [
+          "订阅",
+          "商业化",
+          "Meta"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "63f90ad176b4d33d04bdc8db9a55f2aafa35f023f19d6f343227b0efa671af74": {
       "created_at": "2026-08-19T01:53:07.936733+00:00",
       "model": "deepseek-v4-flash",
@@ -23844,6 +24148,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "691349fd0a2eea2fb1d3eaeeaf814d755875306d55afb54334609ae87d4e6753": {
+      "created_at": "2026-09-16T04:48:06.498705+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "nyt-siena-poll-ai-datacenter-unpopular",
+        "evidence_status": "reported",
+        "follow_up": "观察该民意是否影响 AI 产品的合规与选址策略。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:b04acfe2b7328f72",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "民调数据报道，反映公众对 AI 与数据中心的态度，属于泛行业信号，不直接催生产品，低于收录线。",
+        "region": "global",
+        "score": 4.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "纽约时报与 Siena 大学民调显示 61% 受访选民反对为 AI 建数据中心，AI 与数据中心在民意中极不受欢迎。",
+        "tags": [
+          "民意",
+          "数据中心",
+          "行业观察"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "6968784d530af703fd3dd6bfbfd189497d429c4b107b70bd50967a3a38c33e4e": {
       "created_at": "2026-08-31T05:32:46.836835+00:00",
       "model": "deepseek-v4-flash",
@@ -24032,6 +24375,45 @@
           "AI监控",
           "自托管",
           "开源"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "6a92637fda332b906566fea78c5ad5cec067d0e54d3e764a5b4d4eb1175e97f2": {
+      "created_at": "2026-09-16T04:48:08.764760+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "ai-data-center-philadelphia-community-backlash",
+        "evidence_status": "reported",
+        "follow_up": "不建议追踪，除非后续出现与AI产品落地直接相关的具体案例或政策变化。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:c0fed308d47bada4",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "属于AI数据中心建设与社区反弹的泛行业社会议题报道，没有产品、代码、Demo或可迁移的构建经验，也未解锁新的产品体验；对准备做AI产品经理的初学者参考价值低，按规则低于7分不收录。",
+        "region": "global",
+        "score": 4.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "TechCrunch报道美国反对数据中心建设的声浪蔓延到费城，当地官员提议在已受旧炼油厂影响的社区附近选址，反映AI基础设施扩张与地方社区的冲突。",
+        "tags": [
+          "AI基础设施",
+          "数据中心",
+          "社区反弹"
         ],
         "target_user": "",
         "verticals": []
@@ -24830,6 +25212,45 @@
         "tags": [
           "Anthropic",
           "科学家支持"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "6dbedd202910dfdd0b4b2a3841816dc07a3c53673b76ba168724a2e00fe17a6f": {
+      "created_at": "2026-09-16T04:47:53.112163+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "altk-evolve-agent-consistency",
+        "evidence_status": "reported",
+        "follow_up": "补充正文后看是否给出可复用的评测或改进方法。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:huggingface.co_blog_feed.xml:a1d018f16fad79f9",
+        "intelligence_type": "builder_insight",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Hugging Face 博客转载 IBM Research 关于 Agent 任务一致性的文章，主题贴近 Agent 产品可靠性，但正文为空无法判断是否有可迁移方法，暂给6.8分。",
+        "region": "global",
+        "score": 6.8,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "Hugging Face 博客讨论 Agent 一次做对任务后能否稳定复现，涉及 Agent 产品可靠性问题，但正文缺失，暂无法评估具体方法。",
+        "tags": [
+          "Agent",
+          "可靠性",
+          "IBM Research"
         ],
         "target_user": "",
         "verticals": []
@@ -30426,6 +30847,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "863af44463a4498fbeb003a664c112fc3ef66a72ac1419518a83c3ad7ff11fd5": {
+      "created_at": "2026-09-16T04:47:53.112033+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "interconnects-open-models-reading-list",
+        "evidence_status": "first_party",
+        "follow_up": "清单后续更新是否加入新的开源模型商业案例。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "newsletter:feed:76f60d64aa6d789064c0",
+        "intelligence_type": "builder_insight",
+        "is_first_party": true,
+        "is_new_event": false,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Nathan Lambert 整理的开源模型阅读清单，属高信噪比 Newsletter 且为作者一手整理，对建立开源模型认知框架有可迁移价值；但非产品案例、无新事件增量，故在7分档。",
+        "region": "global",
+        "score": 7.2,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "Interconnects 作者 Nathan Lambert 整理了一份开源模型最佳阅读清单，帮初学者系统了解开源模型的商业逻辑与风险，适合作为入门知识地图。",
+        "tags": [
+          "开源模型",
+          "Newsletter",
+          "学习资源"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "864bac8c0bbe99e24f3d03314dc5e8bc10e2b3826ee571ef1f365484316f2675": {
       "created_at": "2026-08-18T01:50:11.648633+00:00",
       "model": "deepseek-v4-flash",
@@ -30649,6 +31109,45 @@
         "summary_zh": "开发者展示了一个仅用GET请求的社交网络GET Together，创意新颖但无AI功能。",
         "tags": [
           "社交网络"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "878367532a635d9ab126d94649522a23ef342b35167f7ad4439662422b35c651": {
+      "created_at": "2026-09-16T04:48:06.498972+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "is-agentic-site-type-views",
+        "evidence_status": "first_party",
+        "follow_up": "观察该工具是否被用于评估 AI 产品的可被 agent 调用程度。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:vercel.com_changelog_rss:953e5c15b89d76da",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Is Agentic",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Vercel 官方更新 Is Agentic 报告，按站点类型（文档、商业、应用、电商）高亮不同检查项，属于开发者工具的小幅功能迭代，有真实增量但影响面有限。",
+        "region": "global",
+        "score": 6.5,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "Vercel 的 Is Agentic 报告新增四种站点类型视图，按类型高亮支付、API 发现等检查项，分数不变，可用 meta 标签设默认视图。",
+        "tags": [
+          "开发者工具",
+          "Agent",
+          "Vercel"
         ],
         "target_user": "",
         "verticals": []
@@ -31990,6 +32489,45 @@
           "AI同事",
           "OpenAI",
           "行业趋势"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "8d696dcb6c752a946f514bd151da1e217be4347be1a5479badcf6c543924e093": {
+      "created_at": "2026-09-16T04:47:53.112051+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "gemini-3-8-live-release",
+        "evidence_status": "first_party",
+        "follow_up": "补充正文后确认 Live 能力的具体延迟、模态与定价，以及是否有产品接入案例。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:deepmind.google_blog_rss.xml:947e89eaa83a27ae",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Gemini 3.8 Live",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Google DeepMind 官方发布 Gemini 3.8 Live 与 Extended Thinking，属模型公司一手新能力动态，可能解锁实时多模态产品体验；但正文为空，无法判断具体能力细节，暂给7.5分。",
+        "region": "global",
+        "score": 7.5,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Google DeepMind 发布 Gemini 3.8 Live 和 3.8 Live Extended Thinking 两个新模型，主打实时交互与深度思考，值得关注能否催生新的实时 AI 产品形态。",
+        "tags": [
+          "Gemini",
+          "多模态",
+          "实时交互"
         ],
         "target_user": "",
         "verticals": []
@@ -35859,6 +36397,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "9b03aae7b8dff549e1f149d0ea143702e5cbfab1ac659a9cf29a1fd08bc17dc1": {
+      "created_at": "2026-09-16T04:47:53.112129+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "google-ai-economy-atlas-sept-2026",
+        "evidence_status": "first_party",
+        "follow_up": "补充正文后看是否有可迁移的行业采用数据。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:blog.google_innovation-and-ai_technology_ai_rss_:b21c5e1ffc812be8",
+        "intelligence_type": "market_signal",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Google 官方发布 AI 与经济 Atlas 报告，属行业观察数据，但正文为空无法判断增量，且非产品案例，暂给5分。",
+        "region": "global",
+        "score": 5.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Google 发布 2026 年 9 月版 AI 与经济 Atlas 报告，可能包含 AI 采用率数据，但正文缺失，暂无法评估价值。",
+        "tags": [
+          "Google",
+          "行业报告",
+          "AI经济"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "9b1588c81c533177fd5a2da7c908ad249080b17821c3bf1b63ef74c021630982": {
       "created_at": "2026-08-11T02:27:24.066123+00:00",
       "model": "deepseek-v4-flash",
@@ -35966,6 +36543,45 @@
         "tags": [
           "Codex",
           "版本更新"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "9b8b95aad8c6fca18c1315aeb258f7777f0fd151ad2e65a943b4f61e2303411b": {
+      "created_at": "2026-09-16T04:48:24.034516+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "claude-code-v2.1.273",
+        "evidence_status": "first_party",
+        "follow_up": "观察远程 fork 会话与 MCP 自动重连在真实用户工作流中的使用反馈。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "github:release:389362239",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Claude Code",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Claude Code 正式版本更新，包含可迁移的产品细节：LLM 网关请求头、MCP 断连通知与自动重连、从 Claude App 远程 fork 会话并后台运行、权限检查与安全修复。这些是真实功能增量，能帮助初学者理解 Agent 工具在会话管理、网关集成和安全边界上的产品设计，但属于常规迭代而非突破性能力。",
+        "region": "global",
+        "score": 7.2,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "Anthropic 更新 Claude Code，新增网关请求头、MCP 断连提示与自动重连、从 Claude App 远程 fork 后台会话，并修复权限与登录错误，让 Agent 会话更可控。",
+        "tags": [
+          "Coding Agent",
+          "MCP",
+          "会话管理"
         ],
         "target_user": "",
         "verticals": []
@@ -37356,6 +37972,46 @@
       },
       "stage": "candidate_analysis"
     },
+    "a14e1af8eef84f43a1ccb6599d3e18158c758ef0a3c1d5d0999b296e9e5b85d4": {
+      "created_at": "2026-09-16T04:48:06.498916+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "gemini-3-8-live-release",
+        "evidence_status": "first_party",
+        "follow_up": "试用该 Web UI，观察语音打断与延迟表现，判断能否用于个人产品。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:simonwillison.net_atom_everything_:219c439494be37ce",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Gemini 3.8 Live",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Simon Willison 一手记录 Google 发布 Gemini 3.8 Live 与 3.8 Live Extended Thinking 两个语音到语音模型，并当场用 GPT-6 生成可试用的 Web UI，包含打断模型等交互细节，属于模型能力加构建者实践的高价值内容。",
+        "region": "global",
+        "score": 8.6,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Google 发布 Gemini 3.8 Live 和 3.8 Live Extended Thinking 语音模型，Simon Willison 当天用 AI 生成网页界面，让用户选模型和音色、设系统提示并实时语音对话。",
+        "tags": [
+          "Gemini",
+          "语音模型",
+          "Demo",
+          "构建过程"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "a160d8f65a2ef6bf9dd3469c49e32907aa1ffcfa8846702aa114f6963dbd7ee3": {
       "created_at": "2026-08-06T03:36:01.227049+00:00",
       "model": "deepseek-v4-flash",
@@ -37884,6 +38540,44 @@
         "tags": [
           "DeepSeek",
           "R1"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "a2dc71c791f27eec834dc2a50c37183dbb40729e212c7d354da02f912fcf5849": {
+      "created_at": "2026-09-16T04:48:24.034625+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "ai-sdk-zai-3.0.11",
+        "evidence_status": "first_party",
+        "follow_up": "无。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "github:release:389340216",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Vercel AI SDK",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "仅为依赖版本同步的补丁发布，无功能、无用户场景，属于自动依赖更新噪音。",
+        "region": "global",
+        "score": 3.0,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "Vercel 的 Z.ai 适配包只是同步了依赖版本，没有新增任何能力。",
+        "tags": [
+          "AI SDK",
+          "依赖更新"
         ],
         "target_user": "",
         "verticals": []
@@ -39400,6 +40094,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "a8c6690f4ce32c1ee115ad9425518268e5918aef81e5ce593466b1d207e281bf": {
+      "created_at": "2026-09-16T04:48:24.035193+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "n8n-2.40.0",
+        "evidence_status": "first_party",
+        "follow_up": "关注 ai-builder 后续是否推出面向新手的 Agent 搭建能力。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "github:release:389044119",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "n8n",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "n8n 2.40.0 正式版，含 AI Agent 节点保留 Anthropic thinking blocks、ai-builder 引导体验与 429 限流防护等修复。对做自动化 Agent 产品的初学者有一定参考价值，但主要是 bug 修复，缺少新能力或用户案例，增量有限。",
+        "region": "global",
+        "score": 6.4,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "n8n 发布 2.40.0，修复 AI Agent 节点丢失 Anthropic 思考块、ai-builder 引导和限流等问题，让自动化 Agent 流程更稳定。",
+        "tags": [
+          "工作流自动化",
+          "Agent",
+          "n8n"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "a90f5c1b789ab353ab746e04e4f3a576cbf860533b61df7339863d6f3e86319e": {
       "created_at": "2026-08-25T01:52:40.442940+00:00",
       "model": "deepseek-v4-flash",
@@ -40207,6 +40940,44 @@
         "tags": [
           "Model Hardware",
           "Research Preview"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "ad18c9eebd9611dec93b14d58f404c3f16061c9acfd8e21fb82368a8f8fafb82": {
+      "created_at": "2026-09-16T04:48:24.034014+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-codex-rust-v0.155.0-alpha.10",
+        "evidence_status": "first_party",
+        "follow_up": "关注 Codex 是否有面向用户的正式功能发布。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "github:release:389635097",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "OpenAI Codex",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "同一产品连续 alpha 补丁，正文为空，无功能、无指标、无反馈，属于自动发布噪音。",
+        "region": "global",
+        "score": 3.5,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "OpenAI 又自动发布了 Codex 的 Rust 版 0.155.0-alpha.10，同样没有说明改了什么。",
+        "tags": [
+          "Coding Agent",
+          "Release"
         ],
         "target_user": "",
         "verticals": []
@@ -42916,6 +43687,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "b7ee156aadd05f440388c8ef9045d9796931f26b15025ad8cdf0a0ea86c572a0": {
+      "created_at": "2026-09-16T04:47:53.112100+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "google-ai-every-language",
+        "evidence_status": "first_party",
+        "follow_up": "关注是否发布具体多语言模型或翻译产品更新。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:blog.google_innovation-and-ai_technology_ai_rss_:50f1fa34d3c31e12",
+        "intelligence_type": "market_signal",
+        "is_first_party": true,
+        "is_new_event": false,
+        "is_promotional": true,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Google 官方博客，正文仅为动画描述，无实质信息，属品牌宣传。",
+        "region": "global",
+        "score": 4.5,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Google 发布多语言 AI 宣传内容，正文只有动画描述，没有可拆解的产品能力。",
+        "tags": [
+          "Google",
+          "多语言",
+          "宣传"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "b82dd7f10bf7647c64a008022cd6b4da2a692537e8d46cbf8115f0665cb51c2f": {
       "created_at": "2026-09-03T04:22:15.545989+00:00",
       "model": "deepseek-v4-flash",
@@ -42948,6 +43758,45 @@
         "tags": [
           "Gemini",
           "模型分析"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "b8414ff01827b53a91ca6a145f3e44a8331f09e8100347292106d8b763cc5bf2": {
+      "created_at": "2026-09-16T04:48:06.498771+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "simplisafe-doorbell-series2-launch",
+        "evidence_status": "reported",
+        "follow_up": "观察 AI 误报率与真人介入比例，判断该模式成本结构。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:17a11a5c1c19fde2",
+        "intelligence_type": "product_case",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "SimpliSafe Video Doorbell Series 2",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "SimpliSafe 发布第二代视频门铃，把 AI 分析与真人安保结合做主动防护，是 AI 在家庭安防垂直场景落地的具体产品案例，有价格与订阅信息，可迁移到其他垂直 AI 产品。",
+        "region": "global",
+        "score": 7.2,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "SimpliSafe 推出 199.99 美元的第二代视频门铃，配合每月 49.99 美元起的服务，用 AI 分析加真人安保主动识别门前威胁。",
+        "tags": [
+          "智能家居",
+          "安防",
+          "垂直AI"
         ],
         "target_user": "",
         "verticals": []
@@ -45156,6 +46005,44 @@
           "API",
           "定价",
           "DeepSeek"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "c34fdd8e102ae3c29f1eefa3950bcd131ad5f0ddaa3df037789f17b06f535377": {
+      "created_at": "2026-09-16T04:47:53.111574+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openrouter-rankings-top5",
+        "evidence_status": "reported",
+        "follow_up": "关注榜单中模型是否出现真实产品集成案例或用户反馈。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "public_web:ranking:b0ab1ec5ca2d10da9cfa",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": false,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "聚合榜单，仅罗列模型名称与参数简介，无产品案例、用户反馈或构建过程；对初学者理解模型能力分布有参考价值，但信息密度低且非一手，按规则低于7分。",
+        "region": "global",
+        "score": 6.5,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "OpenRouter 列出当前调用热度前五的模型（GPT-5.6 Luna、腾讯 Hy4 preview、DeepSeek V4 Flash 等），可用来快速了解哪些模型被高频使用，但榜单本身没有产品落地证据。",
+        "tags": [
+          "模型榜单",
+          "OpenRouter"
         ],
         "target_user": "",
         "verticals": []
@@ -48873,6 +49760,47 @@
       },
       "stage": "candidate_analysis"
     },
+    "d4ad1fa21f258d81fe0c587cc9ed86e9e4dccea730be0f8d5849b650974a8beb": {
+      "created_at": "2026-09-16T04:48:11.259208+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "whatsapp-business-mcp-server-launch",
+        "evidence_status": "reported",
+        "follow_up": "值得追踪：关注官方文档、GitHub 仓库、开发者实际使用反馈，以及是否支持更多消息类型和地区。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:78e34177a66e641f",
+        "intelligence_type": "product_case",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "WhatsApp Business MCP Server",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Meta 推出 WhatsApp Business MCP server，让 Claude、Cursor、Codex、ChatGPT 等 AI 编码代理直接处理商家账号配置、消息模板、测试和排障。这是把 MCP 从开发者工具延伸到具体商业场景的一手产品案例，对想理解“AI 在哪一步发挥作用、用户怎么用”的初学者有可迁移增量；但来源为 TechCrunch 报道而非官方发布页，且无用户反馈或 Demo 验证，因此未进入 8 分以上区间。",
+        "region": "global",
+        "score": 7.2,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Meta 发布 WhatsApp Business 的 MCP server，让 Claude、Cursor 等 AI 编码代理帮开发者自动完成商家账号配置、消息模板、测试和排障，省去繁琐的手动设置。",
+        "tags": [
+          "Agent",
+          "MCP",
+          "WhatsApp Business",
+          "AI Coding",
+          "Meta"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "d50036f7daed19578b318eab55b77c9c6678761ea580abf990c20177466fcd7d": {
       "created_at": "2026-08-01T03:49:24.198728+00:00",
       "model": "deepseek-v4-flash",
@@ -52200,6 +53128,40 @@
       },
       "stage": "deep_analysis"
     },
+    "e42f668540419c9e4be59a570420a7f4fae1257fd30d0fd1d116c3d7b9854244": {
+      "created_at": "2026-09-16T04:49:08.809887+00:00",
+      "model": "kimi-k2.6",
+      "prompt_version": "deep-v3-beginner",
+      "result": {
+        "ai_role": "AI 充当'能动手操作的技术助手'——把用户的自然语言指令翻译成具体的 API 调用，自动完成配置、测试和排障，不需要用户自己写代码或点网页后台",
+        "evidence_status": "reported",
+        "hands_on_exercise": "30 分钟体验：如果你已有 Cursor 或 Claude Desktop，去 Meta for Developers 文档页找到 WhatsApp Business Tools MCP 的安装指引，尝试在本地配置连接；即使没有真实 WhatsApp Business 账号，也可以走通'AI 发现可用功能'这一步，观察 MCP 工具列表如何呈现给 AI",
+        "implementation_idea": "MCP（Model Context Protocol，模型上下文协议）是一种'AI 工具通用插座'标准。Meta 这个 MCP 服务器相当于给 WhatsApp Business API 包了一层适配器，让 AI 编码工具能'插'进来、看懂有哪些功能可用，然后自动调用。打个比方：以前 AI 只能给你'操作说明书'，现在有了 MCP，AI 能直接帮你'按按钮'了",
+        "learning_points": [
+          "MCP（Model Context Protocol）：AI 和外部工具之间的'通用翻译官'，让不同 AI 都能用同一套方式操作第三方服务",
+          "AI 编码代理（AI Coding Agent）：不只会写代码，还能实际执行操作、调用工具的 AI，比如 Claude、Cursor 里的助手",
+          "Function Calling（函数调用）：AI 判断'现在该调用哪个工具、传什么参数'的能力，是 MCP 能工作的底层机制"
+        ],
+        "limitations_or_uncertainties": "TechCrunch 为报道来源，非 Meta 官方首发渠道；尚无公开的用户实际使用反馈或独立验证的 Demo 视频；未明确是否支持所有地区的手机号注册，以及 AI 自动操作时的权限边界和错误回滚机制",
+        "product_name": "WhatsApp Business Tools MCP",
+        "sources": [
+          "https://techcrunch.com/2026/09/15/meta-now-lets-ai-agents-handle-the-boring-parts-of-whatsapp-business-setup/",
+          "https://developers.facebook.com/documentation/mcp/whatsapp-business-tools-mcp/",
+          "https://developers.facebook.com/blog/post/2026/09/15/whatsapp-business-messaging-mcp-ai-agent/"
+        ],
+        "target_users": "在 WhatsApp Business Platform（Cloud API）上做开发的开发者，以及使用 Claude、Cursor、Codex、ChatGPT 等 AI 编码工具的技术人员",
+        "title_zh": "Meta 让 AI 编码代理自动搞定 WhatsApp Business 繁琐配置",
+        "usage_flow": [
+          "开发者在 AI 编码工具（如 Cursor）里安装并配置 WhatsApp Business Tools MCP",
+          "用自然语言描述需求，例如'帮我注册一个新手机号并创建订单确认模板'",
+          "AI 代理自动调用 MCP 接口完成账号发现、注册、模板创建等操作",
+          "开发者检查 AI 执行结果，必要时继续用自然语言迭代调整"
+        ],
+        "user_problem": "开发者手动配置 WhatsApp Business 账号很繁琐：要逐个注册手机号、创建消息模板、设置 webhook、排查 API 报错，步骤多且容易出错",
+        "what_it_is": "Meta 官方发布的 MCP 服务器，让 Claude、Cursor 等 AI 编码工具能直接操作用户的 WhatsApp Business 账号，完成注册、模板创建、调试等配置工作"
+      },
+      "stage": "deep_analysis"
+    },
     "e432716c48b090e7d0103de74e1e4a2cff4b0bd8d14d85705e39940662d94c03": {
       "created_at": "2026-08-08T02:21:51.222726+00:00",
       "model": "deepseek-v4-flash",
@@ -54177,6 +55139,45 @@
           "推理加速",
           "vLLM",
           "并行解码"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "ebd8a31938dc3609d658ed94117a5c9a93704be059a789be1b65655b5aee8efb": {
+      "created_at": "2026-09-16T04:47:53.112086+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "google-ai-science-lives",
+        "evidence_status": "first_party",
+        "follow_up": "等待具体科研或医疗 AI 产品细节。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:blog.google_innovation-and-ai_technology_ai_rss_:6fff55fdf7cb614f",
+        "intelligence_type": "market_signal",
+        "is_first_party": true,
+        "is_new_event": false,
+        "is_promotional": true,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Google 官方博客，正文仅为视频素材描述，无实质内容，属品牌宣传，按规则低于5分。",
+        "region": "global",
+        "score": 4.5,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Google 发布一段关于用 AI 加速科学、改善生活的视频素材，没有可验证的产品或数据。",
+        "tags": [
+          "Google",
+          "科学AI",
+          "宣传"
         ],
         "target_user": "",
         "verticals": []
@@ -58047,6 +59048,45 @@
         "tags": [
           "Codex",
           "预发布"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "fa655cd42595821eb4dcaa32a6e3f660357aea6888ee64b938c2149be57d6250": {
+      "created_at": "2026-09-16T04:47:53.112151+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "foundry-dev-pack-launch",
+        "evidence_status": "first_party",
+        "follow_up": "观察是否有中文教程或实际项目案例展示从安装到跑通的全流程。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:devblogs.microsoft.com_foundry_feed_:83abf36f9205c8e3",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Foundry Dev Pack",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "微软官方发布 Foundry Dev Pack，一条命令装好终端、VS Code 和编码 Agent 所需工具，直接降低初学者搭建 AI 开发环境的门槛，属可迁移的开发者工具增量，给7.8分。",
+        "region": "global",
+        "score": 7.8,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "微软发布 Foundry Dev Pack，用一个安装器配好终端、VS Code 和编码 Agent 的开发环境，帮初学者更快开始动手做 AI 产品。",
+        "tags": [
+          "Microsoft Foundry",
+          "开发工具",
+          "Agent"
         ],
         "target_user": "",
         "verticals": []

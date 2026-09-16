@@ -1,133 +1,128 @@
 {
   "version": 1,
-  "updated_at": "2026-09-15T04:54:20.008140+00:00",
+  "updated_at": "2026-09-16T04:49:08.823935+00:00",
   "products": [
     {
-      "product_id": "product-9ebae6caf6cae6fc",
-      "product_name": "dbt Charts",
-      "builder_name": "thingsilearned",
-      "first_seen": "2026-09-15",
-      "last_seen": "2026-09-15",
+      "product_id": "product-c483e81cc0b3f3e1",
+      "product_name": "Gemini 3.8 Live",
+      "builder_name": "Simon Willison",
+      "first_seen": "2026-09-16",
+      "last_seen": "2026-09-16",
       "occurrence_count": 1,
-      "intelligence_type": "product_case",
+      "intelligence_type": "model_capability",
       "evidence_status": "first_party",
-      "target_user": "用 AI Agent（如 Claude）做数据分析但发现产出混乱难管的数据分析师、工程师；需要把仪表盘纳入版本控制的 BI 团队",
-      "user_problem": "让 AI Agent 直接生成仪表盘时，会产生大量自由格式的文件（SQL、配置、图表混在一起），导致：① 不知道 AI 改了什么，难审计；② 换个项目没法复用；③ 团队协作时像面对一堆'草稿'，没法规模化",
-      "what_it_is": "一个开源的 YAML 方言和工具，用声明式代码（类似写配置）代替拖拽操作来生成 BI 仪表盘，专门为了让 AI Agent 产出的图表可被审计、复用和扩展。",
-      "ai_role": "AI 负责把用户需求翻译成结构化的 YAML 声明，而不是直接生成一堆零散的 SQL 或配置文件；YAML 的固定格式限制了 AI '乱写'的空间",
-      "implementation_idea": "核心思路是'用结构化格式约束 AI 的输出'。就像 Markdown 统一了文档格式，dbt Charts 定义了一套 YAML 语法专门描述仪表盘：数据源、图表类型、坐标轴、筛选器都写在固定字段里。AI 只填这个'表格'，不能自由发挥，这样产出就 predictable（可预测）了。同时 YAML 是纯文本，天然能被 Git 追踪、人工审查。",
-      "hands_on_exercise": "30 分钟动手：① 访问 https://dbtcharts.com 找到文档里的一个示例 YAML；② 复制到本地，修改一个数据查询条件（如把时间范围从 30 天改成 7 天）；③ 用 dbt Charts CLI 或在线工具渲染，对比前后两个仪表盘；④ 把修改提交到 GitHub，体验'代码式 BI'的版本控制流程。若本地环境难搭，可先用在线 YAML 编辑器验证语法。",
-      "limitations_or_uncertainties": "未公开：是否支持实时数据刷新、权限管控、与 dbt Cloud 的集成路线图；社区质疑其与普通'dashboard as code'工具（如 Observable Framework）的差异优势尚未充分验证；目前只看到官方自述和早期讨论，缺乏大规模生产环境验证",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Google 发布 Gemini 3.8 Live 和 3.8 Live Extended Thinking 语音模型，Simon Willison 当天用 AI 生成网页界面，让用户选模型和音色、设系统提示并实时语音对话。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
       "region": "global",
-      "score": 8.3,
-      "summary": "Chartio 创始人 Dave 发布开源工具 dbt Charts，用 YAML 声明式生成仪表盘，解决 AI Agent 做 BI 时产物混乱难审计的问题，值得看是因为它给出了 Agent 时代 BI 工具的新形态。",
-      "title": "dbt Charts：让 AI Agent 也能写出可审计的仪表盘",
-      "url": "https://dbtcharts.com/blog/charts-built-for-chat/",
+      "score": 8.6,
+      "summary": "Google 发布 Gemini 3.8 Live 和 3.8 Live Extended Thinking 语音模型，Simon Willison 当天用 AI 生成网页界面，让用户选模型和音色、设系统提示并实时语音对话。",
+      "title": "Gemini Live audio",
+      "url": "https://simonwillison.net/2026/Sep/15/gemini-live/",
       "sources": [
         {
-          "url": "https://dbtcharts.com/blog/charts-built-for-chat/",
-          "title": "Charts built for Chat",
-          "source_type": "hackernews",
-          "published_at": "2026-09-14T21:22:54+00:00"
+          "url": "https://simonwillison.net/2026/Sep/15/gemini-live/",
+          "title": "Gemini Live audio",
+          "source_type": "rss",
+          "published_at": "2026-09-15T22:47:07+00:00"
         },
         {
-          "url": "https://dbtcharts.com/",
-          "title": "dbt Charts: Charts built for Chat",
+          "url": "https://deepmind.google/blog/introducing-gemini-3-8-live-and-3-8-live-extended-thinking/",
+          "title": "Introducing Gemini 3.8 Live and 3.8 Live Extended Thinking",
           "source_type": "supplemental",
           "published_at": ""
         }
       ],
       "updates": [
         {
-          "update_id": "dbt-charts-launch",
-          "date": "2026-09-15",
-          "title": "dbt Charts：让 AI Agent 也能写出可审计的仪表盘",
-          "summary": "Chartio 创始人 Dave 发布开源工具 dbt Charts，用 YAML 声明式生成仪表盘，解决 AI Agent 做 BI 时产物混乱难审计的问题，值得看是因为它给出了 Agent 时代 BI 工具的新形态。",
-          "score": 8.3,
-          "url": "https://dbtcharts.com/blog/charts-built-for-chat/"
+          "update_id": "gemini-3-8-live-release",
+          "date": "2026-09-16",
+          "title": "Gemini Live audio",
+          "summary": "Google 发布 Gemini 3.8 Live 和 3.8 Live Extended Thinking 语音模型，Simon Willison 当天用 AI 生成网页界面，让用户选模型和音色、设系统提示并实时语音对话。",
+          "score": 8.6,
+          "url": "https://simonwillison.net/2026/Sep/15/gemini-live/"
         }
       ],
-      "usage_flow": [
-        "用户用自然语言告诉 AI Agent 想要什么图表（如'按月份展示销售额趋势'）",
-        "Agent 输出一段结构化的 dbt Charts YAML 代码（不是散落的 SQL 文件）",
-        "把 YAML 文件保存到代码仓库，像管代码一样做版本控制和审查",
-        "dbt Charts 工具读取 YAML，渲染成交互式网页仪表盘"
-      ],
-      "learning_points": [
-        "Agent：能自主执行任务的 AI 程序，这里指能帮你写代码、查数据、生成图表的 AI 助手",
-        "声明式配置：告诉电脑'我要什么结果'（如'画个折线图'），而不是写每一步怎么画；YAML 就是常见的声明式格式",
-        "可审计性（Auditability）：AI 产出能被人类事后检查、追溯变更，这对企业级应用很关键"
-      ],
+      "usage_flow": [],
+      "learning_points": [],
       "verticals": [],
       "tags": [
-        "BI",
-        "Agent",
-        "开源",
-        "YAML"
+        "Gemini",
+        "语音模型",
+        "Demo",
+        "构建过程"
       ]
     },
     {
-      "product_id": "product-949c4fc530a79249",
-      "product_name": "Fyxer",
-      "builder_name": "OpenAI News",
-      "first_seen": "2026-09-15",
-      "last_seen": "2026-09-15",
+      "product_id": "product-13150bc8750e5f45",
+      "product_name": "Foundry Dev Pack",
+      "builder_name": "sharonxu",
+      "first_seen": "2026-09-16",
+      "last_seen": "2026-09-16",
       "occurrence_count": 1,
       "intelligence_type": "product_case",
       "evidence_status": "first_party",
-      "target_user": "需要处理大量邮件、希望节省时间的职场人士（如高管、行政助理服务的对象）",
-      "user_problem": "收件箱邮件太多，手动分类和起草回复耗时；自己写的邮件风格不一致，或希望 AI 能模仿自己的语气但之前不信任 AI 代笔",
-      "what_it_is": "一个帮你整理收件箱、按你说话风格起草邮件回复的 AI 邮件助理",
-      "ai_role": "负责邮件分类排序 + 根据用户历史邮件风格生成回复草稿；用户保留最终确认权",
-      "implementation_idea": "底层用 OpenAI 的模型，但不止直接调用——他们拿用户真实反馈去微调（Fine-tuning，让模型更懂特定用户的表达习惯），再加上记忆（Memory，记住用户偏好和过往互动）让输出越来越像这个人自己写的",
-      "hands_on_exercise": "打开 ChatGPT，给它 3 封你自己写过的邮件，让它总结你的语气特点；然后写一封新邮件让它按这个风格起草，对比它和原版的差距，手动标出 2 处修改意见再喂回去",
-      "limitations_or_uncertainties": "未公开具体用 OpenAI 哪一代模型、微调数据量多大、记忆具体实现方式（是向量数据库还是模型上下文窗口）；未公开用户规模和收费模式；官方案例带有营销性质，独立第三方验证不足",
+      "target_user": "刚开始学用 Microsoft Foundry 做 AI 产品的开发者，尤其是不想手动配环境的初学者",
+      "user_problem": "新手搭建 AI 开发环境时要分别安装终端工具、VS Code 插件、Agent 依赖等，步骤多、容易配错，还没写代码就卡在环境上",
+      "what_it_is": "一个一键安装器，把终端、VS Code 和编码 Agent 需要的工具一次性配好，让你能快速开始用 Microsoft Foundry 做 AI 开发。",
+      "ai_role": "编码 Agent（Coding Agent）——一种能帮你写代码、改 bug、或自动生成代码片段的 AI 助手，这里指安装器为它准备好了运行所需的环境和工具链",
+      "implementation_idea": "本质上是一个软件包管理器脚本，像装一个大型 App 一样，把分散的工具（命令行 CLI、编辑器插件、Agent 的运行依赖）打包成一键安装，省去用户逐个下载配置的麻烦",
+      "hands_on_exercise": "30 分钟练习：在 Windows 终端运行 winget install Microsoft.FoundryDevPack，装完后打开 VS Code，新建一个 Python 文件，尝试让内置的编码 Agent 帮你写一段调用 OpenAI API 的简单代码，观察 Agent 是否能正常响应",
+      "limitations_or_uncertainties": "未公开：目前是否支持 macOS/Linux 未明确；编码 Agent 具体指哪个产品（GitHub Copilot、Azure AI Agent 还是其他）未说明；安装包具体包含哪些工具清单未详细列出",
       "region": "global",
-      "score": 8.0,
-      "summary": "Fyxer 用 OpenAI 模型加微调和记忆，做出能按你语气整理收件箱、起草邮件的 AI 行政助理，是理解 AI 如何嵌入日常办公流程的清晰案例。",
-      "title": "Fyxer 如何做出让人信任的 AI 行政助理",
-      "url": "https://openai.com/index/fyxer",
+      "score": 7.8,
+      "summary": "微软发布 Foundry Dev Pack，用一个安装器配好终端、VS Code 和编码 Agent 的开发环境，帮初学者更快开始动手做 AI 产品。",
+      "title": "微软发布 Foundry Dev Pack：一条命令搭好 AI 开发环境",
+      "url": "https://devblogs.microsoft.com/foundry/foundry-devpack-announcement/",
       "sources": [
         {
-          "url": "https://openai.com/index/fyxer",
-          "title": "How Fyxer built an AI executive assistant people trust",
+          "url": "https://devblogs.microsoft.com/foundry/foundry-devpack-announcement/",
+          "title": "Introducing Foundry Dev Pack: One Command to Start Building",
           "source_type": "rss",
-          "published_at": "2026-09-14T12:00:00+00:00"
+          "published_at": "2026-09-15T19:00:00+00:00"
         },
         {
-          "url": "https://www.fyxer.com/",
-          "title": "Fyxer | Get ahead of your inbox",
+          "url": "https://learn.microsoft.com/en-us/azure/foundry/how-to/develop/install-cli-sdk",
+          "title": "Prepare your development environment - Microsoft Foundry",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://winstall.app/apps/Microsoft.FoundryDevPack",
+          "title": "Install Microsoft Foundry DevPack with WinGet | winstall",
           "source_type": "supplemental",
           "published_at": ""
         }
       ],
       "updates": [
         {
-          "update_id": "fyxer-ai-executive-assistant-openai",
-          "date": "2026-09-15",
-          "title": "Fyxer 如何做出让人信任的 AI 行政助理",
-          "summary": "Fyxer 用 OpenAI 模型加微调和记忆，做出能按你语气整理收件箱、起草邮件的 AI 行政助理，是理解 AI 如何嵌入日常办公流程的清晰案例。",
-          "score": 8.0,
-          "url": "https://openai.com/index/fyxer"
+          "update_id": "foundry-dev-pack-launch",
+          "date": "2026-09-16",
+          "title": "微软发布 Foundry Dev Pack：一条命令搭好 AI 开发环境",
+          "summary": "微软发布 Foundry Dev Pack，用一个安装器配好终端、VS Code 和编码 Agent 的开发环境，帮初学者更快开始动手做 AI 产品。",
+          "score": 7.8,
+          "url": "https://devblogs.microsoft.com/foundry/foundry-devpack-announcement/"
         }
       ],
       "usage_flow": [
-        "用户授权 Fyxer 访问自己的邮箱",
-        "Fyxer 自动整理收件箱（分类、标优先级）",
-        "Fyxer 针对需要回复的邮件，按用户过往语气起草草稿",
-        "用户审阅、修改后发送"
+        "在终端运行一条安装命令（如 WinGet 的 winget install Microsoft.FoundryDevPack）",
+        "等待安装器自动下载并配置终端、VS Code 和编码 Agent 所需工具",
+        "打开 VS Code，开始用配好的环境写 AI 应用代码"
       ],
       "learning_points": [
-        "微调（Fine-tuning）：不是直接用通用模型，而是用你自己的数据再训练一下，让 AI 输出更像你",
-        "记忆（Memory）：AI 记住你之前的偏好和修正，不用每次都重新交代",
-        "人机协作闭环：AI 生成草稿→你给反馈→模型改进，越用越准"
+        "Agent：能自动帮你完成任务的 AI 程序，这里特指能辅助写代码的编码 Agent",
+        "CLI（命令行界面）：用打字输入指令来操作电脑的方式，开发者常用它来运行安装和构建命令",
+        "开发环境：写代码前需要的一套工具组合，包括编辑器、运行库、配置文件等"
       ],
       "verticals": [],
       "tags": [
-        "AI 助理",
-        "邮件",
-        "微调",
-        "记忆"
+        "Microsoft Foundry",
+        "开发工具",
+        "Agent"
       ]
     },
     {
@@ -135,7 +130,7 @@
       "product_name": "Grok Bot",
       "builder_name": "Lenny Rachitsky",
       "first_seen": "2026-09-15",
-      "last_seen": "2026-09-15",
+      "last_seen": "2026-09-16",
       "occurrence_count": 1,
       "intelligence_type": "builder_insight",
       "evidence_status": "early_signal",
@@ -185,42 +180,124 @@
       ]
     },
     {
-      "product_id": "product-e71a943e13a11105",
+      "product_id": "product-f72e709087406552",
       "product_name": "Vercel AI SDK",
-      "builder_name": "Felix Arntz",
-      "first_seen": "2026-09-15",
-      "last_seen": "2026-09-15",
-      "occurrence_count": 1,
+      "builder_name": "github-actions[bot]",
+      "first_seen": "2026-07-26",
+      "last_seen": "2026-09-16",
+      "occurrence_count": 6,
       "intelligence_type": "model_capability",
       "evidence_status": "first_party",
       "target_user": "未公开",
       "user_problem": "未公开",
-      "what_it_is": "Vercel 让 AI SDK 的 harness 层支持用原生订阅认证不同编码代理，开发者不用改代码就能切换代理，凭据留在宿主机上；对做代理类产品的人省去一层认证适配。",
+      "what_it_is": "Vercel AI SDK 加入实验性浏览器直连 WebRTC 和 OpenAI 实时语音支持，让开发者能在自己的应用里搭建可委托上下文的实时语音 Agent。",
       "ai_role": "未公开",
       "implementation_idea": "未公开",
       "hands_on_exercise": "未公开",
       "limitations_or_uncertainties": "未公开",
       "region": "global",
-      "score": 7.5,
-      "summary": "Vercel 让 AI SDK 的 harness 层支持用原生订阅认证不同编码代理，开发者不用改代码就能切换代理，凭据留在宿主机上；对做代理类产品的人省去一层认证适配。",
-      "title": "AI SDK harness layer now supports native subscription authentication",
-      "url": "https://vercel.com/changelog/ai-sdk-harness-native-subscription-authentication",
+      "score": 7.6,
+      "summary": "Vercel AI SDK 加入实验性浏览器直连 WebRTC 和 OpenAI 实时语音支持，让开发者能在自己的应用里搭建可委托上下文的实时语音 Agent。",
+      "title": "vercel/ai released ai@7.0.102",
+      "url": "https://github.com/vercel/ai/releases/tag/ai%407.0.102",
       "sources": [
         {
-          "url": "https://vercel.com/changelog/ai-sdk-harness-native-subscription-authentication",
-          "title": "AI SDK harness layer now supports native subscription authentication",
-          "source_type": "rss",
-          "published_at": "2026-09-14T21:28:00+00:00"
+          "url": "https://github.com/vercel/ai/releases/tag/%40ai-sdk/anthropic%404.0.20",
+          "title": "vercel/ai released @ai-sdk/anthropic@4.0.20",
+          "source_type": "github",
+          "published_at": "2026-07-24T17:25:31+00:00"
+        },
+        {
+          "url": "https://github.com/vercel/ai/releases/tag/%40ai-sdk/anthropic%403.0.102",
+          "title": "vercel/ai released @ai-sdk/anthropic@3.0.102",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://github.com/vercel/ai/releases/tag/%40ai-sdk/anthropic%402.0.91",
+          "title": "vercel/ai released @ai-sdk/anthropic@2.0.91",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://github.com/vercel/ai/releases/tag/%40ai-sdk/deepgram%403.1.0",
+          "title": "vercel/ai released @ai-sdk/deepgram@3.1.0",
+          "source_type": "github",
+          "published_at": "2026-08-23T01:45:50+00:00"
+        },
+        {
+          "url": "https://github.com/vercel/ai/releases/tag/ai%406.0.272",
+          "title": "vercel/ai released ai@6.0.272",
+          "source_type": "github",
+          "published_at": "2026-08-30T08:52:49+00:00"
+        },
+        {
+          "url": "https://github.com/vercel/ai/releases/tag/ai%407.0.85",
+          "title": "vercel/ai released ai@7.0.85",
+          "source_type": "github",
+          "published_at": "2026-08-30T08:04:57+00:00"
+        },
+        {
+          "url": "https://github.com/vercel/ai/releases/tag/%40ai-sdk/openai%404.0.60",
+          "title": "vercel/ai released @ai-sdk/openai@4.0.60",
+          "source_type": "github",
+          "published_at": "2026-09-05T18:26:03+00:00"
+        },
+        {
+          "url": "https://github.com/vercel/ai/releases/tag/ai%407.0.102",
+          "title": "vercel/ai released ai@7.0.102",
+          "source_type": "github",
+          "published_at": "2026-09-15T17:21:36+00:00"
         }
       ],
       "updates": [
         {
-          "update_id": "vercel-ai-sdk-harness-native-subscription-auth",
-          "date": "2026-09-15",
-          "title": "AI SDK harness layer now supports native subscription authentication",
-          "summary": "Vercel 让 AI SDK 的 harness 层支持用原生订阅认证不同编码代理，开发者不用改代码就能切换代理，凭据留在宿主机上；对做代理类产品的人省去一层认证适配。",
+          "update_id": "vercel-ai-sdk-anthropic-4.0.20-features",
+          "date": "2026-07-26",
+          "title": "vercel/ai released @ai-sdk/anthropic@4.0.20",
+          "summary": "Vercel AI SDK 的 Anthropic 包 v4.0.20 新增 Claude Opus 5 模型、安全回退和对话中工具变更支持。",
+          "score": 8.0,
+          "url": "https://github.com/vercel/ai/releases/tag/%40ai-sdk/anthropic%404.0.20"
+        },
+        {
+          "update_id": "vercel-ai-deepgram-3.1.0",
+          "date": "2026-08-23",
+          "title": "vercel/ai released @ai-sdk/deepgram@3.1.0",
+          "summary": "Vercel AI SDK 更新了 Deepgram 集成，修复转录参数并调整说话人分离默认行为，开发者需注意配置变化。",
           "score": 7.5,
-          "url": "https://vercel.com/changelog/ai-sdk-harness-native-subscription-authentication"
+          "url": "https://github.com/vercel/ai/releases/tag/%40ai-sdk/deepgram%403.1.0"
+        },
+        {
+          "update_id": "vercel-ai-release-6.0.272",
+          "date": "2026-08-31",
+          "title": "vercel/ai released ai@6.0.272",
+          "summary": "Vercel AI SDK 发布 6.0.272，修复工具调用违规时响应处理并暴露错误内容，方便开发者恢复。",
+          "score": 7.5,
+          "url": "https://github.com/vercel/ai/releases/tag/ai%406.0.272"
+        },
+        {
+          "update_id": "vercel-ai-v7.0.85",
+          "date": "2026-08-31",
+          "title": "vercel/ai released ai@7.0.85",
+          "summary": "Vercel AI SDK发布7.0.85版本，修复多项问题并新增图像生成调用功能。",
+          "score": 7.0,
+          "url": "https://github.com/vercel/ai/releases/tag/ai%407.0.85"
+        },
+        {
+          "update_id": "ai-sdk-openai-4.0.60",
+          "date": "2026-09-06",
+          "title": "vercel/ai released @ai-sdk/openai@4.0.60",
+          "summary": "Vercel AI SDK更新，增加GPT-6推理配置支持。",
+          "score": 7.0,
+          "url": "https://github.com/vercel/ai/releases/tag/%40ai-sdk/openai%404.0.60"
+        },
+        {
+          "update_id": "vercel-ai-sdk-7.0.102-realtime-webrtc",
+          "date": "2026-09-16",
+          "title": "vercel/ai released ai@7.0.102",
+          "summary": "Vercel AI SDK 加入实验性浏览器直连 WebRTC 和 OpenAI 实时语音支持，让开发者能在自己的应用里搭建可委托上下文的实时语音 Agent。",
+          "score": 7.6,
+          "url": "https://github.com/vercel/ai/releases/tag/ai%407.0.102"
         }
       ],
       "usage_flow": [],
@@ -228,56 +305,68 @@
       "verticals": [],
       "tags": [
         "AI SDK",
+        "Vercel",
+        "Anthropic",
+        "Claude Opus 5",
+        "Vercel AI SDK",
+        "Deepgram",
+        "语音识别",
+        "工具调用",
         "Agent",
-        "开发者工具"
+        "Vercel AI",
+        "SDK",
+        "版本发布",
+        "GPT-6",
+        "实时语音",
+        "WebRTC"
       ]
     },
     {
-      "product_id": "product-6c5a090f152c0a28",
-      "product_name": "Pion",
-      "builder_name": "lukaspetersson",
-      "first_seen": "2026-09-15",
-      "last_seen": "2026-09-15",
+      "product_id": "product-b72c42265138eaed",
+      "product_name": "Good Start Labs",
+      "builder_name": "Richard MacManus",
+      "first_seen": "2026-09-16",
+      "last_seen": "2026-09-16",
       "occurrence_count": 1,
       "intelligence_type": "builder_insight",
-      "evidence_status": "early_signal",
+      "evidence_status": "reported",
       "target_user": "未公开",
       "user_problem": "未公开",
-      "what_it_is": "Andon Labs 发布 Pion，一个试图自主运营公司的 Agent，解决企业流程自动化问题，值得看是因为它展示了 Agent 从工具走向业务运营的早期产品形态。",
+      "what_it_is": "Good Start Labs 用铁路游戏训练 AI，其中一版在金融研究任务上变强，作者认为关键差别在训练设计而非游戏本身。",
       "ai_role": "未公开",
       "implementation_idea": "未公开",
       "hands_on_exercise": "未公开",
       "limitations_or_uncertainties": "未公开",
       "region": "global",
-      "score": 7.2,
-      "summary": "Andon Labs 发布 Pion，一个试图自主运营公司的 Agent，解决企业流程自动化问题，值得看是因为它展示了 Agent 从工具走向业务运营的早期产品形态。",
-      "title": "Pion, an agent designed to run any company autonomously",
-      "url": "https://andonlabs.com/blog/why-we-built-pion",
+      "score": 7.4,
+      "summary": "Good Start Labs 用铁路游戏训练 AI，其中一版在金融研究任务上变强，作者认为关键差别在训练设计而非游戏本身。",
+      "title": "Can Skills Learned in Games Transfer to Real-World Work?",
+      "url": "https://www.latent.space/p/good-start-labs",
       "sources": [
         {
-          "url": "https://andonlabs.com/blog/why-we-built-pion",
-          "title": "Pion, an agent designed to run any company autonomously",
-          "source_type": "hackernews",
-          "published_at": "2026-09-14T17:16:06+00:00"
+          "url": "https://www.latent.space/p/good-start-labs",
+          "title": "Can Skills Learned in Games Transfer to Real-World Work?",
+          "source_type": "rss",
+          "published_at": "2026-09-15T20:11:54+00:00"
         }
       ],
       "updates": [
         {
-          "update_id": "andonlabs-pion-agent-launch",
-          "date": "2026-09-15",
-          "title": "Pion, an agent designed to run any company autonomously",
-          "summary": "Andon Labs 发布 Pion，一个试图自主运营公司的 Agent，解决企业流程自动化问题，值得看是因为它展示了 Agent 从工具走向业务运营的早期产品形态。",
-          "score": 7.2,
-          "url": "https://andonlabs.com/blog/why-we-built-pion"
+          "update_id": "good-start-labs-game-transfer-training",
+          "date": "2026-09-16",
+          "title": "Can Skills Learned in Games Transfer to Real-World Work?",
+          "summary": "Good Start Labs 用铁路游戏训练 AI，其中一版在金融研究任务上变强，作者认为关键差别在训练设计而非游戏本身。",
+          "score": 7.4,
+          "url": "https://www.latent.space/p/good-start-labs"
         }
       ],
       "usage_flow": [],
       "learning_points": [],
       "verticals": [],
       "tags": [
-        "Agent",
-        "自主运营",
-        "创业"
+        "训练方法",
+        "能力迁移",
+        "研究"
       ]
     },
     {
@@ -285,22 +374,22 @@
       "product_name": "Claude Code",
       "builder_name": "ashwin-ant",
       "first_seen": "2026-07-26",
-      "last_seen": "2026-09-15",
-      "occurrence_count": 19,
-      "intelligence_type": "model_capability",
+      "last_seen": "2026-09-16",
+      "occurrence_count": 20,
+      "intelligence_type": "product_case",
       "evidence_status": "first_party",
       "target_user": "在终端里写代码的开发者，特别是需要 AI 辅助理解大型代码库、批量改文件、跑测试和调试的人。",
       "user_problem": "开发者用 AI 编程时，不知道哪些自定义技能（skills）其实在浪费上下文窗口；命令输出太长被截断；子代理的系统提示太长塞不进命令行；还有一堆远程控制、权限同步、后台代理卡死等稳定性问题。",
-      "what_it_is": "Claude Code v2.1.271 加入远程会话快速模式、按命令单独开放域名、子代理可跳过 CLAUDE.md 等能力；对做编码代理的人提供了权限隔离和配置粒度的具体做法。",
+      "what_it_is": "Anthropic 更新 Claude Code，新增网关请求头、MCP 断连提示与自动重连、从 Claude App 远程 fork 后台会话，并修复权限与登录错误，让 Agent 会话更可控。",
       "ai_role": "AI 是执行者：理解代码库结构、生成修改方案、执行终端命令、返回结果；用户是决策者：审核修改、批准危险操作、用 slash 命令调配置。",
       "implementation_idea": "Claude Code 本质上是一个'会操作终端的 Agent'（Agent：能自主规划步骤、调用工具的 AI）。它把用户的自然语言转成具体动作——读文件、改代码、跑 bash 命令——然后把结果塞回给 Claude 模型继续推理。这次更新加了两个关键控制阀：一是让用户调大'AI 一次能看多少命令输出'（避免关键日志被截断），二是让用户清理没用的技能插件（减少干扰、省上下文窗口）。",
       "hands_on_exercise": "30 分钟动手：1）安装 Claude Code 并 `cd` 进一个自己的项目；2）创建 `.claude/skills/test.md` 写一个没用的技能；3）正常用几次后运行 `/skill-doctor`，观察它是否标记为 unused；4）用 `/status` 看当前状态，尝试 `claude config set bashOutputMaxChars 50000` 然后跑一个长输出命令（如 `find . -type f | xargs cat`），对比 AI 能看到的输出量变化。",
       "limitations_or_uncertainties": "未公开：具体定价和速率限制；未公开：skills 的详细加载机制与成本计算方式；未公开：子代理 system prompt 的最大文件大小限制；未确认：Vertex AI 启动优化后的实际延迟数据。",
       "region": "global",
-      "score": 7.0,
-      "summary": "Claude Code v2.1.271 加入远程会话快速模式、按命令单独开放域名、子代理可跳过 CLAUDE.md 等能力；对做编码代理的人提供了权限隔离和配置粒度的具体做法。",
-      "title": "anthropics/claude-code released v2.1.271",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.271",
+      "score": 7.2,
+      "summary": "Anthropic 更新 Claude Code，新增网关请求头、MCP 断连提示与自动重连、从 Claude App 远程 fork 后台会话，并修复权限与登录错误，让 Agent 会话更可控。",
+      "title": "anthropics/claude-code released v2.1.273",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.273",
       "sources": [
         {
           "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.219",
@@ -421,6 +510,12 @@
           "title": "anthropics/claude-code released v2.1.271",
           "source_type": "github",
           "published_at": "2026-09-14T22:12:54+00:00"
+        },
+        {
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.273",
+          "title": "anthropics/claude-code released v2.1.273",
+          "source_type": "github",
+          "published_at": "2026-09-15T20:23:03+00:00"
         }
       ],
       "updates": [
@@ -575,6 +670,14 @@
           "summary": "Claude Code v2.1.271 加入远程会话快速模式、按命令单独开放域名、子代理可跳过 CLAUDE.md 等能力；对做编码代理的人提供了权限隔离和配置粒度的具体做法。",
           "score": 7.0,
           "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.271"
+        },
+        {
+          "update_id": "claude-code-v2.1.273",
+          "date": "2026-09-16",
+          "title": "anthropics/claude-code released v2.1.273",
+          "summary": "Anthropic 更新 Claude Code，新增网关请求头、MCP 断连提示与自动重连、从 Claude App 远程 fork 后台会话，并修复权限与登录错误，让 Agent 会话更可控。",
+          "score": 7.2,
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.273"
         }
       ],
       "usage_flow": [
@@ -666,7 +769,353 @@
         "企业",
         "Anthropic",
         "diff",
-        "权限控制"
+        "权限控制",
+        "Coding Agent",
+        "MCP",
+        "会话管理"
+      ]
+    },
+    {
+      "product_id": "product-1edcbc8317906d8f",
+      "product_name": "WhatsApp Business Tools MCP",
+      "builder_name": "Sarah Perez",
+      "first_seen": "2026-09-16",
+      "last_seen": "2026-09-16",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "reported",
+      "target_user": "在 WhatsApp Business Platform（Cloud API）上做开发的开发者，以及使用 Claude、Cursor、Codex、ChatGPT 等 AI 编码工具的技术人员",
+      "user_problem": "开发者手动配置 WhatsApp Business 账号很繁琐：要逐个注册手机号、创建消息模板、设置 webhook、排查 API 报错，步骤多且容易出错",
+      "what_it_is": "Meta 官方发布的 MCP 服务器，让 Claude、Cursor 等 AI 编码工具能直接操作用户的 WhatsApp Business 账号，完成注册、模板创建、调试等配置工作",
+      "ai_role": "AI 充当'能动手操作的技术助手'——把用户的自然语言指令翻译成具体的 API 调用，自动完成配置、测试和排障，不需要用户自己写代码或点网页后台",
+      "implementation_idea": "MCP（Model Context Protocol，模型上下文协议）是一种'AI 工具通用插座'标准。Meta 这个 MCP 服务器相当于给 WhatsApp Business API 包了一层适配器，让 AI 编码工具能'插'进来、看懂有哪些功能可用，然后自动调用。打个比方：以前 AI 只能给你'操作说明书'，现在有了 MCP，AI 能直接帮你'按按钮'了",
+      "hands_on_exercise": "30 分钟体验：如果你已有 Cursor 或 Claude Desktop，去 Meta for Developers 文档页找到 WhatsApp Business Tools MCP 的安装指引，尝试在本地配置连接；即使没有真实 WhatsApp Business 账号，也可以走通'AI 发现可用功能'这一步，观察 MCP 工具列表如何呈现给 AI",
+      "limitations_or_uncertainties": "TechCrunch 为报道来源，非 Meta 官方首发渠道；尚无公开的用户实际使用反馈或独立验证的 Demo 视频；未明确是否支持所有地区的手机号注册，以及 AI 自动操作时的权限边界和错误回滚机制",
+      "region": "global",
+      "score": 7.2,
+      "summary": "Meta 发布 WhatsApp Business 的 MCP server，让 Claude、Cursor 等 AI 编码代理帮开发者自动完成商家账号配置、消息模板、测试和排障，省去繁琐的手动设置。",
+      "title": "Meta 让 AI 编码代理自动搞定 WhatsApp Business 繁琐配置",
+      "url": "https://techcrunch.com/2026/09/15/meta-now-lets-ai-agents-handle-the-boring-parts-of-whatsapp-business-setup/",
+      "sources": [
+        {
+          "url": "https://techcrunch.com/2026/09/15/meta-now-lets-ai-agents-handle-the-boring-parts-of-whatsapp-business-setup/",
+          "title": "Meta now lets AI agents handle the boring parts of WhatsApp Business setup",
+          "source_type": "rss",
+          "published_at": "2026-09-15T20:12:53+00:00"
+        },
+        {
+          "url": "https://developers.facebook.com/documentation/mcp/whatsapp-business-tools-mcp/",
+          "title": "WhatsApp Business Tools MCP | Meta for Developers",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://developers.facebook.com/blog/post/2026/09/15/whatsapp-business-messaging-mcp-ai-agent/",
+          "title": "Announcing WhatsApp Business Tools MCP: Set up and manage ...",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "whatsapp-business-mcp-server-launch",
+          "date": "2026-09-16",
+          "title": "Meta 让 AI 编码代理自动搞定 WhatsApp Business 繁琐配置",
+          "summary": "Meta 发布 WhatsApp Business 的 MCP server，让 Claude、Cursor 等 AI 编码代理帮开发者自动完成商家账号配置、消息模板、测试和排障，省去繁琐的手动设置。",
+          "score": 7.2,
+          "url": "https://techcrunch.com/2026/09/15/meta-now-lets-ai-agents-handle-the-boring-parts-of-whatsapp-business-setup/"
+        }
+      ],
+      "usage_flow": [
+        "开发者在 AI 编码工具（如 Cursor）里安装并配置 WhatsApp Business Tools MCP",
+        "用自然语言描述需求，例如'帮我注册一个新手机号并创建订单确认模板'",
+        "AI 代理自动调用 MCP 接口完成账号发现、注册、模板创建等操作",
+        "开发者检查 AI 执行结果，必要时继续用自然语言迭代调整"
+      ],
+      "learning_points": [
+        "MCP（Model Context Protocol）：AI 和外部工具之间的'通用翻译官'，让不同 AI 都能用同一套方式操作第三方服务",
+        "AI 编码代理（AI Coding Agent）：不只会写代码，还能实际执行操作、调用工具的 AI，比如 Claude、Cursor 里的助手",
+        "Function Calling（函数调用）：AI 判断'现在该调用哪个工具、传什么参数'的能力，是 MCP 能工作的底层机制"
+      ],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "MCP",
+        "WhatsApp Business",
+        "AI Coding",
+        "Meta"
+      ]
+    },
+    {
+      "product_id": "product-ccd8d1b798950e59",
+      "product_name": "SimpliSafe Video Doorbell Series 2",
+      "builder_name": "Jennifer Pattison Tuohy",
+      "first_seen": "2026-09-16",
+      "last_seen": "2026-09-16",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "SimpliSafe 推出 199.99 美元的第二代视频门铃，配合每月 49.99 美元起的服务，用 AI 分析加真人安保主动识别门前威胁。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.2,
+      "summary": "SimpliSafe 推出 199.99 美元的第二代视频门铃，配合每月 49.99 美元起的服务，用 AI 分析加真人安保主动识别门前威胁。",
+      "title": "This doorbell camera lets a human security guard watch your front door",
+      "url": "https://www.theverge.com/tech/995365/simplisafe-video-doorbell-series-2-virtual-guard-price-specs",
+      "sources": [
+        {
+          "url": "https://www.theverge.com/tech/995365/simplisafe-video-doorbell-series-2-virtual-guard-price-specs",
+          "title": "This doorbell camera lets a human security guard watch your front door",
+          "source_type": "rss",
+          "published_at": "2026-09-15T13:36:45+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "simplisafe-doorbell-series2-launch",
+          "date": "2026-09-16",
+          "title": "This doorbell camera lets a human security guard watch your front door",
+          "summary": "SimpliSafe 推出 199.99 美元的第二代视频门铃，配合每月 49.99 美元起的服务，用 AI 分析加真人安保主动识别门前威胁。",
+          "score": 7.2,
+          "url": "https://www.theverge.com/tech/995365/simplisafe-video-doorbell-series-2-virtual-guard-price-specs"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "智能家居",
+        "安防",
+        "垂直AI"
+      ]
+    },
+    {
+      "product_id": "product-9ebae6caf6cae6fc",
+      "product_name": "dbt Charts",
+      "builder_name": "thingsilearned",
+      "first_seen": "2026-09-15",
+      "last_seen": "2026-09-15",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "用 AI Agent（如 Claude）做数据分析但发现产出混乱难管的数据分析师、工程师；需要把仪表盘纳入版本控制的 BI 团队",
+      "user_problem": "让 AI Agent 直接生成仪表盘时，会产生大量自由格式的文件（SQL、配置、图表混在一起），导致：① 不知道 AI 改了什么，难审计；② 换个项目没法复用；③ 团队协作时像面对一堆'草稿'，没法规模化",
+      "what_it_is": "一个开源的 YAML 方言和工具，用声明式代码（类似写配置）代替拖拽操作来生成 BI 仪表盘，专门为了让 AI Agent 产出的图表可被审计、复用和扩展。",
+      "ai_role": "AI 负责把用户需求翻译成结构化的 YAML 声明，而不是直接生成一堆零散的 SQL 或配置文件；YAML 的固定格式限制了 AI '乱写'的空间",
+      "implementation_idea": "核心思路是'用结构化格式约束 AI 的输出'。就像 Markdown 统一了文档格式，dbt Charts 定义了一套 YAML 语法专门描述仪表盘：数据源、图表类型、坐标轴、筛选器都写在固定字段里。AI 只填这个'表格'，不能自由发挥，这样产出就 predictable（可预测）了。同时 YAML 是纯文本，天然能被 Git 追踪、人工审查。",
+      "hands_on_exercise": "30 分钟动手：① 访问 https://dbtcharts.com 找到文档里的一个示例 YAML；② 复制到本地，修改一个数据查询条件（如把时间范围从 30 天改成 7 天）；③ 用 dbt Charts CLI 或在线工具渲染，对比前后两个仪表盘；④ 把修改提交到 GitHub，体验'代码式 BI'的版本控制流程。若本地环境难搭，可先用在线 YAML 编辑器验证语法。",
+      "limitations_or_uncertainties": "未公开：是否支持实时数据刷新、权限管控、与 dbt Cloud 的集成路线图；社区质疑其与普通'dashboard as code'工具（如 Observable Framework）的差异优势尚未充分验证；目前只看到官方自述和早期讨论，缺乏大规模生产环境验证",
+      "region": "global",
+      "score": 8.3,
+      "summary": "Chartio 创始人 Dave 发布开源工具 dbt Charts，用 YAML 声明式生成仪表盘，解决 AI Agent 做 BI 时产物混乱难审计的问题，值得看是因为它给出了 Agent 时代 BI 工具的新形态。",
+      "title": "dbt Charts：让 AI Agent 也能写出可审计的仪表盘",
+      "url": "https://dbtcharts.com/blog/charts-built-for-chat/",
+      "sources": [
+        {
+          "url": "https://dbtcharts.com/blog/charts-built-for-chat/",
+          "title": "Charts built for Chat",
+          "source_type": "hackernews",
+          "published_at": "2026-09-14T21:22:54+00:00"
+        },
+        {
+          "url": "https://dbtcharts.com/",
+          "title": "dbt Charts: Charts built for Chat",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "dbt-charts-launch",
+          "date": "2026-09-15",
+          "title": "dbt Charts：让 AI Agent 也能写出可审计的仪表盘",
+          "summary": "Chartio 创始人 Dave 发布开源工具 dbt Charts，用 YAML 声明式生成仪表盘，解决 AI Agent 做 BI 时产物混乱难审计的问题，值得看是因为它给出了 Agent 时代 BI 工具的新形态。",
+          "score": 8.3,
+          "url": "https://dbtcharts.com/blog/charts-built-for-chat/"
+        }
+      ],
+      "usage_flow": [
+        "用户用自然语言告诉 AI Agent 想要什么图表（如'按月份展示销售额趋势'）",
+        "Agent 输出一段结构化的 dbt Charts YAML 代码（不是散落的 SQL 文件）",
+        "把 YAML 文件保存到代码仓库，像管代码一样做版本控制和审查",
+        "dbt Charts 工具读取 YAML，渲染成交互式网页仪表盘"
+      ],
+      "learning_points": [
+        "Agent：能自主执行任务的 AI 程序，这里指能帮你写代码、查数据、生成图表的 AI 助手",
+        "声明式配置：告诉电脑'我要什么结果'（如'画个折线图'），而不是写每一步怎么画；YAML 就是常见的声明式格式",
+        "可审计性（Auditability）：AI 产出能被人类事后检查、追溯变更，这对企业级应用很关键"
+      ],
+      "verticals": [],
+      "tags": [
+        "BI",
+        "Agent",
+        "开源",
+        "YAML"
+      ]
+    },
+    {
+      "product_id": "product-949c4fc530a79249",
+      "product_name": "Fyxer",
+      "builder_name": "OpenAI News",
+      "first_seen": "2026-09-15",
+      "last_seen": "2026-09-15",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "需要处理大量邮件、希望节省时间的职场人士（如高管、行政助理服务的对象）",
+      "user_problem": "收件箱邮件太多，手动分类和起草回复耗时；自己写的邮件风格不一致，或希望 AI 能模仿自己的语气但之前不信任 AI 代笔",
+      "what_it_is": "一个帮你整理收件箱、按你说话风格起草邮件回复的 AI 邮件助理",
+      "ai_role": "负责邮件分类排序 + 根据用户历史邮件风格生成回复草稿；用户保留最终确认权",
+      "implementation_idea": "底层用 OpenAI 的模型，但不止直接调用——他们拿用户真实反馈去微调（Fine-tuning，让模型更懂特定用户的表达习惯），再加上记忆（Memory，记住用户偏好和过往互动）让输出越来越像这个人自己写的",
+      "hands_on_exercise": "打开 ChatGPT，给它 3 封你自己写过的邮件，让它总结你的语气特点；然后写一封新邮件让它按这个风格起草，对比它和原版的差距，手动标出 2 处修改意见再喂回去",
+      "limitations_or_uncertainties": "未公开具体用 OpenAI 哪一代模型、微调数据量多大、记忆具体实现方式（是向量数据库还是模型上下文窗口）；未公开用户规模和收费模式；官方案例带有营销性质，独立第三方验证不足",
+      "region": "global",
+      "score": 8.0,
+      "summary": "Fyxer 用 OpenAI 模型加微调和记忆，做出能按你语气整理收件箱、起草邮件的 AI 行政助理，是理解 AI 如何嵌入日常办公流程的清晰案例。",
+      "title": "Fyxer 如何做出让人信任的 AI 行政助理",
+      "url": "https://openai.com/index/fyxer",
+      "sources": [
+        {
+          "url": "https://openai.com/index/fyxer",
+          "title": "How Fyxer built an AI executive assistant people trust",
+          "source_type": "rss",
+          "published_at": "2026-09-14T12:00:00+00:00"
+        },
+        {
+          "url": "https://www.fyxer.com/",
+          "title": "Fyxer | Get ahead of your inbox",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "fyxer-ai-executive-assistant-openai",
+          "date": "2026-09-15",
+          "title": "Fyxer 如何做出让人信任的 AI 行政助理",
+          "summary": "Fyxer 用 OpenAI 模型加微调和记忆，做出能按你语气整理收件箱、起草邮件的 AI 行政助理，是理解 AI 如何嵌入日常办公流程的清晰案例。",
+          "score": 8.0,
+          "url": "https://openai.com/index/fyxer"
+        }
+      ],
+      "usage_flow": [
+        "用户授权 Fyxer 访问自己的邮箱",
+        "Fyxer 自动整理收件箱（分类、标优先级）",
+        "Fyxer 针对需要回复的邮件，按用户过往语气起草草稿",
+        "用户审阅、修改后发送"
+      ],
+      "learning_points": [
+        "微调（Fine-tuning）：不是直接用通用模型，而是用你自己的数据再训练一下，让 AI 输出更像你",
+        "记忆（Memory）：AI 记住你之前的偏好和修正，不用每次都重新交代",
+        "人机协作闭环：AI 生成草稿→你给反馈→模型改进，越用越准"
+      ],
+      "verticals": [],
+      "tags": [
+        "AI 助理",
+        "邮件",
+        "微调",
+        "记忆"
+      ]
+    },
+    {
+      "product_id": "product-e71a943e13a11105",
+      "product_name": "Vercel AI SDK",
+      "builder_name": "Felix Arntz",
+      "first_seen": "2026-09-15",
+      "last_seen": "2026-09-15",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Vercel 让 AI SDK 的 harness 层支持用原生订阅认证不同编码代理，开发者不用改代码就能切换代理，凭据留在宿主机上；对做代理类产品的人省去一层认证适配。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.5,
+      "summary": "Vercel 让 AI SDK 的 harness 层支持用原生订阅认证不同编码代理，开发者不用改代码就能切换代理，凭据留在宿主机上；对做代理类产品的人省去一层认证适配。",
+      "title": "AI SDK harness layer now supports native subscription authentication",
+      "url": "https://vercel.com/changelog/ai-sdk-harness-native-subscription-authentication",
+      "sources": [
+        {
+          "url": "https://vercel.com/changelog/ai-sdk-harness-native-subscription-authentication",
+          "title": "AI SDK harness layer now supports native subscription authentication",
+          "source_type": "rss",
+          "published_at": "2026-09-14T21:28:00+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "vercel-ai-sdk-harness-native-subscription-auth",
+          "date": "2026-09-15",
+          "title": "AI SDK harness layer now supports native subscription authentication",
+          "summary": "Vercel 让 AI SDK 的 harness 层支持用原生订阅认证不同编码代理，开发者不用改代码就能切换代理，凭据留在宿主机上；对做代理类产品的人省去一层认证适配。",
+          "score": 7.5,
+          "url": "https://vercel.com/changelog/ai-sdk-harness-native-subscription-authentication"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "AI SDK",
+        "Agent",
+        "开发者工具"
+      ]
+    },
+    {
+      "product_id": "product-6c5a090f152c0a28",
+      "product_name": "Pion",
+      "builder_name": "lukaspetersson",
+      "first_seen": "2026-09-15",
+      "last_seen": "2026-09-15",
+      "occurrence_count": 1,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "early_signal",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Andon Labs 发布 Pion，一个试图自主运营公司的 Agent，解决企业流程自动化问题，值得看是因为它展示了 Agent 从工具走向业务运营的早期产品形态。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.2,
+      "summary": "Andon Labs 发布 Pion，一个试图自主运营公司的 Agent，解决企业流程自动化问题，值得看是因为它展示了 Agent 从工具走向业务运营的早期产品形态。",
+      "title": "Pion, an agent designed to run any company autonomously",
+      "url": "https://andonlabs.com/blog/why-we-built-pion",
+      "sources": [
+        {
+          "url": "https://andonlabs.com/blog/why-we-built-pion",
+          "title": "Pion, an agent designed to run any company autonomously",
+          "source_type": "hackernews",
+          "published_at": "2026-09-14T17:16:06+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "andonlabs-pion-agent-launch",
+          "date": "2026-09-15",
+          "title": "Pion, an agent designed to run any company autonomously",
+          "summary": "Andon Labs 发布 Pion，一个试图自主运营公司的 Agent，解决企业流程自动化问题，值得看是因为它展示了 Agent 从工具走向业务运营的早期产品形态。",
+          "score": 7.2,
+          "url": "https://andonlabs.com/blog/why-we-built-pion"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "自主运营",
+        "创业"
       ]
     },
     {
@@ -2348,132 +2797,6 @@
       "tags": [
         "Blender",
         "编码代理"
-      ]
-    },
-    {
-      "product_id": "product-f72e709087406552",
-      "product_name": "Vercel AI SDK",
-      "builder_name": "github-actions[bot]",
-      "first_seen": "2026-07-26",
-      "last_seen": "2026-09-06",
-      "occurrence_count": 5,
-      "intelligence_type": "model_capability",
-      "evidence_status": "first_party",
-      "target_user": "未公开",
-      "user_problem": "未公开",
-      "what_it_is": "Vercel AI SDK更新，增加GPT-6推理配置支持。",
-      "ai_role": "未公开",
-      "implementation_idea": "未公开",
-      "hands_on_exercise": "未公开",
-      "limitations_or_uncertainties": "未公开",
-      "region": "global",
-      "score": 7.0,
-      "summary": "Vercel AI SDK更新，增加GPT-6推理配置支持。",
-      "title": "vercel/ai released @ai-sdk/openai@4.0.60",
-      "url": "https://github.com/vercel/ai/releases/tag/%40ai-sdk/openai%404.0.60",
-      "sources": [
-        {
-          "url": "https://github.com/vercel/ai/releases/tag/%40ai-sdk/anthropic%404.0.20",
-          "title": "vercel/ai released @ai-sdk/anthropic@4.0.20",
-          "source_type": "github",
-          "published_at": "2026-07-24T17:25:31+00:00"
-        },
-        {
-          "url": "https://github.com/vercel/ai/releases/tag/%40ai-sdk/anthropic%403.0.102",
-          "title": "vercel/ai released @ai-sdk/anthropic@3.0.102",
-          "source_type": "supplemental",
-          "published_at": ""
-        },
-        {
-          "url": "https://github.com/vercel/ai/releases/tag/%40ai-sdk/anthropic%402.0.91",
-          "title": "vercel/ai released @ai-sdk/anthropic@2.0.91",
-          "source_type": "supplemental",
-          "published_at": ""
-        },
-        {
-          "url": "https://github.com/vercel/ai/releases/tag/%40ai-sdk/deepgram%403.1.0",
-          "title": "vercel/ai released @ai-sdk/deepgram@3.1.0",
-          "source_type": "github",
-          "published_at": "2026-08-23T01:45:50+00:00"
-        },
-        {
-          "url": "https://github.com/vercel/ai/releases/tag/ai%406.0.272",
-          "title": "vercel/ai released ai@6.0.272",
-          "source_type": "github",
-          "published_at": "2026-08-30T08:52:49+00:00"
-        },
-        {
-          "url": "https://github.com/vercel/ai/releases/tag/ai%407.0.85",
-          "title": "vercel/ai released ai@7.0.85",
-          "source_type": "github",
-          "published_at": "2026-08-30T08:04:57+00:00"
-        },
-        {
-          "url": "https://github.com/vercel/ai/releases/tag/%40ai-sdk/openai%404.0.60",
-          "title": "vercel/ai released @ai-sdk/openai@4.0.60",
-          "source_type": "github",
-          "published_at": "2026-09-05T18:26:03+00:00"
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "vercel-ai-sdk-anthropic-4.0.20-features",
-          "date": "2026-07-26",
-          "title": "vercel/ai released @ai-sdk/anthropic@4.0.20",
-          "summary": "Vercel AI SDK 的 Anthropic 包 v4.0.20 新增 Claude Opus 5 模型、安全回退和对话中工具变更支持。",
-          "score": 8.0,
-          "url": "https://github.com/vercel/ai/releases/tag/%40ai-sdk/anthropic%404.0.20"
-        },
-        {
-          "update_id": "vercel-ai-deepgram-3.1.0",
-          "date": "2026-08-23",
-          "title": "vercel/ai released @ai-sdk/deepgram@3.1.0",
-          "summary": "Vercel AI SDK 更新了 Deepgram 集成，修复转录参数并调整说话人分离默认行为，开发者需注意配置变化。",
-          "score": 7.5,
-          "url": "https://github.com/vercel/ai/releases/tag/%40ai-sdk/deepgram%403.1.0"
-        },
-        {
-          "update_id": "vercel-ai-release-6.0.272",
-          "date": "2026-08-31",
-          "title": "vercel/ai released ai@6.0.272",
-          "summary": "Vercel AI SDK 发布 6.0.272，修复工具调用违规时响应处理并暴露错误内容，方便开发者恢复。",
-          "score": 7.5,
-          "url": "https://github.com/vercel/ai/releases/tag/ai%406.0.272"
-        },
-        {
-          "update_id": "vercel-ai-v7.0.85",
-          "date": "2026-08-31",
-          "title": "vercel/ai released ai@7.0.85",
-          "summary": "Vercel AI SDK发布7.0.85版本，修复多项问题并新增图像生成调用功能。",
-          "score": 7.0,
-          "url": "https://github.com/vercel/ai/releases/tag/ai%407.0.85"
-        },
-        {
-          "update_id": "ai-sdk-openai-4.0.60",
-          "date": "2026-09-06",
-          "title": "vercel/ai released @ai-sdk/openai@4.0.60",
-          "summary": "Vercel AI SDK更新，增加GPT-6推理配置支持。",
-          "score": 7.0,
-          "url": "https://github.com/vercel/ai/releases/tag/%40ai-sdk/openai%404.0.60"
-        }
-      ],
-      "usage_flow": [],
-      "learning_points": [],
-      "verticals": [],
-      "tags": [
-        "AI SDK",
-        "Vercel",
-        "Anthropic",
-        "Claude Opus 5",
-        "Vercel AI SDK",
-        "Deepgram",
-        "语音识别",
-        "工具调用",
-        "Agent",
-        "Vercel AI",
-        "SDK",
-        "版本发布",
-        "GPT-6"
       ]
     },
     {
