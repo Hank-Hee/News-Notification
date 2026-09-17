@@ -1,7 +1,423 @@
 {
   "version": 1,
-  "updated_at": "2026-09-16T04:49:08.823935+00:00",
+  "updated_at": "2026-09-17T04:52:42.957274+00:00",
   "products": [
+    {
+      "product_id": "product-1830a66d4617ff32",
+      "product_name": "Muse",
+      "builder_name": "Claire Vo",
+      "first_seen": "2026-09-17",
+      "last_seen": "2026-09-17",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "verified",
+      "target_user": "注重生活管理的普通消费者，尤其是有家庭日程协调、个人目标追踪需求的用户；对消费级 AI 产品设计感兴趣的产品经理和开发者。",
+      "user_problem": "现有 AI 工具要么太技术化、需要手动拼接多个工具，要么在权限控制上让用户不放心，导致个人生活管理场景用起来不顺畅。",
+      "what_it_is": "Meta 推出的个人 AI Agent，能帮用户管理日历、生成家庭简报、设定个人目标、浏览器购物，并配有可自定义的动画虚拟形象。",
+      "ai_role": "AI 作为个人助理，理解自然语言指令后，自主调用日历、浏览器、文档生成等工具链完成任务，并通过可视化界面向用户透明展示每一步动作。",
+      "implementation_idea": "本质是一个'带透明操作日志的 Agent 编排层'——用户说一句话，Muse 拆解成多步子任务，每步调用对应工具（日历 API、网页浏览、PDF 生成），同时把'我在想什么、调了什么接口'实时展示给用户看，让用户觉得可控。",
+      "hands_on_exercise": "用你常用的 AI（ChatGPT/Claude）模拟 Muse 的一个场景：给它你的真实或模拟日程，要求它'生成一份周末家庭活动简报 PDF 格式'，观察它是否能自主拆解步骤、是否需要你手动干预，对比 Muse 评测中提到的'Activity Feed 透明化'体验，记录 3 个让你感到'失控'或'放心'的瞬间。",
+      "limitations_or_uncertainties": "浏览器购物功能表现不稳定（买鞋失败、买票成功）；未公开 Muse 底层模型版本、是否使用 RAG 检索个人文档、企业级安全审计细节；动画虚拟形象的技术方案（预渲染/实时生成）未公开；目前为早期测试阶段，未公开正式商用时间。",
+      "region": "global",
+      "score": 8.6,
+      "summary": "Claire Vo 实测 Meta 新个人 AI Agent Muse，从注册、日历管理到购物和权限模型逐项体验，说明消费级 Agent 的产品体验该怎么做，对做个人 AI 产品的人可直接借鉴。",
+      "title": "Meta Muse 实测：一个把消费级体验做对的个人 AI Agent",
+      "url": "https://www.lennysnewsletter.com/p/muse-review-the-personal-ai-agent",
+      "sources": [
+        {
+          "url": "https://www.lennysnewsletter.com/p/muse-review-the-personal-ai-agent",
+          "title": "Muse review: The personal AI agent that gets consumer UX right",
+          "source_type": "newsletter",
+          "published_at": "2026-09-16T12:02:14+00:00"
+        },
+        {
+          "url": "https://www.linkedin.com/in/clairevo/",
+          "title": "Claire Vo - ChatPRD | LinkedIn",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "meta-muse-personal-agent-review",
+          "date": "2026-09-17",
+          "title": "Meta Muse 实测：一个把消费级体验做对的个人 AI Agent",
+          "summary": "Claire Vo 实测 Meta 新个人 AI Agent Muse，从注册、日历管理到购物和权限模型逐项体验，说明消费级 Agent 的产品体验该怎么做，对做个人 AI 产品的人可直接借鉴。",
+          "score": 8.6,
+          "url": "https://www.lennysnewsletter.com/p/muse-review-the-personal-ai-agent"
+        }
+      ],
+      "usage_flow": [
+        "注册并连接日历、新闻源等第三方服务，选择或自定义动画虚拟形象",
+        "用自然语言下达任务，如'生成家庭早报 PDF'或'删除下周的足球训练'",
+        "在 Activity Feed 中查看 AI 执行的每一步操作和工具调用记录",
+        "对敏感操作（如购物、删日程）逐一确认或授权"
+      ],
+      "learning_points": [
+        "Agent（智能体）：不只是聊天，而是能自主规划步骤、调用工具帮你完成多环节任务的 AI 系统",
+        "Function Calling（函数调用）：AI 判断'现在该调日历 API 了'或'该打开浏览器了'的决策机制，是 Agent 能动手干活的关键",
+        "权限模型：AI 执行敏感操作前要不要人确认，怎么设计既方便又安全，是消费级产品的核心体验问题"
+      ],
+      "verticals": [],
+      "tags": [
+        "AI Agent",
+        "消费级产品",
+        "产品评测"
+      ]
+    },
+    {
+      "product_id": "product-e0b277ef4e4b6359",
+      "product_name": "GitHub Copilot",
+      "builder_name": "Stephen Toub",
+      "first_seen": "2026-09-17",
+      "last_seen": "2026-09-17",
+      "occurrence_count": 1,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "GitHub 官方讲述如何用 Copilot 把 Copilot agent 运行时迁移到 80 万行生产级 Rust，展示 AI 在大型工程重构中具体承担什么工作，值得看它如何把 AI 嵌入真实开发流程。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.6,
+      "summary": "GitHub 官方讲述如何用 Copilot 把 Copilot agent 运行时迁移到 80 万行生产级 Rust，展示 AI 在大型工程重构中具体承担什么工作，值得看它如何把 AI 嵌入真实开发流程。",
+      "title": "Migrating the GitHub Copilot runtime to Rust, using Copilot",
+      "url": "https://github.blog/ai-and-ml/generative-ai/migrating-the-github-copilot-runtime-to-rust-using-copilot/",
+      "sources": [
+        {
+          "url": "https://github.blog/ai-and-ml/generative-ai/migrating-the-github-copilot-runtime-to-rust-using-copilot/",
+          "title": "Migrating the GitHub Copilot runtime to Rust, using Copilot",
+          "source_type": "rss",
+          "published_at": "2026-09-17T00:26:43+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "github-copilot-rust-migration",
+          "date": "2026-09-17",
+          "title": "Migrating the GitHub Copilot runtime to Rust, using Copilot",
+          "summary": "GitHub 官方讲述如何用 Copilot 把 Copilot agent 运行时迁移到 80 万行生产级 Rust，展示 AI 在大型工程重构中具体承担什么工作，值得看它如何把 AI 嵌入真实开发流程。",
+          "score": 8.6,
+          "url": "https://github.blog/ai-and-ml/generative-ai/migrating-the-github-copilot-runtime-to-rust-using-copilot/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Copilot",
+        "Rust",
+        "Agent",
+        "工程实践"
+      ]
+    },
+    {
+      "product_id": "product-316fa116e417e5a4",
+      "product_name": "Google Home MCP",
+      "builder_name": "Jennifer Pattison Tuohy",
+      "first_seen": "2026-09-17",
+      "last_seen": "2026-09-17",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Google 通过 MCP 让 Claude 等第三方 AI agent 控制智能家居设备并分析家庭数据，解决 agent 接入真实设备的问题，值得看标准化协议如何打开新体验。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.2,
+      "summary": "Google 通过 MCP 让 Claude 等第三方 AI agent 控制智能家居设备并分析家庭数据，解决 agent 接入真实设备的问题，值得看标准化协议如何打开新体验。",
+      "title": "Google will now let any AI agent run your smart home",
+      "url": "https://www.theverge.com/tech/996310/google-home-mcp-integration-agentic-ai-smart-home-price-release-date",
+      "sources": [
+        {
+          "url": "https://www.theverge.com/tech/996310/google-home-mcp-integration-agentic-ai-smart-home-price-release-date",
+          "title": "Google will now let any AI agent run your smart home",
+          "source_type": "rss",
+          "published_at": "2026-09-16T17:00:00+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "google-home-mcp-agent-integration",
+          "date": "2026-09-17",
+          "title": "Google will now let any AI agent run your smart home",
+          "summary": "Google 通过 MCP 让 Claude 等第三方 AI agent 控制智能家居设备并分析家庭数据，解决 agent 接入真实设备的问题，值得看标准化协议如何打开新体验。",
+          "score": 8.2,
+          "url": "https://www.theverge.com/tech/996310/google-home-mcp-integration-agentic-ai-smart-home-price-release-date"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "MCP",
+        "Agent",
+        "智能家居",
+        "Google Home"
+      ]
+    },
+    {
+      "product_id": "product-b2d2fb140a8fac81",
+      "product_name": "Grok Bot",
+      "builder_name": "Lenny Rachitsky",
+      "first_seen": "2026-09-15",
+      "last_seen": "2026-09-17",
+      "occurrence_count": 1,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "early_signal",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "两位 Grok Bot 设计师在播客里讲他们怎么用 AI agent 做个人网站和产品原型，对想动手做产品的人有直接参考价值。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.6,
+      "summary": "两位 Grok Bot 设计师在播客里讲他们怎么用 AI agent 做个人网站和产品原型，对想动手做产品的人有直接参考价值。",
+      "title": "🎙️ How I AI: How two SpaceXAI designers use Grok Bot to do their jobs",
+      "url": "https://www.lennysnewsletter.com/p/how-i-ai-how-two-spacexai-designers",
+      "sources": [
+        {
+          "url": "https://www.lennysnewsletter.com/p/how-i-ai-how-two-spacexai-designers",
+          "title": "🎙️ How I AI: How two SpaceXAI designers use Grok Bot to do their jobs",
+          "source_type": "newsletter",
+          "published_at": "2026-09-14T15:03:48+00:00"
+        },
+        {
+          "url": "https://www.lennysnewsletter.com/p/how-grok-bot-designers-use-ai-agents",
+          "title": "How Grok Bot designers use AI agents to build personal sites and product prototypes | John Bai & Peng Zheng",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "grok-bot-designers-how-i-ai",
+          "date": "2026-09-15",
+          "title": "🎙️ How I AI: How two SpaceXAI designers use Grok Bot to do their jobs",
+          "summary": "两位 Grok Bot 设计师在播客里讲他们怎么用 AI agent 做个人网站和产品原型，对想动手做产品的人有直接参考价值。",
+          "score": 7.6,
+          "url": "https://www.lennysnewsletter.com/p/how-i-ai-how-two-spacexai-designers"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "个人产品",
+        "设计流程"
+      ]
+    },
+    {
+      "product_id": "product-abc9ff9bea10c31a",
+      "product_name": "Claude",
+      "builder_name": "vertigoruntime",
+      "first_seen": "2026-09-17",
+      "last_seen": "2026-09-17",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "需要既闲聊问答又做文档、幻灯片、代码等深度任务的知识工作者；未公开具体企业规模限制",
+      "user_problem": "用户得提前判断对话是'简单聊天'还是'复杂工作'，选错模式会得到差异很大的回答质量，还得在不同界面间来回切换",
+      "what_it_is": "Anthropic 把之前分开的 Claude Chat（日常对话）和 Claude Cowork（深度工作/自动化）两个入口合并成单一产品界面",
+      "ai_role": "自动识别对话意图，动态切换'轻量聊天'和'深度工作'两种行为策略，无需用户手动选择",
+      "implementation_idea": "本质是把两个产品的前端入口和后端调度逻辑打通，让同一个模型实例根据上下文自动加载不同的系统提示（system prompt）和工具集；合盖后继续运行则依赖云端持久化会话状态",
+      "hands_on_exercise": "打开 Claude，用同一个对话线程先问一个开放式问题（如'解释量子计算'），再让它基于回答生成一份简易幻灯片大纲，观察它是否自动切换行为风格；若无法访问，用任意 AI 对比'直接提问'和'加上请详细逐步分析'两种问法的效果差异",
+      "limitations_or_uncertainties": "合并后两种模式的具体触发机制未公开；Claude Design/Docs/Slides 是否全量开放、定价是否变化未公开；'合盖后继续工作'的云端环境细节和安全性说明未公开",
+      "region": "global",
+      "score": 7.6,
+      "summary": "Anthropic 把 Claude Cowork 和 Chat 合并成一个 Claude，解决用户在不同模式间切换的问题，值得看合并后产品体验和用户反馈。",
+      "title": "Claude 合并聊天与工作模式：Cowork 和 Chat 合二为一",
+      "url": "https://claude.com/blog/cowork-is-now-claude",
+      "sources": [
+        {
+          "url": "https://claude.com/blog/cowork-is-now-claude",
+          "title": "Claude Cowork and chat are now one Claude",
+          "source_type": "hackernews",
+          "published_at": "2026-09-16T16:26:25+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "claude-cowork-chat-merge",
+          "date": "2026-09-17",
+          "title": "Claude 合并聊天与工作模式：Cowork 和 Chat 合二为一",
+          "summary": "Anthropic 把 Claude Cowork 和 Chat 合并成一个 Claude，解决用户在不同模式间切换的问题，值得看合并后产品体验和用户反馈。",
+          "score": 7.6,
+          "url": "https://claude.com/blog/cowork-is-now-claude"
+        }
+      ],
+      "usage_flow": [
+        "打开统一后的 Claude，直接开始对话，不用选模式",
+        "Claude 根据对话内容自动判断需要调用本地文件、App 还是云端继续执行",
+        "需要时直接使用 Claude Design/Docs/Slides 等功能输出成品",
+        "关闭电脑后，Claude 可在云端继续运行任务，多端同步"
+      ],
+      "learning_points": [
+        "System prompt：给 AI 的'隐形指令'，决定它是'闲聊语气'还是'严谨工作模式'",
+        "Agent：AI 能自主决定调用工具、多步骤执行，不只是你问一句它答一句",
+        "Function calling：AI 识别'我需要操作文件/生成幻灯片'并触发对应功能的能力"
+      ],
+      "verticals": [],
+      "tags": [
+        "Claude",
+        "Anthropic",
+        "产品整合"
+      ]
+    },
+    {
+      "product_id": "product-232c65712772cd87",
+      "product_name": "Sponsored Agents",
+      "builder_name": "OpenAI News",
+      "first_seen": "2026-09-17",
+      "last_seen": "2026-09-17",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "OpenAI 发布 AI 广告新形态 Sponsored Agents，并接入 HubSpot 和 Shopify，解决品牌在 AI 对话中触达用户的问题，对做 AI 商业化产品的人值得关注。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.2,
+      "summary": "OpenAI 发布 AI 广告新形态 Sponsored Agents，并接入 HubSpot 和 Shopify，解决品牌在 AI 对话中触达用户的问题，对做 AI 商业化产品的人值得关注。",
+      "title": "Reimagining advertising with AI",
+      "url": "https://openai.com/index/reimagining-advertising-with-ai",
+      "sources": [
+        {
+          "url": "https://openai.com/index/reimagining-advertising-with-ai",
+          "title": "Reimagining advertising with AI",
+          "source_type": "rss",
+          "published_at": "2026-09-16T13:00:00+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "openai-sponsored-agents-advertising",
+          "date": "2026-09-17",
+          "title": "Reimagining advertising with AI",
+          "summary": "OpenAI 发布 AI 广告新形态 Sponsored Agents，并接入 HubSpot 和 Shopify，解决品牌在 AI 对话中触达用户的问题，对做 AI 商业化产品的人值得关注。",
+          "score": 7.2,
+          "url": "https://openai.com/index/reimagining-advertising-with-ai"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "AI广告",
+        "商业化",
+        "Agent"
+      ]
+    },
+    {
+      "product_id": "product-0a86f1417d460540",
+      "product_name": "Jev",
+      "builder_name": "Latent Space",
+      "first_seen": "2026-09-17",
+      "last_seen": "2026-09-17",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "TypeSafe 推出 Jev，一个只负责决策、分类、路由和打分的小模型，号称比小尺寸前沿模型快 100 倍、便宜 200 倍。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.2,
+      "summary": "TypeSafe 推出 Jev，一个只负责决策、分类、路由和打分的小模型，号称比小尺寸前沿模型快 100 倍、便宜 200 倍。",
+      "title": "[AINews] Jev: a “System One Model” that only decides/classifies/routes/scores — >100x faster, >200x cheaper than small frontier LLMs",
+      "url": "https://www.latent.space/p/ainews-jev-a-system-one-model-that",
+      "sources": [
+        {
+          "url": "https://www.latent.space/p/ainews-jev-a-system-one-model-that",
+          "title": "[AINews] Jev: a “System One Model” that only decides/classifies/routes/scores — >100x faster, >200x cheaper than small frontier LLMs",
+          "source_type": "rss",
+          "published_at": "2026-09-16T11:09:53+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "jev-system-one-model-routing",
+          "date": "2026-09-17",
+          "title": "[AINews] Jev: a “System One Model” that only decides/classifies/routes/scores — >100x faster, >200x cheaper than small frontier LLMs",
+          "summary": "TypeSafe 推出 Jev，一个只负责决策、分类、路由和打分的小模型，号称比小尺寸前沿模型快 100 倍、便宜 200 倍。",
+          "score": 7.2,
+          "url": "https://www.latent.space/p/ainews-jev-a-system-one-model-that"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "模型能力",
+        "路由",
+        "推理成本"
+      ]
+    },
+    {
+      "product_id": "product-93661a0ec6f9a385",
+      "product_name": "Mem0",
+      "builder_name": "Tony Pan",
+      "first_seen": "2026-09-17",
+      "last_seen": "2026-09-17",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Mem0 上架 Vercel Marketplace，让 AI Agent 记住用户偏好和上下文，并提供免费额度和每月 20 美元方案。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.0,
+      "summary": "Mem0 上架 Vercel Marketplace，让 AI Agent 记住用户偏好和上下文，并提供免费额度和每月 20 美元方案。",
+      "title": "Mem0 joins the Vercel Marketplace",
+      "url": "https://vercel.com/changelog/mem0-joins-the-vercel-marketplace",
+      "sources": [
+        {
+          "url": "https://vercel.com/changelog/mem0-joins-the-vercel-marketplace",
+          "title": "Mem0 joins the Vercel Marketplace",
+          "source_type": "rss",
+          "published_at": "2026-09-16T17:00:00+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "mem0-vercel-marketplace",
+          "date": "2026-09-17",
+          "title": "Mem0 joins the Vercel Marketplace",
+          "summary": "Mem0 上架 Vercel Marketplace，让 AI Agent 记住用户偏好和上下文，并提供免费额度和每月 20 美元方案。",
+          "score": 7.0,
+          "url": "https://vercel.com/changelog/mem0-joins-the-vercel-marketplace"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "记忆",
+        "开发者工具"
+      ]
+    },
     {
       "product_id": "product-c483e81cc0b3f3e1",
       "product_name": "Gemini 3.8 Live",
@@ -123,60 +539,6 @@
         "Microsoft Foundry",
         "开发工具",
         "Agent"
-      ]
-    },
-    {
-      "product_id": "product-b2d2fb140a8fac81",
-      "product_name": "Grok Bot",
-      "builder_name": "Lenny Rachitsky",
-      "first_seen": "2026-09-15",
-      "last_seen": "2026-09-16",
-      "occurrence_count": 1,
-      "intelligence_type": "builder_insight",
-      "evidence_status": "early_signal",
-      "target_user": "未公开",
-      "user_problem": "未公开",
-      "what_it_is": "两位 Grok Bot 设计师在播客里讲他们怎么用 AI agent 做个人网站和产品原型，对想动手做产品的人有直接参考价值。",
-      "ai_role": "未公开",
-      "implementation_idea": "未公开",
-      "hands_on_exercise": "未公开",
-      "limitations_or_uncertainties": "未公开",
-      "region": "global",
-      "score": 7.6,
-      "summary": "两位 Grok Bot 设计师在播客里讲他们怎么用 AI agent 做个人网站和产品原型，对想动手做产品的人有直接参考价值。",
-      "title": "🎙️ How I AI: How two SpaceXAI designers use Grok Bot to do their jobs",
-      "url": "https://www.lennysnewsletter.com/p/how-i-ai-how-two-spacexai-designers",
-      "sources": [
-        {
-          "url": "https://www.lennysnewsletter.com/p/how-i-ai-how-two-spacexai-designers",
-          "title": "🎙️ How I AI: How two SpaceXAI designers use Grok Bot to do their jobs",
-          "source_type": "newsletter",
-          "published_at": "2026-09-14T15:03:48+00:00"
-        },
-        {
-          "url": "https://www.lennysnewsletter.com/p/how-grok-bot-designers-use-ai-agents",
-          "title": "How Grok Bot designers use AI agents to build personal sites and product prototypes | John Bai & Peng Zheng",
-          "source_type": "supplemental",
-          "published_at": ""
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "grok-bot-designers-how-i-ai",
-          "date": "2026-09-15",
-          "title": "🎙️ How I AI: How two SpaceXAI designers use Grok Bot to do their jobs",
-          "summary": "两位 Grok Bot 设计师在播客里讲他们怎么用 AI agent 做个人网站和产品原型，对想动手做产品的人有直接参考价值。",
-          "score": 7.6,
-          "url": "https://www.lennysnewsletter.com/p/how-i-ai-how-two-spacexai-designers"
-        }
-      ],
-      "usage_flow": [],
-      "learning_points": [],
-      "verticals": [],
-      "tags": [
-        "Agent",
-        "个人产品",
-        "设计流程"
       ]
     },
     {
