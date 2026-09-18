@@ -1,7 +1,517 @@
 {
   "version": 1,
-  "updated_at": "2026-09-17T04:52:42.957274+00:00",
+  "updated_at": "2026-09-18T04:42:50.237128+00:00",
   "products": [
+    {
+      "product_id": "product-9354568bb44654ba",
+      "product_name": "GO Public",
+      "builder_name": "OpenAI News",
+      "first_seen": "2026-09-18",
+      "last_seen": "2026-09-18",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "处理 IPO 业务的律师、律所",
+      "user_problem": "IPO 流程涉及海量文件审查，律师容易在后期才发现问题，导致时间紧迫、判断压力大",
+      "what_it_is": "一个专为 IPO（首次公开募股）流程设计的 AI 辅助工具，帮律师更早发现文件里的问题",
+      "ai_role": "在文件审查阶段自动'surface issues'（把问题浮出来），让律师不用逐行手动排查",
+      "implementation_idea": "基于 ChatGPT Work（OpenAI 的企业级服务）做文档分析和信息提取，相当于给 IPO 文件配了一个 24 小时不休息的初筛助手",
+      "hands_on_exercise": "用 ChatGPT Plus 或企业版上传一份公开的上市公司招股书（如 SEC EDGAR 上的 PDF），让 AI 帮你列出'风险因素'章节里的要点，对比原文看漏了哪些，体验'AI 初筛+人工复核'的工作流",
+      "limitations_or_uncertainties": "未公开具体技术细节（是否用 RAG、微调、还是纯提示工程）；未公开客户规模或处理文件数量；'ChatGPT Work'具体功能边界未说明",
+      "region": "global",
+      "score": 8.2,
+      "summary": "Cooley 用 ChatGPT Work 做出 GO Public，帮律师在 IPO 流程中更早发现问题并聚焦关键判断，是法律垂直场景的 AI 落地案例。",
+      "title": "Cooley 律所用 ChatGPT Work 打造 GO Public，加速 IPO 流程",
+      "url": "https://openai.com/index/cooley-gopublic",
+      "sources": [
+        {
+          "url": "https://openai.com/index/cooley-gopublic",
+          "title": "How Cooley is accelerating IPO work with ChatGPT",
+          "source_type": "rss",
+          "published_at": "2026-09-17T12:00:00+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "cooley-go-public-chatgpt-work-ipo",
+          "date": "2026-09-18",
+          "title": "Cooley 律所用 ChatGPT Work 打造 GO Public，加速 IPO 流程",
+          "summary": "Cooley 用 ChatGPT Work 做出 GO Public，帮律师在 IPO 流程中更早发现问题并聚焦关键判断，是法律垂直场景的 AI 落地案例。",
+          "score": 8.2,
+          "url": "https://openai.com/index/cooley-gopublic"
+        }
+      ],
+      "usage_flow": [
+        "律师把 IPO 相关文件上传/接入 GO Public 系统",
+        "AI 自动扫描并标出潜在问题或异常",
+        "律师查看 AI 标记，优先处理高风险项",
+        "律师把精力集中在需要专业判断的关键决策上"
+      ],
+      "learning_points": [
+        "垂直场景落地：通用大模型（ChatGPT）如何通过封装变成特定行业工具",
+        "人机协作：AI 做'发现'，人类做'判断'，分工明确",
+        "RAG（检索增强生成）：让 AI 基于企业私有文件回答，而非只靠训练时的公开知识"
+      ],
+      "verticals": [],
+      "tags": [
+        "法律",
+        "ChatGPT",
+        "企业落地"
+      ]
+    },
+    {
+      "product_id": "product-4147e0df9ea62c33",
+      "product_name": "Claude Code Projects",
+      "builder_name": "Stevie Bonifield",
+      "first_seen": "2026-09-18",
+      "last_seen": "2026-09-18",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "用 Claude Code 写代码、跑自动化任务的开发者；需要同时处理多个相关任务的技术用户",
+      "user_problem": "以前一个项目只能单线程对话，复杂任务要手动切来切去；多个相关任务之间信息不互通，重复交代背景",
+      "what_it_is": "Anthropic 给 Claude Code 做的项目管理功能，让用户在一个项目里同时跑多个 AI Agent，它们共享记忆和文件，由一个协调器调度任务。",
+      "ai_role": "Claude 负责把用户的大目标拆成小任务、创建并行线程、在各 Agent 之间同步上下文，并在后台协调执行顺序",
+      "implementation_idea": "本质是把'一个长对话'改成'一个项目容器'，里面多个 Agent 各干各的，但读写同一个'共享笔记本'（记忆+文件），有个'班长'（coordinator）看着谁做完了、谁要等着用别人的结果。",
+      "hands_on_exercise": "用 Claude Code 创建一个 Project，输入'帮我分析这个代码仓库的依赖漏洞，同时生成一份 README 改进建议'，观察它是否拆成两个线程并行跑，最后检查两个任务的结果是否互相引用",
+      "limitations_or_uncertainties": "未公开 coordinator 的具体调度机制；未明确并行线程数量上限；未说明记忆共享的底层实现是向量检索还是上下文窗口；目前仅 Claude Code 可用，普通 Claude 聊天未开放",
+      "region": "global",
+      "score": 8.2,
+      "summary": "Anthropic 重新发布 Claude Code 的 Projects 功能，让用户在一个项目里并行跑多个 Agent 并共享记忆和文件，解决多 Agent 协作管理问题，值得看是因为它展示了云端多 Agent 编排的产品形态。",
+      "title": "Claude Code 重推 Projects：云端多 Agent 并行协作",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/997134/anthropic-claude-code-projects",
+      "sources": [
+        {
+          "url": "https://www.theverge.com/ai-artificial-intelligence/997134/anthropic-claude-code-projects",
+          "title": "Claude Code relaunches Projects to manage multiple AI agents in the cloud",
+          "source_type": "rss",
+          "published_at": "2026-09-17T18:58:05+00:00"
+        },
+        {
+          "url": "https://support.claude.com/en/articles/9517075-what-are-projects",
+          "title": "What are projects? | Claude Help Center",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "claude-code-projects-relaunch",
+          "date": "2026-09-18",
+          "title": "Claude Code 重推 Projects：云端多 Agent 并行协作",
+          "summary": "Anthropic 重新发布 Claude Code 的 Projects 功能，让用户在一个项目里并行跑多个 Agent 并共享记忆和文件，解决多 Agent 协作管理问题，值得看是因为它展示了云端多 Agent 编排的产品形态。",
+          "score": 8.2,
+          "url": "https://www.theverge.com/ai-artificial-intelligence/997134/anthropic-claude-code-projects"
+        }
+      ],
+      "usage_flow": [
+        "在 Claude Code 里新建或打开一个 Project",
+        "用自然语言描述整体目标，Claude 自动拆成多个并行线程（threads）",
+        "各线程里的 Agent 在云端同时跑任务，共享同一套文件和记忆",
+        "通过 coordinator 查看进度、收结果、必要时介入调整"
+      ],
+      "learning_points": [
+        "Agent：能自主执行多步任务的 AI，不只是回答一次问题",
+        "多 Agent 编排：怎么让多个 AI 分工协作而不打架或重复劳动",
+        "云端执行：任务在服务器上跑，用户电脑关了也能继续"
+      ],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "Claude Code",
+        "多Agent"
+      ]
+    },
+    {
+      "product_id": "product-fccf9394c1e32959",
+      "product_name": "Hister",
+      "builder_name": "bookofjoe",
+      "first_seen": "2026-09-18",
+      "last_seen": "2026-09-18",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Searx 作者发布 Hister 个人搜索引擎，自动索引你访问的网页和本地文件，离线也能搜索，HN 上用户讨论用它管理书签和阅读列表，适合关注个人知识管理产品的人。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.8,
+      "summary": "Searx 作者发布 Hister 个人搜索引擎，自动索引你访问的网页和本地文件，离线也能搜索，HN 上用户讨论用它管理书签和阅读列表，适合关注个人知识管理产品的人。",
+      "title": "Hister: A private search engine for the pages you visit and the files you keep",
+      "url": "https://github.com/asciimoo/hister",
+      "sources": [
+        {
+          "url": "https://github.com/asciimoo/hister",
+          "title": "Hister: A private search engine for the pages you visit and the files you keep",
+          "source_type": "hackernews",
+          "published_at": "2026-09-17T16:25:37+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "hister-private-search-launch",
+          "date": "2026-09-18",
+          "title": "Hister: A private search engine for the pages you visit and the files you keep",
+          "summary": "Searx 作者发布 Hister 个人搜索引擎，自动索引你访问的网页和本地文件，离线也能搜索，HN 上用户讨论用它管理书签和阅读列表，适合关注个人知识管理产品的人。",
+          "score": 7.8,
+          "url": "https://github.com/asciimoo/hister"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Personal Search",
+        "Knowledge Management",
+        "Open Source"
+      ]
+    },
+    {
+      "product_id": "product-b2d2fb140a8fac81",
+      "product_name": "Grok Bot",
+      "builder_name": "Lenny Rachitsky",
+      "first_seen": "2026-09-15",
+      "last_seen": "2026-09-18",
+      "occurrence_count": 1,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "early_signal",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "两位 Grok Bot 设计师在播客里讲他们怎么用 AI agent 做个人网站和产品原型，对想动手做产品的人有直接参考价值。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.6,
+      "summary": "两位 Grok Bot 设计师在播客里讲他们怎么用 AI agent 做个人网站和产品原型，对想动手做产品的人有直接参考价值。",
+      "title": "🎙️ How I AI: How two SpaceXAI designers use Grok Bot to do their jobs",
+      "url": "https://www.lennysnewsletter.com/p/how-i-ai-how-two-spacexai-designers",
+      "sources": [
+        {
+          "url": "https://www.lennysnewsletter.com/p/how-i-ai-how-two-spacexai-designers",
+          "title": "🎙️ How I AI: How two SpaceXAI designers use Grok Bot to do their jobs",
+          "source_type": "newsletter",
+          "published_at": "2026-09-14T15:03:48+00:00"
+        },
+        {
+          "url": "https://www.lennysnewsletter.com/p/how-grok-bot-designers-use-ai-agents",
+          "title": "How Grok Bot designers use AI agents to build personal sites and product prototypes | John Bai & Peng Zheng",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "grok-bot-designers-how-i-ai",
+          "date": "2026-09-15",
+          "title": "🎙️ How I AI: How two SpaceXAI designers use Grok Bot to do their jobs",
+          "summary": "两位 Grok Bot 设计师在播客里讲他们怎么用 AI agent 做个人网站和产品原型，对想动手做产品的人有直接参考价值。",
+          "score": 7.6,
+          "url": "https://www.lennysnewsletter.com/p/how-i-ai-how-two-spacexai-designers"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "个人产品",
+        "设计流程"
+      ]
+    },
+    {
+      "product_id": "product-737d5fb149b29df0",
+      "product_name": "Vercel CLI",
+      "builder_name": "Janos Szathmary",
+      "first_seen": "2026-09-18",
+      "last_seen": "2026-09-18",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Vercel 在 CLI 里支持一秒内把静态 HTML/Markdown 产物直接部署上线，解决的是 coding agent 生成原型后快速分享的问题，值得看是因为它让 AI 生成页面的发布链路几乎零成本。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.5,
+      "summary": "Vercel 在 CLI 里支持一秒内把静态 HTML/Markdown 产物直接部署上线，解决的是 coding agent 生成原型后快速分享的问题，值得看是因为它让 AI 生成页面的发布链路几乎零成本。",
+      "title": "Sub-second artifact deployments are now supported in Vercel CLI",
+      "url": "https://vercel.com/changelog/sub-second-artifact-deployments-are-now-supported-in-vercel-cli",
+      "sources": [
+        {
+          "url": "https://vercel.com/changelog/sub-second-artifact-deployments-are-now-supported-in-vercel-cli",
+          "title": "Sub-second artifact deployments are now supported in Vercel CLI",
+          "source_type": "rss",
+          "published_at": "2026-09-17T22:00:00+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "vercel-cli-subsecond-artifact-deploy",
+          "date": "2026-09-18",
+          "title": "Sub-second artifact deployments are now supported in Vercel CLI",
+          "summary": "Vercel 在 CLI 里支持一秒内把静态 HTML/Markdown 产物直接部署上线，解决的是 coding agent 生成原型后快速分享的问题，值得看是因为它让 AI 生成页面的发布链路几乎零成本。",
+          "score": 7.5,
+          "url": "https://vercel.com/changelog/sub-second-artifact-deployments-are-now-supported-in-vercel-cli"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Vercel",
+        "部署",
+        "Agent"
+      ]
+    },
+    {
+      "product_id": "product-eb457e170f984635",
+      "product_name": "Astra for Law",
+      "builder_name": "vertigoruntime",
+      "first_seen": "2026-09-18",
+      "last_seen": "2026-09-18",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "OpenAI 推出面向法律行业的 Astra 产品，帮助律所处理文档分析和法律研究，HN 上律师讨论其适用边界，值得关注 AI 在专业服务中的落地方式。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.5,
+      "summary": "OpenAI 推出面向法律行业的 Astra 产品，帮助律所处理文档分析和法律研究，HN 上律师讨论其适用边界，值得关注 AI 在专业服务中的落地方式。",
+      "title": "Astra for Law",
+      "url": "https://openai.com/index/astra-for-law/",
+      "sources": [
+        {
+          "url": "https://openai.com/index/astra-for-law/",
+          "title": "Astra for Law",
+          "source_type": "hackernews",
+          "published_at": "2026-09-17T20:17:48+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "openai-astra-for-law-launch",
+          "date": "2026-09-18",
+          "title": "Astra for Law",
+          "summary": "OpenAI 推出面向法律行业的 Astra 产品，帮助律所处理文档分析和法律研究，HN 上律师讨论其适用边界，值得关注 AI 在专业服务中的落地方式。",
+          "score": 7.5,
+          "url": "https://openai.com/index/astra-for-law/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "LegalTech",
+        "Vertical AI",
+        "OpenAI"
+      ]
+    },
+    {
+      "product_id": "product-7de1bfb8d89d2458",
+      "product_name": "AI Gateway",
+      "builder_name": "Eric Dodds",
+      "first_seen": "2026-09-18",
+      "last_seen": "2026-09-18",
+      "occurrence_count": 1,
+      "intelligence_type": "market_signal",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Vercel 统计其 AI 网关真实流量发现开放权重模型首次占多数 token，且单 token 成本五个月降了一半，值得看是因为它反映企业实际用模型和花钱的变化。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.5,
+      "summary": "Vercel 统计其 AI 网关真实流量发现开放权重模型首次占多数 token，且单 token 成本五个月降了一半，值得看是因为它反映企业实际用模型和花钱的变化。",
+      "title": "Open-weight models take 56% of token volume, Astra doubles Fable 5.1 spend",
+      "url": "https://vercel.com/blog/ai-gateway-production-index-september-2026",
+      "sources": [
+        {
+          "url": "https://vercel.com/blog/ai-gateway-production-index-september-2026",
+          "title": "Open-weight models take 56% of token volume, Astra doubles Fable 5.1 spend",
+          "source_type": "rss",
+          "published_at": "2026-09-17T07:00:00+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "vercel-ai-gateway-production-index-2026-09",
+          "date": "2026-09-18",
+          "title": "Open-weight models take 56% of token volume, Astra doubles Fable 5.1 spend",
+          "summary": "Vercel 统计其 AI 网关真实流量发现开放权重模型首次占多数 token，且单 token 成本五个月降了一半，值得看是因为它反映企业实际用模型和花钱的变化。",
+          "score": 7.5,
+          "url": "https://vercel.com/blog/ai-gateway-production-index-september-2026"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "模型选型",
+        "成本",
+        "行业数据"
+      ]
+    },
+    {
+      "product_id": "product-8fe20c3864595873",
+      "product_name": "MCPJam",
+      "builder_name": "Prathmesh Patel",
+      "first_seen": "2026-09-18",
+      "last_seen": "2026-09-18",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "MCPJam 在 Product Hunt 发布，为 MCP 服务器提供测试与评估，解决 MCP 工具链调试问题，适合做 AI Agent 产品的开发者。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.3,
+      "summary": "MCPJam 在 Product Hunt 发布，为 MCP 服务器提供测试与评估，解决 MCP 工具链调试问题，适合做 AI Agent 产品的开发者。",
+      "title": "MCPJam",
+      "url": "https://www.producthunt.com/products/mcpjam-inspector",
+      "sources": [
+        {
+          "url": "https://www.producthunt.com/products/mcpjam-inspector",
+          "title": "MCPJam",
+          "source_type": "rss",
+          "published_at": "2026-09-17T06:17:38+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "mcpjam-inspector-launch",
+          "date": "2026-09-18",
+          "title": "MCPJam",
+          "summary": "MCPJam 在 Product Hunt 发布，为 MCP 服务器提供测试与评估，解决 MCP 工具链调试问题，适合做 AI Agent 产品的开发者。",
+          "score": 7.3,
+          "url": "https://www.producthunt.com/products/mcpjam-inspector"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "MCP",
+        "开发者工具",
+        "Product Hunt"
+      ]
+    },
+    {
+      "product_id": "product-73c2d608b47d18c8",
+      "product_name": "Amy by Jellyfish",
+      "builder_name": "Symion John",
+      "first_seen": "2026-09-18",
+      "last_seen": "2026-09-18",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Jellyfish 在 Product Hunt 发布 Amy，一个帮招聘团队做人才寻源的 AI 员工，解决招聘初筛与搜寻问题，值得看其实际效果。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.2,
+      "summary": "Jellyfish 在 Product Hunt 发布 Amy，一个帮招聘团队做人才寻源的 AI 员工，解决招聘初筛与搜寻问题，值得看其实际效果。",
+      "title": "Amy by Jellyfish",
+      "url": "https://www.producthunt.com/products/amy-by-jellyfish",
+      "sources": [
+        {
+          "url": "https://www.producthunt.com/products/amy-by-jellyfish",
+          "title": "Amy by Jellyfish",
+          "source_type": "rss",
+          "published_at": "2026-09-17T05:23:24+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "amy-by-jellyfish-launch",
+          "date": "2026-09-18",
+          "title": "Amy by Jellyfish",
+          "summary": "Jellyfish 在 Product Hunt 发布 Amy，一个帮招聘团队做人才寻源的 AI 员工，解决招聘初筛与搜寻问题，值得看其实际效果。",
+          "score": 7.2,
+          "url": "https://www.producthunt.com/products/amy-by-jellyfish"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "招聘",
+        "AI Agent",
+        "Product Hunt"
+      ]
+    },
+    {
+      "product_id": "product-6f99ac72f0cb082d",
+      "product_name": "skills CLI",
+      "builder_name": "Ben Sabic",
+      "first_seen": "2026-09-18",
+      "last_seen": "2026-09-18",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Vercel 的 skills CLI 现在能直接安装 Notion 里写的 Agent 技能，解决团队不想用 Git 管理技能的问题，值得看是因为它把技能编写搬进了日常协作工具。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.2,
+      "summary": "Vercel 的 skills CLI 现在能直接安装 Notion 里写的 Agent 技能，解决团队不想用 Git 管理技能的问题，值得看是因为它把技能编写搬进了日常协作工具。",
+      "title": "The skills CLI now supports Notion hosted skills",
+      "url": "https://vercel.com/changelog/skills-cli-notion-skills",
+      "sources": [
+        {
+          "url": "https://vercel.com/changelog/skills-cli-notion-skills",
+          "title": "The skills CLI now supports Notion hosted skills",
+          "source_type": "rss",
+          "published_at": "2026-09-17T18:00:00+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "vercel-skills-cli-notion-skills",
+          "date": "2026-09-18",
+          "title": "The skills CLI now supports Notion hosted skills",
+          "summary": "Vercel 的 skills CLI 现在能直接安装 Notion 里写的 Agent 技能，解决团队不想用 Git 管理技能的问题，值得看是因为它把技能编写搬进了日常协作工具。",
+          "score": 7.2,
+          "url": "https://vercel.com/changelog/skills-cli-notion-skills"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "Skills",
+        "开发者工具"
+      ]
+    },
     {
       "product_id": "product-1830a66d4617ff32",
       "product_name": "Muse",
@@ -161,60 +671,6 @@
         "Agent",
         "智能家居",
         "Google Home"
-      ]
-    },
-    {
-      "product_id": "product-b2d2fb140a8fac81",
-      "product_name": "Grok Bot",
-      "builder_name": "Lenny Rachitsky",
-      "first_seen": "2026-09-15",
-      "last_seen": "2026-09-17",
-      "occurrence_count": 1,
-      "intelligence_type": "builder_insight",
-      "evidence_status": "early_signal",
-      "target_user": "未公开",
-      "user_problem": "未公开",
-      "what_it_is": "两位 Grok Bot 设计师在播客里讲他们怎么用 AI agent 做个人网站和产品原型，对想动手做产品的人有直接参考价值。",
-      "ai_role": "未公开",
-      "implementation_idea": "未公开",
-      "hands_on_exercise": "未公开",
-      "limitations_or_uncertainties": "未公开",
-      "region": "global",
-      "score": 7.6,
-      "summary": "两位 Grok Bot 设计师在播客里讲他们怎么用 AI agent 做个人网站和产品原型，对想动手做产品的人有直接参考价值。",
-      "title": "🎙️ How I AI: How two SpaceXAI designers use Grok Bot to do their jobs",
-      "url": "https://www.lennysnewsletter.com/p/how-i-ai-how-two-spacexai-designers",
-      "sources": [
-        {
-          "url": "https://www.lennysnewsletter.com/p/how-i-ai-how-two-spacexai-designers",
-          "title": "🎙️ How I AI: How two SpaceXAI designers use Grok Bot to do their jobs",
-          "source_type": "newsletter",
-          "published_at": "2026-09-14T15:03:48+00:00"
-        },
-        {
-          "url": "https://www.lennysnewsletter.com/p/how-grok-bot-designers-use-ai-agents",
-          "title": "How Grok Bot designers use AI agents to build personal sites and product prototypes | John Bai & Peng Zheng",
-          "source_type": "supplemental",
-          "published_at": ""
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "grok-bot-designers-how-i-ai",
-          "date": "2026-09-15",
-          "title": "🎙️ How I AI: How two SpaceXAI designers use Grok Bot to do their jobs",
-          "summary": "两位 Grok Bot 设计师在播客里讲他们怎么用 AI agent 做个人网站和产品原型，对想动手做产品的人有直接参考价值。",
-          "score": 7.6,
-          "url": "https://www.lennysnewsletter.com/p/how-i-ai-how-two-spacexai-designers"
-        }
-      ],
-      "usage_flow": [],
-      "learning_points": [],
-      "verticals": [],
-      "tags": [
-        "Agent",
-        "个人产品",
-        "设计流程"
       ]
     },
     {
