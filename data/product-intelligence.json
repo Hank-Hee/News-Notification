@@ -1,7 +1,369 @@
 {
   "version": 1,
-  "updated_at": "2026-09-18T04:42:50.237128+00:00",
+  "updated_at": "2026-09-19T04:37:49.038243+00:00",
   "products": [
+    {
+      "product_id": "product-b2d2fb140a8fac81",
+      "product_name": "Grok Bot",
+      "builder_name": "Lenny Rachitsky",
+      "first_seen": "2026-09-15",
+      "last_seen": "2026-09-19",
+      "occurrence_count": 1,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "early_signal",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "两位 Grok Bot 设计师在播客里讲他们怎么用 AI agent 做个人网站和产品原型，对想动手做产品的人有直接参考价值。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.6,
+      "summary": "两位 Grok Bot 设计师在播客里讲他们怎么用 AI agent 做个人网站和产品原型，对想动手做产品的人有直接参考价值。",
+      "title": "🎙️ How I AI: How two SpaceXAI designers use Grok Bot to do their jobs",
+      "url": "https://www.lennysnewsletter.com/p/how-i-ai-how-two-spacexai-designers",
+      "sources": [
+        {
+          "url": "https://www.lennysnewsletter.com/p/how-i-ai-how-two-spacexai-designers",
+          "title": "🎙️ How I AI: How two SpaceXAI designers use Grok Bot to do their jobs",
+          "source_type": "newsletter",
+          "published_at": "2026-09-14T15:03:48+00:00"
+        },
+        {
+          "url": "https://www.lennysnewsletter.com/p/how-grok-bot-designers-use-ai-agents",
+          "title": "How Grok Bot designers use AI agents to build personal sites and product prototypes | John Bai & Peng Zheng",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "grok-bot-designers-how-i-ai",
+          "date": "2026-09-15",
+          "title": "🎙️ How I AI: How two SpaceXAI designers use Grok Bot to do their jobs",
+          "summary": "两位 Grok Bot 设计师在播客里讲他们怎么用 AI agent 做个人网站和产品原型，对想动手做产品的人有直接参考价值。",
+          "score": 7.6,
+          "url": "https://www.lennysnewsletter.com/p/how-i-ai-how-two-spacexai-designers"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "个人产品",
+        "设计流程"
+      ]
+    },
+    {
+      "product_id": "product-97a104e5a93a2b88",
+      "product_name": "Claude Code",
+      "builder_name": "Simon Willison",
+      "first_seen": "2026-08-09",
+      "last_seen": "2026-09-19",
+      "occurrence_count": 3,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "使用 Claude Code 终端工具的开发者，尤其是需要团队协作统一 AI 编码规范的人",
+      "user_problem": "以前只能用 CLAUDE.md 给 AI 写项目指令，但团队想换用更通用的 AGENTS.md 标准（跨工具共享），或者想自定义指令逻辑却受限于硬编码",
+      "what_it_is": "Anthropic 官方为终端编码工具 Claude Code 新增的配置文件支持，让 AI 编码助手能读取项目级的 AGENTS.md 文件来理解项目规则。",
+      "ai_role": "读取 AGENTS.md 中的规则，在编码、改代码、跑命令时按这些规则行动",
+      "implementation_idea": "核心思路是给 AI 配一个'安全护栏层'——不是让人类逐条审批，而是让 AI 自己用另一套规则判断'这个命令会不会删数据、会不会把代码发给外部'。Anthropic 称他们用大量攻击场景训练了这套判断能力，并引入第三方独立测试验证。",
+      "hands_on_exercise": "30 分钟练习：①安装/更新 Claude Code 到 2.1.277+（运行 claude update）；②在一个测试项目里删掉 CLAUDE.md（如果有），新建 AGENTS.md 写入「所有函数必须加类型注解，提交前跑 pytest」；③让 Claude Code 写一个新函数，观察它是否遵守规则；④去 GitHub 看 anthropic/claude-code/tree/main/mods/agents-md 的源码，对比你写的 AGENTS.md 是怎么被解析的",
+      "limitations_or_uncertainties": "Bedrock、Vertex、Foundry 平台尚未支持此功能；mods 系统的完整自定义能力还未正式发布，目前只有这个内置 mod 可用；AGENTS.md 的具体语法规范未在原文中详细说明",
+      "region": "global",
+      "score": 7.5,
+      "summary": "Anthropic 的 Thariq Shihipar 宣布 Claude Code 2.1.277 起支持 AGENTS.md，并基于即将推出的 mods 机制实现，源码已公开。",
+      "title": "Claude Code 新增 AGENTS.md 支持：用 mods 机制自定义项目指令",
+      "url": "https://simonwillison.net/2026/Sep/18/thariq-shihipar/",
+      "sources": [
+        {
+          "url": "https://simonwillison.net/2026/Aug/8/auto-mode/#atom-everything",
+          "title": "Auto mode is now the default in Claude Code for Pro, Max, and Team plans",
+          "source_type": "rss",
+          "published_at": "2026-08-08T22:36:03+00:00"
+        },
+        {
+          "url": "https://simonwillison.net/2026/Aug/27/breaking-claude-code-opus-5-auto-mode/",
+          "title": "Breaking Claude Code Opus 5 Auto Mode",
+          "source_type": "rss",
+          "published_at": "2026-08-27T22:50:25+00:00"
+        },
+        {
+          "url": "https://simonwillison.net/2026/Sep/18/thariq-shihipar/",
+          "title": "Quoting Thariq Shihipar",
+          "source_type": "rss",
+          "published_at": "2026-09-18T19:09:27+00:00"
+        },
+        {
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.277",
+          "title": "anthropics/claude-code released v2.1.277",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "claude-code-auto-mode-default",
+          "date": "2026-08-09",
+          "title": "Claude Code 将自动模式设为默认：Anthropic 称已大幅缓解提示注入风险",
+          "summary": "Anthropic 宣布 Claude Code 的 auto mode 将成为 Pro、Max 和 Team 计划的默认模式，并透露内部几乎全员使用，值得关注其安全性和效率提升。",
+          "score": 8.5,
+          "url": "https://simonwillison.net/2026/Aug/8/auto-mode/#atom-everything"
+        },
+        {
+          "update_id": "claude-code-opus5-auto-mode-prompt-injection",
+          "date": "2026-08-28",
+          "title": "Breaking Claude Code Opus 5 Auto Mode",
+          "summary": "研究者发现针对Claude Code Auto Mode的提示注入攻击，成功率80%，可绕过安全机制执行恶意代码。",
+          "score": 9.0,
+          "url": "https://simonwillison.net/2026/Aug/27/breaking-claude-code-opus-5-auto-mode/"
+        },
+        {
+          "update_id": "claude-code-agents-md-support-2-1-277",
+          "date": "2026-09-19",
+          "title": "Claude Code 新增 AGENTS.md 支持：用 mods 机制自定义项目指令",
+          "summary": "Anthropic 的 Thariq Shihipar 宣布 Claude Code 2.1.277 起支持 AGENTS.md，并基于即将推出的 mods 机制实现，源码已公开。",
+          "score": 7.5,
+          "url": "https://simonwillison.net/2026/Sep/18/thariq-shihipar/"
+        }
+      ],
+      "usage_flow": [
+        "开发者用自然语言描述需求，Claude Code 规划并执行多步骤任务",
+        "自动模式下，AI 自行判断命令风险等级，低风险直接执行，高风险拦截或请示",
+        "AI 读取外部代码、文档、依赖包时，自动模式尝试识别并阻断隐藏的恶意指令",
+        "开发者事后审计 AI 执行记录，必要时回滚操作",
+        "在 Claude Code 2.1.277 及以上版本中，进入项目文件夹",
+        "若文件夹里没有 CLAUDE.md，新建一个 AGENTS.md 写入项目规则（如代码风格、测试要求）",
+        "Claude Code 启动时会自动读取 AGENTS.md 作为项目指令",
+        "进阶：以后可通过 mods 机制自己写自定义版本的项目指令逻辑"
+      ],
+      "learning_points": [
+        "Agent（智能体）：LLM 不只是聊天，还能自己动手操作电脑、运行程序、完成任务",
+        "Prompt injection（提示注入）：攻击者把恶意指令藏在 AI 要读取的网页、邮件、代码里，骗 AI 执行",
+        "Confirmation fatigue（确认疲劳）：让人类点太多'同意'，人会麻木点错，反而降低安全性",
+        "AGENTS.md：一种社区推动的通用配置文件，想让不同 AI 编码工具（不只是 Claude）都能读懂同一套项目规则",
+        "Mod/模块系统：把软件的一部分功能拆成可替换的「插件」，这里 Claude Code 把「读项目指令」这件事做成了可自定义的模块",
+        "Function Calling（功能调用）：AI 模型不只会聊天，还能按规则调用工具（如读文件、跑命令），项目指令就是给这些工具调用定规矩"
+      ],
+      "verticals": [],
+      "tags": [
+        "Claude Code",
+        "auto mode",
+        "Anthropic",
+        "安全",
+        "提示注入",
+        "编码Agent",
+        "AGENTS.md"
+      ]
+    },
+    {
+      "product_id": "product-ec3c52eabd45ec41",
+      "product_name": "Jev",
+      "builder_name": "Eric Dodds",
+      "first_seen": "2026-09-19",
+      "last_seen": "2026-09-19",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "需要让 AI 在软件里做快速判断的开发者，比如决定 Agent 下一步调用什么工具、要不要拦截风险操作、是否让人工复核等场景。",
+      "user_problem": "通用大模型输出的是自然语言，开发者得自己解析、校验、担心格式不对；而且大模型做简单判断又慢又贵，像用大炮打蚊子。",
+      "what_it_is": "Jev 是一个专门做\"结构化决策\"的 AI 模型，不返回长文本，而是返回代码能直接用的类型化结果（比如选 A 还是选 B、打几分、true/false），并附带概率值。",
+      "ai_role": "AI 负责把\"模糊的业务场景\"转化为\"确定性的结构化决策\"，替代开发者自己写规则引擎或调用大模型做简单判断。",
+      "implementation_idea": "Jev 本质上是一个\"概率分类器\"，针对软件里常见的决策点预做了优化。它跳过生成自然语言的步骤，直接输出定义好的数据类型（类似 API 的响应格式），所以比通用 LLM 快几十倍、便宜几百倍。可以把它理解为：不是让 AI \"写作文\"，而是让 AI \"做选择题并给出把握有多大\"。",
+      "hands_on_exercise": "30 分钟练习：在 Vercel AI Gateway 注册账号，找到 Jev 的试用入口，用 curl 或 Postman 发一个请求，让它帮你做一个简单判断（比如\"这条用户评论是咨询、投诉还是广告？\"），观察返回的 JSON 格式和概率字段，对比你调用 GPT-4 做同样任务的速度和成本。",
+      "limitations_or_uncertainties": "TypeSafe AI 自称的\"194 倍更快、445 倍更便宜\"是厂商自己跑的工作流评测，未公开第三方复现方法；24 小时采用率数据来自 Vercel 官方，但\"付费团队\"的具体定义和样本量未公开；早期采用热度能否持续仍是未知数。",
+      "region": "global",
+      "score": 7.5,
+      "summary": "TypeSafe AI 的 Jev 在 Vercel AI Gateway 上线 24 小时内成为采用最快模型，近 13% 付费团队使用，它专门做软件内的结构化决策并返回带概率的类型化答案。",
+      "title": "Jev 成为 Vercel AI Gateway 史上采用速度最快的模型",
+      "url": "https://vercel.com/blog/ai-gateway-jev-model-launch",
+      "sources": [
+        {
+          "url": "https://vercel.com/blog/ai-gateway-jev-model-launch",
+          "title": "Jev is the fastest-adopted model in AI Gateway history",
+          "source_type": "rss",
+          "published_at": "2026-09-18T07:00:00+00:00"
+        },
+        {
+          "url": "https://www.datacamp.com/blog/system-one-models-jev",
+          "title": "Jev : TypeSafe's System One Model Explained | DataCamp",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "jev-typesafe-ai-gateway-fastest-adoption",
+          "date": "2026-09-19",
+          "title": "Jev 成为 Vercel AI Gateway 史上采用速度最快的模型",
+          "summary": "TypeSafe AI 的 Jev 在 Vercel AI Gateway 上线 24 小时内成为采用最快模型，近 13% 付费团队使用，它专门做软件内的结构化决策并返回带概率的类型化答案。",
+          "score": 7.5,
+          "url": "https://vercel.com/blog/ai-gateway-jev-model-launch"
+        }
+      ],
+      "usage_flow": [
+        "开发者通过 Vercel AI Gateway 接入 Jev，传入上下文和一组问题",
+        "Jev 并行评估这些问题，返回类型化的选择、分数或布尔值 + 概率",
+        "代码直接消费这些结构化结果，驱动后续逻辑（如调用工具、继续工作流、人工复核）"
+      ],
+      "learning_points": [
+        "Function Calling（函数调用）：让 AI 输出结构化数据而不是自由文本，方便代码直接处理",
+        "Agent（智能体）：能自主决定下一步动作的 AI 系统，Jev 专门负责 Agent 的\"决策大脑\"环节",
+        "Embedding（嵌入）：未直接涉及，但理解 LLM 的不同输出形态有助于选型"
+      ],
+      "verticals": [],
+      "tags": [
+        "Jev",
+        "AI Gateway",
+        "结构化决策"
+      ]
+    },
+    {
+      "product_id": "product-f1fb271585a7372b",
+      "product_name": "AEXGrid",
+      "builder_name": "ivan delicio",
+      "first_seen": "2026-09-19",
+      "last_seen": "2026-09-19",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "AEXGrid 在 Product Hunt 发布，主打从任何地方协调 AI agents，适合观察多 agent 协作类产品的早期形态。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.2,
+      "summary": "AEXGrid 在 Product Hunt 发布，主打从任何地方协调 AI agents，适合观察多 agent 协作类产品的早期形态。",
+      "title": "AEXGrid",
+      "url": "https://www.producthunt.com/products/aexgrid",
+      "sources": [
+        {
+          "url": "https://www.producthunt.com/products/aexgrid",
+          "title": "AEXGrid",
+          "source_type": "rss",
+          "published_at": "2026-09-18T05:42:36+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "aexgrid-launch",
+          "date": "2026-09-19",
+          "title": "AEXGrid",
+          "summary": "AEXGrid 在 Product Hunt 发布，主打从任何地方协调 AI agents，适合观察多 agent 协作类产品的早期形态。",
+          "score": 7.2,
+          "url": "https://www.producthunt.com/products/aexgrid"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "多智能体",
+        "ProductHunt"
+      ]
+    },
+    {
+      "product_id": "product-ac6f79ec5a633a85",
+      "product_name": "Wombo",
+      "builder_name": "Armin Catovic",
+      "first_seen": "2026-09-19",
+      "last_seen": "2026-09-19",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Wombo 在 Product Hunt 发布 AI 游戏工作室，帮开发者生成 2D 图形、音效和 sfx，适合观察 AI 在游戏素材生产中的落地方式。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.0,
+      "summary": "Wombo 在 Product Hunt 发布 AI 游戏工作室，帮开发者生成 2D 图形、音效和 sfx，适合观察 AI 在游戏素材生产中的落地方式。",
+      "title": "Wombo",
+      "url": "https://www.producthunt.com/products/wombo-the-ai-game-studio",
+      "sources": [
+        {
+          "url": "https://www.producthunt.com/products/wombo-the-ai-game-studio",
+          "title": "Wombo",
+          "source_type": "rss",
+          "published_at": "2026-09-18T05:40:02+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "wombo-ai-game-studio-launch",
+          "date": "2026-09-19",
+          "title": "Wombo",
+          "summary": "Wombo 在 Product Hunt 发布 AI 游戏工作室，帮开发者生成 2D 图形、音效和 sfx，适合观察 AI 在游戏素材生产中的落地方式。",
+          "score": 7.0,
+          "url": "https://www.producthunt.com/products/wombo-the-ai-game-studio"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "AI游戏",
+        "素材生成",
+        "ProductHunt"
+      ]
+    },
+    {
+      "product_id": "product-a9f5208e60f53c05",
+      "product_name": "mcp-handler",
+      "builder_name": "Boris Besemer",
+      "first_seen": "2026-09-19",
+      "last_seen": "2026-09-19",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Vercel 的 mcp-handler 2.2.0 实验性支持 WebMCP，加一个 script 标签就能把已有 MCP 工具暴露给浏览器内 Agent，并以登录用户身份代理调用。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.0,
+      "summary": "Vercel 的 mcp-handler 2.2.0 实验性支持 WebMCP，加一个 script 标签就能把已有 MCP 工具暴露给浏览器内 Agent，并以登录用户身份代理调用。",
+      "title": "WebMCP support now available in mcp-handler",
+      "url": "https://vercel.com/changelog/webmcp-mcp-handler",
+      "sources": [
+        {
+          "url": "https://vercel.com/changelog/webmcp-mcp-handler",
+          "title": "WebMCP support now available in mcp-handler",
+          "source_type": "rss",
+          "published_at": "2026-09-18T18:00:00+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "vercel-mcp-handler-webmcp-support",
+          "date": "2026-09-19",
+          "title": "WebMCP support now available in mcp-handler",
+          "summary": "Vercel 的 mcp-handler 2.2.0 实验性支持 WebMCP，加一个 script 标签就能把已有 MCP 工具暴露给浏览器内 Agent，并以登录用户身份代理调用。",
+          "score": 7.0,
+          "url": "https://vercel.com/changelog/webmcp-mcp-handler"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "MCP",
+        "WebMCP",
+        "Agent"
+      ]
+    },
     {
       "product_id": "product-9354568bb44654ba",
       "product_name": "GO Public",
@@ -168,60 +530,6 @@
         "Personal Search",
         "Knowledge Management",
         "Open Source"
-      ]
-    },
-    {
-      "product_id": "product-b2d2fb140a8fac81",
-      "product_name": "Grok Bot",
-      "builder_name": "Lenny Rachitsky",
-      "first_seen": "2026-09-15",
-      "last_seen": "2026-09-18",
-      "occurrence_count": 1,
-      "intelligence_type": "builder_insight",
-      "evidence_status": "early_signal",
-      "target_user": "未公开",
-      "user_problem": "未公开",
-      "what_it_is": "两位 Grok Bot 设计师在播客里讲他们怎么用 AI agent 做个人网站和产品原型，对想动手做产品的人有直接参考价值。",
-      "ai_role": "未公开",
-      "implementation_idea": "未公开",
-      "hands_on_exercise": "未公开",
-      "limitations_or_uncertainties": "未公开",
-      "region": "global",
-      "score": 7.6,
-      "summary": "两位 Grok Bot 设计师在播客里讲他们怎么用 AI agent 做个人网站和产品原型，对想动手做产品的人有直接参考价值。",
-      "title": "🎙️ How I AI: How two SpaceXAI designers use Grok Bot to do their jobs",
-      "url": "https://www.lennysnewsletter.com/p/how-i-ai-how-two-spacexai-designers",
-      "sources": [
-        {
-          "url": "https://www.lennysnewsletter.com/p/how-i-ai-how-two-spacexai-designers",
-          "title": "🎙️ How I AI: How two SpaceXAI designers use Grok Bot to do their jobs",
-          "source_type": "newsletter",
-          "published_at": "2026-09-14T15:03:48+00:00"
-        },
-        {
-          "url": "https://www.lennysnewsletter.com/p/how-grok-bot-designers-use-ai-agents",
-          "title": "How Grok Bot designers use AI agents to build personal sites and product prototypes | John Bai & Peng Zheng",
-          "source_type": "supplemental",
-          "published_at": ""
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "grok-bot-designers-how-i-ai",
-          "date": "2026-09-15",
-          "title": "🎙️ How I AI: How two SpaceXAI designers use Grok Bot to do their jobs",
-          "summary": "两位 Grok Bot 设计师在播客里讲他们怎么用 AI agent 做个人网站和产品原型，对想动手做产品的人有直接参考价值。",
-          "score": 7.6,
-          "url": "https://www.lennysnewsletter.com/p/how-i-ai-how-two-spacexai-designers"
-        }
-      ],
-      "usage_flow": [],
-      "learning_points": [],
-      "verticals": [],
-      "tags": [
-        "Agent",
-        "个人产品",
-        "设计流程"
       ]
     },
     {
@@ -6540,79 +6848,6 @@
         "安全",
         "LLM",
         "MCP"
-      ]
-    },
-    {
-      "product_id": "product-97a104e5a93a2b88",
-      "product_name": "Claude Code",
-      "builder_name": "Simon Willison",
-      "first_seen": "2026-08-09",
-      "last_seen": "2026-08-28",
-      "occurrence_count": 2,
-      "intelligence_type": "builder_insight",
-      "evidence_status": "first_party",
-      "target_user": "Pro、Max、Team 订阅计划的开发者；Anthropic 内部员工",
-      "user_problem": "开发者用 AI 编程助手时，每步操作都要人工点'确认'，导致'确认疲劳'，反而更容易草率通过危险操作；同时担心 AI 被恶意指令劫持（提示注入攻击）后自动执行有害命令",
-      "what_it_is": "研究者发现针对Claude Code Auto Mode的提示注入攻击，成功率80%，可绕过安全机制执行恶意代码。",
-      "ai_role": "AI 充当'能自主执行但带安全刹车的编程代理'（Agent）：自己分解任务、运行命令、读写文件，同时用内置安全评估过滤危险操作",
-      "implementation_idea": "核心思路是给 AI 配一个'安全护栏层'——不是让人类逐条审批，而是让 AI 自己用另一套规则判断'这个命令会不会删数据、会不会把代码发给外部'。Anthropic 称他们用大量攻击场景训练了这套判断能力，并引入第三方独立测试验证。",
-      "hands_on_exercise": "打开 Claude Code（需订阅 Pro/Max/Team），在设置里确认 auto mode 已开启，让它帮你初始化一个 Python 项目（创建虚拟环境、安装依赖、跑通测试）。观察它哪些操作自动执行了、哪些停下来问你——对比之前手动逐条确认的体验。",
-      "limitations_or_uncertainties": "第三方测试由 Trajectory Labs 执行，但具体测试方法、72 个攻击场景的详细设计未完全公开；11% 的危险操作仍可能漏过；Simon Willison 提出一种攻击场景（恶意包伪装成正常命令链）尚未见公开测试结果；Claude Fable 5/Opus 5/Sonnet 5 的具体模型版本信息未详细披露",
-      "region": "global",
-      "score": 9.0,
-      "summary": "研究者发现针对Claude Code Auto Mode的提示注入攻击，成功率80%，可绕过安全机制执行恶意代码。",
-      "title": "Breaking Claude Code Opus 5 Auto Mode",
-      "url": "https://simonwillison.net/2026/Aug/27/breaking-claude-code-opus-5-auto-mode/",
-      "sources": [
-        {
-          "url": "https://simonwillison.net/2026/Aug/8/auto-mode/#atom-everything",
-          "title": "Auto mode is now the default in Claude Code for Pro, Max, and Team plans",
-          "source_type": "rss",
-          "published_at": "2026-08-08T22:36:03+00:00"
-        },
-        {
-          "url": "https://simonwillison.net/2026/Aug/27/breaking-claude-code-opus-5-auto-mode/",
-          "title": "Breaking Claude Code Opus 5 Auto Mode",
-          "source_type": "rss",
-          "published_at": "2026-08-27T22:50:25+00:00"
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "claude-code-auto-mode-default",
-          "date": "2026-08-09",
-          "title": "Claude Code 将自动模式设为默认：Anthropic 称已大幅缓解提示注入风险",
-          "summary": "Anthropic 宣布 Claude Code 的 auto mode 将成为 Pro、Max 和 Team 计划的默认模式，并透露内部几乎全员使用，值得关注其安全性和效率提升。",
-          "score": 8.5,
-          "url": "https://simonwillison.net/2026/Aug/8/auto-mode/#atom-everything"
-        },
-        {
-          "update_id": "claude-code-opus5-auto-mode-prompt-injection",
-          "date": "2026-08-28",
-          "title": "Breaking Claude Code Opus 5 Auto Mode",
-          "summary": "研究者发现针对Claude Code Auto Mode的提示注入攻击，成功率80%，可绕过安全机制执行恶意代码。",
-          "score": 9.0,
-          "url": "https://simonwillison.net/2026/Aug/27/breaking-claude-code-opus-5-auto-mode/"
-        }
-      ],
-      "usage_flow": [
-        "开发者用自然语言描述需求，Claude Code 规划并执行多步骤任务",
-        "自动模式下，AI 自行判断命令风险等级，低风险直接执行，高风险拦截或请示",
-        "AI 读取外部代码、文档、依赖包时，自动模式尝试识别并阻断隐藏的恶意指令",
-        "开发者事后审计 AI 执行记录，必要时回滚操作"
-      ],
-      "learning_points": [
-        "Agent（智能体）：LLM 不只是聊天，还能自己动手操作电脑、运行程序、完成任务",
-        "Prompt injection（提示注入）：攻击者把恶意指令藏在 AI 要读取的网页、邮件、代码里，骗 AI 执行",
-        "Confirmation fatigue（确认疲劳）：让人类点太多'同意'，人会麻木点错，反而降低安全性"
-      ],
-      "verticals": [],
-      "tags": [
-        "Claude Code",
-        "auto mode",
-        "Anthropic",
-        "安全",
-        "提示注入"
       ]
     },
     {
