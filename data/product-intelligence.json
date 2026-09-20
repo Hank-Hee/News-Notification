@@ -1,13 +1,13 @@
 {
   "version": 1,
-  "updated_at": "2026-09-19T04:37:49.038243+00:00",
+  "updated_at": "2026-09-20T04:54:21.390402+00:00",
   "products": [
     {
       "product_id": "product-b2d2fb140a8fac81",
       "product_name": "Grok Bot",
       "builder_name": "Lenny Rachitsky",
       "first_seen": "2026-09-15",
-      "last_seen": "2026-09-19",
+      "last_seen": "2026-09-20",
       "occurrence_count": 1,
       "intelligence_type": "builder_insight",
       "evidence_status": "early_signal",
@@ -54,6 +54,129 @@
         "Agent",
         "个人产品",
         "设计流程"
+      ]
+    },
+    {
+      "product_id": "product-3bc945fba6633380",
+      "product_name": "Laya",
+      "builder_name": "nandakishor_ml",
+      "first_seen": "2026-09-20",
+      "last_seen": "2026-09-20",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "reported",
+      "target_user": "未公开（作者主页显示关注医疗 AI 应用，但未明确本产品目标用户）",
+      "user_problem": "未公开（原帖标题提到“从对话预测销售转化概率”，但产品网站未明确说明具体解决什么用户问题）",
+      "what_it_is": "一个自称一年前已上线的、用强化学习（RL）训练的非自回归决策模型，与后来引发关注的 Jev 架构相似，但市场反响平淡",
+      "ai_role": "未公开",
+      "implementation_idea": "非自回归决策模型：不同于 GPT 那样一个字一个字顺序生成（自回归），而是一次性并行输出整个决策结果，用强化学习（RL，即让模型通过试错和奖励信号来学习策略）来训练，目标是做分类或决策任务而非生成文本",
+      "hands_on_exercise": "30 分钟：去 Hugging Face 搜索 'convaiinnovations/laya'，下载模型文件，用 transformers 库加载做文本分类推理，对比同一任务下与 BERT 的延迟和输出一致性；再用 30 分钟写两段不同风格的产品介绍（技术版 vs 用户价值版），体会表达差异",
+      "limitations_or_uncertainties": "原始网站无法访问，无第一手产品信息；作者声称的“一年前上线”无具体日期、无用户量或收入验证；社区讨论多为观点交锋，Oras 的实测反馈仅针对 Jev 而非 Laya 本身；Laya 与 Jev 的架构相似度、是否独立开发均依赖作者单方面陈述",
+      "region": "global",
+      "score": 7.5,
+      "summary": "一位开发者说自己一年前就用强化学习做出非自回归决策模型并上线，评论区借 Jev 案例讨论产品表达和营销的重要性，对做 AI 产品的人有启发。",
+      "title": "开发者自述一年前用强化学习做出非自回归决策模型，社区热议技术产品与营销表达的差距",
+      "url": "https://laya.convaiinnovations.com/",
+      "sources": [
+        {
+          "url": "https://laya.convaiinnovations.com/",
+          "title": "I built non-autoregressive decision models with RL a year ago",
+          "source_type": "hackernews",
+          "published_at": "2026-09-19T10:46:58+00:00"
+        },
+        {
+          "url": "https://huggingface.co/convaiinnovations/laya",
+          "title": "convaiinnovations/ laya · Hugging Face",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://theaterfi.re/post/3673005",
+          "title": "I literally built the Jev architecture one year back and... | TheaterFire",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "laya-non-autoregressive-decision-model",
+          "date": "2026-09-20",
+          "title": "开发者自述一年前用强化学习做出非自回归决策模型，社区热议技术产品与营销表达的差距",
+          "summary": "一位开发者说自己一年前就用强化学习做出非自回归决策模型并上线，评论区借 Jev 案例讨论产品表达和营销的重要性，对做 AI 产品的人有启发。",
+          "score": 7.5,
+          "url": "https://laya.convaiinnovations.com/"
+        }
+      ],
+      "usage_flow": [
+        "未公开（网站 https://laya.convaiinnovations.com/ 无法访问具体内容）"
+      ],
+      "learning_points": [
+        "自回归 vs 非自回归：GPT 类模型像写文章一样逐字写，非自回归像一次性填完整张答题卡，速度更快但通常用于分类/决策而非开放生成",
+        "强化学习（RL）：不是给模型看标准答案，而是让它尝试不同动作，根据结果好坏获得奖励或惩罚，慢慢学会最优策略",
+        "产品表达（Positioning）：同样的技术，用“预测销售转化概率”和用“不会幻觉的 System One 思考模型”描述，用户理解度和传播效果截然不同"
+      ],
+      "verticals": [],
+      "tags": [
+        "强化学习",
+        "产品表达",
+        "用户反馈"
+      ]
+    },
+    {
+      "product_id": "product-c3b9d9e301875a11",
+      "product_name": "text-me",
+      "builder_name": "melfernand",
+      "first_seen": "2026-09-20",
+      "last_seen": "2026-09-20",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "觉得生产力工具越用越多、反而要花精力维护的人；需要把生活信息（邮件、日历、Kindle、Substack）统一管理的用户",
+      "user_problem": "每用一个新生产力工具就多一个要维护的地方，信息分散在邮件、消息、日历、Kindle、Substack 各处，用户得不断在不同应用间切换，还要手动重新整理优先级",
+      "what_it_is": "把邮件、日历、阅读内容汇总到短信/iMessage 入口的开源个人助手，能记住你实际耗时并自动调整日程",
+      "ai_role": "学习用户真实耗时模式（说 45 分钟实际用了 60 分钟就记住），据此自动调整日历安排；每天早上生成个性化简报，汇总要回复的人、夜间变化、今日待办",
+      "implementation_idea": "核心是一个对话式入口，后端通过 Plow 接入邮件和日历数据，用时间追踪做简单的自适应修正——类似'你说多久，我记实际多久，下次按实际来'的规则引擎，加上定时生成摘要推送",
+      "hands_on_exercise": "用你常用的日历工具手动做一周实验：记录 3 项任务'预估时间 vs 实际时间'，每天早花 5 分钟手写一份'今日简报'，体验 text-me 想自动化的痛点",
+      "limitations_or_uncertainties": "HN 帖子仅 5 分、零评论，无真实用户验证；Plow 的具体集成方式未公开；'学习'是简单规则修正还是模型微调未说明；开源代码仓库地址未给出",
+      "region": "global",
+      "score": 7.2,
+      "summary": "开发者做了 text-me，把邮件、日历、阅读内容都汇总到一个像发短信一样的入口，它会记住你实际花的时间并自动调整日程，每天早上给你一份该处理什么的简报，解决的是生产力工具越用越多、反而要花时间维护的问题。",
+      "title": "Text-me：一个会学习你真实节奏的个人 Agent",
+      "url": "https://aiworthusing.com/agent-index/text-me",
+      "sources": [
+        {
+          "url": "https://aiworthusing.com/agent-index/text-me",
+          "title": "Show HN: Text-me: a personal agent that learns your pace",
+          "source_type": "hackernews",
+          "published_at": "2026-09-19T23:58:50+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "text-me-personal-agent-launch",
+          "date": "2026-09-20",
+          "title": "Text-me：一个会学习你真实节奏的个人 Agent",
+          "summary": "开发者做了 text-me，把邮件、日历、阅读内容都汇总到一个像发短信一样的入口，它会记住你实际花的时间并自动调整日程，每天早上给你一份该处理什么的简报，解决的是生产力工具越用越多、反而要花时间维护的问题。",
+          "score": 7.2,
+          "url": "https://aiworthusing.com/agent-index/text-me"
+        }
+      ],
+      "usage_flow": [
+        "把邮件、日历通过 Plow 连接到 text-me，像发短信一样把所有信息发到一个入口",
+        "告诉 Agent 某项任务预计多久，它记录你实际花费的时间",
+        "每周/每天自动分析并推送个性化简报（可发到 Kindle、打印机、邮件或聊天）",
+        "修改日程或发消息前 Agent 会先询问确认"
+      ],
+      "learning_points": [
+        "Agent：能自主执行任务、记住偏好并持续学习的 AI 程序，这里它会先问再改日历",
+        "Function Calling：让 LLM 能调用外部工具（如改日历、发消息）的能力，但这里加了'先询问'的人工确认层",
+        "RAG（检索增强生成）：从用户分散的邮件、日历、阅读内容中检索相关信息，再生成每日简报"
+      ],
+      "verticals": [],
+      "tags": [
+        "个人Agent",
+        "日程管理",
+        "信息聚合"
       ]
     },
     {
