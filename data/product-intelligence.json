@@ -1,13 +1,126 @@
 {
   "version": 1,
-  "updated_at": "2026-09-20T04:54:21.390402+00:00",
+  "updated_at": "2026-09-21T04:55:13.838181+00:00",
   "products": [
+    {
+      "product_id": "product-65c015d292c8a2b4",
+      "product_name": "llm-keys-ui",
+      "builder_name": "Simon Willison",
+      "first_seen": "2026-09-21",
+      "last_seen": "2026-09-21",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "用 Codex Remote 在手机控制远程机器跑代码的人，或任何不想让 API Key 经过聊天窗口的开发者",
+      "user_problem": "通过 Codex 远程控制服务器时，需要给机器配 API Key，但不想把密钥直接粘贴进 ChatGPT 的聊天会话，担心泄露或被记录",
+      "what_it_is": "一个命令行插件，能在你的机器上临时启动本地网页，让你安全写入 API Key，不用把密钥粘贴到聊天对话里",
+      "ai_role": "Codex 作为 coding agent，执行启动命令、拿到 URL 告诉用户，后续在需要时调用 llm keys get 读取密钥",
+      "implementation_idea": "本质是个临时本地网页服务器，跑在你自己的机器上，只接受同一网络内的连接；密钥存到 llm 命令行工具已有的 key 存储里，网页只负责'写入'不'读出'原值，减少暴露面",
+      "hands_on_exercise": "30 分钟练习：本地装好 uv 和 llm 工具，pip install llm-keys-ui 或用 uvx 运行，启动 keys-ui，在浏览器里存一个假密钥，然后用 llm keys get 验证能读出来；再试试从手机同一 WiFi 访问那个 URL",
+      "limitations_or_uncertainties": "未公开：是否支持密钥加密存储、是否有访问密码保护网页、多用户并发安全性、Tailscale 以外网络暴露风险；插件刚发 0.1 版，长期维护状态未知",
+      "region": "global",
+      "score": 8.2,
+      "summary": "Simon Willison 发布 llm-keys-ui 0.1 插件，让用户通过本地网页界面给远程 Codex 机器安全写入 API key，避免把密钥粘贴进聊天会话。",
+      "title": "llm-keys-ui 0.1：给远程编码 Agent 安全配 API Key 的网页小工具",
+      "url": "https://simonwillison.net/2026/Sep/20/llm-keys-ui/",
+      "sources": [
+        {
+          "url": "https://simonwillison.net/2026/Sep/20/llm-keys-ui/",
+          "title": "llm-keys-ui 0.1",
+          "source_type": "rss",
+          "published_at": "2026-09-20T19:22:19+00:00"
+        },
+        {
+          "url": "https://github.com/simonw/llm-keys-ui/blob/main/README.md",
+          "title": "llm-keys-ui/README.md at main · simonw/llm-keys-ui · GitHub",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "llm-keys-ui-0-1-release",
+          "date": "2026-09-21",
+          "title": "llm-keys-ui 0.1：给远程编码 Agent 安全配 API Key 的网页小工具",
+          "summary": "Simon Willison 发布 llm-keys-ui 0.1 插件，让用户通过本地网页界面给远程 Codex 机器安全写入 API key，避免把密钥粘贴进聊天会话。",
+          "score": 8.2,
+          "url": "https://simonwillison.net/2026/Sep/20/llm-keys-ui/"
+        }
+      ],
+      "usage_flow": [
+        "在远程机器执行 uvx --with llm-keys-ui llm keys-ui --all，启动本地网页服务",
+        "手机/浏览器打开它给出的 URL（支持局域网或 Tailscale IP）",
+        "在网页表单里填 Key 名称和值，点击保存（已存的 Key 值不会显示出来）",
+        "之后 Codex 可以用 llm keys get <名称> 命令读取密钥，拼进 shell 命令里用"
+      ],
+      "learning_points": [
+        "API Key：调用大模型服务的密码，泄露会被盗用额度",
+        "Coding Agent（编码智能体）：AI 能直接在你电脑上执行命令、改代码，所以密钥管理要特别小心",
+        "Tailscale：一种让你在不同设备间像连同一局域网一样通信的工具，这里用来让手机安全访问服务器上的临时网页"
+      ],
+      "verticals": [],
+      "tags": [
+        "LLM 工具",
+        "API Key",
+        "Codex",
+        "开源"
+      ]
+    },
+    {
+      "product_id": "product-3346185ac4a7d1b0",
+      "product_name": "Qwen Image 2.1",
+      "builder_name": "jmillikin",
+      "first_seen": "2026-09-21",
+      "last_seen": "2026-09-21",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "阿里 Qwen 发布图像模型 Qwen Image 2.1，体积缩到 7B 并支持透明背景，文字渲染比现有开源模型强很多；做设计、UI 生成类产品的人可以直接拿它替换旧模型。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "china",
+      "score": 8.2,
+      "summary": "阿里 Qwen 发布图像模型 Qwen Image 2.1，体积缩到 7B 并支持透明背景，文字渲染比现有开源模型强很多；做设计、UI 生成类产品的人可以直接拿它替换旧模型。",
+      "title": "Qwen Image 2.1",
+      "url": "https://qwen.ai/blog?id=qwen-image-2.1",
+      "sources": [
+        {
+          "url": "https://qwen.ai/blog?id=qwen-image-2.1",
+          "title": "Qwen Image 2.1",
+          "source_type": "hackernews",
+          "published_at": "2026-09-20T13:09:25+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "qwen-image-2-1-release",
+          "date": "2026-09-21",
+          "title": "Qwen Image 2.1",
+          "summary": "阿里 Qwen 发布图像模型 Qwen Image 2.1，体积缩到 7B 并支持透明背景，文字渲染比现有开源模型强很多；做设计、UI 生成类产品的人可以直接拿它替换旧模型。",
+          "score": 8.2,
+          "url": "https://qwen.ai/blog?id=qwen-image-2.1"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Qwen",
+        "图像生成",
+        "开源模型",
+        "文本渲染"
+      ]
+    },
     {
       "product_id": "product-b2d2fb140a8fac81",
       "product_name": "Grok Bot",
       "builder_name": "Lenny Rachitsky",
       "first_seen": "2026-09-15",
-      "last_seen": "2026-09-20",
+      "last_seen": "2026-09-21",
       "occurrence_count": 1,
       "intelligence_type": "builder_insight",
       "evidence_status": "early_signal",
@@ -54,6 +167,241 @@
         "Agent",
         "个人产品",
         "设计流程"
+      ]
+    },
+    {
+      "product_id": "product-3676b6986a5ed178",
+      "product_name": "AX",
+      "builder_name": "blazarquasar",
+      "first_seen": "2026-09-21",
+      "last_seen": "2026-09-21",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "需要同时运行多个 AI Agent 的开发者，尤其是想隔离 Agent 运行环境、管理 Agent 之间协作的人",
+      "user_problem": "Agent 多了之后混乱：跑在哪台机器上、网络权限怎么控制、Agent 是卡住了还是跑完了、12 个 Agent 的状态靠人判断根本不可靠",
+      "what_it_is": "Google 开源的一个工具，帮你把多个 AI Agent（能自主执行任务的 AI 程序）像搭积木一样串成流水线，自动分配资源、隔离网络、管理运行状态。",
+      "ai_role": "Agent 本身是 AI（通常是大模型驱动的程序），AX 不替代 Agent 的决策，而是负责'搭舞台'——给 Agent 安全的运行环境、串起多个 Agent 的执行流程",
+      "implementation_idea": "把每个 Agent 装进 Docker 那样的容器沙箱，像 Kubernetes 调度 Pod 一样分配计算资源，再通过网关控制每个 Agent 能访问哪些外部网站，最后用状态监听机制告诉你 Agent 现在是什么情况",
+      "hands_on_exercise": "30 分钟：访问 https://github.com/google/ax，把项目 clone 到本地，找到 README 里的 Quickstart 示例，尝试运行一个单 Agent 任务，观察它生成的沙箱容器和网络限制规则（用 docker ps 和日志查看）",
+      "limitations_or_uncertainties": "官方文档细节未公开，目前只有 GitHub 仓库和 HN 讨论，未确认是否支持本地离线模型、具体支持哪些 Agent 框架（如 ADK、LangChain 等）、生产环境稳定性如何",
+      "region": "global",
+      "score": 7.5,
+      "summary": "Google 开源了 Agent 编排器 AX，让开发者把多个 agent 串起来跑任务；HN 上讨论集中在沙箱、本地模型 harness 和状态判断，值得看它怎么降低 agent 编排门槛。",
+      "title": "Google 开源 Agent 编排器 AX：把多个 AI Agent 串起来跑任务",
+      "url": "https://agentexecutor.io/",
+      "sources": [
+        {
+          "url": "https://agentexecutor.io/",
+          "title": "AX – Google’s Open Agentic Orchestrator",
+          "source_type": "hackernews",
+          "published_at": "2026-09-20T22:32:43+00:00"
+        },
+        {
+          "url": "https://github.com/google/ax",
+          "title": "GitHub - google / ax : Google 's open agentic orchestrator · GitHub",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=49773389",
+          "title": "Google / ax : Google 's open agentic orchestrator | Hacker News",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "google-ax-agentic-orchestrator-launch",
+          "date": "2026-09-21",
+          "title": "Google 开源 Agent 编排器 AX：把多个 AI Agent 串起来跑任务",
+          "summary": "Google 开源了 Agent 编排器 AX，让开发者把多个 agent 串起来跑任务；HN 上讨论集中在沙箱、本地模型 harness 和状态判断，值得看它怎么降低 agent 编排门槛。",
+          "score": 7.5,
+          "url": "https://agentexecutor.io/"
+        }
+      ],
+      "usage_flow": [
+        "写一个任务声明（Task），指定 Agent 要用的容器镜像、运行命令、需要多少 CPU/内存",
+        "配置工作空间和网络白名单（比如只允许访问你的 LLM 服务商和 Git 仓库）",
+        "AX 自动创建沙箱、挂载工作空间、限制网络，把 Agent 跑起来",
+        "通过 AX 观察多个 Agent 的状态变化，判断是等待输入、卡住还是已完成"
+      ],
+      "learning_points": [
+        "Agent：能自主规划步骤、调用工具完成任务的 AI 程序，不只是聊天回复",
+        "编排（Orchestration）：像乐队指挥一样，让多个 Agent 按顺序或并行工作，而不是各自乱弹",
+        "沙箱（Sandbox）：给程序一个受限的虚拟环境，即使 Agent 搞破坏也伤不到你的真电脑"
+      ],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "开源工具",
+        "编排"
+      ]
+    },
+    {
+      "product_id": "product-97a104e5a93a2b88",
+      "product_name": "Claude Code",
+      "builder_name": "Simon Willison",
+      "first_seen": "2026-08-09",
+      "last_seen": "2026-09-21",
+      "occurrence_count": 4,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "reported",
+      "target_user": "使用 Claude Code 终端工具的开发者，尤其是需要团队协作统一 AI 编码规范的人",
+      "user_problem": "以前只能用 CLAUDE.md 给 AI 写项目指令，但团队想换用更通用的 AGENTS.md 标准（跨工具共享），或者想自定义指令逻辑却受限于硬编码",
+      "what_it_is": "一位新入职大公司的工程师描述团队所有文档和代码都由 Claude Code 生成，没人阅读，大家每天工作12-13小时只按回车，暴露 AI 编码工具在组织内的真实滥用。",
+      "ai_role": "读取 AGENTS.md 中的规则，在编码、改代码、跑命令时按这些规则行动",
+      "implementation_idea": "核心思路是给 AI 配一个'安全护栏层'——不是让人类逐条审批，而是让 AI 自己用另一套规则判断'这个命令会不会删数据、会不会把代码发给外部'。Anthropic 称他们用大量攻击场景训练了这套判断能力，并引入第三方独立测试验证。",
+      "hands_on_exercise": "30 分钟练习：①安装/更新 Claude Code 到 2.1.277+（运行 claude update）；②在一个测试项目里删掉 CLAUDE.md（如果有），新建 AGENTS.md 写入「所有函数必须加类型注解，提交前跑 pytest」；③让 Claude Code 写一个新函数，观察它是否遵守规则；④去 GitHub 看 anthropic/claude-code/tree/main/mods/agents-md 的源码，对比你写的 AGENTS.md 是怎么被解析的",
+      "limitations_or_uncertainties": "Bedrock、Vertex、Foundry 平台尚未支持此功能；mods 系统的完整自定义能力还未正式发布，目前只有这个内置 mod 可用；AGENTS.md 的具体语法规范未在原文中详细说明",
+      "region": "global",
+      "score": 7.2,
+      "summary": "一位新入职大公司的工程师描述团队所有文档和代码都由 Claude Code 生成，没人阅读，大家每天工作12-13小时只按回车，暴露 AI 编码工具在组织内的真实滥用。",
+      "title": "Quoting voxium",
+      "url": "https://simonwillison.net/2026/Sep/20/voxium/",
+      "sources": [
+        {
+          "url": "https://simonwillison.net/2026/Aug/8/auto-mode/#atom-everything",
+          "title": "Auto mode is now the default in Claude Code for Pro, Max, and Team plans",
+          "source_type": "rss",
+          "published_at": "2026-08-08T22:36:03+00:00"
+        },
+        {
+          "url": "https://simonwillison.net/2026/Aug/27/breaking-claude-code-opus-5-auto-mode/",
+          "title": "Breaking Claude Code Opus 5 Auto Mode",
+          "source_type": "rss",
+          "published_at": "2026-08-27T22:50:25+00:00"
+        },
+        {
+          "url": "https://simonwillison.net/2026/Sep/18/thariq-shihipar/",
+          "title": "Quoting Thariq Shihipar",
+          "source_type": "rss",
+          "published_at": "2026-09-18T19:09:27+00:00"
+        },
+        {
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.277",
+          "title": "anthropics/claude-code released v2.1.277",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://simonwillison.net/2026/Sep/20/voxium/",
+          "title": "Quoting voxium",
+          "source_type": "rss",
+          "published_at": "2026-09-20T21:06:43+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "claude-code-auto-mode-default",
+          "date": "2026-08-09",
+          "title": "Claude Code 将自动模式设为默认：Anthropic 称已大幅缓解提示注入风险",
+          "summary": "Anthropic 宣布 Claude Code 的 auto mode 将成为 Pro、Max 和 Team 计划的默认模式，并透露内部几乎全员使用，值得关注其安全性和效率提升。",
+          "score": 8.5,
+          "url": "https://simonwillison.net/2026/Aug/8/auto-mode/#atom-everything"
+        },
+        {
+          "update_id": "claude-code-opus5-auto-mode-prompt-injection",
+          "date": "2026-08-28",
+          "title": "Breaking Claude Code Opus 5 Auto Mode",
+          "summary": "研究者发现针对Claude Code Auto Mode的提示注入攻击，成功率80%，可绕过安全机制执行恶意代码。",
+          "score": 9.0,
+          "url": "https://simonwillison.net/2026/Aug/27/breaking-claude-code-opus-5-auto-mode/"
+        },
+        {
+          "update_id": "claude-code-agents-md-support-2-1-277",
+          "date": "2026-09-19",
+          "title": "Claude Code 新增 AGENTS.md 支持：用 mods 机制自定义项目指令",
+          "summary": "Anthropic 的 Thariq Shihipar 宣布 Claude Code 2.1.277 起支持 AGENTS.md，并基于即将推出的 mods 机制实现，源码已公开。",
+          "score": 7.5,
+          "url": "https://simonwillison.net/2026/Sep/18/thariq-shihipar/"
+        },
+        {
+          "update_id": "voxium-claude-code-enterprise-misuse",
+          "date": "2026-09-21",
+          "title": "Quoting voxium",
+          "summary": "一位新入职大公司的工程师描述团队所有文档和代码都由 Claude Code 生成，没人阅读，大家每天工作12-13小时只按回车，暴露 AI 编码工具在组织内的真实滥用。",
+          "score": 7.2,
+          "url": "https://simonwillison.net/2026/Sep/20/voxium/"
+        }
+      ],
+      "usage_flow": [
+        "开发者用自然语言描述需求，Claude Code 规划并执行多步骤任务",
+        "自动模式下，AI 自行判断命令风险等级，低风险直接执行，高风险拦截或请示",
+        "AI 读取外部代码、文档、依赖包时，自动模式尝试识别并阻断隐藏的恶意指令",
+        "开发者事后审计 AI 执行记录，必要时回滚操作",
+        "在 Claude Code 2.1.277 及以上版本中，进入项目文件夹",
+        "若文件夹里没有 CLAUDE.md，新建一个 AGENTS.md 写入项目规则（如代码风格、测试要求）",
+        "Claude Code 启动时会自动读取 AGENTS.md 作为项目指令",
+        "进阶：以后可通过 mods 机制自己写自定义版本的项目指令逻辑"
+      ],
+      "learning_points": [
+        "Agent（智能体）：LLM 不只是聊天，还能自己动手操作电脑、运行程序、完成任务",
+        "Prompt injection（提示注入）：攻击者把恶意指令藏在 AI 要读取的网页、邮件、代码里，骗 AI 执行",
+        "Confirmation fatigue（确认疲劳）：让人类点太多'同意'，人会麻木点错，反而降低安全性",
+        "AGENTS.md：一种社区推动的通用配置文件，想让不同 AI 编码工具（不只是 Claude）都能读懂同一套项目规则",
+        "Mod/模块系统：把软件的一部分功能拆成可替换的「插件」，这里 Claude Code 把「读项目指令」这件事做成了可自定义的模块",
+        "Function Calling（功能调用）：AI 模型不只会聊天，还能按规则调用工具（如读文件、跑命令），项目指令就是给这些工具调用定规矩"
+      ],
+      "verticals": [],
+      "tags": [
+        "Claude Code",
+        "auto mode",
+        "Anthropic",
+        "安全",
+        "提示注入",
+        "编码Agent",
+        "AGENTS.md",
+        "AI 编码",
+        "组织落地"
+      ]
+    },
+    {
+      "product_id": "product-f502e0d77e1ed686",
+      "product_name": "Claude Code",
+      "builder_name": "bcherny",
+      "first_seen": "2026-09-21",
+      "last_seen": "2026-09-21",
+      "occurrence_count": 1,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Claude Code 作者 Boris Cherny 写文章讲自己经常判断错、如何快速修正；评论区借机吐槽 Claude Code 长期未修的 bug，对做 AI 编程产品的人有参考价值。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.2,
+      "summary": "Claude Code 作者 Boris Cherny 写文章讲自己经常判断错、如何快速修正；评论区借机吐槽 Claude Code 长期未修的 bug，对做 AI 编程产品的人有参考价值。",
+      "title": "I am often wrong",
+      "url": "https://borischerny.com/management,/product/2026/09/19/I-am-often-wrong.html",
+      "sources": [
+        {
+          "url": "https://borischerny.com/management,/product/2026/09/19/I-am-often-wrong.html",
+          "title": "I am often wrong",
+          "source_type": "hackernews",
+          "published_at": "2026-09-20T16:41:46+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "boris-cherny-i-am-often-wrong",
+          "date": "2026-09-21",
+          "title": "I am often wrong",
+          "summary": "Claude Code 作者 Boris Cherny 写文章讲自己经常判断错、如何快速修正；评论区借机吐槽 Claude Code 长期未修的 bug，对做 AI 编程产品的人有参考价值。",
+          "score": 7.2,
+          "url": "https://borischerny.com/management,/product/2026/09/19/I-am-often-wrong.html"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Claude Code",
+        "构建者",
+        "产品管理"
       ]
     },
     {
@@ -177,108 +525,6 @@
         "个人Agent",
         "日程管理",
         "信息聚合"
-      ]
-    },
-    {
-      "product_id": "product-97a104e5a93a2b88",
-      "product_name": "Claude Code",
-      "builder_name": "Simon Willison",
-      "first_seen": "2026-08-09",
-      "last_seen": "2026-09-19",
-      "occurrence_count": 3,
-      "intelligence_type": "product_case",
-      "evidence_status": "first_party",
-      "target_user": "使用 Claude Code 终端工具的开发者，尤其是需要团队协作统一 AI 编码规范的人",
-      "user_problem": "以前只能用 CLAUDE.md 给 AI 写项目指令，但团队想换用更通用的 AGENTS.md 标准（跨工具共享），或者想自定义指令逻辑却受限于硬编码",
-      "what_it_is": "Anthropic 官方为终端编码工具 Claude Code 新增的配置文件支持，让 AI 编码助手能读取项目级的 AGENTS.md 文件来理解项目规则。",
-      "ai_role": "读取 AGENTS.md 中的规则，在编码、改代码、跑命令时按这些规则行动",
-      "implementation_idea": "核心思路是给 AI 配一个'安全护栏层'——不是让人类逐条审批，而是让 AI 自己用另一套规则判断'这个命令会不会删数据、会不会把代码发给外部'。Anthropic 称他们用大量攻击场景训练了这套判断能力，并引入第三方独立测试验证。",
-      "hands_on_exercise": "30 分钟练习：①安装/更新 Claude Code 到 2.1.277+（运行 claude update）；②在一个测试项目里删掉 CLAUDE.md（如果有），新建 AGENTS.md 写入「所有函数必须加类型注解，提交前跑 pytest」；③让 Claude Code 写一个新函数，观察它是否遵守规则；④去 GitHub 看 anthropic/claude-code/tree/main/mods/agents-md 的源码，对比你写的 AGENTS.md 是怎么被解析的",
-      "limitations_or_uncertainties": "Bedrock、Vertex、Foundry 平台尚未支持此功能；mods 系统的完整自定义能力还未正式发布，目前只有这个内置 mod 可用；AGENTS.md 的具体语法规范未在原文中详细说明",
-      "region": "global",
-      "score": 7.5,
-      "summary": "Anthropic 的 Thariq Shihipar 宣布 Claude Code 2.1.277 起支持 AGENTS.md，并基于即将推出的 mods 机制实现，源码已公开。",
-      "title": "Claude Code 新增 AGENTS.md 支持：用 mods 机制自定义项目指令",
-      "url": "https://simonwillison.net/2026/Sep/18/thariq-shihipar/",
-      "sources": [
-        {
-          "url": "https://simonwillison.net/2026/Aug/8/auto-mode/#atom-everything",
-          "title": "Auto mode is now the default in Claude Code for Pro, Max, and Team plans",
-          "source_type": "rss",
-          "published_at": "2026-08-08T22:36:03+00:00"
-        },
-        {
-          "url": "https://simonwillison.net/2026/Aug/27/breaking-claude-code-opus-5-auto-mode/",
-          "title": "Breaking Claude Code Opus 5 Auto Mode",
-          "source_type": "rss",
-          "published_at": "2026-08-27T22:50:25+00:00"
-        },
-        {
-          "url": "https://simonwillison.net/2026/Sep/18/thariq-shihipar/",
-          "title": "Quoting Thariq Shihipar",
-          "source_type": "rss",
-          "published_at": "2026-09-18T19:09:27+00:00"
-        },
-        {
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.277",
-          "title": "anthropics/claude-code released v2.1.277",
-          "source_type": "supplemental",
-          "published_at": ""
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "claude-code-auto-mode-default",
-          "date": "2026-08-09",
-          "title": "Claude Code 将自动模式设为默认：Anthropic 称已大幅缓解提示注入风险",
-          "summary": "Anthropic 宣布 Claude Code 的 auto mode 将成为 Pro、Max 和 Team 计划的默认模式，并透露内部几乎全员使用，值得关注其安全性和效率提升。",
-          "score": 8.5,
-          "url": "https://simonwillison.net/2026/Aug/8/auto-mode/#atom-everything"
-        },
-        {
-          "update_id": "claude-code-opus5-auto-mode-prompt-injection",
-          "date": "2026-08-28",
-          "title": "Breaking Claude Code Opus 5 Auto Mode",
-          "summary": "研究者发现针对Claude Code Auto Mode的提示注入攻击，成功率80%，可绕过安全机制执行恶意代码。",
-          "score": 9.0,
-          "url": "https://simonwillison.net/2026/Aug/27/breaking-claude-code-opus-5-auto-mode/"
-        },
-        {
-          "update_id": "claude-code-agents-md-support-2-1-277",
-          "date": "2026-09-19",
-          "title": "Claude Code 新增 AGENTS.md 支持：用 mods 机制自定义项目指令",
-          "summary": "Anthropic 的 Thariq Shihipar 宣布 Claude Code 2.1.277 起支持 AGENTS.md，并基于即将推出的 mods 机制实现，源码已公开。",
-          "score": 7.5,
-          "url": "https://simonwillison.net/2026/Sep/18/thariq-shihipar/"
-        }
-      ],
-      "usage_flow": [
-        "开发者用自然语言描述需求，Claude Code 规划并执行多步骤任务",
-        "自动模式下，AI 自行判断命令风险等级，低风险直接执行，高风险拦截或请示",
-        "AI 读取外部代码、文档、依赖包时，自动模式尝试识别并阻断隐藏的恶意指令",
-        "开发者事后审计 AI 执行记录，必要时回滚操作",
-        "在 Claude Code 2.1.277 及以上版本中，进入项目文件夹",
-        "若文件夹里没有 CLAUDE.md，新建一个 AGENTS.md 写入项目规则（如代码风格、测试要求）",
-        "Claude Code 启动时会自动读取 AGENTS.md 作为项目指令",
-        "进阶：以后可通过 mods 机制自己写自定义版本的项目指令逻辑"
-      ],
-      "learning_points": [
-        "Agent（智能体）：LLM 不只是聊天，还能自己动手操作电脑、运行程序、完成任务",
-        "Prompt injection（提示注入）：攻击者把恶意指令藏在 AI 要读取的网页、邮件、代码里，骗 AI 执行",
-        "Confirmation fatigue（确认疲劳）：让人类点太多'同意'，人会麻木点错，反而降低安全性",
-        "AGENTS.md：一种社区推动的通用配置文件，想让不同 AI 编码工具（不只是 Claude）都能读懂同一套项目规则",
-        "Mod/模块系统：把软件的一部分功能拆成可替换的「插件」，这里 Claude Code 把「读项目指令」这件事做成了可自定义的模块",
-        "Function Calling（功能调用）：AI 模型不只会聊天，还能按规则调用工具（如读文件、跑命令），项目指令就是给这些工具调用定规矩"
-      ],
-      "verticals": [],
-      "tags": [
-        "Claude Code",
-        "auto mode",
-        "Anthropic",
-        "安全",
-        "提示注入",
-        "编码Agent",
-        "AGENTS.md"
       ]
     },
     {
