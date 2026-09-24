@@ -4472,6 +4472,46 @@
       },
       "stage": "candidate_analysis"
     },
+    "117fcb995b7f90d374f16e1ef0f5188470969f8c13489bbb9b79a08ab9c7cfe8": {
+      "created_at": "2026-09-24T04:48:35.419550+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "warp-software-factory-2000-prs-month",
+        "evidence_status": "reported",
+        "follow_up": "关注 Warp 软件工厂的公开工作流细节、QA 环节如何自动化，以及 2000 PR 的合并率与返工率。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "newsletter:feed:a7e79917f33d8515ed67",
+        "intelligence_type": "builder_insight",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Warp",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Warp CEO Zach Lloyd 在 Lenny 播客中公开讲软件工厂如何把 Slack 想法一路做到合并 PR，并给出每月 2000 个 PR 的具体指标和 Slack→Linear→GitHub→QA 的公开工作流。属于构建者一手实践，对理解 AI 编码产品如何嵌入真实研发流程有直接参考价值。",
+        "region": "global",
+        "score": 8.2,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Warp 的 CEO 讲了他们怎么用 AI 软件工厂每月产出 2000 个 PR，值得看是因为它把从 Slack 提需求到合并代码的完整流程讲清楚了。",
+        "tags": [
+          "AI 编码",
+          "软件工厂",
+          "研发流程",
+          "Warp"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "11a6807d0d0a356c0cb99af29efc97c6752210286c25d5fe9ee1bee90ada073f": {
       "created_at": "2026-09-03T04:22:41.979033+00:00",
       "model": "deepseek-v4-flash",
@@ -7489,6 +7529,45 @@
         "summary": null,
         "summary_zh": "无有效内容。",
         "tags": [],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "1c7a3b0424ad3758b33f681673441cdd9df58572990ffa43058fdc76d2145f80": {
+      "created_at": "2026-09-24T04:48:54.842276+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-codex-rust-v0.158.0-alpha.6",
+        "evidence_status": "first_party",
+        "follow_up": "等待正式版本或变更日志。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "github:release:395145963",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "OpenAI Codex",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI Codex 的 alpha 版本发布，无任何变更说明，属于常规版本迭代，无实质信息。",
+        "region": "global",
+        "score": 3.0,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "OpenAI Codex 发布 rust-v0.158.0-alpha.6，无变更说明。",
+        "tags": [
+          "OpenAI",
+          "Codex",
+          "版本发布"
+        ],
         "target_user": "",
         "verticals": []
       },
@@ -11819,6 +11898,46 @@
       },
       "stage": "candidate_analysis"
     },
+    "2d5e2dacd3d4dd4e329ecad987bae5705dae18c20d113c7ea16b2446e1deffcb": {
+      "created_at": "2026-09-24T04:48:46.496634+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "gemini-3-8-flash-tts-playground",
+        "evidence_status": "first_party",
+        "follow_up": "关注 Gemini TTS 的音色克隆授权限制、API 定价与更多基于它的产品案例。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:simonwillison.net_atom_everything_:e47986333e4f6766",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Gemini 3.8 TTS Playground",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Simon Willison 一手发布可用的 Gemini 3.8 TTS Playground，并说明 Google 同日发布两个 TTS 模型、2000+ 音色与 30 秒样本克隆声音，含可验证 Demo 与构建过程，对初学者理解新模型能力如何变成产品很有价值。",
+        "region": "global",
+        "score": 8.2,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "Simon Willison 用 Gemini 3.8 新语音模型做了个可试玩的 TTS Playground，解决多说话人语音合成怎么快速上手的问题，值得看的是新模型能力如何被个人开发者当天变成可用小工具。",
+        "tags": [
+          "TTS",
+          "Gemini",
+          "Demo",
+          "个人产品"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "2d5e7a4a866c097dd072fc15315addc36e8a6fa88cd1f3041c0bb257b693a0cf": {
       "created_at": "2026-08-02T03:52:32.503708+00:00",
       "model": "deepseek-v4-flash",
@@ -13616,6 +13735,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "346fdb58e2d4ba99c0413cde25e357956ee7dc931eb1dafb011eb15341eada90": {
+      "created_at": "2026-09-24T04:48:46.496236+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "meta-camera-free-ai-glasses",
+        "evidence_status": "reported",
+        "follow_up": "关注无摄像头版本如何承载 AI 交互、定价与用户接受度。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:95a6574963225a3b",
+        "intelligence_type": "product_case",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Meta camera-free AI glasses",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "无摄像头 AI 眼镜的发布信息，仅提及更轻和 12 小时续航，缺少 AI 功能细节与用户场景，对产品经理的可迁移增量有限。",
+        "region": "global",
+        "score": 5.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Meta 发布无摄像头的 AI 眼镜，主打更轻和 12 小时续航，值得看的是隐私争议下 AI 眼镜的另一种产品取舍。",
+        "tags": [
+          "AI眼镜",
+          "Meta",
+          "可穿戴"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "347209b372cf26b4ac05a3a9b0e8a77295133b39c7cd0f358eaed13556ae5588": {
       "created_at": "2026-08-03T03:54:11.107459+00:00",
       "model": "deepseek-v4-flash",
@@ -14109,6 +14267,46 @@
           "AI",
           "预测",
           "伪科学"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "366f05bcf3cb0cbebad5e8359c9a941420fc736fc0d86c12e1700c868d8298a1": {
+      "created_at": "2026-09-24T04:48:35.418784+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "anthropic-claude-novel-enzyme-crispr-like",
+        "evidence_status": "first_party",
+        "follow_up": "关注是否有独立实验室复现该基因组排列，以及 Anthropic 是否公开 Agent 转录与验证流程。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:49820134",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Claude",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Anthropic 官方发布 Claude 在原始 DNA 序列中发现此前未描述、类似 CRISPR 的重复序列结构，HN 565 分、587 条评论，讨论集中在发现价值与治疗递送瓶颈。属于模型公司一手动态且解锁新能力叙事，但评论指出其本质是围绕已知逆转录酶的基因组排列，需谨慎看待。对做 AI 产品的人有启发：Agent 转录过程本身成为可复述的发现记录。",
+        "region": "global",
+        "score": 8.6,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Anthropic 称 Claude 在 DNA 序列里发现了一种此前没被描述过、类似 CRISPR 的重复结构，值得看是因为它展示了 AI Agent 在真实科研流程中如何被用来找线索。",
+        "tags": [
+          "Agent",
+          "AI for Science",
+          "Anthropic",
+          "Claude"
         ],
         "target_user": "",
         "verticals": []
@@ -15478,6 +15676,40 @@
         "verticals": []
       },
       "stage": "candidate_analysis"
+    },
+    "3bb212e5f96b282a2d25f98809956ab6abacab22f0042e78326b72c7e63aa54e": {
+      "created_at": "2026-09-24T04:49:15.634019+00:00",
+      "model": "kimi-k2.6",
+      "prompt_version": "deep-v3-beginner",
+      "result": {
+        "ai_role": "AI 负责理解用户意图、整合多源信息、主动发现用户没明确要求但有价值的事，并在每个敏感操作前暂停请求人类确认",
+        "evidence_status": "reported",
+        "hands_on_exercise": "用你常用的 AI（ChatGPT/Claude/通义等）模拟 Muse 的'确认流'：给它一段虚构的家庭邮件和日历，让它先总结'我从中发现了这些信息，要用它们吗？'，你回复'可以'后再让它生成一份晨报。对比直接让它生成，体验'权限暂停'带来的信任感差异。",
+        "implementation_idea": "未公开。从表现推测，核心是'权限感知的任务规划'——AI 不是拿到权限就一路跑到底，而是把任务拆成多个节点，每个涉及个人隐私或金钱支出的节点都插入'人类确认'检查点，同时用活动流把所有中间步骤可视化。",
+        "learning_points": [
+          "AI Agent：不只是回答问题，而是能自主执行多步骤任务的 AI 系统，比如自己查日历、读邮件、生成报告",
+          "Function Calling：AI 判断'现在该调用哪个工具'的能力，比如识别到需要查日程就调用日历 API",
+          "RAG（检索增强生成）：AI 先从用户的私有数据（邮件、文档）里检索相关信息，再基于这些信息生成回答，避免胡编"
+        ],
+        "limitations_or_uncertainties": "播客评测为主观体验，无第三方独立验证；未公开 Muse 底层模型、是否本地运行、隐私数据具体存储方式；'浏览器代下单'的实际成功率、支持站点范围未公开；中文支持情况未公开",
+        "product_name": "Muse",
+        "sources": [
+          "https://www.lennysnewsletter.com/p/how-i-ai-metas-muse-review-how-warp",
+          "https://ai.meta.com/muse/",
+          "https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/"
+        ],
+        "target_users": "非技术背景的普通消费者，尤其是需要管理家庭日程、个人目标、日常信息整合的日常用户",
+        "title_zh": "Meta Muse 评测：一个把消费级体验做对的个人 AI Agent",
+        "usage_flow": [
+          "用户通过自然语言对话 onboarding，授权 Muse 读取邮件、日历等",
+          "Muse 主动分析信息（如发现日程冲突、邮件中的关键事项），先总结它学到了什么，再询问是否可以使用这些信息",
+          "用户确认后，Muse 执行任务（如生成家庭晨报 PDF、追踪目标进度、浏览器代下单等）",
+          "用户在活动流中查看 Muse 具体调用了哪些工具、执行了哪些步骤"
+        ],
+        "user_problem": "现有 AI 工具要么太技术化（报错信息看不懂、终端界面吓人），要么太粗暴（默认获取所有权限、不打招呼就行动），让普通用户不敢用或不会用",
+        "what_it_is": "Meta 推出的个人 AI Agent（智能助手），帮普通人处理日程、邮件、目标追踪等日常事务，特点是会在敏感操作前主动征求用户同意。"
+      },
+      "stage": "deep_analysis"
     },
     "3bf911218750912e10381da859aed28e54b15a5a0c18d7573f2dd4d57bdbfe67": {
       "created_at": "2026-09-22T04:54:22.684345+00:00",
@@ -17766,6 +17998,44 @@
       },
       "stage": "deep_analysis"
     },
+    "43892fc274ce4e0f65882a421f8e2a7a23796350c8627d57be001c82ab97c8b6": {
+      "created_at": "2026-09-24T04:48:35.418827+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "artificial-analysis-claude-opus-5-5",
+        "evidence_status": "reported",
+        "follow_up": "等页面补全具体评测数据后再判断是否值得收录。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "public_web:sitemap:4950ff35950bab7bc9d9",
+        "intelligence_type": "model_capability",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Claude Opus 5.5",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Artificial Analysis 关于 Claude Opus 5.5 的页面，正文仅有“官方 AI 产品或研究更新”一句占位描述，无具体能力、指标或产品体验证据，无法判断真实增量。属于评测机构二手信息，信息量不足，暂不收录。",
+        "region": "global",
+        "score": 6.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Artificial Analysis 挂出 Claude Opus 5.5 的页面，但正文没有给出任何具体能力或数据，暂时看不出值得拆解的内容。",
+        "tags": [
+          "Claude",
+          "模型评测"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "43aa5c25bbe3267bebde8d5bda200a4a259c66b49c6f76da5c20a76edd6afce3": {
       "created_at": "2026-08-05T03:32:07.046367+00:00",
       "model": "deepseek-v4-flash",
@@ -18744,6 +19014,45 @@
         "what_it_is": "一个让你用代码远程控制浏览器、并在本地电脑实时观看操作画面的工具，主打 AI 任务场景。"
       },
       "stage": "deep_analysis"
+    },
+    "46fca6a5cf511a8cf237a896ea3b005452c0bb42ef49469f0713689432814cd3": {
+      "created_at": "2026-09-24T04:48:46.496292+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "enveda-311m-series",
+        "evidence_status": "reported",
+        "follow_up": "关注其临床试验数据、管线推进节奏与 AI 在药物发现中的具体环节。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:2268f71bb347f5f3",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Enveda",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "AI 生物科技公司 Enveda 融资 3.11 亿美元、估值 20 亿，涉及皮肤与 GLP-1 停药后体重维持的临床管线，属医药垂直 AI 相关，但核心是融资事件，产品与用户证据薄弱。",
+        "region": "global",
+        "score": 6.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "AI 生物科技公司 Enveda 融资 3.11 亿美元，推进源自自然的 AI 药物进入临床试验，值得看的是 AI 制药在具体适应症上的落地进展。",
+        "tags": [
+          "AI制药",
+          "融资",
+          "医疗健康"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
     },
     "4714bbdc084cafacc53b84eab4b035d559a43be79cd5b218ea04a278cb932c59": {
       "created_at": "2026-09-04T04:31:13.385204+00:00",
@@ -23306,6 +23615,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "5925c276d27e67559b721476e122602ab5833a458be00f5f66c77a9a38c58e00": {
+      "created_at": "2026-09-24T04:48:46.496428+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "meta-connect-2026-roundup",
+        "evidence_status": "reported",
+        "follow_up": "无需跟进，直接看具体产品条目。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:35ede4114fcb6d8c",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": false,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Meta Connect 2026 新闻汇总页，属聚合性预告与索引内容，无独立增量信息，按低价值处理。",
+        "region": "global",
+        "score": 4.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "这是 Meta Connect 2026 的新闻汇总页，预告 AI 与智能眼镜等方向，本身没有可拆解的新事实。",
+        "tags": [
+          "Meta",
+          "汇总"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "5980a80c56bc3d717bbc4511ad96f65d891826687819262aaeaf5608cffa3319": {
       "created_at": "2026-08-08T02:21:24.413955+00:00",
       "model": "deepseek-v4-flash",
@@ -23338,6 +23685,45 @@
         "tags": [
           "教育",
           "AI导师"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "59a84f78e4d0f3425659d0664c16dcede6c0fb9ebd1d925557fd5dfd2ae1d7c6": {
+      "created_at": "2026-09-24T04:48:35.419628+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "sam-altman-un-security-council-remarks",
+        "evidence_status": "first_party",
+        "follow_up": "关注发言中是否出现对产品开放策略或模型能力发布节奏的具体承诺。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:openai.com_news_rss.xml:347b65ce144a221e",
+        "intelligence_type": "business_policy",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Sam Altman 在联合国安理会的发言，主题是 AI 安全、人类控制与国际合作，属于宏观政策表态，没有产品、模型能力或构建实践增量。",
+        "region": "global",
+        "score": 4.8,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Sam Altman 在联合国安理会谈 AI 安全与国际合作，属于宏观表态，对做产品没有直接可用的信息。",
+        "tags": [
+          "OpenAI",
+          "AI 治理",
+          "政策"
         ],
         "target_user": "",
         "verticals": []
@@ -26779,6 +27165,46 @@
       },
       "stage": "candidate_analysis"
     },
+    "64dd67cfb416f50924bbbeb099fe91b0fb02451a0bd416cbc878964ca68b08d4": {
+      "created_at": "2026-09-24T04:48:54.842186+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "vercel-connect-tanstack-ai",
+        "evidence_status": "first_party",
+        "follow_up": "观察开发者如何利用该集成简化 Agent 认证流程。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:vercel.com_changelog_rss:1dea97932641f37d",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Vercel Connect",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Vercel 官方更新，支持 TanStack AI 通过 Vercel Connect 调用 OAuth 保护的 MCP 服务器，无需存储凭证。对构建 AI Agent 的开发者有直接帮助，属于可迁移的工程实践。",
+        "region": "global",
+        "score": 7.2,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Vercel Connect 新增对 TanStack AI 的支持，让 Agent 无需管理凭证即可调用 OAuth 保护的 MCP 服务器。",
+        "tags": [
+          "Vercel",
+          "MCP",
+          "Agent",
+          "OAuth"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "652a03fb53aa253e0baf4016172c31b59d78b40b0a219b0dd23ed502a22a6add": {
       "created_at": "2026-07-25T16:38:29.697355+00:00",
       "model": "deepseek-v4-flash",
@@ -27582,6 +28008,45 @@
         "tags": [
           "ChatGPT Work",
           "产品分析"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "683b60d5c74609be56d448f18396013a75051692a3f08970ce409e085ac54d8a": {
+      "created_at": "2026-09-24T04:48:54.842077+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "radical-numerics-bio-security-podcast",
+        "evidence_status": "reported",
+        "follow_up": "关注 Radical Numerics 是否发布可验证的产品或 Demo。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:www.latent.space_feed:131910aff5aad610",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Radical Numerics",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "播客访谈，涉及生物安全 AI 军备竞赛和 Radical Numerics 的技术方向，但内容摘要极简，缺乏具体产品、代码、Demo 或用户反馈，属于泛行业评论，对初学者可迁移增量有限。",
+        "region": "global",
+        "score": 6.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Radical Numerics CEO Eric Nguyen 在播客中谈用生物链式思维和多模态感知做生物防御，但无具体产品细节，暂不值得拆解。",
+        "tags": [
+          "生物安全",
+          "多模态",
+          "播客"
         ],
         "target_user": "",
         "verticals": []
@@ -29571,6 +30036,39 @@
         "verticals": []
       },
       "stage": "candidate_analysis"
+    },
+    "70a62065a25de4896bcf65798d65901cff016c558e3c06ba29121bf2f6393c43": {
+      "created_at": "2026-09-24T04:49:30.366040+00:00",
+      "model": "kimi-k2.6",
+      "prompt_version": "deep-v3-beginner",
+      "result": {
+        "ai_role": "Agent（智能体）：不只是回答问题，而是代表用户主动操作外部系统、完成实际任务",
+        "evidence_status": "reported",
+        "hands_on_exercise": "用 ChatGPT/Claude 的联网或插件功能，尝试让 AI 帮你查餐厅并生成一封预订邮件草稿，观察它需要几步、哪里需要你自己动手——对比 Muse'代发邮件'的差异",
+        "implementation_idea": "未公开。从功能描述看，Muse 需要：①理解用户意图并拆解任务步骤；②用专属身份（邮箱）与外部系统交互；③视频通话时同步处理视觉和语言信息。具体技术架构未披露。",
+        "learning_points": [
+          "Agent：不只是聊天的 AI，而是能自主规划步骤、调用工具替用户办事的系统",
+          "Function Calling（函数调用）：AI 判断何时该调用外部 API 或工具来完成任务，是 Agent 动手能力的核心机制",
+          "RAG（检索增强生成）：AI 实时查外部信息辅助决策，但 Muse 是否用此技术未公开，属于常见设计思路"
+        ],
+        "limitations_or_uncertainties": "视频通话的具体交互方式未公开；专属邮箱的权限范围、安全机制未说明；是否为所有用户开放、何时上线未确认；本文仅为媒体报道，无第三方实测验证",
+        "product_name": "Muse",
+        "sources": [
+          "https://www.theverge.com/tech/999454/meta-muse-ai-agent-video-chat-connect-2026",
+          "https://ai.meta.com/muse/",
+          "https://www.nytimes.com/2026/09/22/technology/meta-muse-ai-agent.html"
+        ],
+        "target_users": "需要 AI 代办日常任务（如预约、购物、处理邮件）的普通消费者",
+        "title_zh": "Meta 升级 Muse AI Agent：给专属邮箱、还能视频通话",
+        "usage_flow": [
+          "用户通过聊天或视频向 Muse 描述任务（如'帮我订餐厅并确认邮件'）",
+          "Muse 用专属邮箱地址对外沟通、操作第三方服务",
+          "用户收到结果确认或视频通话中直接查看进展"
+        ],
+        "user_problem": "用户需要反复切换多个 App/网站自己操作，且现有 AI 只能给建议不能真正动手完成",
+        "what_it_is": "Meta 推出的个人 AI Agent（智能体），能聊天、办事、连外部服务，现在新增了邮箱和视频通话能力"
+      },
+      "stage": "deep_analysis"
     },
     "70dba200ceff2f013e3f49cf3a7154ee87a7de57fdaeea92b1a32be8035596a1": {
       "created_at": "2026-08-26T01:58:18.951348+00:00",
@@ -33458,6 +33956,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "7ea50c9ecea02b3e22b087048ec520b389f90d0261eeeb88bc70221df1cea187": {
+      "created_at": "2026-09-24T04:48:54.842312+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-codex-rust-v0.158.0-alpha.4",
+        "evidence_status": "first_party",
+        "follow_up": "等待正式版本或变更日志。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "github:release:394950532",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "OpenAI Codex",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI Codex 的 alpha 版本发布，无任何变更说明，属于常规版本迭代，无实质信息。",
+        "region": "global",
+        "score": 3.0,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "OpenAI Codex 发布 rust-v0.158.0-alpha.4，无变更说明。",
+        "tags": [
+          "OpenAI",
+          "Codex",
+          "版本发布"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "7eacb9c1a010c87db9056f5150982a0fadc539853f1aca9e48905cd98e7c626d": {
       "created_at": "2026-08-26T01:58:33.863601+00:00",
       "model": "deepseek-v4-flash",
@@ -34359,6 +34896,46 @@
         "tags": [
           "GitHub Copilot",
           "产品功能"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "81fd8e6d88638e09a4fec7cf816cf0189eb0ca578136a4c1f56bedd9787a83f8": {
+      "created_at": "2026-09-24T04:48:54.844353+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "vercel-ai-7.0.113",
+        "evidence_status": "first_party",
+        "follow_up": "观察开发者如何利用新 TTS 功能构建语音交互产品。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "github:release:395083800",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Vercel AI SDK",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Vercel AI SDK 发布补丁版本，修复多个问题并新增 Gemini 3.8 TTS 支持，对使用该 SDK 的开发者有实用价值，但属于常规维护更新。",
+        "region": "global",
+        "score": 6.5,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "Vercel AI SDK 更新至 7.0.113，修复工具调用和嵌入问题，并新增 Gemini 3.8 TTS 支持。",
+        "tags": [
+          "Vercel",
+          "AI SDK",
+          "Gemini",
+          "TTS"
         ],
         "target_user": "",
         "verticals": []
@@ -35468,6 +36045,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "86580a3cb14cdd5e9f8be16a2448e96c85f273ef2b026f3668dd36b81f9f1d6d": {
+      "created_at": "2026-09-24T04:48:35.419650+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "deepmind-private-ai-compute-server-side-memory",
+        "evidence_status": "first_party",
+        "follow_up": "关注该私有内存机制是否开放给第三方开发者，以及是否有性能与隐私的量化对比。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:deepmind.google_blog_rss.xml:68ead6b6af2b7144",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Private AI Compute",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Google DeepMind 为 Private AI Compute 引入服务端私有内存，属于个人 AI 隐私架构的官方更新，对做个人 AI 产品的人有架构参考意义。但正文只有一句介绍，缺少技术细节与可验证效果，暂按中等价值处理。",
+        "region": "global",
+        "score": 6.8,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Google DeepMind 给 Private AI Compute 加了服务端私有内存，用来保护个人 AI 的数据，值得看是因为它关系到个人 AI 产品怎么做隐私架构。",
+        "tags": [
+          "隐私计算",
+          "个人 AI",
+          "Google DeepMind"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "866ec5e6b334489c2e6dcfbf09e94bc1256ed00df63f5af19022274e4640ca2d": {
       "created_at": "2026-08-03T03:53:41.465435+00:00",
       "model": "deepseek-v4-flash",
@@ -36267,6 +36883,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "89e13c5cd4b1a58a8d76eb90c299575a934fc137198e011781f879bbdb015d28": {
+      "created_at": "2026-09-24T04:48:46.496394+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "meta-muse-email-video-chat",
+        "evidence_status": "reported",
+        "follow_up": "关注 agent 邮箱的权限与安全设计、视频通话的实际体验与开放范围。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:9253e35e968f173d",
+        "intelligence_type": "product_case",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Meta Muse",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Muse agent 获得专属邮箱用于执行任务、并支持视频通话，是 agent 能力边界扩展的具体功能增量，对理解 agent 产品设计有可迁移价值，但为媒体转述、无实测。",
+        "region": "global",
+        "score": 7.2,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Meta 给 Muse agent 配了专属邮箱来完成任务，还支持视频通话，值得看的是 agent 从聊天走向代用户操作外部服务的具体做法。",
+        "tags": [
+          "Agent",
+          "Meta",
+          "产品功能"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "8a03609a38177271373b172b05f16fb59e605d7684627fdd65058e62669fb92f": {
       "created_at": "2026-09-02T04:32:24.336216+00:00",
       "model": "deepseek-v4-flash",
@@ -36299,6 +36954,44 @@
         "tags": [
           "AI安全",
           "评论"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "8a30bd5c6cfed87c680763fdb1e8a158d451b700534391fbb58d386cf7a407ab": {
+      "created_at": "2026-09-24T04:48:35.419575+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "openai-academy-two-years",
+        "evidence_status": "first_party",
+        "follow_up": "关注 Academy 是否推出面向产品经理的具体课程或工具。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:openai.com_news_rss.xml:52e46e8371e1f699",
+        "intelligence_type": "business_policy",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": true,
+        "market_signal": "",
+        "product_name": "OpenAI Academy",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI Academy 两周年纪念性公告，正文只有一句“把 AI 技能带给更多社区”，没有新产品、新功能或可验证指标，属于品牌宣传性质，对产品构建无直接增量。",
+        "region": "global",
+        "score": 4.5,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "OpenAI 发文纪念 Academy 两周年，说要把 AI 技能带给更多社区，但没有具体新内容，参考价值有限。",
+        "tags": [
+          "OpenAI",
+          "AI 教育"
         ],
         "target_user": "",
         "verticals": []
@@ -36567,6 +37260,45 @@
         "tags": [
           "AI安全",
           "OpenAI"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "8b9659e2ab163beff03601e7d4df2f3667b1dfdbdba8a4547d2fe64f55212aae": {
+      "created_at": "2026-09-24T04:48:46.496327+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "meta-muse-charm-device",
+        "evidence_status": "early_signal",
+        "follow_up": "关注 Muse Charm 的功能定义、交互方式与发售计划。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:5368837adac2a848",
+        "intelligence_type": "early_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Muse Charm",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Meta 为 Muse 打造独立硬件 Muse Charm，在 Connect 结尾短暂亮相，属新硬件形态的早期信号，但仅外观描述、无功能与上市信息。",
+        "region": "global",
+        "score": 6.6,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Meta 正在为 Muse AI agent 做独立硬件 Muse Charm，外形像没有表带的智能手表，值得看的是 agent 专用硬件的产品形态探索。",
+        "tags": [
+          "AI硬件",
+          "Agent",
+          "Meta"
         ],
         "target_user": "",
         "verticals": []
@@ -38607,6 +39339,45 @@
           "安全",
           "网络威胁",
           "MITRE"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "9128b132eb373670579d3f38c1bd8716fb8a2b4f18fa705ff1d2e64218ac1791": {
+      "created_at": "2026-09-24T04:48:46.496211+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "meta-muse-tamagotchi-wearable",
+        "evidence_status": "reported",
+        "follow_up": "关注该硬件的正式名称、功能、定价与上市时间。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:e8a9dea9a4a63235",
+        "intelligence_type": "early_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Meta Muse wearable",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "报道 Meta 为 Muse 做的类 Tamagotchi 可穿戴硬件，属于新形态 AI 硬件产品案例，但信息量极少、无规格与体验细节，只能作为早期信号观察。",
+        "region": "global",
+        "score": 6.8,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Meta 为 Muse AI agent 做了一款类似电子宠物的可穿戴小硬件，值得看的是大厂在探索 agent 的实体化入口。",
+        "tags": [
+          "AI硬件",
+          "Agent",
+          "Meta"
         ],
         "target_user": "",
         "verticals": []
@@ -41863,6 +42634,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "9b30c20f64ff2f5ca2e935500eaaf2ca1a9881f3808c8219421296aebce23c8d": {
+      "created_at": "2026-09-24T04:48:35.419667+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "gemini-3-8-text-to-speech",
+        "evidence_status": "early_signal",
+        "follow_up": "关注官方是否补充语音质量、延迟、多语言支持等具体指标和可试听 Demo。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:deepmind.google_blog_rss.xml:81481aa316e38773",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Gemini 3.8 TTS",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Google DeepMind 发布 Gemini 3.8 文本转语音，属于新模型能力官方公告，语音能力可能解锁新的产品体验。但正文为空，没有任何能力描述、Demo 或指标，无法判断实际增量，只能作为早期信号记录。",
+        "region": "global",
+        "score": 6.2,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Google DeepMind 发布了 Gemini 3.8 的文本转语音能力，但页面没有具体说明，暂时只能当作一个待观察的新能力信号。",
+        "tags": [
+          "Gemini",
+          "语音合成",
+          "模型能力"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "9b4d990f1c7648b9e0a22bb7246b7e098b2361db21306fec84a36ec059f56b54": {
       "created_at": "2026-07-30T03:28:09.351969+00:00",
       "model": "deepseek-v4-flash",
@@ -44595,6 +45405,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "a3bff6ead268c79740faee88bbcfbc1077e948d75f534a67ba61147013a8e6c0": {
+      "created_at": "2026-09-24T04:48:35.419601+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-daybreak-ukraine-civilian-defense",
+        "evidence_status": "first_party",
+        "follow_up": "关注 Daybreak 项目是否公开技术细节或对民用 AI 产品产生外溢影响。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:openai.com_news_rss.xml:9328fa400dd37e6b",
+        "intelligence_type": "business_policy",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "OpenAI Daybreak",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI 把 Daybreak 项目权限扩展到乌克兰政府用于民用基础设施网络防御，属于官方政策与落地动作，但内容偏地缘政治与安全政策，与 AI 产品构建、模型能力解锁无直接关系。",
+        "region": "global",
+        "score": 5.2,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "OpenAI 把 Daybreak 项目开放给乌克兰政府用于民用设施网络防御，属于政策类动作，对做产品的人参考价值不大。",
+        "tags": [
+          "OpenAI",
+          "AI 安全",
+          "政策"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "a42e4095cb98691fdb9070c20678dc5f68c8edd76f51f7a6d7b50ca64546228f": {
       "created_at": "2026-08-11T02:27:10.144875+00:00",
       "model": "deepseek-v4-flash",
@@ -46334,6 +47183,46 @@
       },
       "stage": "candidate_analysis"
     },
+    "aac24e74d1b1c9f72e99a4f37a087f90d751862f65acb3306134882944bd141b": {
+      "created_at": "2026-09-24T04:48:35.419699+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "github-copilot-app-huge-pr-diff-rendering",
+        "evidence_status": "first_party",
+        "follow_up": "关注该 diff 渲染方案是否开源或写成可复用组件，以及大 PR 场景下的实际性能数据。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:github.blog_ai-and-ml_feed_:8018084d546a0e01",
+        "intelligence_type": "builder_insight",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "GitHub Copilot",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "GitHub 官方工程博客讲 Copilot 应用如何重写 diff 界面，让百万行 PR 和数百条行内评论能正常打开，属于真实产品工程实践，对做 AI 编码工具的人有直接可迁移的 UX 与性能经验。",
+        "region": "global",
+        "score": 7.6,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "GitHub 讲了他们怎么重写 Copilot 应用的 diff 界面，让百万行代码的 PR 也能打开，值得看是因为它解决了 AI 编码工具里真实的大文件体验问题。",
+        "tags": [
+          "GitHub Copilot",
+          "AI 编码",
+          "前端性能",
+          "工程实践"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "aace3676de71e9f47bbe09cb939819a2045f0c62d03089e3db4a9eff95518f75": {
       "created_at": "2026-08-12T02:43:31.542867+00:00",
       "model": "deepseek-v4-flash",
@@ -46484,6 +47373,85 @@
           "Agent",
           "多智能体",
           "ProductHunt"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "ab0d7b2a6282e46a6547b09e958b17013169504646d1dc4054a382e67311f479": {
+      "created_at": "2026-09-24T04:48:54.844262+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "claude-code-v2.1.281",
+        "evidence_status": "first_party",
+        "follow_up": "观察开发者如何利用新 MCP 功能构建更复杂的 Agent 工作流。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "github:release:394877414",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Claude Code",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Claude Code 发布 v2.1.281，包含多项功能更新，如 MCP URL 模式 elicitation、Bedrock 网关支持等，对使用 Claude Code 的开发者有直接价值。",
+        "region": "global",
+        "score": 7.0,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "Claude Code 更新至 v2.1.281，新增 MCP URL 模式 elicitation、Bedrock 网关角色假设和护栏等功能。",
+        "tags": [
+          "Claude Code",
+          "MCP",
+          "Bedrock",
+          "版本发布"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "ab2cdd576894fc00e8796b3163dc98639032961700156bb7b867c7ffb1e1a7db": {
+      "created_at": "2026-09-24T04:48:46.496359+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "meta-muse-smart-glasses",
+        "evidence_status": "early_signal",
+        "follow_up": "关注该功能何时真正上线、支持哪些任务与眼镜型号。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:a41bc94a0714dad7",
+        "intelligence_type": "early_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Meta Muse on glasses",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Meta 称正在把 Muse 带到智能眼镜，用户可语音唤起并处理健身指导、记录等任务，属明确但尚未落地的产品方向，需按预告处理。",
+        "region": "global",
+        "score": 6.4,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Meta 宣布正在把 Muse agent 接入智能眼镜，用户喊名字即可让它指导锻炼、记录事项，值得看的是 agent 与可穿戴语音入口的结合。",
+        "tags": [
+          "Agent",
+          "AI眼镜",
+          "Meta"
         ],
         "target_user": "",
         "verticals": []
@@ -48465,6 +49433,45 @@
           "Claude Code",
           "AI编程",
           "更新"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "b1e494ea955526e7b0be2f2baecf5d20623c376ffade23f987d6ad8ee3e45e97": {
+      "created_at": "2026-09-24T04:48:54.842255+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "vercel-blob-unlimited-stores",
+        "evidence_status": "first_party",
+        "follow_up": "观察开发者如何利用多存储库设计多租户 AI 应用。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:vercel.com_changelog_rss:47d3ec25c4f84c3c",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Vercel Blob",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Vercel 官方更新，取消 Blob 存储数量限制，对多租户应用和环境隔离有实用价值，但属于基础设施更新，与 AI 产品直接关联较弱。",
+        "region": "global",
+        "score": 6.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Vercel Blob 现在允许在所有套餐中创建无限数量的存储库，方便多租户和环境隔离。",
+        "tags": [
+          "Vercel",
+          "存储",
+          "基础设施"
         ],
         "target_user": "",
         "verticals": []
@@ -50919,6 +51926,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "bae3c3cc82147c50b33af209e1ff5f71b7f14b17a14cd198e25173523ca0bf64": {
+      "created_at": "2026-09-24T04:48:46.496262+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "anthropic-biology-lab-finding",
+        "evidence_status": "reported",
+        "follow_up": "关注该发现的具体内容、是否发表、Claude 在流程中的实际角色。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:a7c089fad64d991e",
+        "intelligence_type": "model_capability",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Anthropic biology lab",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Anthropic 生物实验室宣称已有重大发现，但报道本身强调人类仍在回路中、未给出可验证成果，属于有指向但证据不足的早期信号，且偏科研而非产品。",
+        "region": "global",
+        "score": 6.2,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Anthropic 称其生物实验室已有重大发现，但 Claude 并未被放手自主运行、人类仍在回路中，值得看的是模型公司自建实验室的落地方式。",
+        "tags": [
+          "Anthropic",
+          "AI制药",
+          "科研"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "bae49380f0082de181ad7896938a6edfeb3df6728434c5c728b19d9d06c93d63": {
       "created_at": "2026-08-08T02:21:24.413543+00:00",
       "model": "deepseek-v4-flash",
@@ -52552,6 +53598,45 @@
         "tags": [
           "Agent",
           "治理"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "c14e05c0a3b05aa5d40097be4f8193e160569d2f6b3290ac1c6708f25606b461": {
+      "created_at": "2026-09-24T04:48:46.496160+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "meta-muse-connect-2026-updates",
+        "evidence_status": "reported",
+        "follow_up": "关注 Muse 在眼镜与硬件上的实际可用功能、用户上手反馈与开发者接口。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:d3247c696cdf0eac",
+        "intelligence_type": "product_case",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Meta Muse",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Meta Connect 上 Muse AI agent 的更新汇总，属于产品功能迭代的真实增量，但为媒体转述、缺少一手 Demo 与用户反馈，且与同批多条 Muse 新闻高度重叠，按去重后取一条代表，价值中等。",
+        "region": "global",
+        "score": 6.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Meta 在 Connect 大会上宣布 Muse AI agent 的一系列新功能并推进到 AI 眼镜，值得看的是它把 agent 从手机扩展到可穿戴入口的产品思路。",
+        "tags": [
+          "Agent",
+          "Meta",
+          "可穿戴"
         ],
         "target_user": "",
         "verticals": []
@@ -62340,6 +63425,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "e702acb0deacb5cf7e089befc691277ea8d575ca08ccbc550594a87ce82de8bd": {
+      "created_at": "2026-09-24T04:48:35.419381+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "lenny-how-i-ai-meta-muse-review",
+        "evidence_status": "reported",
+        "follow_up": "关注 Muse 的实际功能清单与用户留存数据，以及评测中提到的具体 UX 做法。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "newsletter:feed:70a94cbb7fada4ea37ac",
+        "intelligence_type": "product_case",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Meta Muse",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Lenny 的播客对 Meta 个人 AI Agent Muse 做产品体验评测，强调其消费级 UX 做得好，属于有明确产品对象和体验判断的观察，对做 AI 产品的人有可迁移的 UX 参考。但正文只截到标题与播放链接，缺少具体功能与用户反馈细节，证据强度有限。",
+        "region": "global",
+        "score": 7.4,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Lenny 的播客评测了 Meta 的个人 AI Agent Muse，认为它在消费级体验上做得对，值得看是因为能对照自己产品的交互设计。",
+        "tags": [
+          "AI Agent",
+          "消费级产品",
+          "产品评测"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "e71203d0017df42b54d2aea061bff99418783cd8c8bf0c0fc8375c6c46617644": {
       "created_at": "2026-08-22T01:50:49.580429+00:00",
       "model": "deepseek-v4-flash",
@@ -64400,6 +65524,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "ee3622c43af5882108ebab8d66534652eaadd8946ae0e426d8f4e32ec3f99284": {
+      "created_at": "2026-09-24T04:48:54.842293+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-codex-rust-v0.158.0-alpha.5",
+        "evidence_status": "first_party",
+        "follow_up": "等待正式版本或变更日志。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "github:release:395102286",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "OpenAI Codex",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI Codex 的 alpha 版本发布，无任何变更说明，属于常规版本迭代，无实质信息。",
+        "region": "global",
+        "score": 3.0,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "OpenAI Codex 发布 rust-v0.158.0-alpha.5，无变更说明。",
+        "tags": [
+          "OpenAI",
+          "Codex",
+          "版本发布"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "ee4309dfb94e944e9af52d85c676183416f2a2594179b2c679870ec67229a1ae": {
       "created_at": "2026-08-15T01:49:20.873224+00:00",
       "model": "deepseek-v4-flash",
@@ -66270,6 +67433,45 @@
           "工作流",
           "Agent Builder",
           "自动化"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "f52d8eba3bb306ca5774c56939518192cd4d59e092dea1db92bcb63f5cf790b0": {
+      "created_at": "2026-09-24T04:48:54.842123+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "ainews-claude-opus-55-price-cut",
+        "evidence_status": "reported",
+        "follow_up": "核实 Claude Opus 5.5 的官方发布和定价变化。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:www.latent.space_feed:19163c30f0a4c925",
+        "intelligence_type": "model_capability",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Claude Opus 5.5",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "AINews 摘要提到 Claude Opus 5.5 成为默认模型且价格下降 40-50%，但内容极短，缺乏一手证据和具体产品体验，属于行业动态速览，对产品经理的增量有限。",
+        "region": "global",
+        "score": 5.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "AINews 称 Claude Opus 5.5 成为其默认模型，并提到模型价格普遍下降 40-50%，但无详细分析。",
+        "tags": [
+          "Claude",
+          "模型价格",
+          "AINews"
         ],
         "target_user": "",
         "verticals": []
