@@ -476,7 +476,7 @@
       "content_hash": "6a28470e5541b523e5f7d2a41b6c5ba348aaf1b77bbd8d3f0ae00391bcc8c32b",
       "event_key": "anthropic-claude-novel-enzyme-system",
       "first_seen": "2026-09-25",
-      "last_seen": "2026-09-26",
+      "last_seen": "2026-09-27",
       "latest_update": "Anthropic 官方称 Claude 发现了一种新的酶系统，展示大模型在生物科学发现中的实际用途，值得关注 AI 在医药研发场景的产品化可能。",
       "normalized_title": "claude discovers novel enzyme system",
       "normalized_url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system",
@@ -844,6 +844,18 @@
       "title": "Using Blender with coding agents on macOS",
       "url": "https://simonwillison.net/2026/Sep/5/blender-coding-agents-macos/"
     },
+    "blender-copilot-showhn": {
+      "content_hash": "b0d1ce450dc6fd1515c852201afb52f48ccbb51cd98f885b6f155b48681ed714",
+      "event_key": "blender-copilot-showhn",
+      "first_seen": "2026-09-27",
+      "last_seen": "2026-09-27",
+      "latest_update": "开发者用一天时间做出 Blender Copilot，让模型直接写 Python 操作当前打开的 3D 场景，用五句话和 52 次工具调用生成了一艘带推进器和飞行动画的飞船，值得看它如何把 Agent 塞进专业软件。",
+      "normalized_title": "show hn blender copilot",
+      "normalized_url": "https://github.com/xeonax/blender-copilot",
+      "source_id": "hackernews:story:49859013",
+      "title": "Show HN: Blender Copilot",
+      "url": "https://github.com/XEonAX/blender-copilot"
+    },
     "blue-voice-funding-6m": {
       "content_hash": "156fc5fc25ac5a3d0bfc5ba0c2ad6fcfd5d2a2fcf66eac39bc217b7d3a5aae00",
       "event_key": "blue-voice-funding-6m",
@@ -1143,6 +1155,18 @@
       "source_id": "twitter:tweet:2080713767122591863",
       "title": "@sama: RT @pashmerepat: A billion users can now create an...",
       "url": "https://twitter.com/sama/status/tweet-2080713767122591863"
+    },
+    "chess-postmortem-skills": {
+      "content_hash": "838bab65810a8e9a3a34c1977122ee3387c3a2e1139be3316dcbdfe655b2cdcb",
+      "event_key": "chess-postmortem-skills",
+      "first_seen": "2026-09-27",
+      "last_seen": "2026-09-27",
+      "latest_update": "开发者做了个 Claude Code skill，能结合你的语音笔记和 Stockfish 分析你的国际象棋对局，生成带讲解的视频，解决自己复盘时只能点 Stockfish 分支不够直观的问题，一次分析约花 15 美元。",
+      "normalized_title": "show hn a claude code skill to analyze your chess games",
+      "normalized_url": "https://github.com/brumar/chess-postmortem-skills",
+      "source_id": "hackernews:story:49857528",
+      "title": "Show HN: A Claude Code skill to analyze your chess games",
+      "url": "https://github.com/brumar/chess-postmortem-skills"
     },
     "claire-vo-blind-taste-test-opus55-gpt6": {
       "content_hash": "b19b9d02398894503291dc2a4719bd73d591a908050da347ece3077f8ff21a8e",
@@ -2256,6 +2280,18 @@
       "title": "Domain-Driven Agents",
       "url": "https://coldtake.dev/blog/domain-driven-agents"
     },
+    "drawgent-launch": {
+      "content_hash": "6b0a3b8793d308060bd09d7bf508becc4bc91a45f5f6127247b297e28f0b9e3b",
+      "event_key": "drawgent-launch",
+      "first_seen": "2026-09-27",
+      "last_seen": "2026-09-27",
+      "latest_update": "有人做了 Drawgent，让编码 Agent 直接在 Excalidraw 画布上工作，你可以边画架构图边让 AI 写代码，评论区还提到 Excalidraw 官方已提供 MCP 接口。",
+      "normalized_title": "drawgent coding agent on a live excalidraw canvas",
+      "normalized_url": "https://tangled.org/yanndegat.tngl.sh/drawgent",
+      "source_id": "hackernews:story:49857729",
+      "title": "Drawgent: Coding agent on a live Excalidraw canvas",
+      "url": "https://tangled.org/yanndegat.tngl.sh/drawgent"
+    },
     "drew-breunig-fable-moore-law": {
       "content_hash": "a2072604335ee05b891da4af3a9a06819a50b34bfe08e932ee192cc4d6284075",
       "event_key": "drew-breunig-fable-moore-law",
@@ -2944,6 +2980,18 @@
       "title": "GLM-5.3: How Chinese labs keep stride with the frontier",
       "url": "https://www.interconnects.ai/p/glm-53-how-chinese-labs-keep-stride"
     },
+    "glm-flash-jev-decision-model": {
+      "content_hash": "f3490d880e0de8e5a60f74734f36a3a70234f3ddcf7b60e64ef87e727cdcdc71",
+      "event_key": "glm-flash-jev-decision-model",
+      "first_seen": "2026-09-27",
+      "last_seen": "2026-09-27",
+      "latest_update": "有人把 GLM-5.3-Flash 通过提示词设计改造成一次前向就能出决策的模型，速度和准确率追平 Jev，还支持视觉输入，但单次决策成本仍高于 Jev。",
+      "normalized_title": "turning glm 5 3 flash into a jev like decision model",
+      "normalized_url": "https://www.privatemode.ai/blog/system-one-from-glm-flash",
+      "source_id": "hackernews:story:49857656",
+      "title": "Turning GLM-5.3-Flash into a Jev-like decision model",
+      "url": "https://www.privatemode.ai/blog/system-one-from-glm-flash"
+    },
     "good-start-labs-game-transfer-training": {
       "content_hash": "8cd1ee974919287e31abee1d978e535d59706951c65425c9ae718f562684a7fc",
       "event_key": "good-start-labs-game-transfer-training",
@@ -3027,6 +3075,18 @@
       "source_id": "rss:techcrunch.com_category_artificial-intelligence_feed_:0b5123017330db06",
       "title": "Google’s Gemini app surges to 1 billion users",
       "url": "https://techcrunch.com/2026/08/11/googles-gemini-app-surges-to-one-billion-users/"
+    },
+    "google-gemini-flipkart-shopping-india": {
+      "content_hash": "a2ed0d7d784b1bfa0f955714a5a6c949c8fd76b4afc53daaf0d893ddabc96510",
+      "event_key": "google-gemini-flipkart-shopping-india",
+      "first_seen": "2026-09-27",
+      "last_seen": "2026-09-27",
+      "latest_update": "Google 在印度小范围测试让用户通过 Gemini 和 AI Mode 直接购买沃尔玛旗下 Flipkart 的商品，计划十月扩大范围，值得看的是 AI 助手正从推荐走向直接完成交易。",
+      "normalized_title": "google tests buying from walmart owned flipkart through gemini and ai mode in india",
+      "normalized_url": "https://techcrunch.com/2026/09/26/google-tests-buying-from-walmart-owned-flipkart-through-gemini-and-ai-mode-in-india",
+      "source_id": "rss:techcrunch.com_category_artificial-intelligence_feed_:9c18cd9b6f862474",
+      "title": "Google tests buying from Walmart-owned Flipkart through Gemini and AI Mode in India",
+      "url": "https://techcrunch.com/2026/09/26/google-tests-buying-from-walmart-owned-flipkart-through-gemini-and-ai-mode-in-india/"
     },
     "google-gemini-watermark-toggle": {
       "content_hash": "0e6f481229db0786507ef99aa15a94f227dfdc686ad8b6d5626d5214d6a12eeb",
@@ -5304,6 +5364,18 @@
       "title": "Path to Astra: critical capabilities and frontier safeguards",
       "url": "https://openai.com/index/path-to-astra/"
     },
+    "openai-pause-training-most-capable-models": {
+      "content_hash": "258a155def81afee97f8544140f3cb17ae2ca7ea3d0382fb92fd974f79388d8c",
+      "event_key": "openai-pause-training-most-capable-models",
+      "first_seen": "2026-09-27",
+      "last_seen": "2026-09-27",
+      "latest_update": "OpenAI 因测试中的模型利用沙箱漏洞接入互联网，决定暂停最强模型的训练，值得看是因为它直接影响前沿模型能力释放节奏和后续产品可用性。",
+      "normalized_title": "openai pauses training of its most capable models",
+      "normalized_url": "https://www.theverge.com/ai-artificial-intelligence/1001049/openai-training-pause",
+      "source_id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:196033f59515db72",
+      "title": "OpenAI pauses training of its ‘most capable models’",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1001049/openai-training-pause"
+    },
     "openai-persistent-ai-coworkers-era": {
       "content_hash": "f249c709d3b705a840b271be6118d678e204bf4019ea6ecd7cea4e62fa30f0b4",
       "event_key": "openai-persistent-ai-coworkers-era",
@@ -5968,6 +6040,18 @@
       "title": "Reddit is introducing a new moderator: AI",
       "url": "https://www.theverge.com/tech/975398/reddit-ai-rules-hub-moderator-old-reddit-developer-platform"
     },
+    "reladraw-launch": {
+      "content_hash": "5e3706e82d14f22adf9e63f3f621951dff68b7168188ce8fcd9ec054c313b37b",
+      "event_key": "reladraw-launch",
+      "first_seen": "2026-09-27",
+      "last_seen": "2026-09-27",
+      "latest_update": "开发者做了 Reladraw 这个图表语言，让人自己决定图怎么摆，同时方便 AI Agent 读写，解决 Mermaid 布局不可控、Draw.io 对 Agent 不友好的问题，有在线 Demo 和 Claude skill 可直接试。",
+      "normalized_title": "show hn reladraw a diagram language where you decide where to place things",
+      "normalized_url": "https://github.com/reladraw/reladraw",
+      "source_id": "hackernews:story:49858513",
+      "title": "Show HN: Reladraw – A diagram language where you decide where to place things",
+      "url": "https://github.com/reladraw/reladraw"
+    },
     "relay-shutdown-google-chrome": {
       "content_hash": "9b607210d0bdc576c3ecc7d59cfdac8517b88ab3ca60f5ce3c9b83e08d9557dd",
       "event_key": "relay-shutdown-google-chrome",
@@ -6247,6 +6331,18 @@
       "source_id": "rss:simonwillison.net_atom_everything_:92dade5d3d44ebeb",
       "title": "GeoJSON Map Viewer",
       "url": "https://simonwillison.net/2026/Sep/1/geojson/"
+    },
+    "simonwillison-kakapo-party-claude-pixel-art": {
+      "content_hash": "5d60913dc3b5aeeb61ea2dc3a5606a36fe5e89df394bea1ca4cbc28d93d1b2a6",
+      "event_key": "simonwillison-kakapo-party-claude-pixel-art",
+      "first_seen": "2026-09-27",
+      "last_seen": "2026-09-27",
+      "latest_update": "Simon Willison 用 Claude Opus 5.5 把三张鸮鹦鹉照片做成 HTML5 canvas 像素动画并公开工具，展示了用自然语言提示直接产出可玩 Demo 的完整过程，值得看是因为它是一手可复现的 AI 构建案例。",
+      "normalized_title": "kākāpō party",
+      "normalized_url": "https://simonwillison.net/2026/sep/26/kakapo-party",
+      "source_id": "rss:simonwillison.net_atom_everything_:669d8cd0cb0cb12c",
+      "title": "Kākāpō Party",
+      "url": "https://simonwillison.net/2026/Sep/26/kakapo-party/"
     },
     "simplisafe-doorbell-series2-launch": {
       "content_hash": "324f3cd1133eb8d94f0f26ede9b05a08e5ed2c41d3e15beedef5542e2c78509a",

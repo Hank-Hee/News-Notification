@@ -1,7 +1,401 @@
 {
   "version": 1,
-  "updated_at": "2026-09-26T04:58:02.949739+00:00",
+  "updated_at": "2026-09-27T05:18:02.595088+00:00",
   "products": [
+    {
+      "product_id": "product-03665d79efa749d6",
+      "product_name": "Blender Copilot",
+      "builder_name": "xeonax",
+      "first_seen": "2026-09-27",
+      "last_seen": "2026-09-27",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "不想从零学习 Blender Python API 和建模的开发者、想快速验证 3D 原型的独立创作者",
+      "user_problem": "作者想重做 6DoF 飞船飞行原型，但不想花一个月手动学 Blender 建模、读插件开发文档、学 Python API，也不想自己画 UI 面板",
+      "what_it_is": "一个嵌入 Blender 3D 软件的聊天面板插件，用户用自然语言描述需求，AI 自动生成并执行 Python 脚本来直接修改当前打开的 3D 场景。",
+      "ai_role": "AI 负责把自然语言转成可执行的 Blender Python 脚本，并在执行过程中自主调用工具检查场景状态、修正错误；用户只负责按回车确认",
+      "implementation_idea": "核心思路是做一个\"Agent 套壳\"：AI 不直接操作 3D 模型，而是把 Blender 里的各种操作包装成 AI 能调用的工具（比如创建物体、移动顶点、添加材质等），AI 通过对话决定调用哪些工具来完成任务。关键是 AI 能实时读取当前场景的状态，根据反馈自己调整下一步动作——这就是 Agent 的\"观察-思考-行动\"循环。",
+      "hands_on_exercise": "30 分钟练习：打开 Blender，在脚本编辑器里运行一段 Python 代码创建立方体并旋转它；然后让 ChatGPT/Claude 写一个做同样事情的脚本，对比 AI 生成的代码和你手动写的区别。理解\"AI 生成代码 → 在软件里执行\"这个基本闭环。",
+      "limitations_or_uncertainties": "未公开具体用了哪家模型（只提到 Deepseek 和 7 美元成本）；未公开 52 次工具调用的具体定义和完整工具列表；未公开缓存机制细节；作者明确表示\"不骄傲\"的情绪化反思属于个人观点，不代表工具成熟度；GitHub 仓库的实际代码完整度和可复现性未经验证",
+      "region": "global",
+      "score": 8.6,
+      "summary": "开发者用一天时间做出 Blender Copilot，让模型直接写 Python 操作当前打开的 3D 场景，用五句话和 52 次工具调用生成了一艘带推进器和飞行动画的飞船，值得看它如何把 Agent 塞进专业软件。",
+      "title": "Blender Copilot：一天内让 AI 直接操控 3D 软件的 Agent 实验",
+      "url": "https://github.com/XEonAX/blender-copilot",
+      "sources": [
+        {
+          "url": "https://github.com/XEonAX/blender-copilot",
+          "title": "Show HN: Blender Copilot",
+          "source_type": "hackernews",
+          "published_at": "2026-09-26T18:06:59+00:00"
+        },
+        {
+          "url": "https://github.com/pramishp/BlenderCopilot",
+          "title": "pramishp/BlenderCopilot: Blender Copilot is a project that ... - GitHub",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://lobehub.com/mcp/artrix5-blender-copilot",
+          "title": "Blender Copilot | MCP Servers - LobeHub",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "blender-copilot-showhn",
+          "date": "2026-09-27",
+          "title": "Blender Copilot：一天内让 AI 直接操控 3D 软件的 Agent 实验",
+          "summary": "开发者用一天时间做出 Blender Copilot，让模型直接写 Python 操作当前打开的 3D 场景，用五句话和 52 次工具调用生成了一艘带推进器和飞行动画的飞船，值得看它如何把 Agent 塞进专业软件。",
+          "score": 8.6,
+          "url": "https://github.com/XEonAX/blender-copilot"
+        }
+      ],
+      "usage_flow": [
+        "在 Blender 侧边栏打开聊天面板，输入自然语言需求（如\"做一艘科幻风格的飞船\"）",
+        "AI 生成 Python 脚本并直接在当前打开的 Blender 场景中执行",
+        "用户继续对话迭代（调整外观、添加推进器、制作飞行动画等）",
+        "AI 自主检查并修复问题（如发现推进器火焰会喷到船体，自动调整角度和位置）"
+      ],
+      "learning_points": [
+        "Agent：AI 不只是回答问题，而是能自主决定调用什么工具、根据执行结果调整下一步行动的循环系统",
+        "Function Calling：让 AI 输出结构化指令（如调用某个函数）而不是纯文本，这样程序才能解析执行",
+        "Embedding 专业软件：把现有软件的操作 API 包装成 AI 可调用的工具，比让 AI 从头生成完整代码更可控"
+      ],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "3D",
+        "Copilot",
+        "开发者工具"
+      ]
+    },
+    {
+      "product_id": "product-8bf44d7619edcd4e",
+      "product_name": "Claude",
+      "builder_name": "Anthropic News",
+      "first_seen": "2026-08-28",
+      "last_seen": "2026-09-27",
+      "occurrence_count": 2,
+      "intelligence_type": "model_capability",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Anthropic 官方称 Claude 发现了一种新的酶系统，展示大模型在生物科学发现中的实际用途，值得关注 AI 在医药研发场景的产品化可能。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.2,
+      "summary": "Anthropic 官方称 Claude 发现了一种新的酶系统，展示大模型在生物科学发现中的实际用途，值得关注 AI 在医药研发场景的产品化可能。",
+      "title": "Claude Discovers Novel Enzyme System",
+      "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system",
+      "sources": [
+        {
+          "url": "https://www.anthropic.com/news/advancing-claude-for-education",
+          "title": "Advancing Claude For Education",
+          "source_type": "public_web",
+          "published_at": "2026-08-27T15:13:58+00:00"
+        },
+        {
+          "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system",
+          "title": "Claude Discovers Novel Enzyme System",
+          "source_type": "public_web",
+          "published_at": "2026-09-24T10:25:16+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "anthropic-claude-for-education",
+          "date": "2026-08-28",
+          "title": "Advancing Claude For Education",
+          "summary": "Anthropic宣布推进Claude在教育领域的应用，但具体功能或合作未详述。",
+          "score": 7.0,
+          "url": "https://www.anthropic.com/news/advancing-claude-for-education"
+        },
+        {
+          "update_id": "anthropic-claude-novel-enzyme-system",
+          "date": "2026-09-25",
+          "title": "Claude Discovers Novel Enzyme System",
+          "summary": "Anthropic 官方称 Claude 发现了一种新的酶系统，展示大模型在生物科学发现中的实际用途，值得关注 AI 在医药研发场景的产品化可能。",
+          "score": 8.2,
+          "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Anthropic",
+        "教育",
+        "Claude",
+        "科学发现",
+        "医药AI"
+      ]
+    },
+    {
+      "product_id": "product-e2d113357f7eb006",
+      "product_name": "Reladraw",
+      "builder_name": "jpwalsh234",
+      "first_seen": "2026-09-27",
+      "last_seen": "2026-09-27",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "需要画架构图/流程图的开发者，以及想让 AI Agent（能自主执行任务的 AI 程序）帮忙读写图表的人",
+      "user_problem": "现有工具二选一：Mermaid/Graphviz 用自动布局，图往哪摆你说了不算；Draw.io 能手动摆，但费时间，而且 AI Agent 很难去改它的文件",
+      "what_it_is": "一种文本描述的图表语言，你可以自己决定元素放在哪，不像 Mermaid 那样自动摆，也不像 Draw.io 那样难被 AI 程序操作",
+      "ai_role": "Agent 可以直接读写纯文本的 Reladraw 文件，不用去点图形界面；开发者还专门为 Claude 做了 skill（预设好的指令模板，告诉 AI 怎么用这个工具）",
+      "implementation_idea": "把图表信息存成纯文本格式，节点位置用相对坐标或方向词（如 left、right）描述，这样人看得懂、AI 也能直接改文件，渲染时再转成可视化图形",
+      "hands_on_exercise": "打开 https://github.com/reladraw/reladraw 的 Playground，用 30 分钟试写一个简单的三节点流程图（如 前端 -> API -> 数据库），故意把中间节点往右移，观察布局是否按你的指令走；再对比同样内容用 Mermaid 写，看自动布局和你的手动布局差别",
+      "limitations_or_uncertainties": "社区反馈有 bug（如某条带标签的边没有画出曲线箭头）；README 被质疑像 LLM 生成，可能影响信任度；项目创建仅约 14 天，长期维护未验证",
+      "region": "global",
+      "score": 8.2,
+      "summary": "开发者做了 Reladraw 这个图表语言，让人自己决定图怎么摆，同时方便 AI Agent 读写，解决 Mermaid 布局不可控、Draw.io 对 Agent 不友好的问题，有在线 Demo 和 Claude skill 可直接试。",
+      "title": "Reladraw：让人类和 AI Agent 都能读写的手动布局图表语言",
+      "url": "https://github.com/reladraw/reladraw",
+      "sources": [
+        {
+          "url": "https://github.com/reladraw/reladraw",
+          "title": "Show HN: Reladraw – A diagram language where you decide where to place things",
+          "source_type": "hackernews",
+          "published_at": "2026-09-26T17:10:40+00:00"
+        },
+        {
+          "url": "https://github.com/reladraw/reladraw/blob/main/.claude/skills/reladraw/SKILL.md",
+          "title": "reladraw/.claude/skills/reladraw/SKILL.md at main · reladraw ...",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "reladraw-launch",
+          "date": "2026-09-27",
+          "title": "Reladraw：让人类和 AI Agent 都能读写的手动布局图表语言",
+          "summary": "开发者做了 Reladraw 这个图表语言，让人自己决定图怎么摆，同时方便 AI Agent 读写，解决 Mermaid 布局不可控、Draw.io 对 Agent 不友好的问题，有在线 Demo 和 Claude skill 可直接试。",
+          "score": 8.2,
+          "url": "https://github.com/reladraw/reladraw"
+        }
+      ],
+      "usage_flow": [
+        "在 GitHub 提供的在线 Playground 里写 Reladraw 代码，或用 npm 安装到本地",
+        "用类似 'node parser at: (0,0)'、'edge parser -> renderer from: left to: right' 的语法描述节点和连线",
+        "自己指定每个元素的位置和连线的走向",
+        "如果要用 Claude 等 Agent 操作，按文档安装 skill，让 Agent 直接读写这个文本文件"
+      ],
+      "learning_points": [
+        "Agent：能自主调用工具、执行多步任务的 AI 程序，不只是聊天",
+        "Function Calling：AI 调用外部工具的机制，Reladraw 的 skill 本质上就是让 Claude 学会怎么调用这个图表工具",
+        "为什么 AI 难操作 Draw.io：因为它是二进制或复杂 XML 的图形文件，而纯文本格式 Agent 更容易读写和版本控制"
+      ],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "开发者工具",
+        "图表",
+        "开源"
+      ]
+    },
+    {
+      "product_id": "product-3a2a4d9404694356",
+      "product_name": "Kākāpō Party",
+      "builder_name": "Simon Willison",
+      "first_seen": "2026-09-27",
+      "last_seen": "2026-09-27",
+      "occurrence_count": 1,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Simon Willison 用 Claude Opus 5.5 把三张鸮鹦鹉照片做成 HTML5 canvas 像素动画并公开工具，展示了用自然语言提示直接产出可玩 Demo 的完整过程，值得看是因为它是一手可复现的 AI 构建案例。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.2,
+      "summary": "Simon Willison 用 Claude Opus 5.5 把三张鸮鹦鹉照片做成 HTML5 canvas 像素动画并公开工具，展示了用自然语言提示直接产出可玩 Demo 的完整过程，值得看是因为它是一手可复现的 AI 构建案例。",
+      "title": "Kākāpō Party",
+      "url": "https://simonwillison.net/2026/Sep/26/kakapo-party/",
+      "sources": [
+        {
+          "url": "https://simonwillison.net/2026/Sep/26/kakapo-party/",
+          "title": "Kākāpō Party",
+          "source_type": "rss",
+          "published_at": "2026-09-26T23:39:06+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "simonwillison-kakapo-party-claude-pixel-art",
+          "date": "2026-09-27",
+          "title": "Kākāpō Party",
+          "summary": "Simon Willison 用 Claude Opus 5.5 把三张鸮鹦鹉照片做成 HTML5 canvas 像素动画并公开工具，展示了用自然语言提示直接产出可玩 Demo 的完整过程，值得看是因为它是一手可复现的 AI 构建案例。",
+          "score": 8.2,
+          "url": "https://simonwillison.net/2026/Sep/26/kakapo-party/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Claude",
+        "像素动画",
+        "提示词",
+        "Demo"
+      ]
+    },
+    {
+      "product_id": "product-6d5dd450eccbf677",
+      "product_name": "chess-postmortem-skills",
+      "builder_name": "brumar",
+      "first_seen": "2026-09-27",
+      "last_seen": "2026-09-27",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "开发者做了个 Claude Code skill，能结合你的语音笔记和 Stockfish 分析你的国际象棋对局，生成带讲解的视频，解决自己复盘时只能点 Stockfish 分支不够直观的问题，一次分析约花 15 美元。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.0,
+      "summary": "开发者做了个 Claude Code skill，能结合你的语音笔记和 Stockfish 分析你的国际象棋对局，生成带讲解的视频，解决自己复盘时只能点 Stockfish 分支不够直观的问题，一次分析约花 15 美元。",
+      "title": "Show HN: A Claude Code skill to analyze your chess games",
+      "url": "https://github.com/brumar/chess-postmortem-skills",
+      "sources": [
+        {
+          "url": "https://github.com/brumar/chess-postmortem-skills",
+          "title": "Show HN: A Claude Code skill to analyze your chess games",
+          "source_type": "hackernews",
+          "published_at": "2026-09-26T15:34:53+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "chess-postmortem-skills",
+          "date": "2026-09-27",
+          "title": "Show HN: A Claude Code skill to analyze your chess games",
+          "summary": "开发者做了个 Claude Code skill，能结合你的语音笔记和 Stockfish 分析你的国际象棋对局，生成带讲解的视频，解决自己复盘时只能点 Stockfish 分支不够直观的问题，一次分析约花 15 美元。",
+          "score": 8.0,
+          "url": "https://github.com/brumar/chess-postmortem-skills"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Claude Code",
+        "Agent",
+        "垂直应用",
+        "开源"
+      ]
+    },
+    {
+      "product_id": "product-facdbd8ac2e5d2b6",
+      "product_name": "Drawgent",
+      "builder_name": "parasitid",
+      "first_seen": "2026-09-27",
+      "last_seen": "2026-09-27",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "有人做了 Drawgent，让编码 Agent 直接在 Excalidraw 画布上工作，你可以边画架构图边让 AI 写代码，评论区还提到 Excalidraw 官方已提供 MCP 接口。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.6,
+      "summary": "有人做了 Drawgent，让编码 Agent 直接在 Excalidraw 画布上工作，你可以边画架构图边让 AI 写代码，评论区还提到 Excalidraw 官方已提供 MCP 接口。",
+      "title": "Drawgent: Coding agent on a live Excalidraw canvas",
+      "url": "https://tangled.org/yanndegat.tngl.sh/drawgent",
+      "sources": [
+        {
+          "url": "https://tangled.org/yanndegat.tngl.sh/drawgent",
+          "title": "Drawgent: Coding agent on a live Excalidraw canvas",
+          "source_type": "hackernews",
+          "published_at": "2026-09-26T15:56:34+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "drawgent-launch",
+          "date": "2026-09-27",
+          "title": "Drawgent: Coding agent on a live Excalidraw canvas",
+          "summary": "有人做了 Drawgent，让编码 Agent 直接在 Excalidraw 画布上工作，你可以边画架构图边让 AI 写代码，评论区还提到 Excalidraw 官方已提供 MCP 接口。",
+          "score": 7.6,
+          "url": "https://tangled.org/yanndegat.tngl.sh/drawgent"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "编码",
+        "Excalidraw",
+        "MCP"
+      ]
+    },
+    {
+      "product_id": "product-97b37931b912515a",
+      "product_name": "Gemini / AI Mode",
+      "builder_name": "Jagmeet Singh",
+      "first_seen": "2026-09-27",
+      "last_seen": "2026-09-27",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Google 在印度小范围测试让用户通过 Gemini 和 AI Mode 直接购买沃尔玛旗下 Flipkart 的商品，计划十月扩大范围，值得看的是 AI 助手正从推荐走向直接完成交易。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.5,
+      "summary": "Google 在印度小范围测试让用户通过 Gemini 和 AI Mode 直接购买沃尔玛旗下 Flipkart 的商品，计划十月扩大范围，值得看的是 AI 助手正从推荐走向直接完成交易。",
+      "title": "Google tests buying from Walmart-owned Flipkart through Gemini and AI Mode in India",
+      "url": "https://techcrunch.com/2026/09/26/google-tests-buying-from-walmart-owned-flipkart-through-gemini-and-ai-mode-in-india/",
+      "sources": [
+        {
+          "url": "https://techcrunch.com/2026/09/26/google-tests-buying-from-walmart-owned-flipkart-through-gemini-and-ai-mode-in-india/",
+          "title": "Google tests buying from Walmart-owned Flipkart through Gemini and AI Mode in India",
+          "source_type": "rss",
+          "published_at": "2026-09-27T01:30:00+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "google-gemini-flipkart-shopping-india",
+          "date": "2026-09-27",
+          "title": "Google tests buying from Walmart-owned Flipkart through Gemini and AI Mode in India",
+          "summary": "Google 在印度小范围测试让用户通过 Gemini 和 AI Mode 直接购买沃尔玛旗下 Flipkart 的商品，计划十月扩大范围，值得看的是 AI 助手正从推荐走向直接完成交易。",
+          "score": 7.5,
+          "url": "https://techcrunch.com/2026/09/26/google-tests-buying-from-walmart-owned-flipkart-through-gemini-and-ai-mode-in-india/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "AI电商",
+        "Gemini",
+        "AI Mode"
+      ]
+    },
     {
       "product_id": "product-2d4935cf215fde2e",
       "product_name": "skills.sh",
@@ -108,70 +502,6 @@
         "软件工厂",
         "研发流程",
         "Warp"
-      ]
-    },
-    {
-      "product_id": "product-8bf44d7619edcd4e",
-      "product_name": "Claude",
-      "builder_name": "Anthropic News",
-      "first_seen": "2026-08-28",
-      "last_seen": "2026-09-26",
-      "occurrence_count": 2,
-      "intelligence_type": "model_capability",
-      "evidence_status": "first_party",
-      "target_user": "未公开",
-      "user_problem": "未公开",
-      "what_it_is": "Anthropic 官方称 Claude 发现了一种新的酶系统，展示大模型在生物科学发现中的实际用途，值得关注 AI 在医药研发场景的产品化可能。",
-      "ai_role": "未公开",
-      "implementation_idea": "未公开",
-      "hands_on_exercise": "未公开",
-      "limitations_or_uncertainties": "未公开",
-      "region": "global",
-      "score": 8.2,
-      "summary": "Anthropic 官方称 Claude 发现了一种新的酶系统，展示大模型在生物科学发现中的实际用途，值得关注 AI 在医药研发场景的产品化可能。",
-      "title": "Claude Discovers Novel Enzyme System",
-      "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system",
-      "sources": [
-        {
-          "url": "https://www.anthropic.com/news/advancing-claude-for-education",
-          "title": "Advancing Claude For Education",
-          "source_type": "public_web",
-          "published_at": "2026-08-27T15:13:58+00:00"
-        },
-        {
-          "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system",
-          "title": "Claude Discovers Novel Enzyme System",
-          "source_type": "public_web",
-          "published_at": "2026-09-24T10:25:16+00:00"
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "anthropic-claude-for-education",
-          "date": "2026-08-28",
-          "title": "Advancing Claude For Education",
-          "summary": "Anthropic宣布推进Claude在教育领域的应用，但具体功能或合作未详述。",
-          "score": 7.0,
-          "url": "https://www.anthropic.com/news/advancing-claude-for-education"
-        },
-        {
-          "update_id": "anthropic-claude-novel-enzyme-system",
-          "date": "2026-09-25",
-          "title": "Claude Discovers Novel Enzyme System",
-          "summary": "Anthropic 官方称 Claude 发现了一种新的酶系统，展示大模型在生物科学发现中的实际用途，值得关注 AI 在医药研发场景的产品化可能。",
-          "score": 8.2,
-          "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system"
-        }
-      ],
-      "usage_flow": [],
-      "learning_points": [],
-      "verticals": [],
-      "tags": [
-        "Anthropic",
-        "教育",
-        "Claude",
-        "科学发现",
-        "医药AI"
       ]
     },
     {
