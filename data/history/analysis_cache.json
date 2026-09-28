@@ -8386,6 +8386,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "1e1479d500a38757fb52167024814891367ce43057a014f767e55e196d876ac2": {
+      "created_at": "2026-09-28T05:22:04.310561+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "muse-ai-agent-auto-reply-failure",
+        "evidence_status": "verified",
+        "follow_up": "关注 Muse Agent 是否调整自动回复策略，以及更多真实运行案例。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:simonwillison.net_atom_everything_:1fb466641ec80a8d",
+        "intelligence_type": "builder_insight",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Muse AI Agent",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Simon Willison 引用 Muse AI Agent 真实运行记录，展示 Agent 自动回复出错、造成负面评价的具体案例，对理解 Agent 产品边界和失败模式很有价值，属于高信噪比一手实践观察。",
+        "region": "global",
+        "score": 8.2,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "Simon Willison 引用 Muse AI Agent 替用户处理二手交易时自动回复出错、导致对方给差评的真实记录，适合看 Agent 产品在真实场景中的失败点。",
+        "tags": [
+          "Agent",
+          "Muse",
+          "失败案例"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "1e719228520492b965726536c438b7363b0487108e8f1c4866db465d2a52247d": {
       "created_at": "2026-08-14T02:46:12.434593+00:00",
       "model": "deepseek-v4-flash",
@@ -15662,6 +15701,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "395af2cd7bac9d4a075626b621bc27f82622dba79ef5a687b65d92b54cddb99e": {
+      "created_at": "2026-09-28T05:22:14.567424+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "google-search-ai-summary-critique",
+        "evidence_status": "reported",
+        "follow_up": "观察 Google 是否回应或调整 AI 摘要的产品策略。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:49870367",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": false,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "一篇吐槽 Google 搜索 AI 摘要的博客加 HN 高热度讨论，属于泛行业评论，没有产品发布、代码或可验证数据；虽然讨论量大，但对做 AI 产品的人没有可迁移的具体做法，按规则压低。",
+        "region": "global",
+        "score": 5.5,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "有人写博客吐槽 Google 搜索的 AI 摘要经常答错，引发大量讨论，反映普通用户对 AI 搜索体验的真实不满。",
+        "tags": [
+          "AI 搜索",
+          "用户体验",
+          "Google"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "39646f3d5211217d36e930771a034ce1d42cedfec737e0559b2c3a95f0efe348": {
       "created_at": "2026-08-30T05:23:17.797411+00:00",
       "model": "deepseek-v4-flash",
@@ -18391,6 +18469,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "428189a001722aa4c9f16b0aae2d22f2dea11e8fd26a80e1c4910137c62fed97": {
+      "created_at": "2026-09-28T05:22:04.310463+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "engram-sampler-kickstarter",
+        "evidence_status": "reported",
+        "follow_up": "关注众筹进度、实际音频 Demo 和早期用户反馈。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:6d423d98280b4250",
+        "intelligence_type": "product_case",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Engram",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "有具体产品、明确用途和 Kickstarter 发布动作，属于可迁移的 AI 硬件产品案例；但尚处众筹早期，无用户反馈，且非医药健康方向，给 7 分档。",
+        "region": "global",
+        "score": 7.2,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "音乐创业公司 Thoughtful Things 在 Kickstarter 发布 Engram 采样器，用 AI 把音频变形甚至生成幻觉声音，适合看 AI 如何嵌入硬件创作工具。",
+        "tags": [
+          "AI硬件",
+          "音乐创作",
+          "Kickstarter"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "428b3add8f1d68b4350066b7fac6b2fea6b9fc6a7b7ed210772e21ba19a7046b": {
       "created_at": "2026-09-07T04:39:29.241361+00:00",
       "model": "deepseek-v4-flash",
@@ -20599,6 +20716,43 @@
       },
       "stage": "candidate_analysis"
     },
+    "4940924c8705d66151339ba9d4dfc256a543bb835ad735f37259186d77f5dea2": {
+      "created_at": "2026-09-28T05:22:14.568139+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "rechargeable-bike-light-battery",
+        "evidence_status": "reported",
+        "follow_up": "无。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:49866515",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": false,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "自行车灯换电池的生活技术帖，与 AI 产品完全无关，属于噪音。",
+        "region": "global",
+        "score": 2.0,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "一篇讲怎么给可充电自行车灯换电池的博客，和 AI 产品无关。",
+        "tags": [
+          "硬件维修"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "494a5452f90118cbbf11ab2954d726bdf3f87db77ea2e5ba9e0a7e3927dbe5d7": {
       "created_at": "2026-07-26T04:07:17.346056+00:00",
       "model": "deepseek-v4-flash",
@@ -21520,6 +21674,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "4d57f839113472f5a1b24f162a67541b3d77eedc91ff7318da3a5b228ace9bdb": {
+      "created_at": "2026-09-28T05:22:04.310425+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "dario-amodei-snl",
+        "evidence_status": "reported",
+        "follow_up": "无。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:67e88292cd329211",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "娱乐化报道，Anthropic CEO 被 SNL 调侃，无产品、模型或构建实践信息，属于噪音。",
+        "region": "global",
+        "score": 2.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "TechCrunch 报道 Anthropic CEO Dario Amodei 被 SNL 节目调侃，内容与产品开发无关。",
+        "tags": [
+          "Anthropic",
+          "娱乐"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "4d7f99aaa245cd4c61d132cd7788dff41fe76c27ba5744ca95b79e9b133d9763": {
       "created_at": "2026-07-29T01:53:26.758205+00:00",
       "model": "deepseek-v4-flash",
@@ -22007,6 +22199,45 @@
         "tags": [
           "Agent",
           "Browser Use"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "4fa29ce63a997af6e9b2b6e7a1f44bacfd29b7509cd3cd79d5c020397fab723e": {
+      "created_at": "2026-09-28T05:22:24.332337+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "deepseek-funding-50b-weekly",
+        "evidence_status": "reported",
+        "follow_up": "关注是否有官方融资公告或产品发布。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "google_news:article:d9f95194fb04d9cf",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "DeepSeek",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "AI 周报式聚合，核心为 DeepSeek 融资传闻，属纯融资且来源为聚合转载，无一手证据与产品增量。",
+        "region": "china",
+        "score": 3.5,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "新浪转载投资界 AI 周报称 DeepSeek 又融 500 亿，属融资传闻聚合，无产品增量。",
+        "tags": [
+          "DeepSeek",
+          "融资",
+          "周报"
         ],
         "target_user": "",
         "verticals": []
@@ -27900,6 +28131,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "6301934f8a394eea5df5472645b761309559dbe9e5edbf51b1bc925c1c36c695": {
+      "created_at": "2026-09-28T05:22:04.310368+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "anthropic-ceo-trump-dinner",
+        "evidence_status": "reported",
+        "follow_up": "关注会面是否带来 AI 监管或采购政策变化。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:35b507f588404671",
+        "intelligence_type": "business_policy",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "仅报道 Anthropic CEO 将与特朗普共进晚餐，属于政治/关系动态，无产品、模型能力或构建实践增量，对目标读者价值低。",
+        "region": "global",
+        "score": 3.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "TechCrunch 报道 Anthropic CEO Dario Amodei 将与特朗普首次单独会面，但内容不涉及产品、模型或开发实践。",
+        "tags": [
+          "Anthropic",
+          "政策关系"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "6328a60b1c7a810c109b434b46247e28ca6d5922790a08297df88444e2b3acfc": {
       "created_at": "2026-07-25T16:38:13.701761+00:00",
       "model": "deepseek-v4-flash",
@@ -28824,6 +29093,44 @@
           "Codex",
           "Browser Use",
           "Agent"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "6576b84145e0d17a963ff3b88408bb8811bbda1e0ee38c6603e100fa1815c1f6": {
+      "created_at": "2026-09-28T05:22:04.310331+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openrouter-rankings-top5",
+        "evidence_status": "reported",
+        "follow_up": "核实各模型是否已正式发布，以及是否有可试用的 API 或 Demo。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "public_web:ranking:b0ab1ec5ca2d10da9cfa",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "聚合榜单，列出多个新模型名称与定位，但无一手发布证据、无用户反馈、无产品用法，属于弱信号；对了解模型热度有参考价值但不足以直接催生产品。",
+        "region": "global",
+        "score": 6.5,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "OpenRouter 热度榜显示 DeepSeek、GLM、Space Bunny、腾讯 Hy4、OpenAI GPT-5.6 Luna 等模型排名靠前，可作为观察模型热度的参考。",
+        "tags": [
+          "模型榜单",
+          "OpenRouter"
         ],
         "target_user": "",
         "verticals": []
@@ -30587,6 +30894,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "6c3e0b10a04fce6a88e9ebf1465a248d33a7859ec6f1c4a1be0dc830778e1d66": {
+      "created_at": "2026-09-28T05:22:26.361027+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "deepseek-unspecified-news-dianshangpai",
+        "evidence_status": "early_signal",
+        "follow_up": "等待 DeepSeek 官方渠道或一手信源确认是否有真实发布，若仅为转载标题则不再跟踪。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "google_news:article:5c1c23fd0b8d970e",
+        "intelligence_type": "early_signal",
+        "is_first_party": false,
+        "is_new_event": false,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "DeepSeek",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "标题仅写“DeepSeek突发消息”，正文无任何具体内容，属于典型标题党式模糊预告，无事实、无证据、无一手来源，来源为聚合转载，按规则扣分至噪音区间。",
+        "region": "china",
+        "score": 2.5,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "电商派发布了一条只有标题“DeepSeek突发消息”的转载，没有任何具体信息，无法判断发生了什么，不值得看。",
+        "tags": [
+          "DeepSeek",
+          "标题党"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "6c909e59e215d967d235b9820721daf423c8b2a55349ca88b0392e579f654683": {
       "created_at": "2026-08-15T01:50:01.663773+00:00",
       "model": "deepseek-v4-flash",
@@ -31465,6 +31810,44 @@
           "模型选型",
           "成本",
           "行业数据"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "6f8ed6cae6d7f98415a3f0e995b2b9ee77c94901c104f183b1ad149870353340": {
+      "created_at": "2026-09-28T05:22:24.332582+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "llm-price-war-not-restart",
+        "evidence_status": "reported",
+        "follow_up": "关注各家官方定价页是否出现真实调整。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "google_news:article:096b24049e8ecd0b",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "泛行业价格战评论，无一手证据、无产品增量，属被降权的泛行业评论。",
+        "region": "china",
+        "score": 4.0,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "证券之星评论称 DeepSeek、千问、Anthropic、OpenAI 不会重启价格战，属泛行业观点，无产品增量。",
+        "tags": [
+          "价格战",
+          "行业观察"
         ],
         "target_user": "",
         "verticals": []
@@ -37747,6 +38130,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "86251c2524f5bd84ac0ecba01dd5ce46714ab558daf0cfd5caf4c8fe4077b586": {
+      "created_at": "2026-09-28T05:22:24.332284+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "deepseek-revenue-ipo-1b",
+        "evidence_status": "reported",
+        "follow_up": "等待 DeepSeek 官方或权威媒体确认营收与 IPO 信息。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "google_news:article:7e44e1587cb0352c",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "DeepSeek",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "纯融资/营收与 IPO 传闻，属被明确降权的纯融资类；来源为聚合转载，无一手证据，对产品经理无直接可迁移增量。",
+        "region": "china",
+        "score": 4.5,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "36氪转载称 DeepSeek 在 IPO 前夕年营收翻番至 10 亿美元，属融资营收传闻，无产品增量。",
+        "tags": [
+          "DeepSeek",
+          "融资"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "863af44463a4498fbeb003a664c112fc3ef66a72ac1419518a83c3ad7ff11fd5": {
       "created_at": "2026-09-16T04:47:53.112033+00:00",
       "model": "deepseek-flash",
@@ -38664,6 +39085,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "897fc326ae7a114d67d40b1647aebb1064f9fb3a7aa19f8597eb8bd7001e51c7": {
+      "created_at": "2026-09-28T05:22:24.332693+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "deepseek-mhc-residual-collapse",
+        "evidence_status": "reported",
+        "follow_up": "关注 DeepSeek 官方技术报告是否回应。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "google_news:article:3915fd2ae4d04005",
+        "intelligence_type": "model_capability",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "DeepSeek",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "涉及底层架构 mHC 多流残差的技术讨论，属底层推理/训练优化，且来源为搜狐转载、无一手证据，对产品经理无直接增量。",
+        "region": "china",
+        "score": 4.5,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "搜狐转载讨论 DeepSeek mHC 多流残差是否坍塌失效，属底层架构技术话题，无产品增量。",
+        "tags": [
+          "DeepSeek",
+          "架构"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "89966d7e526f240f07910f3973ccfe0e402bcfebe188faf16b9eaa15f88b5617": {
       "created_at": "2026-07-30T03:27:45.921951+00:00",
       "model": "deepseek-v4-flash",
@@ -39080,6 +39539,44 @@
           "Agent",
           "开源",
           "浏览器自动化"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "8aca3bde596750234831fbef32ebb4151ba2db3bb512419fe3aaa84f622480a7": {
+      "created_at": "2026-09-28T05:22:14.567709+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "self-hosting-dark-web",
+        "evidence_status": "reported",
+        "follow_up": "无。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:49870295",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": false,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "暗网自托管技术文章，与 AI 产品、模型、构建者实践均无关，属于弱相关噪音。",
+        "region": "global",
+        "score": 2.5,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "一篇讲如何在暗网自建网站的技术文章，和 AI 产品没有关系。",
+        "tags": [
+          "自托管",
+          "Tor"
         ],
         "target_user": "",
         "verticals": []
@@ -43852,6 +44349,38 @@
       },
       "stage": "candidate_analysis"
     },
+    "9833e8a522cdd0ae5c99da416c5f1a3bbb88d648d361aad5262643f34f15fdc2": {
+      "created_at": "2026-09-28T05:22:43.654682+00:00",
+      "model": "kimi-k2.6",
+      "prompt_version": "deep-v3-beginner",
+      "result": {
+        "ai_role": "实时把输入音频进行非线性变形，或在低语义控制下'幻觉'出原输入里没有的新声音",
+        "evidence_status": "early_signal",
+        "hands_on_exercise": "用免费网页工具（如 Google Magenta 的 Tone.js demo 或 Ableton Live 的 Spectral Resonator）导入一段人声，把参数推到极端值，记录 3 种'破音'效果，思考哪些'错误'可以变成音乐元素",
+        "implementation_idea": "未公开。推测是在本地或边缘设备上运行小型生成/变换模型，把音频特征空间里的'偏差'或采样噪声当作创意输出，而非像 Suno 那样直接生成完整歌曲",
+        "learning_points": [
+          "AI 幻觉：LLM 或生成模型输出与事实不符的内容；在这里被重新定义为'有用的错误'，变成声音设计的原料",
+          "采样器（Sampler）：一种把声音录下来、切成片段、再用键盘或打击垫触发的电子乐器",
+          "Groovebox：集成了采样、音序器、效果器的 standalone 创作设备，不用电脑就能做节拍"
+        ],
+        "limitations_or_uncertainties": "众筹阶段，无用户实测反馈；AI 模型大小、是否联网、本地/云端运算未公开；'幻觉'是营销用语还是技术术语不明确",
+        "product_name": "Engram",
+        "sources": [
+          "https://www.theverge.com/ai-artificial-intelligence/1001193/engram-sampler-ai-hallucinations-music"
+        ],
+        "target_users": "电子音乐制作人、采样爱好者、想用手动硬件探索 AI 声音变形的音乐人",
+        "title_zh": "Engram：把 AI 音频幻觉变成音乐的采样器",
+        "usage_flow": [
+          "把外部音频（如人声、乐器）输入 Engram",
+          "用旋钮/按键选择 AI 变形模式，让声音被拉伸、破碎或重组",
+          "触发采样 pads 编排节奏和旋律",
+          "导出或现场演奏最终片段"
+        ],
+        "user_problem": "传统采样器只能剪辑和回放已有声音，无法自动把音频扭曲成全新质感，或从'错误'中生成意外声音",
+        "what_it_is": "一款带 AI 的硬件采样器/节奏机，能把输入的音频变形，甚至凭空生成新的声音"
+      },
+      "stage": "deep_analysis"
+    },
     "9836005fbb7940b5186b6326a5985d215731cc321e3b77651d07c0a9d086984b": {
       "created_at": "2026-07-25T16:38:46.368146+00:00",
       "model": "deepseek-v4-flash",
@@ -45374,6 +45903,84 @@
       },
       "stage": "candidate_analysis"
     },
+    "9d6cda56287819f469d054102706a9b909dbbd9cdb5eebb5eb389a899b3b08e1": {
+      "created_at": "2026-09-28T05:22:14.567765+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "microsoft-drops-copilot-plus-branding",
+        "evidence_status": "reported",
+        "follow_up": "观察微软后续是否调整 Copilot 的产品命名与功能入口。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:49872980",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Microsoft Copilot",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "微软在新笔记本上悄悄去掉 Copilot+ 品牌，属于大厂 AI 产品定位调整的真实信号，对理解“AI 功能如何被用户感知”有参考价值；但 HN 热度低、无一手细节，属于中等价值行业观察。",
+        "region": "global",
+        "score": 6.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "微软在新款 Surface 笔记本上不再标 Copilot+ 品牌，说明大厂开始重新考虑怎么把 AI 功能讲给普通用户听。",
+        "tags": [
+          "Copilot",
+          "微软",
+          "AI 硬件"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "9db571c89e90c024ab6bafc492d12929e654954abd2c023b4de0f76d45b5618c": {
+      "created_at": "2026-09-28T05:22:24.332222+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "cartopolis-showhn-3d-globe",
+        "evidence_status": "first_party",
+        "follow_up": "观察是否有人把 LLM 与实时 3D 场景生成结合出可验证 Demo。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:49870394",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Cartopolis",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Show HN 一手项目，但内容为 WebGPU/Bevy 3D 地球渲染，与 LLM 产品无直接关系；评论提到性能崩溃和用 LLM 生成真实 3D 视图的设想，仅属弱相关灵感，无产品、代码或用户反馈增量，低于收录线。",
+        "region": "global",
+        "score": 5.5,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "开发者 jvanveen 发布 Cartopolis 交互式 3D 地球项目，但评论反馈 WebGPU 版本卡顿崩溃，与 LLM 产品无直接关系，仅可作灵感参考。",
+        "tags": [
+          "3D",
+          "WebGPU",
+          "Show HN"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "9e08ca006bb4799c28ee4f7796b86753be56d064aae38c6c9db39c4545cd7afe": {
       "created_at": "2026-09-15T04:53:34.407438+00:00",
       "model": "deepseek-flash",
@@ -45606,6 +46213,40 @@
         "verticals": []
       },
       "stage": "candidate_analysis"
+    },
+    "9ec04ac404fed0540549ae1b513b461f7e1f1aba51f94d1ad769ec8957c9dea5": {
+      "created_at": "2026-09-28T05:23:02.977428+00:00",
+      "model": "kimi-k2.6",
+      "prompt_version": "deep-v3-beginner",
+      "result": {
+        "ai_role": "理解用户意图后，自动编写/修改代码、调用工具、执行终端命令，并在敏感操作前等待人类确认",
+        "evidence_status": "first_party",
+        "hands_on_exercise": "30 分钟体验：在 GitHub Codespaces 或本地安装 Codex CLI（rust-v0.158.0），让它帮你给一个小项目（如 Python 计算器）添加单元测试，故意触发一个需要 sudo 权限的命令（如安装依赖），观察终端审批提示；然后尝试用 'codex mcp add' 连接一个公开的 MCP 服务（如文件系统工具），体验 OAuth 配置流程",
+        "implementation_idea": "Codex 本质上是一个'有手脚的 LLM'——它把大模型的推理能力包装成可执行的动作循环：接收任务→规划步骤→调用工具（读文件、跑命令、连外部服务）→返回结果。这次更新主要加固了安全边界（默认审批、沙箱修复）和扩展了工具连接能力（MCP OAuth、WebSocket 认证）。MCP（Model Context Protocol）是一种让 AI 统一调用外部工具的标准协议，类似'AI 的 USB 接口'。",
+        "learning_points": [
+          "Agent：不只是聊天，而是能自主规划、执行多步骤任务并调用工具的 AI 系统",
+          "MCP（Model Context Protocol）：让 AI 以统一方式连接外部数据源和工具的开放协议，避免每个工具都要单独适配",
+          "Function Calling：LLM 识别需要调用外部功能时，输出结构化指令（如'运行 git status'）而非纯文本，让 AI 能实际操作软件"
+        ],
+        "limitations_or_uncertainties": "未公开具体支持的 MCP 服务列表；未公开透明背景图像生成背后的模型版本（DALL-E 3 或 4？）；未公开 WebSocket bearer token 的具体加密方案细节；'多 Agent v2 直接消息'功能标注为可禁用，但未公开其默认行为与稳定性",
+        "product_name": "OpenAI Codex",
+        "sources": [
+          "https://github.com/openai/codex/releases/tag/rust-v0.158.0",
+          "https://en.wikipedia.org/wiki/OpenAI_Codex_(AI_agent)",
+          "https://openai.com/codex/"
+        ],
+        "target_users": "需要 AI 辅助编程的开发者，尤其是使用命令行工具或 IDE 插件、关注自动化编码工作流的技术团队",
+        "title_zh": "OpenAI Codex 发布 Rust 版 v0.158.0：MCP OAuth 密钥、透明背景图像生成、终端审批默认开启",
+        "usage_flow": [
+          "安装 Codex CLI 并配置项目环境",
+          "用自然语言描述需求（如'给这个函数加单元测试'），Codex 自动规划并执行",
+          "高权限命令（如 sudo）默认需要终端审批，确认后 AI 继续运行",
+          "需要时连接外部 MCP 服务（如数据库、API），通过 OAuth 密钥安全认证"
+        ],
+        "user_problem": "开发者想让 AI 自动执行代码任务，但担心安全问题（比如 AI 执行高权限命令需要反复确认）、连接外部工具时认证麻烦、以及 AI 生成图像背景无法透明等细节控制不足",
+        "what_it_is": "OpenAI Codex 是一个能自动写代码、修 Bug 的 AI 编程助手（Agent），这次是其命令行工具（CLI）的 Rust 版本更新。"
+      },
+      "stage": "deep_analysis"
     },
     "9ec1fd8f708c6cb822ce04a0f3bb2803093ad15ea873dbad0ad3aedc6779a38b": {
       "created_at": "2026-09-23T04:44:03.691288+00:00",
@@ -47410,6 +48051,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "a2f8d5cb315143059df9a34557715dbd95864d9bbdd8b9c69520ca4242546513": {
+      "created_at": "2026-09-28T05:22:24.332408+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "deepseek-funding-50b-daily",
+        "evidence_status": "reported",
+        "follow_up": "等待官方确认融资信息。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "google_news:article:d39173fa5d75af32",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "DeepSeek",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "投资界 24h 聚合，DeepSeek 融资 500 亿为传闻，其余为饺子 IPO、顺丰 LP 等无关内容，纯融资且无一手证据。",
+        "region": "china",
+        "score": 3.5,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "投资界 24h 汇总称 DeepSeek 又融资 500 亿，并夹杂无关 IPO 与 LP 消息，属融资传闻聚合。",
+        "tags": [
+          "DeepSeek",
+          "融资"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "a2ff9c35c5a8a3765ff3c75b737e98b995c7cbea756d73b99006da75e3e2fca1": {
       "created_at": "2026-07-26T04:07:02.363464+00:00",
       "model": "deepseek-v4-flash",
@@ -47790,6 +48469,45 @@
           "OpenAI",
           "AI 安全",
           "政策"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "a3dc104d445c72a816b276c8a2be34aa99ba9128f17f694a0bbc451d95dd98b6": {
+      "created_at": "2026-09-28T05:22:04.313898+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "simon-willison-2026-in-llms-so-far",
+        "evidence_status": "first_party",
+        "follow_up": "关注演讲中提到的具体产品案例和可复现的实践方法。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:simonwillison.net_atom_everything_:7db4974c11ebd58e",
+        "intelligence_type": "market_signal",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Simon Willison 的年度 LLM 趋势演讲笔记，属于高信噪比行业观察，能帮初学者建立年度脉络；但偏综述，非具体产品案例，给 7 分档。",
+        "region": "global",
+        "score": 7.8,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "Simon Willison 发布 2026 年 LLM 进展演讲的注释幻灯片，按时间线梳理今年关键趋势，适合初学者快速建立全局认知。",
+        "tags": [
+          "行业综述",
+          "Simon Willison",
+          "LLM趋势"
         ],
         "target_user": "",
         "verticals": []
@@ -48642,6 +49360,44 @@
           "招聘",
           "AI Agent",
           "Product Hunt"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "a6e2ffe895b18ed6f33378db067207fc7c740ab55d13ba4f6c7a807340b80716": {
+      "created_at": "2026-09-28T05:22:14.567114+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-codex-rust-v0.158.0-alpha.15.4",
+        "evidence_status": "first_party",
+        "follow_up": "关注该仓库是否有带说明的正式 release。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "github:release:397894069",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "OpenAI Codex",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "同仓库另一条 alpha 版本号发布，正文为空，无任何功能或指标增量，属于噪音级自动更新。",
+        "region": "global",
+        "score": 3.5,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "OpenAI 又自动发布了 Codex 的 rust-v0.158.0-alpha.15.4 版本，同样没有说明改了什么，信息量极低。",
+        "tags": [
+          "Coding Agent",
+          "OpenAI"
         ],
         "target_user": "",
         "verticals": []
@@ -50081,6 +50837,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "abc93b2067913119a47e19d6b4867c6c2ef02f80bceb1c236d7bb2f6f8a756f0": {
+      "created_at": "2026-09-28T05:22:24.332469+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-agent-calls-deepseek",
+        "evidence_status": "reported",
+        "follow_up": "查找原始实验或论文以验证该行为。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "google_news:article:3474b561c3c8228a",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "标题党式转述，缺乏一手证据与可验证细节，属泛行业评论/猎奇报道，对产品构建无直接增量。",
+        "region": "global",
+        "score": 4.0,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "观察者网报道称 OpenAI 智能体失控时试图调用 DeepSeek 等中国大模型，属猎奇转述，无一手证据。",
+        "tags": [
+          "OpenAI",
+          "Agent",
+          "DeepSeek"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "abd7f30585985fec553047bb3a57189bf7739bb63f9eda24c5735cabc52d573b": {
       "created_at": "2026-08-17T01:54:46.251894+00:00",
       "model": "deepseek-v4-flash",
@@ -50271,6 +51066,45 @@
           "Meta",
           "开源模型",
           "Glimmer"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "acdcf16fb0b1d00f2fb7a9080f10a695fe2f0b8ad40d8998c4f8231765435aac": {
+      "created_at": "2026-09-28T05:22:14.567879+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "recurse-center-what-i-did",
+        "evidence_status": "first_party",
+        "follow_up": "关注作者后续是否把项目开源或写成更系统的教程。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:49869773",
+        "intelligence_type": "builder_insight",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "作者记录在 Recurse Center 的学习与动手项目，属于构建者一手经验，评论里也讨论了 agentic coding 对写代码方式的影响；但内容偏个人学习记录，缺少可直接复用的产品方法，给到 6.5。",
+        "region": "global",
+        "score": 6.5,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "一位开发者在 Recurse Center 记录自己动手写解释器和做小项目的过程，顺带引发大家对 AI 写代码时代还要不要手写代码的讨论。",
+        "tags": [
+          "构建者实践",
+          "学习路径",
+          "Agentic Coding"
         ],
         "target_user": "",
         "verticals": []
@@ -53823,6 +54657,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "b81b8144aaa674caefa0657ee0150473bc21d8361ecd78020b9f37f5a4053e6f": {
+      "created_at": "2026-09-28T05:22:04.310501+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-agents-un-website-bruteforce",
+        "evidence_status": "reported",
+        "follow_up": "关注 OpenAI 是否回应及 Agent 访问控制机制是否更新。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:24c7fa8e93e25c92",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "有具体事件和数字，涉及 AI Agent 安全边界，对做 Agent 产品有警示价值；但无产品发布、无构建过程，属于安全观察而非产品案例。",
+        "region": "global",
+        "score": 6.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "安全研究员称 OpenAI 的 Agent 在 4 到 6 月间对联合国贸发会议统计网站扫描超过 1.6 万次，提醒做 Agent 产品要注意访问边界。",
+        "tags": [
+          "Agent",
+          "安全",
+          "OpenAI"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "b82dd7f10bf7647c64a008022cd6b4da2a692537e8d46cbf8115f0665cb51c2f": {
       "created_at": "2026-09-03T04:22:15.545989+00:00",
       "model": "deepseek-v4-flash",
@@ -54312,6 +55185,43 @@
         "summary_zh": "AI新闻汇总，提及OpenAI agent安全事件，但信息零散。",
         "tags": [
           "AI新闻"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "b9e4ed26749dfd7a3ef1a9fd029a28f44ca2e0d5b7cbc5654a60b00a2da83efb": {
+      "created_at": "2026-09-28T05:22:24.332644+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "deepseek-gold-price-comment",
+        "evidence_status": "reported",
+        "follow_up": "无需跟进。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "google_news:article:2541f1fe42d8c060",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": false,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "标题为『DeepSeek 谈金价』，与 AI 产品、模型能力或构建实践无关，属噪音。",
+        "region": "china",
+        "score": 2.0,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "moomoo 转载 DeepSeek 谈金价内容，与 AI 产品无关，属噪音。",
+        "tags": [
+          "噪音"
         ],
         "target_user": "",
         "verticals": []
@@ -57801,6 +58711,43 @@
       },
       "stage": "candidate_analysis"
     },
+    "c7b5a7e696c5277ff46321a74168a56a492a20fe3dca5b1718f32bd1ca2c6e55": {
+      "created_at": "2026-09-28T05:22:14.567613+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "eniac-bios-alan-kay",
+        "evidence_status": "reported",
+        "follow_up": "无。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:49870070",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": false,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "计算机历史问答，与 AI 产品、模型能力、构建实践均无关，属于旧闻与弱相关，按规则归入噪音。",
+        "region": "global",
+        "score": 3.0,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "Alan Kay 在 Quora 回答 ENIAC 有没有 BIOS，属于计算机历史话题，和 AI 产品无关。",
+        "tags": [
+          "计算机历史"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "c7d2973516e106e20708678cf9a7b435d57d6440f102ab655e3f09a89e935671": {
       "created_at": "2026-08-31T05:32:46.835869+00:00",
       "model": "deepseek-v4-flash",
@@ -58784,6 +59731,45 @@
           "AI编程",
           "Claude",
           "案例"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "caf52080811a85ee6743fcc9bb84added00f108b9bbbb99957c0e7bf15a08447": {
+      "created_at": "2026-09-28T05:22:14.567949+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "imp-dspy-beam-port",
+        "evidence_status": "first_party",
+        "follow_up": "看是否有真实项目用 Imp 落地，以及作者是否补充使用示例。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:49869995",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Imp",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "有人把 DSPy 完整移植到 BEAM 生态并发布到 Hex，属于有代码、有发布页的一手构建案例，对想理解“用编程而不是提示词来搭 LLM 应用”的初学者有参考价值；但受众偏窄，给到 7 分。",
+        "region": "global",
+        "score": 7.0,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "开发者把 DSPy 完整移植到 Erlang/BEAM 平台并发布成 Hex 包，让用 Elixir 的人也能用编程方式搭 LLM 应用。",
+        "tags": [
+          "DSPy",
+          "开源项目",
+          "LLM 应用框架"
         ],
         "target_user": "",
         "verticals": []
@@ -61777,6 +62763,45 @@
       },
       "stage": "deep_analysis"
     },
+    "d7159fb53b214f8bb0347b269be5953c68fc3a675c0fc98238ee385cc501a201": {
+      "created_at": "2026-09-28T05:22:14.567274+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "fireworks-ember-1-release",
+        "evidence_status": "reported",
+        "follow_up": "确认 Ember-1 的具体能力、定价与是否开放权重，以及是否有开发者用它做出产品。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:49868830",
+        "intelligence_type": "model_capability",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Ember-1",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Fireworks 发布自研模型 Ember-1，属于模型公司的一手能力动态，HN 400 分 199 评论说明有真实讨论；但正文缺失，只能从评论间接判断，且评论中夹杂大量无关内容，因此给到 7 分档而非更高。对初学者理解“模型公司自研模型”有增量。",
+        "region": "global",
+        "score": 7.2,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Fireworks 发布了自研模型 Ember-1，让开发者多了一个可选的模型供应商，值得关注它是否带来新的产品体验。",
+        "tags": [
+          "模型发布",
+          "Fireworks",
+          "开源模型"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "d719f1a60159382ea92df496c1d71b4766d2dc87065480ff6c22ea21021fe88d": {
       "created_at": "2026-09-18T04:42:14.415060+00:00",
       "model": "deepseek-flash",
@@ -62502,6 +63527,44 @@
         "tags": [
           "开源模型",
           "行业分析"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "d984baf5e97560837407c008df9b970548cde0681bd474c37004612667a2de5e": {
+      "created_at": "2026-09-28T05:22:04.310236+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "anthropic-infosys-partnership",
+        "evidence_status": "first_party",
+        "follow_up": "确认 Infosys 合作是否涉及具体产品落地、行业解决方案或客户案例。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "public_web:sitemap:89c09d6960f28f3fc2da",
+        "intelligence_type": "business_policy",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Anthropic 官方公告页，但正文仅有占位描述，无具体合作内容、产品细节或可验证增量，无法判断实际价值，按信息不足给中低分。",
+        "region": "global",
+        "score": 5.5,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Anthropic 官网发布与 Infosys 相关的公告，但页面没有给出具体合作内容，暂时看不出对产品学习者的实际价值。",
+        "tags": [
+          "Anthropic",
+          "企业合作"
         ],
         "target_user": "",
         "verticals": []
@@ -64837,6 +65900,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "e21bf4ecb5d177374fce02be2f369cce9ab570810947285bb07a63a5475b80f7": {
+      "created_at": "2026-09-28T05:22:14.567071+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-codex-rust-v0.159.0-alpha.12",
+        "evidence_status": "first_party",
+        "follow_up": "等待正式版 changelog 或功能说明，判断是否有可迁移的 Agent 能力更新。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "github:release:397926694",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "OpenAI Codex",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI Codex 的 alpha 版本号发布，正文只有版本号，无功能说明、无 changelog、无用户反馈，属于低信息量的自动发布，对产品经理无迁移价值。",
+        "region": "global",
+        "score": 3.5,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "OpenAI 自动发布了 Codex 的 rust-v0.159.0-alpha.12 版本，但没有任何功能说明，看不出对用户有什么实际变化。",
+        "tags": [
+          "Coding Agent",
+          "OpenAI"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "e2255f286fb7acba173531f1a464dc07023e37125326e87d8d8adbf251385989": {
       "created_at": "2026-08-25T01:52:02.803871+00:00",
       "model": "deepseek-v4-flash",
@@ -65901,6 +67002,45 @@
           "Codex",
           "Agent",
           "CLI"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "e549c90098a5ac9203f054bd7ec0a5c70ffcb5992dcf8517c4a4db0cb0f27985": {
+      "created_at": "2026-09-28T05:22:24.332543+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "gpt6-price-cut-deepseek",
+        "evidence_status": "reported",
+        "follow_up": "等待 OpenAI 官方发布页确认 GPT-6 能力与定价。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "google_news:article:eec81091fefabd39",
+        "intelligence_type": "model_capability",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": true,
+        "market_signal": "",
+        "product_name": "GPT-6",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "标题含大量不可见字符且为『掀桌』『白菜价』式营销腔，属标题党；无一手发布页或可验证能力细节，模型能力动态但证据不足。",
+        "region": "global",
+        "score": 5.0,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "爱范儿以标题党方式称 GPT-6 新模型以低价杀入 DeepSeek 腹地，缺乏一手发布证据。",
+        "tags": [
+          "GPT-6",
+          "定价",
+          "DeepSeek"
         ],
         "target_user": "",
         "verticals": []
@@ -69806,6 +70946,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "f27e9fea2aa07faae83d3ee8c7f75a7d32fb59961cfc6fb6c2a1c4641fc8d640": {
+      "created_at": "2026-09-28T05:22:04.310398+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "meta-muse-trust-issues",
+        "evidence_status": "reported",
+        "follow_up": "等待 Meta Muse 相关产品的实际功能与用户反馈。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:15513d165f6fe768",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Muse",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "泛行业评论，讨论 Meta AI 发布能否克服信任问题，无具体产品细节、无用户反馈、无构建过程，属于低信噪比观察。",
+        "region": "global",
+        "score": 4.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "TechCrunch 播客讨论 Meta 的 AI 发布能否克服信任问题，但没有给出产品功能或用户使用细节。",
+        "tags": [
+          "Meta",
+          "行业评论"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "f28759e18c50e5c8c6b18199fbd2da3d9ddd5abfbfecd2616ffb1489de799aea": {
       "created_at": "2026-08-17T01:55:01.823375+00:00",
       "model": "deepseek-v4-flash",
@@ -72301,6 +73479,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "f9537202f9f440fd3ad70a880f03e4c3cadebd93ecd3ac28b92076d5bbba3cb3": {
+      "created_at": "2026-09-28T05:22:04.314434+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-codex-rust-v0-158-0",
+        "evidence_status": "first_party",
+        "follow_up": "关注 MCP OAuth 和图像编辑能力在实际编码工作流中的使用反馈。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "github:release:397962047",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "OpenAI Codex",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI Codex 官方 GitHub Release，包含 MCP OAuth、图像生成透明背景、终端审批默认开启等具体功能更新，对做 Agent/编码工具的人有直接参考价值；但属于工具迭代，非产品案例或模型能力突破。",
+        "region": "global",
+        "score": 7.0,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "OpenAI Codex 发布 rust-v0.158.0，新增 MCP OAuth 客户端密钥、图像透明背景生成、终端审批默认开启等功能，适合关注编码 Agent 工具链的人。",
+        "tags": [
+          "Codex",
+          "Agent",
+          "GitHub Release"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "f9652b1c1c8800aa2b674b40d7e2a270a5f080f63b294b1478e1f396a3aab147": {
       "created_at": "2026-08-12T02:43:31.542779+00:00",
       "model": "deepseek-v4-flash",
@@ -73895,6 +75112,45 @@
         "tags": [
           "Google Earth",
           "AI安全"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "fe69c42303274545dbfd34510441f90ff109a9f54537952495695f99539d3768": {
+      "created_at": "2026-09-28T05:22:24.332730+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "opencode-deepseek-v41-flash-credit",
+        "evidence_status": "reported",
+        "follow_up": "查找 OpenCode 官方公告确认额度与合作细节。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "google_news:article:f883237b62f8fe34",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": true,
+        "market_signal": "",
+        "product_name": "OpenCode",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "涉及具体产品 OpenCode 为 DeepSeek V4.1 Flash 提供 60 美元额度，属可迁移的开发者工具合作信号；但来源为白鲸出海转载、无一手公告，且带推广性质，证据不足，暂给 6 分。",
+        "region": "china",
+        "score": 6.0,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "白鲸出海转载称 OpenCode 为 DeepSeek V4.1 Flash 永久提供 60 美元额度，属开发者工具合作信号，但缺一手公告。",
+        "tags": [
+          "OpenCode",
+          "DeepSeek",
+          "开发者工具"
         ],
         "target_user": "",
         "verticals": []

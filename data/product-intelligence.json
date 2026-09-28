@@ -1,7 +1,406 @@
 {
   "version": 1,
-  "updated_at": "2026-09-27T05:18:02.595088+00:00",
+  "updated_at": "2026-09-28T05:23:03.015080+00:00",
   "products": [
+    {
+      "product_id": "product-8bf44d7619edcd4e",
+      "product_name": "Claude",
+      "builder_name": "Anthropic News",
+      "first_seen": "2026-08-28",
+      "last_seen": "2026-09-28",
+      "occurrence_count": 2,
+      "intelligence_type": "model_capability",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Anthropic 官方称 Claude 发现了一种新的酶系统，展示大模型在生物科学发现中的实际用途，值得关注 AI 在医药研发场景的产品化可能。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.2,
+      "summary": "Anthropic 官方称 Claude 发现了一种新的酶系统，展示大模型在生物科学发现中的实际用途，值得关注 AI 在医药研发场景的产品化可能。",
+      "title": "Claude Discovers Novel Enzyme System",
+      "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system",
+      "sources": [
+        {
+          "url": "https://www.anthropic.com/news/advancing-claude-for-education",
+          "title": "Advancing Claude For Education",
+          "source_type": "public_web",
+          "published_at": "2026-08-27T15:13:58+00:00"
+        },
+        {
+          "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system",
+          "title": "Claude Discovers Novel Enzyme System",
+          "source_type": "public_web",
+          "published_at": "2026-09-24T10:25:16+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "anthropic-claude-for-education",
+          "date": "2026-08-28",
+          "title": "Advancing Claude For Education",
+          "summary": "Anthropic宣布推进Claude在教育领域的应用，但具体功能或合作未详述。",
+          "score": 7.0,
+          "url": "https://www.anthropic.com/news/advancing-claude-for-education"
+        },
+        {
+          "update_id": "anthropic-claude-novel-enzyme-system",
+          "date": "2026-09-25",
+          "title": "Claude Discovers Novel Enzyme System",
+          "summary": "Anthropic 官方称 Claude 发现了一种新的酶系统，展示大模型在生物科学发现中的实际用途，值得关注 AI 在医药研发场景的产品化可能。",
+          "score": 8.2,
+          "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Anthropic",
+        "教育",
+        "Claude",
+        "科学发现",
+        "医药AI"
+      ]
+    },
+    {
+      "product_id": "product-f061e3ee366dc357",
+      "product_name": "Muse AI Agent",
+      "builder_name": "Simon Willison",
+      "first_seen": "2026-09-28",
+      "last_seen": "2026-09-28",
+      "occurrence_count": 1,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "verified",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Simon Willison 引用 Muse AI Agent 替用户处理二手交易时自动回复出错、导致对方给差评的真实记录，适合看 Agent 产品在真实场景中的失败点。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.2,
+      "summary": "Simon Willison 引用 Muse AI Agent 替用户处理二手交易时自动回复出错、导致对方给差评的真实记录，适合看 Agent 产品在真实场景中的失败点。",
+      "title": "Quoting Muse AI Agent",
+      "url": "https://simonwillison.net/2026/Sep/28/muse-ai-agent/",
+      "sources": [
+        {
+          "url": "https://simonwillison.net/2026/Sep/28/muse-ai-agent/",
+          "title": "Quoting Muse AI Agent",
+          "source_type": "rss",
+          "published_at": "2026-09-28T04:01:30+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "muse-ai-agent-auto-reply-failure",
+          "date": "2026-09-28",
+          "title": "Quoting Muse AI Agent",
+          "summary": "Simon Willison 引用 Muse AI Agent 替用户处理二手交易时自动回复出错、导致对方给差评的真实记录，适合看 Agent 产品在真实场景中的失败点。",
+          "score": 8.2,
+          "url": "https://simonwillison.net/2026/Sep/28/muse-ai-agent/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "Muse",
+        "失败案例"
+      ]
+    },
+    {
+      "product_id": "product-3c88553818c53c55",
+      "product_name": "Engram",
+      "builder_name": "Terrence O’Brien",
+      "first_seen": "2026-09-28",
+      "last_seen": "2026-09-28",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "early_signal",
+      "target_user": "电子音乐制作人、采样爱好者、想用手动硬件探索 AI 声音变形的音乐人",
+      "user_problem": "传统采样器只能剪辑和回放已有声音，无法自动把音频扭曲成全新质感，或从'错误'中生成意外声音",
+      "what_it_is": "一款带 AI 的硬件采样器/节奏机，能把输入的音频变形，甚至凭空生成新的声音",
+      "ai_role": "实时把输入音频进行非线性变形，或在低语义控制下'幻觉'出原输入里没有的新声音",
+      "implementation_idea": "未公开。推测是在本地或边缘设备上运行小型生成/变换模型，把音频特征空间里的'偏差'或采样噪声当作创意输出，而非像 Suno 那样直接生成完整歌曲",
+      "hands_on_exercise": "用免费网页工具（如 Google Magenta 的 Tone.js demo 或 Ableton Live 的 Spectral Resonator）导入一段人声，把参数推到极端值，记录 3 种'破音'效果，思考哪些'错误'可以变成音乐元素",
+      "limitations_or_uncertainties": "众筹阶段，无用户实测反馈；AI 模型大小、是否联网、本地/云端运算未公开；'幻觉'是营销用语还是技术术语不明确",
+      "region": "global",
+      "score": 7.2,
+      "summary": "音乐创业公司 Thoughtful Things 在 Kickstarter 发布 Engram 采样器，用 AI 把音频变形甚至生成幻觉声音，适合看 AI 如何嵌入硬件创作工具。",
+      "title": "Engram：把 AI 音频幻觉变成音乐的采样器",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1001193/engram-sampler-ai-hallucinations-music",
+      "sources": [
+        {
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1001193/engram-sampler-ai-hallucinations-music",
+          "title": "Engram is a sampler that turns broken AI hallucinations into music",
+          "source_type": "rss",
+          "published_at": "2026-09-27T20:46:36+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "engram-sampler-kickstarter",
+          "date": "2026-09-28",
+          "title": "Engram：把 AI 音频幻觉变成音乐的采样器",
+          "summary": "音乐创业公司 Thoughtful Things 在 Kickstarter 发布 Engram 采样器，用 AI 把音频变形甚至生成幻觉声音，适合看 AI 如何嵌入硬件创作工具。",
+          "score": 7.2,
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1001193/engram-sampler-ai-hallucinations-music"
+        }
+      ],
+      "usage_flow": [
+        "把外部音频（如人声、乐器）输入 Engram",
+        "用旋钮/按键选择 AI 变形模式，让声音被拉伸、破碎或重组",
+        "触发采样 pads 编排节奏和旋律",
+        "导出或现场演奏最终片段"
+      ],
+      "learning_points": [
+        "AI 幻觉：LLM 或生成模型输出与事实不符的内容；在这里被重新定义为'有用的错误'，变成声音设计的原料",
+        "采样器（Sampler）：一种把声音录下来、切成片段、再用键盘或打击垫触发的电子乐器",
+        "Groovebox：集成了采样、音序器、效果器的 standalone 创作设备，不用电脑就能做节拍"
+      ],
+      "verticals": [],
+      "tags": [
+        "AI硬件",
+        "音乐创作",
+        "Kickstarter"
+      ]
+    },
+    {
+      "product_id": "product-f7d384c3a47f632c",
+      "product_name": "Ember-1",
+      "builder_name": "gmays",
+      "first_seen": "2026-09-28",
+      "last_seen": "2026-09-28",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Fireworks 发布了自研模型 Ember-1，让开发者多了一个可选的模型供应商，值得关注它是否带来新的产品体验。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.2,
+      "summary": "Fireworks 发布了自研模型 Ember-1，让开发者多了一个可选的模型供应商，值得关注它是否带来新的产品体验。",
+      "title": "Ember-1",
+      "url": "https://fireworks.ai/blog/ember-1",
+      "sources": [
+        {
+          "url": "https://fireworks.ai/blog/ember-1",
+          "title": "Ember-1",
+          "source_type": "hackernews",
+          "published_at": "2026-09-27T17:31:53+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "fireworks-ember-1-release",
+          "date": "2026-09-28",
+          "title": "Ember-1",
+          "summary": "Fireworks 发布了自研模型 Ember-1，让开发者多了一个可选的模型供应商，值得关注它是否带来新的产品体验。",
+          "score": 7.2,
+          "url": "https://fireworks.ai/blog/ember-1"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "模型发布",
+        "Fireworks",
+        "开源模型"
+      ]
+    },
+    {
+      "product_id": "product-1e9b8bbdeb596e93",
+      "product_name": "OpenAI Codex",
+      "builder_name": "github-actions[bot]",
+      "first_seen": "2026-08-21",
+      "last_seen": "2026-09-28",
+      "occurrence_count": 4,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "需要 AI 辅助编程的开发者，尤其是使用命令行工具或 IDE 插件、关注自动化编码工作流的技术团队",
+      "user_problem": "开发者想让 AI 自动执行代码任务，但担心安全问题（比如 AI 执行高权限命令需要反复确认）、连接外部工具时认证麻烦、以及 AI 生成图像背景无法透明等细节控制不足",
+      "what_it_is": "OpenAI Codex 是一个能自动写代码、修 Bug 的 AI 编程助手（Agent），这次是其命令行工具（CLI）的 Rust 版本更新。",
+      "ai_role": "理解用户意图后，自动编写/修改代码、调用工具、执行终端命令，并在敏感操作前等待人类确认",
+      "implementation_idea": "Codex 本质上是一个'有手脚的 LLM'——它把大模型的推理能力包装成可执行的动作循环：接收任务→规划步骤→调用工具（读文件、跑命令、连外部服务）→返回结果。这次更新主要加固了安全边界（默认审批、沙箱修复）和扩展了工具连接能力（MCP OAuth、WebSocket 认证）。MCP（Model Context Protocol）是一种让 AI 统一调用外部工具的标准协议，类似'AI 的 USB 接口'。",
+      "hands_on_exercise": "30 分钟体验：在 GitHub Codespaces 或本地安装 Codex CLI（rust-v0.158.0），让它帮你给一个小项目（如 Python 计算器）添加单元测试，故意触发一个需要 sudo 权限的命令（如安装依赖），观察终端审批提示；然后尝试用 'codex mcp add' 连接一个公开的 MCP 服务（如文件系统工具），体验 OAuth 配置流程",
+      "limitations_or_uncertainties": "未公开具体支持的 MCP 服务列表；未公开透明背景图像生成背后的模型版本（DALL-E 3 或 4？）；未公开 WebSocket bearer token 的具体加密方案细节；'多 Agent v2 直接消息'功能标注为可禁用，但未公开其默认行为与稳定性",
+      "region": "global",
+      "score": 7.0,
+      "summary": "OpenAI Codex 发布 rust-v0.158.0，新增 MCP OAuth 客户端密钥、图像透明背景生成、终端审批默认开启等功能，适合关注编码 Agent 工具链的人。",
+      "title": "OpenAI Codex 发布 Rust 版 v0.158.0：MCP OAuth 密钥、透明背景图像生成、终端审批默认开启",
+      "url": "https://github.com/openai/codex/releases/tag/rust-v0.158.0",
+      "sources": [
+        {
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.149.0",
+          "title": "openai/codex released rust-v0.149.0",
+          "source_type": "github",
+          "published_at": "2026-08-20T21:04:55+00:00"
+        },
+        {
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.151.0",
+          "title": "openai/codex released rust-v0.151.0",
+          "source_type": "github",
+          "published_at": "2026-08-29T09:55:39+00:00"
+        },
+        {
+          "url": "https://learn.chatgpt.com/docs/plugins?surface=app",
+          "title": "Browse, install, and use plugins on supported ChatGPT and Codex ...",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.153.0",
+          "title": "openai/codex released rust-v0.153.0",
+          "source_type": "github",
+          "published_at": "2026-09-03T01:37:38+00:00"
+        },
+        {
+          "url": "https://openai.com/codex/",
+          "title": "Codex | AI Coding Partner from OpenAI",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.158.0",
+          "title": "openai/codex released rust-v0.158.0",
+          "source_type": "github",
+          "published_at": "2026-09-28T05:07:23+00:00"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/OpenAI_Codex_(AI_agent)",
+          "title": "OpenAI Codex (AI agent) - Wikipedia",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "openai-codex-rust-v0.149.0",
+          "date": "2026-08-21",
+          "title": "openai/codex released rust-v0.149.0",
+          "summary": "OpenAI Codex发布rust-v0.149.0，新增agents仪表盘、队列和更多Vim编辑命令。",
+          "score": 7.5,
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.149.0"
+        },
+        {
+          "update_id": "openai-codex-rust-v0.151.0",
+          "date": "2026-08-30",
+          "title": "OpenAI Codex CLI 发布 Rust 版 v0.151.0：强化 MCP 工具发现与插件管理",
+          "summary": "OpenAI Codex 发布 v0.151.0，增强 MCP 工具发现和插件管理。",
+          "score": 8.0,
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.151.0"
+        },
+        {
+          "update_id": "openai-codex-rust-v0.153.0",
+          "date": "2026-09-03",
+          "title": "OpenAI Codex 发布 Rust 版 v0.153.0：Vim 撤销重做、插件市场与上下文管理实验功能",
+          "summary": "OpenAI Codex发布rust-v0.153.0，新增Vim撤销重做、插件市场等多项功能。",
+          "score": 8.0,
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.153.0"
+        },
+        {
+          "update_id": "openai-codex-rust-v0-158-0",
+          "date": "2026-09-28",
+          "title": "OpenAI Codex 发布 Rust 版 v0.158.0：MCP OAuth 密钥、透明背景图像生成、终端审批默认开启",
+          "summary": "OpenAI Codex 发布 rust-v0.158.0，新增 MCP OAuth 客户端密钥、图像透明背景生成、终端审批默认开启等功能，适合关注编码 Agent 工具链的人。",
+          "score": 7.0,
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.158.0"
+        }
+      ],
+      "usage_flow": [
+        "在终端安装/更新 Codex CLI：`npm install -g @openai/codex` 或从 GitHub Release 获取",
+        "配置 MCP 服务器（如文件系统、数据库等外部工具），设置可选的启动等待时间（grace period）",
+        "在对话中让 Codex 调用工具完成任务，必要时通过插件扩展拦截或修改工具返回结果",
+        "通过插件目录（plugin catalog）按仓库级别管理插件来源，过滤无效市场",
+        "终端运行 codex 启动 TUI（文本交互界面），或用 codex exec 直接执行命令",
+        "在 Vim 模式下用 u 撤销、Ctrl+R 重做，包括粘贴内容和附件都能完整恢复",
+        "用 codex plugin 命令从远程插件市场搜索、安装、卸载插件",
+        "需要时输入 /recap 手动总结，或开启实验性上下文管理让 AI 自动压缩历史记录",
+        "安装 Codex CLI 并配置项目环境",
+        "用自然语言描述需求（如'给这个函数加单元测试'），Codex 自动规划并执行",
+        "高权限命令（如 sudo）默认需要终端审批，确认后 AI 继续运行",
+        "需要时连接外部 MCP 服务（如数据库、API），通过 OAuth 密钥安全认证"
+      ],
+      "learning_points": [
+        "MCP（Model Context Protocol）：一种让 AI 应用统一调用外部工具/数据的标准协议，类似 AI 的'USB 接口'",
+        "Agent 与单次问答的区别：Agent 能自主分解任务、多次调用工具、根据中间结果调整下一步，不只是'问一答一'",
+        "Sandbox（沙盒）：给 AI 执行环境加限制（如不能随意读/写特定路径），防止自动化操作破坏真实系统",
+        "TUI（Text User Interface）：不是网页也不是 GUI，是在终端里用字符画出的交互界面，Vim 就是典型 TUI",
+        "MCP（Model Context Protocol）：一种让 AI 调用外部工具（如读文件、查数据库）的标准接口，Codex 通过它扩展能力",
+        "Token 预算上下文管理：LLM 有输入长度限制，超出后要么遗忘早期内容，要么费用飙升，所以需要智能压缩历史记录",
+        "Agent：不只是聊天，而是能自主规划、执行多步骤任务并调用工具的 AI 系统",
+        "MCP（Model Context Protocol）：让 AI 以统一方式连接外部数据源和工具的开放协议，避免每个工具都要单独适配",
+        "Function Calling：LLM 识别需要调用外部功能时，输出结构化指令（如'运行 git status'）而非纯文本，让 AI 能实际操作软件"
+      ],
+      "verticals": [],
+      "tags": [
+        "Codex",
+        "Agent",
+        "CLI",
+        "开发者工具",
+        "更新",
+        "GitHub Release"
+      ]
+    },
+    {
+      "product_id": "product-27e9948f17438b02",
+      "product_name": "Imp",
+      "builder_name": "mpweiher",
+      "first_seen": "2026-09-28",
+      "last_seen": "2026-09-28",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "开发者把 DSPy 完整移植到 Erlang/BEAM 平台并发布成 Hex 包，让用 Elixir 的人也能用编程方式搭 LLM 应用。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.0,
+      "summary": "开发者把 DSPy 完整移植到 Erlang/BEAM 平台并发布成 Hex 包，让用 Elixir 的人也能用编程方式搭 LLM 应用。",
+      "title": "Imp is a full port of DSPy to the BEAM",
+      "url": "https://github.com/deepfates/imp",
+      "sources": [
+        {
+          "url": "https://github.com/deepfates/imp",
+          "title": "Imp is a full port of DSPy to the BEAM",
+          "source_type": "hackernews",
+          "published_at": "2026-09-27T19:28:23+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "imp-dspy-beam-port",
+          "date": "2026-09-28",
+          "title": "Imp is a full port of DSPy to the BEAM",
+          "summary": "开发者把 DSPy 完整移植到 Erlang/BEAM 平台并发布成 Hex 包，让用 Elixir 的人也能用编程方式搭 LLM 应用。",
+          "score": 7.0,
+          "url": "https://github.com/deepfates/imp"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "DSPy",
+        "开源项目",
+        "LLM 应用框架"
+      ]
+    },
     {
       "product_id": "product-03665d79efa749d6",
       "product_name": "Blender Copilot",
@@ -70,70 +469,6 @@
         "3D",
         "Copilot",
         "开发者工具"
-      ]
-    },
-    {
-      "product_id": "product-8bf44d7619edcd4e",
-      "product_name": "Claude",
-      "builder_name": "Anthropic News",
-      "first_seen": "2026-08-28",
-      "last_seen": "2026-09-27",
-      "occurrence_count": 2,
-      "intelligence_type": "model_capability",
-      "evidence_status": "first_party",
-      "target_user": "未公开",
-      "user_problem": "未公开",
-      "what_it_is": "Anthropic 官方称 Claude 发现了一种新的酶系统，展示大模型在生物科学发现中的实际用途，值得关注 AI 在医药研发场景的产品化可能。",
-      "ai_role": "未公开",
-      "implementation_idea": "未公开",
-      "hands_on_exercise": "未公开",
-      "limitations_or_uncertainties": "未公开",
-      "region": "global",
-      "score": 8.2,
-      "summary": "Anthropic 官方称 Claude 发现了一种新的酶系统，展示大模型在生物科学发现中的实际用途，值得关注 AI 在医药研发场景的产品化可能。",
-      "title": "Claude Discovers Novel Enzyme System",
-      "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system",
-      "sources": [
-        {
-          "url": "https://www.anthropic.com/news/advancing-claude-for-education",
-          "title": "Advancing Claude For Education",
-          "source_type": "public_web",
-          "published_at": "2026-08-27T15:13:58+00:00"
-        },
-        {
-          "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system",
-          "title": "Claude Discovers Novel Enzyme System",
-          "source_type": "public_web",
-          "published_at": "2026-09-24T10:25:16+00:00"
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "anthropic-claude-for-education",
-          "date": "2026-08-28",
-          "title": "Advancing Claude For Education",
-          "summary": "Anthropic宣布推进Claude在教育领域的应用，但具体功能或合作未详述。",
-          "score": 7.0,
-          "url": "https://www.anthropic.com/news/advancing-claude-for-education"
-        },
-        {
-          "update_id": "anthropic-claude-novel-enzyme-system",
-          "date": "2026-09-25",
-          "title": "Claude Discovers Novel Enzyme System",
-          "summary": "Anthropic 官方称 Claude 发现了一种新的酶系统，展示大模型在生物科学发现中的实际用途，值得关注 AI 在医药研发场景的产品化可能。",
-          "score": 8.2,
-          "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system"
-        }
-      ],
-      "usage_flow": [],
-      "learning_points": [],
-      "verticals": [],
-      "tags": [
-        "Anthropic",
-        "教育",
-        "Claude",
-        "科学发现",
-        "医药AI"
       ]
     },
     {
@@ -7555,112 +7890,6 @@
       "tags": [
         "AI同事",
         "产品趋势"
-      ]
-    },
-    {
-      "product_id": "product-1e9b8bbdeb596e93",
-      "product_name": "OpenAI Codex",
-      "builder_name": "github-actions[bot]",
-      "first_seen": "2026-08-21",
-      "last_seen": "2026-09-03",
-      "occurrence_count": 3,
-      "intelligence_type": "product_case",
-      "evidence_status": "first_party",
-      "target_user": "需要 AI 辅助写代码、改代码的开发者，尤其是习惯终端/Vim 操作、订阅了 Plus/Team/Pro 的用户",
-      "user_problem": "之前用 Codex 终端版时：Vim 模式不能撤销重做误操作；插件得手动找链接装；AI 自动总结对话打断思路；断网后草稿丢失；Plus/Team 用户快用完额度时才收到警告",
-      "what_it_is": "OpenAI 出的 AI 编程助手，能在终端里理解代码、执行命令、自动改 bug，这次更新的是用 Rust 重写的桌面/终端版本。",
-      "ai_role": "在终端里实时理解用户输入的代码/指令，调用工具（如 MCP）读写文件、执行命令，并根据上下文继续对话或等待用户确认",
-      "implementation_idea": "Codex 本体是个 Rust 写的终端应用，分前端 TUI 和后端 app-server 两层。TUI 负责捕获键盘输入（包括 Vim 模式的状态机），app-server 负责跟 OpenAI API 通信、管理对话历史、执行 Guardian 安全审查。插件市场走远程 URL 拉取，装完后在本地隔离运行。实验性上下文管理是给对话历史设 token 预算，超限时自动压缩成笔记，避免 AI 失忆或费用暴涨。",
-      "hands_on_exercise": "30 分钟验证：1）有 Plus/Pro 账号的话，从 GitHub Release 下载安装 rust-v0.153.0；2）启动 codex，进入 Vim 模式输入一些代码，按 u 撤销、Ctrl+R 重做，确认草稿保留；3）运行 codex plugin list 查看市场插件，尝试装一个；4）在配置文件里开启 features.context_management.experimental_mode，跟 AI 进行 10 轮以上对话，观察它是否会自动压缩历史。没订阅的话只能看源码和文档，无法实际调用。",
-      "limitations_or_uncertainties": "实验性上下文管理仅限 ChatGPT Plus/Pro/Pro Lite 且走 Codex 后端的会话，API key 用户、自定义模型提供商、临时结构化线程明确排除；Guardian 安全审查的具体规则未公开；插件市场的远程仓库地址和审核机制未公开；Rust 版是否完全替代旧版未说明",
-      "region": "global",
-      "score": 8.0,
-      "summary": "OpenAI Codex发布rust-v0.153.0，新增Vim撤销重做、插件市场等多项功能。",
-      "title": "OpenAI Codex 发布 Rust 版 v0.153.0：Vim 撤销重做、插件市场与上下文管理实验功能",
-      "url": "https://github.com/openai/codex/releases/tag/rust-v0.153.0",
-      "sources": [
-        {
-          "url": "https://github.com/openai/codex/releases/tag/rust-v0.149.0",
-          "title": "openai/codex released rust-v0.149.0",
-          "source_type": "github",
-          "published_at": "2026-08-20T21:04:55+00:00"
-        },
-        {
-          "url": "https://github.com/openai/codex/releases/tag/rust-v0.151.0",
-          "title": "openai/codex released rust-v0.151.0",
-          "source_type": "github",
-          "published_at": "2026-08-29T09:55:39+00:00"
-        },
-        {
-          "url": "https://learn.chatgpt.com/docs/plugins?surface=app",
-          "title": "Browse, install, and use plugins on supported ChatGPT and Codex ...",
-          "source_type": "supplemental",
-          "published_at": ""
-        },
-        {
-          "url": "https://github.com/openai/codex/releases/tag/rust-v0.153.0",
-          "title": "openai/codex released rust-v0.153.0",
-          "source_type": "github",
-          "published_at": "2026-09-03T01:37:38+00:00"
-        },
-        {
-          "url": "https://openai.com/codex/",
-          "title": "Codex | AI Coding Partner from OpenAI",
-          "source_type": "supplemental",
-          "published_at": ""
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "openai-codex-rust-v0.149.0",
-          "date": "2026-08-21",
-          "title": "openai/codex released rust-v0.149.0",
-          "summary": "OpenAI Codex发布rust-v0.149.0，新增agents仪表盘、队列和更多Vim编辑命令。",
-          "score": 7.5,
-          "url": "https://github.com/openai/codex/releases/tag/rust-v0.149.0"
-        },
-        {
-          "update_id": "openai-codex-rust-v0.151.0",
-          "date": "2026-08-30",
-          "title": "OpenAI Codex CLI 发布 Rust 版 v0.151.0：强化 MCP 工具发现与插件管理",
-          "summary": "OpenAI Codex 发布 v0.151.0，增强 MCP 工具发现和插件管理。",
-          "score": 8.0,
-          "url": "https://github.com/openai/codex/releases/tag/rust-v0.151.0"
-        },
-        {
-          "update_id": "openai-codex-rust-v0.153.0",
-          "date": "2026-09-03",
-          "title": "OpenAI Codex 发布 Rust 版 v0.153.0：Vim 撤销重做、插件市场与上下文管理实验功能",
-          "summary": "OpenAI Codex发布rust-v0.153.0，新增Vim撤销重做、插件市场等多项功能。",
-          "score": 8.0,
-          "url": "https://github.com/openai/codex/releases/tag/rust-v0.153.0"
-        }
-      ],
-      "usage_flow": [
-        "在终端安装/更新 Codex CLI：`npm install -g @openai/codex` 或从 GitHub Release 获取",
-        "配置 MCP 服务器（如文件系统、数据库等外部工具），设置可选的启动等待时间（grace period）",
-        "在对话中让 Codex 调用工具完成任务，必要时通过插件扩展拦截或修改工具返回结果",
-        "通过插件目录（plugin catalog）按仓库级别管理插件来源，过滤无效市场",
-        "终端运行 codex 启动 TUI（文本交互界面），或用 codex exec 直接执行命令",
-        "在 Vim 模式下用 u 撤销、Ctrl+R 重做，包括粘贴内容和附件都能完整恢复",
-        "用 codex plugin 命令从远程插件市场搜索、安装、卸载插件",
-        "需要时输入 /recap 手动总结，或开启实验性上下文管理让 AI 自动压缩历史记录"
-      ],
-      "learning_points": [
-        "MCP（Model Context Protocol）：一种让 AI 应用统一调用外部工具/数据的标准协议，类似 AI 的'USB 接口'",
-        "Agent 与单次问答的区别：Agent 能自主分解任务、多次调用工具、根据中间结果调整下一步，不只是'问一答一'",
-        "Sandbox（沙盒）：给 AI 执行环境加限制（如不能随意读/写特定路径），防止自动化操作破坏真实系统",
-        "TUI（Text User Interface）：不是网页也不是 GUI，是在终端里用字符画出的交互界面，Vim 就是典型 TUI",
-        "MCP（Model Context Protocol）：一种让 AI 调用外部工具（如读文件、查数据库）的标准接口，Codex 通过它扩展能力",
-        "Token 预算上下文管理：LLM 有输入长度限制，超出后要么遗忘早期内容，要么费用飙升，所以需要智能压缩历史记录"
-      ],
-      "verticals": [],
-      "tags": [
-        "Codex",
-        "Agent",
-        "CLI",
-        "开发者工具",
-        "更新"
       ]
     },
     {
