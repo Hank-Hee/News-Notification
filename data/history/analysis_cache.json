@@ -1532,6 +1532,46 @@
       },
       "stage": "candidate_analysis"
     },
+    "0639b6b02cb29c9220f2c983df76548999ddf19948b4818dce4b7dba96717634": {
+      "created_at": "2026-10-02T05:35:40.910096+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "opus-5-5-dodo-eyewitness-record",
+        "evidence_status": "first_party",
+        "follow_up": "该方法能否复用到其他史料或文档场景；模型对重要性的判断误差是否有改进。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:49926917",
+        "intelligence_type": "builder_insight",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "作者用 Opus 5.5 在大量历史文献中找出一条关于渡渡鸟的新目击记录，属个人用 AI 做研究的一手实践，展示了“AI 在长文本史料中做检索与线索发现”的具体用法。评论也指出模型对历史重要性的判断很差、错误方式不像人类，对理解模型能力边界有增量。但属单次个人案例，无产品化，故未进 8 分档。",
+        "region": "global",
+        "score": 7.4,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "一位研究者用 Opus 5.5 在几千页历史文献里翻出一条关于渡渡鸟的新目击记录，解决的是人工读不完海量史料的问题，值得看是因为它具体展示了 AI 在长文本检索里能干什么、又会在哪里判断失误。",
+        "tags": [
+          "长文本",
+          "研究工具",
+          "模型能力边界",
+          "Opus"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "06692fc7373614bdeeb310435f5b5232fefc8c29253a907383dac9966f984987": {
       "created_at": "2026-09-26T04:57:10.890155+00:00",
       "model": "deepseek-flash",
@@ -1830,6 +1870,44 @@
           "Amazon",
           "数据训练",
           "争议"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "0738aeef9c580cc73e5be7335985bb3a04d978bc7a43f098511158d1ff353064": {
+      "created_at": "2026-10-02T05:35:29.395670+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-codex-rust-v0.162.0-alpha.3",
+        "evidence_status": "first_party",
+        "follow_up": "无需跟进，等待正式版说明。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "github:release:401522823",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "OpenAI Codex",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Codex 的 alpha 版本发布，正文只有版本号，无任何功能说明或变更内容，属于低信息量自动发布。",
+        "region": "global",
+        "score": 3.0,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "OpenAI Codex 发布 rust-v0.162.0-alpha.3，但发布说明只有版本号，没有可读的功能变更。",
+        "tags": [
+          "Codex",
+          "版本发布"
         ],
         "target_user": "",
         "verticals": []
@@ -4676,6 +4754,46 @@
         "tags": [
           "Codex",
           "版本发布"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "106661ad925f3b0a3e2e3ef32bdde2d418fbdb5f3fcf10442da4a6ebe6e2e358": {
+      "created_at": "2026-10-02T05:35:40.909608+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "deepseek-harness-desktop-app",
+        "evidence_status": "reported",
+        "follow_up": "官方是否公布桌面版功能清单与插件机制；用户自建插件生态是否成形；是否支持字体缩放等基础体验。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:49929489",
+        "intelligence_type": "product_case",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "DeepSeek Harness",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "DeepSeek Harness 从命令行工具变成 MacOS/Windows 可安装桌面应用，HN 上有用户实测反馈（安装即用、设置与工作区自动迁移、缺字体缩放、用户自己让 DSH 生成插件补上）。属于中国模型公司的一手产品形态变化，且有真实用户使用证据，对做 AI 产品的人有直接参考价值。但官方页面信息有限，评论中夹杂无关噪音，故未进 9 分档。",
+        "region": "china",
+        "score": 8.2,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "DeepSeek 把 Harness 做成了 Mac 和 Windows 桌面应用，用户装上就能用、旧设置自动迁移，还自己让 AI 写插件补功能，值得看是因为它展示了模型公司怎么把开发工具做成普通人能直接用的产品。",
+        "tags": [
+          "Agent",
+          "开发者工具",
+          "DeepSeek",
+          "桌面应用"
         ],
         "target_user": "",
         "verticals": []
@@ -14092,6 +14210,46 @@
       },
       "stage": "candidate_analysis"
     },
+    "30853eef7ab007b3ea9ec7b77565bbcb5af78729c5590e804fc329dad49dfd69": {
+      "created_at": "2026-10-02T05:35:08.930917+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "google-gemini-live-guided-vision",
+        "evidence_status": "reported",
+        "follow_up": "关注支持设备范围、实际识别准确率和用户反馈。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:a841038fec186edf",
+        "intelligence_type": "product_case",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Gemini Live Guided Vision",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Google 在 Gemini Live 上线 Guided Vision，用手机摄像头实时描述环境、读小字、找物体，是明确的新产品能力，对做多模态和辅助类 AI 产品有直接参考价值；来源为权威科技媒体，非官方一手。",
+        "region": "global",
+        "score": 8.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Google 在 Gemini Live 推出 Guided Vision，用户用手机摄像头就能让 AI 实时描述环境、读小字和找东西，值得看多模态助手怎么落地。",
+        "tags": [
+          "Gemini",
+          "多模态",
+          "视觉助手",
+          "无障碍"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "30a6ae7690b68a57b82d4300c916fda0a9a274e73ad28cc27c89cf5dd7433396": {
       "created_at": "2026-08-14T02:46:00.691747+00:00",
       "model": "deepseek-v4-flash",
@@ -16897,6 +17055,46 @@
       },
       "stage": "candidate_analysis"
     },
+    "3a63f255f5acaaf07e4e1d98c4e8d92d892a14fd272143830ab0cca60baa57b9": {
+      "created_at": "2026-10-02T05:35:08.930768+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "anthropic-barclays-claude-enterprise",
+        "evidence_status": "first_party",
+        "follow_up": "关注 Barclays 具体在哪些业务环节使用 Claude、是否有量化效率数据或后续扩展计划。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "public_web:sitemap:c08402b8f22a4b159df3",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Claude",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Anthropic 官方发布 Barclays 规模化使用 Claude 的企业案例，属于一手客户落地信息，对理解企业级 AI 产品如何被采用有参考价值；但内容偏客户宣传，缺少具体产品机制与用户使用细节，因此未进入 8 分以上。",
+        "region": "global",
+        "score": 7.2,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Anthropic 官方披露 Barclays 规模化使用 Claude，说明大银行如何把 AI 助手接入内部工作流程，值得关注企业级 AI 产品的真实落地方式。",
+        "tags": [
+          "企业AI",
+          "Claude",
+          "金融",
+          "客户案例"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "3ae6bcccd426be3a7646b7a0b8151b4dd8927a4bd3281dc1a66168db72926616": {
       "created_at": "2026-07-28T03:49:20.638318+00:00",
       "model": "deepseek-v4-flash",
@@ -17904,6 +18102,46 @@
       },
       "stage": "candidate_analysis"
     },
+    "3db0fd6de23daa37cc8539e78443168cff9e459ef43f50ee4a9235c466cff8b5": {
+      "created_at": "2026-10-02T05:35:08.930848+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "openai-albertsons-chatgpt-enterprise",
+        "evidence_status": "first_party",
+        "follow_up": "关注 Albertsons 具体落地场景、使用规模以及是否披露效率或销售指标。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:openai.com_news_rss.xml:637d3dfa247fa816",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "ChatGPT Enterprise",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI 官方客户案例，说明 Albertsons 使用 ChatGPT Enterprise 和 API 提升团队效率并改善购物体验，属于一手企业落地信息；但缺少具体产品实现细节和量化结果，偏营销叙事。",
+        "region": "global",
+        "score": 7.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "OpenAI 官方披露 Albertsons 用 ChatGPT Enterprise 和 API 让团队工作更快、购物体验更好，是零售企业采用 AI 的一手案例。",
+        "tags": [
+          "企业AI",
+          "零售",
+          "ChatGPT Enterprise",
+          "客户案例"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "3dcc89a1d9574e02ee24221b678711d557c6215d073314c766f57edaa503bb5d": {
       "created_at": "2026-08-23T02:00:11.115160+00:00",
       "model": "deepseek-v4-flash",
@@ -18553,6 +18791,40 @@
         "verticals": []
       },
       "stage": "candidate_analysis"
+    },
+    "400446a11afab1e8c967df5423aac33995afd8c151534b0a126b8d3763e51f05": {
+      "created_at": "2026-10-02T05:35:55.980312+00:00",
+      "model": "kimi-k2.6",
+      "prompt_version": "deep-v3-beginner",
+      "result": {
+        "ai_role": "AI 负责在恢复后继续执行被中断的任务，基于保存的上下文做出下一步决策，而非人类手动告诉它该做什么",
+        "evidence_status": "first_party",
+        "hands_on_exercise": "30 分钟：去 npm 安装 @earendil-works/pi-durable，跑它的示例代码，然后故意在 Agent 执行中途杀掉进程，再重启，观察是否从断点继续而非从头开始。",
+        "implementation_idea": "核心思路像游戏存档：把 Agent 的运行状态（对话历史、任务进度）定期存盘，而不是存在内存里。恢复时读档继续。为了简化，它放弃了复杂的分支对话树，只支持带'族谱信息'的分叉——就像你只能从主线开新存档，不能任意回到过去某个节点再分出多条平行线。",
+        "learning_points": [
+          "Agent：能自主规划步骤、调用工具完成目标的 AI 程序，不只是回答问题",
+          "持久化（Durable）：把运行中的状态存到硬盘/数据库，进程死了数据不丢，重启能续",
+          "Fork with ancestry：不是任意分支，而是像 Git 的线性历史带标记，知道从哪分出来的，简化状态管理"
+        ],
+        "limitations_or_uncertainties": "沙箱安全（sandboxing）是否内建未明确——社区评论指出目前缺乏声明式规则来隔离不可信代码执行环境；分支对话树被砍的具体技术原因作者未直接回应；实际生产稳定性待更多用户验证",
+        "product_name": "Pi Durable",
+        "sources": [
+          "https://earendil.com/posts/pi-durable/",
+          "https://news.ycombinator.com/item?id=49926069",
+          "https://packages.ecosyste.ms/registries/npmjs.org/packages/@earendil-works/pi-durable"
+        ],
+        "target_users": "开发需要长时间无人值守运行 AI Agent 的工程师，比如远程服务器上的编码助手、自动化任务机器人",
+        "title_zh": "Pi Durable：让 AI Agent 断线也能接着干的持久化运行框架",
+        "usage_flow": [
+          "开发者用 Pi Durable 框架包装自己的 Agent 任务代码",
+          "框架自动把对话状态和任务进度保存到持久存储",
+          "Agent 长时间运行，即使进程崩溃或断线也无需人工干预",
+          "重启后从最新保存点自动恢复，继续执行未完成的任务"
+        ],
+        "user_problem": "原来的 Pi 编码 Agent 跑在终端里，人一离开、网络一断或进程一死，任务就前功尽弃，必须有人盯着重新启动和指示继续",
+        "what_it_is": "Pi 团队开源的一个让 AI Agent（能自主执行任务的 AI 程序）在进程崩溃或断线后，能从断点继续运行的持久化执行框架，而非从头重来。"
+      },
+      "stage": "deep_analysis"
     },
     "4009d7556be5b8d968f366ea2f65f06ca1f4dbbb052863ee401d20c2f104fc00": {
       "created_at": "2026-08-26T01:58:04.827697+00:00",
@@ -23208,6 +23480,45 @@
       },
       "stage": "deep_analysis"
     },
+    "4e5ff7d5abef24248062d5670ad16e3e5ad743cd70a8623b247ab8a2353a0606": {
+      "created_at": "2026-10-02T05:35:13.763690+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "chatgpt-virtual-try-on-shopping",
+        "evidence_status": "reported",
+        "follow_up": "值得追踪：关注 OpenAI 官方公告、试穿效果的真实用户反馈，以及是否开放 API 或第三方商家接入。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:e2ab843efe676a79",
+        "intelligence_type": "product_case",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "ChatGPT",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI 在 ChatGPT 内上线虚拟试穿与收藏库，属于消费级 AI 产品的新功能落地，对做 AI 产品的人有可迁移增量：展示了多模态能力如何嵌入购物场景、用户如何用自己照片完成试穿。但来源为 TechCrunch 报道而非官方一手公告，且无用户反馈或 Demo 验证，因此不进入 8 分以上区间。",
+        "region": "global",
+        "score": 7.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "OpenAI 给 ChatGPT 加了虚拟试穿和收藏功能，用户上传自己的照片就能看衣服和配饰上身效果，还能把喜欢的商品存进收藏库，值得看是因为它把多模态能力直接做进了购物场景。",
+        "tags": [
+          "多模态",
+          "电商购物",
+          "AI产品功能"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "4e76a3d0580f7df15a9d6680981c2dae4a82c2a2a3b10b279ccb3b421e025d1f": {
       "created_at": "2026-10-01T05:50:53.093204+00:00",
       "model": "deepseek-flash",
@@ -24680,6 +24991,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "531a2b123e6ab14fb601606bca3619ad542c425475f0ea04b96768d9545d7945": {
+      "created_at": "2026-10-02T05:35:08.930816+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-eternal-complement-essay",
+        "evidence_status": "first_party",
+        "follow_up": "观察该观点是否转化为 OpenAI 产品功能或企业落地案例。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:openai.com_news_rss.xml:b8087b88cb63ae7f",
+        "intelligence_type": "market_signal",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI 官方发布的观点文章，讨论 AI 对常规执行工作的影响，属于泛行业评论，没有产品、代码、Demo 或可验证实践证据，对产品经理的直接迁移价值有限。",
+        "region": "global",
+        "score": 5.5,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "OpenAI 发文认为 AI 最大的价值可能在于承担突破性想法背后的常规执行工作，属于观点输出而非产品更新。",
+        "tags": [
+          "行业观察",
+          "OpenAI",
+          "AI经济"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "532539690e8e4567369118c881b3d065c74d1470d095067f9465ddb7c70dd8b6": {
       "created_at": "2026-09-17T04:51:54.570751+00:00",
       "model": "deepseek-flash",
@@ -25099,6 +25449,46 @@
         "what_it_is": "一个基于开源 FreeCAD 的在线三维建模平台，AI 代理可以通过 MCP 协议直接操控它画图、建模型、出工程图纸"
       },
       "stage": "deep_analysis"
+    },
+    "54cf0b09f03a7274e0d0ecabb1020f21be6d2bac3d7de5ffe018232f75cae4bb": {
+      "created_at": "2026-10-02T05:35:08.930956+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "google-ai-overviews-antitrust-dismissed",
+        "evidence_status": "reported",
+        "follow_up": "关注后续上诉或对内容行业流量格局的影响。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:491883052b125d52",
+        "intelligence_type": "business_policy",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Google AI Overviews",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "联邦法官驳回 Chegg 和 Penske 针对 Google AI Overviews 的反垄断诉讼，属于法律和商业政策新闻，对 AI 产品构建没有直接可迁移价值。",
+        "region": "global",
+        "score": 5.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "美国法官驳回 Chegg 和 Penske 对 Google AI Overviews 的反垄断诉讼，属于法律新闻，对做 AI 产品帮助有限。",
+        "tags": [
+          "Google",
+          "反垄断",
+          "AI搜索",
+          "法律"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
     },
     "54d3e4b973cbe5a841e48bce8c4b51c8a0ccdfe00a22a2c03a4c12b16bd60258": {
       "created_at": "2026-08-29T07:04:35.594961+00:00",
@@ -28651,6 +29041,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "5f65dad4ae76c99ee4a6952ffc365b90ba9a8efc5aa3f9affeebd1dd85529edc": {
+      "created_at": "2026-10-02T05:35:29.394825+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "kevin-oleary-utah-datacenter-investigation",
+        "evidence_status": "reported",
+        "follow_up": "无需跟进，除非涉及具体 AI 产品落地。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:e19e952a1d37d4d0",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": false,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "数据中心建设与地方反弹调查，属于算力基础设施和泛行业话题，与 AI 产品构建、模型能力或垂直应用无直接关系，按规则低于 7 分。",
+        "region": "global",
+        "score": 3.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "The Verge 调查 Kevin O'Leary 在犹他州建设超大规模 AI 数据中心引发的争议，属于算力基建话题而非产品情报。",
+        "tags": [
+          "数据中心",
+          "算力"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "5f9bba811b851a5fef60be204dc0f016d4a9efca236365633f0f731bf7afaf7b": {
       "created_at": "2026-07-27T04:14:53.894536+00:00",
       "model": "deepseek-v4-flash",
@@ -28761,6 +29189,46 @@
         "tags": [
           "政策",
           "AI 安全"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "5ff12440d676fab56ca1fbec607150aa0ceaae1812f75f912f2cae5f5daf9d3d": {
+      "created_at": "2026-10-02T05:35:29.396943+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "pi-1.0-release",
+        "evidence_status": "verified",
+        "follow_up": "查看 Pi 1.0 发布说明与扩展机制，评估其作为个人 agent 产品参考的价值。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:49926069",
+        "intelligence_type": "product_case",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Pi",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Pi 1.0 发布，HN 990 分、317 条评论，多位用户给出真实使用反馈：轻量系统提示词可在低配笔记本跑本地模型、用扩展和 skills 统一跨 agent 配置，属于有真实用户反馈的 AI 编码 agent 产品案例，对初学者理解 agent harness 设计有迁移价值。",
+        "region": "global",
+        "score": 8.2,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "编码 agent 工具 Pi 发布 1.0，用户反馈它系统提示词轻量、能在低配笔记本跑本地模型，并可用扩展统一管理跨 agent 的 skills 和 MCP 配置。",
+        "tags": [
+          "编码 Agent",
+          "Pi",
+          "本地模型",
+          "用户反馈"
         ],
         "target_user": "",
         "verticals": []
@@ -29481,6 +29949,46 @@
         "what_it_is": "一个在 iPhone 上实时运行的钢琴 MIDI 自动补全模型，你弹几个音符，它接着往下编。"
       },
       "stage": "deep_analysis_fallback"
+    },
+    "62667bb4d080f5d2352badb58e43288eea787b1888bce7609227e28518b72ceb": {
+      "created_at": "2026-10-02T05:35:08.930872+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "servicenow-autosynthdata-enterprise-agents",
+        "evidence_status": "first_party",
+        "follow_up": "查看博客正文，确认 AutoSynthData 的方法、开源程度和实际效果。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:huggingface.co_blog_feed.xml:56c490db040147f1",
+        "intelligence_type": "builder_insight",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "AutoSynthData",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Hugging Face 博客发布 ServiceNow 的 AutoSynthData，主题是为企业 Agent 生成训练数据，属于可验证的技术实践内容，对理解 Agent 产品如何构建训练数据有迁移价值；但正文缺失，无法确认细节深度。",
+        "region": "global",
+        "score": 7.5,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "ServiceNow 在 Hugging Face 发布 AutoSynthData，用自动合成方式为企业 Agent 生成训练数据，值得关注 Agent 产品如何解决数据问题。",
+        "tags": [
+          "Agent",
+          "训练数据",
+          "企业AI",
+          "ServiceNow"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
     },
     "628547bd41e5f59a0f97ac4be77054314f74267844d288b5a3c6d32233ba687e": {
       "created_at": "2026-08-08T02:21:40.316474+00:00",
@@ -30681,6 +31189,41 @@
       },
       "stage": "candidate_analysis"
     },
+    "6573ea4b2057988e2f298eb083e697bad240f0c1b6a69a38554d36fefb485e1d": {
+      "created_at": "2026-10-02T05:35:16.018238+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-safety-researchers-departure-2026-10",
+        "evidence_status": "reported",
+        "follow_up": "不建议追踪，除非后续披露涉及模型安全机制或产品策略变化。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:08e08643693a8dbd",
+        "intelligence_type": "business_policy",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "这是关于 OpenAI 人事变动的二手报道，不涉及产品、模型能力、构建者实践或可迁移的产品思路，对目标读者（LLM 初学者、AI 产品经理、独立开发者）没有直接增量，属于低相关噪音。",
+        "region": "global",
+        "score": 3.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "TechCrunch 援引 WSJ 报道称 OpenAI 因内部调查发现三名安全研究员不当处理敏感公司信息而与其解除关系，此事与产品构建和模型能力无关，不值得拆解。",
+        "tags": [],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "6576b84145e0d17a963ff3b88408bb8811bbda1e0ee38c6603e100fa1815c1f6": {
       "created_at": "2026-09-28T05:22:04.310331+00:00",
       "model": "deepseek-flash",
@@ -31136,6 +31679,45 @@
         "tags": [
           "Nvidia",
           "数据中心"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "672cd383fccd4bdac4d8a9e89cf79b150d5d787f110a9812886f1e860e2e5d19": {
+      "created_at": "2026-10-02T05:35:29.396830+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "claude-code-v2.1.287",
+        "evidence_status": "first_party",
+        "follow_up": "观察 Claude Mods 生态是否出现第三方插件，以及侧边 agent 模式是否被复制。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "github:release:401174143",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Claude Code",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Claude Code 官方发布 v2.1.287，新增 Claude Mods 插件机制和内置 mod 'You should know'（侧边 agent 主动提醒遗漏），属于编码 agent 产品在可扩展性和主动辅助上的实质功能更新，对构建 agent 产品有直接参考价值。",
+        "region": "global",
+        "score": 7.5,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "Anthropic 发布 Claude Code v2.1.287，加入可修改深层行为的 Claude Mods 插件机制，以及一个侧边 agent 主动提醒遗漏事项的内置 mod。",
+        "tags": [
+          "Claude Code",
+          "编码 Agent",
+          "插件"
         ],
         "target_user": "",
         "verticals": []
@@ -31949,6 +32531,46 @@
           "Agent",
           "构建者社区",
           "活动"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "697a49f0271c1bc86ed5b9462500ddb37f44113af9d7f876736a007c9905d633": {
+      "created_at": "2026-10-02T05:35:40.909699+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "cloudflare-clef-decision-models",
+        "evidence_status": "first_party",
+        "follow_up": "Cloudflare 是否公布训练数据与复现路径；Clef 在审核之外场景的表现；定价是否调整。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:49923692",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Clef",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Cloudflare 官方博客发布开放权重决策模型 Clef 及 RL 微调平台，属模型公司一手能力动态。HN 讨论给出可验证的对比数据：在内容审核场景比 Jev 慢 2-3 倍且漏检更多，价格约 0.24 美元/百万输入 token 对比 Jev 的 0.042 美元，且被指出是开放权重而非开源。有真实评测与定价信息，对判断“小模型做决策任务”的产品可行性有增量，但非初学者可直接迁移的产品案例。",
+        "region": "global",
+        "score": 7.6,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Cloudflare 发布开放权重的决策模型 Clef 和配套微调平台，想解决内容审核等判断类任务，但用户实测它比旧模型 Jev 更慢更贵还漏检更多，值得看是因为它提醒做 AI 产品不能只看发布宣传要看真实对比数据。",
+        "tags": [
+          "决策模型",
+          "开放权重",
+          "内容审核",
+          "Cloudflare"
         ],
         "target_user": "",
         "verticals": []
@@ -36705,6 +37327,46 @@
         "tags": [
           "硬件",
           "内存计算"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "7b5134d8bf0c78b730118f63f25231a339b22b0ea80b8792c14d6295910e8467": {
+      "created_at": "2026-10-02T05:35:40.910030+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "pi-durable-agent-harness",
+        "evidence_status": "first_party",
+        "follow_up": "Durable 与 Pi 1.0 的关系与迁移路径；分支对话树被砍是否影响复杂任务；与 LangChain、Vercel 同类产品的差异。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:49925969",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Pi Durable",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Pi 团队发布 Durable，把 agent harness 做成可长时间无人值守运行的持久化产品，属构建者一手产品发布。HN 评论给出关键设计取舍（放弃分支对话树、只保留带祖先信息的 fork）和竞品格局（LangChain Deep Agents、Vercel Eve、OpenAI Agents API、Anthropic Managed Agents），对理解“持久化 agent”这一产品方向有明确增量。",
+        "region": "global",
+        "score": 8.4,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Pi 团队推出 Durable，让 AI agent 能长时间无人值守地跑任务，解决的是 agent 一断线就前功尽弃的问题，值得看是因为它把持久化 agent 这个方向的产品设计取舍讲得很清楚。",
+        "tags": [
+          "Agent",
+          "持久化",
+          "开发者工具",
+          "Pi"
         ],
         "target_user": "",
         "verticals": []
@@ -43528,6 +44190,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "8ede14905324e16d14c180dcbe2d18ce19e5d455a9007142b67d7dc929b879a0": {
+      "created_at": "2026-10-02T05:35:18.166185+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "opus-5-5-writing-tells-analysis",
+        "evidence_status": "reported",
+        "follow_up": "可留意后续是否有更系统的模型输出特征研究，但本条本身不必追踪。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:8427fc6093c0dadd",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Opus 5.5",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "TechCrunch 记者对 Opus 5.5 输出文本的用词特征做统计观察，属于高信噪比行业观察，但既非模型公司一手发布，也没有产品、代码、Demo 或用户反馈，无法直接催生新产品或让初学者理解 AI 在哪一步发挥作用，按规则低于 7 分。",
+        "region": "global",
+        "score": 5.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "TechCrunch 记者发现 Opus 5.5 写东西时爱用 dependable 等词，频率比人类样本高 23 倍，提醒读者识别 AI 写作痕迹。",
+        "tags": [
+          "模型观察",
+          "AI写作",
+          "行业媒体"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "8f318be80dc8bb3fb7f3c9d2bf178d427cf886e10367b9b6c80a6512d24754e8": {
       "created_at": "2026-09-23T04:44:03.691509+00:00",
       "model": "deepseek-flash",
@@ -43869,6 +44570,44 @@
         "tags": [
           "模型榜单",
           "开发者偏好"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "8fb4fb4fadb43a547b01be151741362264d93d977034adf8807668a455dafd48": {
+      "created_at": "2026-10-02T05:35:29.395690+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-codex-rust-v0.162.0-alpha.2",
+        "evidence_status": "first_party",
+        "follow_up": "无需跟进，等待正式版说明。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "github:release:401480968",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "OpenAI Codex",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Codex 的 alpha 版本发布，正文只有版本号，无任何功能说明或变更内容，属于低信息量自动发布。",
+        "region": "global",
+        "score": 3.0,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "OpenAI Codex 发布 rust-v0.162.0-alpha.2，但发布说明只有版本号，没有可读的功能变更。",
+        "tags": [
+          "Codex",
+          "版本发布"
         ],
         "target_user": "",
         "verticals": []
@@ -47691,6 +48430,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "9b04ede82c000903128b233ab225e6cfacecd9426a34d1827a36d36184658345": {
+      "created_at": "2026-10-02T05:35:29.394919+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "gemini-4-argon-fairwind",
+        "evidence_status": "early_signal",
+        "follow_up": "等待公开 API 或产品化入口，确认长输出能力对 agent 产品的实际影响。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:www.latent.space_feed:015ccf980c076bf6",
+        "intelligence_type": "model_capability",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Gemini 4 Argon",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Gemini 4 Argon 被描述为 Google DeepMind 对 Astra/Fable 的回应，支持 100 万输出 token，但仅限政府用户和 Fairwind 计划中的可信网络防御者试用，属于受限预览的早期信号，能力细节不足。",
+        "region": "global",
+        "score": 7.2,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "Latent Space 报道 Google DeepMind 推出 Gemini 4 Argon，支持 100 万输出 token，但目前只对政府用户和 Fairwind 计划中的可信网络防御者开放试用。",
+        "tags": [
+          "Gemini",
+          "模型能力",
+          "早期信号"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "9b1588c81c533177fd5a2da7c908ad249080b17821c3bf1b63ef74c021630982": {
       "created_at": "2026-08-11T02:27:24.066123+00:00",
       "model": "deepseek-v4-flash",
@@ -48179,6 +48957,45 @@
           "Vercel AI",
           "SDK",
           "补丁"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "9c70907aba1bb92d2696bc45e557a057035268a98edee59357a5a26b46577e47": {
+      "created_at": "2026-10-02T05:35:40.909944+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "sveltekit-3-release",
+        "evidence_status": "first_party",
+        "follow_up": "无。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:49926536",
+        "intelligence_type": "market_signal",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "SvelteKit",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "SvelteKit 3 官方发布，属前端框架更新，与 AI 产品无直接关系。评论中关于 LLM 生成 Svelte 代码质量的讨论有一定参考价值（现代模型已能较好处理 Svelte），但只是附带观察，不构成可迁移的 AI 产品增量，按规则低于 7 分。",
+        "region": "global",
+        "score": 5.8,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "SvelteKit 3 正式发布，评论区顺带讨论现代大模型写 Svelte 代码已经不太出错，对做 AI 产品的人来说只有一点间接参考，没有直接可用的产品信息。",
+        "tags": [
+          "前端框架",
+          "SvelteKit",
+          "低相关"
         ],
         "target_user": "",
         "verticals": []
@@ -51219,6 +52036,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "a445efc94722f61a7d4f93c5b4c74409a58e2e208f374db15d64582265d3402e": {
+      "created_at": "2026-10-02T05:35:29.394760+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "openai-dots-agent-devday",
+        "evidence_status": "reported",
+        "follow_up": "等待 OpenAI 官方发布页或可试用 Demo，确认 Dots 的实际能力与定价。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:1bae05af9353fd57",
+        "intelligence_type": "product_case",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Dots",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "媒体转述 OpenAI DevDay 上发布 Dots agent 的现场，但正文被截断，缺少产品细节、用户使用方式和可验证 Demo，属于报道而非一手发布，且与 Meta Muse 的对比偏竞争叙事，信息增量有限。",
+        "region": "global",
+        "score": 6.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "OpenAI 在 DevDay 上发布由 GPT-6 Astra 驱动的 agent 产品 Dots，用来对标 Meta 已获早期成功的 Muse，但报道未给出可验证的产品细节。",
+        "tags": [
+          "Agent",
+          "OpenAI",
+          "Meta"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "a44a98d97c103eb71f2e5985ff58561dc36f422a9ec34dfd87664def5901bc3b": {
       "created_at": "2026-08-02T03:52:32.504126+00:00",
       "model": "deepseek-v4-flash",
@@ -53658,6 +54514,46 @@
       },
       "stage": "candidate_analysis"
     },
+    "ac2aa1961ab126729bb4b3d665cdf5cff0aa5f0d2aa36482b09b164a8c98eae2": {
+      "created_at": "2026-10-02T05:35:40.910192+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "billmender-hospital-prices",
+        "evidence_status": "first_party",
+        "follow_up": "方法论反馈与数据修正；是否扩展到更多医院和服务项；是否商业化。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:49926185",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "BillMender",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "作者用爬虫抓取 482 家美国医院依法公开的价格文件（单个文件达 36GB、四种格式、极脏），整理出 29 项常见服务的标价与保险公司实付价对比，并公开了方法论与数据校验规则。属医疗健康垂直领域的一手产品案例，清楚展示了“解决什么问题、数据从哪来、怎么保证可信”，对做垂直 AI 产品的人有直接参考价值。互动量低但内容质量高。",
+        "region": "global",
+        "score": 7.8,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "有人写爬虫把 482 家美国医院依法公开但没人看得懂的价格文件整理成对比表，发现急诊标价中位数 1285 美元而保险公司只付 288 美元，值得看是因为它示范了怎么把又大又脏的公开数据变成普通人能用的医疗价格产品。",
+        "tags": [
+          "医疗健康",
+          "数据产品",
+          "爬虫",
+          "价格透明"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "ac2bce24e82c325bc55a0b09ba697a7459cab13385c3ab7b34bcc0142b110e46": {
       "created_at": "2026-09-30T05:31:24.630502+00:00",
       "model": "deepseek-flash",
@@ -54340,6 +55236,45 @@
           "Vercel",
           "AI SDK",
           "Agent"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "ae5b389a61ce0a49164a85fc07b028b26b15cd1f9ad8efdfd1e0dbe32705fbca": {
+      "created_at": "2026-10-02T05:35:11.268219+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "grok-trump-venezuela-advice",
+        "evidence_status": "reported",
+        "follow_up": "不值得追踪，除非出现 Grok 官方或特朗普团队的一手确认及具体产品交互细节。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:86956747195fc51c",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Grok",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "这是一条关于 Grok 被用于地缘政治决策的传闻报道，来源为 TechCrunch 转述，无一手证据、无产品功能增量、无构建过程或用户反馈，属于泛行业评论与政治八卦交叉内容，对 AI 产品经理学习产品思路、开发实践或新模型能力没有可迁移增量，按规则低于 7 分不收录。",
+        "region": "global",
+        "score": 3.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "TechCrunch 报道称特朗普在入侵委内瑞拉并抓捕马杜罗前曾询问 Grok 的意见，但无一手证据，对 AI 产品学习没有可迁移价值。",
+        "tags": [
+          "Grok",
+          "AI 政治应用",
+          "传闻"
         ],
         "target_user": "",
         "verticals": []
@@ -59809,6 +60744,45 @@
       },
       "stage": "deep_analysis"
     },
+    "bfd1e12d2beffe36032819b2c81fbeccb9b8469c3b2beda06d4cbaa65055423d": {
+      "created_at": "2026-10-02T05:35:29.394889+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "matthew-green-agent-sandboxing-worm",
+        "evidence_status": "reported",
+        "follow_up": "关注是否有 agent 产品据此调整沙箱与权限设计。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:simonwillison.net_atom_everything_:e48a7f736f56ad59",
+        "intelligence_type": "builder_insight",
+        "is_first_party": false,
+        "is_new_event": false,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "引用密码学学者 Matthew Green 关于 agent 沙箱隔离不足、可能形成蠕虫式传播的分析，对做 agent 产品有安全设计启发，但属于观点引用而非可验证实践或产品案例，且无构建过程证据。",
+        "region": "global",
+        "score": 6.8,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "Simon Willison 引用 Matthew Green 的观点，指出独立沙箱中的 agent 可通过共享缓存互相传递指令，形成类似蠕虫的传播链，提醒 agent 产品需重视隔离设计。",
+        "tags": [
+          "Agent",
+          "安全",
+          "沙箱"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "bfdb064d275695f9b6d10d7c17887ce65e9741ca8d9600365d4f0dc0c3b70f09": {
       "created_at": "2026-09-04T04:31:13.385323+00:00",
       "model": "deepseek-v4-flash",
@@ -61986,6 +62960,45 @@
         "tags": [
           "AI Blind Spots",
           "General"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "c7981735df8378ee870363f5e4b8e4bf9c1200c3dc027f4c01312774a770fb1a": {
+      "created_at": "2026-10-02T05:35:40.909842+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "linux-kernel-cve-batch",
+        "evidence_status": "reported",
+        "follow_up": "无。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:49928121",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": false,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Linux 内核漏洞汇总，属底层系统安全议题，与 AI 产品构建无直接关系。评论中关于 AI 写代码引入漏洞的讨论只是泛泛观点，无产品、无案例、无数据，按规则属低相关噪音。",
+        "region": "global",
+        "score": 3.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Linux 内核又披露一批漏洞，评论里有人讨论 AI 写代码会不会带来更多安全问题，但没有任何产品案例或可验证数据，对做 AI 产品暂时没有可用的信息。",
+        "tags": [
+          "安全",
+          "Linux",
+          "噪音"
         ],
         "target_user": "",
         "verticals": []
@@ -64199,6 +65212,44 @@
           "加密",
           "隐私",
           "欧盟"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "cfd132af0c4c4f84cf4bd9f8ac9106e31ead09206431f5948b926e407f2e0bdb": {
+      "created_at": "2026-10-02T05:35:40.910122+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "xena-project-grieve-post",
+        "evidence_status": "reported",
+        "follow_up": "无。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:49919676",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": false,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "数学项目 Xena 的一篇个人感想文章，讨论是否要为某事哀悼，与 AI 产品构建无关，仅有一条评论且无实质信息，属噪音。",
+        "region": "global",
+        "score": 2.5,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "一篇数学项目作者的个人感想，和 AI 产品没有关系，也没有可用的信息。",
+        "tags": [
+          "噪音",
+          "数学"
         ],
         "target_user": "",
         "verticals": []
@@ -69878,6 +70929,46 @@
       },
       "stage": "candidate_analysis"
     },
+    "e2cee4707bcdb6118dcde7de185a01c211eb966bf6fbae856a494eed67840727": {
+      "created_at": "2026-10-02T05:35:29.395642+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-agents-python-v0.23.0",
+        "evidence_status": "first_party",
+        "follow_up": "查看文档确认这些配置项在真实 agent 项目中的使用方式。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "github:release:401467347",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "OpenAI Agents SDK",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI Agents SDK 官方发布 v0.23.0，新增 MCP 列表分页限制、Docker 删除保护、内存整合轮次配置和加密历史扫描预算，属于 agent 开发框架的实质功能更新，对构建 agent 产品有直接参考价值。",
+        "region": "global",
+        "score": 7.0,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "OpenAI 发布 Agents Python SDK v0.23.0，为 MCP 列表加限制、给沙箱加 Docker 删除保护并支持配置内存整合轮次，帮助开发者更安全地搭建 agent。",
+        "tags": [
+          "Agent",
+          "SDK",
+          "MCP",
+          "沙箱"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "e2e5175f3dd78f9a03e267ac1e20dd50980f01db7e88e79c280483ebbe9a9e81": {
       "created_at": "2026-09-18T04:42:14.413687+00:00",
       "model": "deepseek-flash",
@@ -70302,6 +71393,39 @@
         "verticals": []
       },
       "stage": "candidate_analysis"
+    },
+    "e4229ed16a5f57ab029371b48f6ff48f31c2398606411227a9e9c0eedd274ac9": {
+      "created_at": "2026-10-02T05:36:10.705851+00:00",
+      "model": "kimi-k2.6",
+      "prompt_version": "deep-v3-beginner",
+      "result": {
+        "ai_role": "执行用户通过扩展定义的具体任务，如代码生成、工具调用、子 Agent 协调；Pi 本身不预设重提示词，由用户扩展控制行为",
+        "evidence_status": "verified",
+        "hands_on_exercise": "30 分钟：在 GitHub 搜索 pi-agent 或相关仓库，对比 Pi 与另一个编码 Agent（如 Cline、Aider）的 README 中 system prompt 长度；再检查两者是否支持 MCP 配置复用。记录你的发现。",
+        "implementation_idea": "把 Agent 做成一个「空壳框架」——核心只保留最基本的工具调用原语，所有能力都外挂为扩展。这样系统提示词极小，本地模型加载快；用户用同一套 skills 和 MCP 配置，换 Agent 也不用重新设置。",
+        "learning_points": [
+          "Agent harness：给 LLM 配备「手脚」的框架，让它能调用外部工具、执行多步任务",
+          "MCP（Model Context Protocol）：一种让 AI 模型安全连接外部数据源和工具的标准接口，类似 USB-C",
+          "系统提示词（System Prompt）：告诉 AI「你是谁、能做什么」的隐藏指令，太长会让本地模型启动变慢"
+        ],
+        "limitations_or_uncertainties": "「Cache warming for anthropic models」功能未单独分包引发社区疑问；历史记录跳转 bug 用户已反馈但未确认修复状态；产品是否完全开源、许可证类型未公开",
+        "product_name": "Pi",
+        "sources": [
+          "https://earendil.com/posts/pi-1-0/",
+          "https://news.ycombinator.com/item?id=49925969"
+        ],
+        "target_users": "开发者、想自建 AI Agent 的技术用户，尤其是硬件配置有限、希望本地运行模型的人",
+        "title_zh": "Pi 1.0：一个轻量级 AI 编码 Agent 框架，能在低配笔记本跑本地模型",
+        "usage_flow": [
+          "安装 Pi 并选择基础配置（可极简 barebones 起步）",
+          "按需添加扩展（extensions）和 skills，例如 MCP 连接、子 Agent、历史管理等",
+          "连接本地模型或远程 API，开始编码或自动化任务",
+          "随使用场景逐步扩展 harness，而非一开始加载全部功能"
+        ],
+        "user_problem": "现有编码 Agent（如 Claude、Codex 等）系统提示词太重，低配笔记本预填充要几分钟；skills 和 MCP 配置无法跨 Agent 同步，多工具切换体验割裂",
+        "what_it_is": "一个开源的 AI Agent「 harness（ harness 就是给 AI 套上的鞍具/框架，让它能调用工具、执行任务）」，主打极简设计，让用户用扩展和 skills 来定制自己的编码或通用 Agent。"
+      },
+      "stage": "deep_analysis"
     },
     "e428a26756fe188728a6f4b4364a7603fad13dfaa874bcb9d586e72ec0267e20": {
       "created_at": "2026-07-26T04:08:00.660810+00:00",
@@ -79430,6 +80554,45 @@
         "tags": [
           "Claude Code",
           "bugfix"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "ff20b95a1a7757461ed3df9c133d8ef2f045a2c294444d6275072ce8d614e8c8": {
+      "created_at": "2026-10-02T05:35:29.395983+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-codex-rust-v0.160.0",
+        "evidence_status": "first_party",
+        "follow_up": "观察 Guardian 审查机制是否被其他 agent 产品借鉴。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "github:release:401312540",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "OpenAI Codex",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Codex 正式版 v0.160.0 带来 agent 命令中心历史浏览、会话恢复权限、Guardian 审查等可用性改进，属于编码 agent 产品的实质更新，但偏工程细节，对产品经理的迁移价值中等。",
+        "region": "global",
+        "score": 6.5,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "OpenAI Codex 发布 v0.160.0，新增 agent 命令中心历史浏览、跨项目会话恢复和 Guardian 审查能力，改善编码 agent 的日常使用体验。",
+        "tags": [
+          "Codex",
+          "编码 Agent",
+          "版本发布"
         ],
         "target_user": "",
         "verticals": []

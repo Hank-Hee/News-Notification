@@ -1,7 +1,1005 @@
 {
   "version": 1,
-  "updated_at": "2026-10-01T05:51:24.391283+00:00",
+  "updated_at": "2026-10-02T05:36:10.732914+00:00",
   "products": [
+    {
+      "product_id": "product-c3c6365e583fac07",
+      "product_name": "Pi Durable",
+      "builder_name": "paulsmith",
+      "first_seen": "2026-10-02",
+      "last_seen": "2026-10-02",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "开发需要长时间无人值守运行 AI Agent 的工程师，比如远程服务器上的编码助手、自动化任务机器人",
+      "user_problem": "原来的 Pi 编码 Agent 跑在终端里，人一离开、网络一断或进程一死，任务就前功尽弃，必须有人盯着重新启动和指示继续",
+      "what_it_is": "Pi 团队开源的一个让 AI Agent（能自主执行任务的 AI 程序）在进程崩溃或断线后，能从断点继续运行的持久化执行框架，而非从头重来。",
+      "ai_role": "AI 负责在恢复后继续执行被中断的任务，基于保存的上下文做出下一步决策，而非人类手动告诉它该做什么",
+      "implementation_idea": "核心思路像游戏存档：把 Agent 的运行状态（对话历史、任务进度）定期存盘，而不是存在内存里。恢复时读档继续。为了简化，它放弃了复杂的分支对话树，只支持带'族谱信息'的分叉——就像你只能从主线开新存档，不能任意回到过去某个节点再分出多条平行线。",
+      "hands_on_exercise": "30 分钟：去 npm 安装 @earendil-works/pi-durable，跑它的示例代码，然后故意在 Agent 执行中途杀掉进程，再重启，观察是否从断点继续而非从头开始。",
+      "limitations_or_uncertainties": "沙箱安全（sandboxing）是否内建未明确——社区评论指出目前缺乏声明式规则来隔离不可信代码执行环境；分支对话树被砍的具体技术原因作者未直接回应；实际生产稳定性待更多用户验证",
+      "region": "global",
+      "score": 8.4,
+      "summary": "Pi 团队推出 Durable，让 AI agent 能长时间无人值守地跑任务，解决的是 agent 一断线就前功尽弃的问题，值得看是因为它把持久化 agent 这个方向的产品设计取舍讲得很清楚。",
+      "title": "Pi Durable：让 AI Agent 断线也能接着干的持久化运行框架",
+      "url": "https://earendil.com/posts/pi-durable/",
+      "sources": [
+        {
+          "url": "https://earendil.com/posts/pi-durable/",
+          "title": "Pi Durable",
+          "source_type": "hackernews",
+          "published_at": "2026-10-01T19:24:08+00:00"
+        },
+        {
+          "url": "https://packages.ecosyste.ms/registries/npmjs.org/packages/@earendil-works/pi-durable",
+          "title": "earendil-works/ pi - durable | npmjs.org | Ecosyste.ms: Packages",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "pi-durable-agent-harness",
+          "date": "2026-10-02",
+          "title": "Pi Durable：让 AI Agent 断线也能接着干的持久化运行框架",
+          "summary": "Pi 团队推出 Durable，让 AI agent 能长时间无人值守地跑任务，解决的是 agent 一断线就前功尽弃的问题，值得看是因为它把持久化 agent 这个方向的产品设计取舍讲得很清楚。",
+          "score": 8.4,
+          "url": "https://earendil.com/posts/pi-durable/"
+        }
+      ],
+      "usage_flow": [
+        "开发者用 Pi Durable 框架包装自己的 Agent 任务代码",
+        "框架自动把对话状态和任务进度保存到持久存储",
+        "Agent 长时间运行，即使进程崩溃或断线也无需人工干预",
+        "重启后从最新保存点自动恢复，继续执行未完成的任务"
+      ],
+      "learning_points": [
+        "Agent：能自主规划步骤、调用工具完成目标的 AI 程序，不只是回答问题",
+        "持久化（Durable）：把运行中的状态存到硬盘/数据库，进程死了数据不丢，重启能续",
+        "Fork with ancestry：不是任意分支，而是像 Git 的线性历史带标记，知道从哪分出来的，简化状态管理"
+      ],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "持久化",
+        "开发者工具",
+        "Pi"
+      ]
+    },
+    {
+      "product_id": "product-3de8f1a861da3b6e",
+      "product_name": "Pi",
+      "builder_name": "sergiotapia",
+      "first_seen": "2026-10-02",
+      "last_seen": "2026-10-02",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "verified",
+      "target_user": "开发者、想自建 AI Agent 的技术用户，尤其是硬件配置有限、希望本地运行模型的人",
+      "user_problem": "现有编码 Agent（如 Claude、Codex 等）系统提示词太重，低配笔记本预填充要几分钟；skills 和 MCP 配置无法跨 Agent 同步，多工具切换体验割裂",
+      "what_it_is": "一个开源的 AI Agent「 harness（ harness 就是给 AI 套上的鞍具/框架，让它能调用工具、执行任务）」，主打极简设计，让用户用扩展和 skills 来定制自己的编码或通用 Agent。",
+      "ai_role": "执行用户通过扩展定义的具体任务，如代码生成、工具调用、子 Agent 协调；Pi 本身不预设重提示词，由用户扩展控制行为",
+      "implementation_idea": "把 Agent 做成一个「空壳框架」——核心只保留最基本的工具调用原语，所有能力都外挂为扩展。这样系统提示词极小，本地模型加载快；用户用同一套 skills 和 MCP 配置，换 Agent 也不用重新设置。",
+      "hands_on_exercise": "30 分钟：在 GitHub 搜索 pi-agent 或相关仓库，对比 Pi 与另一个编码 Agent（如 Cline、Aider）的 README 中 system prompt 长度；再检查两者是否支持 MCP 配置复用。记录你的发现。",
+      "limitations_or_uncertainties": "「Cache warming for anthropic models」功能未单独分包引发社区疑问；历史记录跳转 bug 用户已反馈但未确认修复状态；产品是否完全开源、许可证类型未公开",
+      "region": "global",
+      "score": 8.2,
+      "summary": "编码 agent 工具 Pi 发布 1.0，用户反馈它系统提示词轻量、能在低配笔记本跑本地模型，并可用扩展统一管理跨 agent 的 skills 和 MCP 配置。",
+      "title": "Pi 1.0：一个轻量级 AI 编码 Agent 框架，能在低配笔记本跑本地模型",
+      "url": "https://earendil.com/posts/pi-1-0/",
+      "sources": [
+        {
+          "url": "https://earendil.com/posts/pi-1-0/",
+          "title": "Pi 1.0",
+          "source_type": "hackernews",
+          "published_at": "2026-10-01T19:33:05+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "pi-1.0-release",
+          "date": "2026-10-02",
+          "title": "Pi 1.0：一个轻量级 AI 编码 Agent 框架，能在低配笔记本跑本地模型",
+          "summary": "编码 agent 工具 Pi 发布 1.0，用户反馈它系统提示词轻量、能在低配笔记本跑本地模型，并可用扩展统一管理跨 agent 的 skills 和 MCP 配置。",
+          "score": 8.2,
+          "url": "https://earendil.com/posts/pi-1-0/"
+        }
+      ],
+      "usage_flow": [
+        "安装 Pi 并选择基础配置（可极简 barebones 起步）",
+        "按需添加扩展（extensions）和 skills，例如 MCP 连接、子 Agent、历史管理等",
+        "连接本地模型或远程 API，开始编码或自动化任务",
+        "随使用场景逐步扩展 harness，而非一开始加载全部功能"
+      ],
+      "learning_points": [
+        "Agent harness：给 LLM 配备「手脚」的框架，让它能调用外部工具、执行多步任务",
+        "MCP（Model Context Protocol）：一种让 AI 模型安全连接外部数据源和工具的标准接口，类似 USB-C",
+        "系统提示词（System Prompt）：告诉 AI「你是谁、能做什么」的隐藏指令，太长会让本地模型启动变慢"
+      ],
+      "verticals": [],
+      "tags": [
+        "编码 Agent",
+        "Pi",
+        "本地模型",
+        "用户反馈"
+      ]
+    },
+    {
+      "product_id": "product-f315783a960fa796",
+      "product_name": "DeepSeek Harness",
+      "builder_name": "Kuyawa",
+      "first_seen": "2026-10-02",
+      "last_seen": "2026-10-02",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "DeepSeek 把 Harness 做成了 Mac 和 Windows 桌面应用，用户装上就能用、旧设置自动迁移，还自己让 AI 写插件补功能，值得看是因为它展示了模型公司怎么把开发工具做成普通人能直接用的产品。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "china",
+      "score": 8.2,
+      "summary": "DeepSeek 把 Harness 做成了 Mac 和 Windows 桌面应用，用户装上就能用、旧设置自动迁移，还自己让 AI 写插件补功能，值得看是因为它展示了模型公司怎么把开发工具做成普通人能直接用的产品。",
+      "title": "DeepSeek Harness",
+      "url": "https://www.deepseek.com/en/harness/",
+      "sources": [
+        {
+          "url": "https://www.deepseek.com/en/harness/",
+          "title": "DeepSeek Harness",
+          "source_type": "hackernews",
+          "published_at": "2026-10-02T03:11:20+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "deepseek-harness-desktop-app",
+          "date": "2026-10-02",
+          "title": "DeepSeek Harness",
+          "summary": "DeepSeek 把 Harness 做成了 Mac 和 Windows 桌面应用，用户装上就能用、旧设置自动迁移，还自己让 AI 写插件补功能，值得看是因为它展示了模型公司怎么把开发工具做成普通人能直接用的产品。",
+          "score": 8.2,
+          "url": "https://www.deepseek.com/en/harness/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "开发者工具",
+        "DeepSeek",
+        "桌面应用"
+      ]
+    },
+    {
+      "product_id": "product-b8359b6e211af32b",
+      "product_name": "Gemini Live Guided Vision",
+      "builder_name": "Stevie Bonifield",
+      "first_seen": "2026-10-02",
+      "last_seen": "2026-10-02",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Google 在 Gemini Live 推出 Guided Vision，用户用手机摄像头就能让 AI 实时描述环境、读小字和找东西，值得看多模态助手怎么落地。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.0,
+      "summary": "Google 在 Gemini Live 推出 Guided Vision，用户用手机摄像头就能让 AI 实时描述环境、读小字和找东西，值得看多模态助手怎么落地。",
+      "title": "Google’s new Guided Vision feature can help you read the fine print",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1003756/google-gemini-live-guided-vision",
+      "sources": [
+        {
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1003756/google-gemini-live-guided-vision",
+          "title": "Google’s new Guided Vision feature can help you read the fine print",
+          "source_type": "rss",
+          "published_at": "2026-10-01T19:47:51+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "google-gemini-live-guided-vision",
+          "date": "2026-10-02",
+          "title": "Google’s new Guided Vision feature can help you read the fine print",
+          "summary": "Google 在 Gemini Live 推出 Guided Vision，用户用手机摄像头就能让 AI 实时描述环境、读小字和找东西，值得看多模态助手怎么落地。",
+          "score": 8.0,
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1003756/google-gemini-live-guided-vision"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Gemini",
+        "多模态",
+        "视觉助手",
+        "无障碍"
+      ]
+    },
+    {
+      "product_id": "product-e71898e653665084",
+      "product_name": "BillMender",
+      "builder_name": "curatedmcp",
+      "first_seen": "2026-10-02",
+      "last_seen": "2026-10-02",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "有人写爬虫把 482 家美国医院依法公开但没人看得懂的价格文件整理成对比表，发现急诊标价中位数 1285 美元而保险公司只付 288 美元，值得看是因为它示范了怎么把又大又脏的公开数据变成普通人能用的医疗价格产品。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.8,
+      "summary": "有人写爬虫把 482 家美国医院依法公开但没人看得懂的价格文件整理成对比表，发现急诊标价中位数 1285 美元而保险公司只付 288 美元，值得看是因为它示范了怎么把又大又脏的公开数据变成普通人能用的医疗价格产品。",
+      "title": "Show HN: What 482 hospitals charge vs. what insurers pay, from their own files",
+      "url": "https://www.billmender.com/hospital-prices",
+      "sources": [
+        {
+          "url": "https://www.billmender.com/hospital-prices",
+          "title": "Show HN: What 482 hospitals charge vs. what insurers pay, from their own files",
+          "source_type": "hackernews",
+          "published_at": "2026-10-01T19:42:09+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "billmender-hospital-prices",
+          "date": "2026-10-02",
+          "title": "Show HN: What 482 hospitals charge vs. what insurers pay, from their own files",
+          "summary": "有人写爬虫把 482 家美国医院依法公开但没人看得懂的价格文件整理成对比表，发现急诊标价中位数 1285 美元而保险公司只付 288 美元，值得看是因为它示范了怎么把又大又脏的公开数据变成普通人能用的医疗价格产品。",
+          "score": 7.8,
+          "url": "https://www.billmender.com/hospital-prices"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "医疗健康",
+        "数据产品",
+        "爬虫",
+        "价格透明"
+      ]
+    },
+    {
+      "product_id": "product-11f4fd1598d3b67e",
+      "product_name": "Clef",
+      "builder_name": "jasondavies",
+      "first_seen": "2026-10-02",
+      "last_seen": "2026-10-02",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Cloudflare 发布开放权重的决策模型 Clef 和配套微调平台，想解决内容审核等判断类任务，但用户实测它比旧模型 Jev 更慢更贵还漏检更多，值得看是因为它提醒做 AI 产品不能只看发布宣传要看真实对比数据。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.6,
+      "summary": "Cloudflare 发布开放权重的决策模型 Clef 和配套微调平台，想解决内容审核等判断类任务，但用户实测它比旧模型 Jev 更慢更贵还漏检更多，值得看是因为它提醒做 AI 产品不能只看发布宣传要看真实对比数据。",
+      "title": "Clef: Open-weight decision models, and new RL fine-tuning platform",
+      "url": "https://blog.cloudflare.com/clef-decision-models/",
+      "sources": [
+        {
+          "url": "https://blog.cloudflare.com/clef-decision-models/",
+          "title": "Clef: Open-weight decision models, and new RL fine-tuning platform",
+          "source_type": "hackernews",
+          "published_at": "2026-10-01T16:18:57+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "cloudflare-clef-decision-models",
+          "date": "2026-10-02",
+          "title": "Clef: Open-weight decision models, and new RL fine-tuning platform",
+          "summary": "Cloudflare 发布开放权重的决策模型 Clef 和配套微调平台，想解决内容审核等判断类任务，但用户实测它比旧模型 Jev 更慢更贵还漏检更多，值得看是因为它提醒做 AI 产品不能只看发布宣传要看真实对比数据。",
+          "score": 7.6,
+          "url": "https://blog.cloudflare.com/clef-decision-models/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "决策模型",
+        "开放权重",
+        "内容审核",
+        "Cloudflare"
+      ]
+    },
+    {
+      "product_id": "product-7f7811de59626bc9",
+      "product_name": "Claude Code",
+      "builder_name": "ashwin-ant",
+      "first_seen": "2026-07-26",
+      "last_seen": "2026-10-02",
+      "occurrence_count": 25,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "企业开发团队、AI 产品经理、需要集中管控模型使用的组织",
+      "user_problem": "企业里旧提示词在新模型上表现变差却没人知道；管理员没法精确控制员工能调用哪个模型版本；LLM 网关（gateway，企业流量入口）看不到哪些请求属于同一用户指令，排错困难。",
+      "what_it_is": "Anthropic 发布 Claude Code v2.1.287，加入可修改深层行为的 Claude Mods 插件机制，以及一个侧边 agent 主动提醒遗漏事项的内置 mod。",
+      "ai_role": "执行代码任务的同时，其请求流量可被企业网关识别和分组；自身提示词体系可被审计工具扫描，标记出对旧模型的依赖",
+      "implementation_idea": "在请求头里埋一个提示词 ID（类似快递单号），让网关知道哪些 LLM 请求其实来自同一句用户指令；用规则引擎比对模型名称做精确匹配或黑名单拦截；用静态扫描工具检查提示词文件里的模式，匹配已知的旧模型优化写法。",
+      "hands_on_exercise": "30 分钟体验：安装 Claude Code（需有 Anthropic API 权限），创建一个 `CLAUDE.md` 文件写入一段带 'You are Claude 2' 的提示词，运行 `/doctor prompt-audit`，观察它是否被标记为旧模型提示词；然后在终端设置 `CLAUDE_CODE_GATEWAY_HINT_HEADERS=1`，发起一次请求，用 `curl -v` 或代理工具查看请求头里是否出现 `x-claude-code-prompt-id`。",
+      "limitations_or_uncertainties": "未公开 `/doctor prompt-audit` 具体覆盖哪些旧模型版本、未公开企业网关 hint headers 的完整字段列表、未公开 `load_test_mode` 的 canned reply 内容格式。",
+      "region": "global",
+      "score": 7.5,
+      "summary": "Anthropic 发布 Claude Code v2.1.287，加入可修改深层行为的 Claude Mods 插件机制，以及一个侧边 agent 主动提醒遗漏事项的内置 mod。",
+      "title": "anthropics/claude-code released v2.1.287",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.287",
+      "sources": [
+        {
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.219",
+          "title": "anthropics/claude-code released v2.1.219",
+          "source_type": "github",
+          "published_at": "2026-07-24T17:14:23+00:00"
+        },
+        {
+          "url": "https://claude.com/product/claude-code",
+          "title": "Claude Code by Anthropic | AI Coding Agent, Terminal, IDE",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.221",
+          "title": "anthropics/claude-code released v2.1.221",
+          "source_type": "github",
+          "published_at": "2026-08-04T00:14:23+00:00"
+        },
+        {
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.229",
+          "title": "anthropics/claude-code released v2.1.229",
+          "source_type": "github",
+          "published_at": "2026-08-12T20:56:22+00:00"
+        },
+        {
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.232",
+          "title": "anthropics/claude-code released v2.1.232",
+          "source_type": "github",
+          "published_at": "2026-08-13T23:29:59+00:00"
+        },
+        {
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.233",
+          "title": "anthropics/claude-code released v2.1.233",
+          "source_type": "github",
+          "published_at": "2026-08-14T22:20:57+00:00"
+        },
+        {
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.234",
+          "title": "anthropics/claude-code released v2.1.234",
+          "source_type": "github",
+          "published_at": "2026-08-17T20:20:58+00:00"
+        },
+        {
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.236",
+          "title": "anthropics/claude-code released v2.1.236",
+          "source_type": "github",
+          "published_at": "2026-08-19T20:02:05+00:00"
+        },
+        {
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.237",
+          "title": "anthropics/claude-code released v2.1.237",
+          "source_type": "github",
+          "published_at": "2026-08-20T00:54:41+00:00"
+        },
+        {
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.238",
+          "title": "anthropics/claude-code released v2.1.238",
+          "source_type": "github",
+          "published_at": "2026-08-20T20:33:51+00:00"
+        },
+        {
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.239",
+          "title": "anthropics/claude-code released v2.1.239",
+          "source_type": "github",
+          "published_at": "2026-08-21T19:54:23+00:00"
+        },
+        {
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.243",
+          "title": "anthropics/claude-code released v2.1.243",
+          "source_type": "github",
+          "published_at": "2026-08-24T23:40:26+00:00"
+        },
+        {
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.246",
+          "title": "anthropics/claude-code released v2.1.246",
+          "source_type": "github",
+          "published_at": "2026-08-25T22:31:52+00:00"
+        },
+        {
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.247",
+          "title": "anthropics/claude-code released v2.1.247",
+          "source_type": "github",
+          "published_at": "2026-08-26T23:06:39+00:00"
+        },
+        {
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.248",
+          "title": "anthropics/claude-code released v2.1.248",
+          "source_type": "github",
+          "published_at": "2026-08-27T22:12:20+00:00"
+        },
+        {
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.251",
+          "title": "anthropics/claude-code released v2.1.251",
+          "source_type": "github",
+          "published_at": "2026-08-28T18:19:32+00:00"
+        },
+        {
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.259",
+          "title": "anthropics/claude-code released v2.1.259",
+          "source_type": "github",
+          "published_at": "2026-09-02T22:33:51+00:00"
+        },
+        {
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.260",
+          "title": "anthropics/claude-code released v2.1.260",
+          "source_type": "github",
+          "published_at": "2026-09-03T23:48:12+00:00"
+        },
+        {
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.261",
+          "title": "anthropics/claude-code released v2.1.261",
+          "source_type": "github",
+          "published_at": "2026-09-04T19:58:10+00:00"
+        },
+        {
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.271",
+          "title": "anthropics/claude-code released v2.1.271",
+          "source_type": "github",
+          "published_at": "2026-09-14T22:12:54+00:00"
+        },
+        {
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.273",
+          "title": "anthropics/claude-code released v2.1.273",
+          "source_type": "github",
+          "published_at": "2026-09-15T20:23:03+00:00"
+        },
+        {
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.280",
+          "title": "anthropics/claude-code released v2.1.280",
+          "source_type": "github",
+          "published_at": "2026-09-22T16:38:14+00:00"
+        },
+        {
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.281",
+          "title": "anthropics/claude-code released v2.1.281",
+          "source_type": "github",
+          "published_at": "2026-09-23T19:19:15+00:00"
+        },
+        {
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.283",
+          "title": "anthropics/claude-code released v2.1.283",
+          "source_type": "github",
+          "published_at": "2026-09-25T21:50:12+00:00"
+        },
+        {
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.284",
+          "title": "anthropics/claude-code released v2.1.284",
+          "source_type": "github",
+          "published_at": "2026-09-28T18:02:03+00:00"
+        },
+        {
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.287",
+          "title": "anthropics/claude-code released v2.1.287",
+          "source_type": "github",
+          "published_at": "2026-10-01T18:00:22+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "claude-code-v2.1.234",
+          "date": "2026-08-18",
+          "title": "anthropics/claude-code released v2.1.234",
+          "summary": "Claude Code v2.1.234新增环境变量、GitLab MR徽章、自动续会话等功能，并修复安全漏洞。",
+          "score": 8.0,
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.234"
+        },
+        {
+          "update_id": "claude-code-v2.1.236",
+          "date": "2026-08-20",
+          "title": "Claude Code v2.1.236：新增默认模型设置与跨会话通知功能",
+          "summary": "Claude Code v2.1.236新增默认模型设置和跨会话空闲通知，优化多会话协作体验。",
+          "score": 8.0,
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.236"
+        },
+        {
+          "update_id": "claude-code-v2.1.237",
+          "date": "2026-08-20",
+          "title": "anthropics/claude-code released v2.1.237",
+          "summary": "Anthropic发布Claude Code v2.1.237，新增简洁输出风格并修复提示缓存问题，提升编码效率。",
+          "score": 7.5,
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.237"
+        },
+        {
+          "update_id": "claude-code-v2.1.238",
+          "date": "2026-08-21",
+          "title": "anthropics/claude-code released v2.1.238",
+          "summary": "Claude Code发布v2.1.238，新增readline键位风格、插件市场headersHelper等多项改进。",
+          "score": 8.0,
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.238"
+        },
+        {
+          "update_id": "claude-code-v2.1.239",
+          "date": "2026-08-22",
+          "title": "anthropics/claude-code released v2.1.239",
+          "summary": "Claude Code v2.1.239 发布，新增成本估算、全屏渲染器、Python 迁移工具等多项功能更新。",
+          "score": 8.0,
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.239"
+        },
+        {
+          "update_id": "claude-code-v2.1.243",
+          "date": "2026-08-25",
+          "title": "anthropics/claude-code released v2.1.243",
+          "summary": "Anthropic 发布 Claude Code v2.1.243，新增用量统计、模型选择器自定义、提示缓存时长设置和无 API key 登录等多项功能，让开发者更精细地控制成本与使用。",
+          "score": 8.5,
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.243"
+        },
+        {
+          "update_id": "claude-code-v2.1.246",
+          "date": "2026-08-26",
+          "title": "anthropics/claude-code released v2.1.246",
+          "summary": "Anthropic 发布 Claude Code v2.1.246，新增权限管理和性能修复，提升终端 AI 编程体验。",
+          "score": 7.5,
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.246"
+        },
+        {
+          "update_id": "claude-code-v2.1.247",
+          "date": "2026-08-27",
+          "title": "Claude Code v2.1.247：新增反馈工具、成本优化命令与 Admin API",
+          "summary": "Claude Code 发布 v2.1.247，新增反馈工具和成本优化命令。",
+          "score": 8.5,
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.247"
+        },
+        {
+          "update_id": "claude-code-restricted-mode-release",
+          "date": "2026-08-28",
+          "title": "Claude Code v2.1.248：新增受限模式、缓存配置与企业部署增强",
+          "summary": "Claude Code 发布 v2.1.248，新增受限模式、缓存 TTL 配置和自托管 runner 标签覆盖等功能，提升安全性和企业可用性。",
+          "score": 8.5,
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.248"
+        },
+        {
+          "update_id": "claude-code-v2.1.251",
+          "date": "2026-08-29",
+          "title": "anthropics/claude-code released v2.1.251",
+          "summary": "Claude Code 更新，新增模型切换钩子、远程控制流式传输和费用限制功能，提升开发体验。",
+          "score": 8.0,
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.251"
+        },
+        {
+          "update_id": "claude-code-v2.1.259",
+          "date": "2026-09-03",
+          "title": "Claude Code v2.1.259：新增组织级 MCP 服务器管理和无头模式",
+          "summary": "Claude Code v2.1.259发布，新增组织级MCP服务器管理和无头模式等特性。",
+          "score": 8.5,
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.259"
+        },
+        {
+          "update_id": "claude-code-v2.1.260",
+          "date": "2026-09-04",
+          "title": "Claude Code v2.1.260：新增 diff 面板与缓存诊断，修复 30+ 项开发体验问题",
+          "summary": "Claude Code 发布 v2.1.260，新增 diff 面板和缓存未命中原因提示，提升编码效率。",
+          "score": 8.5,
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.260"
+        },
+        {
+          "update_id": "claude-code-v2.1.261",
+          "date": "2026-09-05",
+          "title": "Claude Code v2.1.261：新增技能诊断、输出大小设置等开发者工具功能",
+          "summary": "Claude Code v2.1.261新增技能诊断、输出大小设置等功能，并修复多个bug。",
+          "score": 7.5,
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.261"
+        },
+        {
+          "update_id": "claude-code-v2-1-271",
+          "date": "2026-09-15",
+          "title": "anthropics/claude-code released v2.1.271",
+          "summary": "Claude Code v2.1.271 加入远程会话快速模式、按命令单独开放域名、子代理可跳过 CLAUDE.md 等能力；对做编码代理的人提供了权限隔离和配置粒度的具体做法。",
+          "score": 7.0,
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.271"
+        },
+        {
+          "update_id": "claude-code-v2.1.273",
+          "date": "2026-09-16",
+          "title": "anthropics/claude-code released v2.1.273",
+          "summary": "Anthropic 更新 Claude Code，新增网关请求头、MCP 断连提示与自动重连、从 Claude App 远程 fork 后台会话，并修复权限与登录错误，让 Agent 会话更可控。",
+          "score": 7.2,
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.273"
+        },
+        {
+          "update_id": "claude-code-v2.1.280-opus-5.5-default",
+          "date": "2026-09-23",
+          "title": "anthropics/claude-code released v2.1.280",
+          "summary": "Anthropic 的编码工具 Claude Code 更新到 v2.1.280，把 Claude Opus 5.5 设为默认模型，支持 100 万上下文、每百万 token 输入 4 美元输出 20 美元，并修复了自动模式反复重试等问题。",
+          "score": 7.8,
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.280"
+        },
+        {
+          "update_id": "claude-code-v2.1.281",
+          "date": "2026-09-24",
+          "title": "anthropics/claude-code released v2.1.281",
+          "summary": "Claude Code 更新至 v2.1.281，新增 MCP URL 模式 elicitation、Bedrock 网关角色假设和护栏等功能。",
+          "score": 7.0,
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.281"
+        },
+        {
+          "update_id": "claude-code-v2.1.283",
+          "date": "2026-09-26",
+          "title": "Claude Code v2.1.283：企业级 AI 编程工具新增提示词审计与模型治理功能",
+          "summary": "Anthropic 发布 Claude Code v2.1.283，新增提示词审计命令、模型精确匹配与禁用设置、网关请求分组和工具调用日志，解决企业里模型治理和旧提示词迁移的问题，值得产品经理参考。",
+          "score": 7.6,
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.283"
+        },
+        {
+          "update_id": "claude-code-v2-1-284-sonnet-5-5-default",
+          "date": "2026-09-29",
+          "title": "anthropics/claude-code released v2.1.284",
+          "summary": "Anthropic 在 Claude Code 里把新的 Claude Sonnet 5.5 设为默认模型，支持 100 万上下文并给出明确价格，还加了花费显示和 MCP 一键重连，让开发者用起来更省心。",
+          "score": 7.6,
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.284"
+        },
+        {
+          "update_id": "claude-code-v2.1.287",
+          "date": "2026-10-02",
+          "title": "anthropics/claude-code released v2.1.287",
+          "summary": "Anthropic 发布 Claude Code v2.1.287，加入可修改深层行为的 Claude Mods 插件机制，以及一个侧边 agent 主动提醒遗漏事项的内置 mod。",
+          "score": 7.5,
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.287"
+        }
+      ],
+      "usage_flow": [
+        "在终端安装并启动 claude，用自然语言描述需求（如'给这个项目加登录功能'）",
+        "AI 自动分析代码库，必要时用 /add-dir 添加更多目录到上下文",
+        "AI 提出修改方案，经确认后自动编辑文件、运行命令",
+        "开发者检查 git diff，确认无误后提交代码",
+        "安装 Claude Code CLI，在代码仓库目录下运行 `claude` 启动对话",
+        "用自然语言描述需求（如'给这个函数加单元测试'），AI 自动读文件、改代码、跑命令",
+        "按 `Ctrl+Alt+F` 开启 Focus view，把工具执行细节折叠成可展开摘要，专注看对话",
+        "用 `claude-api prompt-audit` 检查旧提示词是否适合当前模型，确认后提交代码",
+        "在终端运行 `claude` 启动会话，多个会话会自动获得唯一名称",
+        "在提示符里输入 `@会话名` 直接给另一个运行中的 Claude 会话发消息",
+        "调用子代理时自动在后台分叉运行，继承当前对话上下文但互不阻塞",
+        "通过 `/config` 设置跨会话消息的接收策略（接受/暂存/拒绝）和对话过期时间",
+        "设置环境变量 `export ANTHROPIC_DEFAULT_MODEL=claude-sonnet-4-20250514`，以后新会话默认用这个模型",
+        "在会话 A 里执行需要长时间运行的任务，然后发跨会话消息给会话 B：等 B 闲下来时通知我",
+        "会话 B 忙完后自动弹一条通知，会话 A 的用户收到提醒继续下一步",
+        "用 `/model` 临时切换当前会话模型，这个选择会记住，不受默认变量影响",
+        "安装 Claude Code 并登录 Anthropic 账号",
+        "在终端用自然语言描述需求（如'优化这个函数的 API 调用成本'）",
+        "Claude 分析代码、执行命令、给出修改建议",
+        "用 `/feedback` 提交问题报告，或用 `/claude-api cost-optimize` 逐项优化费用",
+        "安装 Claude Code CLI，用 `claude` 启动会话",
+        "需要安全环境时加 `--restricted` 启动，限制 AI 只能读写工作目录内的文件",
+        "在 agent 配置文件的 frontmatter 里加 `experimental.cacheTtl` 控制提示缓存多久失效",
+        "企业用户用 `claude self-hosted-runner --client-label` 给自托管 runner 打自定义标签，方便识别",
+        "管理员在组织配置里写 `managedMcpServers`，统一指定团队可用的 HTTP/SSE MCP 服务器",
+        "开发者本地或服务器上跑 `claude`，无头环境加 `--permission-prompts none` 自动拒绝需确认的权限请求",
+        "Claude Code 自动连上组织配好的 MCP 服务器，开发者直接调用工具",
+        "团队用 `--json` 输出做自动化验证和流水线集成",
+        "在终端输入 `claude` 启动，进入全屏对话界面",
+        "用自然语言描述需求，Claude 自动读取、编辑、运行代码",
+        "按 `/diff` 打开侧边 diff 面板，实时查看未提交的修改",
+        "用 `/cost` 检查费用，若缓存未命中会提示具体原因（如工具定义变了、闲置超时）",
+        "终端输入 `claude` 启动，Claude Code 自动读取当前代码库上下文",
+        "用自然语言下指令，如'把这里的 API 改成异步的'，AI 会改文件、跑测试",
+        "用 `/skill-doctor` 检查哪些加载的技能从没用过、占多少上下文，删掉没用的",
+        "用 `/status` 或 `claude doctor` 看组织策略加载情况，调 `bashOutputMaxChars` 控制输出长度",
+        "开发者/管理员开启审计：运行 `/doctor prompt-audit` 扫描本地的 CLAUDE.md、skills、agents 等配置",
+        "查看报告：发现哪些提示词写法是面向旧模型的，按建议修改",
+        "管理员通过 `availableModelsMatch` 和 `deniedModels` 设置精确放行/禁用特定模型版本",
+        "开启网关追踪：设置 `CLAUDE_CODE_GATEWAY_HINT_HEADERS=1`，让网关通过 `x-claude-code-prompt-id` 把同一用户指令的多次请求归为一组，方便监控"
+      ],
+      "learning_points": [
+        "Context window（上下文窗口）：模型一次能'看'多少字，Opus 5 的 1M 约等于能塞进整本《三体》第一部，让 AI 分析大型代码库不丢线索",
+        "Agent（智能体）：不只是聊天回复，而是能自主决定'我要先读哪个文件、再改哪行、然后跑测试'的 AI 系统",
+        "Function calling（函数调用）：模型不直接生成答案，而是输出结构化指令（如'调用 read_file 工具'），由外部程序执行后再把结果喂回模型",
+        "Agent：不只是问答，而是能自主规划步骤、调用工具完成任务的 AI 系统",
+        "Function Calling（函数调用）：LLM 输出结构化指令让程序去执行具体操作，比如'读这个文件'或'运行这个测试'",
+        "Prompt 审计：不同模型对提示词的敏感度不同，旧提示词可能在新模型上失效，需要系统性检查",
+        "Agent（智能体）：能自主规划、调用工具、完成多步骤任务的 AI 程序，不只是聊天",
+        "Fork（分叉）：从现有进程复制出一个独立进程，子进程继承父进程的状态但之后各跑各的，互不干扰",
+        "Secret redaction（敏感信息脱敏）：自动识别并隐藏令牌、密码等，防止 AI 日志或输出里意外泄露",
+        "Environment variable（环境变量）：程序启动时从系统读取的配置，适合放团队统一的默认值",
+        "Agent：不只是聊天，能持续执行任务、操作文件、调用工具的 AI 系统",
+        "Function Calling：AI 识别需要调用外部功能（如发通知、读文件）并生成结构化请求，而非只输出文字",
+        "Function Calling（函数调用）：让 LLM 不只是聊天，还能主动调用你定义的函数/工具，比如这里 Claude 可以调用 SendFeedback 或 cost-optimize 这些内置命令",
+        "RAG（检索增强生成）：Claude Code 需要'读懂'你的整个代码库，本质是把代码转成 AI 能查的索引，再基于查到的内容回答——这就是 RAG 的思路",
+        "Token 与成本优化：LLM 按处理的文本量（token）收费，上下文窗口越大越贵，所以'缓存常用内容、清理无用文本、选合适模型'是实际省钱手段",
+        "Agent（智能体）：让 AI 不仅能聊天，还能调用工具（如读文件、执行命令）自主完成任务的系统",
+        "Prompt Cache（提示缓存）：把已经处理过的长对话上下文存起来，下次直接复用，省时间和算钱；TTL 是'存活时间'，到期就扔掉重算",
+        "Function Calling（函数调用）：AI 不直接干活，而是生成'我要调用某某工具'的结构化请求，由外部系统安全地执行",
+        "MCP（Model Context Protocol）：一种让 AI 助手安全调用外部工具（如查数据库、发消息）的标准接口，类似 USB 让不同设备能连电脑",
+        "无头模式（Headless）：没有屏幕、没人看着跑，程序自己处理所有交互，常用于服务器和自动化流水线",
+        "权限提示（Permission Prompt）：AI 要执行危险操作前弹窗问人，无头环境里没人点就会卡住",
+        "Prompt Caching：LLM 对话中，把之前说过的话'缓存'起来避免重复计费，但如果系统提示或工具定义变了，缓存就会失效（cache miss），需要重新花钱",
+        "Diff：代码变更前后的对比视图，程序员靠它确认 AI 改对了没有",
+        "Headless session：没有图形界面的后台运行模式，比如桌面应用调 Claude Code 或脚本自动化时使用",
+        "Context window（上下文窗口）：AI 一次能'记住'的文本量，塞太多无关内容会让 AI 变笨，/skill-doctor 就是帮你减负",
+        "Agent / Subagent（代理/子代理）：主 AI 可以派子任务给其他 AI 实例，--append-subagent-system-prompt-file 是给子代理喂'人设说明书'的",
+        "Function Calling（函数调用）：AI 不直接输出答案，而是输出'我要调用某某工具'的结构化指令，Claude Code 靠这个机制来执行 bash 命令、读文件等操作",
+        "Coding Agent：一种能自主执行编程任务（读文件、改代码、运行命令）的 AI 工具，不只是聊天回答",
+        "提示词迁移（Prompt Migration）：换用新模型时，原来针对旧模型调优的提示词可能失效，需要审计和重写",
+        "OpenTelemetry：一种开源标准，用来追踪分布式系统里的请求链路，这里用来记录 AI 工具调用了什么外部工具、输出了什么结果"
+      ],
+      "verticals": [],
+      "tags": [
+        "工具更新",
+        "Claude Code",
+        "Opus 5",
+        "Agent",
+        "开发者工具",
+        "更新",
+        "release",
+        "版本更新",
+        "编码助手",
+        "功能更新",
+        "CLI",
+        "插件",
+        "Release",
+        "Developer Tools",
+        "成本控制",
+        "AI编程",
+        "安全",
+        "企业",
+        "Anthropic",
+        "diff",
+        "权限控制",
+        "Coding Agent",
+        "MCP",
+        "会话管理",
+        "编码Agent",
+        "定价",
+        "模型能力",
+        "Bedrock",
+        "版本发布",
+        "企业治理",
+        "可观测性",
+        "Claude",
+        "Model Release",
+        "Pricing",
+        "编码 Agent"
+      ]
+    },
+    {
+      "product_id": "product-81f9af1db5339af7",
+      "product_name": "ChatGPT",
+      "builder_name": "Sarah Perez",
+      "first_seen": "2026-10-02",
+      "last_seen": "2026-10-02",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "OpenAI 给 ChatGPT 加了虚拟试穿和收藏功能，用户上传自己的照片就能看衣服和配饰上身效果，还能把喜欢的商品存进收藏库，值得看是因为它把多模态能力直接做进了购物场景。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.5,
+      "summary": "OpenAI 给 ChatGPT 加了虚拟试穿和收藏功能，用户上传自己的照片就能看衣服和配饰上身效果，还能把喜欢的商品存进收藏库，值得看是因为它把多模态能力直接做进了购物场景。",
+      "title": "ChatGPT can now virtually try on clothes for you",
+      "url": "https://techcrunch.com/2026/10/01/chatgpt-can-now-virtually-try-on-clothes-for-you/",
+      "sources": [
+        {
+          "url": "https://techcrunch.com/2026/10/01/chatgpt-can-now-virtually-try-on-clothes-for-you/",
+          "title": "ChatGPT can now virtually try on clothes for you",
+          "source_type": "rss",
+          "published_at": "2026-10-01T19:21:53+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "chatgpt-virtual-try-on-shopping",
+          "date": "2026-10-02",
+          "title": "ChatGPT can now virtually try on clothes for you",
+          "summary": "OpenAI 给 ChatGPT 加了虚拟试穿和收藏功能，用户上传自己的照片就能看衣服和配饰上身效果，还能把喜欢的商品存进收藏库，值得看是因为它把多模态能力直接做进了购物场景。",
+          "score": 7.5,
+          "url": "https://techcrunch.com/2026/10/01/chatgpt-can-now-virtually-try-on-clothes-for-you/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "多模态",
+        "电商购物",
+        "AI产品功能"
+      ]
+    },
+    {
+      "product_id": "product-0313dfe9484c593c",
+      "product_name": "AutoSynthData",
+      "builder_name": "Hugging Face",
+      "first_seen": "2026-10-02",
+      "last_seen": "2026-10-02",
+      "occurrence_count": 1,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "ServiceNow 在 Hugging Face 发布 AutoSynthData，用自动合成方式为企业 Agent 生成训练数据，值得关注 Agent 产品如何解决数据问题。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.5,
+      "summary": "ServiceNow 在 Hugging Face 发布 AutoSynthData，用自动合成方式为企业 Agent 生成训练数据，值得关注 Agent 产品如何解决数据问题。",
+      "title": "AutoSynthData: Generating Training Data for Enterprise Agents",
+      "url": "https://huggingface.co/blog/ServiceNow-AI/autosynthdata",
+      "sources": [
+        {
+          "url": "https://huggingface.co/blog/ServiceNow-AI/autosynthdata",
+          "title": "AutoSynthData: Generating Training Data for Enterprise Agents",
+          "source_type": "rss",
+          "published_at": "2026-10-02T04:01:31+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "servicenow-autosynthdata-enterprise-agents",
+          "date": "2026-10-02",
+          "title": "AutoSynthData: Generating Training Data for Enterprise Agents",
+          "summary": "ServiceNow 在 Hugging Face 发布 AutoSynthData，用自动合成方式为企业 Agent 生成训练数据，值得关注 Agent 产品如何解决数据问题。",
+          "score": 7.5,
+          "url": "https://huggingface.co/blog/ServiceNow-AI/autosynthdata"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "训练数据",
+        "企业AI",
+        "ServiceNow"
+      ]
+    },
+    {
+      "product_id": "product-8bf44d7619edcd4e",
+      "product_name": "Claude",
+      "builder_name": "Anthropic News",
+      "first_seen": "2026-08-28",
+      "last_seen": "2026-10-02",
+      "occurrence_count": 3,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Anthropic 官方披露 Barclays 规模化使用 Claude，说明大银行如何把 AI 助手接入内部工作流程，值得关注企业级 AI 产品的真实落地方式。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.2,
+      "summary": "Anthropic 官方披露 Barclays 规模化使用 Claude，说明大银行如何把 AI 助手接入内部工作流程，值得关注企业级 AI 产品的真实落地方式。",
+      "title": "Barclays Scales Claude",
+      "url": "https://www.anthropic.com/news/barclays-scales-claude",
+      "sources": [
+        {
+          "url": "https://www.anthropic.com/news/advancing-claude-for-education",
+          "title": "Advancing Claude For Education",
+          "source_type": "public_web",
+          "published_at": "2026-08-27T15:13:58+00:00"
+        },
+        {
+          "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system",
+          "title": "Claude Discovers Novel Enzyme System",
+          "source_type": "public_web",
+          "published_at": "2026-09-24T10:25:16+00:00"
+        },
+        {
+          "url": "https://www.anthropic.com/news/barclays-scales-claude",
+          "title": "Barclays Scales Claude",
+          "source_type": "public_web",
+          "published_at": "2026-10-01T09:16:50+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "anthropic-claude-for-education",
+          "date": "2026-08-28",
+          "title": "Advancing Claude For Education",
+          "summary": "Anthropic宣布推进Claude在教育领域的应用，但具体功能或合作未详述。",
+          "score": 7.0,
+          "url": "https://www.anthropic.com/news/advancing-claude-for-education"
+        },
+        {
+          "update_id": "anthropic-claude-novel-enzyme-system",
+          "date": "2026-09-25",
+          "title": "Claude Discovers Novel Enzyme System",
+          "summary": "Anthropic 官方称 Claude 发现了一种新的酶系统，展示大模型在生物科学发现中的实际用途，值得关注 AI 在医药研发场景的产品化可能。",
+          "score": 8.2,
+          "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system"
+        },
+        {
+          "update_id": "anthropic-barclays-claude-enterprise",
+          "date": "2026-10-02",
+          "title": "Barclays Scales Claude",
+          "summary": "Anthropic 官方披露 Barclays 规模化使用 Claude，说明大银行如何把 AI 助手接入内部工作流程，值得关注企业级 AI 产品的真实落地方式。",
+          "score": 7.2,
+          "url": "https://www.anthropic.com/news/barclays-scales-claude"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Anthropic",
+        "教育",
+        "Claude",
+        "科学发现",
+        "医药AI",
+        "企业AI",
+        "金融",
+        "客户案例"
+      ]
+    },
+    {
+      "product_id": "product-2e9353d573f75a73",
+      "product_name": "Gemini 4 Argon",
+      "builder_name": "Latent Space",
+      "first_seen": "2026-10-02",
+      "last_seen": "2026-10-02",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "early_signal",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Latent Space 报道 Google DeepMind 推出 Gemini 4 Argon，支持 100 万输出 token，但目前只对政府用户和 Fairwind 计划中的可信网络防御者开放试用。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.2,
+      "summary": "Latent Space 报道 Google DeepMind 推出 Gemini 4 Argon，支持 100 万输出 token，但目前只对政府用户和 Fairwind 计划中的可信网络防御者开放试用。",
+      "title": "[AINews] Gemini 4 Argon: GDM’s answer to Astra/Fable, with 1M output",
+      "url": "https://www.latent.space/p/ainews-gemini-4-argon-gdms-answer",
+      "sources": [
+        {
+          "url": "https://www.latent.space/p/ainews-gemini-4-argon-gdms-answer",
+          "title": "[AINews] Gemini 4 Argon: GDM’s answer to Astra/Fable, with 1M output",
+          "source_type": "rss",
+          "published_at": "2026-10-01T06:45:05+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "gemini-4-argon-fairwind",
+          "date": "2026-10-02",
+          "title": "[AINews] Gemini 4 Argon: GDM’s answer to Astra/Fable, with 1M output",
+          "summary": "Latent Space 报道 Google DeepMind 推出 Gemini 4 Argon，支持 100 万输出 token，但目前只对政府用户和 Fairwind 计划中的可信网络防御者开放试用。",
+          "score": 7.2,
+          "url": "https://www.latent.space/p/ainews-gemini-4-argon-gdms-answer"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Gemini",
+        "模型能力",
+        "早期信号"
+      ]
+    },
     {
       "product_id": "product-0f9374a63e5dcfeb",
       "product_name": "OpenAI DevDay 2026",
@@ -256,70 +1254,6 @@
         "Gemini",
         "Google",
         "ModelCapability"
-      ]
-    },
-    {
-      "product_id": "product-8bf44d7619edcd4e",
-      "product_name": "Claude",
-      "builder_name": "Anthropic News",
-      "first_seen": "2026-08-28",
-      "last_seen": "2026-10-01",
-      "occurrence_count": 2,
-      "intelligence_type": "model_capability",
-      "evidence_status": "first_party",
-      "target_user": "未公开",
-      "user_problem": "未公开",
-      "what_it_is": "Anthropic 官方称 Claude 发现了一种新的酶系统，展示大模型在生物科学发现中的实际用途，值得关注 AI 在医药研发场景的产品化可能。",
-      "ai_role": "未公开",
-      "implementation_idea": "未公开",
-      "hands_on_exercise": "未公开",
-      "limitations_or_uncertainties": "未公开",
-      "region": "global",
-      "score": 8.2,
-      "summary": "Anthropic 官方称 Claude 发现了一种新的酶系统，展示大模型在生物科学发现中的实际用途，值得关注 AI 在医药研发场景的产品化可能。",
-      "title": "Claude Discovers Novel Enzyme System",
-      "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system",
-      "sources": [
-        {
-          "url": "https://www.anthropic.com/news/advancing-claude-for-education",
-          "title": "Advancing Claude For Education",
-          "source_type": "public_web",
-          "published_at": "2026-08-27T15:13:58+00:00"
-        },
-        {
-          "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system",
-          "title": "Claude Discovers Novel Enzyme System",
-          "source_type": "public_web",
-          "published_at": "2026-09-24T10:25:16+00:00"
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "anthropic-claude-for-education",
-          "date": "2026-08-28",
-          "title": "Advancing Claude For Education",
-          "summary": "Anthropic宣布推进Claude在教育领域的应用，但具体功能或合作未详述。",
-          "score": 7.0,
-          "url": "https://www.anthropic.com/news/advancing-claude-for-education"
-        },
-        {
-          "update_id": "anthropic-claude-novel-enzyme-system",
-          "date": "2026-09-25",
-          "title": "Claude Discovers Novel Enzyme System",
-          "summary": "Anthropic 官方称 Claude 发现了一种新的酶系统，展示大模型在生物科学发现中的实际用途，值得关注 AI 在医药研发场景的产品化可能。",
-          "score": 8.2,
-          "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system"
-        }
-      ],
-      "usage_flow": [],
-      "learning_points": [],
-      "verticals": [],
-      "tags": [
-        "Anthropic",
-        "教育",
-        "Claude",
-        "科学发现",
-        "医药AI"
       ]
     },
     {
@@ -943,453 +1877,6 @@
         "Claude Code",
         "Agent",
         "编码工具"
-      ]
-    },
-    {
-      "product_id": "product-7f7811de59626bc9",
-      "product_name": "Claude Code",
-      "builder_name": "ashwin-ant",
-      "first_seen": "2026-07-26",
-      "last_seen": "2026-09-29",
-      "occurrence_count": 24,
-      "intelligence_type": "model_capability",
-      "evidence_status": "first_party",
-      "target_user": "企业开发团队、AI 产品经理、需要集中管控模型使用的组织",
-      "user_problem": "企业里旧提示词在新模型上表现变差却没人知道；管理员没法精确控制员工能调用哪个模型版本；LLM 网关（gateway，企业流量入口）看不到哪些请求属于同一用户指令，排错困难。",
-      "what_it_is": "Anthropic 在 Claude Code 里把新的 Claude Sonnet 5.5 设为默认模型，支持 100 万上下文并给出明确价格，还加了花费显示和 MCP 一键重连，让开发者用起来更省心。",
-      "ai_role": "执行代码任务的同时，其请求流量可被企业网关识别和分组；自身提示词体系可被审计工具扫描，标记出对旧模型的依赖",
-      "implementation_idea": "在请求头里埋一个提示词 ID（类似快递单号），让网关知道哪些 LLM 请求其实来自同一句用户指令；用规则引擎比对模型名称做精确匹配或黑名单拦截；用静态扫描工具检查提示词文件里的模式，匹配已知的旧模型优化写法。",
-      "hands_on_exercise": "30 分钟体验：安装 Claude Code（需有 Anthropic API 权限），创建一个 `CLAUDE.md` 文件写入一段带 'You are Claude 2' 的提示词，运行 `/doctor prompt-audit`，观察它是否被标记为旧模型提示词；然后在终端设置 `CLAUDE_CODE_GATEWAY_HINT_HEADERS=1`，发起一次请求，用 `curl -v` 或代理工具查看请求头里是否出现 `x-claude-code-prompt-id`。",
-      "limitations_or_uncertainties": "未公开 `/doctor prompt-audit` 具体覆盖哪些旧模型版本、未公开企业网关 hint headers 的完整字段列表、未公开 `load_test_mode` 的 canned reply 内容格式。",
-      "region": "global",
-      "score": 7.6,
-      "summary": "Anthropic 在 Claude Code 里把新的 Claude Sonnet 5.5 设为默认模型，支持 100 万上下文并给出明确价格，还加了花费显示和 MCP 一键重连，让开发者用起来更省心。",
-      "title": "anthropics/claude-code released v2.1.284",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.284",
-      "sources": [
-        {
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.219",
-          "title": "anthropics/claude-code released v2.1.219",
-          "source_type": "github",
-          "published_at": "2026-07-24T17:14:23+00:00"
-        },
-        {
-          "url": "https://claude.com/product/claude-code",
-          "title": "Claude Code by Anthropic | AI Coding Agent, Terminal, IDE",
-          "source_type": "supplemental",
-          "published_at": ""
-        },
-        {
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.221",
-          "title": "anthropics/claude-code released v2.1.221",
-          "source_type": "github",
-          "published_at": "2026-08-04T00:14:23+00:00"
-        },
-        {
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.229",
-          "title": "anthropics/claude-code released v2.1.229",
-          "source_type": "github",
-          "published_at": "2026-08-12T20:56:22+00:00"
-        },
-        {
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.232",
-          "title": "anthropics/claude-code released v2.1.232",
-          "source_type": "github",
-          "published_at": "2026-08-13T23:29:59+00:00"
-        },
-        {
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.233",
-          "title": "anthropics/claude-code released v2.1.233",
-          "source_type": "github",
-          "published_at": "2026-08-14T22:20:57+00:00"
-        },
-        {
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.234",
-          "title": "anthropics/claude-code released v2.1.234",
-          "source_type": "github",
-          "published_at": "2026-08-17T20:20:58+00:00"
-        },
-        {
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.236",
-          "title": "anthropics/claude-code released v2.1.236",
-          "source_type": "github",
-          "published_at": "2026-08-19T20:02:05+00:00"
-        },
-        {
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.237",
-          "title": "anthropics/claude-code released v2.1.237",
-          "source_type": "github",
-          "published_at": "2026-08-20T00:54:41+00:00"
-        },
-        {
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.238",
-          "title": "anthropics/claude-code released v2.1.238",
-          "source_type": "github",
-          "published_at": "2026-08-20T20:33:51+00:00"
-        },
-        {
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.239",
-          "title": "anthropics/claude-code released v2.1.239",
-          "source_type": "github",
-          "published_at": "2026-08-21T19:54:23+00:00"
-        },
-        {
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.243",
-          "title": "anthropics/claude-code released v2.1.243",
-          "source_type": "github",
-          "published_at": "2026-08-24T23:40:26+00:00"
-        },
-        {
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.246",
-          "title": "anthropics/claude-code released v2.1.246",
-          "source_type": "github",
-          "published_at": "2026-08-25T22:31:52+00:00"
-        },
-        {
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.247",
-          "title": "anthropics/claude-code released v2.1.247",
-          "source_type": "github",
-          "published_at": "2026-08-26T23:06:39+00:00"
-        },
-        {
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.248",
-          "title": "anthropics/claude-code released v2.1.248",
-          "source_type": "github",
-          "published_at": "2026-08-27T22:12:20+00:00"
-        },
-        {
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.251",
-          "title": "anthropics/claude-code released v2.1.251",
-          "source_type": "github",
-          "published_at": "2026-08-28T18:19:32+00:00"
-        },
-        {
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.259",
-          "title": "anthropics/claude-code released v2.1.259",
-          "source_type": "github",
-          "published_at": "2026-09-02T22:33:51+00:00"
-        },
-        {
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.260",
-          "title": "anthropics/claude-code released v2.1.260",
-          "source_type": "github",
-          "published_at": "2026-09-03T23:48:12+00:00"
-        },
-        {
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.261",
-          "title": "anthropics/claude-code released v2.1.261",
-          "source_type": "github",
-          "published_at": "2026-09-04T19:58:10+00:00"
-        },
-        {
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.271",
-          "title": "anthropics/claude-code released v2.1.271",
-          "source_type": "github",
-          "published_at": "2026-09-14T22:12:54+00:00"
-        },
-        {
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.273",
-          "title": "anthropics/claude-code released v2.1.273",
-          "source_type": "github",
-          "published_at": "2026-09-15T20:23:03+00:00"
-        },
-        {
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.280",
-          "title": "anthropics/claude-code released v2.1.280",
-          "source_type": "github",
-          "published_at": "2026-09-22T16:38:14+00:00"
-        },
-        {
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.281",
-          "title": "anthropics/claude-code released v2.1.281",
-          "source_type": "github",
-          "published_at": "2026-09-23T19:19:15+00:00"
-        },
-        {
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.283",
-          "title": "anthropics/claude-code released v2.1.283",
-          "source_type": "github",
-          "published_at": "2026-09-25T21:50:12+00:00"
-        },
-        {
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.284",
-          "title": "anthropics/claude-code released v2.1.284",
-          "source_type": "github",
-          "published_at": "2026-09-28T18:02:03+00:00"
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "claude-code-v2.1.233",
-          "date": "2026-08-15",
-          "title": "anthropics/claude-code released v2.1.233",
-          "summary": "Claude Code v2.1.233发布，新增GitLab MR支持、用户身份转发和内存限制等多项功能。",
-          "score": 7.5,
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.233"
-        },
-        {
-          "update_id": "claude-code-v2.1.234",
-          "date": "2026-08-18",
-          "title": "anthropics/claude-code released v2.1.234",
-          "summary": "Claude Code v2.1.234新增环境变量、GitLab MR徽章、自动续会话等功能，并修复安全漏洞。",
-          "score": 8.0,
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.234"
-        },
-        {
-          "update_id": "claude-code-v2.1.236",
-          "date": "2026-08-20",
-          "title": "Claude Code v2.1.236：新增默认模型设置与跨会话通知功能",
-          "summary": "Claude Code v2.1.236新增默认模型设置和跨会话空闲通知，优化多会话协作体验。",
-          "score": 8.0,
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.236"
-        },
-        {
-          "update_id": "claude-code-v2.1.237",
-          "date": "2026-08-20",
-          "title": "anthropics/claude-code released v2.1.237",
-          "summary": "Anthropic发布Claude Code v2.1.237，新增简洁输出风格并修复提示缓存问题，提升编码效率。",
-          "score": 7.5,
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.237"
-        },
-        {
-          "update_id": "claude-code-v2.1.238",
-          "date": "2026-08-21",
-          "title": "anthropics/claude-code released v2.1.238",
-          "summary": "Claude Code发布v2.1.238，新增readline键位风格、插件市场headersHelper等多项改进。",
-          "score": 8.0,
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.238"
-        },
-        {
-          "update_id": "claude-code-v2.1.239",
-          "date": "2026-08-22",
-          "title": "anthropics/claude-code released v2.1.239",
-          "summary": "Claude Code v2.1.239 发布，新增成本估算、全屏渲染器、Python 迁移工具等多项功能更新。",
-          "score": 8.0,
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.239"
-        },
-        {
-          "update_id": "claude-code-v2.1.243",
-          "date": "2026-08-25",
-          "title": "anthropics/claude-code released v2.1.243",
-          "summary": "Anthropic 发布 Claude Code v2.1.243，新增用量统计、模型选择器自定义、提示缓存时长设置和无 API key 登录等多项功能，让开发者更精细地控制成本与使用。",
-          "score": 8.5,
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.243"
-        },
-        {
-          "update_id": "claude-code-v2.1.246",
-          "date": "2026-08-26",
-          "title": "anthropics/claude-code released v2.1.246",
-          "summary": "Anthropic 发布 Claude Code v2.1.246，新增权限管理和性能修复，提升终端 AI 编程体验。",
-          "score": 7.5,
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.246"
-        },
-        {
-          "update_id": "claude-code-v2.1.247",
-          "date": "2026-08-27",
-          "title": "Claude Code v2.1.247：新增反馈工具、成本优化命令与 Admin API",
-          "summary": "Claude Code 发布 v2.1.247，新增反馈工具和成本优化命令。",
-          "score": 8.5,
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.247"
-        },
-        {
-          "update_id": "claude-code-restricted-mode-release",
-          "date": "2026-08-28",
-          "title": "Claude Code v2.1.248：新增受限模式、缓存配置与企业部署增强",
-          "summary": "Claude Code 发布 v2.1.248，新增受限模式、缓存 TTL 配置和自托管 runner 标签覆盖等功能，提升安全性和企业可用性。",
-          "score": 8.5,
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.248"
-        },
-        {
-          "update_id": "claude-code-v2.1.251",
-          "date": "2026-08-29",
-          "title": "anthropics/claude-code released v2.1.251",
-          "summary": "Claude Code 更新，新增模型切换钩子、远程控制流式传输和费用限制功能，提升开发体验。",
-          "score": 8.0,
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.251"
-        },
-        {
-          "update_id": "claude-code-v2.1.259",
-          "date": "2026-09-03",
-          "title": "Claude Code v2.1.259：新增组织级 MCP 服务器管理和无头模式",
-          "summary": "Claude Code v2.1.259发布，新增组织级MCP服务器管理和无头模式等特性。",
-          "score": 8.5,
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.259"
-        },
-        {
-          "update_id": "claude-code-v2.1.260",
-          "date": "2026-09-04",
-          "title": "Claude Code v2.1.260：新增 diff 面板与缓存诊断，修复 30+ 项开发体验问题",
-          "summary": "Claude Code 发布 v2.1.260，新增 diff 面板和缓存未命中原因提示，提升编码效率。",
-          "score": 8.5,
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.260"
-        },
-        {
-          "update_id": "claude-code-v2.1.261",
-          "date": "2026-09-05",
-          "title": "Claude Code v2.1.261：新增技能诊断、输出大小设置等开发者工具功能",
-          "summary": "Claude Code v2.1.261新增技能诊断、输出大小设置等功能，并修复多个bug。",
-          "score": 7.5,
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.261"
-        },
-        {
-          "update_id": "claude-code-v2-1-271",
-          "date": "2026-09-15",
-          "title": "anthropics/claude-code released v2.1.271",
-          "summary": "Claude Code v2.1.271 加入远程会话快速模式、按命令单独开放域名、子代理可跳过 CLAUDE.md 等能力；对做编码代理的人提供了权限隔离和配置粒度的具体做法。",
-          "score": 7.0,
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.271"
-        },
-        {
-          "update_id": "claude-code-v2.1.273",
-          "date": "2026-09-16",
-          "title": "anthropics/claude-code released v2.1.273",
-          "summary": "Anthropic 更新 Claude Code，新增网关请求头、MCP 断连提示与自动重连、从 Claude App 远程 fork 后台会话，并修复权限与登录错误，让 Agent 会话更可控。",
-          "score": 7.2,
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.273"
-        },
-        {
-          "update_id": "claude-code-v2.1.280-opus-5.5-default",
-          "date": "2026-09-23",
-          "title": "anthropics/claude-code released v2.1.280",
-          "summary": "Anthropic 的编码工具 Claude Code 更新到 v2.1.280，把 Claude Opus 5.5 设为默认模型，支持 100 万上下文、每百万 token 输入 4 美元输出 20 美元，并修复了自动模式反复重试等问题。",
-          "score": 7.8,
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.280"
-        },
-        {
-          "update_id": "claude-code-v2.1.281",
-          "date": "2026-09-24",
-          "title": "anthropics/claude-code released v2.1.281",
-          "summary": "Claude Code 更新至 v2.1.281，新增 MCP URL 模式 elicitation、Bedrock 网关角色假设和护栏等功能。",
-          "score": 7.0,
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.281"
-        },
-        {
-          "update_id": "claude-code-v2.1.283",
-          "date": "2026-09-26",
-          "title": "Claude Code v2.1.283：企业级 AI 编程工具新增提示词审计与模型治理功能",
-          "summary": "Anthropic 发布 Claude Code v2.1.283，新增提示词审计命令、模型精确匹配与禁用设置、网关请求分组和工具调用日志，解决企业里模型治理和旧提示词迁移的问题，值得产品经理参考。",
-          "score": 7.6,
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.283"
-        },
-        {
-          "update_id": "claude-code-v2-1-284-sonnet-5-5-default",
-          "date": "2026-09-29",
-          "title": "anthropics/claude-code released v2.1.284",
-          "summary": "Anthropic 在 Claude Code 里把新的 Claude Sonnet 5.5 设为默认模型，支持 100 万上下文并给出明确价格，还加了花费显示和 MCP 一键重连，让开发者用起来更省心。",
-          "score": 7.6,
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.284"
-        }
-      ],
-      "usage_flow": [
-        "在终端安装并启动 claude，用自然语言描述需求（如'给这个项目加登录功能'）",
-        "AI 自动分析代码库，必要时用 /add-dir 添加更多目录到上下文",
-        "AI 提出修改方案，经确认后自动编辑文件、运行命令",
-        "开发者检查 git diff，确认无误后提交代码",
-        "安装 Claude Code CLI，在代码仓库目录下运行 `claude` 启动对话",
-        "用自然语言描述需求（如'给这个函数加单元测试'），AI 自动读文件、改代码、跑命令",
-        "按 `Ctrl+Alt+F` 开启 Focus view，把工具执行细节折叠成可展开摘要，专注看对话",
-        "用 `claude-api prompt-audit` 检查旧提示词是否适合当前模型，确认后提交代码",
-        "在终端运行 `claude` 启动会话，多个会话会自动获得唯一名称",
-        "在提示符里输入 `@会话名` 直接给另一个运行中的 Claude 会话发消息",
-        "调用子代理时自动在后台分叉运行，继承当前对话上下文但互不阻塞",
-        "通过 `/config` 设置跨会话消息的接收策略（接受/暂存/拒绝）和对话过期时间",
-        "设置环境变量 `export ANTHROPIC_DEFAULT_MODEL=claude-sonnet-4-20250514`，以后新会话默认用这个模型",
-        "在会话 A 里执行需要长时间运行的任务，然后发跨会话消息给会话 B：等 B 闲下来时通知我",
-        "会话 B 忙完后自动弹一条通知，会话 A 的用户收到提醒继续下一步",
-        "用 `/model` 临时切换当前会话模型，这个选择会记住，不受默认变量影响",
-        "安装 Claude Code 并登录 Anthropic 账号",
-        "在终端用自然语言描述需求（如'优化这个函数的 API 调用成本'）",
-        "Claude 分析代码、执行命令、给出修改建议",
-        "用 `/feedback` 提交问题报告，或用 `/claude-api cost-optimize` 逐项优化费用",
-        "安装 Claude Code CLI，用 `claude` 启动会话",
-        "需要安全环境时加 `--restricted` 启动，限制 AI 只能读写工作目录内的文件",
-        "在 agent 配置文件的 frontmatter 里加 `experimental.cacheTtl` 控制提示缓存多久失效",
-        "企业用户用 `claude self-hosted-runner --client-label` 给自托管 runner 打自定义标签，方便识别",
-        "管理员在组织配置里写 `managedMcpServers`，统一指定团队可用的 HTTP/SSE MCP 服务器",
-        "开发者本地或服务器上跑 `claude`，无头环境加 `--permission-prompts none` 自动拒绝需确认的权限请求",
-        "Claude Code 自动连上组织配好的 MCP 服务器，开发者直接调用工具",
-        "团队用 `--json` 输出做自动化验证和流水线集成",
-        "在终端输入 `claude` 启动，进入全屏对话界面",
-        "用自然语言描述需求，Claude 自动读取、编辑、运行代码",
-        "按 `/diff` 打开侧边 diff 面板，实时查看未提交的修改",
-        "用 `/cost` 检查费用，若缓存未命中会提示具体原因（如工具定义变了、闲置超时）",
-        "终端输入 `claude` 启动，Claude Code 自动读取当前代码库上下文",
-        "用自然语言下指令，如'把这里的 API 改成异步的'，AI 会改文件、跑测试",
-        "用 `/skill-doctor` 检查哪些加载的技能从没用过、占多少上下文，删掉没用的",
-        "用 `/status` 或 `claude doctor` 看组织策略加载情况，调 `bashOutputMaxChars` 控制输出长度",
-        "开发者/管理员开启审计：运行 `/doctor prompt-audit` 扫描本地的 CLAUDE.md、skills、agents 等配置",
-        "查看报告：发现哪些提示词写法是面向旧模型的，按建议修改",
-        "管理员通过 `availableModelsMatch` 和 `deniedModels` 设置精确放行/禁用特定模型版本",
-        "开启网关追踪：设置 `CLAUDE_CODE_GATEWAY_HINT_HEADERS=1`，让网关通过 `x-claude-code-prompt-id` 把同一用户指令的多次请求归为一组，方便监控"
-      ],
-      "learning_points": [
-        "Context window（上下文窗口）：模型一次能'看'多少字，Opus 5 的 1M 约等于能塞进整本《三体》第一部，让 AI 分析大型代码库不丢线索",
-        "Agent（智能体）：不只是聊天回复，而是能自主决定'我要先读哪个文件、再改哪行、然后跑测试'的 AI 系统",
-        "Function calling（函数调用）：模型不直接生成答案，而是输出结构化指令（如'调用 read_file 工具'），由外部程序执行后再把结果喂回模型",
-        "Agent：不只是问答，而是能自主规划步骤、调用工具完成任务的 AI 系统",
-        "Function Calling（函数调用）：LLM 输出结构化指令让程序去执行具体操作，比如'读这个文件'或'运行这个测试'",
-        "Prompt 审计：不同模型对提示词的敏感度不同，旧提示词可能在新模型上失效，需要系统性检查",
-        "Agent（智能体）：能自主规划、调用工具、完成多步骤任务的 AI 程序，不只是聊天",
-        "Fork（分叉）：从现有进程复制出一个独立进程，子进程继承父进程的状态但之后各跑各的，互不干扰",
-        "Secret redaction（敏感信息脱敏）：自动识别并隐藏令牌、密码等，防止 AI 日志或输出里意外泄露",
-        "Environment variable（环境变量）：程序启动时从系统读取的配置，适合放团队统一的默认值",
-        "Agent：不只是聊天，能持续执行任务、操作文件、调用工具的 AI 系统",
-        "Function Calling：AI 识别需要调用外部功能（如发通知、读文件）并生成结构化请求，而非只输出文字",
-        "Function Calling（函数调用）：让 LLM 不只是聊天，还能主动调用你定义的函数/工具，比如这里 Claude 可以调用 SendFeedback 或 cost-optimize 这些内置命令",
-        "RAG（检索增强生成）：Claude Code 需要'读懂'你的整个代码库，本质是把代码转成 AI 能查的索引，再基于查到的内容回答——这就是 RAG 的思路",
-        "Token 与成本优化：LLM 按处理的文本量（token）收费，上下文窗口越大越贵，所以'缓存常用内容、清理无用文本、选合适模型'是实际省钱手段",
-        "Agent（智能体）：让 AI 不仅能聊天，还能调用工具（如读文件、执行命令）自主完成任务的系统",
-        "Prompt Cache（提示缓存）：把已经处理过的长对话上下文存起来，下次直接复用，省时间和算钱；TTL 是'存活时间'，到期就扔掉重算",
-        "Function Calling（函数调用）：AI 不直接干活，而是生成'我要调用某某工具'的结构化请求，由外部系统安全地执行",
-        "MCP（Model Context Protocol）：一种让 AI 助手安全调用外部工具（如查数据库、发消息）的标准接口，类似 USB 让不同设备能连电脑",
-        "无头模式（Headless）：没有屏幕、没人看着跑，程序自己处理所有交互，常用于服务器和自动化流水线",
-        "权限提示（Permission Prompt）：AI 要执行危险操作前弹窗问人，无头环境里没人点就会卡住",
-        "Prompt Caching：LLM 对话中，把之前说过的话'缓存'起来避免重复计费，但如果系统提示或工具定义变了，缓存就会失效（cache miss），需要重新花钱",
-        "Diff：代码变更前后的对比视图，程序员靠它确认 AI 改对了没有",
-        "Headless session：没有图形界面的后台运行模式，比如桌面应用调 Claude Code 或脚本自动化时使用",
-        "Context window（上下文窗口）：AI 一次能'记住'的文本量，塞太多无关内容会让 AI 变笨，/skill-doctor 就是帮你减负",
-        "Agent / Subagent（代理/子代理）：主 AI 可以派子任务给其他 AI 实例，--append-subagent-system-prompt-file 是给子代理喂'人设说明书'的",
-        "Function Calling（函数调用）：AI 不直接输出答案，而是输出'我要调用某某工具'的结构化指令，Claude Code 靠这个机制来执行 bash 命令、读文件等操作",
-        "Coding Agent：一种能自主执行编程任务（读文件、改代码、运行命令）的 AI 工具，不只是聊天回答",
-        "提示词迁移（Prompt Migration）：换用新模型时，原来针对旧模型调优的提示词可能失效，需要审计和重写",
-        "OpenTelemetry：一种开源标准，用来追踪分布式系统里的请求链路，这里用来记录 AI 工具调用了什么外部工具、输出了什么结果"
-      ],
-      "verticals": [],
-      "tags": [
-        "工具更新",
-        "Claude Code",
-        "Opus 5",
-        "Agent",
-        "开发者工具",
-        "更新",
-        "release",
-        "版本更新",
-        "编码助手",
-        "功能更新",
-        "CLI",
-        "插件",
-        "Release",
-        "Developer Tools",
-        "成本控制",
-        "AI编程",
-        "安全",
-        "企业",
-        "Anthropic",
-        "diff",
-        "权限控制",
-        "Coding Agent",
-        "MCP",
-        "会话管理",
-        "编码Agent",
-        "定价",
-        "模型能力",
-        "Bedrock",
-        "版本发布",
-        "企业治理",
-        "可观测性",
-        "Claude",
-        "Model Release",
-        "Pricing"
       ]
     },
     {
