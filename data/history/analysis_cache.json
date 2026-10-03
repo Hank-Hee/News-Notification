@@ -2820,6 +2820,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "0a104f7adf1a974217ff72e459762fee70bffd774c2617d577438506b3b68c1f": {
+      "created_at": "2026-10-03T05:17:15.276846+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "dharmesh-how-i-use-ai-things-i-dont-do",
+        "evidence_status": "first_party",
+        "follow_up": "获取正文，确认是否有具体工具、prompt 和可复现步骤。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "newsletter:feed:4b950ff48518ce9d4c13",
+        "intelligence_type": "builder_insight",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Dharmesh 的 Newsletter 讲自己用 AI 做不擅长但该做的事，属于构建者/从业者一手实践分享，符合 builder_insight 方向。但输入只有标题和链接，没有正文细节，无法判断是否有可迁移的具体做法，按证据不足给 6 分。",
+        "region": "global",
+        "score": 6.0,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "Dharmesh 在 Newsletter 里讲自己怎么用 AI 处理那些不擅长但必须做的事，值得看是因为它可能提供个人工作流思路，但目前只有标题、缺少可验证细节。",
+        "tags": [
+          "AI 工作流",
+          "Newsletter",
+          "个人实践"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "0a1e8648f0946ab32393b67c84a0b94bad3ac868dc120fdee3b18254f10038f7": {
       "created_at": "2026-09-01T06:13:24.341371+00:00",
       "model": "deepseek-v4-flash",
@@ -3232,6 +3271,45 @@
           "OpenAI",
           "SDK",
           "Agent"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "0b51a0573252f75936b4243a85ea17922a9c30f9620cbdafc26fce027b9666f1": {
+      "created_at": "2026-10-03T05:17:15.276900+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "google-ai-updates-september-2026",
+        "evidence_status": "first_party",
+        "follow_up": "如需使用，应找到具体发布项的一手公告，而不是汇总视频。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:blog.google_innovation-and-ai_technology_ai_rss_:6a7bb4e3e69d69f5",
+        "intelligence_type": "market_signal",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": true,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Google 官方月度 AI 更新汇总，正文只有一段视频，没有可提取的具体产品、能力或数据。属于泛行业汇总和宣传性质内容，信息密度低，按规则给 3.5 分。",
+        "region": "global",
+        "score": 3.5,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Google 发布 2026 年 9 月 AI 更新汇总视频，但正文没有具体内容，值得看程度低，因为无法从中提取可用的产品或能力信息。",
+        "tags": [
+          "Google",
+          "月度汇总",
+          "宣传"
         ],
         "target_user": "",
         "verticals": []
@@ -8852,6 +8930,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "1d9cb420357a94ea54392ee54cca7969b0cf45552a0f3515b0f04c2fe81afcd2": {
+      "created_at": "2026-10-03T05:17:40.686365+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "12-year-exoplanet-telescope-sequence",
+        "evidence_status": "reported",
+        "follow_up": "无需跟进。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:49932147",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": false,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "天文观测图像序列，与 AI 产品、模型能力、构建实践均无关，属于纯科学兴趣内容。",
+        "region": "global",
+        "score": 2.0,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "一段用 12 年望远镜数据合成的系外行星轨道动画，属于天文科普内容，与 AI 产品无关。",
+        "tags": [
+          "天文",
+          "无关"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "1da037bca6a79820eb3dd25bfca384be85644f533c69786715da72a23be65db1": {
       "created_at": "2026-08-16T01:57:21.976050+00:00",
       "model": "deepseek-v4-flash",
@@ -9118,6 +9234,46 @@
           "安全",
           "模型能力",
           "社区讨论"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "1e1431e53cb8e290aafb1f7186bac2552ce102785100f68cf76624b7800e17dd": {
+      "created_at": "2026-10-03T05:17:19.301040+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "apple-macos-full-disk-access-ai-agents",
+        "evidence_status": "reported",
+        "follow_up": "值得追踪苹果后续是否发布具体权限变更文档、开发者适配要求及生效时间。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:afe191a0177a2e06",
+        "intelligence_type": "business_policy",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "macOS",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "苹果官方表态收紧 macOS Full Disk Access 权限，直接回应 AI agent 带来的新风险，属于平台级政策信号，对做 AI 产品的人有合规与权限设计参考价值；但报道本身无具体实现细节、时间表或可验证 Demo，且非一手发布，因此未达高价值区间。",
+        "region": "global",
+        "score": 6.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "苹果表示将收紧 macOS 的完全磁盘访问权限，因为能力越来越强的 AI agent 让读取用户文件、消息、邮件和浏览记录的风险变大。",
+        "tags": [
+          "AI Agent",
+          "macOS",
+          "隐私权限",
+          "平台政策"
         ],
         "target_user": "",
         "verticals": []
@@ -9622,6 +9778,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "1f8b55290376062271ab175c84eea5c117fe2bd269f292a79912774498a710e0": {
+      "created_at": "2026-10-03T05:17:40.686742+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "ds4-local-llm-antirez",
+        "evidence_status": "first_party",
+        "follow_up": "跟踪 ds4 的模型支持范围与社区衍生工具，评估个人产品本地部署可行性。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:49936575",
+        "intelligence_type": "builder_insight",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "ds4",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Redis 作者 antirez 发布本地跑 LLM 的项目 ds4，有 GitHub 仓库、可验证代码，评论区还有第三方 FFI 绑定、Go 封装、Intel 核显推理引擎等衍生实践，属于一手构建案例；虽偏底层推理，但“本地跑模型”对个人产品选型有直接参考价值，给 7.5。",
+        "region": "global",
+        "score": 7.5,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "Redis 作者 antirez 发布 ds4，让开发者在本地机器上跑 LLM；HN 上已有多个开发者基于它做多语言绑定和衍生推理引擎，是可直接上手的开源项目。",
+        "tags": [
+          "本地推理",
+          "开源",
+          "个人产品"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "1fb75a00c31671035942008badbc89521764d2ba3e2c777641d6240fc146c280": {
       "created_at": "2026-09-03T04:22:15.551193+00:00",
       "model": "deepseek-v4-flash",
@@ -10104,6 +10299,47 @@
           "AI代理",
           "微调",
           "Nvidia"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "21c16eabf1625e083f6ad165b3c9f4b2cec6b9ca8b619655c0509df6e2c6e1d2": {
+      "created_at": "2026-10-03T05:17:15.276806+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openrouter-rankings-top5-2026-10",
+        "evidence_status": "reported",
+        "follow_up": "核实 Space Bunny Alpha 真实身份，以及 DeepSeek V4.1 Flash、GLM 5.3 Flash、Hy4 的官方发布与实测表现。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "public_web:ranking:b0ab1ec5ca2d10da9cfa",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenRouter 热度榜聚合页，列出 Space Bunny Alpha、DeepSeek V4.1 Flash、GLM 5.3 Flash、MiMo-V2.6-Flash、腾讯 Hy4 preview 等模型简介。属于聚合信息，无一手发布证据，且部分为匿名或 preview 模型，无法验证真实能力，按规则低于 7 分。",
+        "region": "global",
+        "score": 6.5,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "OpenRouter 热度榜显示当前调用量靠前的五个模型，包括匿名 Space Bunny Alpha 和多家国产新模型，值得看是因为它反映开发者实际在用什么，但只是榜单聚合、缺少一手验证。",
+        "tags": [
+          "OpenRouter",
+          "模型热度",
+          "DeepSeek",
+          "GLM",
+          "腾讯"
         ],
         "target_user": "",
         "verticals": []
@@ -12832,6 +13068,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "2acaa0f9a0c605d73798dc71ca44d6719e4fe451f56b761479aee75735456a30": {
+      "created_at": "2026-10-03T05:17:15.276935+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "github-ai-developer-skills",
+        "evidence_status": "first_party",
+        "follow_up": "关注 GitHub 是否配套发布具体工具、Copilot 功能或可复现工作流。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:github.blog_ai-and-ml_feed_:0b0f6d3b9776aa2b",
+        "intelligence_type": "builder_insight",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "GitHub 官方博客讲 AI 改变开发者工作，提出指挥 AI agent、批判性审查输出、保持技术判断三项技能。属于官方一手观点，对初学者理解 AI 协作方式有参考价值，但偏职业建议、缺少产品案例和可验证数据，给 6.8 分。",
+        "region": "global",
+        "score": 6.8,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "GitHub 官方博客说 AI 正在改变开发者工作，建议重点练三项技能：指挥 AI agent、审查它的输出、保持技术判断，值得看是因为它给出人机协作的实操方向。",
+        "tags": [
+          "GitHub",
+          "AI Agent",
+          "开发者技能"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "2b01f74cb87dce001a58eea97e42f18f2f92e80c48dd25b910b6e2f1f7a45595": {
       "created_at": "2026-08-06T03:35:45.970026+00:00",
       "model": "deepseek-v4-flash",
@@ -13170,6 +13445,45 @@
         "tags": [
           "数据中心",
           "电子垃圾"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "2cde994b01e2edf66164e9b4daa8c26bd6f3608a39920fd183ed3282a4c707f7": {
+      "created_at": "2026-10-03T05:17:40.686848+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "macos-full-disk-access-update",
+        "evidence_status": "first_party",
+        "follow_up": "观察本地 AI agent 产品如何适配新的权限模型。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:49937631",
+        "intelligence_type": "business_policy",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "苹果官方调整 macOS 全盘访问权限，属于平台政策变化；评论区讨论其对本地 AI agent 权限的影响，对做本地 agent 产品的人有间接参考，但非 AI 产品本身，给 6.0。",
+        "region": "global",
+        "score": 6.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "苹果更新 macOS 全盘访问权限规则，收紧应用读取用户数据的范围；HN 讨论其对本地 AI agent 获取文件权限的影响。",
+        "tags": [
+          "Apple",
+          "权限",
+          "本地Agent"
         ],
         "target_user": "",
         "verticals": []
@@ -22142,6 +22456,82 @@
       },
       "stage": "candidate_analysis"
     },
+    "4963509d6e5f6845e6bc25396a5e95b16ce283d2a8b44820ad264309506f4cd6": {
+      "created_at": "2026-10-03T05:17:40.686173+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "linux-on-m4-forgetful-cpu",
+        "evidence_status": "reported",
+        "follow_up": "无需跟进。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:49933869",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": false,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "个人博客记录在 M4 Mac 上跑 Linux 的硬件兼容问题，讨论集中在苹果封闭生态与触控板协议，与 LLM 产品无关，仅有一条评论顺带提到 AI 能否解决驱动问题。",
+        "region": "global",
+        "score": 3.0,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "一位开发者记录在 M4 Mac 上运行 Linux 时遇到的硬件兼容问题，讨论主要围绕苹果封闭生态，与 AI 产品无关。",
+        "tags": [
+          "硬件",
+          "开源"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "496b00748e8114aa8b902f09a9d7ddeb2256bbbe56f6205b4e90c30de04e311f": {
+      "created_at": "2026-10-03T05:17:40.686095+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "extrabigassintelligence-site",
+        "evidence_status": "reported",
+        "follow_up": "无需跟进。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:49941114",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": false,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "一个风格戏仿的网站，评论区普遍认为像 LLM 生成的玩笑页面，无产品、无代码、无用户反馈，属于社区玩梗内容，对 AI 产品经理无迁移价值。",
+        "region": "global",
+        "score": 2.5,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "有人做了个戏仿风格的网站 Extra Big Ass Intelligence，HN 评论区认为它像 LLM 生成的玩笑页面，没有实际产品或方法可学。",
+        "tags": [
+          "噪音",
+          "社区玩梗"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "49802f257f626cab006d585eb5bb9f5deabafa927991fee3c6232b167b3ad6f6": {
       "created_at": "2026-08-18T01:50:11.645679+00:00",
       "model": "deepseek-v4-flash",
@@ -25449,6 +25839,45 @@
         "what_it_is": "一个基于开源 FreeCAD 的在线三维建模平台，AI 代理可以通过 MCP 协议直接操控它画图、建模型、出工程图纸"
       },
       "stage": "deep_analysis"
+    },
+    "54af534654613d8c296d1a1b472dff4527343a6573987aaa7b4d381b836a7401": {
+      "created_at": "2026-10-03T05:17:31.497729+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "claude-code-v2.1.288",
+        "evidence_status": "first_party",
+        "follow_up": "关注这些交互改进是否被其他 AI 编程工具跟进。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "github:release:402056988",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Claude Code",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Claude Code 发布 v2.1.288，新增多项交互功能（选择文本、恢复草稿、MCP OAuth 重新认证、代码审查发现数量控制等），对使用 Claude Code 做产品的人有实际帮助，但属于工具迭代而非产品案例，故 6.2。",
+        "region": "global",
+        "score": 6.2,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "Claude Code 更新到 v2.1.288，新增恢复被清空草稿、MCP 重新认证提示、代码审查发现数量控制等功能；经常用 Claude Code 的人可以升级。",
+        "tags": [
+          "Claude Code",
+          "开发工具",
+          "版本更新"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
     },
     "54cf0b09f03a7274e0d0ecabb1020f21be6d2bac3d7de5ffe018232f75cae4bb": {
       "created_at": "2026-10-02T05:35:08.930956+00:00",
@@ -29497,6 +29926,45 @@
       },
       "stage": "deep_analysis"
     },
+    "609a4478b471160d24739b9977608dd6da3c1a403a294e3798ba8ff639f7ee1f": {
+      "created_at": "2026-10-03T05:17:31.496703+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "vercel-ai-sdk-python-jev-evaluate",
+        "evidence_status": "first_party",
+        "follow_up": "关注 evaluate() API 的稳定版发布和实际项目中的使用反馈。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:vercel.com_changelog_rss:d2681c53903b855d",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "AI SDK for Python",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Vercel 官方发布 Python AI SDK 新实验性 evaluate() API，用于配合 Jev 模型做窄决策评估，属于开发者工具更新，对做 AI 产品有直接帮助，但偏底层工具、非产品案例，故 6.8。",
+        "region": "global",
+        "score": 6.8,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Vercel 为 Python 开发者发布新版 AI SDK，新增实验性 evaluate() 接口，方便用 Jev 模型做选择题式窄决策；做 AI 产品的人可以关注这个评估工具。",
+        "tags": [
+          "开发工具",
+          "Vercel",
+          "模型评估"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "60bd330ba21e0a5e696254c84c43b241748018b8d0e5e43aaa4b8d99f7e966f2": {
       "created_at": "2026-07-25T16:38:29.699339+00:00",
       "model": "deepseek-v4-flash",
@@ -30871,6 +31339,44 @@
           "Claude",
           "系统提示词",
           "模型行为"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "64af29179ba66bf5c2afdd985455d0ff341c4c82e27fc33dea9ac89f08682315": {
+      "created_at": "2026-10-03T05:17:31.497086+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-codex-rust-v0.162.0-alpha.7",
+        "evidence_status": "first_party",
+        "follow_up": "无实质内容，无需跟进。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "github:release:401856867",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Codex",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI Codex 的 alpha 版本号递增，无任何变更说明，属于噪音级更新。",
+        "region": "global",
+        "score": 3.5,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "OpenAI Codex 发布 rust-v0.162.0-alpha.7，没有任何变更说明；信息量极低。",
+        "tags": [
+          "Codex",
+          "版本更新"
         ],
         "target_user": "",
         "verticals": []
@@ -34362,6 +34868,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "70e8f1c4fa26836bacda02c3851cd8b82a96876b64f3bcf6362ec022871ced2a": {
+      "created_at": "2026-10-03T05:17:31.497064+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-codex-rust-v0.162.0-alpha.8",
+        "evidence_status": "first_party",
+        "follow_up": "无实质内容，无需跟进。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "github:release:402200734",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Codex",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI Codex 的 alpha 版本号递增，无任何变更说明，属于噪音级更新。",
+        "region": "global",
+        "score": 3.5,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "OpenAI Codex 发布 rust-v0.162.0-alpha.8，没有任何变更说明；信息量极低。",
+        "tags": [
+          "Codex",
+          "版本更新"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "70f47e10dcfc494097e26232f0fd7031fe1fd46599ce0db69ae553a986644ca8": {
       "created_at": "2026-08-27T09:47:22.596765+00:00",
       "model": "deepseek-v4-flash",
@@ -35579,6 +36123,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "7437b5019dfd50189513ca5191eb871b7f248bfcade518bd228f5505f58533a8": {
+      "created_at": "2026-10-03T05:17:40.686535+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "stratego-ai-hidden-information",
+        "evidence_status": "reported",
+        "follow_up": "观察该不完全信息决策方法是否被迁移到真实产品场景（如谈判、风控）。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:49933740",
+        "intelligence_type": "model_capability",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "AI 在信息不完全的 Stratego 上击败人类最强选手，属于模型能力进展，但本质是博弈算法与论文成果，未直接解锁新产品体验，按规则学术/基准类内容低于 7 分。",
+        "region": "global",
+        "score": 5.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "研究团队让 AI 在信息不完全的棋盘游戏 Stratego 上击败人类最强选手，且训练所需对局数远少于此前方法，属于博弈算法进展。",
+        "tags": [
+          "模型能力",
+          "博弈",
+          "不完全信息"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "7439ce02242beeddc04609fea4d50b55466271e8a667dfd0f50ea6025f27850b": {
       "created_at": "2026-07-29T01:53:11.236949+00:00",
       "model": "deepseek-v4-flash",
@@ -36183,6 +36766,45 @@
           "Google",
           "水印",
           "AI生成"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "7672b4456492647ef8d463efd16e6618daada8339bc00a387fef945ecd582cd8": {
+      "created_at": "2026-10-03T05:17:40.686271+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "apple-pass-designer-launch",
+        "evidence_status": "first_party",
+        "follow_up": "观察是否有开发者用 LLM 复刻同类小工具并公开构建过程与用户反馈。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:49937276",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Apple Pass Designer",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "苹果官方发布 Apple Wallet 通行证设计工具，属于官方产品发布；HN 高赞评论指出这类“schema 清晰、UX 简单”的小工具正是 LLM 时代最容易做出来的产品，对个人产品选题有启发，但本身与 AI 能力无直接关系，故给 6.5。",
+        "region": "global",
+        "score": 6.5,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "苹果官方上线 Pass Designer，让开发者可视化生成 Apple Wallet 通行证；HN 讨论认为这类结构清晰的小工具正是 LLM 时代个人最容易做出来的产品类型。",
+        "tags": [
+          "Apple",
+          "开发者工具",
+          "个人产品选题"
         ],
         "target_user": "",
         "verticals": []
@@ -39173,6 +39795,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "7fab29e6f6ff62ba75356fdd34eb642581928cb820793312a0ab92a434323a5d": {
+      "created_at": "2026-10-03T05:17:31.497016+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-agents-python-v0.23.1",
+        "evidence_status": "first_party",
+        "follow_up": "关注后续版本是否加入新的 Agent 能力或 API 变更。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "github:release:401929435",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "openai-agents-python",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI Agents Python SDK 的补丁版本，仅修复发布测试和就绪检查，无新功能、无产品增量，对产品经理参考价值低。",
+        "region": "global",
+        "score": 5.0,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "OpenAI 的 Agents Python SDK 发布 v0.23.1 补丁，只修复了发布测试和就绪检查；没有新功能，暂时不用特别关注。",
+        "tags": [
+          "SDK",
+          "OpenAI",
+          "版本更新"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "7fb1612cd4d6bd27a39d4d5aae643a1c09b40af7b196933de26eba5b64d7904e": {
       "created_at": "2026-09-30T05:30:59.287068+00:00",
       "model": "deepseek-flash",
@@ -40500,6 +41161,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "848c8224ac791a87c6f9df0e41cee8a4deab8c55aded1a5ee7c5ac5f07a2a029": {
+      "created_at": "2026-10-03T05:17:31.496261+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "airbnb-ai-transformation-ahmad-al-dahle",
+        "evidence_status": "reported",
+        "follow_up": "关注 Airbnb 后续公开的 AI 功能上线情况和内部工具效果数据。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:www.latent.space_feed:0300916b911fbe76",
+        "intelligence_type": "builder_insight",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Airbnb AI",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "前 Meta Llama 负责人 Ahmad Al-Dahle 加入 Airbnb 后用 AI 改造内部研发流程和房客体验，属于构建者一手实践分享，对理解 AI 如何落地大公司有迁移价值，但为访谈转述，故 8.2。",
+        "region": "global",
+        "score": 8.2,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "前 Meta Llama 负责人 Ahmad Al-Dahle 在 Airbnb 用 AI 改造团队做产品的方式和房客体验；值得看大公司怎么把 AI 落到具体业务里。",
+        "tags": [
+          "Airbnb",
+          "AI落地",
+          "构建者实践"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "84b35f8295b541b3ac9e5c250e631c78205626ad0d5cc1851a60ff5e1f463b5a": {
       "created_at": "2026-10-01T05:50:53.091671+00:00",
       "model": "deepseek-flash",
@@ -41686,6 +42386,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "885745b5107aae7b8f55a78d9d2088aacc643fd00d515a44b3dd77871cb83f7f": {
+      "created_at": "2026-10-03T05:17:31.497043+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-codex-rust-v0.162.0-alpha.9",
+        "evidence_status": "first_party",
+        "follow_up": "无实质内容，无需跟进。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "github:release:402259904",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Codex",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI Codex 的 alpha 版本号递增，无任何变更说明，属于噪音级更新。",
+        "region": "global",
+        "score": 3.5,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "OpenAI Codex 发布 rust-v0.162.0-alpha.9，没有任何变更说明；信息量极低。",
+        "tags": [
+          "Codex",
+          "版本更新"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "88831339f12e01e6fbe357152dc10752921ccb111eaf26c2264997d8083d78a1": {
       "created_at": "2026-08-16T01:58:08.110668+00:00",
       "model": "kimi-k2.6",
@@ -41905,6 +42643,46 @@
           "浏览器",
           "AI代理",
           "Cloudflare"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "890910b6afbd72d4eea7401d510099edb82cae4781a58f3676753ebbbc1f4eab": {
+      "created_at": "2026-10-03T05:17:40.686619+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "meta-muse-gadgets-sdk",
+        "evidence_status": "first_party",
+        "follow_up": "观察是否有开发者做出可验证的硬件+agent Demo 并公开使用反馈。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:49937504",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Muse Gadgets",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Meta 官方发布 Muse Gadgets 页面，向开发者提供固件/SDK 把自制硬件接入其 agent，属于官方产品动作；HN 讨论聚焦“让用户自己 hack 硬件接入 agent”这一开放策略，对做 AI 硬件/个人产品的初学者有可迁移增量，但尚缺真实用户反馈，故 7.2。",
+        "region": "global",
+        "score": 7.2,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Meta 上线 Muse Gadgets，放出固件和 SDK 让开发者把 ESP32 等自制硬件接入自家 agent；HN 讨论认为这是 Meta 用开放硬件接口换取生态的冒险打法。",
+        "tags": [
+          "Meta",
+          "Agent",
+          "硬件",
+          "SDK"
         ],
         "target_user": "",
         "verticals": []
@@ -53543,6 +54321,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "a8dadd1fea182b95b9498a27f00fe837e0aa29b0c518f74e2ca20d63fa63e249": {
+      "created_at": "2026-10-03T05:17:21.441487+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "techcrunch-podcast-ai-consumer-adoption-2pct",
+        "evidence_status": "reported",
+        "follow_up": "可关注后续是否有具体产品采用数据或政策落地细节，但本条本身不值得单独追踪。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:cc13e7ea3edac376",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "TechCrunch 播客对白宫 AI 安全承诺、AI 更名“超级智能”以及消费者采用率仅 2% 的泛行业评论，属于无一手产品、代码或可验证实践证据的媒体讨论，且核心信息为政策与宏观市场情绪，不直接催生新产品能力或可迁移的产品构建经验，按规则低于 7 分。",
+        "region": "global",
+        "score": 4.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "TechCrunch 播客讨论白宫 AI 安全承诺、AI 被更名“超级智能”以及消费者实际采用率仅约 2%，但未提供可验证的产品或构建细节，对 AI 产品经理的实操参考有限。",
+        "tags": [
+          "AI 政策",
+          "消费者采用",
+          "行业观察"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "a90f5c1b789ab353ab746e04e4f3a576cbf860533b61df7339863d6f3e86319e": {
       "created_at": "2026-08-25T01:52:40.442940+00:00",
       "model": "deepseek-v4-flash",
@@ -55055,6 +55872,39 @@
       },
       "stage": "deep_analysis"
     },
+    "adde656e2619d9cd3ce61f8a32ca8a6a58da52497d4bede3b9695d238f7e3de8": {
+      "created_at": "2026-10-03T05:17:54.043265+00:00",
+      "model": "kimi-k2.6",
+      "prompt_version": "deep-v3-beginner",
+      "result": {
+        "ai_role": "Dot 作为 proactive assistant（主动型助手），在后台跨复杂项目持续工作，把进度推给用户确认，而非等用户一步步下指令",
+        "evidence_status": "reported",
+        "hands_on_exercise": "30 分钟：用 ChatGPT 的 Projects 功能或任何支持「自定义 GPT」的平台，创建一个专门处理某类任务的助手（如「周报整理员」），尝试让它分 3 步骤完成（收集信息→整理格式→输出草稿），体会「Agent 分步执行」与「一次性问答」的区别。",
+        "implementation_idea": "未公开。从描述推测是把多个专用 Agent 打包成可协作的「助手团队」，每个 Dot 有特定分工，能调用工具并在项目间保持状态，但具体架构未披露。",
+        "learning_points": [
+          "Agent：能自主规划步骤、调用工具并持续执行任务的 AI，不只是回答问题的聊天机器人",
+          "Proactive vs. Reactive：Reactive 是用户问才答，Proactive 是 AI 主动推进并汇报，Dots 属于后者",
+          "Multi-agent 协作：多个 AI 分工处理不同环节，比单一 AI 更适合复杂项目"
+        ],
+        "limitations_or_uncertainties": "未公开具体技术架构；定价、企业级权限管理、与 ChatGPT 现有功能的整合方式均未披露；目前仅为媒体上手体验，非大规模用户验证。",
+        "product_name": "Dots",
+        "sources": [
+          "https://www.theverge.com/ai-artificial-intelligence/1004096/openai-chatgpt-dots-hands-on-agent",
+          "https://openai.com/index/introducing-dots/"
+        ],
+        "target_users": "需要处理跨项目工作的企业用户、团队协作者；也覆盖日常个人任务",
+        "title_zh": "OpenAI Dots 上手体验：更像办公软件、也能点外卖的 Agent 平台",
+        "usage_flow": [
+          "在 Dots 平台创建或加入一个项目/任务",
+          "分配或召唤不同的 Dot（AI 助手）来处理具体环节",
+          "Dot 主动推进工作，跨步骤持续运行并同步进展",
+          "用户随时检查、调整或接管，最终完成任务"
+        ],
+        "user_problem": "用户需要在多个任务和项目之间切换，手动跟踪进度很分散，希望有能主动推进工作的助手但又不失去控制权",
+        "what_it_is": "OpenAI 新推出的 Agent 平台，让多个 AI 助手协同处理复杂项目和日常任务，记者实测后感觉偏向企业办公场景。"
+      },
+      "stage": "deep_analysis"
+    },
     "ade4d968727f1a8834018885a9b49ff7f632859c1795d2bc383c7381d045a162": {
       "created_at": "2026-08-31T05:34:20.423952+00:00",
       "model": "kimi-k2.6",
@@ -55545,6 +56395,45 @@
         "summary_zh": "NASA 火星采样返回任务因成本过高被终止，HN 讨论集中在 JPL 管理与预算问题。",
         "tags": [
           "航天"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "af42126895dd279413700f2a3649108931a68dae51d6237b0fdfe6d4ee32f9c5": {
+      "created_at": "2026-10-03T05:17:17.208599+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "stability-ai-sean-parker-music-rebuild",
+        "evidence_status": "reported",
+        "follow_up": "值得追踪：等待 Stability AI 官方发布或 Sean Parker 一手说明，确认音乐产品的具体形态、用户场景和 AI 介入环节。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:f10be6800f1e6d41",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Stability AI",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "TechCrunch 报道 Sean Parker 正围绕音乐方向重组 Stability AI，但正文仅有一句概括，没有产品形态、用户场景、AI 具体作用或可验证 Demo，属于方向性信号而非可拆解案例；对关注 AI 音乐产品化的初学者有潜在追踪价值，但当前证据不足以进入高分区。",
+        "region": "global",
+        "score": 5.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Sean Parker 正围绕音乐方向重组 Stability AI，并已获得唱片公司支持与资金，但具体产品、用户用法和 AI 作用尚不明确，值得先标记追踪。",
+        "tags": [
+          "AI 音乐",
+          "Stability AI",
+          "产品方向"
         ],
         "target_user": "",
         "verticals": []
@@ -58413,6 +59302,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "b798665df7cdaf876d562613cdfff127a53397819f1efc6ec0a72aed43f84ed2": {
+      "created_at": "2026-10-03T05:17:15.276710+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "anthropic-claude-frontier-academy",
+        "evidence_status": "first_party",
+        "follow_up": "关注 Academy 是否放出具体课程、案例和可复现的 prompt/工作流。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "public_web:sitemap:bfc4355d370530a85bd8",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Claude Frontier Academy",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Anthropic 官方发布 Claude Frontier Academy，属于模型公司官方教育/产品化动作，一手来源。对初学者理解 Claude 能力边界和产品用法有直接帮助，但内容为教育项目而非新模型能力或可验证产品案例，增量有限，给 7.5。",
+        "region": "global",
+        "score": 7.5,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Anthropic 官方推出 Claude Frontier Academy，帮用户系统学习怎么用 Claude 解决实际问题，值得看是因为它把模型能力翻译成了可上手的用法。",
+        "tags": [
+          "Anthropic",
+          "Claude",
+          "官方教育"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "b7b5a866beb4bc5fc2e8d4bf06f4d042051d5049fc19a353c9bdf1977cf07384": {
       "created_at": "2026-09-03T04:22:15.546060+00:00",
       "model": "deepseek-v4-flash",
@@ -59479,6 +60407,45 @@
         "summary_zh": "AI News 汇总了当日 AI 推特动态，提及 Qwen 等新模型发布，但信息零散，缺乏深度。",
         "tags": [
           "新闻聚合"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "bb092beb66377e6fdb0e6ce61c9d6cfd80f3aec919ee048fe5d3cf17d9841b0b": {
+      "created_at": "2026-10-03T05:17:31.496231+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "ai-hallucination-customer-service-entitlement",
+        "evidence_status": "reported",
+        "follow_up": "关注是否有产品团队针对幻觉导致的用户纠纷做专门设计。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:7d263092de6f34d5",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "讨论 AI 幻觉如何影响客服场景和用户行为，属于行业观察，无产品、无构建过程、无一手证据，对做产品有间接启发但增量有限。",
+        "region": "global",
+        "score": 5.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "报道称 AI 幻觉让部分顾客拿着错误信息来维权，客服和一线员工更难做；做 AI 客服产品的人需要留意这个副作用。",
+        "tags": [
+          "AI幻觉",
+          "客服",
+          "行业观察"
         ],
         "target_user": "",
         "verticals": []
@@ -62082,6 +63049,46 @@
       },
       "stage": "candidate_analysis"
     },
+    "c47f3ad88cabe82fe374f5744c18b3c1248520d5a37fa6cbbdbacfbaf98cea86": {
+      "created_at": "2026-10-03T05:17:15.276875+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-gpt6-model-guide",
+        "evidence_status": "first_party",
+        "follow_up": "关注指南中给出的具体模型差异、成本与推理强度建议，以及是否有配套示例代码。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:openai.com_news_rss.xml:c38af6e5cae43e23",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "GPT-6",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI 官方发布 GPT-6 家族模型指南，教创业公司选模型、调推理强度、改 prompt、协调工具并准备生产工作流。属于模型公司一手能力动态，且直接面向产品落地，对 AI 产品经理有可迁移增量，给 8 分。",
+        "region": "global",
+        "score": 8.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "OpenAI 官方发布 GPT-6 家族选型指南，教创业公司怎么选模型、调推理强度和搭生产工作流，值得看是因为它直接回答产品落地时该用哪个模型、怎么用。",
+        "tags": [
+          "OpenAI",
+          "GPT-6",
+          "模型选型",
+          "生产落地"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "c497e2b75fe4b6ab6a5f84fcf398943ab4ef989292a824da7a2f9fc38d9dd324": {
       "created_at": "2026-08-06T03:37:08.297556+00:00",
       "model": "kimi-k2.6",
@@ -62807,6 +63814,47 @@
           "企业级",
           "科研",
           "Claude Enterprise"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "c6ed8fe9d35a125c0f56173ccc9421acff6737ef2b140ce6895277965b8a05e9": {
+      "created_at": "2026-10-03T05:17:15.276970+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "meta-muse-ai-gadgets-open-source",
+        "evidence_status": "reported",
+        "follow_up": "找到 Meta 开源仓库和 Muse agent 的接入文档，确认硬件兼容性和实际可用性。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:494cb0fb90da498d",
+        "intelligence_type": "product_case",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Meta Muse",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "The Verge 报道 Meta 开源代码，让开发者自己做搭载 Muse AI agent 的硬件小工具，并给出彩色墨水屏提醒、HDMI 棒等具体项目示例。属于有代码、有硬件场景、可动手复现的产品案例，对探索个人硬件 AI 产品的人价值高，给 8.2 分。",
+        "region": "global",
+        "score": 8.2,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Meta 开源代码让开发者自己做带 Muse AI agent 的小硬件，比如墨水屏提醒器或 HDMI 显示棒，值得看是因为它给出可动手复现的 AI 硬件产品路径。",
+        "tags": [
+          "Meta",
+          "Muse",
+          "AI 硬件",
+          "开源",
+          "Agent"
         ],
         "target_user": "",
         "verticals": []
@@ -69544,6 +70592,40 @@
       },
       "stage": "candidate_analysis"
     },
+    "de5f3dce7240428a1f7f39cbd58c824cd83e54f3653ec5602a3e6004ae124c5b": {
+      "created_at": "2026-10-03T05:18:07.503938+00:00",
+      "model": "kimi-k2.6",
+      "prompt_version": "deep-v3-beginner",
+      "result": {
+        "ai_role": "Muse Agent 负责理解用户说的话，决定该执行什么操作，然后通过网络把指令发给开发者自制的硬件设备。",
+        "evidence_status": "first_party",
+        "hands_on_exercise": "花 50 元左右买一块 ESP32 开发板，去 GitHub 下载 muse-gadget-sdk，按照 README 把示例固件刷进去，让板子连上 WiFi 后能通过串口打印出 Muse Agent 发来的第一条测试消息。",
+        "implementation_idea": "本质上就是给硬件做了一个'翻译器'：用 Meta 提供的 SDK 把你的 ESP32/树莓派注册成 Muse Agent 能认出来的' gadget '，双方用约定好的网络协议传数据。你的硬件只管采集传感器或显示内容，复杂的 AI 理解和决策交给云端的 Muse Agent。",
+        "learning_points": [
+          "Agent（智能体）：不只是聊天，它能理解目标后主动调用工具、操作设备的 AI 系统",
+          "ESP32：一种便宜（几十块钱）的 WiFi/蓝牙开发板，物联网项目常用",
+          "开源硬件生态：平台把接口开放出来，让社区自己造设备，换取更多使用场景"
+        ],
+        "limitations_or_uncertainties": "目前只有官方页面和 SDK 仓库，Engadget 记者做了一个 Muse Home Link 的试用，但普通开发者的真实使用反馈、稳定性、长期支持承诺均未公开；社区对 Meta 数据信任度存疑，大规模生态能否形成未知。",
+        "product_name": "Muse Gadgets",
+        "sources": [
+          "https://gadgets.muse.ai/",
+          "https://github.com/facebookincubator/muse-gadget-sdk",
+          "https://www.engadget.com/2276312/meta-muse-gadgets-open-source-smart-home-link/"
+        ],
+        "target_users": "喜欢 DIY 硬件的开发者、物联网爱好者、想自己做 AI 硬件原型的个人开发者",
+        "title_zh": "Meta 开源 Muse Gadgets：让开发者用 ESP32 等自制硬件接入 AI Agent",
+        "usage_flow": [
+          "买一块现成的 ESP32 开发板或树莓派",
+          "下载 Meta 开源的固件/SDK 刷进去",
+          "把自己的硬件（屏幕、按钮、传感器）接上去",
+          "设备联网后就能和 Muse Agent 对话、接收指令"
+        ],
+        "user_problem": "之前 AI Agent 大多跑在手机 App 或智能音箱里，开发者想把自己做的物理设备（比如带屏幕的按钮、传感器）接进 Agent 生态，门槛很高，大平台也不开放接口。",
+        "what_it_is": "Meta 官方发布的一套开源固件和 SDK，让开发者能用现成的 ESP32 开发板或树莓派，自己组装硬件并接入 Meta 的 Muse AI Agent。"
+      },
+      "stage": "deep_analysis"
+    },
     "de69c1a43e3e1ce6eb7f66502ce9f931d27127098df91491caeb5a7c62d9c81b": {
       "created_at": "2026-09-08T04:33:57.304378+00:00",
       "model": "deepseek-v4-flash",
@@ -70963,6 +72045,45 @@
           "SDK",
           "MCP",
           "沙箱"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "e2e121703588991001693a83074c0179be97aa8cab2270657db6c60b96ae36b1": {
+      "created_at": "2026-10-03T05:17:31.496190+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "openai-dots-agent-platform-hands-on",
+        "evidence_status": "reported",
+        "follow_up": "关注 Dots 的定价、企业客户案例和与 ChatGPT 的整合方式。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:692bc1d76160f4db",
+        "intelligence_type": "product_case",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Dots",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI 新 Agent 平台 Dots 的上手体验报道，有真实使用描述和产品定位分析，能让初学者理解 Agent 产品形态，但为媒体二手体验而非官方一手，故 7.8。",
+        "region": "global",
+        "score": 7.8,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "OpenAI 推出 Agent 平台 Dots，记者上手体验后认为它更像办公软件而不是玩具；值得看它如何把 Agent 做成企业工具。",
+        "tags": [
+          "Agent",
+          "OpenAI",
+          "产品体验"
         ],
         "target_user": "",
         "verticals": []
@@ -79035,6 +80156,45 @@
           "Microsoft Foundry",
           "开发工具",
           "Agent"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "fa731c39c50842c43cb4a699435e29181cd0c78ce98adb881883c049ab80bc96": {
+      "created_at": "2026-10-03T05:17:31.496132+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "apple-mac-full-disk-access-ai-agent-limit",
+        "evidence_status": "reported",
+        "follow_up": "关注苹果官方开发者文档中具体权限变更细节及对第三方 Agent 应用的影响。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:fcee3e9d2c08ef18",
+        "intelligence_type": "business_policy",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "苹果官方宣布收紧 Mac 全盘访问权限以应对 AI Agent 风险，属于平台政策变化，对做 Agent 产品的人有直接影响，但非产品案例、无构建过程，且为媒体报道而非官方原文，故中等偏上。",
+        "region": "global",
+        "score": 6.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "苹果宣布在 Mac 上限制“全盘访问”权限，因为 AI Agent 带来的风险明显上升；做 Agent 产品的人需要关注权限模型会怎么变。",
+        "tags": [
+          "Agent",
+          "平台政策",
+          "安全"
         ],
         "target_user": "",
         "verticals": []
