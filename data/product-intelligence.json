@@ -1,7 +1,160 @@
 {
   "version": 1,
-  "updated_at": "2026-10-03T05:18:07.564775+00:00",
+  "updated_at": "2026-10-04T05:51:53.213381+00:00",
   "products": [
+    {
+      "product_id": "product-56d7b73b7e46fd07",
+      "product_name": "Kolibri",
+      "builder_name": "bastitx",
+      "first_seen": "2026-10-04",
+      "last_seen": "2026-10-04",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Aleph Alpha 发布开放权重模型 Kolibri，技术报告详细到像教程，公开了数据集和训练方法，已有第三方免费托管可试用。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.5,
+      "summary": "Aleph Alpha 发布开放权重模型 Kolibri，技术报告详细到像教程，公开了数据集和训练方法，已有第三方免费托管可试用。",
+      "title": "Kolibri: A Sovereign Open-Weight Model",
+      "url": "https://aleph-alpha.com/en/blog/kolibri-has-landed-a-sovereign-open-weight-model/",
+      "sources": [
+        {
+          "url": "https://aleph-alpha.com/en/blog/kolibri-has-landed-a-sovereign-open-weight-model/",
+          "title": "Kolibri: A Sovereign Open-Weight Model",
+          "source_type": "hackernews",
+          "published_at": "2026-10-03T09:36:04+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "aleph-alpha-kolibri-open-weight",
+          "date": "2026-10-04",
+          "title": "Kolibri: A Sovereign Open-Weight Model",
+          "summary": "Aleph Alpha 发布开放权重模型 Kolibri，技术报告详细到像教程，公开了数据集和训练方法，已有第三方免费托管可试用。",
+          "score": 8.5,
+          "url": "https://aleph-alpha.com/en/blog/kolibri-has-landed-a-sovereign-open-weight-model/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "开放权重",
+        "模型发布",
+        "技术报告"
+      ]
+    },
+    {
+      "product_id": "product-181e0aa74b7c11b2",
+      "product_name": "Offrun",
+      "builder_name": "arunbhatia",
+      "first_seen": "2026-10-04",
+      "last_seen": "2026-10-04",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "verified",
+      "target_user": "同时用多个 AI 编码工具、需要来回切换的开发者",
+      "user_problem": "Claude Code、Codex、AGY、Grok Build 等编码 Agent 各自独立运行，开发者不知道谁在干活、谁卡住了要人介入、各账号还剩多少额度，多任务并行时调度混乱",
+      "what_it_is": "在 Mac 上把 Claude Code、Codex 等多个命令行编码 Agent 集中到同一个界面里统一监控和切换的工具",
+      "ai_role": "Claude Code、Codex 等第三方编码 Agent 负责实际写代码；Offrun 本身不生成代码，只负责调度、监控和呈现状态",
+      "implementation_idea": "在本地 Mac 上包装各 Agent 的官方 CLI，截获它们的状态输出（运行中/等待输入/报错），统一汇总到一个网页仪表盘；因为它跑在你的机器上、用你的账号登录，所以不经过第三方服务器，也不存你的密码",
+      "hands_on_exercise": "30 分钟：如果你用 Mac，先装 Claude Code 或 Codex CLI 并登录；然后打开 offrun.dev 按指引接入，同时给两个 Agent 分配不同目录的小任务（如 A 写测试、B 改文档），观察仪表盘的状态变化和额度消耗",
+      "limitations_or_uncertainties": "仅支持 Mac（明确写了 runs the CLIs on your Mac）；是否支持 Windows/Linux 未公开；免费/付费模式未公开；具体支持哪些 Agent 版本及兼容性细节未公开",
+      "region": "global",
+      "score": 8.2,
+      "summary": "Offrun 把 Claude Code、Codex 等多个编码 Agent 放进同一工作台，让用户一眼看到谁在干活、谁需要介入、各账号还剩多少额度，解决多 Agent 并行时的调度与监控问题。",
+      "title": "Offrun：一个工作台同时管多个编码 Agent",
+      "url": "https://offrun.dev/",
+      "sources": [
+        {
+          "url": "https://offrun.dev/",
+          "title": "Show HN: Offrun – manage every coding agent from one workspace",
+          "source_type": "hackernews",
+          "published_at": "2026-10-03T08:40:17+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "offrun-coding-agent-workspace",
+          "date": "2026-10-04",
+          "title": "Offrun：一个工作台同时管多个编码 Agent",
+          "summary": "Offrun 把 Claude Code、Codex 等多个编码 Agent 放进同一工作台，让用户一眼看到谁在干活、谁需要介入、各账号还剩多少额度，解决多 Agent 并行时的调度与监控问题。",
+          "score": 8.2,
+          "url": "https://offrun.dev/"
+        }
+      ],
+      "usage_flow": [
+        "在 Mac 上安装 Offrun，用它接管已登录的各编码 Agent CLI（无需新账号或 API key）",
+        "在一个界面里同时启动/暂停多个 Agent，给不同任务分配不同 Agent",
+        "看仪表盘：谁在运行、谁需要人工介入、各账号额度剩余",
+        "需要时介入处理，或让 Agent 继续自动执行"
+      ],
+      "learning_points": [
+        "Agent：能自主执行多步任务的 AI，不只是回答一次问题，而是能读文件、写代码、运行命令",
+        "CLI（命令行界面）：没有图形窗口、纯文字交互的程序，很多编码 Agent 目前只有这种形态",
+        "Worktree：Git 功能，让同一个代码仓库可以同时开多个独立的工作分支，方便多个 Agent 并行改不同功能"
+      ],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "开发者工具",
+        "多Agent编排"
+      ]
+    },
+    {
+      "product_id": "product-e0eb94756fa27f20",
+      "product_name": "jpm",
+      "builder_name": "jtwebman",
+      "first_seen": "2026-10-04",
+      "last_seen": "2026-10-04",
+      "occurrence_count": 1,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "开发者用 Claude Code 逐行写出 Rust 版 JavaScript 包管理器 jpm，几小时跑通、5 天跨平台加固，展示 AI 独立完成可用开发工具的完整过程。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.6,
+      "summary": "开发者用 Claude Code 逐行写出 Rust 版 JavaScript 包管理器 jpm，几小时跑通、5 天跨平台加固，展示 AI 独立完成可用开发工具的完整过程。",
+      "title": "Show HN: jpm – a JavaScript package manager in Rust, every line by Claude Code",
+      "url": "https://getjpm.sh/",
+      "sources": [
+        {
+          "url": "https://getjpm.sh/",
+          "title": "Show HN: jpm – a JavaScript package manager in Rust, every line by Claude Code",
+          "source_type": "hackernews",
+          "published_at": "2026-10-04T00:11:58+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "jpm-js-package-manager-claude-code",
+          "date": "2026-10-04",
+          "title": "Show HN: jpm – a JavaScript package manager in Rust, every line by Claude Code",
+          "summary": "开发者用 Claude Code 逐行写出 Rust 版 JavaScript 包管理器 jpm，几小时跑通、5 天跨平台加固，展示 AI 独立完成可用开发工具的完整过程。",
+          "score": 7.6,
+          "url": "https://getjpm.sh/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Claude Code",
+        "Agent",
+        "开发者工具"
+      ]
+    },
     {
       "product_id": "product-bc8a23b967580fbd",
       "product_name": "Airbnb AI",
