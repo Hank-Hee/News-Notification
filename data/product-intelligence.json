@@ -1,7 +1,282 @@
 {
   "version": 1,
-  "updated_at": "2026-10-04T05:51:53.213381+00:00",
+  "updated_at": "2026-10-05T05:38:35.104941+00:00",
   "products": [
+    {
+      "product_id": "product-22e630f34b690583",
+      "product_name": "SCM",
+      "builder_name": "allenleee",
+      "first_seen": "2026-10-05",
+      "last_seen": "2026-10-05",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "verified",
+      "target_user": "macOS 用户，尤其是本地囤积大量照片/视频素材、靠关键词或文件夹找不到内容的人",
+      "user_problem": "照片和视频存了几千几万条后，靠文件名、日期或文件夹根本找不到想要的内容；云端 AI 搜索（如 Google Photos）有隐私顾虑或需要上传",
+      "what_it_is": "一个开源的 macOS 应用，让你用自然语言搜索本地照片和视频里的内容，比如输入",
+      "ai_role": "AI 负责把图片/视频帧的像素内容转成",
+      "implementation_idea": "核心思路是",
+      "hands_on_exercise": "30 分钟练习：在 GitHub 下载 SCM 仓库，按 README 跑起来；用手机拍 5 张照片（猫、咖啡杯、书本、窗外、鞋子），用 SCM 搜索",
+      "limitations_or_uncertainties": "未公开具体使用的视觉模型和 Embedding 模型版本；未公开视频帧采样策略（是每秒抽一帧还是只抽关键帧）；未公开 M1/M2 不同芯片上的速度差异；社区讨论提到 OCR 目前用 Tesseract 而非 Apple Vision，作者未回应是否计划切换",
+      "region": "global",
+      "score": 8.2,
+      "summary": "开发者发布 macOS 上的本地 AI 搜索工具 SCM，能对照片和视频逐帧做语义检索，解决海量素材找不到的问题，代码已开源。",
+      "title": "SCM：macOS 上的本地 AI 照片与视频逐帧搜索工具",
+      "url": "https://github.com/allenv0/SCM",
+      "sources": [
+        {
+          "url": "https://github.com/allenv0/SCM",
+          "title": "Show HN: AI search for every photo and every frame of video on macOS",
+          "source_type": "hackernews",
+          "published_at": "2026-10-04T09:24:52+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "scm-macos-photo-video-ai-search",
+          "date": "2026-10-05",
+          "title": "SCM：macOS 上的本地 AI 照片与视频逐帧搜索工具",
+          "summary": "开发者发布 macOS 上的本地 AI 搜索工具 SCM，能对照片和视频逐帧做语义检索，解决海量素材找不到的问题，代码已开源。",
+          "score": 8.2,
+          "url": "https://github.com/allenv0/SCM"
+        }
+      ],
+      "usage_flow": [
+        "把本地照片/视频文件夹拖进 SCM",
+        "工具自动在后台提取画面内容并转成可搜索的语义信息",
+        "在搜索框输入自然语言，比如",
+        "点击结果，直接跳转到对应照片或视频的对应帧"
+      ],
+      "learning_points": [
+        "Embedding（嵌入）：把图片、文字变成同一套数字坐标，意思相近的内容坐标也相近，这样才能",
+        "RAG（检索增强生成）：这里不是生成回答，而是借用同样的思路——先把内容转成向量存起来，搜索时把用户的文字也转成向量，找最近的邻居",
+        "本地运行 vs 云端：所有计算在 Mac 本地完成，数据不出设备，这是用开源模型+本地推理框架实现的"
+      ],
+      "verticals": [],
+      "tags": [
+        "本地 AI",
+        "多模态检索",
+        "macOS",
+        "Show HN"
+      ]
+    },
+    {
+      "product_id": "product-4eb3e099903ba90a",
+      "product_name": "ChatGPT",
+      "builder_name": "Lenny Rachitsky",
+      "first_seen": "2026-10-05",
+      "last_seen": "2026-10-05",
+      "occurrence_count": 1,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "OpenAI 的 ChatGPT 负责人 Tibo Sottiaux 在 Lenny 的播客里讲 ChatGPT 下一步怎么走，值得看是因为这是产品一号位直接讲思路，但正文只有视频链接，需要点进去听。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.6,
+      "summary": "OpenAI 的 ChatGPT 负责人 Tibo Sottiaux 在 Lenny 的播客里讲 ChatGPT 下一步怎么走，值得看是因为这是产品一号位直接讲思路，但正文只有视频链接，需要点进去听。",
+      "title": "OpenAI’s Head of ChatGPT: We’re entering a new era of AI (again) | Tibo Sottiaux",
+      "url": "https://www.lennysnewsletter.com/p/openais-head-of-chatgpt-were-entering",
+      "sources": [
+        {
+          "url": "https://www.lennysnewsletter.com/p/openais-head-of-chatgpt-were-entering",
+          "title": "OpenAI’s Head of ChatGPT: We’re entering a new era of AI (again) | Tibo Sottiaux",
+          "source_type": "newsletter",
+          "published_at": "2026-10-04T12:32:47+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "openai-chatgpt-head-tibo-sottiaux-interview",
+          "date": "2026-10-05",
+          "title": "OpenAI’s Head of ChatGPT: We’re entering a new era of AI (again) | Tibo Sottiaux",
+          "summary": "OpenAI 的 ChatGPT 负责人 Tibo Sottiaux 在 Lenny 的播客里讲 ChatGPT 下一步怎么走，值得看是因为这是产品一号位直接讲思路，但正文只有视频链接，需要点进去听。",
+          "score": 7.6,
+          "url": "https://www.lennysnewsletter.com/p/openais-head-of-chatgpt-were-entering"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "ChatGPT",
+        "OpenAI",
+        "产品负责人访谈"
+      ]
+    },
+    {
+      "product_id": "product-4bc37debe6e5dd3b",
+      "product_name": "DeepSeek Harness",
+      "builder_name": "新浪财经",
+      "first_seen": "2026-10-05",
+      "last_seen": "2026-10-05",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "DeepSeek 的 Harness 产品把“一切皆插件”作为立项基因，让用户能按需扩展能力，值得关注其产品设计思路。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "china",
+      "score": 7.6,
+      "summary": "DeepSeek 的 Harness 产品把“一切皆插件”作为立项基因，让用户能按需扩展能力，值得关注其产品设计思路。",
+      "title": "DeepSeek Harness：“一切皆插件” 是刻在立项之初的产品基因 - 新浪财经",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPQXdXNkxhNkFqZnZwSkJxQ1hFZ3ZyWmNGMXhjRmU0YlFFYjJadDVCLUZaZi1uMkdZRE5CbFZ0MjdMeFp5c0dUU0JNX2hvamx0MndhSUIxUEpSU2d2Zi13TVNLQ3pGNHlPMW5ocHVqM3NjMVdiekpWLXhJNWlrcmZuTGJHRjctMks0dE1qd28wdTJodUZST0VodE5NYkkwU0VtS0xCXy1iOA?oc=5",
+      "sources": [
+        {
+          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPQXdXNkxhNkFqZnZwSkJxQ1hFZ3ZyWmNGMXhjRmU0YlFFYjJadDVCLUZaZi1uMkdZRE5CbFZ0MjdMeFp5c0dUU0JNX2hvamx0MndhSUIxUEpSU2d2Zi13TVNLQ3pGNHlPMW5ocHVqM3NjMVdiekpWLXhJNWlrcmZuTGJHRjctMks0dE1qd28wdTJodUZST0VodE5NYkkwU0VtS0xCXy1iOA?oc=5",
+          "title": "DeepSeek Harness：“一切皆插件” 是刻在立项之初的产品基因 - 新浪财经",
+          "source_type": "google_news",
+          "published_at": "2026-10-05T03:18:15+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "deepseek-harness-plugin-architecture",
+          "date": "2026-10-05",
+          "title": "DeepSeek Harness：“一切皆插件” 是刻在立项之初的产品基因 - 新浪财经",
+          "summary": "DeepSeek 的 Harness 产品把“一切皆插件”作为立项基因，让用户能按需扩展能力，值得关注其产品设计思路。",
+          "score": 7.6,
+          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPQXdXNkxhNkFqZnZwSkJxQ1hFZ3ZyWmNGMXhjRmU0YlFFYjJadDVCLUZaZi1uMkdZRE5CbFZ0MjdMeFp5c0dUU0JNX2hvamx0MndhSUIxUEpSU2d2Zi13TVNLQ3pGNHlPMW5ocHVqM3NjMVdiekpWLXhJNWlrcmZuTGJHRjctMks0dE1qd28wdTJodUZST0VodE5NYkkwU0VtS0xCXy1iOA?oc=5"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "DeepSeek",
+        "插件架构",
+        "Agent"
+      ]
+    },
+    {
+      "product_id": "product-8dfc495c728a07fe",
+      "product_name": "Strata",
+      "builder_name": "snehesht",
+      "first_seen": "2026-10-05",
+      "last_seen": "2026-10-05",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "verified",
+      "target_user": "想在本地跑大模型但买不起专业显卡的开发者、极客用户、隐私敏感型用户",
+      "user_problem": "125B 参数的大模型通常需要多张 A100/H100 专业显卡（显存 80GB+），普通用户只有 24GB 显存的 RTX 4090，根本跑不动或速度极慢",
+      "what_it_is": "一个开源的本地 LLM 推理引擎，通过极致量化+内存分层技术，让超大模型在消费级显卡上高速运行",
+      "ai_role": "未公开（Strata 是推理工具本身，不直接提供 AI 服务；用户加载的 Qwen 3.8 Flash Next 才是 AI 模型）",
+      "implementation_idea": "把模型'减肥'到极低精度（2-bit 量化，类似把高清视频压成低码率），同时把显存放不下的部分'借'用系统内存，像 CPU 和 GPU 接力干活，避免一次性加载全部参数",
+      "hands_on_exercise": "30 分钟：在 Google Colab 免费 T4 GPU（16GB 显存）上，用 llama.cpp 加载一个 Qwen 2.5 7B 的 Q4_K_M 量化模型，对比 FP16 原版与量化版的显存占用和生成速度，再用 perplexity 指标粗略感受质量损失",
+      "limitations_or_uncertainties": "量化质量损失的具体程度因任务而异：视觉定位任务中 Strata 误差显著高于 llama.cpp（中位误差 154.8 vs 46.5 像素），但文本生成任务用户反馈' surprisingly well'；2-bit 量化的通用质量下限未公开系统评测；作者未说明是否支持多卡或 Windows/Mac",
+      "region": "global",
+      "score": 7.4,
+      "summary": "有人做了个叫 Strata 的开源项目，让 125B 的大模型能在单张 RTX 4090 上跑到 100 tokens/s，值得看是因为它降低了本地跑大模型的门槛，但评论区也指出量化后质量会下降。",
+      "title": "Strata：让 125B 大模型在 RTX 4090 上跑到 100 tokens/s 的开源推理框架",
+      "url": "https://github.com/Niko1221/Strata",
+      "sources": [
+        {
+          "url": "https://github.com/Niko1221/Strata",
+          "title": "Run Qwen 3.8 Flash Next (125B) on consumer hardware (RTX 4090) at 100T/s",
+          "source_type": "hackernews",
+          "published_at": "2026-10-04T12:51:53+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "strata-qwen-125b-rtx4090-inference",
+          "date": "2026-10-05",
+          "title": "Strata：让 125B 大模型在 RTX 4090 上跑到 100 tokens/s 的开源推理框架",
+          "summary": "有人做了个叫 Strata 的开源项目，让 125B 的大模型能在单张 RTX 4090 上跑到 100 tokens/s，值得看是因为它降低了本地跑大模型的门槛，但评论区也指出量化后质量会下降。",
+          "score": 7.4,
+          "url": "https://github.com/Niko1221/Strata"
+        }
+      ],
+      "usage_flow": [
+        "下载 Strata 推理引擎和对应量化版模型文件（GGUF 格式）",
+        "配置分层存储：把部分模型层放显卡显存，其余放系统内存甚至 SSD",
+        "运行推理，根据硬件自动调度计算资源",
+        "对比输出质量与速度，调整量化精度（2-bit 到 4-bit）"
+      ],
+      "learning_points": [
+        "量化（Quantization）：把模型权重从高精度浮点数换成低精度整数，牺牲少许质量换取大幅缩小的显存占用，类似把 WAV 转成 MP3",
+        "GGUF 格式：llama.cpp 生态的模型文件标准，支持分层量化和跨平台推理",
+        "内存分层（Memory Hierarchy/Offloading）：显存不够时把部分计算'卸货'到内存或硬盘，用带宽换容量"
+      ],
+      "verticals": [],
+      "tags": [
+        "本地推理",
+        "开源项目",
+        "量化",
+        "Qwen"
+      ]
+    },
+    {
+      "product_id": "product-f79ab51de4a21354",
+      "product_name": "DeepSeek",
+      "builder_name": "新浪财经",
+      "first_seen": "2026-08-25",
+      "last_seen": "2026-10-05",
+      "occurrence_count": 2,
+      "intelligence_type": "model_capability",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "DeepSeek 在国庆假期发布新版本，其 90 后负责人表示目标是做出让全球 AI 巨头跟进的创新。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "china",
+      "score": 7.0,
+      "summary": "DeepSeek 在国庆假期发布新版本，其 90 后负责人表示目标是做出让全球 AI 巨头跟进的创新。",
+      "title": "DeepSeek国庆假期上新！DeepSeek90后负责人回应：希望做出让世界AI巨头跟进的创新 - 新浪财经",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNbVNnV3FpN0JaMVltMWh4bHJPZTFNY1ltLXFuNlJhOEgtVVdPa25LOF91cHFBSm16WnBFU0lfSEp4ZHpfSUpISWhsUnlxWHh6Y0lIXzlwaUZhZWxKQzZWQ0x5NXYyS2J6REJvZjNKUVY1eExZOHNfMUYwTkZFc0laSDVEZlU?oc=5",
+      "sources": [
+        {
+          "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOcU02ODY4VFJaM2JuUUp6bWxncFUwMGUzV0psTFlIVkhGRkZzQ1hjdzg2SlVaRVRrd2JWdW53VDdMZ3MxYmZZN2syUmxPdmVXMHFfZGR4Wi1YYWkwb04xMlV3a05FVnBTX0dDN1ZjbVVBM0lzVmd6X3hKaWpzOEtRZ2lHNA?oc=5",
+          "title": "说好「多模态不是主线」的梁文锋，怎么转头就发了个Vision模型？ - 新浪财经",
+          "source_type": "google_news",
+          "published_at": "2026-08-25T00:37:11+00:00"
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNbVNnV3FpN0JaMVltMWh4bHJPZTFNY1ltLXFuNlJhOEgtVVdPa25LOF91cHFBSm16WnBFU0lfSEp4ZHpfSUpISWhsUnlxWHh6Y0lIXzlwaUZhZWxKQzZWQ0x5NXYyS2J6REJvZjNKUVY1eExZOHNfMUYwTkZFc0laSDVEZlU?oc=5",
+          "title": "DeepSeek国庆假期上新！DeepSeek90后负责人回应：希望做出让世界AI巨头跟进的创新 - 新浪财经",
+          "source_type": "google_news",
+          "published_at": "2026-10-05T01:14:00+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "deepseek-vision-model-release",
+          "date": "2026-08-25",
+          "title": "说好「多模态不是主线」的梁文锋，怎么转头就发了个Vision模型？ - 新浪财经",
+          "summary": "新浪财经报道DeepSeek发布Vision模型，尽管此前称多模态非主线，但新模型能力值得关注。",
+          "score": 7.5,
+          "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOcU02ODY4VFJaM2JuUUp6bWxncFUwMGUzV0psTFlIVkhGRkZzQ1hjdzg2SlVaRVRrd2JWdW53VDdMZ3MxYmZZN2syUmxPdmVXMHFfZGR4Wi1YYWkwb04xMlV3a05FVnBTX0dDN1ZjbVVBM0lzVmd6X3hKaWpzOEtRZ2lHNA?oc=5"
+        },
+        {
+          "update_id": "deepseek-national-day-release-90s-lead",
+          "date": "2026-10-05",
+          "title": "DeepSeek国庆假期上新！DeepSeek90后负责人回应：希望做出让世界AI巨头跟进的创新 - 新浪财经",
+          "summary": "DeepSeek 在国庆假期发布新版本，其 90 后负责人表示目标是做出让全球 AI 巨头跟进的创新。",
+          "score": 7.0,
+          "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNbVNnV3FpN0JaMVltMWh4bHJPZTFNY1ltLXFuNlJhOEgtVVdPa25LOF91cHFBSm16WnBFU0lfSEp4ZHpfSUpISWhsUnlxWHh6Y0lIXzlwaUZhZWxKQzZWQ0x5NXYyS2J6REJvZjNKUVY1eExZOHNfMUYwTkZFc0laSDVEZlU?oc=5"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "DeepSeek",
+        "Vision模型",
+        "多模态",
+        "模型发布"
+      ]
+    },
     {
       "product_id": "product-56d7b73b7e46fd07",
       "product_name": "Kolibri",
@@ -13373,54 +13648,6 @@
       "tags": [
         "AI助手",
         "隐私"
-      ]
-    },
-    {
-      "product_id": "product-f79ab51de4a21354",
-      "product_name": "DeepSeek",
-      "builder_name": "新浪财经",
-      "first_seen": "2026-08-25",
-      "last_seen": "2026-08-25",
-      "occurrence_count": 1,
-      "intelligence_type": "model_capability",
-      "evidence_status": "reported",
-      "target_user": "未公开",
-      "user_problem": "未公开",
-      "what_it_is": "新浪财经报道DeepSeek发布Vision模型，尽管此前称多模态非主线，但新模型能力值得关注。",
-      "ai_role": "未公开",
-      "implementation_idea": "未公开",
-      "hands_on_exercise": "未公开",
-      "limitations_or_uncertainties": "未公开",
-      "region": "china",
-      "score": 7.5,
-      "summary": "新浪财经报道DeepSeek发布Vision模型，尽管此前称多模态非主线，但新模型能力值得关注。",
-      "title": "说好「多模态不是主线」的梁文锋，怎么转头就发了个Vision模型？ - 新浪财经",
-      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOcU02ODY4VFJaM2JuUUp6bWxncFUwMGUzV0psTFlIVkhGRkZzQ1hjdzg2SlVaRVRrd2JWdW53VDdMZ3MxYmZZN2syUmxPdmVXMHFfZGR4Wi1YYWkwb04xMlV3a05FVnBTX0dDN1ZjbVVBM0lzVmd6X3hKaWpzOEtRZ2lHNA?oc=5",
-      "sources": [
-        {
-          "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOcU02ODY4VFJaM2JuUUp6bWxncFUwMGUzV0psTFlIVkhGRkZzQ1hjdzg2SlVaRVRrd2JWdW53VDdMZ3MxYmZZN2syUmxPdmVXMHFfZGR4Wi1YYWkwb04xMlV3a05FVnBTX0dDN1ZjbVVBM0lzVmd6X3hKaWpzOEtRZ2lHNA?oc=5",
-          "title": "说好「多模态不是主线」的梁文锋，怎么转头就发了个Vision模型？ - 新浪财经",
-          "source_type": "google_news",
-          "published_at": "2026-08-25T00:37:11+00:00"
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "deepseek-vision-model-release",
-          "date": "2026-08-25",
-          "title": "说好「多模态不是主线」的梁文锋，怎么转头就发了个Vision模型？ - 新浪财经",
-          "summary": "新浪财经报道DeepSeek发布Vision模型，尽管此前称多模态非主线，但新模型能力值得关注。",
-          "score": 7.5,
-          "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOcU02ODY4VFJaM2JuUUp6bWxncFUwMGUzV0psTFlIVkhGRkZzQ1hjdzg2SlVaRVRrd2JWdW53VDdMZ3MxYmZZN2syUmxPdmVXMHFfZGR4Wi1YYWkwb04xMlV3a05FVnBTX0dDN1ZjbVVBM0lzVmd6X3hKaWpzOEtRZ2lHNA?oc=5"
-        }
-      ],
-      "usage_flow": [],
-      "learning_points": [],
-      "verticals": [],
-      "tags": [
-        "DeepSeek",
-        "Vision模型",
-        "多模态"
       ]
     },
     {
