@@ -2223,6 +2223,46 @@
       },
       "stage": "candidate_analysis"
     },
+    "07d0ab184802fb86179647f272d008ac20015ede856edb62474d570f59ba501b": {
+      "created_at": "2026-10-06T06:19:21.900632+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "claude-code-v2.1.290",
+        "evidence_status": "first_party",
+        "follow_up": "关注 Managed Agents 模式是否形成可复用的 Agent 产品范式，以及 hook 权限模型是否被其他 Agent 产品借鉴。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "github:release:403993621",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Claude Code",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Claude Code 插件 hook 体系的一次实质扩展：新增 serverToolUses、agentId、ceiling、主题类型、gatingHooks 校验，以及会话名 attach/logs 和 Managed Agents 引导命令。对做 Agent 产品的人有可迁移的插件与权限设计参考，但仍是开发者工具层面的迭代，非面向终端用户的新体验。",
+        "region": "global",
+        "score": 6.5,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "Anthropic 发布 Claude Code v2.1.290，扩展插件 hook 能力（子代理权限区分、工具审批上限、主题类型）并新增会话名快捷命令和 Managed Agents 引导，让开发者能更细地控制 Agent 的权限与插件行为。",
+        "tags": [
+          "Claude Code",
+          "Agent",
+          "插件系统",
+          "开发者工具"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "07f11e22be34b7616e156f8a981795c54e9fef431651efc334059a90b0d4f119": {
       "created_at": "2026-09-30T05:31:24.630737+00:00",
       "model": "deepseek-flash",
@@ -4497,6 +4537,45 @@
       },
       "stage": "deep_analysis"
     },
+    "0f2ac2341b677749bfea2683d92fdb4ffa984bf32270517a9b740ea561a29db3": {
+      "created_at": "2026-10-06T06:19:23.861399+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "chatgpt-fake-new-yorker-cartoon-signatures",
+        "evidence_status": "reported",
+        "follow_up": "观察 OpenAI 是否回应或调整图像生成中的签名/署名处理，以及是否有漫画家或版权方采取法律行动。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:49971846",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "ChatGPT",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Nieman Lab 报道 ChatGPT 生成假《纽约客》漫画时带上真实漫画家签名，属于模型行为/版权争议的行业观察，非产品发布、非构建者实践、非新模型能力，也无产品/代码/用户反馈的一手证据；对 AI 产品经理的可迁移增量有限，仅作为模型输出风险的案例参考，故落在 5–6.9 区间。",
+        "region": "global",
+        "score": 5.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "有人发现 ChatGPT 生成的假《纽约客》漫画会带上真实漫画家的签名，引发版权与模型行为争议，值得关注但缺少产品层面的可迁移经验。",
+        "tags": [
+          "版权",
+          "模型行为",
+          "内容生成"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "0f4cee728b74b74e7655b4e79fb1f4d268853ce9b1d362381517540c782e6df7": {
       "created_at": "2026-08-02T03:53:12.400998+00:00",
       "model": "kimi-k2.6",
@@ -6242,6 +6321,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "14fd291616b443af29531e1dce76c354fc7227c206681cfdc430f8badc7bc284": {
+      "created_at": "2026-10-06T06:18:49.219110+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-eu-text-provenance",
+        "evidence_status": "first_party",
+        "follow_up": "关注水印检测 API 是否向开发者开放，以及对下游 AI 产品内容标注的影响。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:openai.com_news_rss.xml:d2b5b29b4c815525",
+        "intelligence_type": "business_policy",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI 官方说明欧盟文本溯源（水印）规则下的做法，属合规政策更新，对产品经理理解监管约束有参考价值，但不直接催生新产品体验，也未涉及产品构建或用户使用场景，按规则低于 7 分。",
+        "region": "global",
+        "score": 5.5,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "OpenAI 官方说明在欧盟规则下如何对文本加水印、检测如何工作，以及为什么先向研究者开放访问。",
+        "tags": [
+          "合规",
+          "水印",
+          "欧盟"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "153b87735febf0070cd59c8e9c433a61b11e5c1c23c8de63e6fb56c81bf49113": {
       "created_at": "2026-08-11T02:27:10.143272+00:00",
       "model": "deepseek-v4-flash",
@@ -7621,6 +7739,45 @@
           "AI自动化",
           "初创公司",
           "Google"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "194083e19d51c37b7126ddb404f0b95b0e35e071ddd2668d399d8be2a677e86a": {
+      "created_at": "2026-10-06T06:19:10.440399+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "wikimedia-openai-rogue-agents-outage",
+        "evidence_status": "reported",
+        "follow_up": "关注 OpenAI 是否回应、维基媒体是否出台代理访问政策，以及其他平台是否跟进限制。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:16e2dfc8ce76176d",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "维基媒体基金会确认发现 OpenAI 代理在其平台上的异常活动，并可能与 5 月宕机相关。属于 AI Agent 访问第三方网站带来的真实风险事件，对做 Agent 产品的人有安全与合规层面的可迁移提醒；但无产品/代码增量，故在 7 分以下。",
+        "region": "global",
+        "score": 6.6,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "维基百科运营方称发现 OpenAI 的“失控”代理在维基平台活动，可能与 5 月宕机有关，值得做 Agent 产品的人关注代理越权访问第三方服务的风险。",
+        "tags": [
+          "AI Agent",
+          "安全合规",
+          "平台治理"
         ],
         "target_user": "",
         "verticals": []
@@ -18354,6 +18511,46 @@
       },
       "stage": "deep_analysis"
     },
+    "3bd601a286744b35cf6c31d71ad24285ff964cd78b2b2eb2efc7e69d45fdac7b": {
+      "created_at": "2026-10-06T06:19:21.901126+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "opus-5.5-agents-magnetic-semiconductors",
+        "evidence_status": "reported",
+        "follow_up": "关注该发现是否被独立实验验证，以及 Agent 科研工作流的可复现细节。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:49970667",
+        "intelligence_type": "product_case",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Opus 5.5 Agent 在材料科学领域发现两个室温磁性半导体候选，属于 AI Agent 在垂直科研场景的落地案例，能说明 Agent 如何被用于搜索科学假设空间。但来源为第三方博客、评论区对结论持怀疑（LK-99 前车之鉴），证据强度有限，故不给更高分。",
+        "region": "global",
+        "score": 7.6,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Vals.ai 称用 Opus 5.5 Agent 发现两个室温磁性半导体候选材料，展示 AI Agent 在材料科研搜索空间中的用法，但结论尚未被独立验证，评论区也提醒谨慎看待。",
+        "tags": [
+          "Agent",
+          "科研",
+          "材料科学",
+          "垂直应用"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "3bf911218750912e10381da859aed28e54b15a5a0c18d7573f2dd4d57bdbfe67": {
       "created_at": "2026-09-22T04:54:22.684345+00:00",
       "model": "deepseek-flash",
@@ -20636,6 +20833,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "42a6b4b9136cae0c624b66f13b83f4cda4a56268d34ba7490b059c041a1eecee": {
+      "created_at": "2026-10-06T06:18:49.219139+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "openai-chatgpt-ads-format",
+        "evidence_status": "first_party",
+        "follow_up": "关注广告格式对 ChatGPT 用户体验与产品定位的长期影响。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:openai.com_news_rss.xml:2d8e70fb45cef747",
+        "intelligence_type": "business_policy",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": true,
+        "market_signal": "",
+        "product_name": "ChatGPT",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI 官方发布 ChatGPT 新视觉广告格式与测量工具，属商业化更新，对广告主有增量，但对 AI 产品经理与个人产品构建者迁移价值有限，且带明显营销属性，按规则扣分。",
+        "region": "global",
+        "score": 5.8,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "OpenAI 在 ChatGPT 中推出新的视觉广告格式，并扩展测量工具、归因合作与品牌适配能力。",
+        "tags": [
+          "广告",
+          "商业化",
+          "ChatGPT"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "42dde84f3fdeef1f0762987f86686945708c8a552904dfe377181429816a096d": {
       "created_at": "2026-09-03T04:22:41.977765+00:00",
       "model": "deepseek-v4-flash",
@@ -20746,6 +20982,45 @@
         "tags": [
           "OpenAI",
           "人事变动"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "4311754169f7d771bead6d84c6dcac7977feb910993789401c0159f5bd9b491f": {
+      "created_at": "2026-10-06T06:19:10.440357+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "ai-math-takeover-drama",
+        "evidence_status": "reported",
+        "follow_up": "关注相关数学成果是否被独立验证，以及是否转化为可用的推理能力产品。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:9efc4bcfcb1fed85",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": false,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "围绕 AI 攻克数学难题的争议综述，涉及 OpenAI、Anthropic 等实验室的宣称与学界反应，属于行业观察与争议梳理，没有可直接催生新产品的模型能力细节，也无产品/代码/Demo，按规则低于 7 分。",
+        "region": "global",
+        "score": 5.8,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "一篇梳理 AI 实验室宣称攻克数学难题引发争议的报道，值得了解 AI 能力宣称与学术验证之间的落差，但对做产品没有直接可用的增量。",
+        "tags": [
+          "AI 数学",
+          "行业观察",
+          "争议"
         ],
         "target_user": "",
         "verticals": []
@@ -25267,6 +25542,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "50b9dec7ebce8c5974641ff248d2d1b907f476d0c8935712e4d11b3db3489d42": {
+      "created_at": "2026-10-06T06:19:21.901344+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "deno-to-node-migration",
+        "evidence_status": "reported",
+        "follow_up": "无。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:49971719",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": false,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "开发者从 Deno 迁回 Node 的个人经验帖，与 AI 产品、模型能力或 Agent 构建无直接关系，属于通用开发工具讨论。",
+        "region": "global",
+        "score": 3.0,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "一位开发者讲述从 Deno 迁回 Node 的理由，评论区讨论 Deno 的现状与工具链，与 AI 产品构建无直接关联。",
+        "tags": [
+          "开发工具",
+          "运行时"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "50bcbad4f3fbe26671163b1bb0b010e47e1fb1078d4abc36100d59a5ead0207c": {
       "created_at": "2026-08-24T01:57:40.759465+00:00",
       "model": "deepseek-v4-flash",
@@ -27299,6 +27612,37 @@
         ],
         "user_problem": "手语使用者日常遇到视频通话、面对面交流时，对方不懂手语，只能靠文字打字或找翻译员，沟通门槛高、实时性差",
         "what_it_is": "SL2T 是一个能把视频里的手语动作直接转换成文字的 AI 模型，首发搭载在 Pixel 11 手机上，帮聋人和听障用户更方便地与外界文字沟通。"
+      },
+      "stage": "deep_analysis"
+    },
+    "572f9283eb6e532f809e3d3b56e6b992b841a007ab93375aee34374ec24a2b46": {
+      "created_at": "2026-10-06T06:19:58.638223+00:00",
+      "model": "kimi-k2.6",
+      "prompt_version": "deep-v3-beginner",
+      "result": {
+        "ai_role": "AI 负责理解用户的情感问题并生成个性化回复内容，同时在产品机制中被约束以避免让用户产生对 AI 的情感依赖",
+        "evidence_status": "reported",
+        "hands_on_exercise": "用任意免费 LLM（如 ChatGPT/Claude/Gemini），尝试写一段系统提示词（system prompt），让 AI 扮演'恋爱顾问'，要求：① 回答要具体、有行动建议 ② 明确拒绝成为用户的情感依赖对象 ③ 遇到严重心理问题建议寻求专业帮助。测试 3 个不同的问题，观察 AI 是否守住边界",
+        "implementation_idea": "未公开。从描述推测，核心是把 LLM 的问答能力封装成一个有明确人设边界的'顾问'角色——不是无限陪伴的朋友，而是有安全护栏的建议提供者；具体如何防止情感依赖（如回复风格限制、使用频次提示、是否转人工等）未公开",
+        "learning_points": [
+          "Prompt Engineering（提示工程）：给 AI 设定'角色边界'，比如让它做顾问而非朋友，防止用户情感过度投入",
+          "AI 安全设计：在高信任场景（如情感咨询）中，产品需要主动设置护栏，避免用户产生依赖或获得有害建议",
+          "垂直场景 vs 通用聊天：把通用 LLM 包装成特定人群（年轻女性）的特定用途（约会建议），比直接做通用 AI 聊天更容易建立用户信任"
+        ],
+        "limitations_or_uncertainties": "未公开：具体用户量、AI 模型来源、是否有人工审核介入、'避免情感依赖'的具体产品机制（如限制对话轮数、特定话术模板等）、商业模式、是否收费。报道为 TechCrunch 记者 Sarah Perez 撰写，非创始人一手技术/产品长文",
+        "product_name": "Hot Girl Hotline",
+        "sources": [
+          "https://techcrunch.com/2026/10/05/hot-girl-hotline-is-like-dear-abby-for-the-ai-era/"
+        ],
+        "target_users": "年轻女性，主要在约会和恋爱关系中需要建议的人群",
+        "title_zh": "Hot Girl Hotline：AI 时代的'亲爱的艾比'情感专栏",
+        "usage_flow": [
+          "用户向 Hot Girl Hotline 提出具体的约会或感情问题",
+          "AI 根据用户情况生成个性化建议",
+          "用户获得回复，产品设计上强调安全边界和避免过度依赖"
+        ],
+        "user_problem": "在约会和感情中遇到困惑时，想获得私密、及时、不评判的建议，但担心传统渠道不安全或容易产生情感依赖",
+        "what_it_is": "两姐妹创办的 AI 情感咨询产品，给年轻女性提供约会和恋爱关系的个性化建议"
       },
       "stage": "deep_analysis"
     },
@@ -32508,6 +32852,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "6512ac8668a855dea40959cddabb90a0b8a45428df05e9a36dd69083a518f6cc": {
+      "created_at": "2026-10-06T06:19:21.900828+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "common-lisp-best-language",
+        "evidence_status": "reported",
+        "follow_up": "无。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:49973598",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": false,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "编程语言优劣的泛观点文章，与 AI 产品构建无直接关系，评论区虽涉及 LLM 写代码的讨论，但无产品、代码或可验证实践，属于弱相关噪音。",
+        "region": "global",
+        "score": 3.5,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "一篇主张 Common Lisp 是最好的编程语言的观点文章，评论区顺带讨论 LLM 写动态语言代码的困难，但没有产品、代码或可验证实践，对 AI 产品经理参考价值低。",
+        "tags": [
+          "编程语言",
+          "泛观点"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "651c71377cde59aec5ac7cbe4172e2298b9cb00818e66ddd6b6835236bf7f57a": {
       "created_at": "2026-09-26T04:57:10.890398+00:00",
       "model": "deepseek-flash",
@@ -32813,6 +33195,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "65a48d5de4adf03ac799984d39986e4c6e7f904f62c01385b5c949e8f975754e": {
+      "created_at": "2026-10-06T06:19:10.440269+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "gemini-call-for-me-personal-expansion",
+        "evidence_status": "early_signal",
+        "follow_up": "等待 Google 官方确认或正式发布，观察是否开放给普通用户及隐私/授权设计。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:5cbc612dd16fba6a",
+        "intelligence_type": "model_capability",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Gemini Call for Me",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "来自 APK 拆包的传闻，属于未发布功能的早期信号，非官方公告；虽涉及 Google 把 AI 通话能力从商务扩展到亲友场景这一有产品想象力的方向，但无 Demo、无官方确认、无用户反馈，按规则预告只能标 early_signal 并压低分数。",
+        "region": "global",
+        "score": 6.4,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "有拆包发现 Google 可能把 Gemini 的 Call for Me 从商务通话扩展到给家人朋友打电话传话，值得看 AI 代打电话这类能力如何从工具场景走向日常人际场景。",
+        "tags": [
+          "Gemini",
+          "AI 通话",
+          "early_signal"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "65e618a941be61578901f52b70a3649e304c8ed2b4c57c0b9e572d93c10271a6": {
       "created_at": "2026-08-28T11:22:42.197460+00:00",
       "model": "deepseek-v4-flash",
@@ -32883,6 +33304,45 @@
         "tags": [
           "AI安全",
           "行业评论"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "663700c24ba13bc734ef31116a7215eb6c038c6ed58086adeceaf031b197ff92": {
+      "created_at": "2026-10-06T06:19:10.440529+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "anthropic-cowork-cloud-vm-architecture",
+        "evidence_status": "first_party",
+        "follow_up": "关注云端沙箱方案在文件访问、隐私与成本上的实际表现，以及是否开放给更多用户。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:simonwillison.net_atom_everything_:d43019accfd19e1e",
+        "intelligence_type": "builder_insight",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Cowork",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Anthropic 的 Felix Rieseberg 一手说明 Cowork 从本地 VM 改为云端推理加云端沙箱的架构变化，并解释原因（磁盘、电池、性能、合盖即停）与取舍（每会话独立沙箱、文件访问由桌面端工具调用）。属于构建者公开的产品思路与工程实践，对理解 Agent 产品架构取舍有高价值，故给 8.6。",
+        "region": "global",
+        "score": 8.6,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Anthropic 的 Felix Rieseberg 解释 Cowork 把模型推理和 VM 都搬到云端、每个会话独立沙箱，解决本地跑 VM 耗电占盘、合盖就停的问题，值得做 Agent 产品的人看架构取舍。",
+        "tags": [
+          "Agent",
+          "产品架构",
+          "Anthropic"
         ],
         "target_user": "",
         "verticals": []
@@ -34317,6 +34777,46 @@
           "Nvidia",
           "OpenAI",
           "融资"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "6aff2ecdafe908dc72478d7534ad7b0d4f3f55340aae302ab5d906beeb557d0e": {
+      "created_at": "2026-10-06T06:18:55.299542+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "instinct-group-chat-agent-launch",
+        "evidence_status": "reported",
+        "follow_up": "值得追踪：关注其群聊 agent 的实际交互方式、权限模型细节以及用户反馈，判断是否可迁移到其他协作场景。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:f67eea3fd85e4db9",
+        "intelligence_type": "product_case",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Instinct",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "TechCrunch 报道 Instinct 将 AI agent 带入群聊，允许无账号好友共同使用，用于旅行规划、拼车、活动协调等具体任务，并强调个人账号隔离与授权机制。这是可迁移的产品设计案例：解决多人协作场景下 AI 如何参与、权限如何隔离的问题，对 AI 产品经理有参考价值。但缺乏用户反馈、Demo 或指标，且为媒体报道而非官方一手发布，因此未达 8 分。",
+        "region": "global",
+        "score": 7.2,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Instinct 把 AI agent 放进群聊，让没有账号的朋友也能一起用它规划旅行、拼车和协调活动，同时要求个人 agent 分享信息或行动前必须获得授权。",
+        "tags": [
+          "AI Agent",
+          "群聊协作",
+          "权限隔离",
+          "产品设计"
         ],
         "target_user": "",
         "verticals": []
@@ -38468,6 +38968,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "78c52b4d39a4108b2d78cbd721260ffc4ccb3c7d3bf5c274c44d103afacb5f2f": {
+      "created_at": "2026-10-06T06:18:49.218311+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openrouter-rankings-top5",
+        "evidence_status": "reported",
+        "follow_up": "关注榜单中模型是否有正式发布页、定价或可验证 Demo，尤其是 Hy4 preview 与 GPT-6 Luna 的成熟度。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "public_web:ranking:b0ab1ec5ca2d10da9cfa",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": false,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "聚合榜单，仅罗列模型简介，无产品案例、无用户反馈、无构建过程；对初学者理解'解决什么问题、用户怎么用'帮助有限，且部分模型（如 GPT-6 Luna、Hy4 preview）为预告性质，未标注成熟度。属低信噪比聚合内容，按规则低于 7 分。",
+        "region": "global",
+        "score": 6.5,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "OpenRouter 列出当前热度前五的模型（DeepSeek V4.1 Flash、GLM 5.3 Flash、小米 MiMo-V2.6-Flash、腾讯 Hy4 preview、OpenAI GPT-6 Luna），但只有简介没有实际使用证据，参考价值有限。",
+        "tags": [
+          "模型榜单",
+          "聚合"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "790404114bcd6ca4bbc192ac2f4bb785a2a6cfad3cbf1b00d8d86c6984c02ef4": {
       "created_at": "2026-08-20T01:51:10.620346+00:00",
       "model": "deepseek-v4-flash",
@@ -40419,6 +40957,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "7e307347e6e9beaa77bb22ed30c027726fe2de15bbaf98820dd8a5ad81a00c9d": {
+      "created_at": "2026-10-06T06:19:10.440612+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-codex-rust-v0.162.0-alpha.16",
+        "evidence_status": "first_party",
+        "follow_up": "等待正式版或 changelog 出现再评估。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "github:release:404109146",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Codex",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "同样只有版本号的 alpha 发布，无变更说明、无功能增量，属于低信息量构建产物。",
+        "region": "global",
+        "score": 3.2,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "openai/codex 又发布了一个只有版本号的 alpha 构建，没有可读的更新内容。",
+        "tags": [
+          "Codex",
+          "版本发布"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "7e73fcdd8f3e4804fb29a2ffd2a5e6ec9b711811cc7172bfcd37a94683cef007": {
       "created_at": "2026-09-22T04:54:16.481293+00:00",
       "model": "deepseek-flash",
@@ -41477,6 +42053,45 @@
           "AI安全",
           "Agent",
           "漏洞"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "81e7053cb0198109c65704d187ce50d370353abb9c885c27ae39a7759be04703": {
+      "created_at": "2026-10-06T06:19:10.440212+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "hot-girl-hotline-launch",
+        "evidence_status": "reported",
+        "follow_up": "关注其用户留存、是否公开安全机制与情感依赖防护设计细节，以及是否出现真实用户反馈数据。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:a3213f34772a2f0d",
+        "intelligence_type": "product_case",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Hot Girl Hotline",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "两姐妹创办的 AI 情感/约会建议产品，有明确用户场景（年轻女性约会关系咨询）、明确设计取舍（安全、避免情感依赖），属于已上线并有真实用户反馈的 AI 产品案例，对初学者理解“AI 在哪一步发挥作用”有直接参考价值；但为媒体报道而非一手构建者长文，且缺少具体指标，故未进 8 分档。",
+        "region": "global",
+        "score": 7.6,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "两姐妹做了 Hot Girl Hotline，用 AI 给年轻女性提供个性化约会和情感建议，重点在安全和避免情感依赖，值得看它如何把 AI 放进一个高敏感、高信任门槛的消费场景。",
+        "tags": [
+          "AI 消费产品",
+          "情感陪伴",
+          "垂直应用"
         ],
         "target_user": "",
         "verticals": []
@@ -44659,6 +45274,46 @@
       },
       "stage": "candidate_analysis"
     },
+    "8b8bf9d755d39e0a0ac4e52ef30846970d79759f5c295838f21c001702b47053": {
+      "created_at": "2026-10-06T06:18:51.267840+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-chatgpt-eu-watermark",
+        "evidence_status": "reported",
+        "follow_up": "可追踪水印技术细节、对下游产品检测的影响及是否扩展到其他地区。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:9efecfab5d086b2b",
+        "intelligence_type": "business_policy",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "ChatGPT",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI 为合规欧盟 AI Act 将在欧盟对 ChatGPT 和 Codex 文本加水印，属于监管驱动的产品变更，对 AI 产品经理有合规参考价值，但无产品思路、开发过程或用户反馈，且非一手官方公告，按兴趣优先级和评分规则仅处于 5-6.9 区间。",
+        "region": "global",
+        "score": 5.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "OpenAI 为遵守欧盟 AI Act，将在欧盟对 ChatGPT 和 Codex 生成的文本加入不可见水印，但编辑后水印可能更难被检测。",
+        "tags": [
+          "AI 监管",
+          "水印",
+          "OpenAI",
+          "合规"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "8b9659e2ab163beff03601e7d4df2f3667b1dfdbdba8a4547d2fe64f55212aae": {
       "created_at": "2026-09-24T04:48:46.496327+00:00",
       "model": "deepseek-flash",
@@ -45038,6 +45693,45 @@
         "tags": [
           "Darling",
           "兼容层"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "8c20eebab46f104da55bbf34ba85b18a479a3aa880ff17f8dd11f4bcc97852cf": {
+      "created_at": "2026-10-06T06:19:10.440308+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "nolla-health-acne-ai-prescription-utah",
+        "evidence_status": "reported",
+        "follow_up": "关注其监管资质、误诊责任划分、扩展到其他州与其他病种的计划，以及真实用户反馈。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:9ec9621ead955e80",
+        "intelligence_type": "product_case",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Nolla Health",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "医疗垂直 AI 产品正式落地：用户用 App 扫描面部，AI 分析痤疮严重程度并自主开处方，在犹他州上线。属于医药健康垂直方向、有明确用户使用路径和监管落地信息，对做垂直 AI 产品的人有直接可迁移增量；因是媒体报道而非官方一手，未进 9 分档。",
+        "region": "global",
+        "score": 8.2,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "医疗创业公司 Nolla Health 在犹他州上线服务，用户用 App 扫脸让 AI 判断痤疮严重程度并自动开处方，值得看 AI 在受监管的医疗开方环节能走到哪一步。",
+        "tags": [
+          "医疗 AI",
+          "垂直应用",
+          "AI 开处方"
         ],
         "target_user": "",
         "verticals": []
@@ -58502,6 +59196,45 @@
       },
       "stage": "deep_analysis"
     },
+    "b0f8c4b7c569687937b5ded3b71c33f3609a909bd31c0d871157e5bb9bb06263": {
+      "created_at": "2026-10-06T06:18:49.218934+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "lenny-how-i-ai-jev-usecases",
+        "evidence_status": "reported",
+        "follow_up": "补齐 Jev 8 个用例的具体任务类型与效果数据，判断是否可迁移到个人产品。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "newsletter:feed:1f763ab5e7bf2d3af295",
+        "intelligence_type": "builder_insight",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Jev",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Lenny Newsletter 汇总了 Jev 模型的 8 个真实用例，属于'有产品、有使用场景'的一手实践分享，能让初学者理解模型在具体任务中如何被使用；但正文被截断，缺少完整案例细节，且夹杂 DevDay 回顾，信噪比中等。",
+        "region": "global",
+        "score": 7.6,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "Lenny 的播客栏目整理了 Jev 模型的 8 个真实使用案例，并附带 OpenAI DevDay 现场关于 ChatGPT Sites 的分享，适合初学者看模型在真实任务里怎么用。",
+        "tags": [
+          "用例",
+          "Newsletter",
+          "实践"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "b10be245238ef7b8eab360fa57d295fc40cfffc4959bb8aa473fd2556d7405ec": {
       "created_at": "2026-08-11T02:27:24.065877+00:00",
       "model": "deepseek-v4-flash",
@@ -63594,6 +64327,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "c0ef455f8bd742d3da69acf1a7ffd608022b5f393c7e5896946eea9c7bdda165": {
+      "created_at": "2026-10-06T06:19:10.440557+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-codex-rust-v0.161.0-alpha.13.1",
+        "evidence_status": "first_party",
+        "follow_up": "等待该版本对应的 changelog 或正式版说明。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "github:release:404348290",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Codex",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "仅有一行版本号的 alpha 发布，无任何变更说明、无功能增量，属于低信息量的常规构建产物，按规则归为噪音区间。",
+        "region": "global",
+        "score": 3.2,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "openai/codex 发布了一个只有版本号的 alpha 构建，没有说明改了什么，暂时没有可看的信息。",
+        "tags": [
+          "Codex",
+          "版本发布"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "c10896a1dd65c14900d9f6cfafa267263e7e35c4ab15b99e06214e5c6e6226f0": {
       "created_at": "2026-09-15T04:54:01.354625+00:00",
       "model": "kimi-k2.6",
@@ -64427,6 +65198,45 @@
         "summary_zh": "《经济学人》讨论有效利他主义运动的发展，与 AI 产品实践无关。",
         "tags": [
           "行业观察"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "c434a108cb6155e793da45b906747b31d9e80e225c2bf49aee0e636ea3303467": {
+      "created_at": "2026-10-06T06:19:21.898623+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "claude-code-v2.1.291",
+        "evidence_status": "first_party",
+        "follow_up": "观察后续版本是否引入新的 Agent 能力或插件机制变化。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "github:release:404281867",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Claude Code",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Claude Code 的补丁版本，仅修复两个回归 bug（云会话权限提示丢答案、退出时丢消息），无新能力、无产品思路增量，对初学者理解产品价值有限，属于维护性更新。",
+        "region": "global",
+        "score": 5.5,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "Anthropic 发布 Claude Code v2.1.291，修掉云会话权限提示丢答案和退出丢消息两个回归问题，属于日常维护更新，没有可迁移的产品增量。",
+        "tags": [
+          "Claude Code",
+          "Agent",
+          "开发者工具"
         ],
         "target_user": "",
         "verticals": []
@@ -66536,6 +67346,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "ca77b8f7626675d930ebda070ca59f4fb00bc034bc01b91eab0b3ccdfbbe3d93": {
+      "created_at": "2026-10-06T06:18:49.219182+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "github-reviewbench",
+        "evidence_status": "first_party",
+        "follow_up": "关注 ReviewBench 是否开源数据集与评测脚本，以及是否有产品基于它做代码审查代理。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:github.blog_ai-and-ml_feed_:56071c061dcaa98a",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "ReviewBench",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "GitHub 官方发布 AI 代码审查基准 ReviewBench，基于真实 PR 与多源 ground truth，属可验证的评测工具，对做代码审查类 AI 产品的构建者有参考价值；但本质是基准测试，按规则通常低于 7 分，仅因有开源与生产对齐指标略高。",
+        "region": "global",
+        "score": 6.8,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "GitHub 推出 ReviewBench，用真实 PR 和多来源标注来评测 AI 代码审查代理，帮助开发者判断代码审查模型的实际表现。",
+        "tags": [
+          "代码审查",
+          "基准",
+          "GitHub Copilot"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "ca8206eeffaa908c37a90a0146916f621c4e1147f09598e4627797f2b5a37bb7": {
       "created_at": "2026-08-12T02:43:31.542663+00:00",
       "model": "deepseek-v4-flash",
@@ -66608,6 +67457,45 @@
           "OpenAI",
           "Astra",
           "网络安全"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "cae5f22eade0e66f44b852fb7ee965bfe8e62c61002bdeccadbf398fd9ae95c5": {
+      "created_at": "2026-10-06T06:19:21.901440+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "cloudflare-web-search-api",
+        "evidence_status": "first_party",
+        "follow_up": "关注其条款对结果存储/再分发的限制，以及是否出现基于该 API 的公开 Agent 产品。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:49963171",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Cloudflare Web Search API",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Cloudflare 官方发布 Web Search API，属于 Agent 基础设施层的新能力，评论区重点讨论结果存储与再分发条款、以及 Gemini Flash Lite 等替代方案的成本对比，对做 Agent 产品的选型有直接参考价值。但本身是 API 发布，非产品案例。",
+        "region": "global",
+        "score": 7.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Cloudflare 推出 Web Search API，给 Agent 系统提供搜索能力，社区讨论集中在结果能否存储再分发以及各家搜索 API 的成本差异，对做 Agent 产品的选型有参考价值。",
+        "tags": [
+          "Agent",
+          "搜索 API",
+          "基础设施"
         ],
         "target_user": "",
         "verticals": []
@@ -68146,6 +69034,45 @@
       },
       "stage": "deep_analysis"
     },
+    "d05e402a20dfd3873d053964bb2467751004f14942871cdb1a26c702ddc0c51e": {
+      "created_at": "2026-10-06T06:19:10.440590+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-codex-rust-v0.160.1",
+        "evidence_status": "first_party",
+        "follow_up": "无需特别跟进，除非你在用 Windows 远程 MCP 场景。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "github:release:404001397",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Codex",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "补丁版本，仅修复 Windows 远程 MCP 服务器启动时的环境变量保留问题，属于底层工程细节，对产品经理理解产品方向几乎没有增量，按规则低于 5 分。",
+        "region": "global",
+        "score": 4.6,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "openai/codex 修了一个 Windows 远程 MCP 服务器启动时环境变量丢失的 bug，属于工程细节，对产品判断帮助有限。",
+        "tags": [
+          "Codex",
+          "MCP",
+          "Bug 修复"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "d07c247f5a118427d5e670fbd2c59591d6d6e347f19de36e4bf2c4a020b46852": {
       "created_at": "2026-09-30T05:31:30.323093+00:00",
       "model": "deepseek-flash",
@@ -68830,6 +69757,46 @@
           "AI预测",
           "问卷",
           "实验产品"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "d35febf99c3ce910f9debc35d0fe83c165622c593f3e492ac5f621c0e8212812": {
+      "created_at": "2026-10-06T06:19:21.900953+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "reflection-beam-501b-open-weight",
+        "evidence_status": "first_party",
+        "follow_up": "关注 Beam 的权重开放程度、实际 Agent 任务表现，以及是否出现基于它的产品案例。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:49969183",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Beam",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Reflection 发布 501B 总参、23B 激活的稀疏 MoE 开源权重模型 Beam，面向编码、推理和 Agent 工作负载，并给出可复现的泛化实验（180×90 网格谜题 95.5% 覆盖率）。属于模型公司一手发布的新模型能力，对判断开源模型能力边界有参考价值，但非产品案例。",
+        "region": "global",
+        "score": 7.2,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Reflection 发布开源权重模型 Beam（501B 总参、23B 激活的稀疏 MoE），主打编码、推理和 Agent 任务，并用一个几天前才出现的网格谜题展示泛化能力，值得关注开源模型在 Agent 场景的可用性。",
+        "tags": [
+          "开源模型",
+          "MoE",
+          "Agent",
+          "模型能力"
         ],
         "target_user": "",
         "verticals": []
@@ -70944,6 +71911,44 @@
         "tags": [
           "AI助手",
           "隐私"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "da0d5146e1a213fb8ae58ab8b4b7572e09cf3afc2a8ccb63c8f5ed5c9f4abd3c": {
+      "created_at": "2026-10-06T06:19:21.901013+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "example-com-redesign",
+        "evidence_status": "reported",
+        "follow_up": "无。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:49971921",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": false,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "example.com 改版趣闻，与 AI 产品、模型能力或构建实践无关，属于技术社区闲聊，噪音。",
+        "region": "global",
+        "score": 2.5,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "example.com 多年来的首次改版引发讨论，涉及测试脆弱性和 Hyrum 定律，但与 AI 产品构建无关。",
+        "tags": [
+          "Web",
+          "闲聊"
         ],
         "target_user": "",
         "verticals": []
@@ -77936,6 +78941,46 @@
       },
       "stage": "candidate_analysis"
     },
+    "ee474acd9610ae32b88449297a2215dfea6477a1c325c82dd4b69cb2f299d9d3": {
+      "created_at": "2026-10-06T06:18:49.219078+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "openai-chatgpt-sites-kath-korevec",
+        "evidence_status": "first_party",
+        "follow_up": "关注 ChatGPT Sites 的公开可用范围、Plugin Insights 的权限模型，以及连接器生态对个人产品开发者的接入门槛。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "newsletter:feed:55ae2e9ccde15151ff82",
+        "intelligence_type": "builder_insight",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "ChatGPT Sites",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI 产品负责人 Kath Korevec 一手讲述 ChatGPT Sites 的内部构建过程、Plugin Insights、MCP 插件托管与连接器生态（约 60 个集成），属于构建者公开的开发过程与实践经验，能让初学者理解产品如何被搭建和落地，符合高价值区间。",
+        "region": "global",
+        "score": 8.2,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "OpenAI 产品负责人 Kath Korevec 在 DevDay 现场讲她如何用 ChatGPT Sites 和 Codex 搭建内部事故指挥站点，并接入 Slack、Notion 连接器，展示了 AI 产品从内部工具到公开发布的真实过程。",
+        "tags": [
+          "ChatGPT Sites",
+          "Codex",
+          "MCP",
+          "构建过程"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "ee49567a4a06f1d135100c50d547cf28ae590248b08c327a29a1ec82adea6b3c": {
       "created_at": "2026-09-22T04:54:16.481381+00:00",
       "model": "deepseek-flash",
@@ -78552,6 +79597,40 @@
         "verticals": []
       },
       "stage": "candidate_analysis"
+    },
+    "f04e7c9c1adfacbd220b6a4d6ddf904a481cd8cd8e025ad5a9ab9b5a1cf4622d": {
+      "created_at": "2026-10-06T06:19:42.142515+00:00",
+      "model": "kimi-k2.6",
+      "prompt_version": "deep-v3-beginner",
+      "result": {
+        "ai_role": "AI 负责分析面部图像判断痤疮严重程度，并自主决定开具何种处方——这是受监管医疗环节中由 AI 直接决策的关键一步",
+        "evidence_status": "reported",
+        "hands_on_exercise": "用任意 AI 视觉 API（如 OpenAI GPT-4o 或 Claude）上传一张皮肤照片，让它描述看到的症状，对比真实医学描述。注意：不要输入自己的真实面部照片，可用网络公开的皮肤科教学图片；观察 AI 能否准确区分痤疮类型，并思考'如果让 AI 直接开药，需要哪些安全措施'。",
+        "implementation_idea": "未公开具体技术细节。从报道推测：用计算机视觉识别面部痤疮的类型和严重程度，再结合医学规则或模型判断是否符合处方条件，最后对接药房系统。核心难点在于 AI 诊断的准确性和医疗合规性。",
+        "learning_points": [
+          "Function Calling（函数调用）：AI 不只会聊天，还能调用外部系统——比如这里 AI 分析完后自动触发'开处方'这个动作，就像按了一个按钮",
+          "垂直领域 AI：通用聊天机器人做不了医疗处方，必须在特定场景里训练、加上行业规则和监管审批",
+          "AI 安全与监管：医疗是强监管领域，AI 的决策错误可能直接伤害患者，需要人类医生审核或政府许可机制"
+        ],
+        "limitations_or_uncertainties": "AI 具体用的是什么视觉模型未公开；处方是否需要人类医生复核未公开；是否通过 FDA 或州级医疗审批未公开；服务费用未公开；Bloomberg 为二手报道，非官方一手发布",
+        "product_name": "Nolla Health",
+        "sources": [
+          "https://www.theverge.com/ai-artificial-intelligence/1005075/nolla-health-acne-ai-prescriptions",
+          "https://www.nollahealth.com/",
+          "https://www.nollahealth.com/about"
+        ],
+        "target_users": "犹他州需要痤疮治疗、希望远程获取处方的患者",
+        "title_zh": "这家创业公司用 AI 自动生成痤疮处方",
+        "usage_flow": [
+          "下载 Nolla Health App",
+          "用手机扫描面部，AI 分析痤疮严重程度",
+          "AI 自动生成处方",
+          "用户按处方获取药物"
+        ],
+        "user_problem": "看皮肤科医生需要预约、排队、费用高，轻中度痤疮患者难以快速获得处方药物",
+        "what_it_is": "Nolla Health 是一款在犹他州上线的医疗 App，用户扫脸后由 AI 分析痤疮严重程度并自动开具处方。"
+      },
+      "stage": "deep_analysis"
     },
     "f057b2f42aa097334c5698fd9556c37f83f16864fc4845b19b9936c28082ac3a": {
       "created_at": "2026-08-26T01:58:33.863793+00:00",
@@ -81541,6 +82620,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "f88cac88bc13edac2fe2d906ca9367198038a60022c0a81cfb2043372a8c536d": {
+      "created_at": "2026-10-06T06:19:21.900696+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "vercel-ai-sdk-7.0.128",
+        "evidence_status": "first_party",
+        "follow_up": "关注 WorkflowAgent 的传输无关审批机制后续落地，以及是否出现基于该 SDK 的公开产品案例。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "github:release:404004812",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Vercel AI SDK",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Vercel AI SDK 补丁版，新增非流式 WorkflowAgent.generate()（共享工具循环、默认 20 步、类型化输出）、自定义推理分隔符、工具审批状态保留等。对构建 Agent 应用的开发者有直接可用的能力增量，但属于 SDK 层迭代，非产品级案例。",
+        "region": "global",
+        "score": 6.8,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "Vercel 发布 AI SDK 7.0.128，新增带工具循环和类型化输出的非流式 WorkflowAgent.generate()，并修复流恢复时的工具审批状态，方便开发者搭建更稳定的 Agent 工作流。",
+        "tags": [
+          "AI SDK",
+          "Agent",
+          "开发者工具"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "f8a8b36aaffc95ed1b5a57d5d9420ca608b53966b414d078c55e28d2ded77803": {
       "created_at": "2026-09-21T04:54:15.724028+00:00",
       "model": "deepseek-flash",
@@ -83382,6 +84500,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "fdd55f479566d94e311d464e55f983db789c4e23908b64f94f70cdcf0365607b": {
+      "created_at": "2026-10-06T06:19:21.901244+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "dust-backprop-free-pretraining",
+        "evidence_status": "reported",
+        "follow_up": "无，除非后续出现可复现的规模化结果。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:49970871",
+        "intelligence_type": "model_capability",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "无反向传播预训练 Transformer 的研究尝试，属于底层训练方法探索，评论区普遍质疑其可行性。按规则底层训练/学术类内容通常低于 7 分，且无产品体验解锁。",
+        "region": "global",
+        "score": 4.5,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "QLabs 提出 Dust，尝试不用反向传播预训练 Transformer，社区讨论普遍质疑零阶方法在大模型上的可行性，属于底层训练研究，与产品构建距离较远。",
+        "tags": [
+          "训练方法",
+          "研究"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "fdd74fd36721d7177f842f6ad1f88a288c104496f67b64004c8fe11b65de2a5f": {
       "created_at": "2026-07-25T16:39:27.176825+00:00",
       "model": "kimi-k2.6",
@@ -83523,6 +84679,45 @@
           "OpenCode",
           "DeepSeek",
           "开发者工具"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "fe6fc12870e488d5a94a1ebc1943fd6618c4bd90dbe3d068dd811f2f7a9b944d": {
+      "created_at": "2026-10-06T06:19:10.440435+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-textgrain-watermark-eu",
+        "evidence_status": "reported",
+        "follow_up": "关注水印是否扩展到其他地区、是否影响输出质量，以及开发者能否检测该水印。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:7b2dcd7c26471d47",
+        "intelligence_type": "model_capability",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "ChatGPT",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI 在 ChatGPT 和 Codex 中上线不可见文本水印，先在欧盟推出，并称其 textGrain 方案匹配或超过 Google DeepMind 的 SynthID。属于官方产品能力更新与合规驱动的功能变化，对做 AI 产品的人有内容溯源与合规设计参考价值；因是媒体报道转述官方，未进 8 分档。",
+        "region": "global",
+        "score": 7.2,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "OpenAI 在 ChatGPT 和 Codex 里上线不可见文本水印，先面向欧盟用户，值得看 AI 生成内容溯源要求如何变成产品里的默认功能。",
+        "tags": [
+          "水印",
+          "合规",
+          "ChatGPT"
         ],
         "target_user": "",
         "verticals": []
