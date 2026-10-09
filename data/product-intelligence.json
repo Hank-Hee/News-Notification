@@ -1,13 +1,13 @@
 {
   "version": 1,
-  "updated_at": "2026-10-08T06:02:46.601779+00:00",
+  "updated_at": "2026-10-09T06:07:56.122038+00:00",
   "products": [
     {
       "product_id": "product-1190f0d5ba25e802",
       "product_name": "ChatGPT Sites",
       "builder_name": "Claire Vo",
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-08",
+      "last_seen": "2026-10-09",
       "occurrence_count": 2,
       "intelligence_type": "builder_insight",
       "evidence_status": "first_party",
@@ -68,63 +68,61 @@
       ]
     },
     {
-      "product_id": "product-4cb578957403fe3b",
-      "product_name": "GPT-6",
-      "builder_name": "joshuawright11",
-      "first_seen": "2026-10-08",
-      "last_seen": "2026-10-08",
+      "product_id": "product-743042fdb271c050",
+      "product_name": "Whistle",
+      "builder_name": "gmays",
+      "first_seen": "2026-10-09",
+      "last_seen": "2026-10-09",
       "occurrence_count": 1,
-      "intelligence_type": "model_capability",
-      "evidence_status": "first_party",
-      "target_user": "未公开",
-      "user_problem": "未公开",
-      "what_it_is": "OpenAI 发布 GPT-6 并主打面向所有人的智能界面，能按需生成交互式讲解页面，让普通人也能做出可交互的知识内容。",
-      "ai_role": "未公开",
-      "implementation_idea": "未公开",
-      "hands_on_exercise": "未公开",
-      "limitations_or_uncertainties": "未公开",
+      "intelligence_type": "product_case",
+      "evidence_status": "verified",
+      "target_user": "注重隐私、想摆脱云端依赖的技术用户；想把智能音箱改成本地运行的极客；需要在端侧部署语音功能的开发者",
+      "user_problem": "主流语音转文字要么依赖云端（隐私有风险、要联网），要么本地模型体积巨大（动辄几个 GB）；用户想在小设备上跑语音 AI，但装不下、跑不动",
+      "what_it_is": "一个只有 16.9MB、能在设备本地离线运行的语音转文字（Speech-to-Text）工具，不用联网也能把你说的话转成文字。",
+      "ai_role": "负责把音频信号识别并转换成文字，全程在本地 CPU 运行，不发送数据到外部服务器",
+      "implementation_idea": "未公开具体技术细节。从体积推测，应该是大幅压缩过的声学模型，可能用了知识蒸馏（把大模型的能力教给小模型）或针对特定场景裁剪网络结构，牺牲部分准确率来换取极小体积和本地可运行。",
+      "hands_on_exercise": "30 分钟体验：用你电脑上的麦克风录一段 2 分钟中文或英文语音，同时试用 Whisper（OpenAI 的开源版本，约 1GB）和某个在线 API（如讯飞、百度），对比三者转写结果的字数差异和错误类型，体会「体积 vs 准确率」的 trade-off",
+      "limitations_or_uncertainties": "官方未公开模型架构、训练数据、支持语言列表；用户实测准确率显著低于 1.7B 参数的 Qwen-ASR（170 条消息中正确 70 vs 168 条）；缺少流式输出（边说边出字）；存在特定音频下反复输出「Thank you」的 bug；未确认是否支持中文及多语言",
       "region": "global",
-      "score": 8.6,
-      "summary": "OpenAI 发布 GPT-6 并主打面向所有人的智能界面，能按需生成交互式讲解页面，让普通人也能做出可交互的知识内容。",
-      "title": "GPT‑6 and Intelligent UI for everyone",
-      "url": "https://openai.com/index/gpt-6-for-everyone/",
+      "score": 8.3,
+      "summary": "Cactus Compute 做出 16.9MB 的本地语音转文字工具 Whistle，能在设备上离线跑，用户实测准确率不如大模型但可接管智能音箱做本地处理，适合看小模型端侧产品的取舍。",
+      "title": "Whistle：16.9MB 的本地语音转文字工具，体积小到能塞进智能音箱",
+      "url": "https://cactuscompute.com/blog/whistle",
       "sources": [
         {
-          "url": "https://openai.com/index/gpt-6-for-everyone/",
-          "title": "GPT‑6 and Intelligent UI for everyone",
+          "url": "https://cactuscompute.com/blog/whistle",
+          "title": "Whistle: Speech to Text in 16.9 MB",
           "source_type": "hackernews",
-          "published_at": "2026-10-07T18:00:58+00:00"
-        },
-        {
-          "url": "https://www.theverge.com/ai-artificial-intelligence/1007276/openai-chatgpt-intelligent-ui-gpt-6",
-          "title": "ChatGPT&#8217;s &#8216;Intelligent UI&#8217; update fills its responses with pictures, charts, and buttons",
-          "source_type": "supplemental",
-          "published_at": ""
-        },
-        {
-          "url": "https://techcrunch.com/2026/10/07/chatgpt-is-getting-a-lot-more-visual-with-the-launch-of-a-new-interface/",
-          "title": "ChatGPT is getting a lot more visual, with the launch of a new interface",
-          "source_type": "supplemental",
-          "published_at": ""
+          "published_at": "2026-10-08T16:59:39+00:00"
         }
       ],
       "updates": [
         {
-          "update_id": "openai-gpt-6-intelligent-ui",
-          "date": "2026-10-08",
-          "title": "GPT‑6 and Intelligent UI for everyone",
-          "summary": "OpenAI 发布 GPT-6 并主打面向所有人的智能界面，能按需生成交互式讲解页面，让普通人也能做出可交互的知识内容。",
-          "score": 8.6,
-          "url": "https://openai.com/index/gpt-6-for-everyone/"
+          "update_id": "whistle-stt-16.9mb",
+          "date": "2026-10-09",
+          "title": "Whistle：16.9MB 的本地语音转文字工具，体积小到能塞进智能音箱",
+          "summary": "Cactus Compute 做出 16.9MB 的本地语音转文字工具 Whistle，能在设备上离线跑，用户实测准确率不如大模型但可接管智能音箱做本地处理，适合看小模型端侧产品的取舍。",
+          "score": 8.3,
+          "url": "https://cactuscompute.com/blog/whistle"
         }
       ],
-      "usage_flow": [],
-      "learning_points": [],
+      "usage_flow": [
+        "在本地设备（如电脑、智能音箱）安装 Whistle",
+        "对着麦克风说话或导入音频文件",
+        "Whistle 在设备上直接处理，输出文字",
+        "（进阶）接入 Home Assistant 等智能家居系统，替代云端语音助手"
+      ],
+      "learning_points": [
+        "端侧推理（Edge Inference）：模型直接在手机、音箱等小设备上跑，不用连网传数据，隐私更好但性能通常较弱",
+        "模型压缩：通过剪枝、量化、蒸馏等手段把大模型变小，让它能在资源有限的设备上运行",
+        "语音转文字（ASR/STT）：把音频波形变成文字序列，是语音助手的核心第一步"
+      ],
       "verticals": [],
       "tags": [
-        "模型发布",
-        "交互式 UI",
-        "OpenAI"
+        "语音",
+        "端侧",
+        "本地推理",
+        "产品案例"
       ]
     },
     {
@@ -132,7 +130,7 @@
       "product_name": "Claude",
       "builder_name": "Anthropic News",
       "first_seen": "2026-08-28",
-      "last_seen": "2026-10-08",
+      "last_seen": "2026-10-09",
       "occurrence_count": 3,
       "intelligence_type": "model_capability",
       "evidence_status": "first_party",
@@ -209,52 +207,238 @@
       ]
     },
     {
-      "product_id": "product-74e09c4cc7ea1a3d",
-      "product_name": "Stacklok",
-      "builder_name": "Richard MacManus",
-      "first_seen": "2026-10-08",
-      "last_seen": "2026-10-08",
+      "product_id": "product-d858d7ed6a1e65f1",
+      "product_name": "OSS Scanner",
+      "builder_name": "Stevie Bonifield",
+      "first_seen": "2026-10-09",
+      "last_seen": "2026-10-09",
       "occurrence_count": 1,
-      "intelligence_type": "builder_insight",
+      "intelligence_type": "product_case",
       "evidence_status": "reported",
+      "target_user": "开源项目维护者、开源社区贡献者",
+      "user_problem": "开源项目通常缺人手和预算做安全审计，漏洞发现滞后，容易被攻击者利用",
+      "what_it_is": "Anthropic 用自家最强大模型免费帮开源项目定期扫安全漏洞的新服务",
+      "ai_role": "AI 负责自动分析代码，识别潜在安全漏洞并生成扫描报告",
+      "implementation_idea": "把 Claude 大模型的代码理解和推理能力包装成持续运行的安全扫描服务——模型读代码、找漏洞模式、输出告警，本质上是'AI 能力 SaaS 化'送给开源社区用",
+      "hands_on_exercise": "30 分钟练习：找一个你熟悉的开源项目（如 Python 小工具），把核心代码片段贴给 Claude/GPT，prompt 写'请扮演安全审计员，分析这段代码的潜在漏洞，按高危/中危/低危分级'，对比 AI 发现的问题和你自己的判断，体会'模型能力→安全服务'的产品逻辑",
+      "limitations_or_uncertainties": "未公开具体扫描频率、支持语言范围、漏洞检出率数据、是否需代码托管在特定平台、隐私与代码使用条款细节；报道未提供实际效果验证",
+      "region": "global",
+      "score": 7.6,
+      "summary": "Anthropic 推出 OSS Scanner，用自家最强模型免费为开源项目定期扫描安全漏洞，值得看的是“模型能力直接变成免费安全服务”这一产品形态。",
+      "title": "Anthropic 推出免费 AI 开源安全扫描服务",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1008521/anthropic-open-source-oss-scanner",
+      "sources": [
+        {
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1008521/anthropic-open-source-oss-scanner",
+          "title": "Anthropic launches free AI security scans for open-source projects",
+          "source_type": "rss",
+          "published_at": "2026-10-08T21:53:51+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "anthropic-oss-scanner-launch",
+          "date": "2026-10-09",
+          "title": "Anthropic 推出免费 AI 开源安全扫描服务",
+          "summary": "Anthropic 推出 OSS Scanner，用自家最强模型免费为开源项目定期扫描安全漏洞，值得看的是“模型能力直接变成免费安全服务”这一产品形态。",
+          "score": 7.6,
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1008521/anthropic-open-source-oss-scanner"
+        }
+      ],
+      "usage_flow": [
+        "开源项目主动申请加入（opt-in）",
+        "OSS Scanner 用 Anthropic 最强模型定期自动扫描项目代码",
+        "项目方收到潜在安全问题的告警通知",
+        "开发者根据报告修复漏洞"
+      ],
+      "learning_points": [
+        "Function Calling（函数调用）：让 LLM 不仅能聊天，还能触发外部工具执行扫描、查数据库等实际操作",
+        "RAG（检索增强生成）：把项目代码库'喂'给 AI 时，先检索相关代码片段再分析，避免模型'瞎猜'",
+        "Agent（智能体）：AI 自主完成'扫描-分析-报告'多步骤任务，不需要人一步步指挥"
+      ],
+      "verticals": [],
+      "tags": [
+        "安全",
+        "开源",
+        "Anthropic"
+      ]
+    },
+    {
+      "product_id": "product-ce7dbe1d592669c7",
+      "product_name": "ChatGPT, Codex",
+      "builder_name": "OpenAI News",
+      "first_seen": "2026-10-09",
+      "last_seen": "2026-10-09",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
       "target_user": "未公开",
       "user_problem": "未公开",
-      "what_it_is": "Kubernetes 联合创始人创办 Stacklok，想把 Agent harness 完全搬到云端，解决 Agent 可靠运行问题，值得看 Agent 基础设施的构建思路。",
+      "what_it_is": "Oracle 用 ChatGPT 和 Codex 把招聘、工程、运营里的专家经验变成快速可重复的工作流，是一个可参考的企业落地案例。",
       "ai_role": "未公开",
       "implementation_idea": "未公开",
       "hands_on_exercise": "未公开",
       "limitations_or_uncertainties": "未公开",
       "region": "global",
-      "score": 7.6,
-      "summary": "Kubernetes 联合创始人创办 Stacklok，想把 Agent harness 完全搬到云端，解决 Agent 可靠运行问题，值得看 Agent 基础设施的构建思路。",
-      "title": "Can a Cloud-Native Harness Make Agents Reliable Beyond the Desktop?",
-      "url": "https://www.latent.space/p/stacklok",
+      "score": 7.5,
+      "summary": "Oracle 用 ChatGPT 和 Codex 把招聘、工程、运营里的专家经验变成快速可重复的工作流，是一个可参考的企业落地案例。",
+      "title": "How Oracle turns days of work into minutes with ChatGPT and Codex",
+      "url": "https://openai.com/index/oracle",
       "sources": [
         {
-          "url": "https://www.latent.space/p/stacklok",
-          "title": "Can a Cloud-Native Harness Make Agents Reliable Beyond the Desktop?",
+          "url": "https://openai.com/index/oracle",
+          "title": "How Oracle turns days of work into minutes with ChatGPT and Codex",
           "source_type": "rss",
-          "published_at": "2026-10-07T14:10:45+00:00"
+          "published_at": "2026-10-08T16:00:00+00:00"
         }
       ],
       "updates": [
         {
-          "update_id": "stacklok-cloud-agent-harness",
-          "date": "2026-10-08",
-          "title": "Can a Cloud-Native Harness Make Agents Reliable Beyond the Desktop?",
-          "summary": "Kubernetes 联合创始人创办 Stacklok，想把 Agent harness 完全搬到云端，解决 Agent 可靠运行问题，值得看 Agent 基础设施的构建思路。",
-          "score": 7.6,
-          "url": "https://www.latent.space/p/stacklok"
+          "update_id": "oracle-chatgpt-codex-workflow",
+          "date": "2026-10-09",
+          "title": "How Oracle turns days of work into minutes with ChatGPT and Codex",
+          "summary": "Oracle 用 ChatGPT 和 Codex 把招聘、工程、运营里的专家经验变成快速可重复的工作流，是一个可参考的企业落地案例。",
+          "score": 7.5,
+          "url": "https://openai.com/index/oracle"
         }
       ],
       "usage_flow": [],
       "learning_points": [],
       "verticals": [],
       "tags": [
+        "ChatGPT",
+        "Codex",
+        "企业落地",
+        "工作流"
+      ]
+    },
+    {
+      "product_id": "product-1234545737e564a0",
+      "product_name": "OpenAI Codex CLI",
+      "builder_name": "github-actions[bot]",
+      "first_seen": "2026-09-23",
+      "last_seen": "2026-10-09",
+      "occurrence_count": 2,
+      "intelligence_type": "model_capability",
+      "evidence_status": "first_party",
+      "target_user": "习惯终端操作的开发者、需要快速原型或批量处理代码的工程师",
+      "user_problem": "开发者在终端里写代码时，需要在编辑器、浏览器、AI 聊天窗口之间来回切换；无法直观看到 AI 用了多少 token、调用了哪些工具；多人协作或复杂项目里会话管理混乱",
+      "what_it_is": "OpenAI 发布 Codex CLI 0.162.0，新增托管 Git worktree、任务置顶和 /copy 复制等功能，让开发者用命令行 Agent 写代码时更好管理多任务和自定义模型接入。",
+      "ai_role": "AI 负责解析自然语言指令、生成/修改代码、调用外部工具（如测试运行器、文件系统）、在多轮对话中保持上下文，并通过 worktree 隔离不同任务",
+      "implementation_idea": "Codex 在本地启动一个后台服务（daemon），通过终端 UI 与用户交互；用户输入经 LLM 解析后，AI 决定调用哪些工具（Function Calling，即 AI 选择调用外部函数来完成任务），结果流式返回终端。语音功能通过本地音频运行时处理，worktree 用 Git 工作树机制隔离不同会话的文件状态。",
+      "hands_on_exercise": "30 分钟动手：安装 Codex CLI（需 OpenAI API 密钥），用 /tui 进入全屏模式，让 AI 写一个 Python 脚本并运行；然后用 /usage 查看本次消耗的 token 数；最后开两个 worktree 会话，让 AI 分别在两个目录做不相关的修改，验证文件是否隔离",
+      "limitations_or_uncertainties": "语音功能的具体模型（是否为 Whisper 实时 API）未公开；用量分析面板的数据延迟和精确计费规则未公开；MCP（Model Context Protocol）凭证刷新机制的具体实现细节未公开；sandbox 隔离的完整安全审计报告未公开",
+      "region": "global",
+      "score": 7.2,
+      "summary": "OpenAI 发布 Codex CLI 0.162.0，新增托管 Git worktree、任务置顶和 /copy 复制等功能，让开发者用命令行 Agent 写代码时更好管理多任务和自定义模型接入。",
+      "title": "openai/codex released rust-v0.162.0",
+      "url": "https://github.com/openai/codex/releases/tag/rust-v0.162.0",
+      "sources": [
+        {
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.156.0",
+          "title": "openai/codex released rust-v0.156.0",
+          "source_type": "github",
+          "published_at": "2026-09-22T19:51:01+00:00"
+        },
+        {
+          "url": "https://github.com/openai/codex/",
+          "title": "GitHub - openai/codex: Lightweight coding agent that runs in your terminal · GitHub",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.162.0",
+          "title": "openai/codex released rust-v0.162.0",
+          "source_type": "github",
+          "published_at": "2026-10-08T18:55:59+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "openai-codex-rust-v0.156.0-features",
+          "date": "2026-09-23",
+          "title": "OpenAI Codex 终端编码 Agent 发布 v0.156.0：全屏界面、语音默认开启、用量分析",
+          "summary": "OpenAI 的编码工具 Codex 发布 rust-v0.156.0，新增全屏界面、默认开启的语音对话、用量分析面板、worktree 会话和多种主题，让编码 Agent 更像一个完整工作台。",
+          "score": 7.5,
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.156.0"
+        },
+        {
+          "update_id": "openai-codex-rust-0.162.0",
+          "date": "2026-10-09",
+          "title": "openai/codex released rust-v0.162.0",
+          "summary": "OpenAI 发布 Codex CLI 0.162.0，新增托管 Git worktree、任务置顶和 /copy 复制等功能，让开发者用命令行 Agent 写代码时更好管理多任务和自定义模型接入。",
+          "score": 7.2,
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.162.0"
+        }
+      ],
+      "usage_flow": [
+        "安装后运行 codex，用 /tui 进入全屏界面，支持鼠标选择和右键复制",
+        "直接说话或打字给 AI 下指令（语音默认开启，按 F8 切换）",
+        "AI 自动读写文件、运行测试、调用工具，结果直接显示在终端",
+        "用 /usage 查看 token 消耗和插件活动，用 /daemon 管理本地后台服务"
+      ],
+      "learning_points": [
+        "Agent：能自主规划步骤、调用工具、完成多轮任务的 AI，不只是单次问答",
+        "Function Calling：LLM 识别需要外部工具时，生成结构化调用指令（如读文件、运行命令），而非直接回答",
+        "Worktree：Git 功能，让同一仓库同时存在多个独立工作目录，避免不同任务互相污染代码"
+      ],
+      "verticals": [],
+      "tags": [
+        "编码Agent",
+        "产品迭代",
+        "语音交互",
         "Agent",
-        "基础设施",
-        "Stacklok",
-        "Kubernetes"
+        "Coding",
+        "CLI",
+        "OpenAI"
+      ]
+    },
+    {
+      "product_id": "product-b6cdffa6adea514b",
+      "product_name": "ttok",
+      "builder_name": "Simon Willison",
+      "first_seen": "2026-10-09",
+      "last_seen": "2026-10-09",
+      "occurrence_count": 1,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Simon Willison 发布 ttok 1.0，把默认分词器从 GPT-4 换成 GPT-5/GPT-6 系列，方便开发者估算新模型的 token 数与成本。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.2,
+      "summary": "Simon Willison 发布 ttok 1.0，把默认分词器从 GPT-4 换成 GPT-5/GPT-6 系列，方便开发者估算新模型的 token 数与成本。",
+      "title": "ttok 1.0",
+      "url": "https://simonwillison.net/2026/Oct/9/ttok/",
+      "sources": [
+        {
+          "url": "https://simonwillison.net/2026/Oct/9/ttok/",
+          "title": "ttok 1.0",
+          "source_type": "rss",
+          "published_at": "2026-10-09T00:34:43+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "ttok-1-0-release",
+          "date": "2026-10-09",
+          "title": "ttok 1.0",
+          "summary": "Simon Willison 发布 ttok 1.0，把默认分词器从 GPT-4 换成 GPT-5/GPT-6 系列，方便开发者估算新模型的 token 数与成本。",
+          "score": 7.2,
+          "url": "https://simonwillison.net/2026/Oct/9/ttok/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "工具",
+        "token",
+        "开源"
       ]
     },
     {
@@ -262,22 +446,22 @@
       "product_name": "Claude Code",
       "builder_name": "ashwin-ant",
       "first_seen": "2026-07-26",
-      "last_seen": "2026-10-08",
-      "occurrence_count": 27,
+      "last_seen": "2026-10-09",
+      "occurrence_count": 28,
       "intelligence_type": "model_capability",
       "evidence_status": "first_party",
       "target_user": "企业开发团队、AI 产品经理、需要集中管控模型使用的组织",
       "user_problem": "企业里旧提示词在新模型上表现变差却没人知道；管理员没法精确控制员工能调用哪个模型版本；LLM 网关（gateway，企业流量入口）看不到哪些请求属于同一用户指令，排错困难。",
-      "what_it_is": "Anthropic 在 Claude Code v2.1.293 中上线 Claude Haiku 5.5 并设为 API 默认 Haiku 模型，1M 上下文、每百万 token 输入 0.1 美元，让低成本长上下文产品更容易做。",
+      "what_it_is": "Anthropic 发布 Claude Code v2.1.295，新增 hook 失败时阻断操作、终端状态显示和网关上游超时控制，让编程 Agent 在自动化流程里更可控。",
       "ai_role": "执行代码任务的同时，其请求流量可被企业网关识别和分组；自身提示词体系可被审计工具扫描，标记出对旧模型的依赖",
       "implementation_idea": "在请求头里埋一个提示词 ID（类似快递单号），让网关知道哪些 LLM 请求其实来自同一句用户指令；用规则引擎比对模型名称做精确匹配或黑名单拦截；用静态扫描工具检查提示词文件里的模式，匹配已知的旧模型优化写法。",
       "hands_on_exercise": "30 分钟体验：安装 Claude Code（需有 Anthropic API 权限），创建一个 `CLAUDE.md` 文件写入一段带 'You are Claude 2' 的提示词，运行 `/doctor prompt-audit`，观察它是否被标记为旧模型提示词；然后在终端设置 `CLAUDE_CODE_GATEWAY_HINT_HEADERS=1`，发起一次请求，用 `curl -v` 或代理工具查看请求头里是否出现 `x-claude-code-prompt-id`。",
       "limitations_or_uncertainties": "未公开 `/doctor prompt-audit` 具体覆盖哪些旧模型版本、未公开企业网关 hint headers 的完整字段列表、未公开 `load_test_mode` 的 canned reply 内容格式。",
       "region": "global",
-      "score": 7.4,
-      "summary": "Anthropic 在 Claude Code v2.1.293 中上线 Claude Haiku 5.5 并设为 API 默认 Haiku 模型，1M 上下文、每百万 token 输入 0.1 美元，让低成本长上下文产品更容易做。",
-      "title": "anthropics/claude-code released v2.1.293",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.293",
+      "score": 7.0,
+      "summary": "Anthropic 发布 Claude Code v2.1.295，新增 hook 失败时阻断操作、终端状态显示和网关上游超时控制，让编程 Agent 在自动化流程里更可控。",
+      "title": "anthropics/claude-code released v2.1.295",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.295",
       "sources": [
         {
           "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.219",
@@ -452,17 +636,15 @@
           "title": "Claude Haiku 5.5",
           "source_type": "supplemental",
           "published_at": ""
+        },
+        {
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.295",
+          "title": "anthropics/claude-code released v2.1.295",
+          "source_type": "github",
+          "published_at": "2026-10-08T19:48:38+00:00"
         }
       ],
       "updates": [
-        {
-          "update_id": "claude-code-v2.1.237",
-          "date": "2026-08-20",
-          "title": "anthropics/claude-code released v2.1.237",
-          "summary": "Anthropic发布Claude Code v2.1.237，新增简洁输出风格并修复提示缓存问题，提升编码效率。",
-          "score": 7.5,
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.237"
-        },
         {
           "update_id": "claude-code-v2.1.238",
           "date": "2026-08-21",
@@ -614,6 +796,14 @@
           "summary": "Anthropic 在 Claude Code v2.1.293 中上线 Claude Haiku 5.5 并设为 API 默认 Haiku 模型，1M 上下文、每百万 token 输入 0.1 美元，让低成本长上下文产品更容易做。",
           "score": 7.4,
           "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.293"
+        },
+        {
+          "update_id": "claude-code-v2.1.295",
+          "date": "2026-10-09",
+          "title": "anthropics/claude-code released v2.1.295",
+          "summary": "Anthropic 发布 Claude Code v2.1.295，新增 hook 失败时阻断操作、终端状态显示和网关上游超时控制，让编程 Agent 在自动化流程里更可控。",
+          "score": 7.0,
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.295"
         }
       ],
       "usage_flow": [
@@ -728,7 +918,166 @@
         "Pricing",
         "编码 Agent",
         "插件系统",
-        "模型发布"
+        "模型发布",
+        "Coding"
+      ]
+    },
+    {
+      "product_id": "product-46cbeb23cbbebb06",
+      "product_name": "Pollo AI",
+      "builder_name": "OpenAI News",
+      "first_seen": "2026-10-09",
+      "last_seen": "2026-10-09",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Pollo AI 用 OpenAI 的 GPT-5.6、GPT-6 Astra 和 GPT-Image-2.5 把创意想法做成图像和电影感视频广告，是一个内容生成产品案例。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.0,
+      "summary": "Pollo AI 用 OpenAI 的 GPT-5.6、GPT-6 Astra 和 GPT-Image-2.5 把创意想法做成图像和电影感视频广告，是一个内容生成产品案例。",
+      "title": "Pollo AI turns creative ideas into campaigns with OpenAI",
+      "url": "https://openai.com/index/pollo-ai",
+      "sources": [
+        {
+          "url": "https://openai.com/index/pollo-ai",
+          "title": "Pollo AI turns creative ideas into campaigns with OpenAI",
+          "source_type": "rss",
+          "published_at": "2026-10-08T12:00:00+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "pollo-ai-openai-campaigns",
+          "date": "2026-10-09",
+          "title": "Pollo AI turns creative ideas into campaigns with OpenAI",
+          "summary": "Pollo AI 用 OpenAI 的 GPT-5.6、GPT-6 Astra 和 GPT-Image-2.5 把创意想法做成图像和电影感视频广告，是一个内容生成产品案例。",
+          "score": 7.0,
+          "url": "https://openai.com/index/pollo-ai"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Pollo AI",
+        "视频生成",
+        "图像生成",
+        "营销"
+      ]
+    },
+    {
+      "product_id": "product-4cb578957403fe3b",
+      "product_name": "GPT-6",
+      "builder_name": "joshuawright11",
+      "first_seen": "2026-10-08",
+      "last_seen": "2026-10-08",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "OpenAI 发布 GPT-6 并主打面向所有人的智能界面，能按需生成交互式讲解页面，让普通人也能做出可交互的知识内容。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.6,
+      "summary": "OpenAI 发布 GPT-6 并主打面向所有人的智能界面，能按需生成交互式讲解页面，让普通人也能做出可交互的知识内容。",
+      "title": "GPT‑6 and Intelligent UI for everyone",
+      "url": "https://openai.com/index/gpt-6-for-everyone/",
+      "sources": [
+        {
+          "url": "https://openai.com/index/gpt-6-for-everyone/",
+          "title": "GPT‑6 and Intelligent UI for everyone",
+          "source_type": "hackernews",
+          "published_at": "2026-10-07T18:00:58+00:00"
+        },
+        {
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1007276/openai-chatgpt-intelligent-ui-gpt-6",
+          "title": "ChatGPT&#8217;s &#8216;Intelligent UI&#8217; update fills its responses with pictures, charts, and buttons",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://techcrunch.com/2026/10/07/chatgpt-is-getting-a-lot-more-visual-with-the-launch-of-a-new-interface/",
+          "title": "ChatGPT is getting a lot more visual, with the launch of a new interface",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "openai-gpt-6-intelligent-ui",
+          "date": "2026-10-08",
+          "title": "GPT‑6 and Intelligent UI for everyone",
+          "summary": "OpenAI 发布 GPT-6 并主打面向所有人的智能界面，能按需生成交互式讲解页面，让普通人也能做出可交互的知识内容。",
+          "score": 8.6,
+          "url": "https://openai.com/index/gpt-6-for-everyone/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "模型发布",
+        "交互式 UI",
+        "OpenAI"
+      ]
+    },
+    {
+      "product_id": "product-74e09c4cc7ea1a3d",
+      "product_name": "Stacklok",
+      "builder_name": "Richard MacManus",
+      "first_seen": "2026-10-08",
+      "last_seen": "2026-10-08",
+      "occurrence_count": 1,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Kubernetes 联合创始人创办 Stacklok，想把 Agent harness 完全搬到云端，解决 Agent 可靠运行问题，值得看 Agent 基础设施的构建思路。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.6,
+      "summary": "Kubernetes 联合创始人创办 Stacklok，想把 Agent harness 完全搬到云端，解决 Agent 可靠运行问题，值得看 Agent 基础设施的构建思路。",
+      "title": "Can a Cloud-Native Harness Make Agents Reliable Beyond the Desktop?",
+      "url": "https://www.latent.space/p/stacklok",
+      "sources": [
+        {
+          "url": "https://www.latent.space/p/stacklok",
+          "title": "Can a Cloud-Native Harness Make Agents Reliable Beyond the Desktop?",
+          "source_type": "rss",
+          "published_at": "2026-10-07T14:10:45+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "stacklok-cloud-agent-harness",
+          "date": "2026-10-08",
+          "title": "Can a Cloud-Native Harness Make Agents Reliable Beyond the Desktop?",
+          "summary": "Kubernetes 联合创始人创办 Stacklok，想把 Agent harness 完全搬到云端，解决 Agent 可靠运行问题，值得看 Agent 基础设施的构建思路。",
+          "score": 7.6,
+          "url": "https://www.latent.space/p/stacklok"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "基础设施",
+        "Stacklok",
+        "Kubernetes"
       ]
     },
     {
@@ -6312,69 +6661,6 @@
         "Agent",
         "AI工厂",
         "产品评测"
-      ]
-    },
-    {
-      "product_id": "product-1234545737e564a0",
-      "product_name": "OpenAI Codex CLI",
-      "builder_name": "github-actions[bot]",
-      "first_seen": "2026-09-23",
-      "last_seen": "2026-09-23",
-      "occurrence_count": 1,
-      "intelligence_type": "product_case",
-      "evidence_status": "first_party",
-      "target_user": "习惯终端操作的开发者、需要快速原型或批量处理代码的工程师",
-      "user_problem": "开发者在终端里写代码时，需要在编辑器、浏览器、AI 聊天窗口之间来回切换；无法直观看到 AI 用了多少 token、调用了哪些工具；多人协作或复杂项目里会话管理混乱",
-      "what_it_is": "Codex 是 OpenAI 出品的终端内运行的轻量级编码 Agent（AI 编程助手），能在命令行里理解自然语言指令、读写代码、执行命令。",
-      "ai_role": "AI 负责解析自然语言指令、生成/修改代码、调用外部工具（如测试运行器、文件系统）、在多轮对话中保持上下文，并通过 worktree 隔离不同任务",
-      "implementation_idea": "Codex 在本地启动一个后台服务（daemon），通过终端 UI 与用户交互；用户输入经 LLM 解析后，AI 决定调用哪些工具（Function Calling，即 AI 选择调用外部函数来完成任务），结果流式返回终端。语音功能通过本地音频运行时处理，worktree 用 Git 工作树机制隔离不同会话的文件状态。",
-      "hands_on_exercise": "30 分钟动手：安装 Codex CLI（需 OpenAI API 密钥），用 /tui 进入全屏模式，让 AI 写一个 Python 脚本并运行；然后用 /usage 查看本次消耗的 token 数；最后开两个 worktree 会话，让 AI 分别在两个目录做不相关的修改，验证文件是否隔离",
-      "limitations_or_uncertainties": "语音功能的具体模型（是否为 Whisper 实时 API）未公开；用量分析面板的数据延迟和精确计费规则未公开；MCP（Model Context Protocol）凭证刷新机制的具体实现细节未公开；sandbox 隔离的完整安全审计报告未公开",
-      "region": "global",
-      "score": 7.5,
-      "summary": "OpenAI 的编码工具 Codex 发布 rust-v0.156.0，新增全屏界面、默认开启的语音对话、用量分析面板、worktree 会话和多种主题，让编码 Agent 更像一个完整工作台。",
-      "title": "OpenAI Codex 终端编码 Agent 发布 v0.156.0：全屏界面、语音默认开启、用量分析",
-      "url": "https://github.com/openai/codex/releases/tag/rust-v0.156.0",
-      "sources": [
-        {
-          "url": "https://github.com/openai/codex/releases/tag/rust-v0.156.0",
-          "title": "openai/codex released rust-v0.156.0",
-          "source_type": "github",
-          "published_at": "2026-09-22T19:51:01+00:00"
-        },
-        {
-          "url": "https://github.com/openai/codex/",
-          "title": "GitHub - openai/codex: Lightweight coding agent that runs in your terminal · GitHub",
-          "source_type": "supplemental",
-          "published_at": ""
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "openai-codex-rust-v0.156.0-features",
-          "date": "2026-09-23",
-          "title": "OpenAI Codex 终端编码 Agent 发布 v0.156.0：全屏界面、语音默认开启、用量分析",
-          "summary": "OpenAI 的编码工具 Codex 发布 rust-v0.156.0，新增全屏界面、默认开启的语音对话、用量分析面板、worktree 会话和多种主题，让编码 Agent 更像一个完整工作台。",
-          "score": 7.5,
-          "url": "https://github.com/openai/codex/releases/tag/rust-v0.156.0"
-        }
-      ],
-      "usage_flow": [
-        "安装后运行 codex，用 /tui 进入全屏界面，支持鼠标选择和右键复制",
-        "直接说话或打字给 AI 下指令（语音默认开启，按 F8 切换）",
-        "AI 自动读写文件、运行测试、调用工具，结果直接显示在终端",
-        "用 /usage 查看 token 消耗和插件活动，用 /daemon 管理本地后台服务"
-      ],
-      "learning_points": [
-        "Agent：能自主规划步骤、调用工具、完成多轮任务的 AI，不只是单次问答",
-        "Function Calling：LLM 识别需要外部工具时，生成结构化调用指令（如读文件、运行命令），而非直接回答",
-        "Worktree：Git 功能，让同一仓库同时存在多个独立工作目录，避免不同任务互相污染代码"
-      ],
-      "verticals": [],
-      "tags": [
-        "编码Agent",
-        "产品迭代",
-        "语音交互"
       ]
     },
     {

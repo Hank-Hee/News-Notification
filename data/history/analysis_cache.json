@@ -5404,6 +5404,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "10d89202018e75498708a397964cbe18ff6f6791a0a5d3c49788340bdb8d702a": {
+      "created_at": "2026-10-09T06:07:18.184551+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "langchain-openai-1.7.0",
+        "evidence_status": "first_party",
+        "follow_up": "观察 decisions API 具体能解锁什么产品体验。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "github:release:407025152",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "langchain-openai",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "langchain-openai 1.7.0 新增对 OpenAI decisions api 的支持，属于可被产品构建者使用的接口能力，但信息量小、无使用场景说明，且其余为依赖升级。5 分档。",
+        "region": "global",
+        "score": 5.0,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "LangChain 的 OpenAI 集成包升级到 1.7.0，新增支持 OpenAI decisions API，让开发者可以在 LangChain 里调用这一新接口。",
+        "tags": [
+          "框架",
+          "LangChain",
+          "OpenAI"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "1139f88edac49c326bb2b09fc0f05cb59d9792d1661416a48004b2df3cffa70b": {
       "created_at": "2026-07-29T01:53:11.237108+00:00",
       "model": "deepseek-v4-flash",
@@ -13646,6 +13685,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "29a8cc75b4d0209473a0f7094f5d35862616df644e5d890f63dfade61a05f928": {
+      "created_at": "2026-10-09T06:07:06.924977+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "carson-gross-quote-programming-career",
+        "evidence_status": "reported",
+        "follow_up": "无需跟进。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:simonwillison.net_atom_everything_:ed14048bb9127b90",
+        "intelligence_type": "builder_insight",
+        "is_first_party": false,
+        "is_new_event": false,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Carson Gross 关于编程本质与 AI 时代职业前景的引用，属泛观点评论，无产品、无实践证据，低于收录线。",
+        "region": "global",
+        "score": 5.0,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "htmx 作者 Carson Gross 认为编程核心是解决问题与控制复杂度，AI 工具不会让这项能力贬值，属于职业观点引用。",
+        "tags": [
+          "观点",
+          "职业"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "29b433e17fceb8c50a20e4b4a550cc617e836c3c0ec13e6b867ccd7de92820de": {
       "created_at": "2026-08-26T01:58:33.864172+00:00",
       "model": "deepseek-v4-flash",
@@ -16369,6 +16446,44 @@
         "tags": [
           "就业",
           "经济"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "33a2ec29a7c103540f56455abf3e9a676c668492bf63ac2784fb702f5981a562": {
+      "created_at": "2026-10-09T06:07:18.184581+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "n8n-2.42.5-stable",
+        "evidence_status": "first_party",
+        "follow_up": "无需特别跟进。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "github:release:406536579",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "n8n",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "n8n 2.42.5 仅修复编辑器在 builder 创建 Agent artifact 时显示的问题，属于小版本 bugfix，无实质产品增量。且与另一条 n8n@2.42.5 为同一事件重复。低分。",
+        "region": "global",
+        "score": 4.0,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "n8n 发布 2.42.5，只修复了编辑器在构建器生成 Agent 产物时的显示问题，没有新的产品能力。",
+        "tags": [
+          "自动化",
+          "n8n"
         ],
         "target_user": "",
         "verticals": []
@@ -19278,6 +19393,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "3cb819d6bd32ded961ac97c5faf94f4611b795570b6c15d08f1ca329c592f4ec": {
+      "created_at": "2026-10-09T06:07:06.924883+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "anthropic-usage-policy-update",
+        "evidence_status": "reported",
+        "follow_up": "关注健康与金融类用途的具体限制是否影响相关 AI 产品接入。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:1af5c80547ec48e5",
+        "intelligence_type": "business_policy",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Claude",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Anthropic 更新使用政策，涉及选举干预、武器、监控、健康与金融用途等高风险场景，对做垂直 AI 产品有合规参考价值，但属政策条款而非产品能力，未达 7 分。",
+        "region": "global",
+        "score": 6.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Anthropic 一年多来首次更新 Claude 使用政策，新增禁止选举干预、武器开发、监控及健康金融滥用等条款，做垂直产品时需对照合规边界。",
+        "tags": [
+          "合规",
+          "政策",
+          "Anthropic"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "3cb9e729ebe28615916e3a19ac234d7581bb4a5da3f6929e68458f6c57d85c86": {
       "created_at": "2026-08-27T09:46:47.769935+00:00",
       "model": "deepseek-v4-flash",
@@ -20451,6 +20605,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "405435a57795ab4324e719c2013bc223cd1a9695e3bab6fd8d37b5ac217e2929": {
+      "created_at": "2026-10-09T06:07:06.924952+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "ttok-0-4-release",
+        "evidence_status": "first_party",
+        "follow_up": "已被 1.0 取代，无需单独跟进。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:simonwillison.net_atom_everything_:f242adb232a8919d",
+        "intelligence_type": "builder_insight",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "ttok",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "ttok 0.4 是同一工具的小版本更新，修复警告、更新 CI、新增 --list-models，增量有限，且被 1.0 覆盖，属低价值维护更新。",
+        "region": "global",
+        "score": 6.5,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Simon Willison 更新 ttok 到 0.4，修复 Click 警告、更新 CI 并新增列出模型的命令，属于小版本维护。",
+        "tags": [
+          "工具",
+          "token",
+          "开源"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "4059f926b7bdef612771aa17c2ff33fc8a7aa05d45c405a1a23b548a1c7ecb40": {
       "created_at": "2026-08-27T09:47:13.795652+00:00",
       "model": "deepseek-v4-flash",
@@ -21563,6 +21756,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "42fb7050f10bd5cbf2931a624c6e133457b2e6a712a911ff819c1cefa1a362e4": {
+      "created_at": "2026-10-09T06:07:06.924770+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "lmarena-funding-3-1b",
+        "evidence_status": "reported",
+        "follow_up": "观察其对齐评测方法是否公开、能否被产品团队复用为选型依据。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:de18b415194d46b6",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "LMArena",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "LMArena 融资与估值翻倍属纯融资新闻，按规则通常低于 7 分；但提到开始用对齐问题（如说谎）评测模型，有一点产品方向增量，仍不足以进入收录区间。",
+        "region": "global",
+        "score": 5.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "LMArena 的母公司融资 2 亿美元、估值涨到 31 亿美元，并开始用“模型是否说谎”等对齐指标评测模型，值得关注的是评测维度从能力转向可信度。",
+        "tags": [
+          "评测",
+          "融资",
+          "对齐"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "430a7327dfdf39d306effaecd778b88173775920b025121c1a335ae8dd8fbf18": {
       "created_at": "2026-08-12T02:43:31.542937+00:00",
       "model": "deepseek-v4-flash",
@@ -22588,6 +22820,44 @@
           "n8n",
           "自动化",
           "版本更新"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "45b684a2314f06e0dba47248b0fe8342526be21e6e6a8b63267d8a0f3e2087ed": {
+      "created_at": "2026-10-09T06:07:18.184528+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "langchain-1.4.4",
+        "evidence_status": "first_party",
+        "follow_up": "无需特别跟进。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "github:release:407305230",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "LangChain",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "LangChain 1.4.4 主要为依赖升级和一处 SummarizationMiddleware 上下文溢出重试修复，属于常规维护版本，无新产品体验或可迁移产品思路。低于 5 分。",
+        "region": "global",
+        "score": 4.5,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "LangChain 发布 1.4.4，主要是依赖升级和摘要中间件在上下文溢出时重试的修复，对产品构建者没有新的可迁移增量。",
+        "tags": [
+          "框架",
+          "LangChain"
         ],
         "target_user": "",
         "verticals": []
@@ -24535,6 +24805,45 @@
         "tags": [
           "Google Earth",
           "AI安全"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "4afe0d3cc9f17ba497d1f99923c515a5e85225459a3543104e584bdb25149d0c": {
+      "created_at": "2026-10-09T06:06:56.588442+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "claude-haiku-5-5",
+        "evidence_status": "reported",
+        "follow_up": "关注该模型的具体能力、定价及可解锁的新产品体验。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "public_web:sitemap:2072257ca7d30ec53afe",
+        "intelligence_type": "model_capability",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Claude Haiku 5.5",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "新模型能力动态，属于 model_capability 范畴，但输入仅有标题与通用摘要，无具体能力指标、定价或产品解锁信息，证据不足，暂不给 7 分以上。",
+        "region": "global",
+        "score": 6.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Artificial Analysis 发布 Claude Haiku 5.5 相关评测，属于新模型能力动态，但缺少具体能力与产品影响细节。",
+        "tags": [
+          "Anthropic",
+          "Claude",
+          "模型能力"
         ],
         "target_user": "",
         "verticals": []
@@ -30594,6 +30903,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "5d0cb8d004aec2d0546c54852985b6b0c4f4e5beb3fb7c6f32a42f24474f23d6": {
+      "created_at": "2026-10-09T06:07:06.925006+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-codex-rust-0-163-0-alpha-2",
+        "evidence_status": "first_party",
+        "follow_up": "关注后续正式版是否附带功能变更说明。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "github:release:407416558",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Codex",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "openai/codex 的 alpha 版本发布，正文只有版本号，无功能说明、无变更日志，属低信息量自动发布。",
+        "region": "global",
+        "score": 3.5,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "openai/codex 发布 rust-v0.163.0-alpha.2，正文无任何功能说明，属于无实质信息的自动版本发布。",
+        "tags": [
+          "Codex",
+          "版本发布"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "5d10434642ea8305856edad065c7a8582c74c997875d34159cfe2944da8d6ba6": {
       "created_at": "2026-09-23T04:44:03.691648+00:00",
       "model": "deepseek-flash",
@@ -31506,6 +31853,46 @@
         "tags": [
           "政策",
           "AI 安全"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "5febdbae7efe38a08f2c37e63b242ffacddd73ee97251ab6e397eb37a0bad124": {
+      "created_at": "2026-10-09T06:07:18.184499+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "claude-code-v2.1.295",
+        "evidence_status": "first_party",
+        "follow_up": "观察 onFailure: block 这类可靠性机制是否成为 Agent 工具标配。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "github:release:407134589",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Claude Code",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Anthropic Claude Code 正式版本更新，新增 hook 失败阻断（onFailure: block）、终端程序状态协议 OSC 7501、/copy 引用文本、网关上游超时与模型白名单等。属于官方一手发布，对做 Agent 产品的人有参考价值（如 hook 可靠性、终端状态反馈、网关治理）。但为常规迭代，非新模型能力，7 分档。",
+        "region": "global",
+        "score": 7.0,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "Anthropic 发布 Claude Code v2.1.295，新增 hook 失败时阻断操作、终端状态显示和网关上游超时控制，让编程 Agent 在自动化流程里更可控。",
+        "tags": [
+          "Agent",
+          "Coding",
+          "CLI",
+          "Anthropic"
         ],
         "target_user": "",
         "verticals": []
@@ -33344,6 +33731,45 @@
           "硬件",
           "趣味",
           "传感器"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "64548fa1f35ab90bf35fbff2d45b87db2fc7bd025d68b8f79b6c003b0d48cadd": {
+      "created_at": "2026-10-09T06:07:06.924837+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "anthropic-oss-scanner-launch",
+        "evidence_status": "reported",
+        "follow_up": "观察扫描准确率、误报率以及是否开放 API 供第三方产品集成。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:86e5a0318e483482",
+        "intelligence_type": "product_case",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "OSS Scanner",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Anthropic 推出免费开源安全扫描服务，是明确的新产品能力，能直接催生安全类 AI 产品思路；但报道未给出使用细节与效果证据，故未上 8 分。",
+        "region": "global",
+        "score": 7.6,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Anthropic 推出 OSS Scanner，用自家最强模型免费为开源项目定期扫描安全漏洞，值得看的是“模型能力直接变成免费安全服务”这一产品形态。",
+        "tags": [
+          "安全",
+          "开源",
+          "Anthropic"
         ],
         "target_user": "",
         "verticals": []
@@ -40383,6 +40809,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "7a5a635c9a5f29efd0b00b174d8c46e79e766ed1ebccd13b0c283264f8c809e5": {
+      "created_at": "2026-10-09T06:07:18.184611+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "n8n-2.42.5-stable",
+        "evidence_status": "first_party",
+        "follow_up": "无需特别跟进。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "github:release:406536545",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": false,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "n8n",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "与 github:release:406536579 为同一版本同一变更的重复条目，内容完全一致，按重复扣分。",
+        "region": "global",
+        "score": 4.0,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "n8n 2.42.5 的重复发布条目，内容与 stable 标签一致，仅修复编辑器显示问题。",
+        "tags": [
+          "自动化",
+          "n8n"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "7a645028130355fb31594c2fd9181ff4db93cefbe403d53512b96413b244b5c9": {
       "created_at": "2026-08-25T01:52:40.443001+00:00",
       "model": "deepseek-v4-flash",
@@ -41109,6 +41573,46 @@
           "模型安全",
           "提示注入",
           "Anthropic"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "7c79f031809dd1bd2dc76bd765983a45700a9d41a9c7fa976a11b2567710b171": {
+      "created_at": "2026-10-09T06:07:18.184673+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "whistle-stt-16.9mb",
+        "evidence_status": "first_party",
+        "follow_up": "观察是否补上流式转写，以及小模型在垂直场景的准确率与体积权衡。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:50008427",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Whistle",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Cactus Compute 发布 Whistle，一个 16.9MB 的本地语音转文字产品，有可验证 Demo 和真实用户反馈。评论区给出具体对比数据（170 条消息中 qwen 1.7B 正确 168 条、whistle 70 条），并指出缺少流式输出等产品缺口，还提到用 whistle 接管 Echo Show 做本地智能家居的落地案例。属于有产品、有反馈、有构建过程的一手案例，对做垂直 AI 产品的人有直接参考价值。因体积小、本地运行、可迁移到隐私敏感场景，给 8 分档。",
+        "region": "global",
+        "score": 8.3,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "Cactus Compute 做出 16.9MB 的本地语音转文字工具 Whistle，能在设备上离线跑，用户实测准确率不如大模型但可接管智能音箱做本地处理，适合看小模型端侧产品的取舍。",
+        "tags": [
+          "语音",
+          "端侧",
+          "本地推理",
+          "产品案例"
         ],
         "target_user": "",
         "verticals": []
@@ -42407,6 +42911,46 @@
           "政策",
           "Anthropic",
           "合规"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "7f6177d9890342a5535fab9e9f210381200775f2ed19b524236d4aef5adf69ff": {
+      "created_at": "2026-10-09T06:06:56.588486+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "pollo-ai-openai-campaigns",
+        "evidence_status": "first_party",
+        "follow_up": "关注其实际生成质量、用户反馈与工作流细节。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:openai.com_news_rss.xml:855092fba1df7e8a",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": true,
+        "market_signal": "",
+        "product_name": "Pollo AI",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Pollo AI 用 GPT-5.6、GPT-6 Astra、GPT-Image-2.5 把创意想法转成图像和电影感视频广告，属于有具体产品与模型组合的一手案例，对做内容生成产品的人有参考价值；但为 OpenAI 官方客户营销内容，宣传性强，扣分至 7.0。",
+        "region": "global",
+        "score": 7.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Pollo AI 用 OpenAI 的 GPT-5.6、GPT-6 Astra 和 GPT-Image-2.5 把创意想法做成图像和电影感视频广告，是一个内容生成产品案例。",
+        "tags": [
+          "Pollo AI",
+          "视频生成",
+          "图像生成",
+          "营销"
         ],
         "target_user": "",
         "verticals": []
@@ -44702,6 +45246,38 @@
         "verticals": []
       },
       "stage": "candidate_analysis"
+    },
+    "8648c2af4ec6b645327ee873389133a8adab432d44548b8f48eacab846a2b586": {
+      "created_at": "2026-10-09T06:07:56.105780+00:00",
+      "model": "kimi-k2.6",
+      "prompt_version": "deep-v3-beginner",
+      "result": {
+        "ai_role": "AI 负责自动分析代码，识别潜在安全漏洞并生成扫描报告",
+        "evidence_status": "reported",
+        "hands_on_exercise": "30 分钟练习：找一个你熟悉的开源项目（如 Python 小工具），把核心代码片段贴给 Claude/GPT，prompt 写'请扮演安全审计员，分析这段代码的潜在漏洞，按高危/中危/低危分级'，对比 AI 发现的问题和你自己的判断，体会'模型能力→安全服务'的产品逻辑",
+        "implementation_idea": "把 Claude 大模型的代码理解和推理能力包装成持续运行的安全扫描服务——模型读代码、找漏洞模式、输出告警，本质上是'AI 能力 SaaS 化'送给开源社区用",
+        "learning_points": [
+          "Function Calling（函数调用）：让 LLM 不仅能聊天，还能触发外部工具执行扫描、查数据库等实际操作",
+          "RAG（检索增强生成）：把项目代码库'喂'给 AI 时，先检索相关代码片段再分析，避免模型'瞎猜'",
+          "Agent（智能体）：AI 自主完成'扫描-分析-报告'多步骤任务，不需要人一步步指挥"
+        ],
+        "limitations_or_uncertainties": "未公开具体扫描频率、支持语言范围、漏洞检出率数据、是否需代码托管在特定平台、隐私与代码使用条款细节；报道未提供实际效果验证",
+        "product_name": "OSS Scanner",
+        "sources": [
+          "https://www.theverge.com/ai-artificial-intelligence/1008521/anthropic-open-source-oss-scanner"
+        ],
+        "target_users": "开源项目维护者、开源社区贡献者",
+        "title_zh": "Anthropic 推出免费 AI 开源安全扫描服务",
+        "usage_flow": [
+          "开源项目主动申请加入（opt-in）",
+          "OSS Scanner 用 Anthropic 最强模型定期自动扫描项目代码",
+          "项目方收到潜在安全问题的告警通知",
+          "开发者根据报告修复漏洞"
+        ],
+        "user_problem": "开源项目通常缺人手和预算做安全审计，漏洞发现滞后，容易被攻击者利用",
+        "what_it_is": "Anthropic 用自家最强大模型免费帮开源项目定期扫安全漏洞的新服务"
+      },
+      "stage": "deep_analysis"
     },
     "864bac8c0bbe99e24f3d03314dc5e8bc10e2b3826ee571ef1f365484316f2675": {
       "created_at": "2026-08-18T01:50:11.648633+00:00",
@@ -47240,6 +47816,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "8ce5b96691fcf3ac1b178efc04b85d048d27de9e2de3a05a76f12f581fc9d46b": {
+      "created_at": "2026-10-09T06:07:06.924927+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "ttok-1-0-release",
+        "evidence_status": "first_party",
+        "follow_up": "关注 OpenAI 是否官方确认 GPT-6 分词器与 GPT-5 一致。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:simonwillison.net_atom_everything_:4531aaeb11d6a46b",
+        "intelligence_type": "builder_insight",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "ttok",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Simon Willison 发布 ttok 1.0，把默认分词器从 GPT-4 切到 GPT-5/GPT-6 系列，并引用第三方实验佐证 GPT-6 分词器未变；对做 LLM 应用的初学者理解 token 成本有直接帮助，但工具本身较窄。",
+        "region": "global",
+        "score": 7.2,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Simon Willison 发布 ttok 1.0，把默认分词器从 GPT-4 换成 GPT-5/GPT-6 系列，方便开发者估算新模型的 token 数与成本。",
+        "tags": [
+          "工具",
+          "token",
+          "开源"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "8cefdf1b2dbdf233e55be4437a4d4d1acdf0a90a37eb6fe67cc53a37da32e79c": {
       "created_at": "2026-08-23T02:00:11.115122+00:00",
       "model": "deepseek-v4-flash",
@@ -47861,6 +48476,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "8e2b3323512dc58b305ec53ff403c3155f1b6ef11f1c4b55e8453832f7daec45": {
+      "created_at": "2026-10-09T06:07:18.184870+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-partition-principle-math",
+        "evidence_status": "reported",
+        "follow_up": "无需特别跟进。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:50013902",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": false,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "关于 OpenAI 数学成果发布方式与数学界反应的评论文章，属于学术/行业争议讨论，无产品、无构建过程、无新模型能力，与 AI 产品经理转型目标弱相关。低分。",
+        "region": "global",
+        "score": 4.5,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "一篇讨论 OpenAI 数学成果发布方式引发数学界不满的文章，属于学术争议，对做 AI 产品没有直接帮助。",
+        "tags": [
+          "学术",
+          "OpenAI"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "8e5214bc138910dc9d7f48a8ef080913c63651df0f646591a4360427244ada88": {
       "created_at": "2026-09-18T04:42:02.171924+00:00",
       "model": "deepseek-flash",
@@ -48356,6 +49009,45 @@
           "Agent安全",
           "OpenAI",
           "沙箱"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "8f65d83a07435145a1f0e670d4fb98f867ce9051bee922ccf0d00be937e2b37c": {
+      "created_at": "2026-10-09T06:07:06.924860+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "usa-today-sues-openai",
+        "evidence_status": "reported",
+        "follow_up": "关注判决是否影响训练数据合规要求。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:1d4b0ffd62c77020",
+        "intelligence_type": "business_policy",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "版权诉讼属法律与商业政策新闻，对初学者做 AI 产品无直接可迁移增量，且无产品实践证据。",
+        "region": "global",
+        "score": 4.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "USA Today 及旗下地方报纸起诉 OpenAI 未经授权用其文章训练模型，索赔超 2.5 亿美元，属于版权法律纠纷。",
+        "tags": [
+          "版权",
+          "诉讼",
+          "OpenAI"
         ],
         "target_user": "",
         "verticals": []
@@ -51875,6 +52567,38 @@
       },
       "stage": "candidate_analysis"
     },
+    "98fcb97b43cd4c078f16f3003300b50c22dc5ee51660f47b0e9a0a9cdc10e8ee": {
+      "created_at": "2026-10-09T06:07:38.107951+00:00",
+      "model": "kimi-k2.6",
+      "prompt_version": "deep-v3-beginner",
+      "result": {
+        "ai_role": "负责把音频信号识别并转换成文字，全程在本地 CPU 运行，不发送数据到外部服务器",
+        "evidence_status": "verified",
+        "hands_on_exercise": "30 分钟体验：用你电脑上的麦克风录一段 2 分钟中文或英文语音，同时试用 Whisper（OpenAI 的开源版本，约 1GB）和某个在线 API（如讯飞、百度），对比三者转写结果的字数差异和错误类型，体会「体积 vs 准确率」的 trade-off",
+        "implementation_idea": "未公开具体技术细节。从体积推测，应该是大幅压缩过的声学模型，可能用了知识蒸馏（把大模型的能力教给小模型）或针对特定场景裁剪网络结构，牺牲部分准确率来换取极小体积和本地可运行。",
+        "learning_points": [
+          "端侧推理（Edge Inference）：模型直接在手机、音箱等小设备上跑，不用连网传数据，隐私更好但性能通常较弱",
+          "模型压缩：通过剪枝、量化、蒸馏等手段把大模型变小，让它能在资源有限的设备上运行",
+          "语音转文字（ASR/STT）：把音频波形变成文字序列，是语音助手的核心第一步"
+        ],
+        "limitations_or_uncertainties": "官方未公开模型架构、训练数据、支持语言列表；用户实测准确率显著低于 1.7B 参数的 Qwen-ASR（170 条消息中正确 70 vs 168 条）；缺少流式输出（边说边出字）；存在特定音频下反复输出「Thank you」的 bug；未确认是否支持中文及多语言",
+        "product_name": "Whistle",
+        "sources": [
+          "https://cactuscompute.com/blog/whistle"
+        ],
+        "target_users": "注重隐私、想摆脱云端依赖的技术用户；想把智能音箱改成本地运行的极客；需要在端侧部署语音功能的开发者",
+        "title_zh": "Whistle：16.9MB 的本地语音转文字工具，体积小到能塞进智能音箱",
+        "usage_flow": [
+          "在本地设备（如电脑、智能音箱）安装 Whistle",
+          "对着麦克风说话或导入音频文件",
+          "Whistle 在设备上直接处理，输出文字",
+          "（进阶）接入 Home Assistant 等智能家居系统，替代云端语音助手"
+        ],
+        "user_problem": "主流语音转文字要么依赖云端（隐私有风险、要联网），要么本地模型体积巨大（动辄几个 GB）；用户想在小设备上跑语音 AI，但装不下、跑不动",
+        "what_it_is": "一个只有 16.9MB、能在设备本地离线运行的语音转文字（Speech-to-Text）工具，不用联网也能把你说的话转成文字。"
+      },
+      "stage": "deep_analysis"
+    },
     "994df6f1ed83f3f222cc049e12244dbfe59a3005faef91c58c6d755d7e134c5e": {
       "created_at": "2026-10-04T05:50:53.052403+00:00",
       "model": "deepseek-flash",
@@ -53558,6 +54282,46 @@
         "tags": [
           "语音AI",
           "实时交互"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "9e124a2b138f20ef1d8eebe8052305b6ba406db7bcfd93e11b6816ace83c91d5": {
+      "created_at": "2026-10-09T06:07:18.183784+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-codex-rust-0.162.0",
+        "evidence_status": "first_party",
+        "follow_up": "观察 worktree 功能是否被其他编程 Agent 跟进，以及自定义 Responses 兼容提供商的实际接入体验。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "github:release:407151970",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "OpenAI Codex CLI",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI Codex CLI 正式版本更新，新增托管 Git worktree、任务置顶、/copy 转录块复制、可点击 URL、自定义 Responses 兼容模型提供商的实时联网与远程压缩配置等。属于官方一手发布，功能增量明确，对做 AI 编程 Agent 产品的人有可迁移参考（如 worktree 隔离、MCP 提示交互、自定义模型接入）。但仍是工具链迭代，非新模型能力或新产品形态，故 7 分档。",
+        "region": "global",
+        "score": 7.2,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "OpenAI 发布 Codex CLI 0.162.0，新增托管 Git worktree、任务置顶和 /copy 复制等功能，让开发者用命令行 Agent 写代码时更好管理多任务和自定义模型接入。",
+        "tags": [
+          "Agent",
+          "Coding",
+          "CLI",
+          "OpenAI"
         ],
         "target_user": "",
         "verticals": []
@@ -57323,6 +58087,45 @@
         "tags": [
           "行业观察",
           "就业"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "a706917696c0505e2d293fec5d2a965233eae21e767ce30b0e32d41287d8f187": {
+      "created_at": "2026-10-09T06:07:18.183814+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-codex-rust-0.163.0-alpha.1",
+        "evidence_status": "early_signal",
+        "follow_up": "等正式版 changelog 出来再评估。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "github:release:407263979",
+        "intelligence_type": "early_signal",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "OpenAI Codex CLI",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "仅一行版本号，无任何变更说明，属于无实质内容的 alpha 预告。按规则模糊预告且无证据，低分。",
+        "region": "global",
+        "score": 2.0,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "OpenAI Codex CLI 发布 0.163.0-alpha.1 版本，但没有任何更新说明，暂时看不出实际变化。",
+        "tags": [
+          "Agent",
+          "Coding",
+          "CLI"
         ],
         "target_user": "",
         "verticals": []
@@ -64002,6 +64805,46 @@
       },
       "stage": "candidate_analysis"
     },
+    "b99307661195efbda49afeceda8db923d869df32148927a5c175c2cd56cff76f": {
+      "created_at": "2026-10-09T06:06:56.588458+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "oracle-chatgpt-codex-workflow",
+        "evidence_status": "first_party",
+        "follow_up": "关注 Oracle 具体工作流的搭建方式、使用规模与可复用经验。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:openai.com_news_rss.xml:db7b9e6fe248e314",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": true,
+        "market_signal": "",
+        "product_name": "ChatGPT, Codex",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Oracle 使用 ChatGPT 与 Codex 将招聘、工程、运营的专业知识转成可重复工作流，属于有企业落地场景的一手案例，能让初学者理解 AI 在流程中如何发挥作用；但本质是 OpenAI 官方客户营销内容，含宣传成分，故扣分至 7.5。",
+        "region": "global",
+        "score": 7.5,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Oracle 用 ChatGPT 和 Codex 把招聘、工程、运营里的专家经验变成快速可重复的工作流，是一个可参考的企业落地案例。",
+        "tags": [
+          "ChatGPT",
+          "Codex",
+          "企业落地",
+          "工作流"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "b9941155e6727ea20d41c1ba7c394aa23102713bcea4ce7c26e05533fac28c16": {
       "created_at": "2026-07-30T03:27:45.921814+00:00",
       "model": "deepseek-v4-flash",
@@ -64108,6 +64951,45 @@
         "tags": [
           "模型排行",
           "市场趋势"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "ba4dabf7a5c513910c83d140980a03512be23f459dd57b332842baaf0af90455": {
+      "created_at": "2026-10-09T06:06:56.588413+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "artificial-analysis-trusted-access-models-cyber-index",
+        "evidence_status": "reported",
+        "follow_up": "关注该指数是否被用于产品选型或合规准入。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "public_web:sitemap:16543c8c7e7cb49c01a0",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Artificial Analysis 的模型评测/指数类内容，属于基准测试与排名，按规则通常低于 7 分，除非明确解锁新产品体验；此处未体现。",
+        "region": "global",
+        "score": 5.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Artificial Analysis 发布可信访问模型网络安全指数，属于模型评测排名，对做产品的人没有直接可迁移的构建经验。",
+        "tags": [
+          "模型评测",
+          "基准测试",
+          "网络安全"
         ],
         "target_user": "",
         "verticals": []
@@ -65572,6 +66454,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "bf38b5e099dc5f2e1917e370a4e9c97018d33cc5bb23a888f78dcc07f52ac6a1": {
+      "created_at": "2026-10-09T06:06:56.588398+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "anthropic-genesis-mission-commitment",
+        "evidence_status": "first_party",
+        "follow_up": "关注是否转化为具体产品能力或行业落地案例。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "public_web:sitemap:6c062b861d6d205bc313",
+        "intelligence_type": "business_policy",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Anthropic 官方承诺类公告，无具体产品、代码或用户案例，属于机构合作/政策方向，低于 7 分。",
+        "region": "global",
+        "score": 5.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Anthropic 公布 Genesis Mission 承诺，属于机构合作方向公告，没有可拆解的产品细节。",
+        "tags": [
+          "Anthropic",
+          "合作",
+          "政策"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "bf5d325e71cb51018f8bc9f6811d3cbc5e52efa15316d225180a1f057dd14898": {
       "created_at": "2026-09-03T04:22:15.553240+00:00",
       "model": "deepseek-v4-flash",
@@ -65942,6 +66863,45 @@
           "DeepSeek",
           "传闻",
           "大模型"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "c069d667c2ff378cb9665dd5e3c17dc66eb5c69452d42818f1a44590a32f28a7": {
+      "created_at": "2026-10-09T06:07:06.924993+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "claude-haiku-5-5-release",
+        "evidence_status": "reported",
+        "follow_up": "等待官方规格、定价与基准细节确认。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:www.latent.space_feed:c07b5023822db3bc",
+        "intelligence_type": "model_capability",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Claude Haiku 5.5",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Claude Haiku 5.5 以同价位超过 GPT-6 Luna，属新模型能力动态，对做小模型产品有参考；但正文仅一句“yay small models”，缺乏细节与验证，故未达 7 分。",
+        "region": "global",
+        "score": 6.8,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Latent Space 报道 Claude Haiku 5.5 在同价位上表现优于 GPT-6 Luna，值得关注小模型性价比变化，但原文信息极少。",
+        "tags": [
+          "模型",
+          "小模型",
+          "Anthropic"
         ],
         "target_user": "",
         "verticals": []
@@ -73004,6 +73964,44 @@
       },
       "stage": "deep_analysis"
     },
+    "d696b4df6f5c24c33fef16ac20008b5c35692e816e5f354063a41e13316685c7": {
+      "created_at": "2026-10-09T06:07:18.184786+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "htmx-yes-and-essay",
+        "evidence_status": "reported",
+        "follow_up": "无需特别跟进。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:50003796",
+        "intelligence_type": "builder_insight",
+        "is_first_party": true,
+        "is_new_event": false,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "htmx 作者关于 CS 教育与 AI 编程的随笔，评论区有关于 vibe coding 与编译器确定性的讨论，属于从业者观点，但非产品、非构建过程、无新事实，且为旧文重提。对 AI 产品经理的迁移价值有限，5 分档。",
+        "region": "global",
+        "score": 5.5,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "htmx 作者写文章谈 CS 教育，评论区讨论 AI 编程与编译器的确定性差异，属于观点类内容，没有可直接用于做产品的增量。",
+        "tags": [
+          "观点",
+          "AI编程"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "d6b7d9d4e2db3fcb646cbbf60996bb677e93dc0aa3b28b545805cda2cbbb0a7c": {
       "created_at": "2026-10-07T05:57:25.974052+00:00",
       "model": "deepseek-flash",
@@ -73271,6 +74269,45 @@
         "tags": [
           "DeepSeek",
           "定价"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "d7d4d02887c1c12bf80c1bfd033a6d557226909ac241fa40bc810b26e54ad4b8": {
+      "created_at": "2026-10-09T06:06:56.588382+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "anthropic-2026-usage-policy-update",
+        "evidence_status": "first_party",
+        "follow_up": "关注政策变化是否影响 API 调用范围或垂直行业应用合规边界。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "public_web:sitemap:4e66a7e453a3193bb5cb",
+        "intelligence_type": "business_policy",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Anthropic 使用政策年度更新，属于合规条款类公告，不涉及产品能力、构建实践或用户反馈，对产品经理的直接增量低。",
+        "region": "global",
+        "score": 4.5,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Anthropic 更新 2026 年使用政策，属于合规条款调整，对做 AI 产品的人没有可直接迁移的产品信息。",
+        "tags": [
+          "Anthropic",
+          "使用政策",
+          "合规"
         ],
         "target_user": "",
         "verticals": []
@@ -73575,6 +74612,45 @@
         "summary_zh": "风闻文章称DeepSeek造芯“气到”黄仁勋，无实质信息。",
         "tags": [
           "传闻"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "d8d3c77e3d0f38a71b85a9203888d42a1f30445df74d10f2017bc662f44b2c64": {
+      "created_at": "2026-10-09T06:06:56.588528+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "ben-affleck-ai-nerd-viral",
+        "evidence_status": "reported",
+        "follow_up": "无。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:a856d5ab5647b22a",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "名人八卦类内容，虽提及 AI 电影制作创业公司被 Netflix 收购，但无产品细节、用户反馈或构建过程，属于低信噪比噪音。",
+        "region": "global",
+        "score": 3.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "演员 Ben Affleck 因展示 AI 知识走红网络，属于名人八卦，对做 AI 产品没有可迁移信息。",
+        "tags": [
+          "名人",
+          "娱乐",
+          "噪音"
         ],
         "target_user": "",
         "verticals": []
@@ -84857,6 +85933,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "f8375857fb5a59470e4e67253b783c4b082f1df36ccc07b4350e1b9414a0b280": {
+      "created_at": "2026-10-09T06:06:56.588350+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "anthropic-cyber-mission",
+        "evidence_status": "first_party",
+        "follow_up": "关注是否后续公布具体安全工具、API 或可验证 Demo。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "public_web:sitemap:c4a1f46e5a98744a7c57",
+        "intelligence_type": "business_policy",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Anthropic 官方安全/政策类公告，标题与正文摘要均无具体产品、代码、Demo 或用户反馈信息，属于泛政策方向，对 AI 产品经理的可迁移增量有限，按规则低于 7 分。",
+        "region": "global",
+        "score": 5.5,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Anthropic 发布 Cyber Mission 官方公告，但未披露具体产品功能或落地细节，对做产品的人暂时没有可直接借鉴的内容。",
+        "tags": [
+          "Anthropic",
+          "AI安全",
+          "政策"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "f83f6063643a07445ca93d48dfb3848638cac76c249ccb6da3a25aad0ca117de": {
       "created_at": "2026-09-08T04:34:08.628269+00:00",
       "model": "deepseek-v4-flash",
@@ -86122,6 +87237,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "fb5efdc0bd371f75452107269c4bf1212c5287f17ea3c1f98ad44706eaa2a802": {
+      "created_at": "2026-10-09T06:07:06.924809+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-revenue-shortfall-report",
+        "evidence_status": "reported",
+        "follow_up": "无需跟进，除非官方披露真实数据。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:329009131252e1f0",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "纯营收数字传闻，无产品、无实践证据，对做 AI 产品无直接可迁移增量，属泛行业财务噪音。",
+        "region": "global",
+        "score": 4.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "有报道称 OpenAI 年化收入比此前预期的 700 亿美元少了约 200 亿，属于财务传闻，对做产品没有直接参考价值。",
+        "tags": [
+          "OpenAI",
+          "营收"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "fb8ef6f0664aa323d649e5c9162b9a28cba5ae7e62be6c3cf630d1cffb423a47": {
       "created_at": "2026-08-13T02:46:43.252162+00:00",
       "model": "deepseek-v4-flash",
@@ -86345,6 +87498,46 @@
         "what_it_is": "OpenAI Codex 是一个命令行 AI 编程助手（CLI Agent），能在本地沙盒环境中理解代码、调用工具并自动执行开发任务；本次是其 Rust 重写版本的第 151 次迭代更新。"
       },
       "stage": "deep_analysis"
+    },
+    "fc3560528407738723de064955a6554b4ca5f6eabbb4ebc82cf2cfd01442bc51": {
+      "created_at": "2026-10-09T06:06:56.588429+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "harvey-lab-aa-v1-1",
+        "evidence_status": "reported",
+        "follow_up": "关注 Harvey 的产品功能、客户案例与真实使用反馈。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "public_web:sitemap:99cdd0c5dae41f8bddbe",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Harvey",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "涉及 Harvey（法律垂直 AI 产品）的评测内容，垂直 AI 产品符合兴趣优先级，但输入仅有标题与通用摘要，无产品用法、用户反馈或构建过程细节，证据不足，暂不给 7 分以上。",
+        "region": "global",
+        "score": 6.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Artificial Analysis 发布 Harvey Lab AA v1.1 相关评测，涉及法律垂直 AI 产品，但缺少具体用法和用户反馈细节。",
+        "tags": [
+          "垂直AI",
+          "法律",
+          "Harvey",
+          "模型评测"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
     },
     "fc52c552d68c274bac10469e38653907bda4a70c0a461a7ca13678cf00599eaf": {
       "created_at": "2026-08-27T09:47:22.596880+00:00",
@@ -86839,6 +88032,45 @@
           "零知识证明",
           "图像溯源",
           "内容真实性"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "fd6142220450e045efd8ef265411d804b896328a016bd924a7821e1e38a4d5c2": {
+      "created_at": "2026-10-09T06:06:56.588508+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-fired-safety-researchers-dispute",
+        "evidence_status": "reported",
+        "follow_up": "关注事件是否影响 OpenAI 安全团队与产品发布节奏。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:c7bf63318b0ab261",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI 安全研究员被解雇争议，属于公司治理与安全文化新闻，不涉及产品、构建实践或模型能力，对 AI 产品经理的直接增量低。",
+        "region": "global",
+        "score": 5.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "三名被解雇的 OpenAI 安全研究员公开反驳不当处理敏感信息的指控，警告此事对 AI 安全文化造成寒蝉效应。",
+        "tags": [
+          "OpenAI",
+          "AI安全",
+          "公司治理"
         ],
         "target_user": "",
         "verticals": []
