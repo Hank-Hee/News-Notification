@@ -1,13 +1,13 @@
 {
   "version": 1,
-  "updated_at": "2026-10-09T06:07:56.122038+00:00",
+  "updated_at": "2026-10-10T05:52:02.155465+00:00",
   "products": [
     {
       "product_id": "product-1190f0d5ba25e802",
       "product_name": "ChatGPT Sites",
       "builder_name": "Claire Vo",
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-09",
+      "last_seen": "2026-10-10",
       "occurrence_count": 2,
       "intelligence_type": "builder_insight",
       "evidence_status": "first_party",
@@ -68,61 +68,51 @@
       ]
     },
     {
-      "product_id": "product-743042fdb271c050",
-      "product_name": "Whistle",
-      "builder_name": "gmays",
-      "first_seen": "2026-10-09",
-      "last_seen": "2026-10-09",
+      "product_id": "product-00831000022e0380",
+      "product_name": "Codex",
+      "builder_name": "Simon Willison",
+      "first_seen": "2026-10-10",
+      "last_seen": "2026-10-10",
       "occurrence_count": 1,
-      "intelligence_type": "product_case",
-      "evidence_status": "verified",
-      "target_user": "注重隐私、想摆脱云端依赖的技术用户；想把智能音箱改成本地运行的极客；需要在端侧部署语音功能的开发者",
-      "user_problem": "主流语音转文字要么依赖云端（隐私有风险、要联网），要么本地模型体积巨大（动辄几个 GB）；用户想在小设备上跑语音 AI，但装不下、跑不动",
-      "what_it_is": "一个只有 16.9MB、能在设备本地离线运行的语音转文字（Speech-to-Text）工具，不用联网也能把你说的话转成文字。",
-      "ai_role": "负责把音频信号识别并转换成文字，全程在本地 CPU 运行，不发送数据到外部服务器",
-      "implementation_idea": "未公开具体技术细节。从体积推测，应该是大幅压缩过的声学模型，可能用了知识蒸馏（把大模型的能力教给小模型）或针对特定场景裁剪网络结构，牺牲部分准确率来换取极小体积和本地可运行。",
-      "hands_on_exercise": "30 分钟体验：用你电脑上的麦克风录一段 2 分钟中文或英文语音，同时试用 Whisper（OpenAI 的开源版本，约 1GB）和某个在线 API（如讯飞、百度），对比三者转写结果的字数差异和错误类型，体会「体积 vs 准确率」的 trade-off",
-      "limitations_or_uncertainties": "官方未公开模型架构、训练数据、支持语言列表；用户实测准确率显著低于 1.7B 参数的 Qwen-ASR（170 条消息中正确 70 vs 168 条）；缺少流式输出（边说边出字）；存在特定音频下反复输出「Thank you」的 bug；未确认是否支持中文及多语言",
+      "intelligence_type": "builder_insight",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Simon Willison 用 Codex 语音模式边做饭边聊天，给自己的博客上线了 Newsletters 页面，展示了语音驱动开发的真实工作流。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
       "region": "global",
-      "score": 8.3,
-      "summary": "Cactus Compute 做出 16.9MB 的本地语音转文字工具 Whistle，能在设备上离线跑，用户实测准确率不如大模型但可接管智能音箱做本地处理，适合看小模型端侧产品的取舍。",
-      "title": "Whistle：16.9MB 的本地语音转文字工具，体积小到能塞进智能音箱",
-      "url": "https://cactuscompute.com/blog/whistle",
+      "score": 8.5,
+      "summary": "Simon Willison 用 Codex 语音模式边做饭边聊天，给自己的博客上线了 Newsletters 页面，展示了语音驱动开发的真实工作流。",
+      "title": "A new feature for my blog, built using my voice",
+      "url": "https://simonwillison.net/2026/Oct/9/built-using-my-voice/",
       "sources": [
         {
-          "url": "https://cactuscompute.com/blog/whistle",
-          "title": "Whistle: Speech to Text in 16.9 MB",
-          "source_type": "hackernews",
-          "published_at": "2026-10-08T16:59:39+00:00"
+          "url": "https://simonwillison.net/2026/Oct/9/built-using-my-voice/",
+          "title": "A new feature for my blog, built using my voice",
+          "source_type": "rss",
+          "published_at": "2026-10-09T12:54:06+00:00"
         }
       ],
       "updates": [
         {
-          "update_id": "whistle-stt-16.9mb",
-          "date": "2026-10-09",
-          "title": "Whistle：16.9MB 的本地语音转文字工具，体积小到能塞进智能音箱",
-          "summary": "Cactus Compute 做出 16.9MB 的本地语音转文字工具 Whistle，能在设备上离线跑，用户实测准确率不如大模型但可接管智能音箱做本地处理，适合看小模型端侧产品的取舍。",
-          "score": 8.3,
-          "url": "https://cactuscompute.com/blog/whistle"
+          "update_id": "simonwillison-voice-built-newsletters-page",
+          "date": "2026-10-10",
+          "title": "A new feature for my blog, built using my voice",
+          "summary": "Simon Willison 用 Codex 语音模式边做饭边聊天，给自己的博客上线了 Newsletters 页面，展示了语音驱动开发的真实工作流。",
+          "score": 8.5,
+          "url": "https://simonwillison.net/2026/Oct/9/built-using-my-voice/"
         }
       ],
-      "usage_flow": [
-        "在本地设备（如电脑、智能音箱）安装 Whistle",
-        "对着麦克风说话或导入音频文件",
-        "Whistle 在设备上直接处理，输出文字",
-        "（进阶）接入 Home Assistant 等智能家居系统，替代云端语音助手"
-      ],
-      "learning_points": [
-        "端侧推理（Edge Inference）：模型直接在手机、音箱等小设备上跑，不用连网传数据，隐私更好但性能通常较弱",
-        "模型压缩：通过剪枝、量化、蒸馏等手段把大模型变小，让它能在资源有限的设备上运行",
-        "语音转文字（ASR/STT）：把音频波形变成文字序列，是语音助手的核心第一步"
-      ],
+      "usage_flow": [],
+      "learning_points": [],
       "verticals": [],
       "tags": [
-        "语音",
-        "端侧",
-        "本地推理",
-        "产品案例"
+        "AI 编程",
+        "语音交互",
+        "构建者实践"
       ]
     },
     {
@@ -130,7 +120,7 @@
       "product_name": "Claude",
       "builder_name": "Anthropic News",
       "first_seen": "2026-08-28",
-      "last_seen": "2026-10-09",
+      "last_seen": "2026-10-10",
       "occurrence_count": 3,
       "intelligence_type": "model_capability",
       "evidence_status": "first_party",
@@ -204,6 +194,371 @@
         "企业AI",
         "金融",
         "客户案例"
+      ]
+    },
+    {
+      "product_id": "product-643388b447170f28",
+      "product_name": "Instinct",
+      "builder_name": "Allison Johnson",
+      "first_seen": "2026-10-10",
+      "last_seen": "2026-10-10",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "reported",
+      "target_user": "想要简单、无学习成本地使用 AI 完成日常任务的人；未公开具体画像",
+      "user_problem": "其他 AI 工具界面复杂、需要下载 App 或学习新操作方式，用户不想被功能淹没，只想像发短信一样自然地让 AI 做事",
+      "what_it_is": "一个 2024 年 8 月发布的、靠邀请制和短信界面走红的 AI Agent 产品，没有官网和营销，用户通过发短信与 AI 互动让它执行任务。",
+      "ai_role": "作为 Agent（智能体：能自主规划、调用工具、多步执行任务的 AI，不只是回答问题）接收指令、理解意图、自动完成线上操作或信息处理，通过短信返回结果",
+      "implementation_idea": "未公开。从体验反推，核心是把大语言模型的理解能力和任务执行能力，封装成用户最熟悉的短信交互形式，隐藏所有技术细节，让用户感觉像在跟一个人发短信办事。",
+      "hands_on_exercise": "打开你常用的 ChatGPT/Claude/通义千问，尝试用一条消息让它帮你完成一个多步骤任务（例如：'查明天北京天气，如果下雨就提醒我带伞，并把提醒加到日历'），观察它是否能自动拆解步骤、是否需要你手动确认。对比这种体验和你平时一问一答的区别。",
+      "limitations_or_uncertainties": "未公开具体技术架构（是否调用外部 API、是否使用 RAG、模型来源）；未公开用户规模和留存数据；与 Muse 的竞争结果尚无结论；短信界面的具体功能边界（能做什么、不能做什么）原文未详细展开",
+      "region": "global",
+      "score": 8.2,
+      "summary": "Instinct 用邀请制和短信界面做出热门 AI agent，现在要面对 Muse 的竞争，值得看它如何靠产品体验而非营销获客。",
+      "title": "Instinct：不靠营销的短信 AI Agent，能否顶住 Muse 的竞争",
+      "url": "https://www.theverge.com/tech/1008254/instinct-agent-ai-hands-on-muse-dots",
+      "sources": [
+        {
+          "url": "https://www.theverge.com/tech/1008254/instinct-agent-ai-hands-on-muse-dots",
+          "title": "Instinct was the buzziest AI agent around — can it survive Muse?",
+          "source_type": "rss",
+          "published_at": "2026-10-09T14:00:00+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "instinct-agent-muse-competition",
+          "date": "2026-10-10",
+          "title": "Instinct：不靠营销的短信 AI Agent，能否顶住 Muse 的竞争",
+          "summary": "Instinct 用邀请制和短信界面做出热门 AI agent，现在要面对 Muse 的竞争，值得看它如何靠产品体验而非营销获客。",
+          "score": 8.2,
+          "url": "https://www.theverge.com/tech/1008254/instinct-agent-ai-hands-on-muse-dots"
+        }
+      ],
+      "usage_flow": [
+        "获得邀请后，用手机短信或类似短信的界面与 Instinct 对话",
+        "用自然语言告诉它想做什么（比如查信息、安排事项、执行线上任务）",
+        "Instinct 作为 Agent 自主拆解步骤并执行，过程中可能回复确认或结果",
+        "用户继续对话或结束，无需打开其他应用"
+      ],
+      "learning_points": [
+        "Agent：不只是聊天的 AI，而是能自己决定步骤、调用工具（如搜索、订日历、发邮件）来完成你交给它的任务",
+        "产品形态选择：同样的底层模型，用「短信界面」vs「复杂仪表盘」，面向的是完全不同的用户门槛和场景",
+        "冷启动策略：邀请制+零营销可以在早期筛选高匹配用户、制造稀缺感，但长期能否规模化未验证"
+      ],
+      "verticals": [],
+      "tags": [
+        "AI Agent",
+        "产品案例",
+        "用户体验"
+      ]
+    },
+    {
+      "product_id": "product-68ced6ba1746d62e",
+      "product_name": "Vercel CLI",
+      "builder_name": "Esteban Suárez",
+      "first_seen": "2026-10-10",
+      "last_seen": "2026-10-10",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "reported",
+      "target_user": "使用 Vercel 部署网站的开发者，以及正在构建 AI Agent 工作流的技术团队",
+      "user_problem": "开发者想让 Agent 自动完成",
+      "what_it_is": "Vercel 官方给命令行工具加了一套 Agent 专用接口，让 AI 能帮你查域名、比价格、发起购买，但最终付款必须经你同意。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.0,
+      "summary": "Vercel 让 agent 能通过 CLI 搜索和购买域名，但最终确认权留给人，展示了 agent 权限设计的一种实用模式。",
+      "title": "Vercel CLI 新增 Agent 域名购买能力：可搜索比价，但花钱需人确认",
+      "url": "https://vercel.com/changelog/agents-can-now-buy-domains-with-the-vercel-cli",
+      "sources": [
+        {
+          "url": "https://vercel.com/changelog/agents-can-now-buy-domains-with-the-vercel-cli",
+          "title": "Agents can now buy domains with the Vercel CLI",
+          "source_type": "rss",
+          "published_at": "2026-10-09T20:24:00+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "vercel-cli-agent-buy-domains",
+          "date": "2026-10-10",
+          "title": "Vercel CLI 新增 Agent 域名购买能力：可搜索比价，但花钱需人确认",
+          "summary": "Vercel 让 agent 能通过 CLI 搜索和购买域名，但最终确认权留给人，展示了 agent 权限设计的一种实用模式。",
+          "score": 8.0,
+          "url": "https://vercel.com/changelog/agents-can-now-buy-domains-with-the-vercel-cli"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "AI Agent",
+        "Vercel",
+        "开发者工具"
+      ]
+    },
+    {
+      "product_id": "product-6f781f7fa5f701be",
+      "product_name": "Jev",
+      "builder_name": "Lenny Rachitsky",
+      "first_seen": "2026-10-06",
+      "last_seen": "2026-10-10",
+      "occurrence_count": 2,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Lenny 汇总 8 个 Jev 真实用例和 OpenAI 内部用 ChatGPT Sites 的做法，帮初学者看清 AI 产品实际怎么被用起来。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.2,
+      "summary": "Lenny 汇总 8 个 Jev 真实用例和 OpenAI 内部用 ChatGPT Sites 的做法，帮初学者看清 AI 产品实际怎么被用起来。",
+      "title": "🎙️ How I AI: 8 real Jev use cases + How OpenAI uses ChatGPT Sites (live at DevDay!) + Claire’s DevDay recap",
+      "url": "https://www.lennysnewsletter.com/p/how-i-ai-8-real-jev-use-cases-how",
+      "sources": [
+        {
+          "url": "https://www.lennysnewsletter.com/p/how-i-ai-8-real-jev-use-cases-how",
+          "title": "🎙️ How I AI: 8 real Jev use cases + How OpenAI uses ChatGPT Sites (live at DevDay!) + Claire’s DevDay recap",
+          "source_type": "newsletter",
+          "published_at": "2026-10-05T15:03:24+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "lenny-how-i-ai-jev-usecases",
+          "date": "2026-10-06",
+          "title": "🎙️ How I AI: 8 real Jev use cases + How OpenAI uses ChatGPT Sites (live at DevDay!) + Claire’s DevDay recap",
+          "summary": "Lenny 的播客栏目整理了 Jev 模型的 8 个真实使用案例，并附带 OpenAI DevDay 现场关于 ChatGPT Sites 的分享，适合初学者看模型在真实任务里怎么用。",
+          "score": 7.6,
+          "url": "https://www.lennysnewsletter.com/p/how-i-ai-8-real-jev-use-cases-how"
+        },
+        {
+          "update_id": "lenny-how-i-ai-jev-use-cases-devday-recap",
+          "date": "2026-10-10",
+          "title": "🎙️ How I AI: 8 real Jev use cases + How OpenAI uses ChatGPT Sites (live at DevDay!) + Claire’s DevDay recap",
+          "summary": "Lenny 汇总 8 个 Jev 真实用例和 OpenAI 内部用 ChatGPT Sites 的做法，帮初学者看清 AI 产品实际怎么被用起来。",
+          "score": 7.2,
+          "url": "https://www.lennysnewsletter.com/p/how-i-ai-8-real-jev-use-cases-how"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "用例",
+        "Newsletter",
+        "实践",
+        "ChatGPT Sites",
+        "DevDay"
+      ]
+    },
+    {
+      "product_id": "product-0c61732475a53b24",
+      "product_name": "OpenAI Daybreak",
+      "builder_name": "OpenAI News",
+      "first_seen": "2026-10-10",
+      "last_seen": "2026-10-10",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "OpenAI 发布 Sophos 使用 Daybreak 的案例，称威胁调查时间缩短 96%、52% 的 MDR 案件实现自动化并保留人工审核。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.2,
+      "summary": "OpenAI 发布 Sophos 使用 Daybreak 的案例，称威胁调查时间缩短 96%、52% 的 MDR 案件实现自动化并保留人工审核。",
+      "title": "Sophos cuts threat investigation time by 96% with OpenAI Daybreak",
+      "url": "https://openai.com/index/sophos",
+      "sources": [
+        {
+          "url": "https://openai.com/index/sophos",
+          "title": "Sophos cuts threat investigation time by 96% with OpenAI Daybreak",
+          "source_type": "rss",
+          "published_at": "2026-10-09T07:00:00+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "openai-sophos-daybreak-threat-investigation",
+          "date": "2026-10-10",
+          "title": "Sophos cuts threat investigation time by 96% with OpenAI Daybreak",
+          "summary": "OpenAI 发布 Sophos 使用 Daybreak 的案例，称威胁调查时间缩短 96%、52% 的 MDR 案件实现自动化并保留人工审核。",
+          "score": 7.2,
+          "url": "https://openai.com/index/sophos"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "安全",
+        "企业落地",
+        "客户案例"
+      ]
+    },
+    {
+      "product_id": "product-5593b951d4e0d145",
+      "product_name": "AlphaFold",
+      "builder_name": "Latent Space",
+      "first_seen": "2026-10-10",
+      "last_seen": "2026-10-10",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "DeepMind 和 Biohub 的研究者讨论 AlphaFold 为何没有真正解决蛋白质折叠，帮助理解 AI 在生物医药中的真实能力边界。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.2,
+      "summary": "DeepMind 和 Biohub 的研究者讨论 AlphaFold 为何没有真正解决蛋白质折叠，帮助理解 AI 在生物医药中的真实能力边界。",
+      "title": "Why AlphaFold Didn't Solve Protein Folding — Pushmeet Kohli, Google DeepMind & Sal Candido, Biohub",
+      "url": "https://www.latent.space/p/biohub-deepmind",
+      "sources": [
+        {
+          "url": "https://www.latent.space/p/biohub-deepmind",
+          "title": "Why AlphaFold Didn't Solve Protein Folding — Pushmeet Kohli, Google DeepMind & Sal Candido, Biohub",
+          "source_type": "rss",
+          "published_at": "2026-10-10T00:31:26+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "alphafold-protein-folding-deepmind-biohub",
+          "date": "2026-10-10",
+          "title": "Why AlphaFold Didn't Solve Protein Folding — Pushmeet Kohli, Google DeepMind & Sal Candido, Biohub",
+          "summary": "DeepMind 和 Biohub 的研究者讨论 AlphaFold 为何没有真正解决蛋白质折叠，帮助理解 AI 在生物医药中的真实能力边界。",
+          "score": 7.2,
+          "url": "https://www.latent.space/p/biohub-deepmind"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "AlphaFold",
+        "生物医药",
+        "AI 科研"
+      ]
+    },
+    {
+      "product_id": "product-8aad877a866c2885",
+      "product_name": "Asana Browser Agent",
+      "builder_name": "OpenAI News",
+      "first_seen": "2026-10-10",
+      "last_seen": "2026-10-10",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "OpenAI 称 Asana 用其模型在 Codex 中把浏览器 Agent 成本降低 76 倍、速度提升 5 倍，以向客户提供更强模型。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.0,
+      "summary": "OpenAI 称 Asana 用其模型在 Codex 中把浏览器 Agent 成本降低 76 倍、速度提升 5 倍，以向客户提供更强模型。",
+      "title": "Asana cuts model costs 76x in browser tests with GPT-6.1 Sol",
+      "url": "https://openai.com/index/asana-browser-agent",
+      "sources": [
+        {
+          "url": "https://openai.com/index/asana-browser-agent",
+          "title": "Asana cuts model costs 76x in browser tests with GPT-6.1 Sol",
+          "source_type": "rss",
+          "published_at": "2026-10-09T07:00:00+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "openai-asana-browser-agent-cost-cut",
+          "date": "2026-10-10",
+          "title": "Asana cuts model costs 76x in browser tests with GPT-6.1 Sol",
+          "summary": "OpenAI 称 Asana 用其模型在 Codex 中把浏览器 Agent 成本降低 76 倍、速度提升 5 倍，以向客户提供更强模型。",
+          "score": 7.0,
+          "url": "https://openai.com/index/asana-browser-agent"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "浏览器自动化",
+        "成本优化"
+      ]
+    },
+    {
+      "product_id": "product-743042fdb271c050",
+      "product_name": "Whistle",
+      "builder_name": "gmays",
+      "first_seen": "2026-10-09",
+      "last_seen": "2026-10-09",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "verified",
+      "target_user": "注重隐私、想摆脱云端依赖的技术用户；想把智能音箱改成本地运行的极客；需要在端侧部署语音功能的开发者",
+      "user_problem": "主流语音转文字要么依赖云端（隐私有风险、要联网），要么本地模型体积巨大（动辄几个 GB）；用户想在小设备上跑语音 AI，但装不下、跑不动",
+      "what_it_is": "一个只有 16.9MB、能在设备本地离线运行的语音转文字（Speech-to-Text）工具，不用联网也能把你说的话转成文字。",
+      "ai_role": "负责把音频信号识别并转换成文字，全程在本地 CPU 运行，不发送数据到外部服务器",
+      "implementation_idea": "未公开具体技术细节。从体积推测，应该是大幅压缩过的声学模型，可能用了知识蒸馏（把大模型的能力教给小模型）或针对特定场景裁剪网络结构，牺牲部分准确率来换取极小体积和本地可运行。",
+      "hands_on_exercise": "30 分钟体验：用你电脑上的麦克风录一段 2 分钟中文或英文语音，同时试用 Whisper（OpenAI 的开源版本，约 1GB）和某个在线 API（如讯飞、百度），对比三者转写结果的字数差异和错误类型，体会「体积 vs 准确率」的 trade-off",
+      "limitations_or_uncertainties": "官方未公开模型架构、训练数据、支持语言列表；用户实测准确率显著低于 1.7B 参数的 Qwen-ASR（170 条消息中正确 70 vs 168 条）；缺少流式输出（边说边出字）；存在特定音频下反复输出「Thank you」的 bug；未确认是否支持中文及多语言",
+      "region": "global",
+      "score": 8.3,
+      "summary": "Cactus Compute 做出 16.9MB 的本地语音转文字工具 Whistle，能在设备上离线跑，用户实测准确率不如大模型但可接管智能音箱做本地处理，适合看小模型端侧产品的取舍。",
+      "title": "Whistle：16.9MB 的本地语音转文字工具，体积小到能塞进智能音箱",
+      "url": "https://cactuscompute.com/blog/whistle",
+      "sources": [
+        {
+          "url": "https://cactuscompute.com/blog/whistle",
+          "title": "Whistle: Speech to Text in 16.9 MB",
+          "source_type": "hackernews",
+          "published_at": "2026-10-08T16:59:39+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "whistle-stt-16.9mb",
+          "date": "2026-10-09",
+          "title": "Whistle：16.9MB 的本地语音转文字工具，体积小到能塞进智能音箱",
+          "summary": "Cactus Compute 做出 16.9MB 的本地语音转文字工具 Whistle，能在设备上离线跑，用户实测准确率不如大模型但可接管智能音箱做本地处理，适合看小模型端侧产品的取舍。",
+          "score": 8.3,
+          "url": "https://cactuscompute.com/blog/whistle"
+        }
+      ],
+      "usage_flow": [
+        "在本地设备（如电脑、智能音箱）安装 Whistle",
+        "对着麦克风说话或导入音频文件",
+        "Whistle 在设备上直接处理，输出文字",
+        "（进阶）接入 Home Assistant 等智能家居系统，替代云端语音助手"
+      ],
+      "learning_points": [
+        "端侧推理（Edge Inference）：模型直接在手机、音箱等小设备上跑，不用连网传数据，隐私更好但性能通常较弱",
+        "模型压缩：通过剪枝、量化、蒸馏等手段把大模型变小，让它能在资源有限的设备上运行",
+        "语音转文字（ASR/STT）：把音频波形变成文字序列，是语音助手的核心第一步"
+      ],
+      "verticals": [],
+      "tags": [
+        "语音",
+        "端侧",
+        "本地推理",
+        "产品案例"
       ]
     },
     {
@@ -1943,54 +2298,6 @@
         "科研",
         "材料科学",
         "垂直应用"
-      ]
-    },
-    {
-      "product_id": "product-6f781f7fa5f701be",
-      "product_name": "Jev",
-      "builder_name": "Lenny Rachitsky",
-      "first_seen": "2026-10-06",
-      "last_seen": "2026-10-06",
-      "occurrence_count": 1,
-      "intelligence_type": "builder_insight",
-      "evidence_status": "reported",
-      "target_user": "未公开",
-      "user_problem": "未公开",
-      "what_it_is": "Lenny 的播客栏目整理了 Jev 模型的 8 个真实使用案例，并附带 OpenAI DevDay 现场关于 ChatGPT Sites 的分享，适合初学者看模型在真实任务里怎么用。",
-      "ai_role": "未公开",
-      "implementation_idea": "未公开",
-      "hands_on_exercise": "未公开",
-      "limitations_or_uncertainties": "未公开",
-      "region": "global",
-      "score": 7.6,
-      "summary": "Lenny 的播客栏目整理了 Jev 模型的 8 个真实使用案例，并附带 OpenAI DevDay 现场关于 ChatGPT Sites 的分享，适合初学者看模型在真实任务里怎么用。",
-      "title": "🎙️ How I AI: 8 real Jev use cases + How OpenAI uses ChatGPT Sites (live at DevDay!) + Claire’s DevDay recap",
-      "url": "https://www.lennysnewsletter.com/p/how-i-ai-8-real-jev-use-cases-how",
-      "sources": [
-        {
-          "url": "https://www.lennysnewsletter.com/p/how-i-ai-8-real-jev-use-cases-how",
-          "title": "🎙️ How I AI: 8 real Jev use cases + How OpenAI uses ChatGPT Sites (live at DevDay!) + Claire’s DevDay recap",
-          "source_type": "newsletter",
-          "published_at": "2026-10-05T15:03:24+00:00"
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "lenny-how-i-ai-jev-usecases",
-          "date": "2026-10-06",
-          "title": "🎙️ How I AI: 8 real Jev use cases + How OpenAI uses ChatGPT Sites (live at DevDay!) + Claire’s DevDay recap",
-          "summary": "Lenny 的播客栏目整理了 Jev 模型的 8 个真实使用案例，并附带 OpenAI DevDay 现场关于 ChatGPT Sites 的分享，适合初学者看模型在真实任务里怎么用。",
-          "score": 7.6,
-          "url": "https://www.lennysnewsletter.com/p/how-i-ai-8-real-jev-use-cases-how"
-        }
-      ],
-      "usage_flow": [],
-      "learning_points": [],
-      "verticals": [],
-      "tags": [
-        "用例",
-        "Newsletter",
-        "实践"
       ]
     },
     {
