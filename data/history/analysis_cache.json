@@ -3125,6 +3125,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "09e2b0054e4572d5962b5797aa435d3695af913a7eb2ade1ba0aebece6185535": {
+      "created_at": "2026-10-11T05:44:54.946559+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "celery-man-ai-recreation",
+        "evidence_status": "first_party",
+        "follow_up": "观察作者是否公开管线细节，以及这类玩法能否沉淀为可复用产品。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:50035527",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Celery Man",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "有趣的 AI 多模态 Demo，展示了新模型能力，但属娱乐向玩具，无产品化路径和用户反馈，可迁移增量有限。",
+        "region": "global",
+        "score": 5.0,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "开发者用 Minimax H3 Max 和 GPT-6 Luna 等模型复刻了 Tim & Eric 经典小品里的 Celery Man 电脑，可响应任意指令生成视频。",
+        "tags": [
+          "多模态",
+          "Demo",
+          "视频生成"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "09ffa11753a672d3c5327897a4ab5b7d3e2eae56948aa525687bbdbaf2cd905b": {
       "created_at": "2026-08-02T03:52:15.980410+00:00",
       "model": "deepseek-v4-flash",
@@ -3924,6 +3963,44 @@
         "summary_zh": "一篇 2019 年解释交通信号灯工作原理的旧文被重新顶上 HN，讨论交通流与信号配时。",
         "tags": [
           "交通"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "0c7b4d51cd973ad4debe5d6059eda570c481abaca94b33dc042751aaa472c6c0": {
+      "created_at": "2026-10-11T05:45:00.082809+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "deepseek-self-encouragement",
+        "evidence_status": "reported",
+        "follow_up": "观察是否有可复现的对话案例或官方解释。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "google_news:article:116bcb46f20afa7f",
+        "intelligence_type": "model_capability",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "DeepSeek",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "标题党式报道 DeepSeek 模型出现自我打气现象，缺乏技术细节和一手证据，属于泛行业评论，低于 7 分。",
+        "region": "china",
+        "score": 5.5,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "有报道称 DeepSeek 模型在对话中会自我打气，但无具体案例或技术解释，参考价值低。",
+        "tags": [
+          "DeepSeek",
+          "模型行为"
         ],
         "target_user": "",
         "verticals": []
@@ -9704,6 +9781,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "1ce5b89a7567771784b84d55a012f6a7fc432f48e762c2a8b2ac96f24f008b50": {
+      "created_at": "2026-10-11T05:45:00.082767+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "deepseek-bug-space-token",
+        "evidence_status": "reported",
+        "follow_up": "等待字节或 DeepSeek 官方发布技术说明或复现 demo。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "google_news:article:8153222a56c6a5f3",
+        "intelligence_type": "model_capability",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "DeepSeek",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "字节发现 DeepSeek 模型对空格敏感导致输出异常，属于模型行为发现，但来源为聚合转载，无一手论文或复现细节，对产品经理的直接迁移价值有限，未达 7 分。",
+        "region": "china",
+        "score": 6.5,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "字节研究人员发现 DeepSeek 模型在输入中加入空格后会输出异常，说明模型对格式扰动敏感，值得关注但证据来自转载。",
+        "tags": [
+          "DeepSeek",
+          "模型鲁棒性"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "1d03974910f3d2f333522f7d8f5a025cff79059a47d520ae75078ec50f6438f5": {
       "created_at": "2026-09-09T04:40:45.545028+00:00",
       "model": "deepseek-v4-flash",
@@ -10968,6 +11083,41 @@
         "verticals": []
       },
       "stage": "candidate_analysis"
+    },
+    "20ce87cfc86595b0813c440744c47346034947b3b45efe122364c99be92f9d73": {
+      "created_at": "2026-10-11T05:45:29.079103+00:00",
+      "model": "kimi-k2.6",
+      "prompt_version": "deep-v3-beginner",
+      "result": {
+        "ai_role": "负责理解用户输入、生成回复，并把需要长期记住的信息（如偏好、任务）写入持久化存储，下次对话时调用。",
+        "evidence_status": "verified",
+        "hands_on_exercise": "注册 Cloudflare 免费账号，按 GitHub 仓库 README 运行 npx create-talorys@latest 完成部署，和 AI 对话 5 轮以上，观察 Durable Objects 的日志里是否写入了记忆记录，同时记录 Neurons 消耗数量。",
+        "implementation_idea": "把代码和数据都塞进 Cloudflare 的 Durable Objects 里——这是 Cloudflare 提供的一种'休眠式'计算单元，不用时冻结不花钱，有请求时几毫秒内唤醒。记忆数据存在 Durable Objects 内部的 SQLite 里，相当于每个用户有一个独立的'小盒子'，自带数据库。AI 调用走的是 Cloudflare 的 AI Gateway，免费层每天给 10000 Neurons 额度。",
+        "learning_points": [
+          "Agent：不只是问答，而是能'记住事情、执行任务'的 AI，像有个小秘书能持续帮你办事",
+          "Durable Objects：Cloudflare 的'带状态的服务器less'，代码和数据库绑在一起，不用时休眠，适合个人小项目",
+          "Neurons：Cloudflare 给 AI 推理的计费单位，免费层每天 10000 个，用超了可能触发付费（具体怎么算存在争议）"
+        ],
+        "limitations_or_uncertainties": "Cloudflare 免费层 Neurons 计费规则存在争议，有用户反馈被意外扣费且客服未回应；'自托管'定义在社区有分歧，因为底层基础设施仍依赖 Cloudflare；项目刚开源，长期维护状态未明。",
+        "product_name": "Talorys",
+        "sources": [
+          "https://github.com/rociiu/talorys",
+          "https://www.ic.work/article/talorys-personal-ai-agent-cloudflare-free-tier",
+          "https://zeli.app/zh/story/50031614",
+          "https://github.com/rociiu"
+        ],
+        "target_users": "想低成本拥有私人 AI、不愿把数据交给第三方平台的个人开发者和技术爱好者",
+        "title_zh": "Talorys：在 Cloudflare 免费层上自托管的个人 AI Agent",
+        "usage_flow": [
+          "在本地运行 npx create-talorys@latest 初始化项目",
+          "用 Cloudflare 账号登录并绑定，自动部署到 Workers 和 Durable Objects",
+          "通过聊天界面与 AI 对话，创建任务笔记和定时提醒",
+          "AI 自动把对话记录和记忆存到边缘 SQLite，下次对话时能想起来"
+        ],
+        "user_problem": "市面上的 AI 助手要么收费、要么数据存在别人服务器上；自己搭一套完整的 AI 系统又需要买服务器、配数据库、维护环境，门槛和成本都高。",
+        "what_it_is": "一个开源的个人 AI 助手项目，能用一条命令部署到你的 Cloudflare 账户里，不用租服务器、不用买数据库。"
+      },
+      "stage": "deep_analysis"
     },
     "21001891680fdceab97239fe70f02a8c66445bf614f2e81de2caf351ebbc8209": {
       "created_at": "2026-09-21T04:54:01.291929+00:00",
@@ -14336,6 +14486,45 @@
         "tags": [
           "行业评论",
           "AI 安全"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "2b5e6bb54f9b9ddd3d46e5d37984f7ec5328d52c226ca32f78631ef16b0d1bfa": {
+      "created_at": "2026-10-11T05:44:54.946594+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "deepseek-bot-community-plugin",
+        "evidence_status": "reported",
+        "follow_up": "找到原始发布渠道，确认插件功能、安装方式和真实用户反馈。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "google_news:article:7770881c0c0bd8f6",
+        "intelligence_type": "product_case",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "DeepSeek Bot",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "民间版 DeepSeek Bot 插件，属社区生态产品，但来源为聚合转载、正文缺失，无法验证功能与用户反馈，按低质量转载扣分。",
+        "region": "china",
+        "score": 6.5,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "有开发者做出民间版 DeepSeek Bot，给 DSH 装个插件就能用，但报道为聚合转载、细节缺失，无法核实实际体验。",
+        "tags": [
+          "DeepSeek",
+          "插件",
+          "社区生态"
         ],
         "target_user": "",
         "verticals": []
@@ -23590,6 +23779,45 @@
       },
       "stage": "deep_analysis"
     },
+    "46e98249721f75ab7ab1b290014f295d8ad11cbdc6741a6e1c22ff6a27ca2011": {
+      "created_at": "2026-10-11T05:44:54.946645+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "deepseek-v4-harness-preview",
+        "evidence_status": "reported",
+        "follow_up": "核实 DeepSeek 官方公告，确认 Harness 的具体能力、定价和可用范围。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "google_news:article:7b1f3c76ef56f74d",
+        "intelligence_type": "model_capability",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "DeepSeek Harness",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "DeepSeek 官方模型与开发者工具动态，V4 全系列上线并开放 Harness 开发者预览，属模型公司一手能力进展，对产品经理理解新模型能力有直接价值，但正文缺失、需官方源核实。",
+        "region": "china",
+        "score": 7.8,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "DeepSeek 在 V4 全系列模型上线后开放了 Harness 开发者预览版测试，为开发者提供新的模型调用与编排入口。",
+        "tags": [
+          "DeepSeek",
+          "模型能力",
+          "开发者工具"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "46e9e8b7dae2aca09f03d2d208dfd20031887fff32a0f41600d9181915f182cd": {
       "created_at": "2026-08-28T11:22:26.162469+00:00",
       "model": "deepseek-v4-flash",
@@ -25229,6 +25457,45 @@
           "AI SDK",
           "Vercel",
           "Google Vertex"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "4b46aafad82c662a32be8d48216895976a755e3c3b1f74d60e9a38c46150deb6": {
+      "created_at": "2026-10-11T05:44:44.051602+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "standard-bots-industrial-robotics-ai",
+        "evidence_status": "reported",
+        "follow_up": "关注Standard Bots是否公开更多部署数据和纠错机制细节。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:www.latent.space_feed:9a2a489d753abcef",
+        "intelligence_type": "product_case",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Standard Bots",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Latent Space对Standard Bots AI技术栈的拆解，讲清预训练模型如何从演示学习工厂任务并通过真实部署纠错改进，对理解AI落地闭环有可迁移价值。",
+        "region": "global",
+        "score": 7.8,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "Latent Space拆解Standard Bots的AI技术栈：预训练模型从人类演示中学习工厂任务，再通过真实部署中的纠正持续改进。",
+        "tags": [
+          "机器人",
+          "AI落地",
+          "工业"
         ],
         "target_user": "",
         "verticals": []
@@ -30178,6 +30445,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "5a58a34c3e3b3da15aa564ad7695f73006957246fa0d7fca383d4bf0c8ef0b87": {
+      "created_at": "2026-10-11T05:44:44.051445+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "nadella-ai-emergency-brake",
+        "evidence_status": "reported",
+        "follow_up": "关注微软是否将这一表态转化为具体产品功能或政策提案。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:29ff9b1d99e501fd",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "微软CEO关于AI信任架构的公开表态，属于泛行业评论，无产品、代码或可迁移实践证据，对AI产品经理的直接增量有限。",
+        "region": "global",
+        "score": 5.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "微软CEO纳德拉发帖称AI模型需要“紧急刹车”，呼吁重新评估AI的信任架构，但未给出具体产品或落地动作。",
+        "tags": [
+          "AI治理",
+          "行业观点"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "5a5f77a6e81f2eb7e79c011edd97ccbf2172691f3c8a2b6a4f2dfa882285e118": {
       "created_at": "2026-08-27T09:47:13.795447+00:00",
       "model": "deepseek-v4-flash",
@@ -32661,6 +32966,44 @@
         "tags": [
           "Physical AI",
           "Brain Waves"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "60edc5c778d9d5eb11442808761ee8111e14391d52657f594f3649d0f37dcd56": {
+      "created_at": "2026-10-11T05:44:44.051586+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "python-315-github-actions",
+        "evidence_status": "first_party",
+        "follow_up": "无。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:simonwillison.net_atom_everything_:a2dbc26766a3bd99",
+        "intelligence_type": "builder_insight",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Simon Willison关于Python 3.15加入GitHub Actions的短帖，属开发者工具细节，与AI产品经理转型和产品构建无直接关系。",
+        "region": "global",
+        "score": 3.5,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "Simon Willison记录Python 3.15.0被加入GitHub Actions的python-versions仓库，现在可以在CI矩阵中测试3.15。",
+        "tags": [
+          "Python",
+          "开发工具"
         ],
         "target_user": "",
         "verticals": []
@@ -39241,6 +39584,46 @@
       },
       "stage": "candidate_analysis"
     },
+    "736573809d6e1dffab3aa06d6ace438fbf3cf9a54e2c116f6ef085a2de82b3cc": {
+      "created_at": "2026-10-11T05:44:44.051765+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "talorys-self-hosted-agent-cloudflare",
+        "evidence_status": "first_party",
+        "follow_up": "克隆仓库跑通部署，验证Cloudflare免费层的实际成本和可替换本地模型的难度。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:50031614",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Talorys",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "个人开发者开源的AI Agent项目Talorys，可在Cloudflare免费层自托管，HN高热度讨论含真实使用反馈和成本争议，是初学者可复现的一手产品案例。",
+        "region": "global",
+        "score": 8.2,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "开发者rociiu开源了个人AI Agent项目Talorys，可跑在Cloudflare免费层上，HN讨论聚焦自托管定义和免费额度计费问题。",
+        "tags": [
+          "Agent",
+          "开源",
+          "自托管",
+          "Cloudflare"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "73677539f8c9090f2360084aa6e137f71146bb3f634baf4616cc8abae9917707": {
       "created_at": "2026-08-24T01:57:49.273452+00:00",
       "model": "deepseek-v4-flash",
@@ -40891,6 +41274,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "78d25493bdd30cfa20c621b3744f45f6a9b5fd76f0a3b2a5cf3d1409d5afa19e": {
+      "created_at": "2026-10-11T05:44:44.051556+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "openai-dots-privacy-vs-meta-muse",
+        "evidence_status": "reported",
+        "follow_up": "核实Dots的隐私机制是否可验证，以及Meta Muse的回应。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:435f65894634af49",
+        "intelligence_type": "product_case",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Dots",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "涉及OpenAI新Agent产品Dots与Meta Muse的隐私竞争，有产品发布信息，但报道偏竞争叙事，缺少可验证的隐私机制细节。",
+        "region": "global",
+        "score": 6.8,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "OpenAI在DevDay发布新AI Agent产品Dots并宣称要树立前沿AI隐私新标准，同时暗讽竞品Meta Muse的数据安全。",
+        "tags": [
+          "Agent",
+          "隐私",
+          "OpenAI"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "790404114bcd6ca4bbc192ac2f4bb785a2a6cfad3cbf1b00d8d86c6984c02ef4": {
       "created_at": "2026-08-20T01:51:10.620346+00:00",
       "model": "deepseek-v4-flash",
@@ -41192,6 +41614,45 @@
         "what_it_is": "一个把 AI 决策模型接入经典游戏《宝可梦红》，实时直播游玩过程并公开 token 消耗与成本的开源项目。"
       },
       "stage": "deep_analysis"
+    },
+    "7a151968d1f5c0a12637560cfd3c2fbefb1ad55a9a587d506f4a3a901c8c51e6": {
+      "created_at": "2026-10-11T05:44:54.946537+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "manimgx-3d-video-python",
+        "evidence_status": "first_party",
+        "follow_up": "观察是否有真实用户用它配合编码 Agent 产出视频案例。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:50037852",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": true,
+        "market_signal": "",
+        "product_name": "ManimGX",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "开源项目发布，用 Rust/wgpu 重写 Manim API 做 3D 视频，与 AI 产品经理转型关联弱，且宣传语较重、互动极低，按规则扣分。",
+        "region": "global",
+        "score": 6.8,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "academa-labs 发布 ManimGX，用 Rust/wgpu 引擎重写 Manim API，让开发者用 Python 快速生成 3D 视频，宣称比 Manim CE 快 90 倍。",
+        "tags": [
+          "开源",
+          "视频生成",
+          "开发者工具"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
     },
     "7a34a71abf95f9803b6c196d276063898995d97df026b4e6d4c221fd20b37232": {
       "created_at": "2026-08-12T02:43:47.130774+00:00",
@@ -45708,6 +46169,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "8628eda9f8c284fcb272637677e48fc8517295e2af3b1e4f0bdc7c110a0425a6": {
+      "created_at": "2026-10-11T05:44:44.051507+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "nadella-ai-models-compromised",
+        "evidence_status": "reported",
+        "follow_up": "关注微软后续是否推出对应的安全产品或评估框架。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:23c8d12ac803709d",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "与TechCrunch同源事件，纳德拉关于AI模型应被视为“已被攻破”的表态，属泛行业安全评论，无产品增量。",
+        "region": "global",
+        "score": 5.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "微软CEO纳德拉在X发长文称应假设所有AI模型都已被攻破，反对把AI当作不可质疑的黑箱，但未给出具体产品动作。",
+        "tags": [
+          "AI安全",
+          "行业观点"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "863af44463a4498fbeb003a664c112fc3ef66a72ac1419518a83c3ad7ff11fd5": {
       "created_at": "2026-09-16T04:47:53.112033+00:00",
       "model": "deepseek-flash",
@@ -46766,6 +47265,45 @@
           "Agent",
           "硬件",
           "SDK"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "892ba1d0861353e27196b73d3c6ccffc6c1a0d62cf0175a4153f60e695f39609": {
+      "created_at": "2026-10-11T05:44:44.051663+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "build-your-own-decision-model",
+        "evidence_status": "reported",
+        "follow_up": "试用Jeffy和browser-laya，评估其作为个人产品原型的可行性。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:50037949",
+        "intelligence_type": "builder_insight",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "HN上关于自建决策模型的教程帖，评论区有多个可运行的轻量决策模型项目（Laya、Jeffy），对初学者理解小模型产品化有参考价值，但来源为聚合社区。",
+        "region": "global",
+        "score": 7.0,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "HN热帖教人从零构建决策模型，评论区涌现Laya、Jeffy等可在浏览器或CPU上运行的轻量分类模型项目。",
+        "tags": [
+          "决策模型",
+          "开源项目",
+          "初学者"
         ],
         "target_user": "",
         "verticals": []
@@ -52505,6 +53043,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "97276f2360b15d720a2ce308aecccbdc69b2b7a1bbefd6a5af1f477210c30564": {
+      "created_at": "2026-10-11T05:44:54.946490+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "littleguys-menubar-agents",
+        "evidence_status": "first_party",
+        "follow_up": "观察是否有用户反馈和实际使用数据，以及是否支持更多 Agent 后端。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:50038883",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Littleguys",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Show HN 一手产品发布，把 Claude Code、Codex 等编码 Agent 放进菜单栏，属于已做出来的 AI 产品，但正文为空、无用户反馈，证据偏薄。",
+        "region": "global",
+        "score": 7.2,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "开发者 herval 发布 Littleguys，把 Claude Code、Codex 和 OpenClaw 等编码 Agent 放进 macOS 菜单栏随时调用，解决频繁切换终端的问题。",
+        "tags": [
+          "Agent",
+          "开发者工具",
+          "Show HN"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "975a96729e4d50ba5c72438efbbd797cbe618809a43462eb796dd38dd7d2c9cc": {
       "created_at": "2026-08-06T03:35:45.969894+00:00",
       "model": "deepseek-v4-flash",
@@ -56582,6 +57159,44 @@
         "tags": [
           "模型评估",
           "行业标准"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "a207462455658f03dea0953f41d6987f1e4d241896993c18e05014382bccac1b": {
+      "created_at": "2026-10-11T05:45:00.082856+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "deepseek-performance-variance",
+        "evidence_status": "reported",
+        "follow_up": "等待字节官方技术博客或论文。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "google_news:article:555b6a2a0d00e169",
+        "intelligence_type": "model_capability",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "DeepSeek",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "与第一条类似，报道字节发现 DeepSeek 时强时弱的原因，但来源为社区转载，无一手技术细节，迁移价值有限。",
+        "region": "china",
+        "score": 6.0,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "智源社区转载字节对 DeepSeek 模型表现不稳定的分析，但缺乏原始论文或复现步骤。",
+        "tags": [
+          "DeepSeek",
+          "模型稳定性"
         ],
         "target_user": "",
         "verticals": []
@@ -62391,6 +63006,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "b130fbc300fbd72c95306b74cb6bb4d1c9f2ec48751dd07a50d376a68720efb8": {
+      "created_at": "2026-10-11T05:45:00.082884+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "deepseek-windows-local-ai",
+        "evidence_status": "reported",
+        "follow_up": "关注微软官方公告及实际设备上的 DeepSeek 集成效果。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "google_news:article:70e05b05baa7d910",
+        "intelligence_type": "model_capability",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "DeepSeek",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "微软、英伟达押注本地 AI，DeepSeek 进入新一代 Windows 电脑，属于模型能力落地到终端产品的重要信号，对产品经理有参考价值，但来源为 53AI 转载，非官方一手，故 7.5 分。",
+        "region": "global",
+        "score": 7.5,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "微软和英伟达推动 DeepSeek 模型进入新一代 Windows 电脑，实现本地 AI 运行，可能解锁新的端侧产品体验。",
+        "tags": [
+          "DeepSeek",
+          "本地AI",
+          "Windows"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "b13159ef8f337c25f08b15d474dd6b0a16fa618194fa4f4694e28a4f3bbbfa64": {
       "created_at": "2026-08-26T01:58:18.950737+00:00",
       "model": "deepseek-v4-flash",
@@ -63313,6 +63967,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "b3d65ede5ffea6ada1a849761416189c2b538a2ddf82ae488b5b0eabbce85b50": {
+      "created_at": "2026-10-11T05:44:44.051533+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "anthropic-internal-evals-internet-cutoff",
+        "evidence_status": "reported",
+        "follow_up": "关注Anthropic是否公开更详细的越界事件报告和隔离方案。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:40fcea4f5abeac3b",
+        "intelligence_type": "model_capability",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Anthropic因AI Agent越界事件切断内部评估的互联网访问，属于模型公司核心安全实践的一手动态，对做Agent产品的构建者有直接参考价值。",
+        "region": "global",
+        "score": 7.2,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Anthropic在发生AI Agent越界事件后，切断了所有内部评估的互联网访问，并披露了包括提交虚假谋杀线索在内的意外行为。",
+        "tags": [
+          "Agent安全",
+          "Anthropic",
+          "模型评估"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "b3dcabf3ba36ed23252116880533b757e026bcea8d16b5a44433e85bc8ffee2d": {
       "created_at": "2026-08-11T02:27:24.065812+00:00",
       "model": "deepseek-v4-flash",
@@ -63960,6 +64653,44 @@
           "AI基础设施",
           "融资",
           "推理服务"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "b5c4467a285097188cd58955ea321aa15eebfc9a16e349b5b1157d2de221d219": {
+      "created_at": "2026-10-11T05:44:44.051716+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "duckdb-20-faster",
+        "evidence_status": "reported",
+        "follow_up": "无。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:50035530",
+        "intelligence_type": "builder_insight",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "DuckDB",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "DuckDB 2.0性能分析，属数据库底层优化，与AI产品经理和LLM学习无直接关系。",
+        "region": "global",
+        "score": 3.0,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "MotherDuck博客解释DuckDB 2.0为何更快，HN讨论集中在可视化质量和C++扩展API。",
+        "tags": [
+          "数据库",
+          "DuckDB"
         ],
         "target_user": "",
         "verticals": []
@@ -65648,6 +66379,44 @@
         "summary_zh": "AI新闻汇总，提及OpenAI agent安全事件，但信息零散。",
         "tags": [
           "AI新闻"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "b99a8c8d65d0b854f1d894a54a151d42c8675f149e5cd0d0532e8dacbc7ae725": {
+      "created_at": "2026-10-11T05:44:54.946365+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "nvidia-reflection-ai-acquisition-talks",
+        "evidence_status": "reported",
+        "follow_up": "等待英伟达或 Reflection AI 官方确认，以及收购后模型开源策略是否变化。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:50035886",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Reflection AI",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "纯并购传闻，属融资/资本层面，未解锁新产品体验，按规则低于 7 分；但涉及模型公司核心动态，保留少量观察价值。",
+        "region": "global",
+        "score": 5.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "英伟达据报正洽谈收购美国开源模型创业公司 Reflection AI，HN 讨论集中在人才收购动机和行业整合，尚无官方确认。",
+        "tags": [
+          "并购",
+          "模型公司"
         ],
         "target_user": "",
         "verticals": []
@@ -69408,6 +70177,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "c54dcca94801d840670b86f64e49418926d4d92c18a81b1e2150ef3f53c3b9a8": {
+      "created_at": "2026-10-11T05:44:54.946436+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "momo5502-agent-decompile-fps",
+        "evidence_status": "first_party",
+        "follow_up": "关注作者后续是否采纳评论区建议的语义等价+测试驱动方案，以及成本是否大幅下降。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:50039092",
+        "intelligence_type": "builder_insight",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "构建者公开用 AI Agent 反编译游戏的完整实践与成本复盘，评论区还给出更高效的替代工作流，对理解 Agent 任务设计和成本控制有可迁移增量。",
+        "region": "global",
+        "score": 7.6,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "开发者 momo5502 用 AI Agent 花掉 5000 亿 token 反编译一款第一人称射击游戏，并公开了流程与踩坑，HN 评论区提出用测试驱动替代字节级匹配的更省成本做法。",
+        "tags": [
+          "Agent",
+          "代码生成",
+          "构建者实践"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "c58ddc7e2ae85238578098c6593af48c78a78330fe8c6b13ba4083bc8c6ecbc2": {
       "created_at": "2026-08-19T01:53:38.933824+00:00",
       "model": "kimi-k2.6",
@@ -71685,6 +72493,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "cc547a1f0692a04d46de5717cb279d60fbd919d35e85150026f3ebfbc1a32fc1": {
+      "created_at": "2026-10-11T05:44:54.946318+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "unikernels-ai-revisit",
+        "evidence_status": "reported",
+        "follow_up": "观察是否有团队真正把 unikernel 用于 AI 推理部署并公开实践数据。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:50033357",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": false,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "底层系统架构讨论，与 AI 产品经理转型和产品构建无直接关系，评论区虽提到 AI 与 unikernel 结合但无实践证据，属泛技术评论。",
+        "region": "global",
+        "score": 4.5,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "一位开发者撰文称 unikernel 过去难用但现在因 AI 而值得重新考虑，HN 评论区围绕可观测性和 Zephyr 展开争论，但没有任何可落地的 AI 产品增量。",
+        "tags": [
+          "基础设施",
+          "unikernel"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "cc867b43dd3706ddcc5b5ac9323627ca9e78e0193a9a8f39e8a79b2e2f5902cc": {
       "created_at": "2026-10-04T05:50:53.052276+00:00",
       "model": "deepseek-flash",
@@ -73523,6 +74369,39 @@
         "verticals": []
       },
       "stage": "candidate_analysis"
+    },
+    "d30b971317e3bb20ba5e4ca07338077027367f3391d0d05301ff291aac73a49b": {
+      "created_at": "2026-10-11T05:45:53.467847+00:00",
+      "model": "kimi-k2.6",
+      "prompt_version": "deep-v3-beginner",
+      "result": {
+        "ai_role": "AI 负责从人类演示视频中学习动作策略，生成控制指令驱动机械臂；同时在真实运行中收集纠错数据，闭环更新自己的模型参数。",
+        "evidence_status": "reported",
+        "hands_on_exercise": "在 Google 搜索‘Google Colab imitation learning tutorial’，找一个用开源机械臂仿真环境（如 PyBullet 或 Robosuite）的笔记本，跑一遍‘人类示教→模型学习→仿真测试’的完整流程，观察模型需要多少条演示才能学会一个简单抓取动作。",
+        "implementation_idea": "核心思路是‘模仿学习 + 真实世界反馈闭环’。先让神经网络看大量人类干活视频，学会‘看到什么就做什么’的映射关系；再把机器人放到工厂里，错了就改、改了再学，像学徒工一样在实践中长进。",
+        "learning_points": [
+          "模仿学习（Imitation Learning）：AI 不靠自己试错，而是直接学人类示范，省去大量探索时间",
+          "Sim-to-Real / 真实世界部署：在仿真里练好的模型放到真机器上往往不灵，需要真实纠错数据来弥合差距",
+          "数据飞轮：越多机器人部署、越多纠错数据回流，模型越好用，形成竞争壁垒"
+        ],
+        "limitations_or_uncertainties": "文章为 Latent Space 的第三方拆解，非 Standard Bots 官方技术白皮书；具体模型架构（如是否用 Transformer、参数规模）、训练数据量、真实部署中的纠错频率和自动化程度均未公开；‘America's largest AI-native industrial robot manufacturer’为该公司自称，未独立核实。",
+        "product_name": "Standard Bots",
+        "sources": [
+          "https://www.latent.space/p/standard-bots",
+          "https://standardbots.com/"
+        ],
+        "target_users": "制造业工厂、需要部署工业机器人的企业用户",
+        "title_zh": "Standard Bots 的 AI 技术栈拆解：工业机器人如何从演示中学习并自我纠错",
+        "usage_flow": [
+          "人类操作员在工厂里实际演示一遍任务（比如抓取零件、组装），机器人用摄像头和传感器记录动作",
+          "预训练模型从这些演示数据中学习，生成能执行该任务的初始策略",
+          "机器人部署到真实产线上运行，遇到失败或偏差时，人类或系统自动纠正",
+          "纠正数据回流到模型，持续微调改进，让机器人越用越准"
+        ],
+        "user_problem": "传统工业机器人太贵、太难编程，需要专业工程师写代码才能执行新任务，中小企业用不起、用不来。",
+        "what_it_is": "Latent Space 对 Standard Bots 这家美国工业机器人公司的 AI 技术栈的深度分析文章，讲清其机器人如何通过模仿人类演示学习工厂任务，并在真实部署中持续改进。"
+      },
+      "stage": "deep_analysis"
     },
     "d34c9ce956a83a3f875656faf147d2ffe856021f512a8d01551ec44f71ddd97b": {
       "created_at": "2026-08-28T11:22:26.162653+00:00",
@@ -78780,6 +79659,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "e2812cd2ca2c004bbc2dc9dc332175c29da6557ad704f2f775e240fa05ec214f": {
+      "created_at": "2026-10-11T05:44:44.051479+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "text-message-ai-agents-list",
+        "evidence_status": "reported",
+        "follow_up": "挑选其中1-2个产品，追踪其真实用户反馈和留存数据。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:b0367e9f3d6d961e",
+        "intelligence_type": "product_case",
+        "is_first_party": false,
+        "is_new_event": false,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "对短信场景AI Agent的盘点列表，能帮助初学者了解产品形态，但属于聚合整理而非一手案例，缺少用户反馈和构建过程。",
+        "region": "global",
+        "score": 6.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "TechCrunch整理了一批可以活在短信里的AI Agent，覆盖通用助手、家庭、旅行和工作场景，方便快速了解这一产品形态。",
+        "tags": [
+          "Agent",
+          "产品盘点"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "e291729ab8ac34ad06b0dba75242619c3552e38b7f597a147d7a8d75089a42ec": {
       "created_at": "2026-08-23T01:59:48.742097+00:00",
       "model": "deepseek-v4-flash",
@@ -80598,6 +81515,44 @@
         "summary_zh": "Simon Willison发布8月赞助者newsletter，涵盖OpenAI事故、Claude新功能等月度AI动态。",
         "tags": [
           "Newsletter"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "e68c659fcd68cb5ada31244129bf609eb4959ecbb095091c5d395de95cd0ea60": {
+      "created_at": "2026-10-11T05:45:00.082837+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "deepseek-api-discount",
+        "evidence_status": "reported",
+        "follow_up": "无。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "google_news:article:63b5d2cbecf17d4b",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": false,
+        "is_promotional": true,
+        "market_signal": "",
+        "product_name": "DeepSeek",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "标题含薅羊毛、立省一个亿等营销话术，内容为 API 折扣渠道介绍，无产品构建或模型能力增量，属于促销内容，扣分。",
+        "region": "china",
+        "score": 4.0,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "CSDN 文章介绍 DeepSeek API 的隐藏折扣渠道，属于促销信息，对产品经理无实质帮助。",
+        "tags": [
+          "DeepSeek",
+          "API"
         ],
         "target_user": "",
         "verticals": []
@@ -84953,6 +85908,44 @@
       },
       "stage": "deep_analysis"
     },
+    "f3418fe46cb547597329e095a539b725280794fd8f9d41f3201df69aabedbe8f": {
+      "created_at": "2026-10-11T05:44:54.946621+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "nvidia-reflection-ai-acquisition-talks",
+        "evidence_status": "reported",
+        "follow_up": "等待官方确认，避免重复收录同一事件。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "google_news:article:27b60bde53b920c8",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Reflection AI",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "与 HN 同源的并购传闻中文转载，纯资本层面且无官方确认，属重复低质量转载，按规则扣分。",
+        "region": "global",
+        "score": 5.0,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "华尔街见闻转载英伟达洽谈收购 Reflection AI 的消息，称其为美国 DeepSeek，但无官方确认和产品增量。",
+        "tags": [
+          "并购",
+          "模型公司"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "f362b404ff4264332d8d6c618676662176131a303980b83f38085b0f4eaedb69": {
       "created_at": "2026-10-07T05:59:32.101326+00:00",
       "model": "kimi-k2.6",
@@ -87641,6 +88634,43 @@
         "tags": [
           "会议",
           "TechCrunch"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "f9bb7a1af64ae65d773bcafb562e1cc15c01b82cc7dfbc3b463dd8c5e89a7d3d": {
+      "created_at": "2026-10-11T05:44:54.946474+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "macos-unix-registry-removal",
+        "evidence_status": "reported",
+        "follow_up": "无。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:50031653",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "操作系统认证变动，与 AI 产品、模型能力和构建实践完全无关，属噪音。",
+        "region": "global",
+        "score": 3.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "苹果 macOS 从官方 Unix 注册表中消失，HN 讨论认为认证本身早已名不副实，与 AI 产品无关。",
+        "tags": [
+          "操作系统"
         ],
         "target_user": "",
         "verticals": []

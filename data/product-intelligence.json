@@ -1,13 +1,13 @@
 {
   "version": 1,
-  "updated_at": "2026-10-10T05:52:02.155465+00:00",
+  "updated_at": "2026-10-11T05:45:53.484873+00:00",
   "products": [
     {
       "product_id": "product-1190f0d5ba25e802",
       "product_name": "ChatGPT Sites",
       "builder_name": "Claire Vo",
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-10",
+      "last_seen": "2026-10-11",
       "occurrence_count": 2,
       "intelligence_type": "builder_insight",
       "evidence_status": "first_party",
@@ -68,59 +68,11 @@
       ]
     },
     {
-      "product_id": "product-00831000022e0380",
-      "product_name": "Codex",
-      "builder_name": "Simon Willison",
-      "first_seen": "2026-10-10",
-      "last_seen": "2026-10-10",
-      "occurrence_count": 1,
-      "intelligence_type": "builder_insight",
-      "evidence_status": "first_party",
-      "target_user": "未公开",
-      "user_problem": "未公开",
-      "what_it_is": "Simon Willison 用 Codex 语音模式边做饭边聊天，给自己的博客上线了 Newsletters 页面，展示了语音驱动开发的真实工作流。",
-      "ai_role": "未公开",
-      "implementation_idea": "未公开",
-      "hands_on_exercise": "未公开",
-      "limitations_or_uncertainties": "未公开",
-      "region": "global",
-      "score": 8.5,
-      "summary": "Simon Willison 用 Codex 语音模式边做饭边聊天，给自己的博客上线了 Newsletters 页面，展示了语音驱动开发的真实工作流。",
-      "title": "A new feature for my blog, built using my voice",
-      "url": "https://simonwillison.net/2026/Oct/9/built-using-my-voice/",
-      "sources": [
-        {
-          "url": "https://simonwillison.net/2026/Oct/9/built-using-my-voice/",
-          "title": "A new feature for my blog, built using my voice",
-          "source_type": "rss",
-          "published_at": "2026-10-09T12:54:06+00:00"
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "simonwillison-voice-built-newsletters-page",
-          "date": "2026-10-10",
-          "title": "A new feature for my blog, built using my voice",
-          "summary": "Simon Willison 用 Codex 语音模式边做饭边聊天，给自己的博客上线了 Newsletters 页面，展示了语音驱动开发的真实工作流。",
-          "score": 8.5,
-          "url": "https://simonwillison.net/2026/Oct/9/built-using-my-voice/"
-        }
-      ],
-      "usage_flow": [],
-      "learning_points": [],
-      "verticals": [],
-      "tags": [
-        "AI 编程",
-        "语音交互",
-        "构建者实践"
-      ]
-    },
-    {
       "product_id": "product-8bf44d7619edcd4e",
       "product_name": "Claude",
       "builder_name": "Anthropic News",
       "first_seen": "2026-08-28",
-      "last_seen": "2026-10-10",
+      "last_seen": "2026-10-11",
       "occurrence_count": 3,
       "intelligence_type": "model_capability",
       "evidence_status": "first_party",
@@ -194,6 +146,341 @@
         "企业AI",
         "金融",
         "客户案例"
+      ]
+    },
+    {
+      "product_id": "product-67c3fc7d7b1fb290",
+      "product_name": "Talorys",
+      "builder_name": "rociiu",
+      "first_seen": "2026-10-11",
+      "last_seen": "2026-10-11",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "verified",
+      "target_user": "想低成本拥有私人 AI、不愿把数据交给第三方平台的个人开发者和技术爱好者",
+      "user_problem": "市面上的 AI 助手要么收费、要么数据存在别人服务器上；自己搭一套完整的 AI 系统又需要买服务器、配数据库、维护环境，门槛和成本都高。",
+      "what_it_is": "一个开源的个人 AI 助手项目，能用一条命令部署到你的 Cloudflare 账户里，不用租服务器、不用买数据库。",
+      "ai_role": "负责理解用户输入、生成回复，并把需要长期记住的信息（如偏好、任务）写入持久化存储，下次对话时调用。",
+      "implementation_idea": "把代码和数据都塞进 Cloudflare 的 Durable Objects 里——这是 Cloudflare 提供的一种'休眠式'计算单元，不用时冻结不花钱，有请求时几毫秒内唤醒。记忆数据存在 Durable Objects 内部的 SQLite 里，相当于每个用户有一个独立的'小盒子'，自带数据库。AI 调用走的是 Cloudflare 的 AI Gateway，免费层每天给 10000 Neurons 额度。",
+      "hands_on_exercise": "注册 Cloudflare 免费账号，按 GitHub 仓库 README 运行 npx create-talorys@latest 完成部署，和 AI 对话 5 轮以上，观察 Durable Objects 的日志里是否写入了记忆记录，同时记录 Neurons 消耗数量。",
+      "limitations_or_uncertainties": "Cloudflare 免费层 Neurons 计费规则存在争议，有用户反馈被意外扣费且客服未回应；'自托管'定义在社区有分歧，因为底层基础设施仍依赖 Cloudflare；项目刚开源，长期维护状态未明。",
+      "region": "global",
+      "score": 8.2,
+      "summary": "开发者rociiu开源了个人AI Agent项目Talorys，可跑在Cloudflare免费层上，HN讨论聚焦自托管定义和免费额度计费问题。",
+      "title": "Talorys：在 Cloudflare 免费层上自托管的个人 AI Agent",
+      "url": "https://github.com/rociiu/talorys",
+      "sources": [
+        {
+          "url": "https://github.com/rociiu/talorys",
+          "title": "Talorys – A self-hosted personal AI agent on Cloudflare's free tier",
+          "source_type": "hackernews",
+          "published_at": "2026-10-10T10:52:09+00:00"
+        },
+        {
+          "url": "https://www.ic.work/article/talorys-personal-ai-agent-cloudflare-free-tier",
+          "title": "Talorys 跑在Cloudflare：0元个人AI与10000 Neurons配额 - ic.work",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://zeli.app/zh/story/50031614",
+          "title": "Talorys ：在Cloudflare免费层自建个人AI | Zeli",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "talorys-self-hosted-agent-cloudflare",
+          "date": "2026-10-11",
+          "title": "Talorys：在 Cloudflare 免费层上自托管的个人 AI Agent",
+          "summary": "开发者rociiu开源了个人AI Agent项目Talorys，可跑在Cloudflare免费层上，HN讨论聚焦自托管定义和免费额度计费问题。",
+          "score": 8.2,
+          "url": "https://github.com/rociiu/talorys"
+        }
+      ],
+      "usage_flow": [
+        "在本地运行 npx create-talorys@latest 初始化项目",
+        "用 Cloudflare 账号登录并绑定，自动部署到 Workers 和 Durable Objects",
+        "通过聊天界面与 AI 对话，创建任务笔记和定时提醒",
+        "AI 自动把对话记录和记忆存到边缘 SQLite，下次对话时能想起来"
+      ],
+      "learning_points": [
+        "Agent：不只是问答，而是能'记住事情、执行任务'的 AI，像有个小秘书能持续帮你办事",
+        "Durable Objects：Cloudflare 的'带状态的服务器less'，代码和数据库绑在一起，不用时休眠，适合个人小项目",
+        "Neurons：Cloudflare 给 AI 推理的计费单位，免费层每天 10000 个，用超了可能触发付费（具体怎么算存在争议）"
+      ],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "开源",
+        "自托管",
+        "Cloudflare"
+      ]
+    },
+    {
+      "product_id": "product-079759eb44953975",
+      "product_name": "DeepSeek Harness",
+      "builder_name": "财联社",
+      "first_seen": "2026-08-16",
+      "last_seen": "2026-10-11",
+      "occurrence_count": 2,
+      "intelligence_type": "model_capability",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "DeepSeek 在 V4 全系列模型上线后开放了 Harness 开发者预览版测试，为开发者提供新的模型调用与编排入口。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "china",
+      "score": 7.8,
+      "summary": "DeepSeek 在 V4 全系列模型上线后开放了 Harness 开发者预览版测试，为开发者提供新的模型调用与编排入口。",
+      "title": "V4全系列模型上线后，DeepSeek Harness开发者预览版开放测试 - 财联社",
+      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE4wd0JWNXNkT3NmUy1UV09ldm1iSXY3dTllQ1o1ZFg5MFZPS1BRY3RCTUJLc05UYWJTb1R6VHhoT0NXM3hJQU5xLQ?oc=5",
+      "sources": [
+        {
+          "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE4wd0JWNXNkT3NmUy1UV09ldm1iSXY3dTllQ1o1ZFg5MFZPS1BRY3RCTUJLc05UYWJTb1R6VHhoT0NXM3hJQU5xLQ?oc=5",
+          "title": "V4全系列模型上线后，DeepSeek Harness开发者预览版开放测试 - 财联社",
+          "source_type": "google_news",
+          "published_at": "2026-08-15T17:50:46+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "deepseek-harness-preview",
+          "date": "2026-08-16",
+          "title": "V4全系列模型上线后，DeepSeek Harness开发者预览版开放测试 - 财联社",
+          "summary": "DeepSeek 在 V4 全系列模型上线后开放 Harness 开发者预览版测试，值得关注其智能体框架能力。",
+          "score": 8.0,
+          "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE4wd0JWNXNkT3NmUy1UV09ldm1iSXY3dTllQ1o1ZFg5MFZPS1BRY3RCTUJLc05UYWJTb1R6VHhoT0NXM3hJQU5xLQ?oc=5"
+        },
+        {
+          "update_id": "deepseek-v4-harness-preview",
+          "date": "2026-10-11",
+          "title": "V4全系列模型上线后，DeepSeek Harness开发者预览版开放测试 - 财联社",
+          "summary": "DeepSeek 在 V4 全系列模型上线后开放了 Harness 开发者预览版测试，为开发者提供新的模型调用与编排入口。",
+          "score": 7.8,
+          "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE4wd0JWNXNkT3NmUy1UV09ldm1iSXY3dTllQ1o1ZFg5MFZPS1BRY3RCTUJLc05UYWJTb1R6VHhoT0NXM3hJQU5xLQ?oc=5"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "DeepSeek",
+        "智能体",
+        "开发者预览",
+        "模型能力",
+        "开发者工具"
+      ]
+    },
+    {
+      "product_id": "product-066063df38f9e9af",
+      "product_name": "Standard Bots",
+      "builder_name": "Richard MacManus",
+      "first_seen": "2026-10-11",
+      "last_seen": "2026-10-11",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "reported",
+      "target_user": "制造业工厂、需要部署工业机器人的企业用户",
+      "user_problem": "传统工业机器人太贵、太难编程，需要专业工程师写代码才能执行新任务，中小企业用不起、用不来。",
+      "what_it_is": "Latent Space 对 Standard Bots 这家美国工业机器人公司的 AI 技术栈的深度分析文章，讲清其机器人如何通过模仿人类演示学习工厂任务，并在真实部署中持续改进。",
+      "ai_role": "AI 负责从人类演示视频中学习动作策略，生成控制指令驱动机械臂；同时在真实运行中收集纠错数据，闭环更新自己的模型参数。",
+      "implementation_idea": "核心思路是‘模仿学习 + 真实世界反馈闭环’。先让神经网络看大量人类干活视频，学会‘看到什么就做什么’的映射关系；再把机器人放到工厂里，错了就改、改了再学，像学徒工一样在实践中长进。",
+      "hands_on_exercise": "在 Google 搜索‘Google Colab imitation learning tutorial’，找一个用开源机械臂仿真环境（如 PyBullet 或 Robosuite）的笔记本，跑一遍‘人类示教→模型学习→仿真测试’的完整流程，观察模型需要多少条演示才能学会一个简单抓取动作。",
+      "limitations_or_uncertainties": "文章为 Latent Space 的第三方拆解，非 Standard Bots 官方技术白皮书；具体模型架构（如是否用 Transformer、参数规模）、训练数据量、真实部署中的纠错频率和自动化程度均未公开；‘America's largest AI-native industrial robot manufacturer’为该公司自称，未独立核实。",
+      "region": "global",
+      "score": 7.8,
+      "summary": "Latent Space拆解Standard Bots的AI技术栈：预训练模型从人类演示中学习工厂任务，再通过真实部署中的纠正持续改进。",
+      "title": "Standard Bots 的 AI 技术栈拆解：工业机器人如何从演示中学习并自我纠错",
+      "url": "https://www.latent.space/p/standard-bots",
+      "sources": [
+        {
+          "url": "https://www.latent.space/p/standard-bots",
+          "title": "Building AI for Reliable Execution: Lessons From Industrial Robotics",
+          "source_type": "rss",
+          "published_at": "2026-10-10T14:04:11+00:00"
+        },
+        {
+          "url": "https://standardbots.com/",
+          "title": "Standard Bots",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "standard-bots-industrial-robotics-ai",
+          "date": "2026-10-11",
+          "title": "Standard Bots 的 AI 技术栈拆解：工业机器人如何从演示中学习并自我纠错",
+          "summary": "Latent Space拆解Standard Bots的AI技术栈：预训练模型从人类演示中学习工厂任务，再通过真实部署中的纠正持续改进。",
+          "score": 7.8,
+          "url": "https://www.latent.space/p/standard-bots"
+        }
+      ],
+      "usage_flow": [
+        "人类操作员在工厂里实际演示一遍任务（比如抓取零件、组装），机器人用摄像头和传感器记录动作",
+        "预训练模型从这些演示数据中学习，生成能执行该任务的初始策略",
+        "机器人部署到真实产线上运行，遇到失败或偏差时，人类或系统自动纠正",
+        "纠正数据回流到模型，持续微调改进，让机器人越用越准"
+      ],
+      "learning_points": [
+        "模仿学习（Imitation Learning）：AI 不靠自己试错，而是直接学人类示范，省去大量探索时间",
+        "Sim-to-Real / 真实世界部署：在仿真里练好的模型放到真机器上往往不灵，需要真实纠错数据来弥合差距",
+        "数据飞轮：越多机器人部署、越多纠错数据回流，模型越好用，形成竞争壁垒"
+      ],
+      "verticals": [],
+      "tags": [
+        "机器人",
+        "AI落地",
+        "工业"
+      ]
+    },
+    {
+      "product_id": "product-d7b21310aaf5224d",
+      "product_name": "DeepSeek",
+      "builder_name": "53AI",
+      "first_seen": "2026-10-11",
+      "last_seen": "2026-10-11",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "微软和英伟达推动 DeepSeek 模型进入新一代 Windows 电脑，实现本地 AI 运行，可能解锁新的端侧产品体验。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.5,
+      "summary": "微软和英伟达推动 DeepSeek 模型进入新一代 Windows 电脑，实现本地 AI 运行，可能解锁新的端侧产品体验。",
+      "title": "微软、英伟达押注本地 AI：DeepSeek 进入新一代 Windows 电脑 - 53AI",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBIRGFLaHhtQVVOb0tkWVVNWFExak1KMkZVdUpScDVrckNfbjRBWEllNHdhazRvQkNBOTRnWWMwVkUtbUFYUjkwejNUNU4yV1pIbFowNnRQdjRPQUlJVVBPRWRiRUpzQzF2MUtLMA?oc=5",
+      "sources": [
+        {
+          "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBIRGFLaHhtQVVOb0tkWVVNWFExak1KMkZVdUpScDVrckNfbjRBWEllNHdhazRvQkNBOTRnWWMwVkUtbUFYUjkwejNUNU4yV1pIbFowNnRQdjRPQUlJVVBPRWRiRUpzQzF2MUtLMA?oc=5",
+          "title": "微软、英伟达押注本地 AI：DeepSeek 进入新一代 Windows 电脑 - 53AI",
+          "source_type": "google_news",
+          "published_at": "2026-10-10T09:02:24+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "deepseek-windows-local-ai",
+          "date": "2026-10-11",
+          "title": "微软、英伟达押注本地 AI：DeepSeek 进入新一代 Windows 电脑 - 53AI",
+          "summary": "微软和英伟达推动 DeepSeek 模型进入新一代 Windows 电脑，实现本地 AI 运行，可能解锁新的端侧产品体验。",
+          "score": 7.5,
+          "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBIRGFLaHhtQVVOb0tkWVVNWFExak1KMkZVdUpScDVrckNfbjRBWEllNHdhazRvQkNBOTRnWWMwVkUtbUFYUjkwejNUNU4yV1pIbFowNnRQdjRPQUlJVVBPRWRiRUpzQzF2MUtLMA?oc=5"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "DeepSeek",
+        "本地AI",
+        "Windows"
+      ]
+    },
+    {
+      "product_id": "product-aba205b37faa00e7",
+      "product_name": "Littleguys",
+      "builder_name": "herval",
+      "first_seen": "2026-10-11",
+      "last_seen": "2026-10-11",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "开发者 herval 发布 Littleguys，把 Claude Code、Codex 和 OpenClaw 等编码 Agent 放进 macOS 菜单栏随时调用，解决频繁切换终端的问题。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.2,
+      "summary": "开发者 herval 发布 Littleguys，把 Claude Code、Codex 和 OpenClaw 等编码 Agent 放进 macOS 菜单栏随时调用，解决频繁切换终端的问题。",
+      "title": "Show HN: Littleguys – Claude Code, Codex and OpenClaw agents in your menu bar",
+      "url": "https://littleguys.hervalicio.us/",
+      "sources": [
+        {
+          "url": "https://littleguys.hervalicio.us/",
+          "title": "Show HN: Littleguys – Claude Code, Codex and OpenClaw agents in your menu bar",
+          "source_type": "hackernews",
+          "published_at": "2026-10-11T01:19:18+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "littleguys-menubar-agents",
+          "date": "2026-10-11",
+          "title": "Show HN: Littleguys – Claude Code, Codex and OpenClaw agents in your menu bar",
+          "summary": "开发者 herval 发布 Littleguys，把 Claude Code、Codex 和 OpenClaw 等编码 Agent 放进 macOS 菜单栏随时调用，解决频繁切换终端的问题。",
+          "score": 7.2,
+          "url": "https://littleguys.hervalicio.us/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "开发者工具",
+        "Show HN"
+      ]
+    },
+    {
+      "product_id": "product-00831000022e0380",
+      "product_name": "Codex",
+      "builder_name": "Simon Willison",
+      "first_seen": "2026-10-10",
+      "last_seen": "2026-10-10",
+      "occurrence_count": 1,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Simon Willison 用 Codex 语音模式边做饭边聊天，给自己的博客上线了 Newsletters 页面，展示了语音驱动开发的真实工作流。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.5,
+      "summary": "Simon Willison 用 Codex 语音模式边做饭边聊天，给自己的博客上线了 Newsletters 页面，展示了语音驱动开发的真实工作流。",
+      "title": "A new feature for my blog, built using my voice",
+      "url": "https://simonwillison.net/2026/Oct/9/built-using-my-voice/",
+      "sources": [
+        {
+          "url": "https://simonwillison.net/2026/Oct/9/built-using-my-voice/",
+          "title": "A new feature for my blog, built using my voice",
+          "source_type": "rss",
+          "published_at": "2026-10-09T12:54:06+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "simonwillison-voice-built-newsletters-page",
+          "date": "2026-10-10",
+          "title": "A new feature for my blog, built using my voice",
+          "summary": "Simon Willison 用 Codex 语音模式边做饭边聊天，给自己的博客上线了 Newsletters 页面，展示了语音驱动开发的真实工作流。",
+          "score": 8.5,
+          "url": "https://simonwillison.net/2026/Oct/9/built-using-my-voice/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "AI 编程",
+        "语音交互",
+        "构建者实践"
       ]
     },
     {
@@ -18777,54 +19064,6 @@
         "Agent",
         "React",
         "harness"
-      ]
-    },
-    {
-      "product_id": "product-079759eb44953975",
-      "product_name": "DeepSeek Harness",
-      "builder_name": "财联社",
-      "first_seen": "2026-08-16",
-      "last_seen": "2026-08-16",
-      "occurrence_count": 1,
-      "intelligence_type": "model_capability",
-      "evidence_status": "reported",
-      "target_user": "未公开",
-      "user_problem": "未公开",
-      "what_it_is": "DeepSeek 在 V4 全系列模型上线后开放 Harness 开发者预览版测试，值得关注其智能体框架能力。",
-      "ai_role": "未公开",
-      "implementation_idea": "未公开",
-      "hands_on_exercise": "未公开",
-      "limitations_or_uncertainties": "未公开",
-      "region": "china",
-      "score": 8.0,
-      "summary": "DeepSeek 在 V4 全系列模型上线后开放 Harness 开发者预览版测试，值得关注其智能体框架能力。",
-      "title": "V4全系列模型上线后，DeepSeek Harness开发者预览版开放测试 - 财联社",
-      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE4wd0JWNXNkT3NmUy1UV09ldm1iSXY3dTllQ1o1ZFg5MFZPS1BRY3RCTUJLc05UYWJTb1R6VHhoT0NXM3hJQU5xLQ?oc=5",
-      "sources": [
-        {
-          "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE4wd0JWNXNkT3NmUy1UV09ldm1iSXY3dTllQ1o1ZFg5MFZPS1BRY3RCTUJLc05UYWJTb1R6VHhoT0NXM3hJQU5xLQ?oc=5",
-          "title": "V4全系列模型上线后，DeepSeek Harness开发者预览版开放测试 - 财联社",
-          "source_type": "google_news",
-          "published_at": "2026-08-15T17:50:46+00:00"
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "deepseek-harness-preview",
-          "date": "2026-08-16",
-          "title": "V4全系列模型上线后，DeepSeek Harness开发者预览版开放测试 - 财联社",
-          "summary": "DeepSeek 在 V4 全系列模型上线后开放 Harness 开发者预览版测试，值得关注其智能体框架能力。",
-          "score": 8.0,
-          "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE4wd0JWNXNkT3NmUy1UV09ldm1iSXY3dTllQ1o1ZFg5MFZPS1BRY3RCTUJLc05UYWJTb1R6VHhoT0NXM3hJQU5xLQ?oc=5"
-        }
-      ],
-      "usage_flow": [],
-      "learning_points": [],
-      "verticals": [],
-      "tags": [
-        "DeepSeek",
-        "智能体",
-        "开发者预览"
       ]
     },
     {
