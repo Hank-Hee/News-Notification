@@ -1,13 +1,13 @@
 {
   "version": 1,
-  "updated_at": "2026-10-11T05:45:53.484873+00:00",
+  "updated_at": "2026-10-12T05:56:33.172552+00:00",
   "products": [
     {
       "product_id": "product-1190f0d5ba25e802",
       "product_name": "ChatGPT Sites",
       "builder_name": "Claire Vo",
       "first_seen": "2026-10-06",
-      "last_seen": "2026-10-11",
+      "last_seen": "2026-10-12",
       "occurrence_count": 2,
       "intelligence_type": "builder_insight",
       "evidence_status": "first_party",
@@ -72,7 +72,7 @@
       "product_name": "Claude",
       "builder_name": "Anthropic News",
       "first_seen": "2026-08-28",
-      "last_seen": "2026-10-11",
+      "last_seen": "2026-10-12",
       "occurrence_count": 3,
       "intelligence_type": "model_capability",
       "evidence_status": "first_party",
@@ -146,6 +146,229 @@
         "企业AI",
         "金融",
         "客户案例"
+      ]
+    },
+    {
+      "product_id": "product-ec04f9a0015c68c4",
+      "product_name": "Pensieve",
+      "builder_name": "TedHaley",
+      "first_seen": "2026-10-12",
+      "last_seen": "2026-10-12",
+      "occurrence_count": 1,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "开发者 TedHaley 做了 Pensieve，用本地索引帮 AI 编程 agent 少跑几轮 grep、少烧 token，适合想理解 agent 成本痛点的初学者看。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.6,
+      "summary": "开发者 TedHaley 做了 Pensieve，用本地索引帮 AI 编程 agent 少跑几轮 grep、少烧 token，适合想理解 agent 成本痛点的初学者看。",
+      "title": "Local Indexing to reduce tool calling and token usage",
+      "url": "https://tedhaley.ca/pensieve/",
+      "sources": [
+        {
+          "url": "https://tedhaley.ca/pensieve/",
+          "title": "Local Indexing to reduce tool calling and token usage",
+          "source_type": "hackernews",
+          "published_at": "2026-10-12T00:03:53+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "pensieve-local-indexing-agent-tool-calling",
+          "date": "2026-10-12",
+          "title": "Local Indexing to reduce tool calling and token usage",
+          "summary": "开发者 TedHaley 做了 Pensieve，用本地索引帮 AI 编程 agent 少跑几轮 grep、少烧 token，适合想理解 agent 成本痛点的初学者看。",
+          "score": 7.6,
+          "url": "https://tedhaley.ca/pensieve/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "开发者工具",
+        "Token成本"
+      ]
+    },
+    {
+      "product_id": "product-dc3de15380e97cfd",
+      "product_name": "Plimsoll",
+      "builder_name": "cagster",
+      "first_seen": "2026-10-12",
+      "last_seen": "2026-10-12",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "在自己项目里用 AI Agent 写代码并自动运行的开发者，尤其担心 Agent 误操作或恶意读写本机数据的人",
+      "user_problem": "Agent 自动写代码并执行时，开发者担心三件事：①代码拿到 API 密钥后泄露或滥用；②不知道 Agent 到底跑了什么、跑的是不是被篡改过的代码；③本地测试和上线生产要用两套不同的沙箱环境，配置混乱",
+      "what_it_is": "一个用 Go 写的自托管守护进程，专门用来隔离执行 AI Agent 生成的代码，不让代码碰到你的 API 密钥，同时留下可校验的运行记录。",
+      "ai_role": "Agent 负责生成要执行的代码，但不直接运行代码、不接触 API 密钥；运行和鉴权全部由 Plimsoll 接管",
+      "implementation_idea": "Plimsoll 像是一个'中间人管家'：Agent 只交代码不交钥匙，Plimsoll 拿着钥匙在隔离房间里帮代码办事，同时拍照存档（checksum）备查。本地和云端房间用同一份门卡配置，想换房间改个地址就行。",
+      "hands_on_exercise": "30 分钟：在本地用 Docker 起一个最小沙箱容器，写一段 Python 脚本尝试读取 /etc/passwd 和访问环境变量中的假 API 密钥，观察容器隔离效果；再用 Plimsoll 的 GitHub 仓库 README 尝试编译运行，看配置文件中 local/cloud 切换的字段长什么样。",
+      "limitations_or_uncertainties": "具体支持哪些沙箱后端（Docker、Firecracker、云端 VM？）未公开完整列表；HTTP 凭据注入反向代理的实现细节未公开；社区热度低（Show HN 仅 15 分），实际生产验证案例未公开；与 exe.dev 等替代方案的性能对比未公开。",
+      "region": "global",
+      "score": 7.4,
+      "summary": "开发者 cagster 做了自托管沙箱 Plimsoll，让 AI agent 写的代码在隔离环境里运行、不接触 API 密钥并留下可校验记录，适合关注 agent 安全的人看。",
+      "title": "Plimsoll：让 AI Agent 写的代码在隔离沙箱里安全运行",
+      "url": "https://github.com/plimsollmark/plimsoll",
+      "sources": [
+        {
+          "url": "https://github.com/plimsollmark/plimsoll",
+          "title": "Show HN: Plimsoll, a self-hosted sandbox for code your AI agent writes",
+          "source_type": "hackernews",
+          "published_at": "2026-10-11T23:47:59+00:00"
+        },
+        {
+          "url": "https://grokipedia.com/page/Plimsoll_(shoe)",
+          "title": "Plimsoll (shoe)",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://oceanservice.noaa.gov/facts/plimsoll-line.html",
+          "title": "What is a Plimsoll line?",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "plimsoll-self-hosted-agent-sandbox",
+          "date": "2026-10-12",
+          "title": "Plimsoll：让 AI Agent 写的代码在隔离沙箱里安全运行",
+          "summary": "开发者 cagster 做了自托管沙箱 Plimsoll，让 AI agent 写的代码在隔离环境里运行、不接触 API 密钥并留下可校验记录，适合关注 agent 安全的人看。",
+          "score": 7.4,
+          "url": "https://github.com/plimsollmark/plimsoll"
+        }
+      ],
+      "usage_flow": [
+        "在本机或服务器启动 Plimsoll Go 守护进程，配置好沙箱（本地容器或云端实例）",
+        "Agent 生成代码后，通过 Plimsoll 提交到沙箱执行，API 调用由 Plimsoll 代发、不传入密钥",
+        "Plimsoll 记录每次运行的代码内容和 checksum，写入你的日志系统",
+        "改一行配置即可从本地沙箱切换到云端沙箱，直接上线"
+      ],
+      "learning_points": [
+        "Agent：能自主决定并执行多步任务的 AI 系统，不只是聊天，还能写代码、调接口",
+        "沙箱（Sandbox）：一个受限的隔离执行环境，代码在里面跑，碰不到外面的文件和密钥",
+        "Checksum：像文件的'指纹'，用来验证代码有没有被中途篡改过"
+      ],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "沙箱",
+        "安全",
+        "开发者工具"
+      ]
+    },
+    {
+      "product_id": "product-8ac3d18195979f71",
+      "product_name": "Google Labs",
+      "builder_name": "Lenny Rachitsky",
+      "first_seen": "2026-10-12",
+      "last_seen": "2026-10-12",
+      "occurrence_count": 1,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Google Labs 负责人 Josh Woodward 在 Lenny 播客里讲公司为什么要像实验室团队一样运作，对想学 AI 产品方法的人有参考价值，但正文缺少可操作细节。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.2,
+      "summary": "Google Labs 负责人 Josh Woodward 在 Lenny 播客里讲公司为什么要像实验室团队一样运作，对想学 AI 产品方法的人有参考价值，但正文缺少可操作细节。",
+      "title": "Why every company now needs to think and operate like a lab team | Josh Woodward (Google Labs, Gemini, AI Studio)",
+      "url": "https://www.lennysnewsletter.com/p/why-every-company-now-needs-to-think",
+      "sources": [
+        {
+          "url": "https://www.lennysnewsletter.com/p/why-every-company-now-needs-to-think",
+          "title": "Why every company now needs to think and operate like a lab team | Josh Woodward (Google Labs, Gemini, AI Studio)",
+          "source_type": "newsletter",
+          "published_at": "2026-10-11T12:31:59+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "lenny-josh-woodward-lab-team",
+          "date": "2026-10-12",
+          "title": "Why every company now needs to think and operate like a lab team | Josh Woodward (Google Labs, Gemini, AI Studio)",
+          "summary": "Google Labs 负责人 Josh Woodward 在 Lenny 播客里讲公司为什么要像实验室团队一样运作，对想学 AI 产品方法的人有参考价值，但正文缺少可操作细节。",
+          "score": 7.2,
+          "url": "https://www.lennysnewsletter.com/p/why-every-company-now-needs-to-think"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "AI产品方法",
+        "Google Labs",
+        "组织实践"
+      ]
+    },
+    {
+      "product_id": "product-ead9a9a3c1cadede",
+      "product_name": "Doory",
+      "builder_name": "acley",
+      "first_seen": "2026-10-12",
+      "last_seen": "2026-10-12",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "verified",
+      "target_user": "想快速验证设计工具想法的开发者、学习 AI 辅助编程的初学者、需要轻量开源设计工具的个人或小团队",
+      "user_problem": "Canva 是闭源商业平台，模板和素材受版权限制；开发者想自建设计工具时门槛高、起步慢；想学习用 AI 辅助做完整产品的人缺乏可拆解的真实案例",
+      "what_it_is": "一个用 AI 代码生成工具 Claude 几乎一次性写出来的开源在线设计工具，能拖放做简单图形设计，代码公开在 GitHub 上",
+      "ai_role": "Claude 作为\"vibe coding\"工具，根据人类提示一次性生成了几乎全部代码，人类主要负责提需求和验证结果",
+      "implementation_idea": "核心是一个浏览器里的画布页面：左边放可拖拽的组件库，中间用 HTML5 Canvas 或 SVG 当画板，用户拖放时记录每个元素的位置和样式，最后把画布内容转成图片下载。AI 把这三块（组件面板、画布交互、导出功能）一次性打包成了完整代码",
+      "hands_on_exercise": "30 分钟练习：访问 Doory 的 GitHub 仓库，点击 commit eac7e3b 查看单次提交的文件变化；对比你熟悉的网页工具，列出 3 个 Doory 有/没有的功能；再用 Claude、ChatGPT 或 Cursor 尝试用一句话提示生成一个类似的'可拖拽待办事项看板'，观察 AI 是一次出完还是分步完成",
+      "limitations_or_uncertainties": "未公开具体技术栈（React/Vue/纯 JS 未说明）；未公开是否有后端或纯前端实现；未公开作者后续是否维护；社区质疑其能否真正替代 Canva 的模板生态，而非仅复制基础功能",
+      "region": "global",
+      "score": 7.0,
+      "summary": "有人用 Claude 几乎一次性生成开源 Canva 替代品 Doory 并开源到 GitHub，展示了 AI 辅助做产品的速度和局限，适合想用 AI 做个人产品的人拆解。",
+      "title": "Doory：Claude 一次生成的开源 Canva 替代品",
+      "url": "https://github.com/shaongitbd/doory",
+      "sources": [
+        {
+          "url": "https://github.com/shaongitbd/doory",
+          "title": "Doory – Open-Source Canva",
+          "source_type": "hackernews",
+          "published_at": "2026-10-12T00:48:27+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "doory-open-source-canva",
+          "date": "2026-10-12",
+          "title": "Doory：Claude 一次生成的开源 Canva 替代品",
+          "summary": "有人用 Claude 几乎一次性生成开源 Canva 替代品 Doory 并开源到 GitHub，展示了 AI 辅助做产品的速度和局限，适合想用 AI 做个人产品的人拆解。",
+          "score": 7.0,
+          "url": "https://github.com/shaongitbd/doory"
+        }
+      ],
+      "usage_flow": [
+        "打开 Doory 网页，从空白画布或预设尺寸开始",
+        "拖拽形状、文字、图片到画布上，调整颜色和位置",
+        "导出设计为 PNG 等格式下载",
+        "开发者可克隆 GitHub 代码，本地修改或部署自己的版本"
+      ],
+      "learning_points": [
+        "Vibe coding：一种新兴的 AI 编程方式，人用自然语言描述想要的产品，AI 直接生成可运行代码，人再试错调整",
+        "开源替代品的局限：代码可以复制功能，但复制不了商业平台的素材库、模板生态和社区运营",
+        "单次提交（single commit）：代码版本控制里所有改动一次性提交，说明 AI 生成是'大爆炸'式而非迭代式开发"
+      ],
+      "verticals": [],
+      "tags": [
+        "开源",
+        "AI编程",
+        "设计工具"
       ]
     },
     {
