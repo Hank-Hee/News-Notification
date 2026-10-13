@@ -1760,6 +1760,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "0606c40e0ed4847bb9d93455825fa3430689377f24ec267ec62e97b1697301ed": {
+      "created_at": "2026-10-13T06:46:24.749499+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "artificial-analysis-aa-3d",
+        "evidence_status": "reported",
+        "follow_up": "等待正文出现，确认 Aa 3D 是否为三维生成相关评测或产品。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "public_web:sitemap:0682008ed348c7fdbc07",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": false,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Aa 3D",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "只有标题和模板化描述，无正文、无 Demo、无指标，无法判断 AA 3D 是三维生成评测还是产品，信息不足。",
+        "region": "global",
+        "score": 3.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Artificial Analysis 发布了一条名为 Aa 3D 的更新，但内容缺失，暂时看不出具体做了什么。",
+        "tags": [
+          "Artificial Analysis",
+          "信息不足"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "06094be9aeb2f2c18be449805dce234259d2ee5ac327fb417ace5d538ac9d817": {
       "created_at": "2026-07-26T04:06:44.242690+00:00",
       "model": "deepseek-v4-flash",
@@ -6015,6 +6053,44 @@
           "AI产品方法",
           "Google Labs",
           "组织实践"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "118a9d599a091d02b101059ec0fec42932016913eec4b6637954e5c695430375": {
+      "created_at": "2026-10-13T06:46:24.749443+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "artificial-analysis-muse-wonder",
+        "evidence_status": "reported",
+        "follow_up": "等待该页面出现正文，确认 Muse Wonder 是模型、产品还是评测项目。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "public_web:sitemap:744148a1faee25137f39",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": false,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Muse Wonder",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "仅有标题和一句模板化描述，无正文、无产品细节、无用户反馈，无法判断 Muse Wonder 是什么、解决什么问题，属于信息不足的弱相关条目。",
+        "region": "global",
+        "score": 3.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Artificial Analysis 发布了一条名为 Muse Wonder 的更新，但内容只有标题，看不出具体做了什么，暂时不值得拆解。",
+        "tags": [
+          "Artificial Analysis",
+          "信息不足"
         ],
         "target_user": "",
         "verticals": []
@@ -11124,6 +11200,46 @@
       },
       "stage": "deep_analysis"
     },
+    "203247d27d2296c4019fa309af3768475da65da4831f5359e2689c80671fe16a": {
+      "created_at": "2026-10-13T06:46:24.749763+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "meta-muse-alex-cornell-design",
+        "evidence_status": "first_party",
+        "follow_up": "关注 Muse 后续是否开放更多用户反馈，以及 Alex Cornell 在 Threads 上继续公开的设计细节。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "newsletter:feed:1382fb41f444385849b7",
+        "intelligence_type": "builder_insight",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Muse",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Meta 消费级 AI Agent Muse 的设计负责人 Alex Cornell 在 Lenny 播客中公开讲解产品设计思路，包括为什么做成消息形态、三层状态显示、生成式 UI 等，属于构建者一手实践分享，对做 AI 产品的人有直接可迁移的设计经验。",
+        "region": "global",
+        "score": 8.2,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Meta 的 AI Agent Muse 设计负责人 Alex Cornell 公开讲了他怎么把 Muse 做成像发消息而不是 AI 应用，以及三层状态显示和生成式界面背后的设计取舍。",
+        "tags": [
+          "Meta",
+          "AI Agent",
+          "产品设计",
+          "消费级AI"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "20430573e67a54e38d3872ecbc7aee3d147f138458d1341a168d66dd02c2d7d8": {
       "created_at": "2026-07-31T03:49:17.802442+00:00",
       "model": "deepseek-v4-flash",
@@ -13571,6 +13687,44 @@
         "tags": [
           "Agent",
           "Slack"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "275c59f2089047121189cee73bae33f01d2a395b84c3986bf70b667013374276": {
+      "created_at": "2026-10-13T06:46:45.881080+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "python-3-15-release",
+        "evidence_status": "first_party",
+        "follow_up": "惰性导入对 AI 应用启动性能的实际影响",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:simonwillison.net_atom_everything_:901eddfa61b84a5e",
+        "intelligence_type": "builder_insight",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Python 3.15 发布与惰性导入等语言特性，属通用编程工具更新，与 LLM 产品构建只有间接关系，低于收录阈值。",
+        "region": "global",
+        "score": 4.5,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "Python 3.15 发布，新增显式惰性导入等特性，Simon Willison 介绍了自己最关注的变化，对做 AI 产品的人属于工具链背景信息。",
+        "tags": [
+          "Python",
+          "开发工具"
         ],
         "target_user": "",
         "verticals": []
@@ -16487,6 +16641,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "3107ccd75073ed39e94bb35b02dea14bc5e1bb034912f5dde9d41a7132662c97": {
+      "created_at": "2026-10-13T06:46:45.881316+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "arxiv-hidden-capabilities-paper",
+        "evidence_status": "reported",
+        "follow_up": "是否有可复现实验与对开源模型部署的实际影响",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:50065692",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "学术论文加匿名社区讨论，属论文与安全研究范畴，按规则低于 7 分；对做产品的人只有间接风险提示价值。",
+        "region": "global",
+        "score": 4.8,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "一篇 arXiv 论文称 AI 模型可以把任意能力加密隐藏在权重里，Hacker News 上讨论热烈，对做开源模型产品的人是一个安全提醒。",
+        "tags": [
+          "模型安全",
+          "论文"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "31149bec40e007781f633823cca32ea6f31c8a4bb3357c94fcb81f9e6e4f155f": {
       "created_at": "2026-08-24T01:57:11.205277+00:00",
       "model": "deepseek-v4-flash",
@@ -16949,6 +17141,44 @@
           "Vercel",
           "AI SDK",
           "xai"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "3287f1eb8b85776b7a5596145a57eb14daa385732834d9960fe7089aa2b5ba91": {
+      "created_at": "2026-10-13T06:46:45.880685+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "meta-muse-wonder-full",
+        "evidence_status": "reported",
+        "follow_up": "模型卡、可用渠道与实际能力评测",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:7ebc7763a031c860",
+        "intelligence_type": "model_capability",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Muse Wonder Full",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Meta 新模型发布属模型公司动态，但正文被截断，仅有‘对标业界最强’的宣称，无能力细节、无评测证据，对产品经理的可迁移增量有限。",
+        "region": "global",
+        "score": 6.8,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Meta 在重组后的 Superintelligence Labs 下又发了 Muse Wonder 和 Muse Wonder Full 两个模型，声称能对标业界最强，值得看它是否真解锁新的产品体验。",
+        "tags": [
+          "模型发布",
+          "Meta"
         ],
         "target_user": "",
         "verticals": []
@@ -19374,6 +19604,41 @@
         "verticals": []
       },
       "stage": "candidate_analysis"
+    },
+    "3aad61819834da1acf7a7a8fab1d2e81584a01e68bbd8576c369a6dcf4ff95a6": {
+      "created_at": "2026-10-13T06:47:26.720510+00:00",
+      "model": "kimi-k2.6",
+      "prompt_version": "deep-v3-beginner",
+      "result": {
+        "ai_role": "AI Agent 本身由用户自选并部署，Agent37 只提供运行它的隔离环境，不直接参与 AI 推理",
+        "evidence_status": "first_party",
+        "hands_on_exercise": "30 分钟：在本地用 Docker 跑一个开源 Agent（如 OpenClaw 或 Claude Code 的社区版），同时开系统监控（htop 或活动监视器）观察：①启动时 CPU 是否飙升后回落 ②内存是否一直占用。体会为什么'大内存+低 CPU'的机型更适合这类负载。",
+        "implementation_idea": "核心思路是'合租服务器'：用 gVisor（一种轻量级隔离技术，比传统虚拟机更省内存）把多个用户的沙箱塞进同一台物理机，跳过 AWS 等中间商直接租 Hetzner/OVH 的便宜机器，再根据 Agent 'burst 型 CPU + 常驻内存'的特点，优先买大内存而非高 CPU 的配置。",
+        "learning_points": [
+          "沙箱（Sandbox）：给程序一个'关起来的游乐场'，让它随便折腾但伤不到主机和其他用户",
+          "Agent：能自主调用工具（如浏览器、代码执行器）完成多步骤任务的 AI，不只是聊天",
+          "gVisor：Google 开源的'安全罩'，比虚拟机轻、启动快，但兼容性有牺牲（比如不支持 Docker 里再跑 Docker）"
+        ],
+        "limitations_or_uncertainties": "未公开具体技术架构细节（如 gVisor 版本、主机规格）；免费档是否有功能限制未说明；不支持 Docker-in-Docker 和 Android 模拟器；目前仅信用卡付款，无 PayPal；社区质疑长期能否抵抗大厂降价竞争",
+        "product_name": "Agent37",
+        "sources": [
+          "https://news.ycombinator.com/item?id=50059096",
+          "https://agent37.com",
+          "https://youtu.be/DK5ISR2tbNo",
+          "https://aiweekly.co/alerts/yc-f26-launches-agent37-pitches-sub-1-monthly-sandboxes-for-running-ai-agents"
+        ],
+        "target_users": "需要云端运行 AI Agent 的开发者，尤其是做消息类 Agent、想用免费档测试的个人用户",
+        "title_zh": "Agent37：月费 0.37 美元的 AI Agent 沙箱，YC F26 创始人公开省钱做法",
+        "usage_flow": [
+          "注册账号，选择免费档或付费档",
+          "在沙箱里部署想跑的 Agent（如 Hermes、OpenClaw、Claude Code）",
+          "Agent 在隔离环境中执行任务（浏览网页、写代码等）",
+          "按实际使用付费，付费档月均约 $0.37/沙箱"
+        ],
+        "user_problem": "主流云沙箱太贵，个人开发者或小团队负担不起；想提供免费档获客，但基础设施成本压不下来",
+        "what_it_is": "一个帮开发者在云端低成本运行 AI Agent（如 Claude Code、Hermes）的隔离沙箱服务，比主流厂商便宜 90% 以上。"
+      },
+      "stage": "deep_analysis"
     },
     "3ae6bcccd426be3a7646b7a0b8151b4dd8927a4bd3281dc1a66168db72926616": {
       "created_at": "2026-07-28T03:49:20.638318+00:00",
@@ -30832,6 +31097,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "5a5621fe5714f980ba59335159320245517f615e225969b93f605313632b035d": {
+      "created_at": "2026-10-13T06:46:45.881221+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "anthropic-dynamic-workflows-talk",
+        "evidence_status": "reported",
+        "follow_up": "是否有公开文档或示例代码可复现该编排方式",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:www.latent.space_feed:e71374164f2cb1ad",
+        "intelligence_type": "builder_insight",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Claude Dynamic Workflows",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Anthropic 在 AI Engineer New York 讲多 Agent 编排，借鉴 Unix/Linux 经验，对理解 Agent 产品架构有增量；但为会议演讲转述，无代码与实测数据。",
+        "region": "global",
+        "score": 7.2,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "Anthropic 在 AI Engineer New York 分享了如何用动态工作流协调多个 Claude Agent，借鉴 Unix 和 Linux 的思路让 Agent 承接更大项目而不压垮开发者。",
+        "tags": [
+          "Agent",
+          "多智能体",
+          "Anthropic"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "5a58a34c3e3b3da15aa564ad7695f73006957246fa0d7fca383d4bf0c8ef0b87": {
       "created_at": "2026-10-11T05:44:44.051445+00:00",
       "model": "deepseek-flash",
@@ -32741,6 +33045,46 @@
         "tags": [
           "数据中心",
           "算力"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "5f78f19235b0fba778d28b267810e7198a039572924cd1e5ecb06ccae9306b3a": {
+      "created_at": "2026-10-13T06:46:24.749878+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "meta-muse-alex-cornell-design",
+        "evidence_status": "first_party",
+        "follow_up": "合并跟踪 Muse 的设计公开分享，避免重复收录同一事件。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "newsletter:feed:3b02ca9d4e41b0afb8dd",
+        "intelligence_type": "builder_insight",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Muse",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "与上一条为同一期播客的不同页面，内容一致，同样是一手构建者分享 Meta Muse 的设计决策，包括自定义头像、三层状态、个性化想法面板和生成式信息流，对 AI 产品设计有参考价值。",
+        "region": "global",
+        "score": 8.2,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "同一期播客的另一个页面，Alex Cornell 继续讲 Meta Muse 为什么做成消息形态、三层状态系统怎么照顾不同技术水平的用户。",
+        "tags": [
+          "Meta",
+          "AI Agent",
+          "产品设计",
+          "消费级AI"
         ],
         "target_user": "",
         "verticals": []
@@ -35004,6 +35348,45 @@
           "Claude Code",
           "多Agent",
           "协作"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "6495aadf7e11a1c760f07a4582d9b84b8db67556c97d467072a2ad204c0f1791": {
+      "created_at": "2026-10-13T06:46:45.881180+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "web-edit-0-1a0",
+        "evidence_status": "first_party",
+        "follow_up": "是否加入权限控制与更多文件操作能力",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:simonwillison.net_atom_everything_:818cf62a3bb0a7f8",
+        "intelligence_type": "builder_insight",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "web-edit",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "构建者一手发布的小工具，有明确问题（手机上改凭据文件不想经过 LLM）、明确做法（让 Codex 生成 Web UI、走 Tailscale）和可验证 GitHub Release，属可迁移的构建实践；但体量小、非 AI 核心能力。",
+        "region": "global",
+        "score": 7.4,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "Simon Willison 用 Codex 生成并发布了 web-edit 0.1a0，一个通过 Tailscale 在手机上浏览和编辑文件夹文件的网页工具，解决不想把凭据经手 LLM 的问题。",
+        "tags": [
+          "Agent",
+          "开发者工具",
+          "个人产品"
         ],
         "target_user": "",
         "verticals": []
@@ -38651,6 +39034,45 @@
         "tags": [
           "价格战",
           "行业观察"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "6fa17eda95fae88e6a431f328cfc68783aad94375019c3aa920fe4115b8a9262": {
+      "created_at": "2026-10-13T06:47:01.228835+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "ihmt-infinite-hierarchical-memory-tree",
+        "evidence_status": "first_party",
+        "follow_up": "等作者补充 README、Demo 或用户实测后再评估。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:50058903",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "IHMT",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Show HN 开源项目，方向（Agent 记忆）与 AI 产品相关，但正文为空、仅 7 分 0 评论，无用户反馈、无实测数据，证据强度不足，按规则低于 7 分。",
+        "region": "global",
+        "score": 5.5,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "开发者开源 IHMT，为 AI Agent 提供无限层级记忆树，但目前只有仓库链接、没有说明和用户反馈，信息量不足以判断价值。",
+        "tags": [
+          "Agent",
+          "记忆",
+          "开源"
         ],
         "target_user": "",
         "verticals": []
@@ -43389,6 +43811,47 @@
       },
       "stage": "candidate_analysis"
     },
+    "7cd4ec1984de8db5f5e0a24222c7393e195b7fe66ef4efde49b685699a223ff9": {
+      "created_at": "2026-10-13T06:47:01.228814+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "agent37-launch-low-cost-agent-sandbox",
+        "evidence_status": "first_party",
+        "follow_up": "关注其免费计划的可持续性、付费转化数据，以及沙箱隔离与安全方案是否公开。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:50059096",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Agent37",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "YC 创始人本人在 HN 的 Launch 帖，属于一手产品发布：明确说明解决什么问题（低成本运行 AI Agent 沙箱）、给出真实定价与指标（每沙箱约 $0.37/月、免费用户基础设施成本 $0.05–0.10/月、90% 新注册为免费用户），并公开从 OpenClaw wrapper 起步的构建过程，符合“已做出来并有真实反馈的 AI 产品”和“构建者公开开发过程”两条高优先级，扣分项是仍带一定自我推广色彩。",
+        "region": "global",
+        "score": 8.6,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Vishnu 发布 Agent37，用低成本沙箱帮用户跑 AI Agent，每个沙箱月均约 0.37 美元、免费用户基础设施成本仅 0.05–0.10 美元，并公开了从套壳到自建基础设施的省钱做法，适合想学 Agent 产品落地与成本控制的人拆解。",
+        "tags": [
+          "Agent",
+          "沙箱",
+          "YC",
+          "成本优化",
+          "开发者工具"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "7ce1a810466e96d582f34b498c3e881f7bfa72c944e2b487eb4d17bb5d9ab374": {
       "created_at": "2026-08-26T01:58:41.401726+00:00",
       "model": "deepseek-v4-flash",
@@ -44920,6 +45383,46 @@
       },
       "stage": "candidate_analysis"
     },
+    "808a72f930fccdaab0c3ea3218cbbe89c018291b270b7ee2760d75a7d30d49ea": {
+      "created_at": "2026-10-13T06:47:01.228462+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "janas-llm-ssd-expert-streaming",
+        "evidence_status": "first_party",
+        "follow_up": "关注项目是否补充实测基准、支持更多模型，以及是否有人基于它做出面向用户的产品。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:50063717",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Janas",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "GitHub 开源项目，解决“显存/内存装不下大模型”的具体问题，通过从 SSD 流式加载专家权重让普通设备跑大模型，属于可验证 Demo 与构建者实践；评论区有真实用户反馈（8 tok/s、62 tok/s 等），对初学者理解“AI 在哪一步发挥作用”有可迁移增量，但偏底层推理优化，故未上 8 分。",
+        "region": "global",
+        "score": 7.2,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "开发者开源 Janas，用 SSD 流式加载专家权重让显存和内存装不下的大模型也能跑起来，评论区有用户实测 8–62 tok/s，适合想理解本地大模型部署的产品经理参考。",
+        "tags": [
+          "开源",
+          "本地推理",
+          "MoE",
+          "开发者工具"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "809309a18bab49938cc6c50e77d51cd8c4ef4d05b722b4e82c8d30fa68fc8d34": {
       "created_at": "2026-07-27T04:14:58.294416+00:00",
       "model": "deepseek-v4-flash",
@@ -45176,6 +45679,45 @@
           "AI安全",
           "Agent",
           "漏洞"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "81d03b832f12f2c31a93710bdb41dea96f369306916335919fd1282a81d89a96": {
+      "created_at": "2026-10-13T06:46:32.116135+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "microsoft-uk-ai-regulation-call",
+        "evidence_status": "reported",
+        "follow_up": "不必追踪，除非后续出现具体监管草案或对AI产品合规有直接影响。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:9e2dad8089dd103d",
+        "intelligence_type": "business_policy",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "微软总裁呼吁英国主导AI监管，属于泛行业政策评论，无产品、代码、Demo或用户反馈，也未解锁新模型能力或产品体验，对AI产品经理和初学者可迁移增量低，按规则低于7分不收录。",
+        "region": "global",
+        "score": 4.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "微软总裁布拉德·史密斯公开呼吁英国牵头制定AI监管规则，称牛奶和洗衣机受到的监管都比AI公司多；这是政策表态，没有产品、技术或落地增量，对做AI产品的人参考价值有限。",
+        "tags": [
+          "AI监管",
+          "政策",
+          "微软"
         ],
         "target_user": "",
         "verticals": []
@@ -45599,6 +46141,44 @@
         "tags": [
           "开发者工具",
           "Codex"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "82cd8098599c379eedaac8271f8697ec420bc847e995e132772125b8dddf1888": {
+      "created_at": "2026-10-13T06:46:45.881260+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "langchain-core-1-6-10",
+        "evidence_status": "first_party",
+        "follow_up": "无",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "github:release:410678802",
+        "intelligence_type": "builder_insight",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "langchain-core",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "与上一条同源的常规补丁发布，无独立产品增量，信息价值低。",
+        "region": "global",
+        "score": 5.0,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "LangChain 发布 langchain-core 1.6.10，同样只是声明模型档案中的对话中途支持，属常规维护更新。",
+        "tags": [
+          "LangChain",
+          "开源"
         ],
         "target_user": "",
         "verticals": []
@@ -49389,6 +49969,44 @@
           "Agent",
           "技能包",
           "skills.sh"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "8c9512f406fa8b4b6ee13876633dc9e1cbfbd69fda24d55bed2e1d0576fdc619": {
+      "created_at": "2026-10-13T06:46:45.881242+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "langchain-openai-1-7-1",
+        "evidence_status": "first_party",
+        "follow_up": "该声明是否影响多轮对话应用的实现方式",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "github:release:410697789",
+        "intelligence_type": "builder_insight",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "langchain-openai",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "常规版本发布，仅新增模型档案中的多轮对话支持声明，属依赖库小版本更新，对产品决策增量有限。",
+        "region": "global",
+        "score": 5.2,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "LangChain 发布 langchain-openai 1.7.1，在模型档案里声明了对话中途消息支持，属于框架层面的小更新。",
+        "tags": [
+          "LangChain",
+          "开源"
         ],
         "target_user": "",
         "verticals": []
@@ -53539,6 +54157,45 @@
           "文档编辑",
           "MCP",
           "独立开发"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "96eb379ca09b0f256ea014a6132c2f9a10082b6a71e853b347688dde97672657": {
+      "created_at": "2026-10-13T06:47:01.228286+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "intel-d270-gpu-ai-accelerator",
+        "evidence_status": "first_party",
+        "follow_up": "观察是否有开发者用该卡跑本地大模型并公开实测数据与产品化案例。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:50063365",
+        "intelligence_type": "market_signal",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Intel D270",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Intel 官方数据中心 GPU 产品页，属于硬件/算力层，与兴趣优先级中明确降权的 GPU/算力方向重合；评论区虽有本地跑大模型的实践讨论，但无产品、代码或用户反馈的一手案例，对 AI 产品经理的可迁移增量低。",
+        "region": "global",
+        "score": 4.5,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Intel 发布 D270 数据中心 GPU，最高 480GB LPDDR5X 显存和 1.5TB/s 带宽，面向大模型推理，但属于算力硬件而非产品案例，对做 AI 产品的人参考价值有限。",
+        "tags": [
+          "GPU",
+          "算力",
+          "本地推理"
         ],
         "target_user": "",
         "verticals": []
@@ -61918,6 +62575,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "ac72ae249751d3da085071bd46b8374bb461822f0e019c9a9cf9f26b9b00c5ae": {
+      "created_at": "2026-10-13T06:47:01.228353+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "imf-ai-share-crash-risk",
+        "evidence_status": "reported",
+        "follow_up": "无需跟进，除非出现对 AI 产品融资环境的实质影响。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:50067356",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "纯宏观金融风险评论，属于泛行业评论，无产品、无构建过程、无新模型能力，按规则低于 7 分且不收录。",
+        "region": "global",
+        "score": 3.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "IMF 警告 AI 股价崩盘可能威胁全球金融稳定，属于宏观金融评论，与 AI 产品构建无直接关系。",
+        "tags": [
+          "宏观",
+          "金融风险"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "acb92530a0ea2631b4c1e294e0ce939453e57e1b0abf9cb9d041acd98f6a0738": {
       "created_at": "2026-08-26T01:58:18.951285+00:00",
       "model": "deepseek-v4-flash",
@@ -63360,6 +64055,38 @@
         "verticals": []
       },
       "stage": "candidate_analysis"
+    },
+    "b0606cb8d2628e6c6815cf79eb71d83f9e37602a182d790ab9bd4d6d6a35b5b9": {
+      "created_at": "2026-10-13T06:47:45.782689+00:00",
+      "model": "kimi-k2.6",
+      "prompt_version": "deep-v3-beginner",
+      "result": {
+        "ai_role": "未公开具体模型支持细节；Janas 本身是推理加速框架，不训练模型，只负责在推理时智能调度哪些专家权重该进内存",
+        "evidence_status": "verified",
+        "hands_on_exercise": "30 分钟：访问 https://github.com/prabanta-dev/janas，按 README 安装；如果你有 16GB 内存的电脑，尝试下载一个 30B+ 的 MoE 模型（如 Qwen2.5-14B/32B 的 MoE 版本），记录首次 token 延迟和稳定后的 tok/s，对比'能跑起来'和'完全加载到内存'两种模式的资源占用差异。没有合适硬件可先看 Issues 区的用户报告。",
+        "implementation_idea": "MoE（Mixture of Experts，混合专家）模型的一大特点是：每次推理只激活一小部分'专家'网络，而不是用整个模型。Janas 利用这一点，不把全部专家存在内存里，而是像'按需取货'一样，从 SSD 临时读取当前要用的专家，用完就换。相当于把 SSD 当成超大号'虚拟内存'，但比无脑换页更聪明——它知道模型结构，只加载必要的部分。",
+        "learning_points": [
+          "MoE（混合专家）：一种模型架构，把大模型拆成很多'专家'小网络，每次只调用少数几个，用更少算力获得大模型能力",
+          "内存瓶颈 vs 存储瓶颈：AI 推理速度受限于'数据在哪'——显存最快、内存次之、SSD 最慢，Janas 用速度换容量",
+          "专家并行/选择性加载：不是所有参数都同等重要，智能调度比'全加载'或'全不加载'更高效"
+        ],
+        "limitations_or_uncertainties": "官方 README 技术细节未公开；具体支持哪些模型、SSD 最低速度要求、是否支持 Windows/Mac、与 llama.cpp 的现有 SSD 卸载功能差异多大，均未明确说明。评论区 62 tok/s 的测试环境（硬件、模型大小、量化精度）未公开。",
+        "product_name": "Janas",
+        "sources": [
+          "https://github.com/prabanta-dev/janas"
+        ],
+        "target_users": "想在本机跑大模型但硬件受限的开发者、本地 AI 部署爱好者",
+        "title_zh": "Janas：用 SSD 流式加载专家权重，让普通设备跑超大模型",
+        "usage_flow": [
+          "准备一台有 SSD 的普通电脑，安装 Janas",
+          "下载一个 MoE 架构的大模型（如 Qwen 系列）",
+          "Janas 自动把当前需要的'专家'权重从 SSD 流式加载到显存/内存",
+          "模型开始输出文本，不需要的专家留在 SSD 不占用内存"
+        ],
+        "user_problem": "大模型动辄几十 GB 到上百 GB，显存/内存根本装不下，普通用户没法本地运行",
+        "what_it_is": "一个开源工具，让显存和内存不够的普通电脑，也能运行参数量远超硬件容量的大语言模型。"
+      },
+      "stage": "deep_analysis"
     },
     "b06fd07e7c67c9de3fa7f0dd69d6cbdf6205a396e56bfa1688a4dec0918a6bb6": {
       "created_at": "2026-09-07T04:39:42.656387+00:00",
@@ -68264,6 +68991,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "bddb4b1ec63d46edbc9b7c88a500dbb83535e750181cd471efc6cef712f0122f": {
+      "created_at": "2026-10-13T06:46:45.881398+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "zai-glm-legal",
+        "evidence_status": "first_party",
+        "follow_up": "模型卡、可用入口与真实合同审阅效果；此前工作区快照隐私争议的后续",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:50058507",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "GLM-Legal",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "智谱发布法律垂直模型 GLM-Legal，属官方一手发布，且法律是与医疗同类的强合规垂直场景，对垂直 AI 产品有直接参考价值；但正文为社区讨论，缺少模型能力细节与产品形态说明，故未进 8 分档。",
+        "region": "china",
+        "score": 7.8,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "智谱发布法律垂直模型 GLM-Legal，想让 AI 处理合同审阅等法律工作，Hacker News 上有人分享用 Claude 改合同的实际体验，值得看垂直模型在强合规场景怎么落地。",
+        "tags": [
+          "垂直AI",
+          "法律",
+          "智谱"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "bddd4e59dcc4dc9bf650bbf54e4bc2d23448eae37e5d7f474a85063cbb6df593": {
       "created_at": "2026-09-23T04:44:14.317728+00:00",
       "model": "deepseek-flash",
@@ -70600,6 +71366,45 @@
         "what_it_is": "Reddit 正在上线一套基于大语言模型（LLM）的自动化社区管理工具，先给新版块试用，计划年内全站推广。"
       },
       "stage": "deep_analysis"
+    },
+    "c4b2fd406cdb317e683154e33208bd01070b4bcf3b4a98386339a99071158f55": {
+      "created_at": "2026-10-13T06:46:24.749558+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openrouter-rankings-top5-2026-10",
+        "evidence_status": "verified",
+        "follow_up": "跟踪这些模型在 OpenRouter 上的调用量变化，以及是否有基于它们构建的产品案例出现。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "public_web:ranking:b0ab1ec5ca2d10da9cfa",
+        "intelligence_type": "model_capability",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenRouter 热度榜显示 DeepSeek V4.1 Flash、GLM 5.3 Flash、Step 5 Preview、MiMo-V2.6-Flash、腾讯 Hy4 preview 五款中国模型进入前五，属于可验证的模型热度信号，但只是榜单聚合，没有产品案例、用户反馈或构建过程，对产品经理的迁移价值有限。",
+        "region": "china",
+        "score": 6.5,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "OpenRouter 模型热度榜前五全是中国模型，包括 DeepSeek、智谱、阶跃、小米和腾讯的新模型，说明国产模型在开发者调用侧热度很高。",
+        "tags": [
+          "OpenRouter",
+          "国产模型",
+          "模型热度"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
     },
     "c4ca4974cb229c32443b3f1530059096b724c39db4d09e85266b179477b66e62": {
       "created_at": "2026-09-22T04:54:16.481335+00:00",
@@ -76642,6 +77447,46 @@
       },
       "stage": "candidate_analysis"
     },
+    "d707d58828fcabfa09ccc99bb772506677de6ff874ddf68969ff798f8e31de29": {
+      "created_at": "2026-10-13T06:46:24.749907+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "github-copilot-beginners-custom-instructions",
+        "evidence_status": "first_party",
+        "follow_up": "关注 GitHub 是否把自定义指令和 MCP 支持扩展到更多 Copilot 入口。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:github.blog_ai-and-ml_feed_:897ed0a11c3fdbaa",
+        "intelligence_type": "builder_insight",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "GitHub Copilot",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "GitHub 官方教程，讲怎么给仓库加自定义指令和技能、用自定义 Agent、接 Playwright 等 MCP 服务器，属于官方文档级的一手实践指南，对初学者理解 Copilot 怎么被教会理解代码库有直接帮助。",
+        "region": "global",
+        "score": 7.2,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "GitHub 官方发了一篇 Copilot 入门教程，教你怎么用自定义指令、自定义 Agent 和 MCP 服务器让 Copilot 理解你的代码库。",
+        "tags": [
+          "GitHub Copilot",
+          "MCP",
+          "开发者工具",
+          "教程"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "d7159fb53b214f8bb0347b269be5953c68fc3a675c0fc98238ee385cc501a201": {
       "created_at": "2026-09-28T05:22:14.567274+00:00",
       "model": "deepseek-flash",
@@ -77524,6 +78369,45 @@
         "tags": [
           "AI安全",
           "官方报告"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "d9832752644ddd1f64722d3204d21ce683ab86783688a8142a001576dd190363": {
+      "created_at": "2026-10-13T06:46:45.880735+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "microsoft-maia-300",
+        "evidence_status": "reported",
+        "follow_up": "是否影响 Azure 上模型推理价格与可用性",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:dd7e55f44c038cc1",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Maia 300",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "自研 AI 推理芯片属算力与底层基础设施，按兴趣优先级明确低于 7 分，且不直接催生新产品体验。",
+        "region": "global",
+        "score": 3.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "微软发布第三代自研 AI 芯片 Maia 300，用作自家产品和服务的推理主力，目的是降低对英伟达 GPU 的依赖，与 AI 产品构建关系较远。",
+        "tags": [
+          "芯片",
+          "算力",
+          "微软"
         ],
         "target_user": "",
         "verticals": []
@@ -78969,6 +79853,44 @@
           "安全",
           "滥用检测",
           "Anthropic"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "ddac5b189b26901f8f31991fdb53ddc5716e47bb7cf42f6f5b3a7b430ef4b225": {
+      "created_at": "2026-10-13T06:46:24.749478+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "artificial-analysis-frontiercode",
+        "evidence_status": "reported",
+        "follow_up": "等待正文出现，确认 Frontiercode 是代码评测还是产品。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "public_web:sitemap:1772bb3eaf1415bdab1e",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": false,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Frontiercode",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "同样只有标题和模板化描述，无任何可验证内容，无法判断是评测基准、产品还是研究更新，信息量不足以支撑收录。",
+        "region": "global",
+        "score": 3.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Artificial Analysis 发布了一条名为 Frontiercode 的更新，但正文缺失，看不出具体内容和价值。",
+        "tags": [
+          "Artificial Analysis",
+          "信息不足"
         ],
         "target_user": "",
         "verticals": []
@@ -84055,6 +84977,46 @@
       },
       "stage": "candidate_analysis"
     },
+    "eb244be1bf9a47be97c759e2d0450723245972176e54b219b300b39836aeb1a8": {
+      "created_at": "2026-10-13T06:46:48.644527+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "blueprints-ai-permit-ready-blueprints",
+        "evidence_status": "reported",
+        "follow_up": "值得追踪：等待产品页、Demo 或真实用户案例出现后再评估；若只有媒体口径则不再收录。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:1f92265b273b1ed5",
+        "intelligence_type": "product_case",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Blueprints AI",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "TechCrunch 报道一家自筹资金创业公司 Blueprints AI，声称能从照片、PDF 或草图生成符合建筑规范的施工蓝图。属于垂直 AI 产品案例，但只有媒体转述、无产品链接、无用户反馈、无 Demo 或代码，'permit-ready' 是公司自述而非可验证事实，证据强度不足，按规则不能给到 7 分以上。",
+        "region": "global",
+        "score": 6.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "美国 Santa Monica 创业公司 Blueprints AI 做了一款软件，能把照片、PDF 或草图变成符合建筑规范的施工蓝图，想解决建筑报建图纸制作慢的问题，但目前只有媒体报道、没有可验证的产品或用户反馈。",
+        "tags": [
+          "垂直AI",
+          "建筑",
+          "AI设计",
+          "产品案例"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "eb2480cffea75e81e7035a462d1a32238aab6eae5d921025352ae4ba5a745589": {
       "created_at": "2026-08-23T02:00:02.898099+00:00",
       "model": "deepseek-v4-flash",
@@ -85039,6 +86001,45 @@
           "AI安全",
           "护栏",
           "创业公司"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "edd14de9dec4cb25205d7eb4c5c75b3a1a01ad98e9605f26f41c1cfef1df6735": {
+      "created_at": "2026-10-13T06:46:27.213080+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "windborne-usaf-contract-2026",
+        "evidence_status": "reported",
+        "follow_up": "可留意其技术博客或产品 Demo 是否公开，否则不必追踪。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:70421bce710a7788",
+        "intelligence_type": "business_policy",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "WindBorne",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "纯融资/合同类新闻，无产品细节、无用户反馈、无构建过程，属于典型低优先级商业合同消息，对 AI 产品经理学习价值有限。",
+        "region": "global",
+        "score": 4.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "硅谷创业公司 WindBorne 用气象气球加 AI 预测天气，拿下美国空军近 5000 万美元合同，但报道未披露产品用法和 AI 具体作用。",
+        "tags": [
+          "气象AI",
+          "国防合同",
+          "垂直AI"
         ],
         "target_user": "",
         "verticals": []
@@ -87180,6 +88181,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "f423082bff856d302f85ac73042464239f3b14453dbfdedd201af5332e8ab982": {
+      "created_at": "2026-10-13T06:47:01.228404+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "vfmaddrnd231pd-x86-instruction",
+        "evidence_status": "reported",
+        "follow_up": "无。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:50063138",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": false,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "x86 指令集考古类技术博客，与 LLM、AI 产品完全无关，属于噪音。",
+        "region": "global",
+        "score": 2.5,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "一篇考据 x86 冷门指令 vfmaddrnd231pd 的技术博客，与 AI 产品和大模型无关。",
+        "tags": [
+          "x86",
+          "技术考古"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "f43400ae96004430a4cefa128040eec59c668975a4b7ec0e910782de0fdbad8c": {
       "created_at": "2026-09-19T04:36:26.732568+00:00",
       "model": "deepseek-flash",
@@ -87402,6 +88441,44 @@
           "开发者工具",
           "Linter",
           "开源"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "f4b294904e53c95e723ebabdd904cee9e98021704e0d23821129a5b64884694e": {
+      "created_at": "2026-10-13T06:47:01.228561+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "ai-is-a-tool-using-it-well-takes-skill",
+        "evidence_status": "reported",
+        "follow_up": "若作者后续给出可复用的 AI 工作流或产品案例，可重新评估。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:50063427",
+        "intelligence_type": "builder_insight",
+        "is_first_party": false,
+        "is_new_event": false,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "个人博客观点文，讨论“用好 AI 需要技能”，属于泛行业评论，无具体产品、代码或可验证实践证据；评论区讨论热烈但多为立场表达，按规则低于 7 分。",
+        "region": "global",
+        "score": 6.5,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "一篇博客主张 AI 只是工具、用好它需要技能，引发大量关于 AI 替代人与组织变革的讨论，但没有具体产品或实践证据。",
+        "tags": [
+          "观点",
+          "AI 使用技能"
         ],
         "target_user": "",
         "verticals": []
@@ -91549,6 +92626,45 @@
           "水印",
           "合规",
           "ChatGPT"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "fe8b37c34f8e14cd748e11533423f65a8ac715f5981bc132ff137e35c8334bef": {
+      "created_at": "2026-10-13T06:47:01.228877+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "deepseek-new-funding-embodied-ai",
+        "evidence_status": "reported",
+        "follow_up": "关注 DeepSeek 是否发布具身智能相关产品或模型能力，而非仅融资消息。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "google_news:article:0634815bce7927ca",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "DeepSeek",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "涉及 DeepSeek 融资与梁文峰关注具身智能，属于模型公司核心人物动态，但内容为纯融资传闻且仅有标题、无正文细节，按规则纯融资类低于 7 分；具身智能方向若后续有产品落地可重估。",
+        "region": "china",
+        "score": 5.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "华尔街见闻报道 DeepSeek 半个月内估值从 500 亿涨到 1000 亿并将完成新一轮融资，梁文峰开始关注具身智能，但目前只有融资传闻、没有产品细节。",
+        "tags": [
+          "DeepSeek",
+          "融资",
+          "具身智能"
         ],
         "target_user": "",
         "verticals": []

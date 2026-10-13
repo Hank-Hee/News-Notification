@@ -1,70 +1,70 @@
 {
   "version": 1,
-  "updated_at": "2026-10-12T05:56:33.172552+00:00",
+  "updated_at": "2026-10-13T06:47:45.841755+00:00",
   "products": [
     {
-      "product_id": "product-1190f0d5ba25e802",
-      "product_name": "ChatGPT Sites",
-      "builder_name": "Claire Vo",
-      "first_seen": "2026-10-06",
-      "last_seen": "2026-10-12",
-      "occurrence_count": 2,
-      "intelligence_type": "builder_insight",
+      "product_id": "product-cb70685980f1f795",
+      "product_name": "Agent37",
+      "builder_name": "vishnukool",
+      "first_seen": "2026-10-13",
+      "last_seen": "2026-10-13",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
       "evidence_status": "first_party",
-      "target_user": "未公开",
-      "user_problem": "未公开",
-      "what_it_is": "OpenAI 产品负责人 Kath Korevec 讲她如何用 ChatGPT Sites 给团队搭事故指挥站点，并接入 Slack、Notion 连接器，展示了 AI 产品里连接器与插件机制怎么真正落地。",
-      "ai_role": "未公开",
-      "implementation_idea": "未公开",
-      "hands_on_exercise": "未公开",
-      "limitations_or_uncertainties": "未公开",
+      "target_user": "需要云端运行 AI Agent 的开发者，尤其是做消息类 Agent、想用免费档测试的个人用户",
+      "user_problem": "主流云沙箱太贵，个人开发者或小团队负担不起；想提供免费档获客，但基础设施成本压不下来",
+      "what_it_is": "一个帮开发者在云端低成本运行 AI Agent（如 Claude Code、Hermes）的隔离沙箱服务，比主流厂商便宜 90% 以上。",
+      "ai_role": "AI Agent 本身由用户自选并部署，Agent37 只提供运行它的隔离环境，不直接参与 AI 推理",
+      "implementation_idea": "核心思路是'合租服务器'：用 gVisor（一种轻量级隔离技术，比传统虚拟机更省内存）把多个用户的沙箱塞进同一台物理机，跳过 AWS 等中间商直接租 Hetzner/OVH 的便宜机器，再根据 Agent 'burst 型 CPU + 常驻内存'的特点，优先买大内存而非高 CPU 的配置。",
+      "hands_on_exercise": "30 分钟：在本地用 Docker 跑一个开源 Agent（如 OpenClaw 或 Claude Code 的社区版），同时开系统监控（htop 或活动监视器）观察：①启动时 CPU 是否飙升后回落 ②内存是否一直占用。体会为什么'大内存+低 CPU'的机型更适合这类负载。",
+      "limitations_or_uncertainties": "未公开具体技术架构细节（如 gVisor 版本、主机规格）；免费档是否有功能限制未说明；不支持 Docker-in-Docker 和 Android 模拟器；目前仅信用卡付款，无 PayPal；社区质疑长期能否抵抗大厂降价竞争",
       "region": "global",
       "score": 8.6,
-      "summary": "OpenAI 产品负责人 Kath Korevec 讲她如何用 ChatGPT Sites 给团队搭事故指挥站点，并接入 Slack、Notion 连接器，展示了 AI 产品里连接器与插件机制怎么真正落地。",
-      "title": "How OpenAI uses ChatGPT Sites (live at DevDay!) | Kath Korevec (Product Lead)",
-      "url": "https://www.lennysnewsletter.com/p/how-openai-uses-chatgpt-sites-live",
+      "summary": "Vishnu 发布 Agent37，用低成本沙箱帮用户跑 AI Agent，每个沙箱月均约 0.37 美元、免费用户基础设施成本仅 0.05–0.10 美元，并公开了从套壳到自建基础设施的省钱做法，适合想学 Agent 产品落地与成本控制的人拆解。",
+      "title": "Agent37：月费 0.37 美元的 AI Agent 沙箱，YC F26 创始人公开省钱做法",
+      "url": "https://news.ycombinator.com/item?id=50059096",
       "sources": [
         {
-          "url": "https://www.lennysnewsletter.com/p/how-openai-uses-chatgpt-sites-live",
-          "title": "How OpenAI uses ChatGPT Sites (live at DevDay!) | Kath Korevec (Product Lead)",
-          "source_type": "newsletter",
-          "published_at": "2026-10-05T12:04:54+00:00"
+          "url": "https://news.ycombinator.com/item?id=50059096",
+          "title": "Launch HN: Agent37 (YC F26) – Low-cost agent sandboxes for running agents",
+          "source_type": "hackernews",
+          "published_at": "2026-10-12T16:46:34+00:00"
         },
         {
-          "url": "https://www.lennysnewsletter.com/p/how-i-ai-8-real-jev-use-cases-how",
-          "title": "🎙️ How I AI: 8 real Jev use cases + How OpenAI uses ChatGPT Sites (live at DevDay!) + Claire’s DevDay recap",
+          "url": "https://aiweekly.co/alerts/yc-f26-launches-agent37-pitches-sub-1-monthly-sandboxes-for-running-ai-agents",
+          "title": "YC F26 Launches Agent37, Pitches Sub-$1 Monthly Sandboxes for ...",
           "source_type": "supplemental",
           "published_at": ""
         }
       ],
       "updates": [
         {
-          "update_id": "openai-chatgpt-sites-kath-korevec",
-          "date": "2026-10-06",
-          "title": "How OpenAI uses ChatGPT Sites (live at DevDay!) | Kath Korevec (Product Lead)",
-          "summary": "OpenAI 产品负责人 Kath Korevec 在 DevDay 现场讲她如何用 ChatGPT Sites 和 Codex 搭建内部事故指挥站点，并接入 Slack、Notion 连接器，展示了 AI 产品从内部工具到公开发布的真实过程。",
-          "score": 8.2,
-          "url": "https://www.lennysnewsletter.com/p/how-openai-uses-chatgpt-sites-live"
-        },
-        {
-          "update_id": "openai-chatgpt-sites-kath-korevec-devday",
-          "date": "2026-10-07",
-          "title": "How OpenAI uses ChatGPT Sites (live at DevDay!) | Kath Korevec (Product Lead)",
-          "summary": "OpenAI 产品负责人 Kath Korevec 讲她如何用 ChatGPT Sites 给团队搭事故指挥站点，并接入 Slack、Notion 连接器，展示了 AI 产品里连接器与插件机制怎么真正落地。",
+          "update_id": "agent37-launch-low-cost-agent-sandbox",
+          "date": "2026-10-13",
+          "title": "Agent37：月费 0.37 美元的 AI Agent 沙箱，YC F26 创始人公开省钱做法",
+          "summary": "Vishnu 发布 Agent37，用低成本沙箱帮用户跑 AI Agent，每个沙箱月均约 0.37 美元、免费用户基础设施成本仅 0.05–0.10 美元，并公开了从套壳到自建基础设施的省钱做法，适合想学 Agent 产品落地与成本控制的人拆解。",
           "score": 8.6,
-          "url": "https://www.lennysnewsletter.com/p/how-openai-uses-chatgpt-sites-live"
+          "url": "https://news.ycombinator.com/item?id=50059096"
         }
       ],
-      "usage_flow": [],
-      "learning_points": [],
+      "usage_flow": [
+        "注册账号，选择免费档或付费档",
+        "在沙箱里部署想跑的 Agent（如 Hermes、OpenClaw、Claude Code）",
+        "Agent 在隔离环境中执行任务（浏览网页、写代码等）",
+        "按实际使用付费，付费档月均约 $0.37/沙箱"
+      ],
+      "learning_points": [
+        "沙箱（Sandbox）：给程序一个'关起来的游乐场'，让它随便折腾但伤不到主机和其他用户",
+        "Agent：能自主调用工具（如浏览器、代码执行器）完成多步骤任务的 AI，不只是聊天",
+        "gVisor：Google 开源的'安全罩'，比虚拟机轻、启动快，但兼容性有牺牲（比如不支持 Docker 里再跑 Docker）"
+      ],
       "verticals": [],
       "tags": [
-        "ChatGPT Sites",
-        "Codex",
-        "MCP",
-        "构建过程",
-        "连接器",
-        "Agent"
+        "Agent",
+        "沙箱",
+        "YC",
+        "成本优化",
+        "开发者工具"
       ]
     },
     {
@@ -72,7 +72,7 @@
       "product_name": "Claude",
       "builder_name": "Anthropic News",
       "first_seen": "2026-08-28",
-      "last_seen": "2026-10-12",
+      "last_seen": "2026-10-13",
       "occurrence_count": 3,
       "intelligence_type": "model_capability",
       "evidence_status": "first_party",
@@ -146,6 +146,502 @@
         "企业AI",
         "金融",
         "客户案例"
+      ]
+    },
+    {
+      "product_id": "product-2f1078811d827984",
+      "product_name": "Muse",
+      "builder_name": "Lenny Rachitsky",
+      "first_seen": "2026-09-24",
+      "last_seen": "2026-10-13",
+      "occurrence_count": 2,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "first_party",
+      "target_user": "非技术背景的普通消费者，尤其是需要管理家庭日程、个人目标、日常信息整合的日常用户",
+      "user_problem": "现有 AI 工具要么太技术化（报错信息看不懂、终端界面吓人），要么太粗暴（默认获取所有权限、不打招呼就行动），让普通用户不敢用或不会用",
+      "what_it_is": "Meta 的 AI Agent Muse 设计负责人 Alex Cornell 公开讲了他怎么把 Muse 做成像发消息而不是 AI 应用，以及三层状态显示和生成式界面背后的设计取舍。",
+      "ai_role": "AI 负责理解用户意图、整合多源信息、主动发现用户没明确要求但有价值的事，并在每个敏感操作前暂停请求人类确认",
+      "implementation_idea": "未公开。从表现推测，核心是'权限感知的任务规划'——AI 不是拿到权限就一路跑到底，而是把任务拆成多个节点，每个涉及个人隐私或金钱支出的节点都插入'人类确认'检查点，同时用活动流把所有中间步骤可视化。",
+      "hands_on_exercise": "用你常用的 AI（ChatGPT/Claude/通义等）模拟 Muse 的'确认流'：给它一段虚构的家庭邮件和日历，让它先总结'我从中发现了这些信息，要用它们吗？'，你回复'可以'后再让它生成一份晨报。对比直接让它生成，体验'权限暂停'带来的信任感差异。",
+      "limitations_or_uncertainties": "播客评测为主观体验，无第三方独立验证；未公开 Muse 底层模型、是否本地运行、隐私数据具体存储方式；'浏览器代下单'的实际成功率、支持站点范围未公开；中文支持情况未公开",
+      "region": "global",
+      "score": 8.2,
+      "summary": "Meta 的 AI Agent Muse 设计负责人 Alex Cornell 公开讲了他怎么把 Muse 做成像发消息而不是 AI 应用，以及三层状态显示和生成式界面背后的设计取舍。",
+      "title": "🎙️ How I AI: How Meta designed Muse with Alex Cornell",
+      "url": "https://www.lennysnewsletter.com/p/how-i-ai-how-meta-designed-muse-with",
+      "sources": [
+        {
+          "url": "https://www.lennysnewsletter.com/p/how-i-ai-metas-muse-review-how-warp",
+          "title": "🎙️ How I AI: Meta’s Muse review + How Warp ships 2,000 PRs a month with AI factories",
+          "source_type": "newsletter",
+          "published_at": "2026-09-21T15:03:51+00:00"
+        },
+        {
+          "url": "https://ai.meta.com/muse/",
+          "title": "Muse: Meta's personal AI agent, features & capabilities",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/",
+          "title": "Introducing Muse: The World’s First Personal AI Agent Built for Everyone",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://www.lennysnewsletter.com/p/how-i-ai-how-meta-designed-muse-with",
+          "title": "🎙️ How I AI: How Meta designed Muse with Alex Cornell",
+          "source_type": "newsletter",
+          "published_at": "2026-10-12T15:00:38+00:00"
+        },
+        {
+          "url": "https://www.lennysnewsletter.com/p/how-meta-designed-muse-an-ai-agent",
+          "title": "How Meta designed Muse: an AI agent people actually want to talk to | Alex Cornell (Design Director)",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "lenny-how-i-ai-meta-muse-review",
+          "date": "2026-09-24",
+          "title": "Meta Muse 评测：一个把消费级体验做对的个人 AI Agent",
+          "summary": "Lenny 的播客评测了 Meta 的个人 AI Agent Muse，认为它在消费级体验上做得对，值得看是因为能对照自己产品的交互设计。",
+          "score": 7.4,
+          "url": "https://www.lennysnewsletter.com/p/how-i-ai-metas-muse-review-how-warp"
+        },
+        {
+          "update_id": "meta-muse-alex-cornell-design",
+          "date": "2026-10-13",
+          "title": "🎙️ How I AI: How Meta designed Muse with Alex Cornell",
+          "summary": "Meta 的 AI Agent Muse 设计负责人 Alex Cornell 公开讲了他怎么把 Muse 做成像发消息而不是 AI 应用，以及三层状态显示和生成式界面背后的设计取舍。",
+          "score": 8.2,
+          "url": "https://www.lennysnewsletter.com/p/how-i-ai-how-meta-designed-muse-with"
+        }
+      ],
+      "usage_flow": [
+        "用户通过自然语言对话 onboarding，授权 Muse 读取邮件、日历等",
+        "Muse 主动分析信息（如发现日程冲突、邮件中的关键事项），先总结它学到了什么，再询问是否可以使用这些信息",
+        "用户确认后，Muse 执行任务（如生成家庭晨报 PDF、追踪目标进度、浏览器代下单等）",
+        "用户在活动流中查看 Muse 具体调用了哪些工具、执行了哪些步骤"
+      ],
+      "learning_points": [
+        "AI Agent：不只是回答问题，而是能自主执行多步骤任务的 AI 系统，比如自己查日历、读邮件、生成报告",
+        "Function Calling：AI 判断'现在该调用哪个工具'的能力，比如识别到需要查日程就调用日历 API",
+        "RAG（检索增强生成）：AI 先从用户的私有数据（邮件、文档）里检索相关信息，再基于这些信息生成回答，避免胡编"
+      ],
+      "verticals": [],
+      "tags": [
+        "AI Agent",
+        "消费级产品",
+        "产品评测",
+        "Meta",
+        "产品设计",
+        "消费级AI"
+      ]
+    },
+    {
+      "product_id": "product-079759eb44953975",
+      "product_name": "DeepSeek Harness",
+      "builder_name": "财联社",
+      "first_seen": "2026-08-16",
+      "last_seen": "2026-10-13",
+      "occurrence_count": 2,
+      "intelligence_type": "model_capability",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "DeepSeek 在 V4 全系列模型上线后开放了 Harness 开发者预览版测试，为开发者提供新的模型调用与编排入口。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "china",
+      "score": 7.8,
+      "summary": "DeepSeek 在 V4 全系列模型上线后开放了 Harness 开发者预览版测试，为开发者提供新的模型调用与编排入口。",
+      "title": "V4全系列模型上线后，DeepSeek Harness开发者预览版开放测试 - 财联社",
+      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE4wd0JWNXNkT3NmUy1UV09ldm1iSXY3dTllQ1o1ZFg5MFZPS1BRY3RCTUJLc05UYWJTb1R6VHhoT0NXM3hJQU5xLQ?oc=5",
+      "sources": [
+        {
+          "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE4wd0JWNXNkT3NmUy1UV09ldm1iSXY3dTllQ1o1ZFg5MFZPS1BRY3RCTUJLc05UYWJTb1R6VHhoT0NXM3hJQU5xLQ?oc=5",
+          "title": "V4全系列模型上线后，DeepSeek Harness开发者预览版开放测试 - 财联社",
+          "source_type": "google_news",
+          "published_at": "2026-08-15T17:50:46+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "deepseek-harness-preview",
+          "date": "2026-08-16",
+          "title": "V4全系列模型上线后，DeepSeek Harness开发者预览版开放测试 - 财联社",
+          "summary": "DeepSeek 在 V4 全系列模型上线后开放 Harness 开发者预览版测试，值得关注其智能体框架能力。",
+          "score": 8.0,
+          "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE4wd0JWNXNkT3NmUy1UV09ldm1iSXY3dTllQ1o1ZFg5MFZPS1BRY3RCTUJLc05UYWJTb1R6VHhoT0NXM3hJQU5xLQ?oc=5"
+        },
+        {
+          "update_id": "deepseek-v4-harness-preview",
+          "date": "2026-10-11",
+          "title": "V4全系列模型上线后，DeepSeek Harness开发者预览版开放测试 - 财联社",
+          "summary": "DeepSeek 在 V4 全系列模型上线后开放了 Harness 开发者预览版测试，为开发者提供新的模型调用与编排入口。",
+          "score": 7.8,
+          "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE4wd0JWNXNkT3NmUy1UV09ldm1iSXY3dTllQ1o1ZFg5MFZPS1BRY3RCTUJLc05UYWJTb1R6VHhoT0NXM3hJQU5xLQ?oc=5"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "DeepSeek",
+        "智能体",
+        "开发者预览",
+        "模型能力",
+        "开发者工具"
+      ]
+    },
+    {
+      "product_id": "product-001b161756a57824",
+      "product_name": "GLM-Legal",
+      "builder_name": "ilreb",
+      "first_seen": "2026-10-13",
+      "last_seen": "2026-10-13",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "智谱发布法律垂直模型 GLM-Legal，想让 AI 处理合同审阅等法律工作，Hacker News 上有人分享用 Claude 改合同的实际体验，值得看垂直模型在强合规场景怎么落地。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "china",
+      "score": 7.8,
+      "summary": "智谱发布法律垂直模型 GLM-Legal，想让 AI 处理合同审阅等法律工作，Hacker News 上有人分享用 Claude 改合同的实际体验，值得看垂直模型在强合规场景怎么落地。",
+      "title": "GLM-Legal",
+      "url": "https://z.ai/blog/glm-legal",
+      "sources": [
+        {
+          "url": "https://z.ai/blog/glm-legal",
+          "title": "GLM-Legal",
+          "source_type": "hackernews",
+          "published_at": "2026-10-12T16:11:45+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "zai-glm-legal",
+          "date": "2026-10-13",
+          "title": "GLM-Legal",
+          "summary": "智谱发布法律垂直模型 GLM-Legal，想让 AI 处理合同审阅等法律工作，Hacker News 上有人分享用 Claude 改合同的实际体验，值得看垂直模型在强合规场景怎么落地。",
+          "score": 7.8,
+          "url": "https://z.ai/blog/glm-legal"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "垂直AI",
+        "法律",
+        "智谱"
+      ]
+    },
+    {
+      "product_id": "product-e562b90c12ad9492",
+      "product_name": "web-edit",
+      "builder_name": "Simon Willison",
+      "first_seen": "2026-10-13",
+      "last_seen": "2026-10-13",
+      "occurrence_count": 1,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Simon Willison 用 Codex 生成并发布了 web-edit 0.1a0，一个通过 Tailscale 在手机上浏览和编辑文件夹文件的网页工具，解决不想把凭据经手 LLM 的问题。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.4,
+      "summary": "Simon Willison 用 Codex 生成并发布了 web-edit 0.1a0，一个通过 Tailscale 在手机上浏览和编辑文件夹文件的网页工具，解决不想把凭据经手 LLM 的问题。",
+      "title": "web-edit 0.1a0",
+      "url": "https://simonwillison.net/2026/Oct/12/web-edit/",
+      "sources": [
+        {
+          "url": "https://simonwillison.net/2026/Oct/12/web-edit/",
+          "title": "web-edit 0.1a0",
+          "source_type": "rss",
+          "published_at": "2026-10-12T15:54:36+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "web-edit-0-1a0",
+          "date": "2026-10-13",
+          "title": "web-edit 0.1a0",
+          "summary": "Simon Willison 用 Codex 生成并发布了 web-edit 0.1a0，一个通过 Tailscale 在手机上浏览和编辑文件夹文件的网页工具，解决不想把凭据经手 LLM 的问题。",
+          "score": 7.4,
+          "url": "https://simonwillison.net/2026/Oct/12/web-edit/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "开发者工具",
+        "个人产品"
+      ]
+    },
+    {
+      "product_id": "product-e0c75917c2f84f80",
+      "product_name": "GitHub Copilot",
+      "builder_name": "Christopher Harrison",
+      "first_seen": "2026-07-28",
+      "last_seen": "2026-10-13",
+      "occurrence_count": 3,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "GitHub 官方发了一篇 Copilot 入门教程，教你怎么用自定义指令、自定义 Agent 和 MCP 服务器让 Copilot 理解你的代码库。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.2,
+      "summary": "GitHub 官方发了一篇 Copilot 入门教程，教你怎么用自定义指令、自定义 Agent 和 MCP 服务器让 Copilot 理解你的代码库。",
+      "title": "GitHub Copilot app for Beginners: How to teach Copilot about your codebase",
+      "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-how-to-teach-copilot-about-your-codebase/",
+      "sources": [
+        {
+          "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-getting-started/",
+          "title": "GitHub Copilot app for Beginners: Getting started",
+          "source_type": "rss",
+          "published_at": "2026-07-27T16:00:00+00:00"
+        },
+        {
+          "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-automate-dependabot-pull-request-triage/",
+          "title": "GitHub Copilot app for Beginners: Automate Dependabot pull request triage",
+          "source_type": "rss",
+          "published_at": "2026-08-26T20:12:53+00:00"
+        },
+        {
+          "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-how-to-teach-copilot-about-your-codebase/",
+          "title": "GitHub Copilot app for Beginners: How to teach Copilot about your codebase",
+          "source_type": "rss",
+          "published_at": "2026-10-12T17:43:59+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "github-copilot-app-beginners-guide",
+          "date": "2026-07-28",
+          "title": "GitHub Copilot app for Beginners: Getting started",
+          "summary": "GitHub Copilot应用入门指南，教初学者如何开始项目、使用AI代理和画布。",
+          "score": 7.0,
+          "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-getting-started/"
+        },
+        {
+          "update_id": "github-copilot-dependabot-triage",
+          "date": "2026-08-27",
+          "title": "GitHub Copilot app for Beginners: Automate Dependabot pull request triage",
+          "summary": "GitHub 官方教程展示如何用 Copilot app 自动化 Dependabot PR 分类，是 AI 辅助开发流程的实用案例。",
+          "score": 7.5,
+          "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-automate-dependabot-pull-request-triage/"
+        },
+        {
+          "update_id": "github-copilot-beginners-custom-instructions",
+          "date": "2026-10-13",
+          "title": "GitHub Copilot app for Beginners: How to teach Copilot about your codebase",
+          "summary": "GitHub 官方发了一篇 Copilot 入门教程，教你怎么用自定义指令、自定义 Agent 和 MCP 服务器让 Copilot 理解你的代码库。",
+          "score": 7.2,
+          "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-how-to-teach-copilot-about-your-codebase/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "GitHub Copilot",
+        "入门",
+        "自动化",
+        "MCP",
+        "开发者工具",
+        "教程"
+      ]
+    },
+    {
+      "product_id": "product-c5cb4c3da9370c22",
+      "product_name": "Janas",
+      "builder_name": "khalidkhair",
+      "first_seen": "2026-10-13",
+      "last_seen": "2026-10-13",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "verified",
+      "target_user": "想在本机跑大模型但硬件受限的开发者、本地 AI 部署爱好者",
+      "user_problem": "大模型动辄几十 GB 到上百 GB，显存/内存根本装不下，普通用户没法本地运行",
+      "what_it_is": "一个开源工具，让显存和内存不够的普通电脑，也能运行参数量远超硬件容量的大语言模型。",
+      "ai_role": "未公开具体模型支持细节；Janas 本身是推理加速框架，不训练模型，只负责在推理时智能调度哪些专家权重该进内存",
+      "implementation_idea": "MoE（Mixture of Experts，混合专家）模型的一大特点是：每次推理只激活一小部分'专家'网络，而不是用整个模型。Janas 利用这一点，不把全部专家存在内存里，而是像'按需取货'一样，从 SSD 临时读取当前要用的专家，用完就换。相当于把 SSD 当成超大号'虚拟内存'，但比无脑换页更聪明——它知道模型结构，只加载必要的部分。",
+      "hands_on_exercise": "30 分钟：访问 https://github.com/prabanta-dev/janas，按 README 安装；如果你有 16GB 内存的电脑，尝试下载一个 30B+ 的 MoE 模型（如 Qwen2.5-14B/32B 的 MoE 版本），记录首次 token 延迟和稳定后的 tok/s，对比'能跑起来'和'完全加载到内存'两种模式的资源占用差异。没有合适硬件可先看 Issues 区的用户报告。",
+      "limitations_or_uncertainties": "官方 README 技术细节未公开；具体支持哪些模型、SSD 最低速度要求、是否支持 Windows/Mac、与 llama.cpp 的现有 SSD 卸载功能差异多大，均未明确说明。评论区 62 tok/s 的测试环境（硬件、模型大小、量化精度）未公开。",
+      "region": "global",
+      "score": 7.2,
+      "summary": "开发者开源 Janas，用 SSD 流式加载专家权重让显存和内存装不下的大模型也能跑起来，评论区有用户实测 8–62 tok/s，适合想理解本地大模型部署的产品经理参考。",
+      "title": "Janas：用 SSD 流式加载专家权重，让普通设备跑超大模型",
+      "url": "https://github.com/prabanta-dev/janas",
+      "sources": [
+        {
+          "url": "https://github.com/prabanta-dev/janas",
+          "title": "Janas: Run LLMs larger than RAM by streaming experts from SSD",
+          "source_type": "hackernews",
+          "published_at": "2026-10-12T22:05:43+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "janas-llm-ssd-expert-streaming",
+          "date": "2026-10-13",
+          "title": "Janas：用 SSD 流式加载专家权重，让普通设备跑超大模型",
+          "summary": "开发者开源 Janas，用 SSD 流式加载专家权重让显存和内存装不下的大模型也能跑起来，评论区有用户实测 8–62 tok/s，适合想理解本地大模型部署的产品经理参考。",
+          "score": 7.2,
+          "url": "https://github.com/prabanta-dev/janas"
+        }
+      ],
+      "usage_flow": [
+        "准备一台有 SSD 的普通电脑，安装 Janas",
+        "下载一个 MoE 架构的大模型（如 Qwen 系列）",
+        "Janas 自动把当前需要的'专家'权重从 SSD 流式加载到显存/内存",
+        "模型开始输出文本，不需要的专家留在 SSD 不占用内存"
+      ],
+      "learning_points": [
+        "MoE（混合专家）：一种模型架构，把大模型拆成很多'专家'小网络，每次只调用少数几个，用更少算力获得大模型能力",
+        "内存瓶颈 vs 存储瓶颈：AI 推理速度受限于'数据在哪'——显存最快、内存次之、SSD 最慢，Janas 用速度换容量",
+        "专家并行/选择性加载：不是所有参数都同等重要，智能调度比'全加载'或'全不加载'更高效"
+      ],
+      "verticals": [],
+      "tags": [
+        "开源",
+        "本地推理",
+        "MoE",
+        "开发者工具"
+      ]
+    },
+    {
+      "product_id": "product-b2a837cefc16c3bf",
+      "product_name": "Claude Dynamic Workflows",
+      "builder_name": "Richard MacManus",
+      "first_seen": "2026-10-13",
+      "last_seen": "2026-10-13",
+      "occurrence_count": 1,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Anthropic 在 AI Engineer New York 分享了如何用动态工作流协调多个 Claude Agent，借鉴 Unix 和 Linux 的思路让 Agent 承接更大项目而不压垮开发者。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.2,
+      "summary": "Anthropic 在 AI Engineer New York 分享了如何用动态工作流协调多个 Claude Agent，借鉴 Unix 和 Linux 的思路让 Agent 承接更大项目而不压垮开发者。",
+      "title": "How Anthropic’s Dynamic Workflows Coordinate Claude Agents",
+      "url": "https://www.latent.space/p/claude-dynamic-workflows",
+      "sources": [
+        {
+          "url": "https://www.latent.space/p/claude-dynamic-workflows",
+          "title": "How Anthropic’s Dynamic Workflows Coordinate Claude Agents",
+          "source_type": "rss",
+          "published_at": "2026-10-12T18:18:17+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "anthropic-dynamic-workflows-talk",
+          "date": "2026-10-13",
+          "title": "How Anthropic’s Dynamic Workflows Coordinate Claude Agents",
+          "summary": "Anthropic 在 AI Engineer New York 分享了如何用动态工作流协调多个 Claude Agent，借鉴 Unix 和 Linux 的思路让 Agent 承接更大项目而不压垮开发者。",
+          "score": 7.2,
+          "url": "https://www.latent.space/p/claude-dynamic-workflows"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "多智能体",
+        "Anthropic"
+      ]
+    },
+    {
+      "product_id": "product-1190f0d5ba25e802",
+      "product_name": "ChatGPT Sites",
+      "builder_name": "Claire Vo",
+      "first_seen": "2026-10-06",
+      "last_seen": "2026-10-12",
+      "occurrence_count": 2,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "OpenAI 产品负责人 Kath Korevec 讲她如何用 ChatGPT Sites 给团队搭事故指挥站点，并接入 Slack、Notion 连接器，展示了 AI 产品里连接器与插件机制怎么真正落地。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.6,
+      "summary": "OpenAI 产品负责人 Kath Korevec 讲她如何用 ChatGPT Sites 给团队搭事故指挥站点，并接入 Slack、Notion 连接器，展示了 AI 产品里连接器与插件机制怎么真正落地。",
+      "title": "How OpenAI uses ChatGPT Sites (live at DevDay!) | Kath Korevec (Product Lead)",
+      "url": "https://www.lennysnewsletter.com/p/how-openai-uses-chatgpt-sites-live",
+      "sources": [
+        {
+          "url": "https://www.lennysnewsletter.com/p/how-openai-uses-chatgpt-sites-live",
+          "title": "How OpenAI uses ChatGPT Sites (live at DevDay!) | Kath Korevec (Product Lead)",
+          "source_type": "newsletter",
+          "published_at": "2026-10-05T12:04:54+00:00"
+        },
+        {
+          "url": "https://www.lennysnewsletter.com/p/how-i-ai-8-real-jev-use-cases-how",
+          "title": "🎙️ How I AI: 8 real Jev use cases + How OpenAI uses ChatGPT Sites (live at DevDay!) + Claire’s DevDay recap",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "openai-chatgpt-sites-kath-korevec",
+          "date": "2026-10-06",
+          "title": "How OpenAI uses ChatGPT Sites (live at DevDay!) | Kath Korevec (Product Lead)",
+          "summary": "OpenAI 产品负责人 Kath Korevec 在 DevDay 现场讲她如何用 ChatGPT Sites 和 Codex 搭建内部事故指挥站点，并接入 Slack、Notion 连接器，展示了 AI 产品从内部工具到公开发布的真实过程。",
+          "score": 8.2,
+          "url": "https://www.lennysnewsletter.com/p/how-openai-uses-chatgpt-sites-live"
+        },
+        {
+          "update_id": "openai-chatgpt-sites-kath-korevec-devday",
+          "date": "2026-10-07",
+          "title": "How OpenAI uses ChatGPT Sites (live at DevDay!) | Kath Korevec (Product Lead)",
+          "summary": "OpenAI 产品负责人 Kath Korevec 讲她如何用 ChatGPT Sites 给团队搭事故指挥站点，并接入 Slack、Notion 连接器，展示了 AI 产品里连接器与插件机制怎么真正落地。",
+          "score": 8.6,
+          "url": "https://www.lennysnewsletter.com/p/how-openai-uses-chatgpt-sites-live"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "ChatGPT Sites",
+        "Codex",
+        "MCP",
+        "构建过程",
+        "连接器",
+        "Agent"
       ]
     },
     {
@@ -439,64 +935,6 @@
         "开源",
         "自托管",
         "Cloudflare"
-      ]
-    },
-    {
-      "product_id": "product-079759eb44953975",
-      "product_name": "DeepSeek Harness",
-      "builder_name": "财联社",
-      "first_seen": "2026-08-16",
-      "last_seen": "2026-10-11",
-      "occurrence_count": 2,
-      "intelligence_type": "model_capability",
-      "evidence_status": "reported",
-      "target_user": "未公开",
-      "user_problem": "未公开",
-      "what_it_is": "DeepSeek 在 V4 全系列模型上线后开放了 Harness 开发者预览版测试，为开发者提供新的模型调用与编排入口。",
-      "ai_role": "未公开",
-      "implementation_idea": "未公开",
-      "hands_on_exercise": "未公开",
-      "limitations_or_uncertainties": "未公开",
-      "region": "china",
-      "score": 7.8,
-      "summary": "DeepSeek 在 V4 全系列模型上线后开放了 Harness 开发者预览版测试，为开发者提供新的模型调用与编排入口。",
-      "title": "V4全系列模型上线后，DeepSeek Harness开发者预览版开放测试 - 财联社",
-      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE4wd0JWNXNkT3NmUy1UV09ldm1iSXY3dTllQ1o1ZFg5MFZPS1BRY3RCTUJLc05UYWJTb1R6VHhoT0NXM3hJQU5xLQ?oc=5",
-      "sources": [
-        {
-          "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE4wd0JWNXNkT3NmUy1UV09ldm1iSXY3dTllQ1o1ZFg5MFZPS1BRY3RCTUJLc05UYWJTb1R6VHhoT0NXM3hJQU5xLQ?oc=5",
-          "title": "V4全系列模型上线后，DeepSeek Harness开发者预览版开放测试 - 财联社",
-          "source_type": "google_news",
-          "published_at": "2026-08-15T17:50:46+00:00"
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "deepseek-harness-preview",
-          "date": "2026-08-16",
-          "title": "V4全系列模型上线后，DeepSeek Harness开发者预览版开放测试 - 财联社",
-          "summary": "DeepSeek 在 V4 全系列模型上线后开放 Harness 开发者预览版测试，值得关注其智能体框架能力。",
-          "score": 8.0,
-          "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE4wd0JWNXNkT3NmUy1UV09ldm1iSXY3dTllQ1o1ZFg5MFZPS1BRY3RCTUJLc05UYWJTb1R6VHhoT0NXM3hJQU5xLQ?oc=5"
-        },
-        {
-          "update_id": "deepseek-v4-harness-preview",
-          "date": "2026-10-11",
-          "title": "V4全系列模型上线后，DeepSeek Harness开发者预览版开放测试 - 财联社",
-          "summary": "DeepSeek 在 V4 全系列模型上线后开放了 Harness 开发者预览版测试，为开发者提供新的模型调用与编排入口。",
-          "score": 7.8,
-          "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE4wd0JWNXNkT3NmUy1UV09ldm1iSXY3dTllQ1o1ZFg5MFZPS1BRY3RCTUJLc05UYWJTb1R6VHhoT0NXM3hJQU5xLQ?oc=5"
-        }
-      ],
-      "usage_flow": [],
-      "learning_points": [],
-      "verticals": [],
-      "tags": [
-        "DeepSeek",
-        "智能体",
-        "开发者预览",
-        "模型能力",
-        "开发者工具"
       ]
     },
     {
@@ -6957,75 +7395,6 @@
         "AI 编码",
         "前端性能",
         "工程实践"
-      ]
-    },
-    {
-      "product_id": "product-2f1078811d827984",
-      "product_name": "Muse",
-      "builder_name": "Lenny Rachitsky",
-      "first_seen": "2026-09-24",
-      "last_seen": "2026-09-24",
-      "occurrence_count": 1,
-      "intelligence_type": "product_case",
-      "evidence_status": "reported",
-      "target_user": "非技术背景的普通消费者，尤其是需要管理家庭日程、个人目标、日常信息整合的日常用户",
-      "user_problem": "现有 AI 工具要么太技术化（报错信息看不懂、终端界面吓人），要么太粗暴（默认获取所有权限、不打招呼就行动），让普通用户不敢用或不会用",
-      "what_it_is": "Meta 推出的个人 AI Agent（智能助手），帮普通人处理日程、邮件、目标追踪等日常事务，特点是会在敏感操作前主动征求用户同意。",
-      "ai_role": "AI 负责理解用户意图、整合多源信息、主动发现用户没明确要求但有价值的事，并在每个敏感操作前暂停请求人类确认",
-      "implementation_idea": "未公开。从表现推测，核心是'权限感知的任务规划'——AI 不是拿到权限就一路跑到底，而是把任务拆成多个节点，每个涉及个人隐私或金钱支出的节点都插入'人类确认'检查点，同时用活动流把所有中间步骤可视化。",
-      "hands_on_exercise": "用你常用的 AI（ChatGPT/Claude/通义等）模拟 Muse 的'确认流'：给它一段虚构的家庭邮件和日历，让它先总结'我从中发现了这些信息，要用它们吗？'，你回复'可以'后再让它生成一份晨报。对比直接让它生成，体验'权限暂停'带来的信任感差异。",
-      "limitations_or_uncertainties": "播客评测为主观体验，无第三方独立验证；未公开 Muse 底层模型、是否本地运行、隐私数据具体存储方式；'浏览器代下单'的实际成功率、支持站点范围未公开；中文支持情况未公开",
-      "region": "global",
-      "score": 7.4,
-      "summary": "Lenny 的播客评测了 Meta 的个人 AI Agent Muse，认为它在消费级体验上做得对，值得看是因为能对照自己产品的交互设计。",
-      "title": "Meta Muse 评测：一个把消费级体验做对的个人 AI Agent",
-      "url": "https://www.lennysnewsletter.com/p/how-i-ai-metas-muse-review-how-warp",
-      "sources": [
-        {
-          "url": "https://www.lennysnewsletter.com/p/how-i-ai-metas-muse-review-how-warp",
-          "title": "🎙️ How I AI: Meta’s Muse review + How Warp ships 2,000 PRs a month with AI factories",
-          "source_type": "newsletter",
-          "published_at": "2026-09-21T15:03:51+00:00"
-        },
-        {
-          "url": "https://ai.meta.com/muse/",
-          "title": "Muse: Meta's personal AI agent, features & capabilities",
-          "source_type": "supplemental",
-          "published_at": ""
-        },
-        {
-          "url": "https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/",
-          "title": "Introducing Muse: The World’s First Personal AI Agent Built for Everyone",
-          "source_type": "supplemental",
-          "published_at": ""
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "lenny-how-i-ai-meta-muse-review",
-          "date": "2026-09-24",
-          "title": "Meta Muse 评测：一个把消费级体验做对的个人 AI Agent",
-          "summary": "Lenny 的播客评测了 Meta 的个人 AI Agent Muse，认为它在消费级体验上做得对，值得看是因为能对照自己产品的交互设计。",
-          "score": 7.4,
-          "url": "https://www.lennysnewsletter.com/p/how-i-ai-metas-muse-review-how-warp"
-        }
-      ],
-      "usage_flow": [
-        "用户通过自然语言对话 onboarding，授权 Muse 读取邮件、日历等",
-        "Muse 主动分析信息（如发现日程冲突、邮件中的关键事项），先总结它学到了什么，再询问是否可以使用这些信息",
-        "用户确认后，Muse 执行任务（如生成家庭晨报 PDF、追踪目标进度、浏览器代下单等）",
-        "用户在活动流中查看 Muse 具体调用了哪些工具、执行了哪些步骤"
-      ],
-      "learning_points": [
-        "AI Agent：不只是回答问题，而是能自主执行多步骤任务的 AI 系统，比如自己查日历、读邮件、生成报告",
-        "Function Calling：AI 判断'现在该调用哪个工具'的能力，比如识别到需要查日程就调用日历 API",
-        "RAG（检索增强生成）：AI 先从用户的私有数据（邮件、文档）里检索相关信息，再基于这些信息生成回答，避免胡编"
-      ],
-      "verticals": [],
-      "tags": [
-        "AI Agent",
-        "消费级产品",
-        "产品评测"
       ]
     },
     {
@@ -15194,68 +15563,6 @@
         "收购",
         "Nvidia",
         "Hugging Face"
-      ]
-    },
-    {
-      "product_id": "product-e0c75917c2f84f80",
-      "product_name": "GitHub Copilot",
-      "builder_name": "Christopher Harrison",
-      "first_seen": "2026-07-28",
-      "last_seen": "2026-08-27",
-      "occurrence_count": 2,
-      "intelligence_type": "builder_insight",
-      "evidence_status": "first_party",
-      "target_user": "未公开",
-      "user_problem": "未公开",
-      "what_it_is": "GitHub 官方教程展示如何用 Copilot app 自动化 Dependabot PR 分类，是 AI 辅助开发流程的实用案例。",
-      "ai_role": "未公开",
-      "implementation_idea": "未公开",
-      "hands_on_exercise": "未公开",
-      "limitations_or_uncertainties": "未公开",
-      "region": "global",
-      "score": 7.5,
-      "summary": "GitHub 官方教程展示如何用 Copilot app 自动化 Dependabot PR 分类，是 AI 辅助开发流程的实用案例。",
-      "title": "GitHub Copilot app for Beginners: Automate Dependabot pull request triage",
-      "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-automate-dependabot-pull-request-triage/",
-      "sources": [
-        {
-          "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-getting-started/",
-          "title": "GitHub Copilot app for Beginners: Getting started",
-          "source_type": "rss",
-          "published_at": "2026-07-27T16:00:00+00:00"
-        },
-        {
-          "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-automate-dependabot-pull-request-triage/",
-          "title": "GitHub Copilot app for Beginners: Automate Dependabot pull request triage",
-          "source_type": "rss",
-          "published_at": "2026-08-26T20:12:53+00:00"
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "github-copilot-app-beginners-guide",
-          "date": "2026-07-28",
-          "title": "GitHub Copilot app for Beginners: Getting started",
-          "summary": "GitHub Copilot应用入门指南，教初学者如何开始项目、使用AI代理和画布。",
-          "score": 7.0,
-          "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-getting-started/"
-        },
-        {
-          "update_id": "github-copilot-dependabot-triage",
-          "date": "2026-08-27",
-          "title": "GitHub Copilot app for Beginners: Automate Dependabot pull request triage",
-          "summary": "GitHub 官方教程展示如何用 Copilot app 自动化 Dependabot PR 分类，是 AI 辅助开发流程的实用案例。",
-          "score": 7.5,
-          "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-automate-dependabot-pull-request-triage/"
-        }
-      ],
-      "usage_flow": [],
-      "learning_points": [],
-      "verticals": [],
-      "tags": [
-        "GitHub Copilot",
-        "入门",
-        "自动化"
       ]
     },
     {
