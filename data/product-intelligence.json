@@ -1,70 +1,75 @@
 {
   "version": 1,
-  "updated_at": "2026-10-13T06:47:45.841755+00:00",
+  "updated_at": "2026-10-14T04:52:50.907098+00:00",
   "products": [
     {
-      "product_id": "product-cb70685980f1f795",
-      "product_name": "Agent37",
-      "builder_name": "vishnukool",
-      "first_seen": "2026-10-13",
-      "last_seen": "2026-10-13",
+      "product_id": "product-31dbede9622aade2",
+      "product_name": "Gemini 4 Argon",
+      "builder_name": "xnx",
+      "first_seen": "2026-10-14",
+      "last_seen": "2026-10-14",
       "occurrence_count": 1,
       "intelligence_type": "product_case",
-      "evidence_status": "first_party",
-      "target_user": "需要云端运行 AI Agent 的开发者，尤其是做消息类 Agent、想用免费档测试的个人用户",
-      "user_problem": "主流云沙箱太贵，个人开发者或小团队负担不起；想提供免费档获客，但基础设施成本压不下来",
-      "what_it_is": "一个帮开发者在云端低成本运行 AI Agent（如 Claude Code、Hermes）的隔离沙箱服务，比主流厂商便宜 90% 以上。",
-      "ai_role": "AI Agent 本身由用户自选并部署，Agent37 只提供运行它的隔离环境，不直接参与 AI 推理",
-      "implementation_idea": "核心思路是'合租服务器'：用 gVisor（一种轻量级隔离技术，比传统虚拟机更省内存）把多个用户的沙箱塞进同一台物理机，跳过 AWS 等中间商直接租 Hetzner/OVH 的便宜机器，再根据 Agent 'burst 型 CPU + 常驻内存'的特点，优先买大内存而非高 CPU 的配置。",
-      "hands_on_exercise": "30 分钟：在本地用 Docker 跑一个开源 Agent（如 OpenClaw 或 Claude Code 的社区版），同时开系统监控（htop 或活动监视器）观察：①启动时 CPU 是否飙升后回落 ②内存是否一直占用。体会为什么'大内存+低 CPU'的机型更适合这类负载。",
-      "limitations_or_uncertainties": "未公开具体技术架构细节（如 gVisor 版本、主机规格）；免费档是否有功能限制未说明；不支持 Docker-in-Docker 和 Android 模拟器；目前仅信用卡付款，无 PayPal；社区质疑长期能否抵抗大厂降价竞争",
+      "evidence_status": "verified",
+      "target_user": "机器人开发者、AI 硬件爱好者、想用大模型控制物理设备的工程师",
+      "user_problem": "之前用 Opus 和 Astra 控制机器人时，模型经常'看不见'障碍物，导致机器人撞桌子、撞床；开发者希望 LLM 能真正理解 3D 空间，安全地指挥机器人移动",
+      "what_it_is": "Google 最新发布的多模态大模型 Gemini 4 Argon，被社区开发者实际接入到人形机器人和扫雪机器人中，用于视觉理解和运动控制",
+      "ai_role": "AI 是机器人的'决策中枢'：看摄像头画面→理解空间关系→从预设动作中选择下一步→发出指令，循环直到任务完成",
+      "implementation_idea": "核心思路叫'视觉 harness + 动作原语'：不给 AI 直接输出电机信号，而是让 AI 当'指挥官'，从一小套人类写好的安全动作里挑选。AI 负责'看明白场景、决定做什么'，底层代码负责'可靠执行'。这样既发挥了大模型的理解力，又避免了它瞎指挥硬件",
+      "hands_on_exercise": "用 Gemini 2.5 Flash 或任何带视觉的免费 API，写一个简单的 Python 脚本：上传一张房间照片，让模型描述'从左走到右会碰到什么障碍'，观察它能否正确识别空间关系。30 分钟可完成，无需真机器人",
+      "limitations_or_uncertainties": "社区案例未公开具体代码、延迟数据、成本；LIDAR 未接入说明纯视觉方案仍有盲区；模型是否真在端侧运行还是云端调用未说明；电池续航和实时性瓶颈被社区质疑可能还需数年解决",
       "region": "global",
-      "score": 8.6,
-      "summary": "Vishnu 发布 Agent37，用低成本沙箱帮用户跑 AI Agent，每个沙箱月均约 0.37 美元、免费用户基础设施成本仅 0.05–0.10 美元，并公开了从套壳到自建基础设施的省钱做法，适合想学 Agent 产品落地与成本控制的人拆解。",
-      "title": "Agent37：月费 0.37 美元的 AI Agent 沙箱，YC F26 创始人公开省钱做法",
-      "url": "https://news.ycombinator.com/item?id=50059096",
+      "score": 8.5,
+      "summary": "开发者在 Hacker News 分享用 Gemini 4 Argon 控制 Unitree 人形机器人和自建扫雪机器人，发现它比 Opus 和 Astra 更会避障，展示了 LLM 控制机器人的实际用法。",
+      "title": "Gemini 4 Argon 被开发者用于控制真实机器人：避障能力优于前代模型",
+      "url": "https://developers.googleblog.com/gemini-4-argon-for-robotics/",
       "sources": [
         {
-          "url": "https://news.ycombinator.com/item?id=50059096",
-          "title": "Launch HN: Agent37 (YC F26) – Low-cost agent sandboxes for running agents",
+          "url": "https://developers.googleblog.com/gemini-4-argon-for-robotics/",
+          "title": "Gemini 4 Argon for Robotics",
           "source_type": "hackernews",
-          "published_at": "2026-10-12T16:46:34+00:00"
+          "published_at": "2026-10-13T16:55:47+00:00"
         },
         {
-          "url": "https://aiweekly.co/alerts/yc-f26-launches-agent37-pitches-sub-1-monthly-sandboxes-for-running-ai-agents",
-          "title": "YC F26 Launches Agent37, Pitches Sub-$1 Monthly Sandboxes for ...",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/",
+          "title": "Gemini 4 Argon is now available for everyone - The Keyword",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://deepmind.google/models/model-cards/gemini-4-argon/",
+          "title": "Gemini 4 Argon - Model Card — Google DeepMind",
           "source_type": "supplemental",
           "published_at": ""
         }
       ],
       "updates": [
         {
-          "update_id": "agent37-launch-low-cost-agent-sandbox",
-          "date": "2026-10-13",
-          "title": "Agent37：月费 0.37 美元的 AI Agent 沙箱，YC F26 创始人公开省钱做法",
-          "summary": "Vishnu 发布 Agent37，用低成本沙箱帮用户跑 AI Agent，每个沙箱月均约 0.37 美元、免费用户基础设施成本仅 0.05–0.10 美元，并公开了从套壳到自建基础设施的省钱做法，适合想学 Agent 产品落地与成本控制的人拆解。",
-          "score": 8.6,
-          "url": "https://news.ycombinator.com/item?id=50059096"
+          "update_id": "gemini-4-argon-robotics-hn",
+          "date": "2026-10-14",
+          "title": "Gemini 4 Argon 被开发者用于控制真实机器人：避障能力优于前代模型",
+          "summary": "开发者在 Hacker News 分享用 Gemini 4 Argon 控制 Unitree 人形机器人和自建扫雪机器人，发现它比 Opus 和 Astra 更会避障，展示了 LLM 控制机器人的实际用法。",
+          "score": 8.5,
+          "url": "https://developers.googleblog.com/gemini-4-argon-for-robotics/"
         }
       ],
       "usage_flow": [
-        "注册账号，选择免费档或付费档",
-        "在沙箱里部署想跑的 Agent（如 Hermes、OpenClaw、Claude Code）",
-        "Agent 在隔离环境中执行任务（浏览网页、写代码等）",
-        "按实际使用付费，付费档月均约 $0.37/沙箱"
+        "开发者准备机器人硬件（如 Unitree 人形机器人或自建扫雪机器人）和摄像头",
+        "将 Gemini 4 Argon 通过 API 接入，作为'大脑'接收视觉画面并输出动作指令",
+        "用预定义的基础动作库（如'向前走''转弯''停下'）作为模型能调用的'工具'",
+        "给模型发自然语言指令（如'去桌子那边'），模型自主规划路径、避开障碍"
       ],
       "learning_points": [
-        "沙箱（Sandbox）：给程序一个'关起来的游乐场'，让它随便折腾但伤不到主机和其他用户",
-        "Agent：能自主调用工具（如浏览器、代码执行器）完成多步骤任务的 AI，不只是聊天",
-        "gVisor：Google 开源的'安全罩'，比虚拟机轻、启动快，但兼容性有牺牲（比如不支持 Docker 里再跑 Docker）"
+        "Agent（智能体）：让 AI 不只是聊天，而是能观察环境、做决定、调用工具完成目标的系统",
+        "Function Calling（函数调用）：给 AI 预设好它能'调用'的动作清单，AI 输出函数名和参数而非自由发挥",
+        "Zero-shot（零样本）：不针对特定机器人专门训练，直接用通用大模型控制新硬件，靠模型的泛化能力"
       ],
       "verticals": [],
       "tags": [
+        "机器人",
+        "Gemini",
         "Agent",
-        "沙箱",
-        "YC",
-        "成本优化",
-        "开发者工具"
+        "开发者实践"
       ]
     },
     {
@@ -72,7 +77,7 @@
       "product_name": "Claude",
       "builder_name": "Anthropic News",
       "first_seen": "2026-08-28",
-      "last_seen": "2026-10-13",
+      "last_seen": "2026-10-14",
       "occurrence_count": 3,
       "intelligence_type": "model_capability",
       "evidence_status": "first_party",
@@ -153,7 +158,7 @@
       "product_name": "Muse",
       "builder_name": "Lenny Rachitsky",
       "first_seen": "2026-09-24",
-      "last_seen": "2026-10-13",
+      "last_seen": "2026-10-14",
       "occurrence_count": 2,
       "intelligence_type": "builder_insight",
       "evidence_status": "first_party",
@@ -238,6 +243,423 @@
         "Meta",
         "产品设计",
         "消费级AI"
+      ]
+    },
+    {
+      "product_id": "product-fc3507e7daea8b3a",
+      "product_name": "Higgsfield",
+      "builder_name": "OpenAI News",
+      "first_seen": "2026-10-14",
+      "last_seen": "2026-10-14",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "做 AI 视频的创作者，想拍更长 AI 电影的人",
+      "user_problem": "之前 AI 视频只能做 1 分钟左右，做不了完整叙事的长片；画面控制不精细；没有语音配合，做电影要手动拼接很多工具",
+      "what_it_is": "一个 AI 视频创作平台，这次升级后能让用户生成 10 分钟以上的长视频，并加入更精准的图像生成和语音制作能力",
+      "ai_role": "GPT-6 Astra 负责生成长视频序列；GPT-Image-2.5 负责精确视觉画面；GPT-Live 负责语音合成——三个模型分工协作，不是单一模型做所有事",
+      "implementation_idea": "把长视频拆成多个片段让模型连续生成，同时保持角色和场景不跳变；图像模型单独负责关键帧的精细控制；语音模型最后对口型配音。相当于'分工流水线'而不是一个万能模型硬撑",
+      "hands_on_exercise": "打开 Higgsfield.ai 官网，用免费额度试做一段 30 秒视频：先写一段故事开头，观察平台是否自动分镜；再上传一张人物参考图，看角色是否保持一致；最后如果支持语音，加一句对白，体会'多模型协作'和'单一模型'的区别",
+      "limitations_or_uncertainties": "GPT-6 Astra 是否为真实模型名未完全确认（OpenAI 官方页面原文如此，但公开资料中 GPT-6 尚未正式发布）；10 分钟视频的连贯性、成本、实际可用时间未公开；GPT-Image-2.5 和 GPT-Live 的具体能力边界未详细说明",
+      "region": "global",
+      "score": 8.2,
+      "summary": "Higgsfield 用 OpenAI 的 GPT-6 Astra 把 AI 视频从 1 分钟做到 10 分钟以上，还接入图像和语音模型，让创作者能拍更长的 AI 电影。",
+      "title": "Higgsfield 用 GPT-6 Astra 把 AI 视频从 1 分钟延长到 10 分钟以上",
+      "url": "https://openai.com/index/higgsfield-longer-videos-voice",
+      "sources": [
+        {
+          "url": "https://openai.com/index/higgsfield-longer-videos-voice",
+          "title": "Higgsfield takes AI video from 1 minute to over 10",
+          "source_type": "rss",
+          "published_at": "2026-10-13T12:00:00+00:00"
+        },
+        {
+          "url": "https://higgsfield.ai/",
+          "title": "Higgsfield AI — AI-native creative suite",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "higgsfield-gpt6-astra-long-video",
+          "date": "2026-10-14",
+          "title": "Higgsfield 用 GPT-6 Astra 把 AI 视频从 1 分钟延长到 10 分钟以上",
+          "summary": "Higgsfield 用 OpenAI 的 GPT-6 Astra 把 AI 视频从 1 分钟做到 10 分钟以上，还接入图像和语音模型，让创作者能拍更长的 AI 电影。",
+          "score": 8.2,
+          "url": "https://openai.com/index/higgsfield-longer-videos-voice"
+        }
+      ],
+      "usage_flow": [
+        "用文本或参考图告诉 Higgsfield 你想拍什么内容",
+        "平台调用 GPT-6 Astra 生成长达 10 分钟以上的视频片段",
+        "用 GPT-Image-2.5 调整或补充需要精确控制的画面",
+        "用 GPT-Live 加入语音对白，完成带声音的 AI 电影"
+      ],
+      "learning_points": [
+        "多模态（Multimodal）：AI 同时处理文本、图像、视频、语音多种信息，就像人同时用眼睛看、耳朵听、嘴巴说",
+        "Agent（智能体）：AI 能按目标自动调用不同工具完成复杂任务，这里 Higgsfield 的 Agent 自动协调了三个 GPT 模型",
+        "Function Calling（函数调用）：AI 判断'现在该用图像模型了''现在该配音了'，自动触发对应功能，不需要人手动切换"
+      ],
+      "verticals": [],
+      "tags": [
+        "AI视频",
+        "多模态",
+        "创作者工具"
+      ]
+    },
+    {
+      "product_id": "product-3afd4dcdf1545e7e",
+      "product_name": "On-device AI Scam Detection",
+      "builder_name": "Google DeepMind",
+      "first_seen": "2026-10-14",
+      "last_seen": "2026-10-14",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Google DeepMind 和新加坡政府合作，用端侧 Gemma 模型在私聊里拦截诈骗信息，数据不出设备，保护用户隐私。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.0,
+      "summary": "Google DeepMind 和新加坡政府合作，用端侧 Gemma 模型在私聊里拦截诈骗信息，数据不出设备，保护用户隐私。",
+      "title": "Google DeepMind and Singapore Government announce new AI tool to protect citizens against scams",
+      "url": "https://deepmind.google/blog/on-device-ai-scam-detection-mddi/",
+      "sources": [
+        {
+          "url": "https://deepmind.google/blog/on-device-ai-scam-detection-mddi/",
+          "title": "Google DeepMind and Singapore Government announce new AI tool to protect citizens against scams",
+          "source_type": "rss",
+          "published_at": "2026-10-14T02:00:14+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "deepmind-singapore-scam-detection-gemma",
+          "date": "2026-10-14",
+          "title": "Google DeepMind and Singapore Government announce new AI tool to protect citizens against scams",
+          "summary": "Google DeepMind 和新加坡政府合作，用端侧 Gemma 模型在私聊里拦截诈骗信息，数据不出设备，保护用户隐私。",
+          "score": 8.0,
+          "url": "https://deepmind.google/blog/on-device-ai-scam-detection-mddi/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "端侧AI",
+        "反诈骗",
+        "Gemma",
+        "隐私"
+      ]
+    },
+    {
+      "product_id": "product-dddb7b79c2bc1e7c",
+      "product_name": "llm-gemini",
+      "builder_name": "Simon Willison",
+      "first_seen": "2026-08-14",
+      "last_seen": "2026-10-14",
+      "occurrence_count": 3,
+      "intelligence_type": "model_capability",
+      "evidence_status": "verified",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Simon Willison 给自己的 llm-gemini 工具加上 Gemini 4 Argon 支持，并实测了生成效果和单次成本，值得看新模型怎么接进现有工具链。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.6,
+      "summary": "Simon Willison 给自己的 llm-gemini 工具加上 Gemini 4 Argon 支持，并实测了生成效果和单次成本，值得看新模型怎么接进现有工具链。",
+      "title": "llm-gemini 0.35",
+      "url": "https://simonwillison.net/2026/Oct/13/llm-gemini/",
+      "sources": [
+        {
+          "url": "https://simonwillison.net/2026/Aug/13/llm-gemini/",
+          "title": "llm-gemini 0.33",
+          "source_type": "rss",
+          "published_at": "2026-08-13T19:37:34+00:00"
+        },
+        {
+          "url": "https://simonwillison.net/2026/Sep/2/llm-gemini/",
+          "title": "llm-gemini 0.34",
+          "source_type": "rss",
+          "published_at": "2026-09-02T16:39:38+00:00"
+        },
+        {
+          "url": "https://deepmind.google/blog/introducing-gemini-3-8-flash-and-38-flash-cyber/",
+          "title": "Introducing Gemini 3.8 Flash and 3.8 Flash Cyber",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://www.theverge.com/ai-artificial-intelligence/988742/google-gemini-3-8-flash",
+          "title": "Google says its new Gemini 3.8 Flash model ‘works harder’ but might cost more",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://artificialanalysis.ai/articles/gemini-3-8-flash",
+          "title": "Gemini 3 8 Flash",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://simonwillison.net/2026/Oct/13/llm-gemini/",
+          "title": "llm-gemini 0.35",
+          "source_type": "rss",
+          "published_at": "2026-10-13T22:28:54+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "llm-gemini-0.33-release-2026",
+          "date": "2026-08-14",
+          "title": "llm-gemini 0.33",
+          "summary": "llm-gemini 0.33发布，新增Gemini 3.7 Flash支持和服务端工具调用，开发者可快速体验新模型能力。",
+          "score": 8.0,
+          "url": "https://simonwillison.net/2026/Aug/13/llm-gemini/"
+        },
+        {
+          "update_id": "llm-gemini-0.34-release",
+          "date": "2026-09-03",
+          "title": "llm-gemini 0.34",
+          "summary": "llm-gemini 0.34发布，新增支持Gemini 3.8 Flash模型及思考级别选项。",
+          "score": 8.5,
+          "url": "https://simonwillison.net/2026/Sep/2/llm-gemini/"
+        },
+        {
+          "update_id": "llm-gemini-0-35-gemini4-argon",
+          "date": "2026-10-14",
+          "title": "llm-gemini 0.35",
+          "summary": "Simon Willison 给自己的 llm-gemini 工具加上 Gemini 4 Argon 支持，并实测了生成效果和单次成本，值得看新模型怎么接进现有工具链。",
+          "score": 7.6,
+          "url": "https://simonwillison.net/2026/Oct/13/llm-gemini/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Gemini",
+        "开发者工具",
+        "模型",
+        "LLM工具",
+        "模型接入"
+      ]
+    },
+    {
+      "product_id": "product-f27ced46a082baa3",
+      "product_name": "Azure Content Understanding",
+      "builder_name": "Chu Lahlou",
+      "first_seen": "2026-10-14",
+      "last_seen": "2026-10-14",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "微软在 Azure 上推出预置文档分析器，把领域知识、置信度和上下文打包好，让开发者不用自己搭就能做文档理解。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.5,
+      "summary": "微软在 Azure 上推出预置文档分析器，把领域知识、置信度和上下文打包好，让开发者不用自己搭就能做文档理解。",
+      "title": "Azure Content Understanding Prebuilt Analyzers: packaging domain knowledge for document AI",
+      "url": "https://devblogs.microsoft.com/foundry/more-than-a-schema-content-understanding-prebuilt-analyzers/",
+      "sources": [
+        {
+          "url": "https://devblogs.microsoft.com/foundry/more-than-a-schema-content-understanding-prebuilt-analyzers/",
+          "title": "Azure Content Understanding Prebuilt Analyzers: packaging domain knowledge for document AI",
+          "source_type": "rss",
+          "published_at": "2026-10-13T14:20:35+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "azure-content-understanding-prebuilt-analyzers",
+          "date": "2026-10-14",
+          "title": "Azure Content Understanding Prebuilt Analyzers: packaging domain knowledge for document AI",
+          "summary": "微软在 Azure 上推出预置文档分析器，把领域知识、置信度和上下文打包好，让开发者不用自己搭就能做文档理解。",
+          "score": 7.5,
+          "url": "https://devblogs.microsoft.com/foundry/more-than-a-schema-content-understanding-prebuilt-analyzers/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "文档AI",
+        "Azure",
+        "企业AI"
+      ]
+    },
+    {
+      "product_id": "product-3942a7575526df34",
+      "product_name": "Shopify",
+      "builder_name": "Mia Sato",
+      "first_seen": "2026-10-14",
+      "last_seen": "2026-10-14",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Shopify 宣布让更多 AI agent 能浏览并代用户购买其十亿级商品，解决 agent 自动购物问题，值得关注 agent 电商的产品机会。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.5,
+      "summary": "Shopify 宣布让更多 AI agent 能浏览并代用户购买其十亿级商品，解决 agent 自动购物问题，值得关注 agent 电商的产品机会。",
+      "title": "Shopify opens its catalog up to more AI agents",
+      "url": "https://www.theverge.com/news/1010365/shopify-opens-its-catalog-up-to-more-ai-agents",
+      "sources": [
+        {
+          "url": "https://www.theverge.com/news/1010365/shopify-opens-its-catalog-up-to-more-ai-agents",
+          "title": "Shopify opens its catalog up to more AI agents",
+          "source_type": "rss",
+          "published_at": "2026-10-13T19:42:42+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "shopify-catalog-open-ai-agents",
+          "date": "2026-10-14",
+          "title": "Shopify opens its catalog up to more AI agents",
+          "summary": "Shopify 宣布让更多 AI agent 能浏览并代用户购买其十亿级商品，解决 agent 自动购物问题，值得关注 agent 电商的产品机会。",
+          "score": 7.5,
+          "url": "https://www.theverge.com/news/1010365/shopify-opens-its-catalog-up-to-more-ai-agents"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "电商",
+        "agentic commerce"
+      ]
+    },
+    {
+      "product_id": "product-be60717e6748c65c",
+      "product_name": "LFM2.5-24B-A2B",
+      "builder_name": "Hugging Face",
+      "first_seen": "2026-10-14",
+      "last_seen": "2026-10-14",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Liquid AI 发布 LFM2.5-24B-A2B 模型，让开发者能在本地设备上跑快速、私密的 AI agent，解决云端 agent 的隐私和延迟问题，值得关注端侧产品机会。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.2,
+      "summary": "Liquid AI 发布 LFM2.5-24B-A2B 模型，让开发者能在本地设备上跑快速、私密的 AI agent，解决云端 agent 的隐私和延迟问题，值得关注端侧产品机会。",
+      "title": "Run fast, private agents on-device with LFM2.5-24B-A2B",
+      "url": "https://huggingface.co/blog/LiquidAI/lfm25-24b-a2b",
+      "sources": [
+        {
+          "url": "https://huggingface.co/blog/LiquidAI/lfm25-24b-a2b",
+          "title": "Run fast, private agents on-device with LFM2.5-24B-A2B",
+          "source_type": "rss",
+          "published_at": "2026-10-13T17:05:48+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "liquid-ai-lfm25-24b-a2b-release",
+          "date": "2026-10-14",
+          "title": "Run fast, private agents on-device with LFM2.5-24B-A2B",
+          "summary": "Liquid AI 发布 LFM2.5-24B-A2B 模型，让开发者能在本地设备上跑快速、私密的 AI agent，解决云端 agent 的隐私和延迟问题，值得关注端侧产品机会。",
+          "score": 7.2,
+          "url": "https://huggingface.co/blog/LiquidAI/lfm25-24b-a2b"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "端侧模型",
+        "Agent",
+        "隐私"
+      ]
+    },
+    {
+      "product_id": "product-cb70685980f1f795",
+      "product_name": "Agent37",
+      "builder_name": "vishnukool",
+      "first_seen": "2026-10-13",
+      "last_seen": "2026-10-13",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "需要云端运行 AI Agent 的开发者，尤其是做消息类 Agent、想用免费档测试的个人用户",
+      "user_problem": "主流云沙箱太贵，个人开发者或小团队负担不起；想提供免费档获客，但基础设施成本压不下来",
+      "what_it_is": "一个帮开发者在云端低成本运行 AI Agent（如 Claude Code、Hermes）的隔离沙箱服务，比主流厂商便宜 90% 以上。",
+      "ai_role": "AI Agent 本身由用户自选并部署，Agent37 只提供运行它的隔离环境，不直接参与 AI 推理",
+      "implementation_idea": "核心思路是'合租服务器'：用 gVisor（一种轻量级隔离技术，比传统虚拟机更省内存）把多个用户的沙箱塞进同一台物理机，跳过 AWS 等中间商直接租 Hetzner/OVH 的便宜机器，再根据 Agent 'burst 型 CPU + 常驻内存'的特点，优先买大内存而非高 CPU 的配置。",
+      "hands_on_exercise": "30 分钟：在本地用 Docker 跑一个开源 Agent（如 OpenClaw 或 Claude Code 的社区版），同时开系统监控（htop 或活动监视器）观察：①启动时 CPU 是否飙升后回落 ②内存是否一直占用。体会为什么'大内存+低 CPU'的机型更适合这类负载。",
+      "limitations_or_uncertainties": "未公开具体技术架构细节（如 gVisor 版本、主机规格）；免费档是否有功能限制未说明；不支持 Docker-in-Docker 和 Android 模拟器；目前仅信用卡付款，无 PayPal；社区质疑长期能否抵抗大厂降价竞争",
+      "region": "global",
+      "score": 8.6,
+      "summary": "Vishnu 发布 Agent37，用低成本沙箱帮用户跑 AI Agent，每个沙箱月均约 0.37 美元、免费用户基础设施成本仅 0.05–0.10 美元，并公开了从套壳到自建基础设施的省钱做法，适合想学 Agent 产品落地与成本控制的人拆解。",
+      "title": "Agent37：月费 0.37 美元的 AI Agent 沙箱，YC F26 创始人公开省钱做法",
+      "url": "https://news.ycombinator.com/item?id=50059096",
+      "sources": [
+        {
+          "url": "https://news.ycombinator.com/item?id=50059096",
+          "title": "Launch HN: Agent37 (YC F26) – Low-cost agent sandboxes for running agents",
+          "source_type": "hackernews",
+          "published_at": "2026-10-12T16:46:34+00:00"
+        },
+        {
+          "url": "https://aiweekly.co/alerts/yc-f26-launches-agent37-pitches-sub-1-monthly-sandboxes-for-running-ai-agents",
+          "title": "YC F26 Launches Agent37, Pitches Sub-$1 Monthly Sandboxes for ...",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "agent37-launch-low-cost-agent-sandbox",
+          "date": "2026-10-13",
+          "title": "Agent37：月费 0.37 美元的 AI Agent 沙箱，YC F26 创始人公开省钱做法",
+          "summary": "Vishnu 发布 Agent37，用低成本沙箱帮用户跑 AI Agent，每个沙箱月均约 0.37 美元、免费用户基础设施成本仅 0.05–0.10 美元，并公开了从套壳到自建基础设施的省钱做法，适合想学 Agent 产品落地与成本控制的人拆解。",
+          "score": 8.6,
+          "url": "https://news.ycombinator.com/item?id=50059096"
+        }
+      ],
+      "usage_flow": [
+        "注册账号，选择免费档或付费档",
+        "在沙箱里部署想跑的 Agent（如 Hermes、OpenClaw、Claude Code）",
+        "Agent 在隔离环境中执行任务（浏览网页、写代码等）",
+        "按实际使用付费，付费档月均约 $0.37/沙箱"
+      ],
+      "learning_points": [
+        "沙箱（Sandbox）：给程序一个'关起来的游乐场'，让它随便折腾但伤不到主机和其他用户",
+        "Agent：能自主调用工具（如浏览器、代码执行器）完成多步骤任务的 AI，不只是聊天",
+        "gVisor：Google 开源的'安全罩'，比虚拟机轻、启动快，但兼容性有牺牲（比如不支持 Docker 里再跑 Docker）"
+      ],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "沙箱",
+        "YC",
+        "成本优化",
+        "开发者工具"
       ]
     },
     {
@@ -12688,86 +13110,6 @@
       "tags": [
         "模型评测",
         "Claude"
-      ]
-    },
-    {
-      "product_id": "product-dddb7b79c2bc1e7c",
-      "product_name": "llm-gemini",
-      "builder_name": "Simon Willison",
-      "first_seen": "2026-08-14",
-      "last_seen": "2026-09-03",
-      "occurrence_count": 2,
-      "intelligence_type": "model_capability",
-      "evidence_status": "first_party",
-      "target_user": "未公开",
-      "user_problem": "未公开",
-      "what_it_is": "llm-gemini 0.34发布，新增支持Gemini 3.8 Flash模型及思考级别选项。",
-      "ai_role": "未公开",
-      "implementation_idea": "未公开",
-      "hands_on_exercise": "未公开",
-      "limitations_or_uncertainties": "未公开",
-      "region": "global",
-      "score": 8.5,
-      "summary": "llm-gemini 0.34发布，新增支持Gemini 3.8 Flash模型及思考级别选项。",
-      "title": "llm-gemini 0.34",
-      "url": "https://simonwillison.net/2026/Sep/2/llm-gemini/",
-      "sources": [
-        {
-          "url": "https://simonwillison.net/2026/Aug/13/llm-gemini/",
-          "title": "llm-gemini 0.33",
-          "source_type": "rss",
-          "published_at": "2026-08-13T19:37:34+00:00"
-        },
-        {
-          "url": "https://simonwillison.net/2026/Sep/2/llm-gemini/",
-          "title": "llm-gemini 0.34",
-          "source_type": "rss",
-          "published_at": "2026-09-02T16:39:38+00:00"
-        },
-        {
-          "url": "https://deepmind.google/blog/introducing-gemini-3-8-flash-and-38-flash-cyber/",
-          "title": "Introducing Gemini 3.8 Flash and 3.8 Flash Cyber",
-          "source_type": "supplemental",
-          "published_at": ""
-        },
-        {
-          "url": "https://www.theverge.com/ai-artificial-intelligence/988742/google-gemini-3-8-flash",
-          "title": "Google says its new Gemini 3.8 Flash model ‘works harder’ but might cost more",
-          "source_type": "supplemental",
-          "published_at": ""
-        },
-        {
-          "url": "https://artificialanalysis.ai/articles/gemini-3-8-flash",
-          "title": "Gemini 3 8 Flash",
-          "source_type": "supplemental",
-          "published_at": ""
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "llm-gemini-0.33-release-2026",
-          "date": "2026-08-14",
-          "title": "llm-gemini 0.33",
-          "summary": "llm-gemini 0.33发布，新增Gemini 3.7 Flash支持和服务端工具调用，开发者可快速体验新模型能力。",
-          "score": 8.0,
-          "url": "https://simonwillison.net/2026/Aug/13/llm-gemini/"
-        },
-        {
-          "update_id": "llm-gemini-0.34-release",
-          "date": "2026-09-03",
-          "title": "llm-gemini 0.34",
-          "summary": "llm-gemini 0.34发布，新增支持Gemini 3.8 Flash模型及思考级别选项。",
-          "score": 8.5,
-          "url": "https://simonwillison.net/2026/Sep/2/llm-gemini/"
-        }
-      ],
-      "usage_flow": [],
-      "learning_points": [],
-      "verticals": [],
-      "tags": [
-        "Gemini",
-        "开发者工具",
-        "模型"
       ]
     },
     {
