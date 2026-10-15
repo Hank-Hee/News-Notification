@@ -1,75 +1,54 @@
 {
   "version": 1,
-  "updated_at": "2026-10-14T04:52:50.907098+00:00",
+  "updated_at": "2026-10-15T04:38:10.016392+00:00",
   "products": [
     {
-      "product_id": "product-31dbede9622aade2",
-      "product_name": "Gemini 4 Argon",
-      "builder_name": "xnx",
-      "first_seen": "2026-10-14",
-      "last_seen": "2026-10-14",
+      "product_id": "product-02c940b716a5e6d0",
+      "product_name": "Tree Appreciator",
+      "builder_name": "Simon Willison",
+      "first_seen": "2026-10-15",
+      "last_seen": "2026-10-15",
       "occurrence_count": 1,
-      "intelligence_type": "product_case",
-      "evidence_status": "verified",
-      "target_user": "机器人开发者、AI 硬件爱好者、想用大模型控制物理设备的工程师",
-      "user_problem": "之前用 Opus 和 Astra 控制机器人时，模型经常'看不见'障碍物，导致机器人撞桌子、撞床；开发者希望 LLM 能真正理解 3D 空间，安全地指挥机器人移动",
-      "what_it_is": "Google 最新发布的多模态大模型 Gemini 4 Argon，被社区开发者实际接入到人形机器人和扫雪机器人中，用于视觉理解和运动控制",
-      "ai_role": "AI 是机器人的'决策中枢'：看摄像头画面→理解空间关系→从预设动作中选择下一步→发出指令，循环直到任务完成",
-      "implementation_idea": "核心思路叫'视觉 harness + 动作原语'：不给 AI 直接输出电机信号，而是让 AI 当'指挥官'，从一小套人类写好的安全动作里挑选。AI 负责'看明白场景、决定做什么'，底层代码负责'可靠执行'。这样既发挥了大模型的理解力，又避免了它瞎指挥硬件",
-      "hands_on_exercise": "用 Gemini 2.5 Flash 或任何带视觉的免费 API，写一个简单的 Python 脚本：上传一张房间照片，让模型描述'从左走到右会碰到什么障碍'，观察它能否正确识别空间关系。30 分钟可完成，无需真机器人",
-      "limitations_or_uncertainties": "社区案例未公开具体代码、延迟数据、成本；LIDAR 未接入说明纯视觉方案仍有盲区；模型是否真在端侧运行还是云端调用未说明；电池续航和实时性瓶颈被社区质疑可能还需数年解决",
+      "intelligence_type": "builder_insight",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Simon Willison 用 Claude 手机 App 一句提示词让模型花 3 小时做出可玩的找不同小游戏 Tree Appreciator，值得看普通人怎么用聊天式 AI 做出完整产品。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
       "region": "global",
-      "score": 8.5,
-      "summary": "开发者在 Hacker News 分享用 Gemini 4 Argon 控制 Unitree 人形机器人和自建扫雪机器人，发现它比 Opus 和 Astra 更会避障，展示了 LLM 控制机器人的实际用法。",
-      "title": "Gemini 4 Argon 被开发者用于控制真实机器人：避障能力优于前代模型",
-      "url": "https://developers.googleblog.com/gemini-4-argon-for-robotics/",
+      "score": 8.6,
+      "summary": "Simon Willison 用 Claude 手机 App 一句提示词让模型花 3 小时做出可玩的找不同小游戏 Tree Appreciator，值得看普通人怎么用聊天式 AI 做出完整产品。",
+      "title": "Tree Appreciator",
+      "url": "https://simonwillison.net/2026/Oct/14/tree-appreciator/",
       "sources": [
         {
-          "url": "https://developers.googleblog.com/gemini-4-argon-for-robotics/",
-          "title": "Gemini 4 Argon for Robotics",
-          "source_type": "hackernews",
-          "published_at": "2026-10-13T16:55:47+00:00"
-        },
-        {
-          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/",
-          "title": "Gemini 4 Argon is now available for everyone - The Keyword",
-          "source_type": "supplemental",
-          "published_at": ""
-        },
-        {
-          "url": "https://deepmind.google/models/model-cards/gemini-4-argon/",
-          "title": "Gemini 4 Argon - Model Card — Google DeepMind",
-          "source_type": "supplemental",
-          "published_at": ""
+          "url": "https://simonwillison.net/2026/Oct/14/tree-appreciator/",
+          "title": "Tree Appreciator",
+          "source_type": "rss",
+          "published_at": "2026-10-14T21:23:01+00:00"
         }
       ],
       "updates": [
         {
-          "update_id": "gemini-4-argon-robotics-hn",
-          "date": "2026-10-14",
-          "title": "Gemini 4 Argon 被开发者用于控制真实机器人：避障能力优于前代模型",
-          "summary": "开发者在 Hacker News 分享用 Gemini 4 Argon 控制 Unitree 人形机器人和自建扫雪机器人，发现它比 Opus 和 Astra 更会避障，展示了 LLM 控制机器人的实际用法。",
-          "score": 8.5,
-          "url": "https://developers.googleblog.com/gemini-4-argon-for-robotics/"
+          "update_id": "simonwillison-tree-appreciator-claude-game",
+          "date": "2026-10-15",
+          "title": "Tree Appreciator",
+          "summary": "Simon Willison 用 Claude 手机 App 一句提示词让模型花 3 小时做出可玩的找不同小游戏 Tree Appreciator，值得看普通人怎么用聊天式 AI 做出完整产品。",
+          "score": 8.6,
+          "url": "https://simonwillison.net/2026/Oct/14/tree-appreciator/"
         }
       ],
-      "usage_flow": [
-        "开发者准备机器人硬件（如 Unitree 人形机器人或自建扫雪机器人）和摄像头",
-        "将 Gemini 4 Argon 通过 API 接入，作为'大脑'接收视觉画面并输出动作指令",
-        "用预定义的基础动作库（如'向前走''转弯''停下'）作为模型能调用的'工具'",
-        "给模型发自然语言指令（如'去桌子那边'），模型自主规划路径、避开障碍"
-      ],
-      "learning_points": [
-        "Agent（智能体）：让 AI 不只是聊天，而是能观察环境、做决定、调用工具完成目标的系统",
-        "Function Calling（函数调用）：给 AI 预设好它能'调用'的动作清单，AI 输出函数名和参数而非自由发挥",
-        "Zero-shot（零样本）：不针对特定机器人专门训练，直接用通用大模型控制新硬件，靠模型的泛化能力"
-      ],
+      "usage_flow": [],
+      "learning_points": [],
       "verticals": [],
       "tags": [
-        "机器人",
-        "Gemini",
-        "Agent",
-        "开发者实践"
+        "Claude",
+        "AI编程",
+        "个人产品",
+        "游戏"
       ]
     },
     {
@@ -77,7 +56,7 @@
       "product_name": "Claude",
       "builder_name": "Anthropic News",
       "first_seen": "2026-08-28",
-      "last_seen": "2026-10-14",
+      "last_seen": "2026-10-15",
       "occurrence_count": 3,
       "intelligence_type": "model_capability",
       "evidence_status": "first_party",
@@ -158,7 +137,7 @@
       "product_name": "Muse",
       "builder_name": "Lenny Rachitsky",
       "first_seen": "2026-09-24",
-      "last_seen": "2026-10-14",
+      "last_seen": "2026-10-15",
       "occurrence_count": 2,
       "intelligence_type": "builder_insight",
       "evidence_status": "first_party",
@@ -243,6 +222,445 @@
         "Meta",
         "产品设计",
         "消费级AI"
+      ]
+    },
+    {
+      "product_id": "product-c02ae69299122663",
+      "product_name": "Muse Wonder",
+      "builder_name": "Claire Vo",
+      "first_seen": "2026-10-15",
+      "last_seen": "2026-10-15",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "verified",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Claire Vo 用自建评测集实测 Meta 新模型 Muse Wonder，发现它在三类 Agent 任务上排第一但设计输出偏弱，帮产品经理判断该模型适合做什么。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.2,
+      "summary": "Claire Vo 用自建评测集实测 Meta 新模型 Muse Wonder，发现它在三类 Agent 任务上排第一但设计输出偏弱，帮产品经理判断该模型适合做什么。",
+      "title": "Meta’s new ‘Muse Wonder’ model: good for AI agents, bad for design",
+      "url": "https://www.lennysnewsletter.com/p/metas-new-muse-wonder-model-good",
+      "sources": [
+        {
+          "url": "https://www.lennysnewsletter.com/p/metas-new-muse-wonder-model-good",
+          "title": "Meta’s new ‘Muse Wonder’ model: good for AI agents, bad for design",
+          "source_type": "newsletter",
+          "published_at": "2026-10-14T12:04:05+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "meta-muse-wonder-how-i-ai-bench",
+          "date": "2026-10-15",
+          "title": "Meta’s new ‘Muse Wonder’ model: good for AI agents, bad for design",
+          "summary": "Claire Vo 用自建评测集实测 Meta 新模型 Muse Wonder，发现它在三类 Agent 任务上排第一但设计输出偏弱，帮产品经理判断该模型适合做什么。",
+          "score": 8.2,
+          "url": "https://www.lennysnewsletter.com/p/metas-new-muse-wonder-model-good"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Meta",
+        "模型评测",
+        "Agent",
+        "产品选型"
+      ]
+    },
+    {
+      "product_id": "product-4b6433b1412587a4",
+      "product_name": "Third Moment Research（客户案例）；底层使用 GPT-6 Astra、GPT-6.1 Sol、Codex、Daybreak",
+      "builder_name": "OpenAI News",
+      "first_seen": "2026-10-15",
+      "last_seen": "2026-10-15",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "未公开具体客户；从描述推断为需要长时自动化安全监控和流程优化的企业或安全团队",
+      "user_problem": "传统自动化脚本或单次 AI 调用无法持续数天跟踪复杂任务，且不会随运行自我改进；网络安全等场景需要长时间专注监控、响应和策略迭代",
+      "what_it_is": "OpenAI 发布的客户案例：一家 AI 研究实验室用 OpenAI 的多款模型同时部署上万 AI Agent，执行需要连续运行数天的网络安全和自动化任务。",
+      "ai_role": "AI 既是'执行工人'（跑具体任务）也是'学习系统'（用运行数据自我优化），不是只回答一次就结束",
+      "implementation_idea": "把一个大目标切成很多小块，每块交给一个 Agent 独立盯梢；这些 Agent 像轮班工人一样 24 小时不中断，各自用适合的模型（聊天推理用 Astra/Sol，写代码用 Codex，安全检测用 Daybreak）；跑久了系统自动总结哪里容易出错，下次调整策略。",
+      "hands_on_exercise": "用 OpenAI API 或任意 LLM 平台，写一个最简单的'定时 Agent'：让它每 10 分钟检查一次指定网页的内容变化，连续运行 2 小时，记录每次结果并输出一份变化摘要。体会'持续运行'和'单次调用'的区别。",
+      "limitations_or_uncertainties": "未公开具体技术架构（Agent 如何协调、如何容错、成本多少）；'1 万个 Agent'是峰值还是常态未说明；'越用越好'的具体机制（是 prompt 优化、微调还是 RAG）未公开；案例为 OpenAI 官方发布，属于营销内容，独立验证信息有限",
+      "region": "global",
+      "score": 7.8,
+      "summary": "OpenAI 发布案例，Third Moment Research 用 GPT-6 系列模型同时跑 1 万个 Agent 超过 36 小时，展示长时 Agent 系统的真实用法。",
+      "title": "Third Moment Research 如何用 GPT-6 系列模型让 1 万个 Agent 持续运行 36 小时以上",
+      "url": "https://openai.com/index/third-moment-research",
+      "sources": [
+        {
+          "url": "https://openai.com/index/third-moment-research",
+          "title": "How Third Moment Research runs 10,000 agents for 36+ hours",
+          "source_type": "rss",
+          "published_at": "2026-10-14T07:00:00+00:00"
+        },
+        {
+          "url": "https://blockchain.news/news/third-moment-research-10k-agents-36-hours",
+          "title": "Third Moment Research says its agents can run for 36+ hours",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://openai.com/ja-JP/index/third-moment-research/",
+          "title": "Third Moment Research：1 万エージェントを 36 時間以上稼働させる仕...",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "third-moment-research-10000-agents-36h",
+          "date": "2026-10-15",
+          "title": "Third Moment Research 如何用 GPT-6 系列模型让 1 万个 Agent 持续运行 36 小时以上",
+          "summary": "OpenAI 发布案例，Third Moment Research 用 GPT-6 系列模型同时跑 1 万个 Agent 超过 36 小时，展示长时 Agent 系统的真实用法。",
+          "score": 7.8,
+          "url": "https://openai.com/index/third-moment-research"
+        }
+      ],
+      "usage_flow": [
+        "用 GPT-6 Astra/Sol 作为推理核心，Codex 处理代码相关子任务，Daybreak 专门负责网络安全模块",
+        "将大任务拆成多个 Agent，各自独立运行并相互协作",
+        "Agent 持续运行 36 小时以上，边执行任务边收集反馈",
+        "系统根据运行数据自我调整，后续任务表现提升"
+      ],
+      "learning_points": [
+        "Agent：不只是问答一次，而是能自主多步执行、调用工具、持续运行的 AI 程序",
+        "长时运行 vs 单次调用：LLM 可以设计成'常驻进程'，像后台服务一样持续工作，而非每次用户提问才启动",
+        "多模型分工：不同模型负责不同专长（推理、代码、安全），组合起来比单模型更高效"
+      ],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "OpenAI",
+        "客户案例",
+        "长时任务"
+      ]
+    },
+    {
+      "product_id": "product-7020c1d0071ced25",
+      "product_name": "Leash Bio",
+      "builder_name": "Brandon Anderson",
+      "first_seen": "2026-10-15",
+      "last_seen": "2026-10-15",
+      "occurrence_count": 1,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Leash Bio 的 Ian Quigley 讲他们怎么用 DEL 实验数据抓出作弊模型，并让 AI Agent 学会像化学家一样思考，值得看医药 AI 怎么把实验数据变成产品能力。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.8,
+      "summary": "Leash Bio 的 Ian Quigley 讲他们怎么用 DEL 实验数据抓出作弊模型，并让 AI Agent 学会像化学家一样思考，值得看医药 AI 怎么把实验数据变成产品能力。",
+      "title": "Lab-in-the-Loop at Compute Speed — Ian Quigley, Leash Bio",
+      "url": "https://www.latent.space/p/lab-in-the-loop-at-compute-speed",
+      "sources": [
+        {
+          "url": "https://www.latent.space/p/lab-in-the-loop-at-compute-speed",
+          "title": "Lab-in-the-Loop at Compute Speed — Ian Quigley, Leash Bio",
+          "source_type": "rss",
+          "published_at": "2026-10-14T20:35:09+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "leash-bio-lab-in-the-loop-ai-chemists",
+          "date": "2026-10-15",
+          "title": "Lab-in-the-Loop at Compute Speed — Ian Quigley, Leash Bio",
+          "summary": "Leash Bio 的 Ian Quigley 讲他们怎么用 DEL 实验数据抓出作弊模型，并让 AI Agent 学会像化学家一样思考，值得看医药 AI 怎么把实验数据变成产品能力。",
+          "score": 7.8,
+          "url": "https://www.latent.space/p/lab-in-the-loop-at-compute-speed"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "医药AI",
+        "AI Agent",
+        "药物发现"
+      ]
+    },
+    {
+      "product_id": "product-86f2872380cbddc0",
+      "product_name": "Amp",
+      "builder_name": "OpenAI News",
+      "first_seen": "2026-10-15",
+      "last_seen": "2026-10-15",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "需要 AI Agent 完成复杂工作流的企业开发团队和技术产品团队",
+      "user_problem": "传统 AI Agent 大多只擅长写代码，企业想让它处理更多业务场景（如分析、决策、多步骤协作），但单一大模型往往不够快、不够专或成本太高",
+      "what_it_is": "OpenAI 官方发布的客户案例，展示 Amp 这家公司如何组合使用 GPT-6 Astra、Ultrafast、GPT-Live-1 等多个模型，让 AI Agent（能自主执行任务的 AI 程序）不只会写代码，还能做更多业务工作。",
+      "ai_role": "不同模型分工协作：Astra 负责深度推理和规划，GPT-Live-1 处理实时对话，Ultrafast 执行轻量快速任务，整体由 Agent 编排调度",
+      "implementation_idea": "核心思路是'模型路由'——像公司里不同专家各司其职，Amp 根据任务难度和速度要求，自动把活儿派给最擅长的模型，而不是一个模型干所有事。",
+      "hands_on_exercise": "打开 ChatGPT 或 Claude，用同一个复杂任务（如'帮我规划一次三天旅行，要查天气、订餐厅、算预算'）分别用默认模式和带插件/工具的模式各试一次，对比结果差异，体会 Agent 和普通聊天的区别",
+      "limitations_or_uncertainties": "具体用了哪些业务场景未公开；各模型在 Amp 中的调用比例和成本数据未公开；'GPT-6 Astra'等模型名称尚未有独立第三方验证",
+      "region": "global",
+      "score": 7.6,
+      "summary": "OpenAI 发布案例，讲 Amp 用 GPT-6 Astra 等模型把 AI Agent 从写代码扩展到更多工作场景，可看 Agent 产品如何选模型。",
+      "title": "Amp 用 OpenAI 多模型把 AI Agent 从写代码扩展到更多工作场景",
+      "url": "https://openai.com/index/amp-beyond-coding",
+      "sources": [
+        {
+          "url": "https://openai.com/index/amp-beyond-coding",
+          "title": "Amp puts AI agents to work beyond code with OpenAI models",
+          "source_type": "rss",
+          "published_at": "2026-10-14T12:00:00+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "amp-beyond-coding-openai-models",
+          "date": "2026-10-15",
+          "title": "Amp 用 OpenAI 多模型把 AI Agent 从写代码扩展到更多工作场景",
+          "summary": "OpenAI 发布案例，讲 Amp 用 GPT-6 Astra 等模型把 AI Agent 从写代码扩展到更多工作场景，可看 Agent 产品如何选模型。",
+          "score": 7.6,
+          "url": "https://openai.com/index/amp-beyond-coding"
+        }
+      ],
+      "usage_flow": [
+        "用户通过 Sign in with ChatGPT 登录 Amp 平台",
+        "根据任务类型选择合适模型：复杂推理用 GPT-6 Astra，实时交互用 GPT-Live-1，快速响应用 Ultrafast",
+        "Amp 的 Agent 在'orbs'（无监督运行环境）中自主执行多步骤任务",
+        "用户随时通过 CLI 或云端查看进度和结果"
+      ],
+      "learning_points": [
+        "Agent（智能体）：能自己拆解目标、调用工具、多步骤执行的 AI，不只是你问一句它答一句",
+        "模型选型：不同模型速度和专长不同，实际产品里常把多个模型拼起来用，而非押注单一模型",
+        "Function Calling（函数调用）：Agent 能调用外部工具的能力，是它从'聊天'变成'干活'的关键"
+      ],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "OpenAI",
+        "客户案例"
+      ]
+    },
+    {
+      "product_id": "product-1acdcd28c2199efb",
+      "product_name": "Figma",
+      "builder_name": "Ivan Mehta",
+      "first_seen": "2026-10-15",
+      "last_seen": "2026-10-15",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Figma 发布新功能，规定 AI Agent 在其平台上如何工作，同时开放 code layers 公测，展示设计工具如何接入 Agent。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.4,
+      "summary": "Figma 发布新功能，规定 AI Agent 在其平台上如何工作，同时开放 code layers 公测，展示设计工具如何接入 Agent。",
+      "title": "Figma announces new features to define how agents work on its platform",
+      "url": "https://techcrunch.com/2026/10/14/figma-announces-new-features-to-define-how-agents-work-on-its-platform/",
+      "sources": [
+        {
+          "url": "https://techcrunch.com/2026/10/14/figma-announces-new-features-to-define-how-agents-work-on-its-platform/",
+          "title": "Figma announces new features to define how agents work on its platform",
+          "source_type": "rss",
+          "published_at": "2026-10-15T04:30:00+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "figma-agents-platform-features",
+          "date": "2026-10-15",
+          "title": "Figma announces new features to define how agents work on its platform",
+          "summary": "Figma 发布新功能，规定 AI Agent 在其平台上如何工作，同时开放 code layers 公测，展示设计工具如何接入 Agent。",
+          "score": 7.4,
+          "url": "https://techcrunch.com/2026/10/14/figma-announces-new-features-to-define-how-agents-work-on-its-platform/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Figma",
+        "Agent",
+        "设计工具"
+      ]
+    },
+    {
+      "product_id": "product-77fd97aca6e4b28e",
+      "product_name": "SentinelOne",
+      "builder_name": "OpenAI News",
+      "first_seen": "2026-10-15",
+      "last_seen": "2026-10-15",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "OpenAI 发布案例，SentinelOne 用 Daybreak 把恶意软件分析从数周压缩到数小时，展示安全垂直场景的 AI 落地效果。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.2,
+      "summary": "OpenAI 发布案例，SentinelOne 用 Daybreak 把恶意软件分析从数周压缩到数小时，展示安全垂直场景的 AI 落地效果。",
+      "title": "SentinelOne cuts malware analysis from weeks to hours",
+      "url": "https://openai.com/index/sentinelone",
+      "sources": [
+        {
+          "url": "https://openai.com/index/sentinelone",
+          "title": "SentinelOne cuts malware analysis from weeks to hours",
+          "source_type": "rss",
+          "published_at": "2026-10-14T12:00:00+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "sentinelone-malware-analysis-openai-daybreak",
+          "date": "2026-10-15",
+          "title": "SentinelOne cuts malware analysis from weeks to hours",
+          "summary": "OpenAI 发布案例，SentinelOne 用 Daybreak 把恶意软件分析从数周压缩到数小时，展示安全垂直场景的 AI 落地效果。",
+          "score": 7.2,
+          "url": "https://openai.com/index/sentinelone"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "安全",
+        "OpenAI",
+        "客户案例",
+        "垂直AI"
+      ]
+    },
+    {
+      "product_id": "product-48790426bafb3bf6",
+      "product_name": "Block",
+      "builder_name": "OpenAI News",
+      "first_seen": "2026-10-15",
+      "last_seen": "2026-10-15",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "OpenAI 发布案例，Block 安全团队用 OpenAI 技术加快威胁调查并在几分钟内提出补丁，展示安全场景的 AI 用法。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.0,
+      "summary": "OpenAI 发布案例，Block 安全团队用 OpenAI 技术加快威胁调查并在几分钟内提出补丁，展示安全场景的 AI 用法。",
+      "title": "How Block is building AI-powered security with OpenAI technology",
+      "url": "https://openai.com/index/block-ai-powered-security",
+      "sources": [
+        {
+          "url": "https://openai.com/index/block-ai-powered-security",
+          "title": "How Block is building AI-powered security with OpenAI technology",
+          "source_type": "rss",
+          "published_at": "2026-10-14T07:00:00+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "block-ai-powered-security-openai",
+          "date": "2026-10-15",
+          "title": "How Block is building AI-powered security with OpenAI technology",
+          "summary": "OpenAI 发布案例，Block 安全团队用 OpenAI 技术加快威胁调查并在几分钟内提出补丁，展示安全场景的 AI 用法。",
+          "score": 7.0,
+          "url": "https://openai.com/index/block-ai-powered-security"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "安全",
+        "OpenAI",
+        "客户案例"
+      ]
+    },
+    {
+      "product_id": "product-31dbede9622aade2",
+      "product_name": "Gemini 4 Argon",
+      "builder_name": "xnx",
+      "first_seen": "2026-10-14",
+      "last_seen": "2026-10-14",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "verified",
+      "target_user": "机器人开发者、AI 硬件爱好者、想用大模型控制物理设备的工程师",
+      "user_problem": "之前用 Opus 和 Astra 控制机器人时，模型经常'看不见'障碍物，导致机器人撞桌子、撞床；开发者希望 LLM 能真正理解 3D 空间，安全地指挥机器人移动",
+      "what_it_is": "Google 最新发布的多模态大模型 Gemini 4 Argon，被社区开发者实际接入到人形机器人和扫雪机器人中，用于视觉理解和运动控制",
+      "ai_role": "AI 是机器人的'决策中枢'：看摄像头画面→理解空间关系→从预设动作中选择下一步→发出指令，循环直到任务完成",
+      "implementation_idea": "核心思路叫'视觉 harness + 动作原语'：不给 AI 直接输出电机信号，而是让 AI 当'指挥官'，从一小套人类写好的安全动作里挑选。AI 负责'看明白场景、决定做什么'，底层代码负责'可靠执行'。这样既发挥了大模型的理解力，又避免了它瞎指挥硬件",
+      "hands_on_exercise": "用 Gemini 2.5 Flash 或任何带视觉的免费 API，写一个简单的 Python 脚本：上传一张房间照片，让模型描述'从左走到右会碰到什么障碍'，观察它能否正确识别空间关系。30 分钟可完成，无需真机器人",
+      "limitations_or_uncertainties": "社区案例未公开具体代码、延迟数据、成本；LIDAR 未接入说明纯视觉方案仍有盲区；模型是否真在端侧运行还是云端调用未说明；电池续航和实时性瓶颈被社区质疑可能还需数年解决",
+      "region": "global",
+      "score": 8.5,
+      "summary": "开发者在 Hacker News 分享用 Gemini 4 Argon 控制 Unitree 人形机器人和自建扫雪机器人，发现它比 Opus 和 Astra 更会避障，展示了 LLM 控制机器人的实际用法。",
+      "title": "Gemini 4 Argon 被开发者用于控制真实机器人：避障能力优于前代模型",
+      "url": "https://developers.googleblog.com/gemini-4-argon-for-robotics/",
+      "sources": [
+        {
+          "url": "https://developers.googleblog.com/gemini-4-argon-for-robotics/",
+          "title": "Gemini 4 Argon for Robotics",
+          "source_type": "hackernews",
+          "published_at": "2026-10-13T16:55:47+00:00"
+        },
+        {
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/",
+          "title": "Gemini 4 Argon is now available for everyone - The Keyword",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://deepmind.google/models/model-cards/gemini-4-argon/",
+          "title": "Gemini 4 Argon - Model Card — Google DeepMind",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "gemini-4-argon-robotics-hn",
+          "date": "2026-10-14",
+          "title": "Gemini 4 Argon 被开发者用于控制真实机器人：避障能力优于前代模型",
+          "summary": "开发者在 Hacker News 分享用 Gemini 4 Argon 控制 Unitree 人形机器人和自建扫雪机器人，发现它比 Opus 和 Astra 更会避障，展示了 LLM 控制机器人的实际用法。",
+          "score": 8.5,
+          "url": "https://developers.googleblog.com/gemini-4-argon-for-robotics/"
+        }
+      ],
+      "usage_flow": [
+        "开发者准备机器人硬件（如 Unitree 人形机器人或自建扫雪机器人）和摄像头",
+        "将 Gemini 4 Argon 通过 API 接入，作为'大脑'接收视觉画面并输出动作指令",
+        "用预定义的基础动作库（如'向前走''转弯''停下'）作为模型能调用的'工具'",
+        "给模型发自然语言指令（如'去桌子那边'），模型自主规划路径、避开障碍"
+      ],
+      "learning_points": [
+        "Agent（智能体）：让 AI 不只是聊天，而是能观察环境、做决定、调用工具完成目标的系统",
+        "Function Calling（函数调用）：给 AI 预设好它能'调用'的动作清单，AI 输出函数名和参数而非自由发挥",
+        "Zero-shot（零样本）：不针对特定机器人专门训练，直接用通用大模型控制新硬件，靠模型的泛化能力"
+      ],
+      "verticals": [],
+      "tags": [
+        "机器人",
+        "Gemini",
+        "Agent",
+        "开发者实践"
       ]
     },
     {
