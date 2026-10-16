@@ -1606,6 +1606,46 @@
       },
       "stage": "candidate_analysis"
     },
+    "05aae6f8deb5f984a0371068777df9acf123ea2a215c018e61a6b0b6936a525d": {
+      "created_at": "2026-10-16T04:30:52.730679+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "vercel-drives-ga",
+        "evidence_status": "first_party",
+        "follow_up": "关注 Drives 在真实 Agent 产品中的使用案例、定价和与竞品（如 E2B、Modal）的对比。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:vercel.com_changelog_rss:dd6e11f602584e60",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Vercel Drives",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Vercel 正式发布 Vercel Drives，为 Agent 提供跨执行环境的持久化文件存储，解决 Agent 换环境后文件丢失的问题。属于官方产品发布，有明确技术方案和代码示例，对构建 Agent 产品有直接可迁移价值，但偏基础设施，故 7.6。",
+        "region": "global",
+        "score": 7.6,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Vercel 发布 Drives，让 AI Agent 换运行环境后还能接着用之前的文件，不用从头再来。",
+        "tags": [
+          "Agent",
+          "持久化存储",
+          "Vercel",
+          "Sandbox"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "05bbef882497ead5ec51adf812da35a48a82160b3124ceb7f8320f4d78475be1": {
       "created_at": "2026-07-28T03:48:25.674596+00:00",
       "model": "deepseek-v4-flash",
@@ -2559,6 +2599,44 @@
           "Claude Code",
           "Agent",
           "权限控制"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "07973d032eab4ae1bcdd3ec9c323ca12cfd23c50525e1f64bd9c97e3d8e25792": {
+      "created_at": "2026-10-16T04:30:16.249731+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "nemotron-3-5-super-and-bolt",
+        "evidence_status": "reported",
+        "follow_up": "关注是否有开发者基于该模型做出可验证产品",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "public_web:sitemap:f9af1b8563fea84e1c6a",
+        "intelligence_type": "model_capability",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Artificial Analysis 对 Nemotron 3.5 Super 与 Bolt 的评测，属于模型基准测试类内容，未提供产品化案例或用户反馈，按规则低于 7 分。",
+        "region": "global",
+        "score": 4.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Artificial Analysis 评测 Nemotron 3.5 Super 和 Bolt 两个模型，说明其能力定位，对产品选型有间接参考但缺少落地证据。",
+        "tags": [
+          "模型评测",
+          "Nemotron"
         ],
         "target_user": "",
         "verticals": []
@@ -5299,6 +5377,46 @@
           "版权",
           "模型行为",
           "内容生成"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "0f44cd38e223e5f0f5edd54c0bfcb35f1611642670c1ac44beca0c34fe85e54f": {
+      "created_at": "2026-10-16T04:30:52.731415+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-codex-rust-v0.163.0",
+        "evidence_status": "first_party",
+        "follow_up": "关注 Daybreak 默认开启后的实际体验变化，以及并行工具调用对 Agent 效率的提升。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "github:release:414286110",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "OpenAI Codex",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI Codex 正式版 v0.163.0 发布，包含多项新功能：/config 搜索、响应中追加指令、leader key、后台服务重启、并行只读工具、Daybreak 默认开启等。属于官方 Release，有明确功能增量，对使用 Codex 的开发者有直接价值，但属于常规迭代，故 7.2。",
+        "region": "global",
+        "score": 7.2,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "OpenAI Codex 发布 v0.163.0，新增配置搜索、响应中追加指令、并行只读工具等功能，并默认开启 Daybreak。",
+        "tags": [
+          "Codex",
+          "OpenAI",
+          "编程Agent",
+          "Release"
         ],
         "target_user": "",
         "verticals": []
@@ -10900,6 +11018,41 @@
         "verticals": []
       },
       "stage": "candidate_analysis"
+    },
+    "1e5dfa0834a4d6ab624c3af4e1ce5c9d0a496250d715eb9f990d02ad21bcb466": {
+      "created_at": "2026-10-16T04:31:36.640251+00:00",
+      "model": "kimi-k2.6",
+      "prompt_version": "deep-v3-beginner",
+      "result": {
+        "ai_role": "接收用户问题 + 浏览器标签页上下文，生成基于当前网页内容的回答；也可在已登录的网站上执行操作（如 LinkedIn、Gmail 等）",
+        "evidence_status": "reported",
+        "hands_on_exercise": "30 分钟练习：安装 ChatGPT Chrome 扩展，打开 3 个不同网页（如一篇新闻、一个 GitHub 仓库、一封 Gmail），在 ChatGPT 桌面端输入'@Chrome 总结这三个页面的共同点'，观察 AI 是否能正确引用各页内容；然后尝试在已登录的网站上让它执行简单操作（如'帮我在 LinkedIn 搜索某人'），记录哪些操作成功、哪些需要额外授权",
+        "implementation_idea": "浏览器扩展作为'桥梁'：它常驻在浏览器后台，当被 ChatGPT 调用时，读取当前打开标签页的标题和内容，打包成上下文传给 AI。这相当于给 LLM 装了一双能看浏览器的'眼睛'，解决了 AI 和用户屏幕之间的信息断层",
+        "learning_points": [
+          "上下文（Context）：LLM 回答问题时能参考的信息范围，越多相关上下文，回答越准",
+          "RAG（检索增强生成）：让 AI 不瞎编，先从外部来源（这里是你的浏览器标签）拉取信息，再基于这些信息回答",
+          "Function Calling（函数调用）：LLM 判断'现在需要调用浏览器扩展来获取标签页'，而不是直接瞎猜答案"
+        ],
+        "limitations_or_uncertainties": "具体支持哪些浏览器版本未完全公开；扩展读取标签页时是否需要每次手动确认授权机制未公开；Opera 是否支持 side chat 功能未明确（官方文档称 Chrome/Edge/Brave/Vivaldi 支持 side chat，Opera 未列入）；'Atlas browser'项目已取消，与当前扩展的关系未公开",
+        "product_name": "ChatGPT Chrome extension",
+        "sources": [
+          "https://www.theverge.com/ai-artificial-intelligence/1012510/openai-chatgpt-google-chrome-tabs",
+          "https://chromewebstore.google.com/detail/chatgpt/hehggadaopoacecdllhhajmbjkdcmajg",
+          "https://chromewebstore.google.com/publisher/openai/u33f3849923dbb9495ad540f8634ab579",
+          "https://learn.chatgpt.com/docs/chrome-extension"
+        ],
+        "target_users": "已在 Chrome（及 Edge、Brave、Opera、Vivaldi）安装 ChatGPT 扩展、并在桌面端或网页端使用 ChatGPT 的用户",
+        "title_zh": "ChatGPT Chrome 扩展现在能读取你已打开的标签页",
+        "usage_flow": [
+          "在 Chrome 安装/更新 ChatGPT 官方扩展",
+          "在 ChatGPT 网页或桌面端输入问题时，@ 提及 Chrome（tag Chrome）",
+          "扩展获取你已打开标签页的上下文",
+          "ChatGPT 基于这些网页内容回答你的问题"
+        ],
+        "user_problem": "以前问 ChatGPT 关于当前网页的问题时，需要手动复制粘贴网页内容或链接，AI 看不到你浏览器里已经打开的其他标签页，上下文断层",
+        "what_it_is": "OpenAI 给 ChatGPT 官方 Chrome 扩展加了新功能，让 ChatGPT 能在你授权后读取浏览器里已打开的标签页内容，用来回答问题时参考当前网页上下文"
+      },
+      "stage": "deep_analysis"
     },
     "1e719228520492b965726536c438b7363b0487108e8f1c4866db465d2a52247d": {
       "created_at": "2026-08-14T02:46:12.434593+00:00",
@@ -16647,6 +16800,46 @@
       },
       "stage": "candidate_analysis"
     },
+    "2fc507ae1dd9f996c2a51f12355fc1b5f9e611b77ffb5766b2658aa4d842599f": {
+      "created_at": "2026-10-16T04:30:24.742474+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "anthropic-metr-employee-level-access",
+        "evidence_status": "reported",
+        "follow_up": "可追踪 METR 后续发布的评估报告是否披露具体风险事件或模型行为细节。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:544196d3339ee348",
+        "intelligence_type": "business_policy",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Anthropic 向 METR 开放员工级访问权限并放弃审查权，属于 AI 安全治理与第三方评估机制的真实增量，但内容偏政策与治理，不直接催生新产品能力，对 AI 产品经理的可迁移增量有限，按兴趣优先级低于 7 分。",
+        "region": "global",
+        "score": 5.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Anthropic 允许 METR 研究人员以员工级权限查看内部情况，并放弃阻止其发布评估报告的权利，让外部能独立评估其风险与做法。",
+        "tags": [
+          "AI Safety",
+          "Governance",
+          "Anthropic",
+          "METR"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "2fe97d20d3fe9d45be1dec88aa3316163c326209de2ec409f56c7666be95c597": {
       "created_at": "2026-08-20T01:51:10.623227+00:00",
       "model": "deepseek-v4-flash",
@@ -19063,6 +19256,46 @@
         "summary_zh": "一篇关于写作措辞的随笔，与 AI 无关。",
         "tags": [
           "写作"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "37321745c19446749c37f1b329a78140fe27bad11c07da1243a90d2c443232f5": {
+      "created_at": "2026-10-16T04:30:16.249865+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "meta-muse-wonder-how-i-ai-bench",
+        "evidence_status": "verified",
+        "follow_up": "关注完整评测数据、active focus mode 的真实效果与设计类任务失败原因",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "newsletter:feed:388004979cb49712b4d7",
+        "intelligence_type": "model_capability",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Muse Wonder",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Claire Vo 用自建 How I AI bench 对 Meta Muse Wonder 做近 20 项任务实测，覆盖原型、agent 工作流、编码、写作与创意，并给出评分与结论，属于有方法、有反馈的高信噪比一手评测，对产品经理理解模型适用边界有明确迁移价值。",
+        "region": "global",
+        "score": 8.2,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "Claire Vo 用自建评测集实测 Meta 新模型 Muse Wonder，发现它在 agent 任务上表现好但设计输出差，帮产品经理判断该模型适合做什么。",
+        "tags": [
+          "模型评测",
+          "Agent",
+          "Meta",
+          "产品选型"
         ],
         "target_user": "",
         "verticals": []
@@ -24586,6 +24819,45 @@
       },
       "stage": "deep_analysis"
     },
+    "45e22188a344595e1a4e9e8a73c0f2f4c4e966deede508cc625ce9355e7ca4c2": {
+      "created_at": "2026-10-16T04:30:52.731936+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "vercel-ai-6.0.308",
+        "evidence_status": "first_party",
+        "follow_up": "无需特别关注，属于常规依赖更新。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "github:release:414125640",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Vercel AI SDK",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Vercel AI SDK 6.0.308 补丁发布，内容与 7.0.142 相同，属于旧版本维护，对产品经理价值有限，故 5.5。",
+        "region": "global",
+        "score": 5.5,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "Vercel AI SDK 发布 6.0.308 补丁，恢复 OpenAI 自定义工具输入增量并标记编码。",
+        "tags": [
+          "Vercel AI SDK",
+          "OpenAI",
+          "补丁"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "45f500fc9048a9f6f95d9bc115cd0643501b2429b706b4dd53b6935d353ca328": {
       "created_at": "2026-08-13T02:46:43.252225+00:00",
       "model": "deepseek-v4-flash",
@@ -25380,6 +25652,45 @@
           "版权",
           "诉讼",
           "AI训练"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "47bea9bd7341c21359e1d0d9cab6f6fc34b86619c6c9fc54bb491641e632e600": {
+      "created_at": "2026-10-16T04:30:40.022813+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "simonwillison-chirp-pong",
+        "evidence_status": "first_party",
+        "follow_up": "看该工具的实际可玩性与代码是否开源，以及类似音频联网玩法的延伸。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:simonwillison.net_atom_everything_:23178e6a594364e0",
+        "intelligence_type": "builder_insight",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Chirp Pong",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Simon Willison 用 Claude Code 做出一个用手机麦克风音频传输游戏状态的双人 Pong 实验，附可访问工具链接和完整提示词，是构建者一手实践，能让初学者看到“一个想法如何用 AI 变成可玩 Demo”。",
+        "region": "global",
+        "score": 8.6,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Simon Willison 用 Claude Code 做出一个靠手机麦克风“啾啾”声传数据的双人 Pong 游戏，展示了如何用 AI 把一个奇怪想法快速变成可玩 Demo。",
+        "tags": [
+          "Claude Code",
+          "AI编程",
+          "Demo"
         ],
         "target_user": "",
         "verticals": []
@@ -30492,6 +30803,45 @@
       },
       "stage": "deep_analysis"
     },
+    "57475966b53686f220178dc2191c715efa4330d2670cda25cb5781d03e4e8d60": {
+      "created_at": "2026-10-16T04:30:40.022755+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "bluesky-attie-small-social-apps",
+        "evidence_status": "reported",
+        "follow_up": "关注 Attie 的创建者访谈全文与用户实际产出案例。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:c17cabf17889734a",
+        "intelligence_type": "product_case",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Attie",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "与 TechCrunch 同源事件，但含 Bluesky CEO Toni Schneider 在 TechCrunch Disrupt 的采访表态，补充了产品定位与创建者视角，对理解“AI 生成小应用并社交分发”这一产品思路有增量。",
+        "region": "global",
+        "score": 8.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Bluesky 的 Attie 现在能让用户做游戏、投票、仪表盘等小应用并作为网站分享，CEO 在采访中解释了这一方向，值得看 AI 生成内容如何与社交分发结合。",
+        "tags": [
+          "AI产品",
+          "社交",
+          "vibe coding"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "57581d41df3a6a40f632a844fd57b08955c79fd58dbceb6f86fd88e578ce895d": {
       "created_at": "2026-09-27T05:17:04.410577+00:00",
       "model": "deepseek-flash",
@@ -30949,6 +31299,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "58599a18b2508cbc6aae7a5d2395ca56ba5abbb53d95b1ab5ff371678d840d47": {
+      "created_at": "2026-10-16T04:30:40.024797+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "vercel-ship-2026-agentic-infrastructure",
+        "evidence_status": "first_party",
+        "follow_up": "看这些 agent 基础设施的实际文档、定价与真实用户案例。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:vercel.com_changelog_rss:d0ecc4214e6c76de",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": true,
+        "market_signal": "",
+        "product_name": "Vercel Agentic Infrastructure",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Vercel 官方发布面向智能体的基础设施方向，含 200+ CLI 命令供 agent 操作平台等具体能力，对做 AI 产品的人理解部署与 agent 基础设施有参考；但整体是大会宣传稿，营销成分明显，需扣分。",
+        "region": "global",
+        "score": 7.2,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Vercel 在 Ship 2026 上发布面向智能体的基础设施，让 coding agent 能直接部署软件并运行自建 agent，值得看部署层如何为 AI 产品重新设计。",
+        "tags": [
+          "Vercel",
+          "Agent",
+          "基础设施"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "58694c8362660d440e27f69b3971f96392625b0039a7c521bb139a0bcc77a067": {
       "created_at": "2026-08-15T01:49:20.874219+00:00",
       "model": "deepseek-v4-flash",
@@ -31059,6 +31448,46 @@
           "工作流",
           "AI Assistant",
           "补丁"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "58b3bee0ef904244534cf9c910c177210856e7fb5a83d7fae9e1c8c9c1915ee9": {
+      "created_at": "2026-10-16T04:30:18.889047+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "meta-muse-spark-open-launch",
+        "evidence_status": "reported",
+        "follow_up": "值得追踪：等待 Meta 官方模型卡、许可条款、参数规模和实际 Demo 反馈。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:5249679bff53ff0e",
+        "intelligence_type": "model_capability",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Muse Spark Open",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Meta 发布可在 Apple Silicon 本地运行的开放权重模型，属于新模型能力落地，对探索本地 AI 产品有直接参考价值；但报道来自 TechCrunch，非官方一手，且缺少模型参数、性能、许可等关键细节，因此未进入 8 分以上区间。",
+        "region": "global",
+        "score": 7.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Meta 与 Apple 合作发布开放权重模型 Muse Spark Open，可在 Apple 芯片 Mac 上本地运行，让初学者能直接体验本地 AI 产品形态。",
+        "tags": [
+          "开放权重",
+          "本地推理",
+          "Apple Silicon",
+          "Meta"
         ],
         "target_user": "",
         "verticals": []
@@ -38445,6 +38874,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "6ae7788be91ea0ace07267094eb20f637732bd35bbc63e36f07fea7e9ae891f1": {
+      "created_at": "2026-10-16T04:30:52.731899+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "vercel-ai-7.0.142",
+        "evidence_status": "first_party",
+        "follow_up": "无需特别关注，属于常规依赖更新。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "github:release:414121499",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Vercel AI SDK",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Vercel AI SDK 7.0.142 补丁发布，恢复 OpenAI 自定义工具输入增量并标记编码，属于技术细节修复，对普通产品经理价值有限，故 5.5。",
+        "region": "global",
+        "score": 5.5,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "Vercel AI SDK 发布 7.0.142 补丁，恢复 OpenAI 自定义工具输入增量并标记编码，方便 UI 渐进展示。",
+        "tags": [
+          "Vercel AI SDK",
+          "OpenAI",
+          "补丁"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "6aff2ecdafe908dc72478d7534ad7b0d4f3f55340aae302ab5d906beeb557d0e": {
       "created_at": "2026-10-06T06:18:55.299542+00:00",
       "model": "deepseek-flash",
@@ -39425,6 +39893,45 @@
         "tags": [
           "Anthropic",
           "科学家支持"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "6db600a1e27dcb4901858bcac1dba8e1e0ad67af8455e4ce4bd0b630b1ccd96b": {
+      "created_at": "2026-10-16T04:30:16.249678+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "anthropic-claude-us-government-branches",
+        "evidence_status": "first_party",
+        "follow_up": "关注具体部门、使用场景与是否披露效果数据",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "public_web:sitemap:45d95f59d051d70aad29",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Claude",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Anthropic 官方宣布向美国政府三部门扩大 Claude 访问，属于真实客户落地增量，但正文缺失、无具体使用场景与反馈，对个人产品构建者迁移价值有限。",
+        "region": "global",
+        "score": 6.5,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Anthropic 把 Claude 的使用范围扩大到美国政府三个分支，解决政府机构使用前沿模型的问题，值得看的是政企落地路径与合规要求。",
+        "tags": [
+          "Claude",
+          "政企落地",
+          "Anthropic"
         ],
         "target_user": "",
         "verticals": []
@@ -48591,6 +49098,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "872771cdd942dbb4ae3f25c0d6e61b55d8ac49d0b0781264e13814a1b6fb09c4": {
+      "created_at": "2026-10-16T04:30:16.249902+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "openai-study-mode-brazilian-portuguese-teachers-day",
+        "evidence_status": "first_party",
+        "follow_up": "关注 Study Mode 的具体交互设计与教师使用反馈",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:openai.com_news_rss.xml:a60f4a701f887ae8",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": true,
+        "market_signal": "",
+        "product_name": "Study Mode",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI 官方在教师节推广 Study Mode 与巴西葡萄牙语版 AI for Educators，属于教育场景产品更新，但内容偏营销、缺少具体功能细节与用户反馈，按规则扣分。",
+        "region": "global",
+        "score": 6.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "OpenAI 在教师节推出巴西葡萄牙语版 AI for Educators，并展示 Study Mode 如何帮老师引导学生一步步学习，值得看的是教育场景的产品化方式。",
+        "tags": [
+          "教育",
+          "Study Mode",
+          "OpenAI"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "873b20f6867e9c81131a428f069fab0fb268daf3838c80ba9aa27e11802a045a": {
       "created_at": "2026-07-30T03:28:00.813098+00:00",
       "model": "deepseek-v4-flash",
@@ -51013,6 +51559,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "8ca99ac4125cbba0d8889916e56156c7f150999c50f0b2988ea7d5439c450040": {
+      "created_at": "2026-10-16T04:30:40.022662+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "chatgpt-chrome-extension-read-tabs",
+        "evidence_status": "reported",
+        "follow_up": "看该能力是否扩展到更多浏览器、权限与隐私边界如何设定。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:ae187bb47c5336b2",
+        "intelligence_type": "product_case",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "ChatGPT Chrome Extension",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "ChatGPT 的 Chrome 扩展获得读取已打开标签页的能力，属于真实功能更新，直接改变用户与浏览器上下文交互的方式，对做 AI 产品的人理解“上下文获取”这一步有参考价值。有官方 demo 视频但由媒体转述。",
+        "region": "global",
+        "score": 7.6,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "ChatGPT 的 Chrome 扩展现在能读取你已打开的浏览器标签页，让 AI 直接基于当前网页上下文回答，值得看它怎么解决“让 AI 看到你正在看什么”的问题。",
+        "tags": [
+          "ChatGPT",
+          "浏览器",
+          "上下文"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "8cc0998f584c17892a01b59f42b89f834e02c4440dd7f3a561447322c0e48741": {
       "created_at": "2026-09-03T04:22:41.978806+00:00",
       "model": "deepseek-v4-flash",
@@ -51278,6 +51863,45 @@
           "开发者工具",
           "API",
           "插件"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "8d226e8a7492e7f59639e6857b7e994fc42a6c7f0a00adb30d4ffdf7d843a569": {
+      "created_at": "2026-10-16T04:30:40.025314+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "vercel-ai-gateway-production-index-oct-2026",
+        "evidence_status": "first_party",
+        "follow_up": "跟踪后续月份开源模型支出占比是否继续上升及中国模型使用变化。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:vercel.com_changelog_rss:1bf1c0d676e846bd",
+        "intelligence_type": "market_signal",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Vercel AI Gateway",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Vercel 基于真实网关流量发布月度生产指数，给出开源权重模型占 token 71.5%、占支出 23% 等可验证数据，属于高信噪比行业观察，能帮助判断模型选型趋势。",
+        "region": "global",
+        "score": 7.4,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Vercel 的 AI Gateway 月度报告显示开源权重模型已占其网关七成以上 token 但只占约四分之一支出，值得看企业实际用模型的结构变化。",
+        "tags": [
+          "模型选型",
+          "行业数据",
+          "开源模型"
         ],
         "target_user": "",
         "verticals": []
@@ -60481,6 +61105,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "a304475a665bf475827ca8f4434016e39633c1f9e9a764793f47ce73582b1eb7": {
+      "created_at": "2026-10-16T04:30:16.249706+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "vera-rubin-nvl72-agentperf",
+        "evidence_status": "reported",
+        "follow_up": "关注该硬件是否带来可感知的 agent 产品体验变化",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "public_web:sitemap:19d8f1dab9ed73a88fb8",
+        "intelligence_type": "model_capability",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Artificial Analysis 关于 Vera Rubin NVL72 的 agent 性能测试，属于底层算力与基准测试内容，按规则通常低于 7 分，且未明确解锁新产品体验。",
+        "region": "global",
+        "score": 4.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Artificial Analysis 发布 Vera Rubin NVL72 的 agent 性能测试结果，说明该硬件在智能体任务上的表现，对做产品的人参考价值有限。",
+        "tags": [
+          "基准测试",
+          "算力",
+          "Agent"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "a30de0241248ab75720d2209bee75cd6348f8b76f124e14fffb9ad86e0110c04": {
       "created_at": "2026-07-30T03:27:45.918955+00:00",
       "model": "deepseek-v4-flash",
@@ -65438,6 +66101,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "b079ad6e51dd78a97592d7685854ec8d74fe7241ad196096ed969473db41ee6b": {
+      "created_at": "2026-10-16T04:30:16.249940+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "microsoft-foundry-september-2026-update",
+        "evidence_status": "first_party",
+        "follow_up": "关注 Routines 与 Model Router 的实际用法、定价与文档",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:devblogs.microsoft.com_foundry_feed_:d5dfe081004ef592",
+        "intelligence_type": "builder_insight",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Microsoft Foundry",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Microsoft Foundry 官方月度更新，介绍新模型、Routines、Tool Search、Model Router 与 Insights，并用双 agent 工作流演示把公开发布转成开发者 changelog，属于可迁移的构建实践与平台能力更新。",
+        "region": "global",
+        "score": 7.2,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "微软 Foundry 发布九月更新，新增 Routines、Tool Search、Model Router 等能力，并用两个 agent 协作把公开发布自动整理成开发者更新日志，值得看的是平台级 agent 工作流怎么搭。",
+        "tags": [
+          "Microsoft Foundry",
+          "Agent",
+          "开发平台"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "b07b6d3b60713b63872307877eae064053f6e0ead99e016f7a57a2b7086a8049": {
       "created_at": "2026-09-23T04:44:03.691602+00:00",
       "model": "deepseek-flash",
@@ -66549,6 +67251,37 @@
         "verticals": []
       },
       "stage": "candidate_analysis"
+    },
+    "b3354759143232aff357c6eb44d305ccc48e97ada842e26b3e3e77cfe2137033": {
+      "created_at": "2026-10-16T04:31:13.607701+00:00",
+      "model": "kimi-k2.6",
+      "prompt_version": "deep-v3-beginner",
+      "result": {
+        "ai_role": "把用户的自然语言描述转成可运行的前端代码（HTML/CSS/JS 等），并自动完成部署",
+        "evidence_status": "reported",
+        "hands_on_exercise": "打开 Attie（需 Bluesky 账号），尝试用一句话生成一个'随机决定今天吃什么'的小工具，分享到 Bluesky 观察互动数据；如果暂时没有权限，可用 Claude/GPT 生成同样功能的 HTML 文件，手动托管到 GitHub Pages 对比体验差异",
+        "implementation_idea": "本质上属于'vibe coding'——用户只描述'感觉/效果'，AI 负责写代码和上线。类似让 ChatGPT 写个网页，但 Attie 把'生成→部署→分享'整条链路包圆了，而且和 Bluesky 社交账号打通。",
+        "learning_points": [
+          "vibe coding：不用学编程语法，用大白话描述需求，AI 帮你写代码",
+          "Function Calling（功能调用）：AI 不只是聊天，还能触发'生成网页''部署网站'等外部工具",
+          "社交分发：AI 生成的内容不再是孤岛，而是通过链接在社交网络里传播"
+        ],
+        "limitations_or_uncertainties": "未公开具体技术栈（是否用特定前端框架）、生成应用的复杂度上限、是否支持自定义域名、免费额度与付费模式、CEO 采访中的'small apps'具体指多大规模",
+        "product_name": "Attie",
+        "sources": [
+          "https://www.theverge.com/tech/1012374/bluesky-ai-attie-small-social-games-apps"
+        ],
+        "target_users": "Bluesky 普通用户，尤其是没有编程基础、想快速做互动内容的人",
+        "title_zh": "Bluesky 的 AI 工具 Attie 让用户做小游戏和 App，直接当网站分享到社交圈",
+        "usage_flow": [
+          "在 Bluesky 里打开 Attie，用日常语言描述你想做什么（比如'做一个猜拳游戏'）",
+          "AI 生成可运行的轻量应用，并自动部署成一个独立网站",
+          "把生成的网站链接发到 Bluesky 或其他社交平台，别人点开就能用"
+        ],
+        "user_problem": "普通人想做小游戏、投票或数据看板，但不懂写代码，也不知道怎么部署成可分享的网页",
+        "what_it_is": "Bluesky 平台内置的 AI 工具，最初用来生成个性化信息流（feed），现在扩展为让用户用自然语言生成小游戏、投票、仪表盘等轻量应用，并生成独立网站链接供社交分享。"
+      },
+      "stage": "deep_analysis"
     },
     "b36aaa2adba7d6945af5889973005dacf7dbb8ffe3c1f09e32d72acce47db79d": {
       "created_at": "2026-08-17T01:55:13.927460+00:00",
@@ -68880,6 +69613,44 @@
           "智能家居",
           "安防",
           "垂直AI"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "b8816ce3c17df023fb137f88e12449654a26ee1003a4018369588b2a41a9d89c": {
+      "created_at": "2026-10-16T04:30:40.022971+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "ainews-agents-disprove-polysemanticity",
+        "evidence_status": "reported",
+        "follow_up": "无。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:www.latent.space_feed:fe88897c2a464af3",
+        "intelligence_type": "model_capability",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "关于可解释性与多义性的研究性主张，属于学术/理论话题，且正文只有一句引子，无产品、代码或可迁移实践，对目标读者价值低。",
+        "region": "global",
+        "score": 4.0,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "Latent Space 的 AINews 提到有人声称智能体推翻了多义性假设，属于可解释性研究话题，与 AI 产品构建关系不大。",
+        "tags": [
+          "可解释性",
+          "研究"
         ],
         "target_user": "",
         "verticals": []
@@ -72138,6 +72909,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "c19df89fb26ed58241b2fe1d9bf4dfa30dbbdf4647819645c38a1143c9814f6b": {
+      "created_at": "2026-10-16T04:30:40.022715+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "trump-ai-edited-white-house-photo",
+        "evidence_status": "reported",
+        "follow_up": "无。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:81dd3dd60a007f0d",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "政治人物发布 AI 修改照片的新闻，属于 AI 内容真实性与政策话题，与 AI 产品构建、模型能力、可迁移实践无关，对目标读者价值低。",
+        "region": "global",
+        "score": 2.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "特朗普在 Truth Social 发布一张疑似 AI 修改的白宫翻新对比照，被谷歌 AI 检测标记，属于 AI 内容真实性话题而非产品情报。",
+        "tags": [
+          "AI内容真实性",
+          "政策"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "c2187a511a5655cff6f30602575af566f476adc494fbeb38609f1ff14d430931": {
       "created_at": "2026-08-24T01:57:26.041845+00:00",
       "model": "deepseek-v4-flash",
@@ -72594,6 +73403,46 @@
           "Groq",
           "融资",
           "neocloud"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "c3b761b75008d8fdefc17bb4d458499d1ea387d83840fd9380e075c7a914b281": {
+      "created_at": "2026-10-16T04:30:52.730485+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "vercel-enterprise-citizen-developers",
+        "evidence_status": "first_party",
+        "follow_up": "关注企业版具体功能、定价和真实客户案例，以及 citizen developer 场景下的安全控制如何落地。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:vercel.com_changelog_rss:afdf8ab6d623d53f",
+        "intelligence_type": "market_signal",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": true,
+        "market_signal": "",
+        "product_name": "Vercel for Enterprise",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Vercel 官方发布企业版，核心是让非工程员工（citizen developers）用 AI 构建内部软件，同时提供治理与安全控制。属于官方产品发布，但内容偏营销，缺少具体功能细节、定价或客户案例，对初学者可迁移的产品思路有限，故给 6.5。",
+        "region": "global",
+        "score": 6.5,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Vercel 推出企业版，让不懂代码的员工用 AI 自己搭内部软件，同时帮公司管住安全和权限。",
+        "tags": [
+          "Vercel",
+          "企业AI",
+          "citizen developer",
+          "治理"
         ],
         "target_user": "",
         "verticals": []
@@ -78448,6 +79297,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "d48c2bf89b96dcec899b4fe48dc16643317edb06330d57bcabf5f73c8a046bb4": {
+      "created_at": "2026-10-16T04:30:16.249633+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "anthropic-independent-evaluators-update",
+        "evidence_status": "first_party",
+        "follow_up": "关注独立评估者名单、评估范围与是否公开报告",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "public_web:sitemap:c3f9aa1e97f35f2465d0",
+        "intelligence_type": "business_policy",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Anthropic 官方关于独立评估者的更新，属于治理与安全流程信息，对 AI 产品经理的直接可迁移增量有限，且正文内容缺失无法判断具体细节，按规则低于 7 分。",
+        "region": "global",
+        "score": 5.5,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Anthropic 官方发布独立评估者机制更新，说明外部评估如何介入其模型安全流程，对关注合规与评估体系的从业者有参考价值。",
+        "tags": [
+          "AI安全",
+          "评估",
+          "Anthropic"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "d4ad1fa21f258d81fe0c587cc9ed86e9e4dccea730be0f8d5849b650974a8beb": {
       "created_at": "2026-09-16T04:48:11.259208+00:00",
       "model": "deepseek-flash",
@@ -82939,6 +83827,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "dfbbb10de718f949002ce1d061faba94662e934626706efd9910325fd3fbeb54": {
+      "created_at": "2026-10-16T04:30:40.023003+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "modal-series-d-1b-arr",
+        "evidence_status": "reported",
+        "follow_up": "无。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:www.latent.space_feed:2a289299a4bd88c4",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Modal",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Modal 融资与 ARR 数据，属于基础设施融资新闻，按规则纯融资与算力类通常低于 7 分，且正文仅一句口号，无产品实践增量。",
+        "region": "global",
+        "score": 4.5,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "Modal 宣布 10 亿美元 ARR 和 160 亿美元 D 轮融资，属于 AI 基础设施融资新闻，对做 AI 产品的人参考价值有限。",
+        "tags": [
+          "融资",
+          "AI基础设施"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "e02d6dd4472101ad449564ff22bfabb79ecac948065848c039a7f01867b273c2": {
       "created_at": "2026-08-12T02:43:31.542903+00:00",
       "model": "deepseek-v4-flash",
@@ -87245,6 +88171,45 @@
           "推理加速",
           "vLLM",
           "并行解码"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "ebb4fc19844cd9e3c79a40bb357d98fb9edb79a24d80e6f823d4a7bb9d662471": {
+      "created_at": "2026-10-16T04:30:52.731442+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-codex-rust-v0.163.0-alpha.10.2",
+        "evidence_status": "first_party",
+        "follow_up": "无需关注，等待正式版变更说明。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "github:release:414135617",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "OpenAI Codex",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "仅为 alpha 版本号发布，无任何变更说明，属于噪音，给 2.0。",
+        "region": "global",
+        "score": 2.0,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "OpenAI Codex 发布 alpha 版本 0.163.0-alpha.10.2，无任何变更说明。",
+        "tags": [
+          "Codex",
+          "OpenAI",
+          "alpha"
         ],
         "target_user": "",
         "verticals": []
@@ -93023,6 +93988,85 @@
           "微软",
           "水印",
           "隐私"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "fa107b0c634087b1e1856969181b7279b7fe5994b903beca4a33294b8a30c811": {
+      "created_at": "2026-10-16T04:30:52.731855+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "anthropic-claude-code-v2.1.301",
+        "evidence_status": "first_party",
+        "follow_up": "关注 OpenTelemetry 追踪对 Agent 可观测性的实际帮助，以及分类器决策日志的用途。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "github:release:413913133",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Claude Code",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Claude Code v2.1.301 发布，新增重试看门狗、OpenTelemetry 追踪、vim 模式 % 跳转、多行输入、分类器决策日志等。属于官方 Release，有明确功能增量，对使用 Claude Code 的开发者有价值，但属于常规迭代，故 6.8。",
+        "region": "global",
+        "score": 6.8,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "Anthropic 发布 Claude Code v2.1.301，新增重试看门狗、OpenTelemetry 追踪、vim 模式跳转等功能。",
+        "tags": [
+          "Claude Code",
+          "Anthropic",
+          "编程Agent",
+          "Release"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "fa1644a59940de3687571a11bd3c42782b9e566ff71429a74a20da71dc7ddad4": {
+      "created_at": "2026-10-16T04:30:40.022944+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "anthropic-revenue-ipo-investor-day",
+        "evidence_status": "reported",
+        "follow_up": "关注其 IPO 进展与蒸馏政策对下游模型使用的影响。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:simonwillison.net_atom_everything_:782d5b0065aab2f9",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Anthropic 向投资人披露季度收入与利润率，属于融资/财务信息，按规则纯融资类通常低于 7 分；但含蒸馏与算力成本等模型公司经营细节，对理解模型公司动态有边缘价值。",
+        "region": "global",
+        "score": 5.5,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "Anthropic 在 IPO 前向投资人披露季度收入增至 168 亿美元并谈及蒸馏问题，属于模型公司财务动态，对做产品的人参考价值有限。",
+        "tags": [
+          "Anthropic",
+          "融资",
+          "模型公司"
         ],
         "target_user": "",
         "verticals": []
