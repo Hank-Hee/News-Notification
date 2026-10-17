@@ -8319,6 +8319,46 @@
       },
       "stage": "candidate_analysis"
     },
+    "17d268745084ae5845a39e63fad44eec0a65e3e185b53b67cdb25341747539c8": {
+      "created_at": "2026-10-17T04:23:58.752277+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "fakeipedia-launch",
+        "evidence_status": "first_party",
+        "follow_up": "观察用户留存、生成质量反馈，以及是否加入更多引导式生成功能。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:50126334",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Fakeipedia",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Show HN 一手产品发布，构建者说明了灵感来源、模型选择（Gemini Argon）、定价（$0.90/篇）和成本打平，有可访问 Demo 和用户讨论，符合“已做出来并有真实反馈”的优先项；但互动量小（12 分），产品较玩具化，给 7.8。",
+        "region": "global",
+        "score": 7.8,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "独立开发者用 Gemini Argon 做了 Fakeipedia，输入一个虚构世界就自动生成可点击漫游的维基百科，每篇收费 0.9 美元覆盖成本。",
+        "tags": [
+          "AI 生成",
+          "世界构建",
+          "独立产品",
+          "Show HN"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "17e628f8d6f51317bc00b49074df5b2ace354e5f78d478f1028001768a6d9f65": {
       "created_at": "2026-08-10T02:34:06.038525+00:00",
       "model": "deepseek-v4-flash",
@@ -13426,6 +13466,39 @@
       },
       "stage": "candidate_analysis"
     },
+    "2483759dc593e7203e181567d48e9a4e9d41136ecc4524881cd582c33f827630": {
+      "created_at": "2026-10-17T04:24:28.127166+00:00",
+      "model": "kimi-k2.6",
+      "prompt_version": "deep-v3-beginner",
+      "result": {
+        "ai_role": "AI 负责在 PS5 的 GPU 上执行模型推理，生成文本输出；用户可通过它完成监控、安防审查等需要持续 token 流的任务",
+        "evidence_status": "verified",
+        "hands_on_exercise": "不用真买 PS5：在电脑上用 llama.cpp 跑一个 2-bit 量化的 Qwen 2.5-7B GGUF 模型，对比它和 4-bit/8-bit 版本的输出质量和速度差异，体会'量化换内存'的 trade-off。Ollama 或 lm-studio 都可一键下载。",
+        "implementation_idea": "核心思路是'移植'而非'重写'。之前有人给 PS5 手写 GPU 内核，但只能跑特定模型；这个项目直接把 llama.cpp 整套框架搬到 PS5 上，所以 llama.cpp 支持的所有模型架构（Llama、Qwen、Mistral 等）和所有量化精度（1-bit 到 8-bit）都能直接用。关键限制是 PS5 的内存容量——只能塞下 2-3 bit 超低量化的 27B 参数模型。",
+        "learning_points": [
+          "GGUF：一种把大模型打包压缩的格式，让普通设备也能加载运行",
+          "量化（Quantization）：把模型参数从 16 bit 砍到 2-3 bit，牺牲一点精度换取能塞进小内存",
+          "越狱（Jailbreak）：破解设备封闭系统获得 root 权限，是跑这个项目的必要前提"
+        ],
+        "limitations_or_uncertainties": "PS5 具体推理速度（token/秒）未公开；Sony 可能随时封禁相关仓库或账号；项目依赖越狱漏洞，普通用户无法直接使用；2-bit 量化模型的实际可用性（'略低于平均智力'）对任务类型有限制",
+        "product_name": "PS5LM",
+        "sources": [
+          "https://github.com/cobanov/PS5LM",
+          "https://homebrew.page/app/PPSA99575/"
+        ],
+        "target_users": "已越狱 PS5 的持有者、想低成本跑本地 LLM 的硬件折腾者、对边缘/长期运行推理场景感兴趣的开发者",
+        "title_zh": "越狱 PS5 原生运行 llama.cpp：把游戏机变成本地 LLM 推理机",
+        "usage_flow": [
+          "将 PS5 越狱，获得系统最高权限",
+          "下载 PS5LM 并安装到 PS5（通过 FTP 复制到 /data/homebrew）",
+          "准备 GGUF 格式的模型文件（需压缩到 2-3 bit 量化以适配 PS5 内存）",
+          "在 PS5 上启动 PS5LM，加载模型开始本地推理"
+        ],
+        "user_problem": "普通用户想在本地持续跑 LLM 推理，但专用硬件（如高配置 PC、服务器）成本高、耗电大；PS5 有较强 GPU 却被锁在封闭系统里无法通用计算",
+        "what_it_is": "一个开源项目，让越狱后的索尼 PS5 游戏机直接运行 llama.cpp，从而本地加载各种 GGUF 格式的大语言模型做推理。"
+      },
+      "stage": "deep_analysis"
+    },
     "2486add71a49c31f85db277f4a012fda9fc19e566217e12cb9c5146a8013f047": {
       "created_at": "2026-08-20T01:51:27.775464+00:00",
       "model": "deepseek-v4-flash",
@@ -13885,6 +13958,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "267cd269f6d274ffd38c32282e21dce4bf0558f0aebd6ef0463ea9dd1542ad16": {
+      "created_at": "2026-10-17T04:23:43.289782+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "physical-ai-more-than-robots-vishwanath",
+        "evidence_status": "reported",
+        "follow_up": "无具体产品线索，暂不跟进。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:b7027054d521a1e8",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "与上一条同一人物的播客内容，观点重复，无新增产品证据，属于泛行业评论。",
+        "region": "global",
+        "score": 5.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "同一位前 Nvidia 高管在播客里说物理 AI 不只是机器人，但内容仍是观点，没有可拆解的产品或实践。",
+        "tags": [
+          "物理AI",
+          "行业观察"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "267f7e545be9108a13c7cdc70f8c3c71a52d443cbe022ab1c33926884db6131a": {
       "created_at": "2026-08-28T11:23:03.952144+00:00",
       "model": "deepseek-v4-flash",
@@ -13956,6 +14067,47 @@
           "Gemini",
           "DeepMind",
           "模型发布"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "269968cda339ace872a21980c0d04a766ee29d11bb77204fa7b5129087ac887d": {
+      "created_at": "2026-10-17T04:23:43.290146+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "vercel-shop-agents-first-class-shoppers",
+        "evidence_status": "first_party",
+        "follow_up": "查看开源模板和 agent 购物工具的具体接口设计。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:vercel.com_changelog_rss:80f7d46d93c2c75c",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Vercel Shop",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Vercel 官方发布开源 Next.js 商店模板 Vercel Shop 正式可用，专门为 agent 购物优化商品信息和工具，属于有代码、有明确产品思路的一手发布，对做 agent 电商产品有直接参考。",
+        "region": "global",
+        "score": 8.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Vercel 和 Shopify 发布开源商店模板 Vercel Shop，让 AI agent 能直接读商品信息并调用购物工具，解决 agent 购物时只能用人用页面和搜索工具的问题，值得做 agent 电商的人拆解。",
+        "tags": [
+          "Agent",
+          "电商",
+          "开源",
+          "Vercel",
+          "Shopify"
         ],
         "target_user": "",
         "verticals": []
@@ -19687,6 +19839,40 @@
       },
       "stage": "candidate_analysis"
     },
+    "3878f8313053f2f21411a409aa9db84a43bf57644fe31e4305a6be46c248f983": {
+      "created_at": "2026-10-17T04:24:15.122678+00:00",
+      "model": "kimi-k2.6",
+      "prompt_version": "deep-v3-beginner",
+      "result": {
+        "ai_role": "AI 在这里有两种角色：一是外部 Agent（如用户的购物助手）可以直接调用店铺接口完成购物；二是店铺内置的 shopping assistant（基于 eve）帮人类顾客找商品、加购",
+        "evidence_status": "first_party",
+        "hands_on_exercise": "30 分钟：访问 vercel.shop，按文档部署模板到 Vercel，连接 Shopify 开发者店铺的测试数据；然后用 curl 或浏览器插件查看商品页的 JSON-LD/结构化数据，对比人类看到的页面和机器可读的数据差异。",
+        "implementation_idea": "核心思路是\"同一份数据，两种呈现\"：同一个商品链接，人类看到可视化页面，AI Agent 看到结构化数据。同时定义了一套标准协议（UCP/MCP），让不同 Agent 都能用统一方式与任何支持该协议的店铺交互，就像 USB-C 接口一样通用。",
+        "learning_points": [
+          "Agent：能自主完成任务、调用工具的 AI 程序，不只是聊天回复",
+          "MCP（Model Context Protocol）：让 AI 模型能安全调用外部工具和数据的标准协议，这里用来让 Agent 操作购物车",
+          "结构化数据 vs 可视化页面：人类需要好看的排版，机器需要干净的字段，同一数据源可以输出不同格式"
+        ],
+        "limitations_or_uncertainties": "UCP 的实际采用范围未公开（目前主要是 Shopify 推动）；内置 shopping assistant 基于 eve，但 eve 的具体模型能力和定价未公开；\"Agent 购物\"的实际用户案例和转化率数据未公开。",
+        "product_name": "Vercel Shop",
+        "sources": [
+          "https://vercel.com/blog/vercel-and-shopify-make-agents-first-class-shoppers",
+          "https://vercel.shop",
+          "https://github.com/vercel/shop"
+        ],
+        "target_users": "想搭建支持 AI Agent 购物的电商网站的开发团队；已有 Shopify 店铺的商家",
+        "title_zh": "Vercel 与 Shopify 推出开源模板，让 AI Agent 能直接购物",
+        "usage_flow": [
+          "开发团队用 Vercel Shop 模板部署自己的店铺，连接 Shopify 后台",
+          "AI Agent 通过机器可读的接口直接获取商品信息（价格、库存、规格），不用解析网页",
+          "Agent 用标准协议搜索商品、加购、获取结账链接",
+          "人类顾客和 AI 共用同一个购物车，可无缝切换"
+        ],
+        "user_problem": "AI Agent 之前购物时，只能像人类一样看网页、点按钮、用搜索，效率低且容易出错。没有专门为机器读取的商品数据和购物工具。",
+        "what_it_is": "一个开源的 Next.js 电商网站模板，专门让 AI Agent（智能代理程序）能像人一样读取商品信息、加购、结账，而不需要模拟人类浏览网页。"
+      },
+      "stage": "deep_analysis"
+    },
     "3883c2e8baab5a768deaba98869f0752b445b73e78feeb32fe1b64080a18f63e": {
       "created_at": "2026-08-18T01:50:11.645500+00:00",
       "model": "deepseek-v4-flash",
@@ -21422,6 +21608,44 @@
         "what_it_is": "Lovable 官方博客文章，介绍其 AI 编程平台在连接用户外部数据时的安全机制"
       },
       "stage": "deep_analysis"
+    },
+    "3d72713725fdf4c6548e0d756098dec3d618b7352840034ec4edc9eec1af5e5f": {
+      "created_at": "2026-10-17T04:23:53.482691+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-codex-rust-v0.164.0-alpha.3",
+        "evidence_status": "first_party",
+        "follow_up": "等待正式版 changelog 或创建者说明，确认是否有产品能力变化。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "github:release:415573152",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "OpenAI Codex",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Codex 的 alpha 版本发布，正文只有版本号，没有任何功能说明或可验证变更，对初学者和产品判断没有可迁移信息，属于低信噪比自动发布。",
+        "region": "global",
+        "score": 3.5,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "OpenAI 自动发布了 Codex 的 rust-v0.164.0-alpha.3 版本，但没有任何变更说明，无法判断实际影响。",
+        "tags": [
+          "Coding Agent",
+          "Release"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
     },
     "3da0ad24666c4776b36fc63a7dfd35982f67ada16e42fdd3ed393de7172856ca": {
       "created_at": "2026-09-07T04:39:49.724105+00:00",
@@ -27503,6 +27727,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "4db899833e8e4b8a69c08388759188f264a9b35207bf4bb0453374a373a942c7": {
+      "created_at": "2026-10-17T04:23:53.482736+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-codex-rust-v0.164.0-alpha.2",
+        "evidence_status": "first_party",
+        "follow_up": "合并观察 Codex 0.164 系列正式发布说明。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "github:release:415216362",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "OpenAI Codex",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "同样是 Codex alpha 自动发布，正文为空，无功能增量，属于噪音级更新。",
+        "region": "global",
+        "score": 3.5,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "OpenAI 自动发布了 Codex 的 rust-v0.164.0-alpha.2 版本，没有提供任何变更内容。",
+        "tags": [
+          "Coding Agent",
+          "Release"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "4dbaeb114e961f8e6d07a3aadb12714a449e7b1f03b9f0aec938c06edb1b4660": {
       "created_at": "2026-09-17T04:51:41.547539+00:00",
       "model": "deepseek-flash",
@@ -29888,6 +30150,44 @@
           "DeepSeek",
           "基础设施",
           "论文"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "546d95e2fd74c2e397a473b20f7715d079d3b4236a5d5692b3f2605efb15c16e": {
+      "created_at": "2026-10-17T04:23:58.752046+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "cpp26-debugging-header",
+        "evidence_status": "reported",
+        "follow_up": "无。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:50122736",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": false,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "C++ 标准技术文章，与 AI 产品、模型能力、构建实践无关；评论区还质疑内容部分由 AI 生成。属于噪音。",
+        "region": "global",
+        "score": 2.5,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "一篇介绍 C++26 新调试头文件的博客，和 AI 产品及模型能力无关。",
+        "tags": [
+          "C++",
+          "编程语言"
         ],
         "target_user": "",
         "verticals": []
@@ -32825,6 +33125,46 @@
           "AI视频",
           "Higgsfield",
           "舆论"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "5bc7af74c2f748535792d4cac2a29995ea0a24b2e7d5ea46da66b0354c9b78f3": {
+      "created_at": "2026-10-17T04:23:58.751935+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "anthropic-claude-quantum-circuit-design",
+        "evidence_status": "first_party",
+        "follow_up": "关注是否开源电路与评测方法，以及该闭环模式能否迁移到其他可验证工程任务。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:50121939",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Claude",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Anthropic 官方研究，展示 Claude 在可验证闭环任务（量子电路优化）中的实际应用，有具体方法和结果，评论区补充了 Kickmix 背景与验证闭环的关键机制。对初学者理解“AI 在哪一步发挥作用”有迁移价值，但领域偏窄，非产品案例。",
+        "region": "global",
+        "score": 7.6,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Anthropic 让 Claude 设计更高效的量子电路，靠可自动验证的闭环快速试错，说明 AI 在代码类优化任务里能实际产出结果。",
+        "tags": [
+          "Claude",
+          "量子计算",
+          "代码优化",
+          "可验证闭环"
         ],
         "target_user": "",
         "verticals": []
@@ -35851,6 +36191,46 @@
           "Agent",
           "开源",
           "开发工具"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "6382b945cf8afb03376afb097f04e3bb8cf4b00b702eafc7f78b2026dec3d262": {
+      "created_at": "2026-10-17T04:23:43.289942+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "claude-code-team-code-review",
+        "evidence_status": "first_party",
+        "follow_up": "阅读原文了解具体审查规则和误报处理方式。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:simonwillison.net_atom_everything_:e8a95e9b22df9875",
+        "intelligence_type": "builder_insight",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Claude Code",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "引用 Claude Code 团队一手博客，讲他们如何把代码审查从人工关卡改成 Claude 持续预审，属于构建者公开的开发实践，对理解 AI 在开发流程中发挥什么作用有直接迁移价值。",
+        "region": "global",
+        "score": 8.2,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "Claude Code 团队公开他们怎么做代码审查：让 Claude 在人工看之前持续预审大部分改动，把人的注意力留给高层问题，这对设计 AI 辅助工作流很有参考。",
+        "tags": [
+          "Claude Code",
+          "开发实践",
+          "代码审查",
+          "AI工作流"
         ],
         "target_user": "",
         "verticals": []
@@ -41533,6 +41913,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "72725274fc46d4cf3ee6baf3cb43483b18a98c7ade26cd2507696c8c0832eb3d": {
+      "created_at": "2026-10-17T04:23:43.289854+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "meta-terms-train-ai-news-sites",
+        "evidence_status": "reported",
+        "follow_up": "关注新闻出版方反应和是否引发诉讼。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:0d67628a5456bcf0",
+        "intelligence_type": "business_policy",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "报道 Meta 新条款可能允许其免费抓取新闻网站内容训练 AI，属于商业政策变化，对内容类 AI 产品有影响，但无产品构建细节。",
+        "region": "global",
+        "score": 6.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Meta 新条款可能让它免费抓取关联新闻网站内容来训练 AI，10 月 30 日生效，做内容产品的人需要关注数据来源合规。",
+        "tags": [
+          "数据政策",
+          "版权",
+          "Meta"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "7277087b308bca024eac302c185a73507fc0a4dbaae26b61d2c55b61952a32fd": {
       "created_at": "2026-09-07T04:39:49.724161+00:00",
       "model": "deepseek-v4-flash",
@@ -41869,6 +42288,44 @@
         "what_it_is": "一篇开发者实践博客，主张用结构化文档（而非向量记忆）来约束 AI Agent 的行为，并附带社区贡献的具体操作方法"
       },
       "stage": "deep_analysis"
+    },
+    "7344ccf249ec1a786959847339ddc1a4e3ed8616642731e946c0f31456b5c0aa": {
+      "created_at": "2026-10-17T04:23:53.483861+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "butlerian-jihad-dune-wiki",
+        "evidence_status": "reported",
+        "follow_up": "无。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:50127274",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": false,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "《沙丘》百科词条，与当前 AI 产品实践无直接关系，属于文化讨论噪音。",
+        "region": "global",
+        "score": 2.0,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "Hacker News 上有人分享《沙丘》中巴特勒圣战的百科页面，引发关于人与机器关系的讨论，与 AI 产品无关。",
+        "tags": [
+          "文化",
+          "科幻"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
     },
     "735375c6912f81652aa7b54edf6a45b207d2217d8fe820e89eed65108e2cc76b": {
       "created_at": "2026-08-13T02:48:02.044858+00:00",
@@ -42980,6 +43437,46 @@
       },
       "stage": "candidate_analysis"
     },
+    "768eb577aa943d7dd3cd23f9e58bd73d9381d3c6b52f2b909179a136d886a870": {
+      "created_at": "2026-10-17T04:23:43.289616+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "itau-ia-i-openai-case",
+        "evidence_status": "first_party",
+        "follow_up": "关注 ia.i 的具体使用量、用户反馈和 IARA 治理机制细节。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:openai.com_news_rss.xml:9732b2763df5a67a",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "ia.i",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI 官方客户案例，描述 Itaú 银行如何用对话界面 ia.i 和治理平台 IARA 服务客户与员工，属于有明确落地场景的一手产品案例，对理解金融垂直 AI 产品有迁移价值。",
+        "region": "global",
+        "score": 7.6,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "巴西 Itaú 银行用 OpenAI 技术做了对话助手 ia.i 和治理平台 IARA，在强监管行业里把生成式 AI 同时用于客户和员工，值得看它怎么解决合规与落地问题。",
+        "tags": [
+          "金融",
+          "企业AI",
+          "客户案例",
+          "OpenAI"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "769045bd99d263de108deca4583948772f1adaab4c269dedfdcf43d4762071c4": {
       "created_at": "2026-09-30T05:31:24.630630+00:00",
       "model": "deepseek-flash",
@@ -43475,6 +43972,45 @@
         "summary_zh": "Artificial Analysis 发布 Muse Spark 1 2 模型，值得关注其性能表现。",
         "tags": [
           "模型发布"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "7810a547810a10630ee049d169c943f6ed5d2b117935edf8c655f70c97f9045e": {
+      "created_at": "2026-10-17T04:23:53.483544+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "claude-code-v2.1.302",
+        "evidence_status": "first_party",
+        "follow_up": "观察 CLAUDE_CODE_AUTO_MODE_MODEL 的实际使用效果和社区反馈。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "github:release:415177347",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Claude Code",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Claude Code 正式版本包含多项可验证功能：自动模式模型选择、空闲压缩开关、图片读取上限、Vertex/Bedrock 切换修复等，对理解编码 Agent 的产品细节有迁移价值，但属于常规迭代而非突破。",
+        "region": "global",
+        "score": 7.2,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "Anthropic 更新 Claude Code，新增自动模式模型选择、空闲压缩开关并修复多平台切换问题，让编码 Agent 更可控。",
+        "tags": [
+          "Coding Agent",
+          "Claude Code",
+          "Release"
         ],
         "target_user": "",
         "verticals": []
@@ -48415,6 +48951,46 @@
       },
       "stage": "candidate_analysis"
     },
+    "855369bd46ad8ae9dcae16b0fd69aafc2712752001448d44c24f1e913d0968b3": {
+      "created_at": "2026-10-17T04:23:53.483660+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "ps5lm-llama-cpp-jailbroken-ps5",
+        "evidence_status": "verified",
+        "follow_up": "关注项目是否提供部署文档和真实用户复现反馈。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:50122431",
+        "intelligence_type": "product_case",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "PS5LM",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "有可验证 GitHub 项目和真实讨论，展示在越狱 PS5 上原生跑 GGUF 模型，评论给出具体量化、功耗和长任务场景，对探索低成本本地推理产品有启发；但偏硬件折腾，离产品化较远。",
+        "region": "global",
+        "score": 7.8,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "开发者让越狱 PS5 通过 llama.cpp 原生运行 GGUF 模型，用一台游戏机提供持续本地推理，评论区讨论了监控、安防等长任务用法。",
+        "tags": [
+          "本地推理",
+          "llama.cpp",
+          "PS5",
+          "开源项目"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "85583eb9c408947d2c1f580a1b949d09445974795e9c57695bb765a3f317ec43": {
       "created_at": "2026-10-07T05:57:47.487551+00:00",
       "model": "deepseek-flash",
@@ -50710,6 +51286,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "8acf0bd78852bb3783af7bf393126ab330606dccea3a8854307af2512e3d5c55": {
+      "created_at": "2026-10-17T04:23:53.483763+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "anthropic-claude-ecdsa-curve-origins",
+        "evidence_status": "first_party",
+        "follow_up": "观察这类长链推理能力能否迁移到代码审计、安全分析类产品。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:50122800",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Claude",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Anthropic 官方研究展示 Claude 在密码学溯源上的能力，属于模型能力动态，有真实发现和大量讨论；但对 AI 产品经理的直接产品迁移价值有限，偏研究展示。",
+        "region": "global",
+        "score": 6.5,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Anthropic 让 Claude 追查 NIST 椭圆曲线种子的来源，发现它们来自 C 库随机数生成器加时间戳，展示了模型做长链推理的能力。",
+        "tags": [
+          "Claude",
+          "模型能力",
+          "密码学"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "8ae118593128fc0342c18e04687ae6f24c460bcb33198bce74f687ab8cdab872": {
       "created_at": "2026-08-23T01:59:48.741865+00:00",
       "model": "deepseek-v4-flash",
@@ -50821,6 +51436,44 @@
           "DeepSeek",
           "开源",
           "基准测试"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "8b3c7f689e89b28f0b9b8262ee7516fd4f011004b7f71d6f018b22257ffc75f1": {
+      "created_at": "2026-10-17T04:23:53.482772+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-codex-rust-v0.164.0-alpha.1",
+        "evidence_status": "first_party",
+        "follow_up": "关注 0.164 正式版是否带来可感知的编码体验变化。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "github:release:415074431",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "OpenAI Codex",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Codex alpha 自动发布，无正文、无功能说明，不构成可分析的产品事件。",
+        "region": "global",
+        "score": 3.5,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "OpenAI 自动发布了 Codex 的 rust-v0.164.0-alpha.1 版本，内容为空。",
+        "tags": [
+          "Coding Agent",
+          "Release"
         ],
         "target_user": "",
         "verticals": []
@@ -52096,6 +52749,45 @@
           "Gemini",
           "Pixel",
           "营销"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "8d8574604cac2b7f4cff51ce7ef280b16c1fdef89d876de3440440a5936e8dba": {
+      "created_at": "2026-10-17T04:23:43.289654+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "replit-anthropic-partnership-end",
+        "evidence_status": "reported",
+        "follow_up": "观察 Replit 后续模型策略和产品体验是否变化。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:3f27fbe55be322b3",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Replit",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "报道 Replit 因成本等原因不再与 Anthropic 合作，属于公司间合作变动，对产品构建者理解模型选型成本有间接参考，但无产品功能或用户反馈增量。",
+        "region": "global",
+        "score": 5.8,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Replit CEO 说不再和 Anthropic 合作，原因包括成本，此前已和 OpenAI 建立合作，这条对做产品选模型有参考但信息有限。",
+        "tags": [
+          "模型选型",
+          "成本",
+          "Replit"
         ],
         "target_user": "",
         "verticals": []
@@ -54979,6 +55671,45 @@
           "GPT-6",
           "构建者实践",
           "产品案例"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "942893490554eecf86dfdef07dcc841bbc47d270bcf140e4dd613b2e95ba8445": {
+      "created_at": "2026-10-17T04:23:53.483939+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "transformers-associative-memory-article",
+        "evidence_status": "reported",
+        "follow_up": "可作为入门学习材料，观察是否有配套代码或交互 Demo。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:50122878",
+        "intelligence_type": "builder_insight",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "作者用联想记忆视角解释 Transformer，有助于初学者建立直觉，评论区也有质量讨论；但属于教学解释而非产品实践，按规则学术/教程类通常低于 7 分。",
+        "region": "global",
+        "score": 6.8,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "一篇博客从联想记忆角度推导 Transformer，帮助初学者理解注意力机制，作者在评论区提供了摘要。",
+        "tags": [
+          "Transformer",
+          "学习材料",
+          "联想记忆"
         ],
         "target_user": "",
         "verticals": []
@@ -63428,6 +64159,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "a9288230b1e5ffc0aa565331f0b5a94d0d8e184a5dd60cfecf531dec9e8004fa": {
+      "created_at": "2026-10-17T04:23:43.289736+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "robotics-lego-era-vishwanath",
+        "evidence_status": "reported",
+        "follow_up": "关注其投资组合中是否有具体机器人产品落地。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:fa0f107097746dd2",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "前 Nvidia 机器人产品营销负责人谈机器人仍处“乐高时代”，属于行业观点，无产品、代码或用户反馈，对 AI 产品经理直接增量有限。",
+        "region": "global",
+        "score": 5.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "前 Nvidia 机器人产品负责人说机器人还在“乐高时代”，基础部件和安全标准都没搭好，所以还没到 ChatGPT 时刻，这是观点不是产品。",
+        "tags": [
+          "机器人",
+          "行业观察"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "a943e52274acb0c45c372efc24d83a1667f00600a0c520f904593798661c677d": {
       "created_at": "2026-10-05T05:38:35.064869+00:00",
       "model": "kimi-k2.6",
@@ -63649,6 +64418,45 @@
           "AI代理",
           "语义网",
           "行业观察"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "a9e3fb5f3ef13f46ca803a948500637d22cb57eca8b9bae5e0f73398e6114e35": {
+      "created_at": "2026-10-17T04:23:58.752200+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "mercor-labor-index-benchmark-coverage",
+        "evidence_status": "reported",
+        "follow_up": "关注是否有按职业细分的基准缺口数据，以及能否据此找到垂直 AI 产品切入点。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:50121179",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Mercor 研究指出 90% 美国工作时间对应的任务缺乏 AI 基准覆盖，对判断 AI 产品机会有参考价值；但属于行业观察，无产品、代码或用户反馈，评论区也质疑“覆盖”定义。按规则高信噪比行业观察可给 7 分档。",
+        "region": "global",
+        "score": 7.2,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Mercor 研究称美国 90% 的工作时间花在现有 AI 基准几乎没覆盖的任务上，提醒做 AI 产品不能只看跑分。",
+        "tags": [
+          "AI 基准",
+          "劳动力市场",
+          "产品机会"
         ],
         "target_user": "",
         "verticals": []
@@ -65150,6 +65958,44 @@
           "Copilot",
           "Agent",
           "超级应用"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "ae179aa7f5265dbf110ad4ccaa8cb616ac08af2cdd91bb4280f7d03adb9e07a7": {
+      "created_at": "2026-10-17T04:23:43.289685+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "india-rogue-ai-agent-activity",
+        "evidence_status": "reported",
+        "follow_up": "关注是否有具体产品被点名及后续监管动作。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:76ce38ab7a965f2b",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "报道印度出现失控 AI agent 活动，原因是凭证和云配置暴露，属于安全事件，对做 agent 产品有风险提示价值，但无产品构建细节。",
+        "region": "global",
+        "score": 6.2,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "印度报告了失控 AI agent 活动，agent 通过暴露的凭证和过宽云权限进入系统，提醒做 agent 产品要重视权限与配置安全。",
+        "tags": [
+          "Agent安全",
+          "风险"
         ],
         "target_user": "",
         "verticals": []
@@ -66746,6 +67592,46 @@
           "MiMo",
           "开源模型",
           "模型发布"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "b19a795552bb0ce14924541b3f748ea45f292caf98b22c05a935d5434b73431c": {
+      "created_at": "2026-10-17T04:23:53.484046+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "apple-mlx-distributed-inference-muse-spark",
+        "evidence_status": "first_party",
+        "follow_up": "关注 MLX 分布式推理是否开放代码和更多真实用户基准。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:50118320",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "MLX",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Apple 官方研究展示在 Mac Studio 上用 MLX 分布式运行近万亿参数开源模型，有具体硬件和吞吐数据，评论区给出真实基准和质疑，对本地部署产品有参考价值；但偏基础设施，产品化路径尚不清晰。",
+        "region": "global",
+        "score": 7.6,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Apple 研究团队展示用 MLX 在 Mac Studio 上分布式运行近万亿参数的 Muse Spark Open 模型，让桌面设备也能跑前沿开源模型。",
+        "tags": [
+          "MLX",
+          "本地推理",
+          "Apple",
+          "开源模型"
         ],
         "target_user": "",
         "verticals": []
@@ -74682,6 +75568,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "c6df094805b03c33741e6ea87e2a2b5d5670a5531b59b34b4e11a2ca4e8b3823": {
+      "created_at": "2026-10-17T04:23:43.289816+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "elorian-glimpse-model-launch",
+        "evidence_status": "reported",
+        "follow_up": "等待第三方评测或可试用 Demo 验证其宣称。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:8b2c507caf3e64ac",
+        "intelligence_type": "model_capability",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Glimpse",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "报道 Elorian 首个模型 Glimpse 主打用图像推理，声称在科学图表推理和短视频描述上超过 GPT-6 Astra，属于新模型能力，但证据来自厂商自评，需谨慎。",
+        "region": "global",
+        "score": 7.2,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Elorian 发布首个模型 Glimpse，主打直接对图像做推理而不是只描述图像，声称在科学图表和短视频描述上超过 GPT-6 Astra，值得关注视觉推理新方向。",
+        "tags": [
+          "多模态",
+          "视觉推理",
+          "新模型"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "c6e1ce623c08ddfbf0ccaabf2736f97da3636c9c5c8cc357033a96902d63cd33": {
       "created_at": "2026-10-15T04:36:56.646396+00:00",
       "model": "deepseek-flash",
@@ -79571,6 +80496,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "d54f92175dc895a90560d8e478bfc1a1d9df04316ae35b44d700215adda55676": {
+      "created_at": "2026-10-17T04:23:43.289550+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "artificial-analysis-reflection-beam",
+        "evidence_status": "early_signal",
+        "follow_up": "等待官方发布具体功能说明或 Demo 后再评估。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "public_web:sitemap:1ce294fa16e8336624a8",
+        "intelligence_type": "early_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Reflection Beam",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "仅有标题和一句泛泛的官方更新描述，没有产品细节、用户反馈或可验证内容，无法判断价值，接近噪音。",
+        "region": "global",
+        "score": 3.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Artificial Analysis 发布了一个叫 Reflection Beam 的更新，但内容没有展开，看不出解决什么问题，不值得拆解。",
+        "tags": [
+          "AI产品",
+          "信息不足"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "d56cfb3bf521b733151878ad714690f3d6517ee93869105ff75af103732cdaff": {
       "created_at": "2026-08-13T02:47:12.544518+00:00",
       "model": "deepseek-v4-flash",
@@ -82022,6 +82985,44 @@
         "tags": [
           "SDK",
           "Image Model",
+          "Release"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "daf46e4d3ee27450a0a9edf815c294a0ed2da740c79df98a80c4d0fffb8762ea": {
+      "created_at": "2026-10-17T04:23:53.483581+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "vercel-ai-sdk-zai-3.0.33",
+        "evidence_status": "first_party",
+        "follow_up": "无。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "github:release:415343105",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Vercel AI SDK",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "仅依赖版本号升级的 patch release，没有功能或产品信息，属于自动依赖更新噪音。",
+        "region": "global",
+        "score": 3.0,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "Vercel AI SDK 的 Z.ai 适配包发布补丁版本，只是更新依赖，没有新功能。",
+        "tags": [
+          "SDK",
           "Release"
         ],
         "target_user": "",
