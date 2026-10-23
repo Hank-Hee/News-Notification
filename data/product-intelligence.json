@@ -1,7 +1,419 @@
 {
   "version": 1,
-  "updated_at": "2026-10-22T04:42:51.804664+00:00",
+  "updated_at": "2026-10-23T04:48:03.570279+00:00",
   "products": [
+    {
+      "product_id": "product-21043cc7a323288c",
+      "product_name": "Replit Monitoring Agent",
+      "builder_name": "Replit Blog",
+      "first_seen": "2026-10-23",
+      "last_seen": "2026-10-23",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "在 Replit 上发布应用的独立开发者、创业者、小团队",
+      "user_problem": "应用上线后出故障时，没有专门的运维人员，开发者得自己半夜爬起来查日志、找 Bug、修代码、重新发布，一个人干产品+客服+运维的活",
+      "what_it_is": "Replit 平台上的一个 AI Agent（能自主执行任务的智能体），专门在应用上线后自动监控、排查故障、修复代码并重新部署，相当于一个 24 小时待命的虚拟运维工程师。",
+      "ai_role": "全程自主执行：接收告警→分析日志和指标→定位根因→改代码→测试验证→部署→写报告；用户只在关键步骤确认或事后查看",
+      "implementation_idea": "Agent 能'看到'应用的运行状态（日志、指标），也能'动手'改代码和重新发布，本质是把'监控告警→人工排查→修复→部署'这条运维流水线自动化了。它基于 Replit 已有的 App Monitoring 告警能力，把后半段'修和发'也补上了。",
+      "hands_on_exercise": "在 Replit 免费注册账号，用 Agent 功能搭建一个最简单的 Web 应用（如待办列表）并发布；然后故意在代码里写个 Bug（比如把数据库连接写错），观察 Monitoring Agent 是否能检测到异常、尝试修复。整个过程约 45 分钟，重点体验'发布→告警→修复→部署'的闭环。",
+      "limitations_or_uncertainties": "未公开具体支持哪些编程语言/框架；未公开修复失败时的降级策略（比如是否回滚、是否强制人工介入）；未公开定价和免费额度；'3x faster, 10x more cost effective'是 Replit 另一款开发 Agent 的数据，不直接等同于 Monitoring Agent",
+      "region": "global",
+      "score": 8.7,
+      "summary": "Replit 推出 Monitoring Agent，让独立开发者和小团队在应用出故障时由 AI 自动排查、修复并部署，省去自己当运维。",
+      "title": "Replit Monitoring Agent：AI 自动当运维，故障自己修",
+      "url": "https://replit.com/blog/replit-monitoring-agent",
+      "sources": [
+        {
+          "url": "https://replit.com/blog/replit-monitoring-agent",
+          "title": "Replit Monitoring Agent: Your very own software engineering team",
+          "source_type": "rss",
+          "published_at": "2026-10-22T20:24:13+00:00"
+        },
+        {
+          "url": "https://docs.replit.com/features/publishing/monitoring-agent",
+          "title": "Monitoring Agent - Replit",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://replit.com/products/agent",
+          "title": "AI Coding Agent: Build Apps Through Chat | Replit",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "replit-monitoring-agent-launch",
+          "date": "2026-10-23",
+          "title": "Replit Monitoring Agent：AI 自动当运维，故障自己修",
+          "summary": "Replit 推出 Monitoring Agent，让独立开发者和小团队在应用出故障时由 AI 自动排查、修复并部署，省去自己当运维。",
+          "score": 8.7,
+          "url": "https://replit.com/blog/replit-monitoring-agent"
+        }
+      ],
+      "usage_flow": [
+        "在 Replit 发布应用并开启 Monitoring Agent",
+        "应用出故障时，Agent 自动收到告警并开始排查",
+        "Agent 定位原因、修改代码、验证修复、重新部署上线",
+        "Agent 生成报告，告诉你出了什么问题、改了什么"
+      ],
+      "learning_points": [
+        "Agent：不只是聊天回答，而是能自主感知环境、做决定、执行动作的 AI 系统",
+        "RAG（检索增强生成）：Agent 需要查应用日志、历史代码等私有信息才能定位问题，这些不是训练时学过的，得实时检索",
+        "Function Calling（函数调用）：Agent 能调用查日志、改文件、运行测试、触发部署等工具，就像人会用各种软件一样"
+      ],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "DevOps",
+        "AI编程",
+        "产品发布"
+      ]
+    },
+    {
+      "product_id": "product-366a3e3d44d229cd",
+      "product_name": "Claude Duet",
+      "builder_name": "Claire Vo",
+      "first_seen": "2026-10-23",
+      "last_seen": "2026-10-23",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "reported",
+      "target_user": "小企业主和忙碌的专业人士（busy professionals）",
+      "user_problem": "工作事务太多跟踪不过来，需要在多个工具（收件箱、Slack、销售管道等）之间切换，容易遗漏或积压任务。",
+      "what_it_is": "Anthropic 推出的个人 AI 助手，以独立 App 形式运行在手机上，能连接用户的邮箱、Slack、Google Docs 等工具，主动帮用户处理任务并等待确认。",
+      "ai_role": "作为' proactive agent'（主动型代理）——AI 能自主理解哪些事需要用户关注，在后台持续工作，关键决策点停下来要用户点头。Agent 在这里指：不只是你问一句它答一句，而是能自己规划步骤、调用工具、推进任务直到完成。",
+      "implementation_idea": "核心是把大语言模型（LLM）包装成一个能'记住上下文+调用外部工具+异步执行'的持久化助手。它通过插件/连接器读取你的数据，用任务列表把复杂目标拆成可执行的子步骤，再用 channels 把不同项目隔离开，避免对话混乱。Artifacts 则是让 AI 生成结构化内容（文档、表格、代码块）而不是只给文字回复，方便你直接修改复用。",
+      "hands_on_exercise": "打开 Claude 网页版（claude.ai），不用等 Duet。选一个你真实的工作场景（如'整理本周待办邮件'或'写一份产品更新文档'），手动模拟 Duet 的流程：① 用 Claude 的 Projects 功能创建一个专属项目；② 上传相关文件或粘贴上下文；③ 让 Claude 生成一份可编辑的 artifact（文档/表格）；④ 观察'需要等多久才有回复'以及'回复后你是否想回来继续用'。记录：哪些步骤让你想放弃？这就是 Agent 产品要解决的'注意力争夺'问题。",
+      "limitations_or_uncertainties": "Claire Vo 的体验基于早期试用版本，非最终正式发布状态；Duet 目前缺少桌面端 App 和多人协作（multiplayer）功能，这些在官方路线图中的优先级未公开；'proactive'（主动推送）的实际触发机制和技术实现细节未公开；模型延迟的具体数值（秒级）未公开。",
+      "region": "global",
+      "score": 8.5,
+      "summary": "Claire Vo 深度试用 Anthropic 个人 Agent Claude Duet，发现它打磨精致但用户仍想不起来用，拆解了 Agent 产品争夺注意力的真实难点。",
+      "title": "Claude Duet 体验：精致但容易被遗忘的个人 Agent",
+      "url": "https://www.lennysnewsletter.com/p/claude-duet-is-beautiful-i-still",
+      "sources": [
+        {
+          "url": "https://www.lennysnewsletter.com/p/claude-duet-is-beautiful-i-still",
+          "title": "Claude Duet is beautiful. I still forgot to use it",
+          "source_type": "newsletter",
+          "published_at": "2026-10-21T20:25:18+00:00"
+        },
+        {
+          "url": "https://claude.com/resources/articles/claude-duet",
+          "title": "Introducing Claude Duet | Claude by Anthropic",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://claude.com/product/claude-duet",
+          "title": "Claude Duet | Your personal AI assistant",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "claude-duet-review-claire-vo",
+          "date": "2026-10-23",
+          "title": "Claude Duet 体验：精致但容易被遗忘的个人 Agent",
+          "summary": "Claire Vo 深度试用 Anthropic 个人 Agent Claude Duet，发现它打磨精致但用户仍想不起来用，拆解了 Agent 产品争夺注意力的真实难点。",
+          "score": 8.5,
+          "url": "https://www.lennysnewsletter.com/p/claude-duet-is-beautiful-i-still"
+        }
+      ],
+      "usage_flow": [
+        "下载 iOS/Android App 或打开网页版，完成 onboarding 并授权连接邮箱、Slack、Google Docs 等插件",
+        "在频道（channels）中创建任务列表，让 Duet 去处理具体事项（如筛选邮件、整理销售线索、查找票务信息）",
+        "Duet 异步执行任务，生成可编辑的 artifacts（文档/表格/总结），需要确认时会暂停等待用户批准",
+        "用户回到 App 查看结果，继续对话或指派新任务"
+      ],
+      "learning_points": [
+        "Agent（智能体）：不只是聊天的 AI，而是能自己分解任务、调用工具、在多轮交互中推进目标的系统。Claude Duet 是'个人 Agent'，区别于单次问答的 Chatbot。",
+        "Artifacts：AI 生成的可编辑内容块（如文档、表格、代码），用户可以直接修改而不是复制粘贴，是 Agent 产品常用的交互原语。",
+        "异步执行 vs 同步等待：好的 Agent 应该能在后台'离线工作'，但模型响应太慢（latency）会毁掉同步协作的体验——用户没耐心等。"
+      ],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "Claude Duet",
+        "产品体验",
+        "用户反馈"
+      ]
+    },
+    {
+      "product_id": "product-d44cfb018aea125f",
+      "product_name": "1Password",
+      "builder_name": "Lucas Ropek",
+      "first_seen": "2026-10-23",
+      "last_seen": "2026-10-23",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "1Password 推出新功能，让 AI Agent 能替用户登录账户却看不到密码，解决 Agent 自动化操作中的凭证安全问题，值得做 Agent 产品的人关注。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.2,
+      "summary": "1Password 推出新功能，让 AI Agent 能替用户登录账户却看不到密码，解决 Agent 自动化操作中的凭证安全问题，值得做 Agent 产品的人关注。",
+      "title": "1Password launches a way for AI agents to log in on your behalf without seeing your password",
+      "url": "https://techcrunch.com/2026/10/22/1password-launches-a-way-for-ai-agents-to-log-in-on-your-behalf-without-seeing-your-password/",
+      "sources": [
+        {
+          "url": "https://techcrunch.com/2026/10/22/1password-launches-a-way-for-ai-agents-to-log-in-on-your-behalf-without-seeing-your-password/",
+          "title": "1Password launches a way for AI agents to log in on your behalf without seeing your password",
+          "source_type": "rss",
+          "published_at": "2026-10-22T19:07:09+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "1password-agent-login-launch",
+          "date": "2026-10-23",
+          "title": "1Password launches a way for AI agents to log in on your behalf without seeing your password",
+          "summary": "1Password 推出新功能，让 AI Agent 能替用户登录账户却看不到密码，解决 Agent 自动化操作中的凭证安全问题，值得做 Agent 产品的人关注。",
+          "score": 8.2,
+          "url": "https://techcrunch.com/2026/10/22/1password-launches-a-way-for-ai-agents-to-log-in-on-your-behalf-without-seeing-your-password/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "安全",
+        "凭证管理"
+      ]
+    },
+    {
+      "product_id": "product-89ee2f05fe4d1cdd",
+      "product_name": "Canva Craft",
+      "builder_name": "Emma Roth",
+      "first_seen": "2026-10-23",
+      "last_seen": "2026-10-23",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Canva 推出自研图像模型 Craft，先规划设计再生成图片，解决生成结果不精确、不一致的问题，值得看它如何把 AI 嵌入设计工作流。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.0,
+      "summary": "Canva 推出自研图像模型 Craft，先规划设计再生成图片，解决生成结果不精确、不一致的问题，值得看它如何把 AI 嵌入设计工作流。",
+      "title": "Canva’s first AI image model plans designs before generating them",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1017151/canva-craft-in-house-ai-model",
+      "sources": [
+        {
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1017151/canva-craft-in-house-ai-model",
+          "title": "Canva’s first AI image model plans designs before generating them",
+          "source_type": "rss",
+          "published_at": "2026-10-22T21:51:25+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "canva-craft-image-model-launch",
+          "date": "2026-10-23",
+          "title": "Canva’s first AI image model plans designs before generating them",
+          "summary": "Canva 推出自研图像模型 Craft，先规划设计再生成图片，解决生成结果不精确、不一致的问题，值得看它如何把 AI 嵌入设计工作流。",
+          "score": 8.0,
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1017151/canva-craft-in-house-ai-model"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Canva",
+        "图像生成",
+        "设计工具"
+      ]
+    },
+    {
+      "product_id": "product-60d316be7b2b8df1",
+      "product_name": "Moshi",
+      "builder_name": "Latent Space",
+      "first_seen": "2026-10-23",
+      "last_seen": "2026-10-23",
+      "occurrence_count": 1,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Moshi 的 Anekha Sokhal 讲如何把市场数据变成可执行洞察，以及为什么 AI 工具必须贴合交易员的工作流，对做垂直 AI 产品有参考价值。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.6,
+      "summary": "Moshi 的 Anekha Sokhal 讲如何把市场数据变成可执行洞察，以及为什么 AI 工具必须贴合交易员的工作流，对做垂直 AI 产品有参考价值。",
+      "title": "You are the Team  — Anekha Sokhal, Moshi",
+      "url": "https://www.latent.space/p/moshi",
+      "sources": [
+        {
+          "url": "https://www.latent.space/p/moshi",
+          "title": "You are the Team  — Anekha Sokhal, Moshi",
+          "source_type": "rss",
+          "published_at": "2026-10-22T14:03:40+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "latent-space-moshi-anekha-sokhal",
+          "date": "2026-10-23",
+          "title": "You are the Team  — Anekha Sokhal, Moshi",
+          "summary": "Moshi 的 Anekha Sokhal 讲如何把市场数据变成可执行洞察，以及为什么 AI 工具必须贴合交易员的工作流，对做垂直 AI 产品有参考价值。",
+          "score": 7.6,
+          "url": "https://www.latent.space/p/moshi"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Moshi",
+        "金融",
+        "工作流"
+      ]
+    },
+    {
+      "product_id": "product-f23acca6da7cac96",
+      "product_name": "Agent Skills",
+      "builder_name": "Simon Willison",
+      "first_seen": "2026-10-23",
+      "last_seen": "2026-10-23",
+      "occurrence_count": 1,
+      "intelligence_type": "market_signal",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Anthropic 把 Agent Skills 标准捐给 Linux 基金会下的 Agentic AI Foundation，Simon Willison 评论此举让技能标准保持开放和中立，值得关注生态走向。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.2,
+      "summary": "Anthropic 把 Agent Skills 标准捐给 Linux 基金会下的 Agentic AI Foundation，Simon Willison 评论此举让技能标准保持开放和中立，值得关注生态走向。",
+      "title": "Donating Agent Skills to the Agentic AI Foundation",
+      "url": "https://simonwillison.net/2026/Oct/22/donating-agent-skills/",
+      "sources": [
+        {
+          "url": "https://simonwillison.net/2026/Oct/22/donating-agent-skills/",
+          "title": "Donating Agent Skills to the Agentic AI Foundation",
+          "source_type": "rss",
+          "published_at": "2026-10-22T18:09:56+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "anthropic-donates-agent-skills-aaif",
+          "date": "2026-10-23",
+          "title": "Donating Agent Skills to the Agentic AI Foundation",
+          "summary": "Anthropic 把 Agent Skills 标准捐给 Linux 基金会下的 Agentic AI Foundation，Simon Willison 评论此举让技能标准保持开放和中立，值得关注生态走向。",
+          "score": 7.2,
+          "url": "https://simonwillison.net/2026/Oct/22/donating-agent-skills/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Agent Skills",
+        "开放标准",
+        "Anthropic",
+        "AAIF"
+      ]
+    },
+    {
+      "product_id": "product-6b07f1c2139d1ca9",
+      "product_name": "Replit",
+      "builder_name": "Replit Blog",
+      "first_seen": "2026-08-04",
+      "last_seen": "2026-10-23",
+      "occurrence_count": 3,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Replit 官方发文说明如何替用户应对本周影响广泛的安全漏洞，自动打补丁并通知重新发布，展示了 AI 编程平台如何把安全做成产品能力。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.0,
+      "summary": "Replit 官方发文说明如何替用户应对本周影响广泛的安全漏洞，自动打补丁并通知重新发布，展示了 AI 编程平台如何把安全做成产品能力。",
+      "title": "Security vulnerabilities across the internet: How Replit is protecting your business",
+      "url": "https://replit.com/blog/security-vulnerabilities-across-the-internet",
+      "sources": [
+        {
+          "url": "https://replit.com/blog/ai-adoption",
+          "title": "AI adoption starts with truth",
+          "source_type": "rss",
+          "published_at": "2026-08-03T16:15:17+00:00"
+        },
+        {
+          "url": "https://replit.com/blog/black-box-pen-tests",
+          "title": "Black-box pen tests on Replit",
+          "source_type": "rss",
+          "published_at": "2026-08-17T16:52:49+00:00"
+        },
+        {
+          "url": "https://replit.com/blog/security-vulnerabilities-across-the-internet",
+          "title": "Security vulnerabilities across the internet: How Replit is protecting your business",
+          "source_type": "rss",
+          "published_at": "2026-10-23T03:09:09+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "replit-semantic-layer-ai-adoption",
+          "date": "2026-08-04",
+          "title": "AI adoption starts with truth",
+          "summary": "Replit官方博客强调语义层是AI采用的基础，指出AI代理需要可靠的数据真相来源，对AI产品设计有重要参考价值。",
+          "score": 8.0,
+          "url": "https://replit.com/blog/ai-adoption"
+        },
+        {
+          "update_id": "replit-black-box-pen-tests",
+          "date": "2026-08-18",
+          "title": "Black-box pen tests on Replit",
+          "summary": "Replit新增黑盒渗透测试功能，帮助开发者自动检测AI构建应用的安全漏洞。",
+          "score": 8.0,
+          "url": "https://replit.com/blog/black-box-pen-tests"
+        },
+        {
+          "update_id": "replit-security-vulnerability-response",
+          "date": "2026-10-23",
+          "title": "Security vulnerabilities across the internet: How Replit is protecting your business",
+          "summary": "Replit 官方发文说明如何替用户应对本周影响广泛的安全漏洞，自动打补丁并通知重新发布，展示了 AI 编程平台如何把安全做成产品能力。",
+          "score": 7.0,
+          "url": "https://replit.com/blog/security-vulnerabilities-across-the-internet"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Replit",
+        "语义层",
+        "AI采用",
+        "安全",
+        "AI应用",
+        "AI编程"
+      ]
+    },
     {
       "product_id": "product-4fa65bfd2d6aaf81",
       "product_name": "Claude Duet",
@@ -22020,70 +22432,6 @@
         "Agent",
         "GitHub",
         "工作流"
-      ]
-    },
-    {
-      "product_id": "product-6b07f1c2139d1ca9",
-      "product_name": "Replit",
-      "builder_name": "Replit Blog",
-      "first_seen": "2026-08-04",
-      "last_seen": "2026-08-18",
-      "occurrence_count": 2,
-      "intelligence_type": "product_case",
-      "evidence_status": "first_party",
-      "target_user": "未公开",
-      "user_problem": "未公开",
-      "what_it_is": "Replit新增黑盒渗透测试功能，帮助开发者自动检测AI构建应用的安全漏洞。",
-      "ai_role": "未公开",
-      "implementation_idea": "未公开",
-      "hands_on_exercise": "未公开",
-      "limitations_or_uncertainties": "未公开",
-      "region": "global",
-      "score": 8.0,
-      "summary": "Replit新增黑盒渗透测试功能，帮助开发者自动检测AI构建应用的安全漏洞。",
-      "title": "Black-box pen tests on Replit",
-      "url": "https://replit.com/blog/black-box-pen-tests",
-      "sources": [
-        {
-          "url": "https://replit.com/blog/ai-adoption",
-          "title": "AI adoption starts with truth",
-          "source_type": "rss",
-          "published_at": "2026-08-03T16:15:17+00:00"
-        },
-        {
-          "url": "https://replit.com/blog/black-box-pen-tests",
-          "title": "Black-box pen tests on Replit",
-          "source_type": "rss",
-          "published_at": "2026-08-17T16:52:49+00:00"
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "replit-semantic-layer-ai-adoption",
-          "date": "2026-08-04",
-          "title": "AI adoption starts with truth",
-          "summary": "Replit官方博客强调语义层是AI采用的基础，指出AI代理需要可靠的数据真相来源，对AI产品设计有重要参考价值。",
-          "score": 8.0,
-          "url": "https://replit.com/blog/ai-adoption"
-        },
-        {
-          "update_id": "replit-black-box-pen-tests",
-          "date": "2026-08-18",
-          "title": "Black-box pen tests on Replit",
-          "summary": "Replit新增黑盒渗透测试功能，帮助开发者自动检测AI构建应用的安全漏洞。",
-          "score": 8.0,
-          "url": "https://replit.com/blog/black-box-pen-tests"
-        }
-      ],
-      "usage_flow": [],
-      "learning_points": [],
-      "verticals": [],
-      "tags": [
-        "Replit",
-        "语义层",
-        "AI采用",
-        "安全",
-        "AI应用"
       ]
     },
     {
