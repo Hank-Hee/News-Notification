@@ -1,7 +1,542 @@
 {
   "version": 1,
-  "updated_at": "2026-10-23T04:48:03.570279+00:00",
+  "updated_at": "2026-10-24T04:35:13.789811+00:00",
   "products": [
+    {
+      "product_id": "product-53a135a350c4d10a",
+      "product_name": "Kimi K3.1 Pro",
+      "builder_name": "Simon Willison",
+      "first_seen": "2026-10-24",
+      "last_seen": "2026-10-24",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Moonshot 发布 Kimi K3.1 Pro API，性能接近 Claude Opus 5.5 且价格更低，承诺 11 月 4 日开源权重，值得关注其产品化机会。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "china",
+      "score": 8.6,
+      "summary": "Moonshot 发布 Kimi K3.1 Pro API，性能接近 Claude Opus 5.5 且价格更低，承诺 11 月 4 日开源权重，值得关注其产品化机会。",
+      "title": "Introducing Kimi K3.1 Pro",
+      "url": "https://simonwillison.net/2026/Oct/23/kimi-k31-pro/",
+      "sources": [
+        {
+          "url": "https://simonwillison.net/2026/Oct/23/kimi-k31-pro/",
+          "title": "Introducing Kimi K3.1 Pro",
+          "source_type": "rss",
+          "published_at": "2026-10-23T19:40:54+00:00"
+        },
+        {
+          "url": "https://www.kimi.ai/blog/kimi-k3-1-pro",
+          "title": "Kimi K3.1 Pro and K3.1 Pro Highspeed",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "kimi-k3-1-pro-release",
+          "date": "2026-10-24",
+          "title": "Introducing Kimi K3.1 Pro",
+          "summary": "Moonshot 发布 Kimi K3.1 Pro API，性能接近 Claude Opus 5.5 且价格更低，承诺 11 月 4 日开源权重，值得关注其产品化机会。",
+          "score": 8.6,
+          "url": "https://simonwillison.net/2026/Oct/23/kimi-k31-pro/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Kimi",
+        "模型发布",
+        "API",
+        "开源"
+      ]
+    },
+    {
+      "product_id": "product-08b6a687ebba9106",
+      "product_name": "Quick Study",
+      "builder_name": "Simon Willison",
+      "first_seen": "2026-10-24",
+      "last_seen": "2026-10-24",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "想快速把照片变成油画风格的人；想学习用 AI 辅助写代码的初学者",
+      "user_problem": "普通照片想有手绘油画感，但用 Photoshop 或专业软件操作复杂、耗时长",
+      "what_it_is": "一个网页小工具，上传照片后几秒内在画布上用模拟油画笔触重绘出来",
+      "ai_role": "Claude Opus 5.5 High 根据一句提示词生成完整代码，人类只需复制运行",
+      "implementation_idea": "核心就两步：先用 Sobel 算法找出照片里物体轮廓在哪，然后让画笔沿着轮廓和颜色区域一笔一笔画，笔触粗细和方向跟着边缘走，不用任何现成画图库，纯浏览器原生代码搞定",
+      "hands_on_exercise": "打开 Claude 或任意 LLM，输入类似提示词：'写一个网页，上传照片后用 Canvas 把它变成点画风格，用圆点代替笔触'，把生成的 HTML 文件保存到本地双击运行，对比 Quick Study 的效果差异",
+      "limitations_or_uncertainties": "未公开具体运行性能（大图是否卡顿）；未公开是否支持调整笔触大小、油画厚度等参数；Claude Opus 5.5 High 是否为真实版本号存疑（常见版本为 Opus 3、Sonnet 3.5 等）",
+      "region": "global",
+      "score": 8.3,
+      "summary": "Simon Willison 用 Claude 提示词做出 Quick Study 工具，上传照片几秒内用画布模拟油画笔触，展示了 AI 辅助快速构建产品的过程。",
+      "title": "Quick Study：用 Claude 提示词 5 分钟做出照片转油画工具",
+      "url": "https://simonwillison.net/2026/Oct/23/quick-study-painter/",
+      "sources": [
+        {
+          "url": "https://simonwillison.net/2026/Oct/23/quick-study-painter/",
+          "title": "Quick Study",
+          "source_type": "rss",
+          "published_at": "2026-10-23T21:35:13+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "quick-study-painter-tool",
+          "date": "2026-10-24",
+          "title": "Quick Study：用 Claude 提示词 5 分钟做出照片转油画工具",
+          "summary": "Simon Willison 用 Claude 提示词做出 Quick Study 工具，上传照片几秒内用画布模拟油画笔触，展示了 AI 辅助快速构建产品的过程。",
+          "score": 8.3,
+          "url": "https://simonwillison.net/2026/Oct/23/quick-study-painter/"
+        }
+      ],
+      "usage_flow": [
+        "打开网页，上传一张照片",
+        "工具自动分析照片边缘（Sobel 边缘检测）",
+        "几秒内用画布逐笔模拟油画效果",
+        "保存生成的油画图片"
+      ],
+      "learning_points": [
+        "Prompt Engineering（提示词工程）：用一句自然语言让 AI 生成可运行代码，关键是描述清楚输入、输出和限制条件",
+        "Sobel 边缘检测：一种找图片里'哪里是边界'的数学方法，像给照片描边",
+        "Canvas 绘图：浏览器自带的画图板，可以直接用代码控制像素和笔触"
+      ],
+      "verticals": [],
+      "tags": [
+        "AI 工具",
+        "图像生成",
+        "Claude",
+        "Demo"
+      ]
+    },
+    {
+      "product_id": "product-46b29dd63f3993f1",
+      "product_name": "Dify",
+      "builder_name": "laipz8200",
+      "first_seen": "2026-10-24",
+      "last_seen": "2026-10-24",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "产品经理、业务人员、低代码开发者；需要快速搭建 AI 应用但不想写大量代码的团队",
+      "user_problem": "以前 Agent 只能按固定路径执行工作流，遇到不同情况不会自动分叉；迁移应用到新环境时要手动重建知识库、技能等资源，容易遗漏；嵌套工作流出了问题只能看到黑盒结果，没法逐层排查",
+      "what_it_is": "Dify 是一个低代码平台，让不懂编程的人也能搭建 AI Agent（能自主调用工具、完成任务的 AI 助手）和工作流应用，支持自托管或云端部署。",
+      "ai_role": "Agent（AI 代理）根据用户输入和预设条件，实时判断该走哪个工作流分支，并能在执行中调用知识库、工具等能力",
+      "implementation_idea": "核心是给 Agent 加一个「路由决策层」：每个分支配一个选择条件，Agent 输出时同时返回一个只读的 switch 字段，告诉系统选了哪条路。打包迁移则是把应用本体、Agent 配置、技能文件等压缩成 .ifpkg 格式，导入时自动解析并重映射资源引用。嵌套工作流的可见性是把子工作流也当成独立的图来执行，父子之间用统一的暂停/恢复/停止协议协调。",
+      "hands_on_exercise": "30 分钟练习：在 Dify Cloud 或本地部署 1.18.0，创建一个最简单的客服工作流——用户输入问题后，Agent 判断「是否包含订单号」：包含则查询订单状态，不包含则引导用户补充信息。然后导出为 .ifpkg，尝试导入到另一个工作空间验证完整性。",
+      "limitations_or_uncertainties": "Agent Knowledge Base 标注为 Beta 且需单独部署服务和数据库，云端版尚未上线；嵌套工作流的用量统计在暂停/停止后可能不准确；本地 Agent 沙箱现在强制要求非空认证令牌，旧版本快照需自动转换。",
+      "region": "global",
+      "score": 8.2,
+      "summary": "Dify 发布 1.18.0，让 Agent 能根据条件选择工作流分支，并支持应用打包迁移和知识库，方便非开发者搭建 AI 应用。",
+      "title": "Dify 1.18.0 发布：Agent 能自己选工作流分支，应用可打包带走",
+      "url": "https://github.com/langgenius/dify/releases/tag/1.18.0",
+      "sources": [
+        {
+          "url": "https://github.com/langgenius/dify/releases/tag/1.18.0",
+          "title": "langgenius/dify released 1.18.0",
+          "source_type": "github",
+          "published_at": "2026-10-23T06:33:50+00:00"
+        },
+        {
+          "url": "https://dify.ai/",
+          "title": "Dify - The Platform for Production-Ready Agentic Workflows",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "dify-1.18.0",
+          "date": "2026-10-24",
+          "title": "Dify 1.18.0 发布：Agent 能自己选工作流分支，应用可打包带走",
+          "summary": "Dify 发布 1.18.0，让 Agent 能根据条件选择工作流分支，并支持应用打包迁移和知识库，方便非开发者搭建 AI 应用。",
+          "score": 8.2,
+          "url": "https://github.com/langgenius/dify/releases/tag/1.18.0"
+        }
+      ],
+      "usage_flow": [
+        "在可视化画布上拖拽节点，搭建工作流，开启 Agent 的「Output Routes」功能",
+        "为每个分支设置条件（如「用户问题能直接回答」走 A 路，「需要转人工」走 B 路）",
+        "导出应用为 .ifpkg 文件，在新工作空间一键导入，自动重建所有依赖资源",
+        "运行后打开执行历史，逐层展开嵌套工作流，查看每一步的输入输出"
+      ],
+      "learning_points": [
+        "Agent：一种能根据环境反馈自主决定下一步行动的 AI，不只是回答问题，还能调用工具、选择路径",
+        "工作流（Workflow）：把任务拆成多个步骤，按顺序或条件执行的流程图，低代码平台通常用拖拽方式搭建",
+        "RAG（检索增强生成）：让 AI 先查知识库再回答，Agent Knowledge Base 就是给 Agent 配的专属知识库"
+      ],
+      "verticals": [],
+      "tags": [
+        "Dify",
+        "Agent",
+        "低代码",
+        "工作流"
+      ]
+    },
+    {
+      "product_id": "product-e75dc5f14ad7cc43",
+      "product_name": "Dessa",
+      "builder_name": "Jay Peters",
+      "first_seen": "2026-10-24",
+      "last_seen": "2026-10-24",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Jack Dorsey 的 Block 做了个语音模型 Dessa，只用人类对话训练，说话像新朋友有点笨拙，展示了不一样的对话体验。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.8,
+      "summary": "Jack Dorsey 的 Block 做了个语音模型 Dessa，只用人类对话训练，说话像新朋友有点笨拙，展示了不一样的对话体验。",
+      "title": "Jack Dorsey’s Block made an AI model that talks to you like an awkward new friend",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1017906/jack-dorsey-block-dessa-ai-voice-speech",
+      "sources": [
+        {
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1017906/jack-dorsey-block-dessa-ai-voice-speech",
+          "title": "Jack Dorsey’s Block made an AI model that talks to you like an awkward new friend",
+          "source_type": "rss",
+          "published_at": "2026-10-23T19:32:39+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "block-dessa-voice-model",
+          "date": "2026-10-24",
+          "title": "Jack Dorsey’s Block made an AI model that talks to you like an awkward new friend",
+          "summary": "Jack Dorsey 的 Block 做了个语音模型 Dessa，只用人类对话训练，说话像新朋友有点笨拙，展示了不一样的对话体验。",
+          "score": 7.8,
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1017906/jack-dorsey-block-dessa-ai-voice-speech"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "语音模型",
+        "Block",
+        "对话体验"
+      ]
+    },
+    {
+      "product_id": "product-0121b6c42eb3a86f",
+      "product_name": "Vercel Agent",
+      "builder_name": "Tom Dale",
+      "first_seen": "2026-10-24",
+      "last_seen": "2026-10-24",
+      "occurrence_count": 1,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Vercel 介绍其 Agent 如何安全访问生产环境：先只读调查，再提出包含所需权限的计划，用户批准后才执行，避免过度授权。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.6,
+      "summary": "Vercel 介绍其 Agent 如何安全访问生产环境：先只读调查，再提出包含所需权限的计划，用户批准后才执行，避免过度授权。",
+      "title": "How Vercel Agent accesses production safely",
+      "url": "https://vercel.com/blog/how-vercel-agent-accesses-production-safely",
+      "sources": [
+        {
+          "url": "https://vercel.com/blog/how-vercel-agent-accesses-production-safely",
+          "title": "How Vercel Agent accesses production safely",
+          "source_type": "rss",
+          "published_at": "2026-10-23T20:29:00+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "vercel-agent-production-access",
+          "date": "2026-10-24",
+          "title": "How Vercel Agent accesses production safely",
+          "summary": "Vercel 介绍其 Agent 如何安全访问生产环境：先只读调查，再提出包含所需权限的计划，用户批准后才执行，避免过度授权。",
+          "score": 7.6,
+          "url": "https://vercel.com/blog/how-vercel-agent-accesses-production-safely"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Vercel Agent",
+        "权限设计",
+        "Agent 安全"
+      ]
+    },
+    {
+      "product_id": "product-1e9b8bbdeb596e93",
+      "product_name": "OpenAI Codex",
+      "builder_name": "github-actions[bot]",
+      "first_seen": "2026-08-21",
+      "last_seen": "2026-10-24",
+      "occurrence_count": 6,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "需要 AI 辅助编程的开发者，尤其是使用命令行工具或 IDE 插件、关注自动化编码工作流的技术团队",
+      "user_problem": "开发者想让 AI 自动执行代码任务，但担心安全问题（比如 AI 执行高权限命令需要反复确认）、连接外部工具时认证麻烦、以及 AI 生成图像背景无法透明等细节控制不足",
+      "what_it_is": "OpenAI Codex CLI 发布 v0.164.0，新增可复用提示预设、内联模型参数、终端图像预览和企业 MCP 认证等功能。",
+      "ai_role": "理解用户意图后，自动编写/修改代码、调用工具、执行终端命令，并在敏感操作前等待人类确认",
+      "implementation_idea": "Codex 本质上是一个'有手脚的 LLM'——它把大模型的推理能力包装成可执行的动作循环：接收任务→规划步骤→调用工具（读文件、跑命令、连外部服务）→返回结果。这次更新主要加固了安全边界（默认审批、沙箱修复）和扩展了工具连接能力（MCP OAuth、WebSocket 认证）。MCP（Model Context Protocol）是一种让 AI 统一调用外部工具的标准协议，类似'AI 的 USB 接口'。",
+      "hands_on_exercise": "30 分钟体验：在 GitHub Codespaces 或本地安装 Codex CLI（rust-v0.158.0），让它帮你给一个小项目（如 Python 计算器）添加单元测试，故意触发一个需要 sudo 权限的命令（如安装依赖），观察终端审批提示；然后尝试用 'codex mcp add' 连接一个公开的 MCP 服务（如文件系统工具），体验 OAuth 配置流程",
+      "limitations_or_uncertainties": "未公开具体支持的 MCP 服务列表；未公开透明背景图像生成背后的模型版本（DALL-E 3 或 4？）；未公开 WebSocket bearer token 的具体加密方案细节；'多 Agent v2 直接消息'功能标注为可禁用，但未公开其默认行为与稳定性",
+      "region": "global",
+      "score": 7.2,
+      "summary": "OpenAI Codex CLI 发布 v0.164.0，新增可复用提示预设、内联模型参数、终端图像预览和企业 MCP 认证等功能。",
+      "title": "openai/codex released rust-v0.164.0",
+      "url": "https://github.com/openai/codex/releases/tag/rust-v0.164.0",
+      "sources": [
+        {
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.149.0",
+          "title": "openai/codex released rust-v0.149.0",
+          "source_type": "github",
+          "published_at": "2026-08-20T21:04:55+00:00"
+        },
+        {
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.151.0",
+          "title": "openai/codex released rust-v0.151.0",
+          "source_type": "github",
+          "published_at": "2026-08-29T09:55:39+00:00"
+        },
+        {
+          "url": "https://learn.chatgpt.com/docs/plugins?surface=app",
+          "title": "Browse, install, and use plugins on supported ChatGPT and Codex ...",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.153.0",
+          "title": "openai/codex released rust-v0.153.0",
+          "source_type": "github",
+          "published_at": "2026-09-03T01:37:38+00:00"
+        },
+        {
+          "url": "https://openai.com/codex/",
+          "title": "Codex | AI Coding Partner from OpenAI",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.158.0",
+          "title": "openai/codex released rust-v0.158.0",
+          "source_type": "github",
+          "published_at": "2026-09-28T05:07:23+00:00"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/OpenAI_Codex_(AI_agent)",
+          "title": "OpenAI Codex (AI agent) - Wikipedia",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.163.0",
+          "title": "openai/codex released rust-v0.163.0",
+          "source_type": "github",
+          "published_at": "2026-10-15T21:30:38+00:00"
+        },
+        {
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.164.0",
+          "title": "openai/codex released rust-v0.164.0",
+          "source_type": "github",
+          "published_at": "2026-10-23T04:48:10+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "openai-codex-rust-v0.149.0",
+          "date": "2026-08-21",
+          "title": "openai/codex released rust-v0.149.0",
+          "summary": "OpenAI Codex发布rust-v0.149.0，新增agents仪表盘、队列和更多Vim编辑命令。",
+          "score": 7.5,
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.149.0"
+        },
+        {
+          "update_id": "openai-codex-rust-v0.151.0",
+          "date": "2026-08-30",
+          "title": "OpenAI Codex CLI 发布 Rust 版 v0.151.0：强化 MCP 工具发现与插件管理",
+          "summary": "OpenAI Codex 发布 v0.151.0，增强 MCP 工具发现和插件管理。",
+          "score": 8.0,
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.151.0"
+        },
+        {
+          "update_id": "openai-codex-rust-v0.153.0",
+          "date": "2026-09-03",
+          "title": "OpenAI Codex 发布 Rust 版 v0.153.0：Vim 撤销重做、插件市场与上下文管理实验功能",
+          "summary": "OpenAI Codex发布rust-v0.153.0，新增Vim撤销重做、插件市场等多项功能。",
+          "score": 8.0,
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.153.0"
+        },
+        {
+          "update_id": "openai-codex-rust-v0-158-0",
+          "date": "2026-09-28",
+          "title": "OpenAI Codex 发布 Rust 版 v0.158.0：MCP OAuth 密钥、透明背景图像生成、终端审批默认开启",
+          "summary": "OpenAI Codex 发布 rust-v0.158.0，新增 MCP OAuth 客户端密钥、图像透明背景生成、终端审批默认开启等功能，适合关注编码 Agent 工具链的人。",
+          "score": 7.0,
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.158.0"
+        },
+        {
+          "update_id": "openai-codex-rust-v0.163.0",
+          "date": "2026-10-16",
+          "title": "openai/codex released rust-v0.163.0",
+          "summary": "OpenAI Codex 发布 v0.163.0，新增配置搜索、响应中追加指令、并行只读工具等功能，并默认开启 Daybreak。",
+          "score": 7.2,
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.163.0"
+        },
+        {
+          "update_id": "openai-codex-rust-v0-164-0",
+          "date": "2026-10-24",
+          "title": "openai/codex released rust-v0.164.0",
+          "summary": "OpenAI Codex CLI 发布 v0.164.0，新增可复用提示预设、内联模型参数、终端图像预览和企业 MCP 认证等功能。",
+          "score": 7.2,
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.164.0"
+        }
+      ],
+      "usage_flow": [
+        "在终端安装/更新 Codex CLI：`npm install -g @openai/codex` 或从 GitHub Release 获取",
+        "配置 MCP 服务器（如文件系统、数据库等外部工具），设置可选的启动等待时间（grace period）",
+        "在对话中让 Codex 调用工具完成任务，必要时通过插件扩展拦截或修改工具返回结果",
+        "通过插件目录（plugin catalog）按仓库级别管理插件来源，过滤无效市场",
+        "终端运行 codex 启动 TUI（文本交互界面），或用 codex exec 直接执行命令",
+        "在 Vim 模式下用 u 撤销、Ctrl+R 重做，包括粘贴内容和附件都能完整恢复",
+        "用 codex plugin 命令从远程插件市场搜索、安装、卸载插件",
+        "需要时输入 /recap 手动总结，或开启实验性上下文管理让 AI 自动压缩历史记录",
+        "安装 Codex CLI 并配置项目环境",
+        "用自然语言描述需求（如'给这个函数加单元测试'），Codex 自动规划并执行",
+        "高权限命令（如 sudo）默认需要终端审批，确认后 AI 继续运行",
+        "需要时连接外部 MCP 服务（如数据库、API），通过 OAuth 密钥安全认证"
+      ],
+      "learning_points": [
+        "MCP（Model Context Protocol）：一种让 AI 应用统一调用外部工具/数据的标准协议，类似 AI 的'USB 接口'",
+        "Agent 与单次问答的区别：Agent 能自主分解任务、多次调用工具、根据中间结果调整下一步，不只是'问一答一'",
+        "Sandbox（沙盒）：给 AI 执行环境加限制（如不能随意读/写特定路径），防止自动化操作破坏真实系统",
+        "TUI（Text User Interface）：不是网页也不是 GUI，是在终端里用字符画出的交互界面，Vim 就是典型 TUI",
+        "MCP（Model Context Protocol）：一种让 AI 调用外部工具（如读文件、查数据库）的标准接口，Codex 通过它扩展能力",
+        "Token 预算上下文管理：LLM 有输入长度限制，超出后要么遗忘早期内容，要么费用飙升，所以需要智能压缩历史记录",
+        "Agent：不只是聊天，而是能自主规划、执行多步骤任务并调用工具的 AI 系统",
+        "MCP（Model Context Protocol）：让 AI 以统一方式连接外部数据源和工具的开放协议，避免每个工具都要单独适配",
+        "Function Calling：LLM 识别需要调用外部功能时，输出结构化指令（如'运行 git status'）而非纯文本，让 AI 能实际操作软件"
+      ],
+      "verticals": [],
+      "tags": [
+        "Codex",
+        "Agent",
+        "CLI",
+        "开发者工具",
+        "更新",
+        "GitHub Release",
+        "OpenAI",
+        "编程Agent",
+        "Release",
+        "OpenAI Codex"
+      ]
+    },
+    {
+      "product_id": "product-a76096e433f60669",
+      "product_name": "Agent Skills",
+      "builder_name": "Anthropic News",
+      "first_seen": "2026-10-24",
+      "last_seen": "2026-10-24",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Anthropic 把 Agent Skills 捐给 Agentic AI Foundation，想让 Agent 技能有统一标准，值得关注 Agent 生态怎么变。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.2,
+      "summary": "Anthropic 把 Agent Skills 捐给 Agentic AI Foundation，想让 Agent 技能有统一标准，值得关注 Agent 生态怎么变。",
+      "title": "Donating Agent Skills To The Agentic Ai Foundation",
+      "url": "https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation",
+      "sources": [
+        {
+          "url": "https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation",
+          "title": "Donating Agent Skills To The Agentic Ai Foundation",
+          "source_type": "public_web",
+          "published_at": "2026-10-22T17:48:51+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "anthropic-donate-agent-skills-foundation",
+          "date": "2026-10-24",
+          "title": "Donating Agent Skills To The Agentic Ai Foundation",
+          "summary": "Anthropic 把 Agent Skills 捐给 Agentic AI Foundation，想让 Agent 技能有统一标准，值得关注 Agent 生态怎么变。",
+          "score": 7.2,
+          "url": "https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "Anthropic",
+        "开源生态"
+      ]
+    },
+    {
+      "product_id": "product-0a02265c8e38301e",
+      "product_name": "Instant Search",
+      "builder_name": "Dmitry Dolgopolov",
+      "first_seen": "2026-10-24",
+      "last_seen": "2026-10-24",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "有人做了个本地 AI 搜索工具 Instant Search，帮你在自己电脑文件里快速精确查找，适合看小产品怎么切场景。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.0,
+      "summary": "有人做了个本地 AI 搜索工具 Instant Search，帮你在自己电脑文件里快速精确查找，适合看小产品怎么切场景。",
+      "title": "Instant Search",
+      "url": "https://www.producthunt.com/products/instant-search-2",
+      "sources": [
+        {
+          "url": "https://www.producthunt.com/products/instant-search-2",
+          "title": "Instant Search",
+          "source_type": "rss",
+          "published_at": "2026-10-23T05:36:03+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "instant-search-launch",
+          "date": "2026-10-24",
+          "title": "Instant Search",
+          "summary": "有人做了个本地 AI 搜索工具 Instant Search，帮你在自己电脑文件里快速精确查找，适合看小产品怎么切场景。",
+          "score": 7.0,
+          "url": "https://www.producthunt.com/products/instant-search-2"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "本地搜索",
+        "AI工具",
+        "ProductHunt"
+      ]
+    },
     {
       "product_id": "product-21043cc7a323288c",
       "product_name": "Replit Monitoring Agent",
@@ -3975,157 +4510,6 @@
         "模型选型",
         "行业数据",
         "开源模型"
-      ]
-    },
-    {
-      "product_id": "product-1e9b8bbdeb596e93",
-      "product_name": "OpenAI Codex",
-      "builder_name": "github-actions[bot]",
-      "first_seen": "2026-08-21",
-      "last_seen": "2026-10-16",
-      "occurrence_count": 5,
-      "intelligence_type": "model_capability",
-      "evidence_status": "first_party",
-      "target_user": "需要 AI 辅助编程的开发者，尤其是使用命令行工具或 IDE 插件、关注自动化编码工作流的技术团队",
-      "user_problem": "开发者想让 AI 自动执行代码任务，但担心安全问题（比如 AI 执行高权限命令需要反复确认）、连接外部工具时认证麻烦、以及 AI 生成图像背景无法透明等细节控制不足",
-      "what_it_is": "OpenAI Codex 发布 v0.163.0，新增配置搜索、响应中追加指令、并行只读工具等功能，并默认开启 Daybreak。",
-      "ai_role": "理解用户意图后，自动编写/修改代码、调用工具、执行终端命令，并在敏感操作前等待人类确认",
-      "implementation_idea": "Codex 本质上是一个'有手脚的 LLM'——它把大模型的推理能力包装成可执行的动作循环：接收任务→规划步骤→调用工具（读文件、跑命令、连外部服务）→返回结果。这次更新主要加固了安全边界（默认审批、沙箱修复）和扩展了工具连接能力（MCP OAuth、WebSocket 认证）。MCP（Model Context Protocol）是一种让 AI 统一调用外部工具的标准协议，类似'AI 的 USB 接口'。",
-      "hands_on_exercise": "30 分钟体验：在 GitHub Codespaces 或本地安装 Codex CLI（rust-v0.158.0），让它帮你给一个小项目（如 Python 计算器）添加单元测试，故意触发一个需要 sudo 权限的命令（如安装依赖），观察终端审批提示；然后尝试用 'codex mcp add' 连接一个公开的 MCP 服务（如文件系统工具），体验 OAuth 配置流程",
-      "limitations_or_uncertainties": "未公开具体支持的 MCP 服务列表；未公开透明背景图像生成背后的模型版本（DALL-E 3 或 4？）；未公开 WebSocket bearer token 的具体加密方案细节；'多 Agent v2 直接消息'功能标注为可禁用，但未公开其默认行为与稳定性",
-      "region": "global",
-      "score": 7.2,
-      "summary": "OpenAI Codex 发布 v0.163.0，新增配置搜索、响应中追加指令、并行只读工具等功能，并默认开启 Daybreak。",
-      "title": "openai/codex released rust-v0.163.0",
-      "url": "https://github.com/openai/codex/releases/tag/rust-v0.163.0",
-      "sources": [
-        {
-          "url": "https://github.com/openai/codex/releases/tag/rust-v0.149.0",
-          "title": "openai/codex released rust-v0.149.0",
-          "source_type": "github",
-          "published_at": "2026-08-20T21:04:55+00:00"
-        },
-        {
-          "url": "https://github.com/openai/codex/releases/tag/rust-v0.151.0",
-          "title": "openai/codex released rust-v0.151.0",
-          "source_type": "github",
-          "published_at": "2026-08-29T09:55:39+00:00"
-        },
-        {
-          "url": "https://learn.chatgpt.com/docs/plugins?surface=app",
-          "title": "Browse, install, and use plugins on supported ChatGPT and Codex ...",
-          "source_type": "supplemental",
-          "published_at": ""
-        },
-        {
-          "url": "https://github.com/openai/codex/releases/tag/rust-v0.153.0",
-          "title": "openai/codex released rust-v0.153.0",
-          "source_type": "github",
-          "published_at": "2026-09-03T01:37:38+00:00"
-        },
-        {
-          "url": "https://openai.com/codex/",
-          "title": "Codex | AI Coding Partner from OpenAI",
-          "source_type": "supplemental",
-          "published_at": ""
-        },
-        {
-          "url": "https://github.com/openai/codex/releases/tag/rust-v0.158.0",
-          "title": "openai/codex released rust-v0.158.0",
-          "source_type": "github",
-          "published_at": "2026-09-28T05:07:23+00:00"
-        },
-        {
-          "url": "https://en.wikipedia.org/wiki/OpenAI_Codex_(AI_agent)",
-          "title": "OpenAI Codex (AI agent) - Wikipedia",
-          "source_type": "supplemental",
-          "published_at": ""
-        },
-        {
-          "url": "https://github.com/openai/codex/releases/tag/rust-v0.163.0",
-          "title": "openai/codex released rust-v0.163.0",
-          "source_type": "github",
-          "published_at": "2026-10-15T21:30:38+00:00"
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "openai-codex-rust-v0.149.0",
-          "date": "2026-08-21",
-          "title": "openai/codex released rust-v0.149.0",
-          "summary": "OpenAI Codex发布rust-v0.149.0，新增agents仪表盘、队列和更多Vim编辑命令。",
-          "score": 7.5,
-          "url": "https://github.com/openai/codex/releases/tag/rust-v0.149.0"
-        },
-        {
-          "update_id": "openai-codex-rust-v0.151.0",
-          "date": "2026-08-30",
-          "title": "OpenAI Codex CLI 发布 Rust 版 v0.151.0：强化 MCP 工具发现与插件管理",
-          "summary": "OpenAI Codex 发布 v0.151.0，增强 MCP 工具发现和插件管理。",
-          "score": 8.0,
-          "url": "https://github.com/openai/codex/releases/tag/rust-v0.151.0"
-        },
-        {
-          "update_id": "openai-codex-rust-v0.153.0",
-          "date": "2026-09-03",
-          "title": "OpenAI Codex 发布 Rust 版 v0.153.0：Vim 撤销重做、插件市场与上下文管理实验功能",
-          "summary": "OpenAI Codex发布rust-v0.153.0，新增Vim撤销重做、插件市场等多项功能。",
-          "score": 8.0,
-          "url": "https://github.com/openai/codex/releases/tag/rust-v0.153.0"
-        },
-        {
-          "update_id": "openai-codex-rust-v0-158-0",
-          "date": "2026-09-28",
-          "title": "OpenAI Codex 发布 Rust 版 v0.158.0：MCP OAuth 密钥、透明背景图像生成、终端审批默认开启",
-          "summary": "OpenAI Codex 发布 rust-v0.158.0，新增 MCP OAuth 客户端密钥、图像透明背景生成、终端审批默认开启等功能，适合关注编码 Agent 工具链的人。",
-          "score": 7.0,
-          "url": "https://github.com/openai/codex/releases/tag/rust-v0.158.0"
-        },
-        {
-          "update_id": "openai-codex-rust-v0.163.0",
-          "date": "2026-10-16",
-          "title": "openai/codex released rust-v0.163.0",
-          "summary": "OpenAI Codex 发布 v0.163.0，新增配置搜索、响应中追加指令、并行只读工具等功能，并默认开启 Daybreak。",
-          "score": 7.2,
-          "url": "https://github.com/openai/codex/releases/tag/rust-v0.163.0"
-        }
-      ],
-      "usage_flow": [
-        "在终端安装/更新 Codex CLI：`npm install -g @openai/codex` 或从 GitHub Release 获取",
-        "配置 MCP 服务器（如文件系统、数据库等外部工具），设置可选的启动等待时间（grace period）",
-        "在对话中让 Codex 调用工具完成任务，必要时通过插件扩展拦截或修改工具返回结果",
-        "通过插件目录（plugin catalog）按仓库级别管理插件来源，过滤无效市场",
-        "终端运行 codex 启动 TUI（文本交互界面），或用 codex exec 直接执行命令",
-        "在 Vim 模式下用 u 撤销、Ctrl+R 重做，包括粘贴内容和附件都能完整恢复",
-        "用 codex plugin 命令从远程插件市场搜索、安装、卸载插件",
-        "需要时输入 /recap 手动总结，或开启实验性上下文管理让 AI 自动压缩历史记录",
-        "安装 Codex CLI 并配置项目环境",
-        "用自然语言描述需求（如'给这个函数加单元测试'），Codex 自动规划并执行",
-        "高权限命令（如 sudo）默认需要终端审批，确认后 AI 继续运行",
-        "需要时连接外部 MCP 服务（如数据库、API），通过 OAuth 密钥安全认证"
-      ],
-      "learning_points": [
-        "MCP（Model Context Protocol）：一种让 AI 应用统一调用外部工具/数据的标准协议，类似 AI 的'USB 接口'",
-        "Agent 与单次问答的区别：Agent 能自主分解任务、多次调用工具、根据中间结果调整下一步，不只是'问一答一'",
-        "Sandbox（沙盒）：给 AI 执行环境加限制（如不能随意读/写特定路径），防止自动化操作破坏真实系统",
-        "TUI（Text User Interface）：不是网页也不是 GUI，是在终端里用字符画出的交互界面，Vim 就是典型 TUI",
-        "MCP（Model Context Protocol）：一种让 AI 调用外部工具（如读文件、查数据库）的标准接口，Codex 通过它扩展能力",
-        "Token 预算上下文管理：LLM 有输入长度限制，超出后要么遗忘早期内容，要么费用飙升，所以需要智能压缩历史记录",
-        "Agent：不只是聊天，而是能自主规划、执行多步骤任务并调用工具的 AI 系统",
-        "MCP（Model Context Protocol）：让 AI 以统一方式连接外部数据源和工具的开放协议，避免每个工具都要单独适配",
-        "Function Calling：LLM 识别需要调用外部功能时，输出结构化指令（如'运行 git status'）而非纯文本，让 AI 能实际操作软件"
-      ],
-      "verticals": [],
-      "tags": [
-        "Codex",
-        "Agent",
-        "CLI",
-        "开发者工具",
-        "更新",
-        "GitHub Release",
-        "OpenAI",
-        "编程Agent",
-        "Release"
       ]
     },
     {
