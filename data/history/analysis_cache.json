@@ -1380,6 +1380,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "04bd4765a663d0c836c4ace0c652d969eb32a6aaa5aa73555c26369da85a1558": {
+      "created_at": "2026-10-25T04:38:58.558088+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "kimi-3-1-pro-open-weights-release",
+        "evidence_status": "reported",
+        "follow_up": "关注 Kimi 3.1 Pro 的实际基准表现和开发者采用情况。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:www.latent.space_feed:a3c9d59a888e90f8",
+        "intelligence_type": "model_capability",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Kimi 3.1 Pro",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Latent Space 报道 Kimi 3.1 Pro 开放权重发布，称开源与闭源差距缩小到约一个月，并推出高速 API，属于新模型能力动态，可能解锁新产品体验，但来源为 Newsletter 转述、含调侃语气，给 7.5 分。",
+        "region": "china",
+        "score": 7.5,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "Latent Space 报道 Kimi 3.1 Pro 发布开放权重模型并推出 2-3 倍速高速 API，称开源与闭源 AI 差距缩小到约一个月，值得关注新模型能力。",
+        "tags": [
+          "Kimi",
+          "开放权重",
+          "模型能力"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "04cd4354672947f5174b869966e09572602bfaf492afc0da37284864f5841f94": {
       "created_at": "2026-08-07T03:15:20.883312+00:00",
       "model": "deepseek-v4-flash",
@@ -8553,6 +8592,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "15ea6b7f8c194b16b8029a541964534a569fa777d8a9ca16a643acc484f62c75": {
+      "created_at": "2026-10-25T04:39:17.016513+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "missileer-watch-eam",
+        "evidence_status": "reported",
+        "follow_up": "无。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:50224422",
+        "intelligence_type": "product_case",
+        "is_first_party": false,
+        "is_new_event": false,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "missileer.watch",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "网站监听美国核力量紧急行动信息，属于小众兴趣项目，与 AI 产品经理学习 LLM 和构建产品无关，且评论区指出内容疑似 AI 生成。",
+        "region": "global",
+        "score": 4.0,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "一个网站实时监听并转录美国核力量紧急行动广播，但内容疑似 AI 生成，与 AI 产品构建无关。",
+        "tags": [
+          "radio",
+          "AI_generated"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "1600c4a095f0a699b21a925eb4ba84cddee30ef57edfbce2f64e5620aba480f7": {
       "created_at": "2026-08-25T01:52:33.712595+00:00",
       "model": "deepseek-v4-flash",
@@ -11250,6 +11327,40 @@
       },
       "stage": "candidate_analysis"
     },
+    "1c5d002019ba243a1e2f351072aa62fb3272f8782582d4374af8ccbdce31006e": {
+      "created_at": "2026-10-25T04:39:31.138172+00:00",
+      "model": "kimi-k2.6",
+      "prompt_version": "deep-v3-beginner",
+      "result": {
+        "ai_role": "DeepSeek 大模型作为「大脑」理解任务、决策调用哪个插件，并生成最终回复",
+        "evidence_status": "reported",
+        "hands_on_exercise": "30 分钟：访问 DeepSeek Harness 官网，按文档安装桌面版；尝试运行一个内置示例（如「搜索网页并总结」），观察模型何时触发搜索插件、如何把搜索结果融入最终回答",
+        "implementation_idea": "把每个功能（搜索、计算器、文件读取等）都做成独立插件，Harness 作为总调度器，根据用户输入让模型判断该激活哪些插件、按什么顺序执行，再把结果传回模型继续下一步",
+        "learning_points": [
+          "Agent：让 AI 不仅能聊天，还能自主决定「用什么工具、分几步完成」的系统",
+          "Function Calling（工具调用）：模型识别用户意图后，输出结构化指令去调用外部 API 或插件，而非直接生成答案",
+          "插件化架构：把复杂系统拆成可插拔的小模块，方便复用和扩展"
+        ],
+        "limitations_or_uncertainties": "「V4 全系列模型上线」这一说法在提供的原始链接和搜索结果中均未找到官方直接确认，仅见于财联社新闻标题；Harness 与 V4 模型的具体兼容细节、预览版功能边界未公开",
+        "product_name": "DeepSeek Harness",
+        "sources": [
+          "https://news.google.com/rss/articles/CBMiSEFVX3lxTE4wd0JWNXNkT3NmUy1UV09ldm1iSXY3dTllQ1o1ZFg5MFZPS1BRY3RCTUJLc05UYWJTb1R6VHhoT0NXM3hJQU5xLQ?oc=5",
+          "https://www.deepseek.com/en/harness/",
+          "https://github.com/deepseek-ai/deepseek-harness"
+        ],
+        "target_users": "AI 应用开发者、需要编排多模型/多工具流程的技术团队",
+        "title_zh": "DeepSeek Harness 开发者预览版开放测试",
+        "usage_flow": [
+          "安装 Harness 桌面端或从代码启动 Web 界面",
+          "按需选择/开发插件（如搜索、代码执行、数据库连接等）",
+          "用 Harness 编排插件与 DeepSeek 模型的交互流程",
+          "运行并调试 Agent 任务，观察多步骤执行结果"
+        ],
+        "user_problem": "开发者想快速搭建能调用多种工具、多步骤协作的 AI 应用时，常要自己写大量胶水代码，重复造轮子",
+        "what_it_is": "DeepSeek 官方推出的开源 AI Agent 编排框架，用「插件化」思路让开发者像搭积木一样组合模型能力"
+      },
+      "stage": "deep_analysis"
+    },
     "1c5d9c37eb003d40e217b17d77b03224572be06c45eec0ea0d1eba61df1d941f": {
       "created_at": "2026-10-21T04:44:19.635116+00:00",
       "model": "deepseek-flash",
@@ -12166,6 +12277,44 @@
         "tags": [
           "Codex",
           "release"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "1e8b68185a0329e3132f42d531abc7848a6d0a243fc2102fcd630e33192452b3": {
+      "created_at": "2026-10-25T04:39:17.016751+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "deepseek-harness-black-whale",
+        "evidence_status": "reported",
+        "follow_up": "获取原文确认 Harness 具体指什么及是否有产品发布。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "google_news:article:d1990f20073c390a",
+        "intelligence_type": "model_capability",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "DeepSeek",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "36Kr 文章讨论 DeepSeek 的 Harness 为何是黑色鲸鱼，标题模糊，内容未知，可能涉及模型能力或产品思路，但缺乏一手证据和具体细节，暂评 6 分。",
+        "region": "china",
+        "score": 6.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "36Kr 发文讨论 DeepSeek 的 Harness 为何被称为黑色鲸鱼，可能涉及模型能力或产品思路，但标题模糊且无具体细节。",
+        "tags": [
+          "DeepSeek",
+          "model_capability"
         ],
         "target_user": "",
         "verticals": []
@@ -21649,6 +21798,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "38353409e47276830158aa80588d762d420dbfd71f72766ab1bed0166c9b610f": {
+      "created_at": "2026-10-25T04:39:17.016688+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "tcl-android-tv-root",
+        "evidence_status": "first_party",
+        "follow_up": "无。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:50220042",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "mali-pagecache-root",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Show HN 项目利用 CVE 漏洞获取 TCL Android TV 的 root 权限，属于硬件破解，与 AI 产品经理兴趣无关。",
+        "region": "global",
+        "score": 4.5,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "开发者利用 CVE-2022-22706 漏洞实现 TCL Android TV 的自主 root，让用户获得设备控制权，但技术栈与 AI 产品无关。",
+        "tags": [
+          "security",
+          "Android_TV"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "383a7c1061e5b1df29ed830bdc02dc5246544b67dbb2c76ba3a3bcc2851391d3": {
       "created_at": "2026-09-05T04:26:54.391085+00:00",
       "model": "deepseek-v4-flash",
@@ -22679,6 +22866,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "3b12d9125d92432a5afe294c409eb970bfc5973c4f566a454292c1954dd60bac": {
+      "created_at": "2026-10-25T04:39:00.760666+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "ai-graveyard-running-list",
+        "evidence_status": "reported",
+        "follow_up": "可关注清单中是否有项目后续披露具体失败原因或复盘，但当前条目本身无需追踪。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:6e6e3bbcc8a0441d",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": false,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "TechCrunch 的 AI 失败项目汇总清单，属于泛行业回顾，没有新发布、可验证 Demo 或构建过程细节；对初学者理解产品失败原因有间接参考，但缺乏一手证据和可迁移增量，按规则低于 7 分不收录。",
+        "region": "global",
+        "score": 5.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "TechCrunch 汇总了 Apple Siri AI 延期、OpenAI 超级应用发布混乱等失败或未达预期的 AI 项目，帮助读者了解行业常见失败模式，但内容为媒体回顾而非一手构建案例。",
+        "tags": [
+          "AI产品",
+          "失败案例",
+          "行业观察"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "3b1f082e8e75f4e7ff66f7bff3848fafc1c2187eff558e0330b44871dd2ceb03": {
       "created_at": "2026-10-20T04:48:15.567903+00:00",
       "model": "deepseek-flash",
@@ -23537,6 +23763,44 @@
         "tags": [
           "历史",
           "Windows"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "3cbf322cb5b98dd6a3a1ec9716bdb248844e13389adbdc90b342930eb1486d71": {
+      "created_at": "2026-10-25T04:38:58.558113+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "vercel-ai-7-0-153-patch",
+        "evidence_status": "first_party",
+        "follow_up": "关注该修复对使用 OpenAI/Azure Responses 模型的开发者影响。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "github:release:422892282",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Vercel AI SDK",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Vercel AI SDK 的补丁版本，修复非流式 Responses API 结构化输出问题，属于底层开发工具维护，对 AI 产品经理的直接价值低，低于 7 分。",
+        "region": "global",
+        "score": 5.5,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "Vercel AI SDK 发布 7.0.153 补丁，修复非流式 Responses API 在多条助手消息含 JSON 时结构化输出失败的问题。",
+        "tags": [
+          "AI SDK",
+          "开发工具"
         ],
         "target_user": "",
         "verticals": []
@@ -41545,6 +41809,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "683ee31b993405d5d567c3dfd349d03a9bfac52c6fb3780c04d4ea4e04561be7": {
+      "created_at": "2026-10-25T04:38:58.557997+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "lenny-community-wisdom-2026-10-24",
+        "evidence_status": "reported",
+        "follow_up": "关注其中 MCP server 构建资源是否被整理成可操作教程。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "newsletter:feed:7f08b3ee43a0859e2c66",
+        "intelligence_type": "builder_insight",
+        "is_first_party": false,
+        "is_new_event": false,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Lenny Newsletter 的社区问答合集，包含 MCP server 构建资源等对初学者有参考价值的内容，但属于聚合讨论、无一手产品案例或可验证构建过程，信息密度低，按规则低于 7 分。",
+        "region": "global",
+        "score": 6.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Lenny Newsletter 汇总社区讨论，涵盖低薪谈判、设计师参与产品决策和 MCP server 构建资源，对初学者了解产品实践有零散参考价值。",
+        "tags": [
+          "MCP",
+          "产品实践",
+          "社区讨论"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "686fb821df4dbb6ed26385c22901c856b2f51c05f452b473e27ae90355a03fbe": {
       "created_at": "2026-09-19T04:36:45.343221+00:00",
       "model": "deepseek-flash",
@@ -43805,6 +44108,44 @@
           "Claude Duet",
           "产品体验",
           "用户反馈"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "6edb4d26fd3f02a23db730dc51a338169c1623c23bac9953d2836fcf894b7330": {
+      "created_at": "2026-10-25T04:39:17.016421+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "ai-creative-jobs-decline",
+        "evidence_status": "reported",
+        "follow_up": "关注后续是否有具体 AI 工具替代创意岗位的案例研究。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:50226419",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": false,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "行业观察文章讨论 AI 对创意岗位的影响，属于泛行业评论，无产品、代码或构建过程，对产品经理的直接可迁移增量低。",
+        "region": "global",
+        "score": 6.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Apricitas 分析美国媒体、影视和艺术行业流失 20 万岗位与 AI 的关系，讨论技术对创意工作的冲击，但缺乏产品实践证据。",
+        "tags": [
+          "market_signal",
+          "creative_industry"
         ],
         "target_user": "",
         "verticals": []
@@ -49987,6 +50328,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "7e13b48066a41a8c776bc0ddd50e9a8c6f0d203b6f16bee884fc5be056626082": {
+      "created_at": "2026-10-25T04:39:17.016719+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "agentsh-multiagent-harness",
+        "evidence_status": "first_party",
+        "follow_up": "观察 GitHub 星标、issue 和实际使用案例。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:50223759",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Agentsh",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "微软开源的 Agentsh 多智能体框架，有 GitHub 仓库和 Demo，属于 AI 产品构建工具，但 HN 互动极少（5 分），缺乏用户反馈验证，价值待观察。",
+        "region": "global",
+        "score": 6.5,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "微软开源 Agentsh 去中心化多智能体编排框架，演示 1024 个智能体协作，解决大规模智能体协调问题，但社区反馈尚少。",
+        "tags": [
+          "Agent",
+          "multiagent",
+          "Microsoft"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "7e1eb119d12ce6ca8427a5e1e07fa0e9232c291e77ad52df4282de36c4ef57e6": {
       "created_at": "2026-09-06T04:37:27.095778+00:00",
       "model": "deepseek-v4-flash",
@@ -51940,6 +52320,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "83016421c485c20691d3322fad060a9c1436258f3ae4003e1b42375c211f1ef8": {
+      "created_at": "2026-10-25T04:39:05.367502+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "techcrunch-ai-agents-text-messages-roundup",
+        "evidence_status": "reported",
+        "follow_up": "可留意清单中是否有产品后续发布一手案例或用户反馈，但本文本身不值得追踪。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:b0367e9f3d6d961e",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": false,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "TechCrunch 的清单式汇总，列举了可嵌入短信的 AI Agent，但无一手产品发布、无用户反馈、无构建过程细节，属于泛行业观察而非可拆解的一手案例；对初学者理解具体产品如何运作帮助有限，低于收录阈值。",
+        "region": "global",
+        "score": 5.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "TechCrunch 记者 Lauren Forristal 整理了一份能在短信里使用的 AI Agent 清单，覆盖通用助手、家庭、旅行和工作场景，但只是汇总介绍，没有产品实测或构建细节，参考价值有限。",
+        "tags": [
+          "AI Agent",
+          "短信助手",
+          "产品汇总"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "83143756c8d6f595d06bff74a5bf5855b380d91c576c21ac1518cb45cdd37227": {
       "created_at": "2026-09-03T04:23:03.975727+00:00",
       "model": "kimi-k2.6",
@@ -53797,6 +54216,44 @@
         "tags": [
           "开发者工具",
           "无关"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "87e0cefe6677e1be7fd04246a1ebe9dc2b9e1fc7396922c51164123c90540303": {
+      "created_at": "2026-10-25T04:39:17.016255+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "danluu-ambitious-software",
+        "evidence_status": "reported",
+        "follow_up": "关注评论区提到的 lowpolyearth、blockviz 等项目的后续迭代和用户反馈。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:50225695",
+        "intelligence_type": "builder_insight",
+        "is_first_party": false,
+        "is_new_event": false,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Dan Luu 的评论文章，讨论软件野心，评论区有构建者分享用新模型做一个月项目的实践（成功/失败案例），但整体是观点讨论而非一手产品案例，对 AI 产品经理的迁移价值有限。",
+        "region": "global",
+        "score": 6.5,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "Dan Luu 发文呼吁软件构建应更有野心，评论区有开发者分享用新模型挑战一个月项目的成败经验，值得看的是这些实践反馈。",
+        "tags": [
+          "builder_insight",
+          "AI_coding"
         ],
         "target_user": "",
         "verticals": []
@@ -57277,6 +57734,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "8e99a5c3292a9b5029904311af9a1e56f5f73915ca9ddcf801b535f3f61da033": {
+      "created_at": "2026-10-25T04:39:19.759619+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "deepseek_outage_2025",
+        "evidence_status": "reported",
+        "follow_up": "观察官方是否发布故障复盘与稳定性改进措施。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "google_news:article:b9d8950eee3746f2",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "DeepSeek",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "服务中断与补偿属于运营事件，对产品构建者有一定稳定性参考，但无产品思路或新能力，低于 7 分。",
+        "region": "china",
+        "score": 5.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "DeepSeek服务中断近5小时后恢复并补偿用户，年内故障超十次，提醒做AI产品要重视服务稳定性。",
+        "tags": [
+          "DeepSeek",
+          "服务稳定性"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "8e9bc8d80ce76a51633cb985b9535cd14141eedf55fbe70e6ef985851be78e2b": {
       "created_at": "2026-08-28T11:23:03.952165+00:00",
       "model": "deepseek-v4-flash",
@@ -57426,6 +57921,45 @@
           "模型观察",
           "AI写作",
           "行业媒体"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "8f1f6d7019bf88e077ea9f74300faf5dfe7afade78014e42286b5c81e224830b": {
+      "created_at": "2026-10-25T04:38:58.558152+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "qwen3-8-27b-gvs5h-harness",
+        "evidence_status": "reported",
+        "follow_up": "关注 GVS5H Harness 的复现结果和实际耗时成本。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:50228167",
+        "intelligence_type": "model_capability",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Qwen3.8-27B",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Hacker News 讨论五个 Qwen3.8-27B 模型通过 GVS5H Harness 匹配 Fable 5，涉及开源模型本地部署和成本优势，有 GitHub 项目可验证，但来源为匿名社区、评论指出耗时 10 倍，给 7 分。",
+        "region": "global",
+        "score": 7.0,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "Hacker News 讨论用 GVS5H Harness 让五个 Qwen3.8-27B 模型达到 Fable 5 水平，本地运行成本低但耗时约 10 倍，值得关注开源模型组合方案。",
+        "tags": [
+          "Qwen",
+          "开源模型",
+          "本地部署"
         ],
         "target_user": "",
         "verticals": []
@@ -59125,6 +59659,40 @@
       },
       "stage": "candidate_analysis"
     },
+    "926734175ef5ba7411e14dc29b6d9ebd522efdbb5b23c4bb44e667d0cbc9ac0b": {
+      "created_at": "2026-10-25T04:39:41.644674+00:00",
+      "model": "kimi-k2.6",
+      "prompt_version": "deep-v3-beginner",
+      "result": {
+        "ai_role": "作为底层引擎，根据用户输入生成代码、分析文档、执行多步骤任务（Agentic 工作流）",
+        "evidence_status": "reported",
+        "hands_on_exercise": "访问 kimi.ai，用自然语言描述一个简单需求（如'写一个 Python 爬虫抓取新闻标题'），分别对比默认模式和 /model 切换到 K3.1 Pro 后的回答质量与速度差异；如有 API 权限，用 curl 调用 kimi-k3.1-pro-highspeed 测试响应时间",
+        "implementation_idea": "用大量数据训练出一个超大规模 Transformer 模型，然后把训练好的参数文件公开，任何人都能下载运行；同时官方提供云端加速版本，通过优化推理引擎让响应快 2-3 倍",
+        "learning_points": [
+          "开放权重（Open Weights）：把训练好的模型参数公开，你可以下载到本地运行，但通常不公开训练数据和代码",
+          "API 端点（API Endpoint）：一个网络地址，你的程序把问题发过去，服务器上的模型算完再把答案发回来",
+          "Agentic 工作流：让 AI 不只是回答一次，而是能自主分解任务、调用工具、多轮执行完成复杂目标"
+        ],
+        "limitations_or_uncertainties": "完整权重文件尚未实际发布（承诺 11 月 4 日开放）；'差距缩小到 1 个月'是 Newsletter 作者观点，非独立基准测试验证；'Fable-5.1-Class'为调侃式类比，无官方定义；高速 API 的具体优化技术未公开",
+        "product_name": "Kimi 3.1 Pro",
+        "sources": [
+          "https://latent.space/p/ainews-kimi-31/",
+          "https://www.kimi.ai/",
+          "https://habr.com/ru/news/1098732/"
+        ],
+        "target_users": "开发者、需要自建模型或调用 API 的企业用户、AI 研究者",
+        "title_zh": "Kimi 3.1 Pro 开放权重与高速 API 发布",
+        "usage_flow": [
+          "在 Kimi.ai 网页端或 Kimi Work/Kimi Code 中选择 kimi-k3.1-pro 模型",
+          "如需更快响应，切换至 kimi-k3.1-pro-highspeed API 端点",
+          "开发者通过 API 将模型接入自己的应用或 Agent 工作流",
+          "计划 11 月 4 日下载完整权重，本地部署或微调"
+        ],
+        "user_problem": "闭源模型（如 GPT-4、Claude）性能好但无法本地部署或二次开发；开源模型通常落后闭源半年以上，且推理速度慢",
+        "what_it_is": "Moonshot 发布的开源大模型（1040 亿参数、2.8 万亿 token 训练）及配套高速 API，号称性能接近闭源顶尖模型"
+      },
+      "stage": "deep_analysis"
+    },
     "928c814ff2d00692e91bd39695f86094507998b352781d6ea47f031d73939180": {
       "created_at": "2026-08-24T01:57:11.205042+00:00",
       "model": "deepseek-v4-flash",
@@ -59303,6 +59871,44 @@
           "模型压缩",
           "本地部署",
           "DeepSeek"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "92d8232d7781ef7c4c5346fb5b73372b6080b2ec2ff07aaa11640c9a589fcb5f": {
+      "created_at": "2026-10-25T04:39:17.016475+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "findmyweb-reverse-engineered",
+        "evidence_status": "first_party",
+        "follow_up": "观察是否因违反服务条款被下架或封号。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:50226646",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "FindMyWeb",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "FindMyWeb 是 Apple Find My 逆向工程 UI，有代码和 Demo，但属于工具类项目，与 AI 产品经理学习 LLM 和构建 AI 产品的核心兴趣弱相关。",
+        "region": "global",
+        "score": 5.0,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "开发者逆向工程 Apple Find My 并做成网页 UI，让用户能在浏览器查看追踪器位置，但技术栈与 AI 产品无关。",
+        "tags": [
+          "reverse_engineering",
+          "Apple_FindMy"
         ],
         "target_user": "",
         "verticals": []
@@ -60228,6 +60834,44 @@
           "DeepSeek",
           "用户反馈",
           "讨论"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "9553a49b17c569efc1720ee958fcd1bcb5d63dd006de99a68a3377f8b16f4b71": {
+      "created_at": "2026-10-25T04:38:58.558038+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "blue-planet-iii-ai-authenticity",
+        "evidence_status": "reported",
+        "follow_up": "关注内容行业应对 AI 真实性的产品化方案。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:bd9fb9316b2cdf20",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "关于纪录片在 AI 时代保留粗糙镜头以证明真实性的报道，属于内容制作话题，与 AI 产品构建关联弱，低于 7 分。",
+        "region": "global",
+        "score": 5.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "BBC《蓝色星球 III》选择保留不完美镜头来证明真实性，以对抗 AI 生成内容过于精致带来的信任问题。",
+        "tags": [
+          "AI 内容",
+          "真实性"
         ],
         "target_user": "",
         "verticals": []
@@ -77779,6 +78423,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "be854f91e8e23dc8065eaacbc2d7f2a18b5bea6bec6c54799e24ad16bd040e09": {
+      "created_at": "2026-10-25T04:39:19.759573+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "deepseek_funding_round_2025",
+        "evidence_status": "reported",
+        "follow_up": "关注融资后是否披露产品路线或新模型能力。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "google_news:article:55604986615216ef",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "DeepSeek",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "纯融资新闻，无产品、技术或用户反馈增量，对 AI 产品经理学习价值低，按规则低于 7 分。",
+        "region": "china",
+        "score": 4.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "多家A股公司被曝参与DeepSeek新一轮千亿级融资，但无产品与技术细节，对做产品的人参考有限。",
+        "tags": [
+          "DeepSeek",
+          "融资"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "be9b02b9a18dc703afdb05559228fcba19bd27ce03e9eda00f78d4fdd4be4d59": {
       "created_at": "2026-08-05T03:32:19.708970+00:00",
       "model": "deepseek-v4-flash",
@@ -81774,6 +82456,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "c8de7e7eca36bb6e7fc1fab0a9a4e799efdc73efcc07dd654f49fd598b460ddc": {
+      "created_at": "2026-10-25T04:39:03.285049+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "grok-openai-political-bias-study-2026-10",
+        "evidence_status": "reported",
+        "follow_up": "可关注后续是否有模型公司回应或调整对齐策略，但优先级不高。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:0243fc819127b1c0",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Grok, GPT",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "报道了一项关于模型政治倾向的研究，属于高信噪比行业观察，但未涉及产品构建、新模型能力或可迁移的产品实践，对初学者转型 AI 产品经理的直接增量有限，因此评分处于可收录边缘。",
+        "region": "global",
+        "score": 5.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "一项研究发现，Grok 在近 500 场选举中绝大多数推荐共和党候选人，而 OpenAI 的 GPT 倾向民主党，两者在超过 90% 的选区中意见相反。",
+        "tags": [
+          "AI 模型",
+          "政治倾向",
+          "行业观察"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "c8e3eccc022cc1513d38d2cb867da44e4c8495e4c2d0b3d9416b4d7cad012bba": {
       "created_at": "2026-10-15T04:36:56.646369+00:00",
       "model": "deepseek-flash",
@@ -83856,6 +84577,44 @@
           "Anthropic",
           "公益基金",
           "媒体报道"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "cea29be33126d5927065adc40d56b6ffb6a40bfcf715467d6e80ad54bec337ac": {
+      "created_at": "2026-10-25T04:39:17.016632+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "steal-my-bitcoin",
+        "evidence_status": "first_party",
+        "follow_up": "观察最终是否被攻破及攻击方式。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:50224916",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Steal My Bitcoin",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Show HN 项目用悬赏比特币测试 PHP RCE 漏洞是否被 AI 利用，有真实反馈和讨论，但属于安全实验，与 AI 产品经理学习 LLM 和构建产品弱相关。",
+        "region": "global",
+        "score": 5.5,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "开发者搭建网站悬赏比特币，测试是否有人能用 PHP RCE 漏洞盗取，结果数小时无人成功，引发对 AI 安全威胁论的讨论。",
+        "tags": [
+          "security",
+          "AI_hype"
         ],
         "target_user": "",
         "verticals": []
@@ -89311,6 +90070,44 @@
         "tags": [
           "研究资助",
           "Anthropic"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "dc04d06f1d23f957fb5889bcc5ff1c6f11184ec9ae0969644c685172566f3b89": {
+      "created_at": "2026-10-25T04:38:58.558065+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "pennsylvania-ai-ad-labeling-law",
+        "evidence_status": "reported",
+        "follow_up": "关注其他州是否跟进及对 AI 广告产品的影响。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:96d210e04670d6a9",
+        "intelligence_type": "business_policy",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "宾夕法尼亚州签署 AI 广告标注法案，属于商业政策类真实增量，但对 AI 产品经理的直接产品迁移价值有限，给 6 分。",
+        "region": "global",
+        "score": 6.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "宾夕法尼亚州通过《人工智能欺骗性广告法》，要求 AI 生成或显著修改的广告必须标注，影响 AI 内容产品的合规设计。",
+        "tags": [
+          "AI 监管",
+          "广告标注"
         ],
         "target_user": "",
         "verticals": []
@@ -96926,6 +97723,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "ee72e8d0e56eb1104633c0b764d75ebf8ade3d277a92057293b7ef3d1c11f875": {
+      "created_at": "2026-10-25T04:39:17.016556+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "gopher-2026",
+        "evidence_status": "reported",
+        "follow_up": "关注 geomys 项目的后续更新。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:50226577",
+        "intelligence_type": "builder_insight",
+        "is_first_party": false,
+        "is_new_event": false,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "geomys",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "讨论 Gopher 协议在 2026 年的相关性，评论区有人用 Claude 构建 Gopher 浏览器，但整体是复古技术讨论，与 AI 产品经理核心兴趣弱相关。",
+        "region": "global",
+        "score": 5.0,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "一篇讨论 Gopher 协议为何在 2026 年仍有价值的文章，评论区有开发者用 Claude 构建了经典 Mac 的 Gopher 浏览器。",
+        "tags": [
+          "Gopher",
+          "retro_computing"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "ee7c70627c39c617402c6a6bf50cfe972d024fc91fe5384616d4ff697137255f": {
       "created_at": "2026-09-09T04:40:45.547234+00:00",
       "model": "deepseek-v4-flash",
@@ -100835,6 +101670,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "f8012ea169ef5ace2f7dc8641d193bdb1651c8344465950544ad6523a110bcc5": {
+      "created_at": "2026-10-25T04:39:17.016333+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "cerebras-trillion-param-deploy",
+        "evidence_status": "first_party",
+        "follow_up": "观察该部署方式是否带来新的产品级 API 或延迟体验。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:50227356",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Cerebras",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Cerebras 官方博客讲万亿参数模型部署，属于底层推理优化和硬件，与产品经理兴趣优先级低，除非解锁新体验，但本文未涉及产品层。",
+        "region": "global",
+        "score": 5.5,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Cerebras 官方介绍如何在自家芯片上部署万亿参数前沿模型，解决大模型推理吞吐问题，但属于底层基础设施，对产品构建的直接启发有限。",
+        "tags": [
+          "infra",
+          "inference"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "f809180199bea8f9517ad3b13a74c04e83ef8a6a2bf46e4bc8e0164e788d53cf": {
       "created_at": "2026-08-27T09:46:47.769832+00:00",
       "model": "deepseek-v4-flash",
@@ -103514,6 +104387,44 @@
         "what_it_is": "OpenAI 给企业团队用的 ChatGPT Work 产品里，AI agent（智能体，能自主执行多步骤任务的 AI）新增了一项能力：可以像真人一样登录需要用户名密码的网站，而且只需登录一次，之后跨会话都能保持登录状态。"
       },
       "stage": "deep_analysis"
+    },
+    "fdf6fb3d902aebff658cb5557e37de080f4bf25b866dcbe7ecbd9812bd7954fe": {
+      "created_at": "2026-10-25T04:38:58.558132+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "vercel-ai-sdk-zai-3-0-40",
+        "evidence_status": "first_party",
+        "follow_up": "无需特别关注。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "github:release:422894521",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Vercel AI SDK",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Vercel AI SDK 的 ZAI 适配器补丁，仅更新 README 和依赖，无实质功能增量，属于低价值维护更新。",
+        "region": "global",
+        "score": 4.5,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "Vercel AI SDK 的 ZAI 适配器发布 3.0.40 补丁，仅统一 README 格式并更新依赖，无实质功能变化。",
+        "tags": [
+          "AI SDK",
+          "开发工具"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
     },
     "fe22061322dbd050f600765af6dada14ed8be95ea3e586dffe83bbf139b2279a": {
       "created_at": "2026-08-12T02:43:31.542806+00:00",

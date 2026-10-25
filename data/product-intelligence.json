@@ -1,7 +1,203 @@
 {
   "version": 1,
-  "updated_at": "2026-10-24T04:35:13.789811+00:00",
+  "updated_at": "2026-10-25T04:39:41.697532+00:00",
   "products": [
+    {
+      "product_id": "product-079759eb44953975",
+      "product_name": "DeepSeek Harness",
+      "builder_name": "财联社",
+      "first_seen": "2026-08-16",
+      "last_seen": "2026-10-25",
+      "occurrence_count": 2,
+      "intelligence_type": "model_capability",
+      "evidence_status": "reported",
+      "target_user": "AI 应用开发者、需要编排多模型/多工具流程的技术团队",
+      "user_problem": "开发者想快速搭建能调用多种工具、多步骤协作的 AI 应用时，常要自己写大量胶水代码，重复造轮子",
+      "what_it_is": "DeepSeek 官方推出的开源 AI Agent 编排框架，用「插件化」思路让开发者像搭积木一样组合模型能力",
+      "ai_role": "DeepSeek 大模型作为「大脑」理解任务、决策调用哪个插件，并生成最终回复",
+      "implementation_idea": "把每个功能（搜索、计算器、文件读取等）都做成独立插件，Harness 作为总调度器，根据用户输入让模型判断该激活哪些插件、按什么顺序执行，再把结果传回模型继续下一步",
+      "hands_on_exercise": "30 分钟：访问 DeepSeek Harness 官网，按文档安装桌面版；尝试运行一个内置示例（如「搜索网页并总结」），观察模型何时触发搜索插件、如何把搜索结果融入最终回答",
+      "limitations_or_uncertainties": "「V4 全系列模型上线」这一说法在提供的原始链接和搜索结果中均未找到官方直接确认，仅见于财联社新闻标题；Harness 与 V4 模型的具体兼容细节、预览版功能边界未公开",
+      "region": "china",
+      "score": 7.8,
+      "summary": "DeepSeek 在 V4 全系列模型上线后开放了 Harness 开发者预览版测试，为开发者提供新的模型调用与编排入口。",
+      "title": "DeepSeek Harness 开发者预览版开放测试",
+      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE4wd0JWNXNkT3NmUy1UV09ldm1iSXY3dTllQ1o1ZFg5MFZPS1BRY3RCTUJLc05UYWJTb1R6VHhoT0NXM3hJQU5xLQ?oc=5",
+      "sources": [
+        {
+          "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE4wd0JWNXNkT3NmUy1UV09ldm1iSXY3dTllQ1o1ZFg5MFZPS1BRY3RCTUJLc05UYWJTb1R6VHhoT0NXM3hJQU5xLQ?oc=5",
+          "title": "V4全系列模型上线后，DeepSeek Harness开发者预览版开放测试 - 财联社",
+          "source_type": "google_news",
+          "published_at": "2026-08-15T17:50:46+00:00"
+        },
+        {
+          "url": "https://www.deepseek.com/en/harness/",
+          "title": "DeepSeek Harness | Explore the limits of intelligence",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://github.com/deepseek-ai/deepseek-harness",
+          "title": "GitHub - deepseek -ai/ deepseek - harness : DeepSeek Harness ...",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "deepseek-harness-preview",
+          "date": "2026-08-16",
+          "title": "V4全系列模型上线后，DeepSeek Harness开发者预览版开放测试 - 财联社",
+          "summary": "DeepSeek 在 V4 全系列模型上线后开放 Harness 开发者预览版测试，值得关注其智能体框架能力。",
+          "score": 8.0,
+          "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE4wd0JWNXNkT3NmUy1UV09ldm1iSXY3dTllQ1o1ZFg5MFZPS1BRY3RCTUJLc05UYWJTb1R6VHhoT0NXM3hJQU5xLQ?oc=5"
+        },
+        {
+          "update_id": "deepseek-v4-harness-preview",
+          "date": "2026-10-11",
+          "title": "V4全系列模型上线后，DeepSeek Harness开发者预览版开放测试 - 财联社",
+          "summary": "DeepSeek 在 V4 全系列模型上线后开放了 Harness 开发者预览版测试，为开发者提供新的模型调用与编排入口。",
+          "score": 7.8,
+          "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE4wd0JWNXNkT3NmUy1UV09ldm1iSXY3dTllQ1o1ZFg5MFZPS1BRY3RCTUJLc05UYWJTb1R6VHhoT0NXM3hJQU5xLQ?oc=5"
+        }
+      ],
+      "usage_flow": [
+        "安装 Harness 桌面端或从代码启动 Web 界面",
+        "按需选择/开发插件（如搜索、代码执行、数据库连接等）",
+        "用 Harness 编排插件与 DeepSeek 模型的交互流程",
+        "运行并调试 Agent 任务，观察多步骤执行结果"
+      ],
+      "learning_points": [
+        "Agent：让 AI 不仅能聊天，还能自主决定「用什么工具、分几步完成」的系统",
+        "Function Calling（工具调用）：模型识别用户意图后，输出结构化指令去调用外部 API 或插件，而非直接生成答案",
+        "插件化架构：把复杂系统拆成可插拔的小模块，方便复用和扩展"
+      ],
+      "verticals": [],
+      "tags": [
+        "DeepSeek",
+        "智能体",
+        "开发者预览",
+        "模型能力",
+        "开发者工具"
+      ]
+    },
+    {
+      "product_id": "product-6433af84ab802b81",
+      "product_name": "Kimi 3.1 Pro",
+      "builder_name": "swyx .ai",
+      "first_seen": "2026-10-25",
+      "last_seen": "2026-10-25",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "reported",
+      "target_user": "开发者、需要自建模型或调用 API 的企业用户、AI 研究者",
+      "user_problem": "闭源模型（如 GPT-4、Claude）性能好但无法本地部署或二次开发；开源模型通常落后闭源半年以上，且推理速度慢",
+      "what_it_is": "Moonshot 发布的开源大模型（1040 亿参数、2.8 万亿 token 训练）及配套高速 API，号称性能接近闭源顶尖模型",
+      "ai_role": "作为底层引擎，根据用户输入生成代码、分析文档、执行多步骤任务（Agentic 工作流）",
+      "implementation_idea": "用大量数据训练出一个超大规模 Transformer 模型，然后把训练好的参数文件公开，任何人都能下载运行；同时官方提供云端加速版本，通过优化推理引擎让响应快 2-3 倍",
+      "hands_on_exercise": "访问 kimi.ai，用自然语言描述一个简单需求（如'写一个 Python 爬虫抓取新闻标题'），分别对比默认模式和 /model 切换到 K3.1 Pro 后的回答质量与速度差异；如有 API 权限，用 curl 调用 kimi-k3.1-pro-highspeed 测试响应时间",
+      "limitations_or_uncertainties": "完整权重文件尚未实际发布（承诺 11 月 4 日开放）；'差距缩小到 1 个月'是 Newsletter 作者观点，非独立基准测试验证；'Fable-5.1-Class'为调侃式类比，无官方定义；高速 API 的具体优化技术未公开",
+      "region": "china",
+      "score": 7.5,
+      "summary": "Latent Space 报道 Kimi 3.1 Pro 发布开放权重模型并推出 2-3 倍速高速 API，称开源与闭源 AI 差距缩小到约一个月，值得关注新模型能力。",
+      "title": "Kimi 3.1 Pro 开放权重与高速 API 发布",
+      "url": "https://latent.space/p/ainews-kimi-31/",
+      "sources": [
+        {
+          "url": "https://latent.space/p/ainews-kimi-31/",
+          "title": "[AINews] Kimi 3.1 Pro 104BA-2.8T: Fable-5.1-Class Open Weights narrows Closed-AI lead to 1 month... and Pro Highspeed API with 2-3× speed",
+          "source_type": "rss",
+          "published_at": "2026-10-24T07:18:29+00:00"
+        },
+        {
+          "url": "https://www.kimi.ai/",
+          "title": "Kimi AI with K3 | Built for Agentic Coding & Knowledge Work",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://habr.com/ru/news/1098732/",
+          "title": "Moonshot выпустили Kimi K 3 . 1 Pro : лучше GPT-6 Astra... / Хабр",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "kimi-3-1-pro-open-weights-release",
+          "date": "2026-10-25",
+          "title": "Kimi 3.1 Pro 开放权重与高速 API 发布",
+          "summary": "Latent Space 报道 Kimi 3.1 Pro 发布开放权重模型并推出 2-3 倍速高速 API，称开源与闭源 AI 差距缩小到约一个月，值得关注新模型能力。",
+          "score": 7.5,
+          "url": "https://latent.space/p/ainews-kimi-31/"
+        }
+      ],
+      "usage_flow": [
+        "在 Kimi.ai 网页端或 Kimi Work/Kimi Code 中选择 kimi-k3.1-pro 模型",
+        "如需更快响应，切换至 kimi-k3.1-pro-highspeed API 端点",
+        "开发者通过 API 将模型接入自己的应用或 Agent 工作流",
+        "计划 11 月 4 日下载完整权重，本地部署或微调"
+      ],
+      "learning_points": [
+        "开放权重（Open Weights）：把训练好的模型参数公开，你可以下载到本地运行，但通常不公开训练数据和代码",
+        "API 端点（API Endpoint）：一个网络地址，你的程序把问题发过去，服务器上的模型算完再把答案发回来",
+        "Agentic 工作流：让 AI 不只是回答一次，而是能自主分解任务、调用工具、多轮执行完成复杂目标"
+      ],
+      "verticals": [],
+      "tags": [
+        "Kimi",
+        "开放权重",
+        "模型能力"
+      ]
+    },
+    {
+      "product_id": "product-155ebb130a7a1d68",
+      "product_name": "Qwen3.8-27B",
+      "builder_name": "rzk",
+      "first_seen": "2026-10-25",
+      "last_seen": "2026-10-25",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Hacker News 讨论用 GVS5H Harness 让五个 Qwen3.8-27B 模型达到 Fable 5 水平，本地运行成本低但耗时约 10 倍，值得关注开源模型组合方案。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.0,
+      "summary": "Hacker News 讨论用 GVS5H Harness 让五个 Qwen3.8-27B 模型达到 Fable 5 水平，本地运行成本低但耗时约 10 倍，值得关注开源模型组合方案。",
+      "title": "Five Qwen3.8-27B models match Fable 5 Using GVS5H Harness",
+      "url": "https://github.com/slee-persis/GVS5H",
+      "sources": [
+        {
+          "url": "https://github.com/slee-persis/GVS5H",
+          "title": "Five Qwen3.8-27B models match Fable 5 Using GVS5H Harness",
+          "source_type": "hackernews",
+          "published_at": "2026-10-25T03:56:01+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "qwen3-8-27b-gvs5h-harness",
+          "date": "2026-10-25",
+          "title": "Five Qwen3.8-27B models match Fable 5 Using GVS5H Harness",
+          "summary": "Hacker News 讨论用 GVS5H Harness 让五个 Qwen3.8-27B 模型达到 Fable 5 水平，本地运行成本低但耗时约 10 倍，值得关注开源模型组合方案。",
+          "score": 7.0,
+          "url": "https://github.com/slee-persis/GVS5H"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Qwen",
+        "开源模型",
+        "本地部署"
+      ]
+    },
     {
       "product_id": "product-53a135a350c4d10a",
       "product_name": "Kimi K3.1 Pro",
@@ -2818,64 +3014,6 @@
         "Meta",
         "产品设计",
         "消费级AI"
-      ]
-    },
-    {
-      "product_id": "product-079759eb44953975",
-      "product_name": "DeepSeek Harness",
-      "builder_name": "财联社",
-      "first_seen": "2026-08-16",
-      "last_seen": "2026-10-19",
-      "occurrence_count": 2,
-      "intelligence_type": "model_capability",
-      "evidence_status": "reported",
-      "target_user": "未公开",
-      "user_problem": "未公开",
-      "what_it_is": "DeepSeek 在 V4 全系列模型上线后开放了 Harness 开发者预览版测试，为开发者提供新的模型调用与编排入口。",
-      "ai_role": "未公开",
-      "implementation_idea": "未公开",
-      "hands_on_exercise": "未公开",
-      "limitations_or_uncertainties": "未公开",
-      "region": "china",
-      "score": 7.8,
-      "summary": "DeepSeek 在 V4 全系列模型上线后开放了 Harness 开发者预览版测试，为开发者提供新的模型调用与编排入口。",
-      "title": "V4全系列模型上线后，DeepSeek Harness开发者预览版开放测试 - 财联社",
-      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE4wd0JWNXNkT3NmUy1UV09ldm1iSXY3dTllQ1o1ZFg5MFZPS1BRY3RCTUJLc05UYWJTb1R6VHhoT0NXM3hJQU5xLQ?oc=5",
-      "sources": [
-        {
-          "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE4wd0JWNXNkT3NmUy1UV09ldm1iSXY3dTllQ1o1ZFg5MFZPS1BRY3RCTUJLc05UYWJTb1R6VHhoT0NXM3hJQU5xLQ?oc=5",
-          "title": "V4全系列模型上线后，DeepSeek Harness开发者预览版开放测试 - 财联社",
-          "source_type": "google_news",
-          "published_at": "2026-08-15T17:50:46+00:00"
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "deepseek-harness-preview",
-          "date": "2026-08-16",
-          "title": "V4全系列模型上线后，DeepSeek Harness开发者预览版开放测试 - 财联社",
-          "summary": "DeepSeek 在 V4 全系列模型上线后开放 Harness 开发者预览版测试，值得关注其智能体框架能力。",
-          "score": 8.0,
-          "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE4wd0JWNXNkT3NmUy1UV09ldm1iSXY3dTllQ1o1ZFg5MFZPS1BRY3RCTUJLc05UYWJTb1R6VHhoT0NXM3hJQU5xLQ?oc=5"
-        },
-        {
-          "update_id": "deepseek-v4-harness-preview",
-          "date": "2026-10-11",
-          "title": "V4全系列模型上线后，DeepSeek Harness开发者预览版开放测试 - 财联社",
-          "summary": "DeepSeek 在 V4 全系列模型上线后开放了 Harness 开发者预览版测试，为开发者提供新的模型调用与编排入口。",
-          "score": 7.8,
-          "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE4wd0JWNXNkT3NmUy1UV09ldm1iSXY3dTllQ1o1ZFg5MFZPS1BRY3RCTUJLc05UYWJTb1R6VHhoT0NXM3hJQU5xLQ?oc=5"
-        }
-      ],
-      "usage_flow": [],
-      "learning_points": [],
-      "verticals": [],
-      "tags": [
-        "DeepSeek",
-        "智能体",
-        "开发者预览",
-        "模型能力",
-        "开发者工具"
       ]
     },
     {
