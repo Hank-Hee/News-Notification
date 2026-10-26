@@ -1,7 +1,199 @@
 {
   "version": 1,
-  "updated_at": "2026-10-25T04:39:41.697532+00:00",
+  "updated_at": "2026-10-26T04:45:28.532514+00:00",
   "products": [
+    {
+      "product_id": "product-be5d68a649497e6d",
+      "product_name": "10年前的CNN在皮肤癌诊断上跑赢前沿LLM",
+      "builder_name": "sungam",
+      "first_seen": "2026-10-26",
+      "last_seen": "2026-10-26",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "医疗AI产品经理、做皮肤病诊断工具的开发团队、考虑用LLM做医学影像分析的研究者",
+      "user_problem": "很多人默认'模型越大越新就越强'，想直接用GPT-4o这类通用大模型做皮肤癌筛查，但实际准确率可能不如专门训练的小模型，会漏诊或误诊",
+      "what_it_is": "一位皮肤科医生做的对比实验：用2015年的CNN模型（Inception v3）和GPT-6 Astra、Claude Fable 5.1比谁能更准地判断皮肤病变是否为癌症",
+      "ai_role": "这里有两类AI：LLM负责看图片+文字描述做诊断判断；CNN（卷积神经网络，专门处理图像的AI架构）负责只看图片做分类。实验发现后者更准",
+      "implementation_idea": "作者拿2015年的Inception v3（一个经典的图片识别网络），先用日常照片预训练，再用ISIC档案库的6.8万张皮肤镜/临床图片微调所有层。关键操作：把测试用的200张图片及其同患者其他照片全部从训练集和验证集剔除，防止作弊。最后用单张H100 GPU训练完成",
+      "hands_on_exercise": "30分钟体验：去Kaggle找ISIC皮肤病变公开数据集（约几百MB），用Hugging Face的'timm'库加载一个预训练ResNet-50，跑一遍官方quick-start分类示例，对比'直接用预训练模型'和'微调10个epoch'在验证集上的准确率差异",
+      "limitations_or_uncertainties": "原始博客正文未抓取到，无法确认：200张测试图片的具体来源分布、LLM的prompt设计细节、是否做了多次采样取平均、是否有置信度阈值校准、62%和42%是AUC还是准确率还是F1。另有一篇搜索结果说对比的是GPT-4o/Gemini/Claude 3 Opus，与摘要中的'GPT-6 Astra/Claude Fable 5.1'型号不一致，可能是不同实验或笔误",
+      "region": "global",
+      "score": 8.3,
+      "summary": "研究者用 10 年前的 CNN 在皮肤癌诊断上跑赢两个前沿 LLM，说明医疗垂直场景专用小模型可能比通用大模型更准，做医疗 AI 产品时值得优先考虑专用模型路线。",
+      "title": "10年前的CNN在皮肤癌诊断上跑赢前沿LLM",
+      "url": "https://lynchlab.net/llm-skin-cancer",
+      "sources": [
+        {
+          "url": "https://lynchlab.net/llm-skin-cancer",
+          "title": "A 10-year-old CNN outperforms frontier LLMs for skin cancer diagnosis",
+          "source_type": "hackernews",
+          "published_at": "2026-10-25T17:15:38+00:00"
+        },
+        {
+          "url": "https://explainx.ai/blog/cnn-beats-gpt-6-astra-claude-fable-5-1-skin-cancer-diagnosis-lynch-2026",
+          "title": "CNN vs GPT-6 Astra vs Fable 5.1: Skin Cancer, 62% vs 42% ...",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://www.promptzone.com/ayaka_nkrumah/a-10-year-old-cnn-outperforms-gpt-4o-on-skin-cancer-diagnosis-3p1k",
+          "title": "A 10-Year-Old CNN Outperforms GPT-4o on Skin Cancer Diagnosis",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "cnn-beats-llm-skin-cancer-diagnosis",
+          "date": "2026-10-26",
+          "title": "10年前的CNN在皮肤癌诊断上跑赢前沿LLM",
+          "summary": "研究者用 10 年前的 CNN 在皮肤癌诊断上跑赢两个前沿 LLM，说明医疗垂直场景专用小模型可能比通用大模型更准，做医疗 AI 产品时值得优先考虑专用模型路线。",
+          "score": 8.3,
+          "url": "https://lynchlab.net/llm-skin-cancer"
+        }
+      ],
+      "usage_flow": [
+        "医生上传200张已活检确认的皮肤病变照片",
+        "分别让LLM（GPT-6 Astra、Claude Fable 5.1）和CNN模型独立判断良恶性",
+        "对比两者准确率：CNN得62%，LLM得42%",
+        "结论：专用小模型更适合这个垂直场景"
+      ],
+      "learning_points": [
+        "垂直模型 vs 通用模型：专用小模型在特定任务上可能比万亿参数的通用LLM更准，因为LLM的'通用能力'不等于'专业能力'",
+        "Fine-tuning（微调）：拿别人预训练好的模型，用自己的专业数据继续训练，让它学会特定领域的判断",
+        "数据泄露防范：测试图片必须从训练数据中彻底剔除，否则准确率数字不可信"
+      ],
+      "verticals": [],
+      "tags": [
+        "医疗AI",
+        "皮肤癌诊断",
+        "垂直模型",
+        "CNN"
+      ]
+    },
+    {
+      "product_id": "product-5bec84c3ab32b60a",
+      "product_name": "AgentGrid.io",
+      "builder_name": "Avishay Cohen",
+      "first_seen": "2026-10-26",
+      "last_seen": "2026-10-26",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "early_signal",
+      "target_user": "需要人机协作完成内容创作、软件开发或设计工作的团队；未公开具体行业或规模限制",
+      "user_problem": "人和 AI Agent 各自在不同工具里干活，任务分配混乱、上下文不共享、产出物散落在各处，协作效率低",
+      "what_it_is": "一个让人和 AI Agent 能在同一个空间里实时协作编辑文档、网站、应用和设计的共享平台，官方形容像\"人类用的 Google Drive，Agent 用的 Git\"。",
+      "ai_role": "作为协作者直接参与编辑，与人类共享同一份\"活文档\"，而非仅在侧边栏对话或独立生成后粘贴结果",
+      "implementation_idea": "核心思路是把\"文件\"变成多人实时协作的在线文档，但参与者里既有真人也有 AI Agent。每个 Agent 像一位远程同事，能看到同一份内容、接收任务、直接修改。系统需要维护一份所有参与者都能理解的共享上下文，避免人和 Agent 各自为战。",
+      "hands_on_exercise": "打开 agentgrid.io 注册账号，创建一个团队空间，尝试新建一个 markdown 文档并邀请至少一个列出的 Agent（如 Claude 或 GPT）协作编辑；观察 Agent 是否能直接修改你正在写的文档，记录协作体验与延迟情况。若无法注册或 Agent 未开放，改为用 Google Docs + ChatGPT 侧边栏模拟\"共享上下文\"的局限，对比两者差异。",
+      "limitations_or_uncertainties": "未公开定价、免费额度、具体 Agent 接入方式（API 还是内置）、是否支持自托管 Agent、团队协作的权限粒度、实际用户量和真实使用反馈；Product Hunt 页面为 2 天前发布，属非常早期产品",
+      "region": "global",
+      "score": 7.2,
+      "summary": "Avishay Cohen 发布 AgentGrid.io，一个供人类和 AI Agent 共享的工作空间，试图解决人机协作中的任务分配问题。",
+      "title": "AgentGrid.io：人类与 AI Agent 共享的协作工作空间",
+      "url": "https://www.producthunt.com/products/agentgrid-io",
+      "sources": [
+        {
+          "url": "https://www.producthunt.com/products/agentgrid-io",
+          "title": "AgentGrid.io",
+          "source_type": "rss",
+          "published_at": "2026-10-25T05:39:16+00:00"
+        },
+        {
+          "url": "https://agentgrid.io/docs",
+          "title": "Docs — AgentGrid",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://superpowerdaily.com/tools/agentgrid-io",
+          "title": "AgentGrid.io — Capabilities, Use Cases, and FAQ",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "agentgrid-io-launch",
+          "date": "2026-10-26",
+          "title": "AgentGrid.io：人类与 AI Agent 共享的协作工作空间",
+          "summary": "Avishay Cohen 发布 AgentGrid.io，一个供人类和 AI Agent 共享的工作空间，试图解决人机协作中的任务分配问题。",
+          "score": 7.2,
+          "url": "https://www.producthunt.com/products/agentgrid-io"
+        }
+      ],
+      "usage_flow": [
+        "创建团队工作空间，邀请成员和 Agent 加入",
+        "新建或打开一个 artifact（文档/应用/设计等），开始实时协作",
+        "人类和 Agent 基于共享上下文同时编辑，Agent 自动执行特定任务",
+        "产出物保存在团队空间，可追溯版本和变更"
+      ],
+      "learning_points": [
+        "Agent：能自主理解目标、调用工具并执行多步任务的 AI 程序，不只是回答问题的聊天机器人",
+        "Artifact：这里指可协作的数字化产出物（文档、代码、设计稿等），是人和 Agent 共同操作的具体对象",
+        "共享上下文：所有参与者看到同一份实时状态，Agent 能基于最新内容继续工作，而非每次从零开始"
+      ],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "协作工具",
+        "ProductHunt"
+      ]
+    },
+    {
+      "product_id": "product-d55c3503c1f9e069",
+      "product_name": "DeepSeek Harness",
+      "builder_name": "36氪",
+      "first_seen": "2026-10-26",
+      "last_seen": "2026-10-26",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "36氪报道DeepSeek Harness首发新版本，更新14项功能并强化多模态能力，可能解锁新的产品体验。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "china",
+      "score": 7.2,
+      "summary": "36氪报道DeepSeek Harness首发新版本，更新14项功能并强化多模态能力，可能解锁新的产品体验。",
+      "title": "昨夜，DeepSeek Harness首发新版本：14项更新，多模态能力拉满 - 36氪",
+      "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE5WcnVMbGcyVmpDUnVzbGQ4a3RrZFp6UWNkOGRBd0JNb0l0aEI4enRVbDdRdnZIcngwWnNGbDNzWGlHc2VHT2c4ZkduSXg4Zw?oc=5",
+      "sources": [
+        {
+          "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE5WcnVMbGcyVmpDUnVzbGQ4a3RrZFp6UWNkOGRBd0JNb0l0aEI4enRVbDdRdnZIcngwWnNGbDNzWGlHc2VHT2c4ZkduSXg4Zw?oc=5",
+          "title": "昨夜，DeepSeek Harness首发新版本：14项更新，多模态能力拉满 - 36氪",
+          "source_type": "google_news",
+          "published_at": "2026-10-25T08:53:05+00:00"
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE4wd0JWNXNkT3NmUy1UV09ldm1iSXY3dTllQ1o1ZFg5MFZPS1BRY3RCTUJLc05UYWJTb1R6VHhoT0NXM3hJQU5xLQ?oc=5",
+          "title": "V4全系列模型上线后，DeepSeek Harness开发者预览版开放测试 - 财联社",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "deepseek_harness_v_new_multimodal",
+          "date": "2026-10-26",
+          "title": "昨夜，DeepSeek Harness首发新版本：14项更新，多模态能力拉满 - 36氪",
+          "summary": "36氪报道DeepSeek Harness首发新版本，更新14项功能并强化多模态能力，可能解锁新的产品体验。",
+          "score": 7.2,
+          "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE5WcnVMbGcyVmpDUnVzbGQ4a3RrZFp6UWNkOGRBd0JNb0l0aEI4enRVbDdRdnZIcngwWnNGbDNzWGlHc2VHT2c4ZkduSXg4Zw?oc=5"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "多模态",
+        "模型更新"
+      ]
+    },
     {
       "product_id": "product-079759eb44953975",
       "product_name": "DeepSeek Harness",
