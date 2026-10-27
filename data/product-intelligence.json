@@ -1,7 +1,571 @@
 {
   "version": 1,
-  "updated_at": "2026-10-26T04:45:28.532514+00:00",
+  "updated_at": "2026-10-27T05:02:35.249537+00:00",
   "products": [
+    {
+      "product_id": "product-2e473f2f6c9fb846",
+      "product_name": "GPT-6.1 Terra",
+      "builder_name": "Simon Willison",
+      "first_seen": "2026-10-27",
+      "last_seen": "2026-10-27",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "OpenAI 发布 GPT-6.1 Terra 模型，主打视觉推理和计算机操作，能自动填表、编辑视频等，让初学者理解新模型能解锁哪些产品体验。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.2,
+      "summary": "OpenAI 发布 GPT-6.1 Terra 模型，主打视觉推理和计算机操作，能自动填表、编辑视频等，让初学者理解新模型能解锁哪些产品体验。",
+      "title": "GPT-6.1 Terra",
+      "url": "https://simonwillison.net/2026/Oct/26/gpt-61-terra/",
+      "sources": [
+        {
+          "url": "https://simonwillison.net/2026/Oct/26/gpt-61-terra/",
+          "title": "GPT-6.1 Terra",
+          "source_type": "rss",
+          "published_at": "2026-10-26T23:53:07+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "openai-gpt-6-1-terra-release",
+          "date": "2026-10-27",
+          "title": "GPT-6.1 Terra",
+          "summary": "OpenAI 发布 GPT-6.1 Terra 模型，主打视觉推理和计算机操作，能自动填表、编辑视频等，让初学者理解新模型能解锁哪些产品体验。",
+          "score": 8.2,
+          "url": "https://simonwillison.net/2026/Oct/26/gpt-61-terra/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "OpenAI",
+        "GPT-6.1",
+        "视觉推理",
+        "计算机使用"
+      ]
+    },
+    {
+      "product_id": "product-aa1b75363b883b09",
+      "product_name": "CodeRabbit（使用 GPT-6.1 Sol）",
+      "builder_name": "OpenAI News",
+      "first_seen": "2026-10-27",
+      "last_seen": "2026-10-27",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "需要审查大型、复杂代码库安全风险的开发团队",
+      "user_problem": "代码库越复杂，人工审查越难发现跨文件、跨模块的安全漏洞，容易遗漏风险",
+      "what_it_is": "OpenAI 官方发布的客户案例，展示 CodeRabbit 这家公司的代码审查工具如何调用 GPT-6.1 Sol 模型来做自动化安全检测",
+      "ai_role": "扮演'安全 Agent'——自动扫描代码、定位风险、输出修复建议（Agent：能自主完成特定任务的 AI 程序，不只是回答问题）",
+      "implementation_idea": "把大段代码和跨文件关系喂给 GPT-6.1 Sol，让它像资深安全工程师一样逐行检查，再自动整理成人类可读的报告",
+      "hands_on_exercise": "找一个开源项目的 GitHub PR，把代码 diff 复制到 ChatGPT/Claude， prompt 写'请扮演安全审查员，列出潜在漏洞并给出修复建议'，对比模型输出与实际安全公告，30 分钟",
+      "limitations_or_uncertainties": "未公开具体检测准确率、误报率、支持语言范围、定价细节；无独立第三方验证效果；GPT-6.1 Sol 本身的能力边界未详细说明",
+      "region": "global",
+      "score": 7.8,
+      "summary": "CodeRabbit 用 GPT-6.1 Sol 帮开发者审查复杂代码库的安全风险，展示了模型在代码安全场景的具体用法，值得看但属于官方营销案例。",
+      "title": "CodeRabbit 用 GPT-6.1 Sol 审查复杂代码库的安全风险",
+      "url": "https://openai.com/index/gpt-6-1-sol-coderabbit-code-security",
+      "sources": [
+        {
+          "url": "https://openai.com/index/gpt-6-1-sol-coderabbit-code-security",
+          "title": "GPT-6.1 Sol helps CodeRabbit strengthen security across complex codebases",
+          "source_type": "rss",
+          "published_at": "2026-10-26T13:45:00+00:00"
+        },
+        {
+          "url": "https://grokipedia.com/page/CodeRabbit",
+          "title": "CodeRabbit",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://www.coderabbit.ai/pricing",
+          "title": "CodeRabbit Pricing | AI Code Review Plans",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "gpt-6-1-sol-coderabbit",
+          "date": "2026-10-27",
+          "title": "CodeRabbit 用 GPT-6.1 Sol 审查复杂代码库的安全风险",
+          "summary": "CodeRabbit 用 GPT-6.1 Sol 帮开发者审查复杂代码库的安全风险，展示了模型在代码安全场景的具体用法，值得看但属于官方营销案例。",
+          "score": 7.8,
+          "url": "https://openai.com/index/gpt-6-1-sol-coderabbit-code-security"
+        }
+      ],
+      "usage_flow": [
+        "开发者把代码提交到 CodeRabbit 平台",
+        "GPT-6.1 Sol 作为安全 Agent 自动扫描代码，识别潜在漏洞",
+        "Agent 生成审查结果和修复建议",
+        "开发者查看发现的问题并决定是否采纳修复方案"
+      ],
+      "learning_points": [
+        "Agent：不是一问一答，而是 AI 自主执行'扫描-分析-输出结论'完整任务",
+        "代码安全审查：LLM 可以辅助发现 SQL 注入、权限绕过等常见漏洞模式",
+        "RAG（检索增强生成）：处理大代码库时，通常需要先检索相关代码片段再让模型分析，否则一次塞不下"
+      ],
+      "verticals": [],
+      "tags": [
+        "GPT-6.1 Sol",
+        "CodeRabbit",
+        "代码安全",
+        "Agent"
+      ]
+    },
+    {
+      "product_id": "product-e493f49fa6d5667a",
+      "product_name": "webframe",
+      "builder_name": "Simon Willison",
+      "first_seen": "2026-10-27",
+      "last_seen": "2026-10-27",
+      "occurrence_count": 1,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Simon Willison 用 Claude 评估开源工具 webframe，展示如何把网页当程序运行并抓取数据，让初学者看到 AI 辅助工具评估的实践过程。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.8,
+      "summary": "Simon Willison 用 Claude 评估开源工具 webframe，展示如何把网页当程序运行并抓取数据，让初学者看到 AI 辅助工具评估的实践过程。",
+      "title": "webframe: evaluated as a scraper and a sandbox",
+      "url": "https://simonwillison.net/2026/Oct/26/webframe-evaluation/",
+      "sources": [
+        {
+          "url": "https://simonwillison.net/2026/Oct/26/webframe-evaluation/",
+          "title": "webframe: evaluated as a scraper and a sandbox",
+          "source_type": "rss",
+          "published_at": "2026-10-26T16:15:00+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "webframe-evaluation-scraper-sandbox",
+          "date": "2026-10-27",
+          "title": "webframe: evaluated as a scraper and a sandbox",
+          "summary": "Simon Willison 用 Claude 评估开源工具 webframe，展示如何把网页当程序运行并抓取数据，让初学者看到 AI 辅助工具评估的实践过程。",
+          "score": 7.8,
+          "url": "https://simonwillison.net/2026/Oct/26/webframe-evaluation/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "webframe",
+        "AI 辅助开发",
+        "开源工具"
+      ]
+    },
+    {
+      "product_id": "product-d622516bb5e62675",
+      "product_name": "dots",
+      "builder_name": "Tim Fernholz",
+      "first_seen": "2026-10-27",
+      "last_seen": "2026-10-27",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "需要处理长期项目、希望减少手动跟进的知识工作者；未公开更细分人群",
+      "user_problem": "普通 AI 对话工具用完即走，复杂任务需要用户反复催促、手动跟进，无法持续推进",
+      "what_it_is": "dots 是 OpenAI 推出的常驻型 AI 助理，能在后台持续处理复杂项目和日常任务，不需要用户一步步盯着。",
+      "ai_role": "AI 负责持续监控任务进展、自主执行子任务、在需要决策时向用户汇报，而不是等用户发指令才动",
+      "implementation_idea": "给 AI 配一个独立的'工作电脑'和长期记忆，让它像实习生一样能自己查资料、写代码、发邮件，但大事找老板确认。",
+      "hands_on_exercise": "用 ChatGPT 的 Projects 或类似功能，创建一个持续 3 天的任务（如'整理我的读书笔记'），每天让 AI 继续前一天的进度，观察它能否记住上下文并推进，记录需要手动提醒的次数。",
+      "limitations_or_uncertainties": "具体技术架构未公开；'不想和别人的 AI agent 开会'是负责人个人表态，非产品功能承诺；缺乏用户实际使用反馈和定价信息",
+      "region": "global",
+      "score": 7.6,
+      "summary": "OpenAI 把编程工具改造成常驻个人助理 dots，让 AI 能持续帮用户处理任务，负责人称不想再和别人的 AI 代理开会。",
+      "title": "OpenAI 把编程工具变成常驻个人助理 dots",
+      "url": "https://techcrunch.com/2026/10/26/how-openai-turned-its-coding-tools-into-dots-an-always-on-personal-assistant/",
+      "sources": [
+        {
+          "url": "https://techcrunch.com/2026/10/26/how-openai-turned-its-coding-tools-into-dots-an-always-on-personal-assistant/",
+          "title": "How OpenAI turned its coding tools into dots, an always-on personal assistant",
+          "source_type": "rss",
+          "published_at": "2026-10-27T02:00:00+00:00"
+        },
+        {
+          "url": "https://openai.com/index/introducing-dots/",
+          "title": "Introducing dots - OpenAI",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://chatgpt.com/features/dots/",
+          "title": "Dots: Always-on agents built to handle everything | ChatGPT",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "openai-dots-personal-assistant",
+          "date": "2026-10-27",
+          "title": "OpenAI 把编程工具变成常驻个人助理 dots",
+          "summary": "OpenAI 把编程工具改造成常驻个人助理 dots，让 AI 能持续帮用户处理任务，负责人称不想再和别人的 AI 代理开会。",
+          "score": 7.6,
+          "url": "https://techcrunch.com/2026/10/26/how-openai-turned-its-coding-tools-into-dots-an-always-on-personal-assistant/"
+        }
+      ],
+      "usage_flow": [
+        "用户授权 dots 访问自己的工作环境和任务",
+        "dots 学习用户的工作方式，主动发现需要处理的事项",
+        "dots 在自己的计算环境中推进任务进度",
+        "用户随时查看状态、接管或调整方向"
+      ],
+      "learning_points": [
+        "AI Agent：AI 不只是回答问题，而是能自己规划步骤、调用工具、持续执行任务的系统",
+        "Function Calling：让 AI 能调用外部程序（如发邮件、查日历），把想法变成真实动作",
+        "长期记忆/状态持久化：AI 需要记住之前的对话和进度，才能处理跨天的复杂项目"
+      ],
+      "verticals": [],
+      "tags": [
+        "AI Agent",
+        "个人助理",
+        "OpenAI"
+      ]
+    },
+    {
+      "product_id": "product-4f2d2d8caa7b4931",
+      "product_name": "Claude Duet",
+      "builder_name": "Lenny's Newsletter",
+      "first_seen": "2026-10-27",
+      "last_seen": "2026-10-27",
+      "occurrence_count": 1,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Lenny's Newsletter 评测 Claude Duet 并讨论 Reddit 自建 AI 原型工具，能帮初学者理解真实产品反馈和构建思路。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.5,
+      "summary": "Lenny's Newsletter 评测 Claude Duet 并讨论 Reddit 自建 AI 原型工具，能帮初学者理解真实产品反馈和构建思路。",
+      "title": "🎙️ How I AI: Claude Duet honest review + Why Reddit built its own AI prototyping tool",
+      "url": "https://www.lennysnewsletter.com/p/how-i-ai-claude-duet-honest-review",
+      "sources": [
+        {
+          "url": "https://www.lennysnewsletter.com/p/how-i-ai-claude-duet-honest-review",
+          "title": "🎙️ How I AI: Claude Duet honest review + Why Reddit built its own AI prototyping tool",
+          "source_type": "newsletter",
+          "published_at": "2026-10-26T15:00:53+00:00"
+        },
+        {
+          "url": "https://www.lennysnewsletter.com/p/why-reddit-built-its-own-ai-prototyping",
+          "title": "Why Reddit built its own AI prototyping tool | Blair Metcalf",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "lenny-how-i-ai-claude-duet-reddit-proto",
+          "date": "2026-10-27",
+          "title": "🎙️ How I AI: Claude Duet honest review + Why Reddit built its own AI prototyping tool",
+          "summary": "Lenny's Newsletter 评测 Claude Duet 并讨论 Reddit 自建 AI 原型工具，能帮初学者理解真实产品反馈和构建思路。",
+          "score": 7.5,
+          "url": "https://www.lennysnewsletter.com/p/how-i-ai-claude-duet-honest-review"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Claude Duet",
+        "Reddit Proto",
+        "产品评测"
+      ]
+    },
+    {
+      "product_id": "product-ef7f8522952b8edc",
+      "product_name": "Shop the Look",
+      "builder_name": "OpenAI News",
+      "first_seen": "2026-10-27",
+      "last_seen": "2026-10-27",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Fanatics 用 OpenAI 做 Shop the Look 帮球迷搭配比赛日穿搭，3 万件 MLB 商品测试互动率提升 10%，展示了 AI 在电商导购的具体用法。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.2,
+      "summary": "Fanatics 用 OpenAI 做 Shop the Look 帮球迷搭配比赛日穿搭，3 万件 MLB 商品测试互动率提升 10%，展示了 AI 在电商导购的具体用法。",
+      "title": "How Fanatics and OpenAI streamline the fan experience",
+      "url": "https://openai.com/index/fanatics-streamline-fan-experience",
+      "sources": [
+        {
+          "url": "https://openai.com/index/fanatics-streamline-fan-experience",
+          "title": "How Fanatics and OpenAI streamline the fan experience",
+          "source_type": "rss",
+          "published_at": "2026-10-26T07:00:00+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "fanatics-shop-the-look-openai",
+          "date": "2026-10-27",
+          "title": "How Fanatics and OpenAI streamline the fan experience",
+          "summary": "Fanatics 用 OpenAI 做 Shop the Look 帮球迷搭配比赛日穿搭，3 万件 MLB 商品测试互动率提升 10%，展示了 AI 在电商导购的具体用法。",
+          "score": 7.2,
+          "url": "https://openai.com/index/fanatics-streamline-fan-experience"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Fanatics",
+        "电商导购",
+        "OpenAI"
+      ]
+    },
+    {
+      "product_id": "product-360bcddc4541105c",
+      "product_name": "The RealReal",
+      "builder_name": "Mia Sato",
+      "first_seen": "2026-10-27",
+      "last_seen": "2026-10-27",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "二手奢侈品平台 The RealReal 升级机器人防御，阻止 AI 代理利用预留系统抢购设计师服装，反映 Agent 购物与平台规则的冲突。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.2,
+      "summary": "二手奢侈品平台 The RealReal 升级机器人防御，阻止 AI 代理利用预留系统抢购设计师服装，反映 Agent 购物与平台规则的冲突。",
+      "title": "The RealReal won’t let AI agents hog designer clothing",
+      "url": "https://www.theverge.com/news/1018713/meta-muse-agentic-shopping-ai-the-realreal",
+      "sources": [
+        {
+          "url": "https://www.theverge.com/news/1018713/meta-muse-agentic-shopping-ai-the-realreal",
+          "title": "The RealReal won’t let AI agents hog designer clothing",
+          "source_type": "rss",
+          "published_at": "2026-10-26T17:30:55+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "therealreal-blocks-ai-shopping-agents",
+          "date": "2026-10-27",
+          "title": "The RealReal won’t let AI agents hog designer clothing",
+          "summary": "二手奢侈品平台 The RealReal 升级机器人防御，阻止 AI 代理利用预留系统抢购设计师服装，反映 Agent 购物与平台规则的冲突。",
+          "score": 7.2,
+          "url": "https://www.theverge.com/news/1018713/meta-muse-agentic-shopping-ai-the-realreal"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "AI Agent",
+        "电商",
+        "机器人防御"
+      ]
+    },
+    {
+      "product_id": "product-d9072d8d5bba5dd1",
+      "product_name": "Vercel Sandbox",
+      "builder_name": "Elisabeth Rülke",
+      "first_seen": "2026-10-27",
+      "last_seen": "2026-10-27",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Vercel Sandbox 现在可以运行 Scale AI 的 AgentEnv 评估框架，开发者能在隔离环境中测试 Agent 任务并查看得分，方便验证 Agent 产品效果。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.2,
+      "summary": "Vercel Sandbox 现在可以运行 Scale AI 的 AgentEnv 评估框架，开发者能在隔离环境中测试 Agent 任务并查看得分，方便验证 Agent 产品效果。",
+      "title": "Run Scale AI’s AgentEnv evals on Vercel Sandbox",
+      "url": "https://vercel.com/changelog/run-scale-ais-agentenv-evals-on-vercel-sandbox",
+      "sources": [
+        {
+          "url": "https://vercel.com/changelog/run-scale-ais-agentenv-evals-on-vercel-sandbox",
+          "title": "Run Scale AI’s AgentEnv evals on Vercel Sandbox",
+          "source_type": "rss",
+          "published_at": "2026-10-26T19:00:00+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "vercel-sandbox-scale-agentenv-evals",
+          "date": "2026-10-27",
+          "title": "Run Scale AI’s AgentEnv evals on Vercel Sandbox",
+          "summary": "Vercel Sandbox 现在可以运行 Scale AI 的 AgentEnv 评估框架，开发者能在隔离环境中测试 Agent 任务并查看得分，方便验证 Agent 产品效果。",
+          "score": 7.2,
+          "url": "https://vercel.com/changelog/run-scale-ais-agentenv-evals-on-vercel-sandbox"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Vercel",
+        "Agent",
+        "评估",
+        "Scale AI"
+      ]
+    },
+    {
+      "product_id": "product-92d1b297c66cce17",
+      "product_name": "ChatGPT",
+      "builder_name": "OpenAI News",
+      "first_seen": "2026-07-30",
+      "last_seen": "2026-10-27",
+      "occurrence_count": 6,
+      "intelligence_type": "market_signal",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "OpenAI 发布 Signals 数据，展示近 100 个国家 165 种工作活动中人们怎么用 ChatGPT，能帮产品经理理解真实工作场景。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.0,
+      "summary": "OpenAI 发布 Signals 数据，展示近 100 个国家 165 种工作活动中人们怎么用 ChatGPT，能帮产品经理理解真实工作场景。",
+      "title": "ChatGPT’s expanding world of work",
+      "url": "https://openai.com/index/chatgpt-expanding-world-of-work",
+      "sources": [
+        {
+          "url": "https://openai.com/index/chatgpt-for-academic-researchers",
+          "title": "Accelerating scientific discovery with ChatGPT for Academic Researchers",
+          "source_type": "rss",
+          "published_at": "2026-07-29T10:00:00+00:00"
+        },
+        {
+          "url": "https://openai.com/index/testing-ads-in-chatgpt",
+          "title": "Testing ads in ChatGPT",
+          "source_type": "rss",
+          "published_at": "2026-08-11T10:00:00+00:00"
+        },
+        {
+          "url": "https://openai.com/index/how-enterprises-put-ai-to-work",
+          "title": "From assistance to execution: How enterprises put AI to work",
+          "source_type": "rss",
+          "published_at": "2026-08-12T06:00:00+00:00"
+        },
+        {
+          "url": "https://openai.com/index/jump-trading",
+          "title": "How Jump Trading is scaling quant research with ChatGPT",
+          "source_type": "rss",
+          "published_at": "2026-10-06T12:00:00+00:00"
+        },
+        {
+          "url": "https://openai.com/index/low-resource-programming-languages",
+          "title": "Advancing coding in low‑resource programming languages",
+          "source_type": "rss",
+          "published_at": "2026-10-19T12:00:00+00:00"
+        },
+        {
+          "url": "https://openai.com/index/chatgpt-expanding-world-of-work",
+          "title": "ChatGPT’s expanding world of work",
+          "source_type": "rss",
+          "published_at": "2026-10-26T10:00:00+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "openai-chatgpt-academic-researchers",
+          "date": "2026-07-30",
+          "title": "Accelerating scientific discovery with ChatGPT for Academic Researchers",
+          "summary": "OpenAI向10万学术研究者免费提供ChatGPT高级模型，加速科学发现。",
+          "score": 8.0,
+          "url": "https://openai.com/index/chatgpt-for-academic-researchers"
+        },
+        {
+          "update_id": "openai-testing-ads-in-chatgpt",
+          "date": "2026-08-12",
+          "title": "Testing ads in ChatGPT",
+          "summary": "OpenAI开始在ChatGPT中测试广告，以支持免费访问，但强调广告清晰标注、不影响回答独立性。",
+          "score": 8.5,
+          "url": "https://openai.com/index/testing-ads-in-chatgpt"
+        },
+        {
+          "update_id": "openai-enterprise-agentic-ai-report",
+          "date": "2026-08-13",
+          "title": "From assistance to execution: How enterprises put AI to work",
+          "summary": "OpenAI 发布研究报告，揭示企业如何采用 agentic AI，使用 ChatGPT 和 Codex，前沿企业领先。",
+          "score": 7.5,
+          "url": "https://openai.com/index/how-enterprises-put-ai-to-work"
+        },
+        {
+          "update_id": "openai-jump-trading-chatgpt-quant-research",
+          "date": "2026-10-07",
+          "title": "How Jump Trading is scaling quant research with ChatGPT",
+          "summary": "OpenAI 发布 Jump Trading 案例，讲量化团队用 ChatGPT 把多数据源的长流程研究串起来并保留人工复核，可参考企业级 AI 工作流怎么设计。",
+          "score": 7.2,
+          "url": "https://openai.com/index/jump-trading"
+        },
+        {
+          "update_id": "openai-low-resource-programming-languages",
+          "date": "2026-10-20",
+          "title": "Advancing coding in low‑resource programming languages",
+          "summary": "OpenAI 改进了 ChatGPT 在低资源编程语言（如 COBOL）上的表现，并发布了新的评估，有助于软件工程和迁移任务。",
+          "score": 7.0,
+          "url": "https://openai.com/index/low-resource-programming-languages"
+        },
+        {
+          "update_id": "chatgpt-signals-work-activities",
+          "date": "2026-10-27",
+          "title": "ChatGPT’s expanding world of work",
+          "summary": "OpenAI 发布 Signals 数据，展示近 100 个国家 165 种工作活动中人们怎么用 ChatGPT，能帮产品经理理解真实工作场景。",
+          "score": 7.0,
+          "url": "https://openai.com/index/chatgpt-expanding-world-of-work"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "OpenAI",
+        "ChatGPT",
+        "学术",
+        "广告",
+        "商业模式",
+        "企业应用",
+        "Agent",
+        "企业落地",
+        "工作流",
+        "金融",
+        "编程语言",
+        "模型能力",
+        "工作场景",
+        "行业观察"
+      ]
+    },
     {
       "product_id": "product-be5d68a649497e6d",
       "product_name": "10年前的CNN在皮肤癌诊断上跑赢前沿LLM",
@@ -3001,119 +3565,6 @@
         "coding-agent",
         "权限管理",
         "产品更新"
-      ]
-    },
-    {
-      "product_id": "product-92d1b297c66cce17",
-      "product_name": "ChatGPT",
-      "builder_name": "OpenAI News",
-      "first_seen": "2026-07-30",
-      "last_seen": "2026-10-20",
-      "occurrence_count": 5,
-      "intelligence_type": "model_capability",
-      "evidence_status": "first_party",
-      "target_user": "未公开",
-      "user_problem": "未公开",
-      "what_it_is": "OpenAI 改进了 ChatGPT 在低资源编程语言（如 COBOL）上的表现，并发布了新的评估，有助于软件工程和迁移任务。",
-      "ai_role": "未公开",
-      "implementation_idea": "未公开",
-      "hands_on_exercise": "未公开",
-      "limitations_or_uncertainties": "未公开",
-      "region": "global",
-      "score": 7.0,
-      "summary": "OpenAI 改进了 ChatGPT 在低资源编程语言（如 COBOL）上的表现，并发布了新的评估，有助于软件工程和迁移任务。",
-      "title": "Advancing coding in low‑resource programming languages",
-      "url": "https://openai.com/index/low-resource-programming-languages",
-      "sources": [
-        {
-          "url": "https://openai.com/index/chatgpt-for-academic-researchers",
-          "title": "Accelerating scientific discovery with ChatGPT for Academic Researchers",
-          "source_type": "rss",
-          "published_at": "2026-07-29T10:00:00+00:00"
-        },
-        {
-          "url": "https://openai.com/index/testing-ads-in-chatgpt",
-          "title": "Testing ads in ChatGPT",
-          "source_type": "rss",
-          "published_at": "2026-08-11T10:00:00+00:00"
-        },
-        {
-          "url": "https://openai.com/index/how-enterprises-put-ai-to-work",
-          "title": "From assistance to execution: How enterprises put AI to work",
-          "source_type": "rss",
-          "published_at": "2026-08-12T06:00:00+00:00"
-        },
-        {
-          "url": "https://openai.com/index/jump-trading",
-          "title": "How Jump Trading is scaling quant research with ChatGPT",
-          "source_type": "rss",
-          "published_at": "2026-10-06T12:00:00+00:00"
-        },
-        {
-          "url": "https://openai.com/index/low-resource-programming-languages",
-          "title": "Advancing coding in low‑resource programming languages",
-          "source_type": "rss",
-          "published_at": "2026-10-19T12:00:00+00:00"
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "openai-chatgpt-academic-researchers",
-          "date": "2026-07-30",
-          "title": "Accelerating scientific discovery with ChatGPT for Academic Researchers",
-          "summary": "OpenAI向10万学术研究者免费提供ChatGPT高级模型，加速科学发现。",
-          "score": 8.0,
-          "url": "https://openai.com/index/chatgpt-for-academic-researchers"
-        },
-        {
-          "update_id": "openai-testing-ads-in-chatgpt",
-          "date": "2026-08-12",
-          "title": "Testing ads in ChatGPT",
-          "summary": "OpenAI开始在ChatGPT中测试广告，以支持免费访问，但强调广告清晰标注、不影响回答独立性。",
-          "score": 8.5,
-          "url": "https://openai.com/index/testing-ads-in-chatgpt"
-        },
-        {
-          "update_id": "openai-enterprise-agentic-ai-report",
-          "date": "2026-08-13",
-          "title": "From assistance to execution: How enterprises put AI to work",
-          "summary": "OpenAI 发布研究报告，揭示企业如何采用 agentic AI，使用 ChatGPT 和 Codex，前沿企业领先。",
-          "score": 7.5,
-          "url": "https://openai.com/index/how-enterprises-put-ai-to-work"
-        },
-        {
-          "update_id": "openai-jump-trading-chatgpt-quant-research",
-          "date": "2026-10-07",
-          "title": "How Jump Trading is scaling quant research with ChatGPT",
-          "summary": "OpenAI 发布 Jump Trading 案例，讲量化团队用 ChatGPT 把多数据源的长流程研究串起来并保留人工复核，可参考企业级 AI 工作流怎么设计。",
-          "score": 7.2,
-          "url": "https://openai.com/index/jump-trading"
-        },
-        {
-          "update_id": "openai-low-resource-programming-languages",
-          "date": "2026-10-20",
-          "title": "Advancing coding in low‑resource programming languages",
-          "summary": "OpenAI 改进了 ChatGPT 在低资源编程语言（如 COBOL）上的表现，并发布了新的评估，有助于软件工程和迁移任务。",
-          "score": 7.0,
-          "url": "https://openai.com/index/low-resource-programming-languages"
-        }
-      ],
-      "usage_flow": [],
-      "learning_points": [],
-      "verticals": [],
-      "tags": [
-        "OpenAI",
-        "ChatGPT",
-        "学术",
-        "广告",
-        "商业模式",
-        "企业应用",
-        "Agent",
-        "企业落地",
-        "工作流",
-        "金融",
-        "编程语言",
-        "模型能力"
       ]
     },
     {
