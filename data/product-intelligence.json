@@ -1,7 +1,423 @@
 {
   "version": 1,
-  "updated_at": "2026-10-28T05:41:06.310531+00:00",
+  "updated_at": "2026-10-29T05:46:46.647751+00:00",
   "products": [
+    {
+      "product_id": "product-bc0333535e2d765a",
+      "product_name": "Grok Bot / Dot / Meta Muse / Claude Duet",
+      "builder_name": "Claire Vo",
+      "first_seen": "2026-10-29",
+      "last_seen": "2026-10-29",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "verified",
+      "target_user": "想找一个能代理日常事务的 AI 助手的个人用户，尤其是产品经理、开发者、需要兼顾工作的家长",
+      "user_problem": "市面上个人 Agent 太多，宣传都很强，但真放到写 Slack 回复、修 bug、做 Figma 图、整理收件箱等具体任务里，表现参差不齐，用户不知道怎么选、敢不敢信",
+      "what_it_is": "AI 产品经理 Claire Vo 设计的个人 Agent 基准测试，用 9 个真实任务对比 Grok Bot、Dot、Muse、Claude Duet 的实际表现，并给出工作/生活场景的信任建议。",
+      "ai_role": "Agent 是执行者：理解任务→规划步骤→调用外部工具→输出结果；评分 AI 是裁判：按预设标准给每个任务打分",
+      "implementation_idea": "核心是'计算机使用（Computer Use）'——让 AI 能直接操控电脑界面或 API，像人一样打开软件、读报错、写代码、做设计。评测者用另一套 AI 当'监考'，避免人为主观打分。",
+      "hands_on_exercise": "选一个你常用的 Agent（如 Claude、ChatGPT 或 Grok），给它同一个复杂任务（例如'整理我本周邮件并列出待办'），记录它实际做了什么、哪里卡壳、结果是否可用，对比官方宣传的能力描述",
+      "limitations_or_uncertainties": "评测由 Claire Vo 个人设计任务和评分标准，非第三方独立机构；9 个任务覆盖有限，未公开各 Agent 具体版本号和运行日期；Codex 作为评分者可能存在偏向性未公开",
+      "region": "global",
+      "score": 8.2,
+      "summary": "Claire Vo 用九个真实任务（Slack 回复、修 bug、Figma 缩略图、收件箱整理等）横向评测 Grok Bot、Dot、Muse 和 Claude Duet 四款个人 Agent，并给出工作与生活场景的信任建议；适合看 Agent 产品在真实任务中的表现差异。",
+      "title": "Grok Bot、Dot、Muse、Claude Duet 四款个人 Agent 实战横评：谁更能打？",
+      "url": "https://www.lennysnewsletter.com/p/grok-vs-dot-vs-muse-vs-claude-duet",
+      "sources": [
+        {
+          "url": "https://www.lennysnewsletter.com/p/grok-vs-dot-vs-muse-vs-claude-duet",
+          "title": "Grok vs. Dot vs. Muse vs. Claude Duet: which one crushes the competition?",
+          "source_type": "newsletter",
+          "published_at": "2026-10-28T12:04:22+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "personal-agent-benchmark-claire-vo",
+          "date": "2026-10-29",
+          "title": "Grok Bot、Dot、Muse、Claude Duet 四款个人 Agent 实战横评：谁更能打？",
+          "summary": "Claire Vo 用九个真实任务（Slack 回复、修 bug、Figma 缩略图、收件箱整理等）横向评测 Grok Bot、Dot、Muse 和 Claude Duet 四款个人 Agent，并给出工作与生活场景的信任建议；适合看 Agent 产品在真实任务中的表现差异。",
+          "score": 8.2,
+          "url": "https://www.lennysnewsletter.com/p/grok-vs-dot-vs-muse-vs-claude-duet"
+        }
+      ],
+      "usage_flow": [
+        "用户给 Agent 一个自然语言任务指令（如'帮我草拟 Slack 回复'、'从 Sentry 报错修 bug'）",
+        "Agent 自主调用工具（浏览器、代码执行、Figma API 等）完成任务",
+        "Claire Vo 用另一套 AI（Claude 操作 Dot，Codex 操作其余）实时评分",
+        "对比各 Agent 的完成质量、速度、可靠性，得出最终分数板"
+      ],
+      "learning_points": [
+        "Agent（智能体）：不只是聊天，而是能自主规划、调用工具完成多步骤任务的 AI 系统",
+        "Computer Use：让 AI 像人一样看屏幕、点鼠标、输文字，是 Agent 落地的关键技术之一",
+        "基准测试（Benchmark）：用固定任务集横向对比产品，比看宣传文案更能反映真实能力"
+      ],
+      "verticals": [],
+      "tags": [
+        "个人Agent",
+        "产品评测",
+        "Agent"
+      ]
+    },
+    {
+      "product_id": "product-45eea62c6be8685d",
+      "product_name": "Legora",
+      "builder_name": "OpenAI News",
+      "first_seen": "2026-10-29",
+      "last_seen": "2026-10-29",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "律师事务所律师、企业法务团队（in-house legal）",
+      "user_problem": "律师大量时间耗在合同逐条审阅、法律检索、文书格式调整等重复性事务上，挤占了高价值策略分析和客户沟通的时间。",
+      "what_it_is": "一个面向律师和法律团队的 AI 协作平台，把合同审查、法律研究、文书起草等重复工作交给 AI Agent 自动处理。",
+      "ai_role": "AI 负责合同分析、法律研究、文书起草的初稿生成；律师保留最终决策权。",
+      "implementation_idea": "底层调用 OpenAI 的 GPT 模型做语言理解和生成，用 Codex 处理需要精确逻辑或代码化的规则匹配，再把多个任务串成能自动流转的 Agent 工作流——相当于给法律工作配了一个能自己跑任务的智能助理。",
+      "hands_on_exercise": "用 ChatGPT 上传一份租房合同，让 AI 标出对你不利的条款并解释原因，然后对比它漏掉了哪些你自己能发现的风险点——体会 AI 辅助审查的边界。",
+      "limitations_or_uncertainties": "未公开具体使用哪些 OpenAI 模型版本、Codex 在法律场景中的具体调用方式、定价模式、以及 AI 生成内容的法律责任归属如何界定。",
+      "region": "global",
+      "score": 8.0,
+      "summary": "Legora 利用 OpenAI 模型、ChatGPT 和 Codex 打造法律工作 Agent 操作系统，加速合同分析等流程，让律师专注高价值工作；是法律垂直 AI 产品的一手案例。",
+      "title": "Legora：用 OpenAI 模型打造法律工作的 Agent 操作系统",
+      "url": "https://openai.com/index/legora",
+      "sources": [
+        {
+          "url": "https://openai.com/index/legora",
+          "title": "Legora is building the agentic operating system for legal work",
+          "source_type": "rss",
+          "published_at": "2026-10-28T09:30:00+00:00"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Legora",
+          "title": "Legora",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://grokipedia.com/page/Legora",
+          "title": "Legora",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "legora-legal-agent-openai-case",
+          "date": "2026-10-29",
+          "title": "Legora：用 OpenAI 模型打造法律工作的 Agent 操作系统",
+          "summary": "Legora 利用 OpenAI 模型、ChatGPT 和 Codex 打造法律工作 Agent 操作系统，加速合同分析等流程，让律师专注高价值工作；是法律垂直 AI 产品的一手案例。",
+          "score": 8.0,
+          "url": "https://openai.com/index/legora"
+        }
+      ],
+      "usage_flow": [
+        "上传合同或法律文档到 Legora 平台",
+        "AI Agent 自动分析内容、标注风险条款、提取关键信息",
+        "律师审阅 AI 生成的分析结果，做最终判断和修改",
+        "直接导出修订版文档或生成新文书"
+      ],
+      "learning_points": [
+        "Agent：能自主分解任务、调用工具、按步骤执行的 AI，不只是单次问答",
+        "垂直行业 AI：把通用大模型能力封装进特定职业的工作流，解决该领域特有的重复劳动",
+        "人机协作：AI 做初筛和草稿，人类做把关和决策，不是完全替代"
+      ],
+      "verticals": [],
+      "tags": [
+        "法律AI",
+        "Agent",
+        "垂直产品"
+      ]
+    },
+    {
+      "product_id": "product-825c5def8639797a",
+      "product_name": "GitHub Copilot Fusion",
+      "builder_name": "Artificial Analysis",
+      "first_seen": "2026-10-29",
+      "last_seen": "2026-10-29",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "GitHub Copilot 推出 Fusion 功能，自动编排 Anthropic 和 OpenAI 模型来平衡性能与成本；值得看多模型路由如何影响产品体验和成本结构。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.8,
+      "summary": "GitHub Copilot 推出 Fusion 功能，自动编排 Anthropic 和 OpenAI 模型来平衡性能与成本；值得看多模型路由如何影响产品体验和成本结构。",
+      "title": "Github Copilot Fusion Orchestrates Anthropic And Openai Models To Balance Performance And Cost",
+      "url": "https://artificialanalysis.ai/articles/github-copilot-fusion-orchestrates-anthropic-and-openai-models-to-balance-performance-and-cost",
+      "sources": [
+        {
+          "url": "https://artificialanalysis.ai/articles/github-copilot-fusion-orchestrates-anthropic-and-openai-models-to-balance-performance-and-cost",
+          "title": "Github Copilot Fusion Orchestrates Anthropic And Openai Models To Balance Performance And Cost",
+          "source_type": "public_web",
+          "published_at": "2026-10-28T00:00:00+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "github-copilot-fusion-orchestration",
+          "date": "2026-10-29",
+          "title": "Github Copilot Fusion Orchestrates Anthropic And Openai Models To Balance Performance And Cost",
+          "summary": "GitHub Copilot 推出 Fusion 功能，自动编排 Anthropic 和 OpenAI 模型来平衡性能与成本；值得看多模型路由如何影响产品体验和成本结构。",
+          "score": 7.8,
+          "url": "https://artificialanalysis.ai/articles/github-copilot-fusion-orchestrates-anthropic-and-openai-models-to-balance-performance-and-cost"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "GitHub Copilot",
+        "模型编排",
+        "成本优化"
+      ]
+    },
+    {
+      "product_id": "product-3f855d888f15a294",
+      "product_name": "Supabase",
+      "builder_name": "swyx .ai",
+      "first_seen": "2026-10-29",
+      "last_seen": "2026-10-29",
+      "occurrence_count": 1,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Latent Space 播客邀请 Supabase 创始人谈为 AI 智能体构建后端；帮助理解智能体产品的基础设施选择。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.8,
+      "summary": "Latent Space 播客邀请 Supabase 创始人谈为 AI 智能体构建后端；帮助理解智能体产品的基础设施选择。",
+      "title": "Why Agents Love Supabase",
+      "url": "https://latent.space/p/supabase/",
+      "sources": [
+        {
+          "url": "https://latent.space/p/supabase/",
+          "title": "Why Agents Love Supabase",
+          "source_type": "rss",
+          "published_at": "2026-10-28T19:48:05+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "supabase-agents-backend-podcast",
+          "date": "2026-10-29",
+          "title": "Why Agents Love Supabase",
+          "summary": "Latent Space 播客邀请 Supabase 创始人谈为 AI 智能体构建后端；帮助理解智能体产品的基础设施选择。",
+          "score": 7.8,
+          "url": "https://latent.space/p/supabase/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Supabase",
+        "Agent",
+        "后端",
+        "播客"
+      ]
+    },
+    {
+      "product_id": "product-2a1115f27fabf57d",
+      "product_name": "Microsoft Copilot harness in Foundry Agent Service",
+      "builder_name": "Jeff, Viswajeeet Balaji, Anthony Chu",
+      "first_seen": "2026-10-29",
+      "last_seen": "2026-10-29",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "微软在 Foundry Agent Service 中推出 Copilot harness，把模型推理所需的上下文、工具和执行环境打包成统一 Agent 运行框架，值得看它如何降低构建 Agent 的门槛。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.6,
+      "summary": "微软在 Foundry Agent Service 中推出 Copilot harness，把模型推理所需的上下文、工具和执行环境打包成统一 Agent 运行框架，值得看它如何降低构建 Agent 的门槛。",
+      "title": "Introducing the Microsoft Copilot harness in Foundry Agent Service",
+      "url": "https://devblogs.microsoft.com/foundry/microsoft-copilot-harness-in-foundry/",
+      "sources": [
+        {
+          "url": "https://devblogs.microsoft.com/foundry/microsoft-copilot-harness-in-foundry/",
+          "title": "Introducing the Microsoft Copilot harness in Foundry Agent Service",
+          "source_type": "rss",
+          "published_at": "2026-10-28T16:45:06+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "foundry-copilot-harness-launch",
+          "date": "2026-10-29",
+          "title": "Introducing the Microsoft Copilot harness in Foundry Agent Service",
+          "summary": "微软在 Foundry Agent Service 中推出 Copilot harness，把模型推理所需的上下文、工具和执行环境打包成统一 Agent 运行框架，值得看它如何降低构建 Agent 的门槛。",
+          "score": 7.6,
+          "url": "https://devblogs.microsoft.com/foundry/microsoft-copilot-harness-in-foundry/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "Microsoft Foundry",
+        "开发框架"
+      ]
+    },
+    {
+      "product_id": "product-956b3dae1a2351f6",
+      "product_name": "Gemini 4 Carbon",
+      "builder_name": "Emma Roth",
+      "first_seen": "2026-10-29",
+      "last_seen": "2026-10-29",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Google 发布 Gemini 4 Carbon 模型，称在编码、智能体任务和网络安全上有显著提升；对关注新模型能力如何催生产品的人值得留意。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.5,
+      "summary": "Google 发布 Gemini 4 Carbon 模型，称在编码、智能体任务和网络安全上有显著提升；对关注新模型能力如何催生产品的人值得留意。",
+      "title": "Google launches Gemini 4 Carbon with a ‘significant leap’ in cybersecurity",
+      "url": "https://www.theverge.com/tech/1021339/google-gemini-4-carbon-cybersecurity-frontier",
+      "sources": [
+        {
+          "url": "https://www.theverge.com/tech/1021339/google-gemini-4-carbon-cybersecurity-frontier",
+          "title": "Google launches Gemini 4 Carbon with a ‘significant leap’ in cybersecurity",
+          "source_type": "rss",
+          "published_at": "2026-10-28T20:03:00+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "google-gemini-4-carbon-launch",
+          "date": "2026-10-29",
+          "title": "Google launches Gemini 4 Carbon with a ‘significant leap’ in cybersecurity",
+          "summary": "Google 发布 Gemini 4 Carbon 模型，称在编码、智能体任务和网络安全上有显著提升；对关注新模型能力如何催生产品的人值得留意。",
+          "score": 7.5,
+          "url": "https://www.theverge.com/tech/1021339/google-gemini-4-carbon-cybersecurity-frontier"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Gemini",
+        "模型发布",
+        "网络安全",
+        "Agent"
+      ]
+    },
+    {
+      "product_id": "product-13879438016b4c98",
+      "product_name": "ServiceNow + OpenAI",
+      "builder_name": "OpenAI News",
+      "first_seen": "2026-10-29",
+      "last_seen": "2026-10-29",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "OpenAI 与 ServiceNow 扩大合作，把 OpenAI 模型和 Agent 引入 ServiceNow 工作流，同时让 ServiceNow 能力进入 ChatGPT 和 Codex；可观察企业软件与 AI Agent 的融合路径。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.2,
+      "summary": "OpenAI 与 ServiceNow 扩大合作，把 OpenAI 模型和 Agent 引入 ServiceNow 工作流，同时让 ServiceNow 能力进入 ChatGPT 和 Codex；可观察企业软件与 AI Agent 的融合路径。",
+      "title": "OpenAI and ServiceNow expand partnership across enterprise workflows",
+      "url": "https://openai.com/index/openai-servicenow-partnership-expansion",
+      "sources": [
+        {
+          "url": "https://openai.com/index/openai-servicenow-partnership-expansion",
+          "title": "OpenAI and ServiceNow expand partnership across enterprise workflows",
+          "source_type": "rss",
+          "published_at": "2026-10-28T13:15:00+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "openai-servicenow-partnership-expansion",
+          "date": "2026-10-29",
+          "title": "OpenAI and ServiceNow expand partnership across enterprise workflows",
+          "summary": "OpenAI 与 ServiceNow 扩大合作，把 OpenAI 模型和 Agent 引入 ServiceNow 工作流，同时让 ServiceNow 能力进入 ChatGPT 和 Codex；可观察企业软件与 AI Agent 的融合路径。",
+          "score": 7.2,
+          "url": "https://openai.com/index/openai-servicenow-partnership-expansion"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "OpenAI",
+        "ServiceNow",
+        "企业Agent"
+      ]
+    },
+    {
+      "product_id": "product-eabc226d2b96bc2a",
+      "product_name": "Akai MPC Sample Key",
+      "builder_name": "Terrence O’Brien",
+      "first_seen": "2026-10-29",
+      "last_seen": "2026-10-29",
+      "occurrence_count": 1,
+      "intelligence_type": "early_signal",
+      "evidence_status": "early_signal",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Akai 在正式发布前向改装社区开放开源固件的 MPC Sample Key，社区用 vibe coding 做自定义 mod，展示了硬件产品借助 AI 编程社区做生态的早期做法。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.2,
+      "summary": "Akai 在正式发布前向改装社区开放开源固件的 MPC Sample Key，社区用 vibe coding 做自定义 mod，展示了硬件产品借助 AI 编程社区做生态的早期做法。",
+      "title": "Akai is embracing vibe-coded mods with an open-source MPC",
+      "url": "https://www.theverge.com/gadgets/1021405/akai-open-source-mpc-sample-key",
+      "sources": [
+        {
+          "url": "https://www.theverge.com/gadgets/1021405/akai-open-source-mpc-sample-key",
+          "title": "Akai is embracing vibe-coded mods with an open-source MPC",
+          "source_type": "rss",
+          "published_at": "2026-10-28T21:34:04+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "akai-open-source-mpc-vibe-coding",
+          "date": "2026-10-29",
+          "title": "Akai is embracing vibe-coded mods with an open-source MPC",
+          "summary": "Akai 在正式发布前向改装社区开放开源固件的 MPC Sample Key，社区用 vibe coding 做自定义 mod，展示了硬件产品借助 AI 编程社区做生态的早期做法。",
+          "score": 7.2,
+          "url": "https://www.theverge.com/gadgets/1021405/akai-open-source-mpc-sample-key"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "开源硬件",
+        "vibe coding",
+        "社区"
+      ]
+    },
     {
       "product_id": "product-eaaef517aabeb33b",
       "product_name": "Replit Agent（推测，官方未给此功能单独命名）",
