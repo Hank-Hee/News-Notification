@@ -1,7 +1,433 @@
 {
   "version": 1,
-  "updated_at": "2026-10-31T05:39:14.015494+00:00",
+  "updated_at": "2026-11-01T06:01:04.838164+00:00",
   "products": [
+    {
+      "product_id": "product-78b6dacdc065811b",
+      "product_name": "HackerTube",
+      "builder_name": "karpathy",
+      "first_seen": "2026-11-01",
+      "last_seen": "2026-11-01",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "厌倦了 YouTube 算法推荐、想发现高质量技术/知识类视频的人",
+      "user_problem": "YouTube 推荐被算法绑架，充斥夸张缩略图、低质内容和成瘾性设计，用户需要时刻保持警惕不被' bait '（ bait 指标题党/诱饵内容）",
+      "what_it_is": "一个只展示 Hacker News 用户 2007 年以来在评论里推荐过的视频的类 YouTube 网站",
+      "ai_role": "Karpathy 使用 AI 编码助手（Opus 5.5）辅助开发，约 2 小时完成；AI 负责根据自然语言指令生成代码，而非直接参与推荐逻辑",
+      "implementation_idea": "核心思路是'用社区人工信号替代机器算法'：从 39,834 条 HN 评论里提取 YouTube 链接，去重后得到 6,454 个视频，套一个简洁的 YouTube 风格界面。推荐逻辑不是算法算出来的，而是'被真实人类在讨论中推荐过'这个社区背书。",
+      "hands_on_exercise": "30 分钟：去 Hacker News 搜索你感兴趣的任意关键词，收集 10 个评论里提到的 YouTube 视频链接，用 Notion 或飞书文档做一个简易的'个人推荐页'，体会'人工筛选 vs 算法推荐'的差异",
+      "limitations_or_uncertainties": "未公开具体的数据清洗规则（如何判断一条评论真的在'推荐'视频）、更新频率、是否持续维护；AI 辅助开发的具体 prompt 和分工细节 Karpathy 未详细披露",
+      "region": "global",
+      "score": 8.5,
+      "summary": "Karpathy 用 HN 评论里推荐的视频做出 HackerTube；解决 YouTube 推荐被算法绑架的问题，展示了用社区信号做产品的一手实践。",
+      "title": "HackerTube：用 Hacker News 社区推荐替代 YouTube 算法推荐",
+      "url": "https://karpathy.bearblog.dev/hacker-tube/",
+      "sources": [
+        {
+          "url": "https://karpathy.bearblog.dev/hacker-tube/",
+          "title": "HackerTube: YouTube built from videos recommended by HN",
+          "source_type": "hackernews",
+          "published_at": "2026-10-31T19:56:53+00:00"
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=50319510",
+          "title": "HackerTube: YouTube built from videos recommended by HN ...",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://explorineer.com/en/trends/hackertube-youtube-built-from-videos-recommended-by-hn--91234",
+          "title": "HackerTube: YouTube built from videos recommended by HN",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "hackertube-karpathy-launch",
+          "date": "2026-11-01",
+          "title": "HackerTube：用 Hacker News 社区推荐替代 YouTube 算法推荐",
+          "summary": "Karpathy 用 HN 评论里推荐的视频做出 HackerTube；解决 YouTube 推荐被算法绑架的问题，展示了用社区信号做产品的一手实践。",
+          "score": 8.5,
+          "url": "https://karpathy.bearblog.dev/hacker-tube/"
+        }
+      ],
+      "usage_flow": [
+        "打开 hackertube.org，直接浏览视频列表",
+        "点击感兴趣的视频，跳转到 YouTube 播放",
+        "用搜索或分类找到特定主题的视频"
+      ],
+      "learning_points": [
+        "RAG（检索增强生成）：这里不是典型 RAG，但思路相通——用外部真实数据（HN 评论）作为'知识库'来构建产品，而非让模型自己编造",
+        "Embedding（嵌入）：未公开是否使用，但初学者可理解为'把文本/视频变成向量'的技术，是推荐系统的常见底层",
+        "Vibe Coding（氛围编程）：Karpathy 倡导的一种开发方式，用自然语言指挥 AI 写代码，人负责把关方向和测试，不纠结具体代码实现"
+      ],
+      "verticals": [],
+      "tags": [
+        "Karpathy",
+        "推荐系统",
+        "社区产品"
+      ]
+    },
+    {
+      "product_id": "product-aba4d7a242cc37ba",
+      "product_name": "Muse Charm（DIY 版）",
+      "builder_name": "Sean Hollister",
+      "first_seen": "2026-11-01",
+      "last_seen": "2026-11-01",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "verified",
+      "target_user": "想动手做 AI 硬件的初学者、电子爱好者、想验证 LLM+嵌入式可行性的开发者",
+      "user_problem": "Meta 的 Muse Charm 还没发售，普通人想体验\"随身 AI 宠物\"只能等；且官方方案价格、开放度未知",
+      "what_it_is": "The Verge 记者 Sean Hollister 自己动手做的 AI 电子宠物硬件，用廉价芯片 ESP32 跑 Claude 大模型，能互动、有表情，功能对标 Meta 尚未发售的 Muse Charm",
+      "ai_role": "Claude 负责理解用户输入、生成个性化回复，并决定屏幕该显示什么表情/情绪状态",
+      "implementation_idea": "把平时在网页聊天的 Claude，通过 API 接到一块能联网的小芯片上；芯片负责收音和显示，Claude 负责\"动脑\"，两者用 WiFi 或蓝牙传数据。关键是证明不需要等大公司，几十块钱的硬件就能跑起来。",
+      "hands_on_exercise": "30 分钟：在 Claude 官网注册，打开 API 控制台，用自然语言描述\"我要一个会随机变换表情的电子宠物网页\"，让 Claude 生成代码；复制到本地 HTML 文件打开，观察 AI 怎么写交互逻辑。",
+      "limitations_or_uncertainties": "DIY 版本的续航、离线能力、量产成本未公开；Meta 官方 Muse Charm 的最终售价、发售日期、功能细节也未公开；文中未说明是否支持语音唤醒还是仅文字/按钮交互",
+      "region": "global",
+      "score": 8.2,
+      "summary": "The Verge 记者用 ESP32 和 Claude 自己动手做出 AI 电子宠物 Muse Charm；展示了从想法到可玩硬件的完整过程，适合学习如何把模型塞进小设备。",
+      "title": "记者用 ESP32 和 Claude 抢先做出 AI 电子宠物，比 Meta 的 Muse Charm 更早落地",
+      "url": "https://www.theverge.com/gadgets/1013375/muse-charm-gadgets-preview-waveshare-esp32-claude-vibe-code",
+      "sources": [
+        {
+          "url": "https://www.theverge.com/gadgets/1013375/muse-charm-gadgets-preview-waveshare-esp32-claude-vibe-code",
+          "title": "I built an AI Tamagotchi before Meta could",
+          "source_type": "rss",
+          "published_at": "2026-10-31T16:05:00+00:00"
+        },
+        {
+          "url": "https://www.the-independent.com/tech/meta-muse-charm-tamagotchi-b3055670.html",
+          "title": "Meta is making a Tamagotchi-style ‘ Charm ’ that... | The Independent",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://techcrunch.com/2026/09/24/metas-muse-charm-looks-like-a-tamagotchi-but-its-tapping-into-a-much-newer-trend/",
+          "title": "Meta's Muse Charm looks like a Tamagotchi, but... | TechCrunch",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "muse-charm-diy-ai-tamagotchi",
+          "date": "2026-11-01",
+          "title": "记者用 ESP32 和 Claude 抢先做出 AI 电子宠物，比 Meta 的 Muse Charm 更早落地",
+          "summary": "The Verge 记者用 ESP32 和 Claude 自己动手做出 AI 电子宠物 Muse Charm；展示了从想法到可玩硬件的完整过程，适合学习如何把模型塞进小设备。",
+          "score": 8.2,
+          "url": "https://www.theverge.com/gadgets/1013375/muse-charm-gadgets-preview-waveshare-esp32-claude-vibe-code"
+        }
+      ],
+      "usage_flow": [
+        "用 ESP32 开发板 + 墨水屏/小屏幕组装硬件外壳",
+        "通过代码把设备连上 Claude API，让 AI 能接收语音或按钮输入",
+        "AI 生成回复和\"情绪/表情\"，回传到屏幕显示",
+        "用户像养 Tamagotchi 一样日常互动，设备持续在线"
+      ],
+      "learning_points": [
+        "API 调用：就是程序发一条网络请求给 Claude 服务器，问完拿回答，初学者可以先从网页版 API 控制台试",
+        "嵌入式设备（如 ESP32）：指便宜、省电、能联网的小芯片，手机里的传感器也类似，只是性能更弱",
+        "Vibe Coding：用 AI 辅助写代码，不是人一行行敲，而是描述需求让 Claude 生成，再人工改错"
+      ],
+      "verticals": [],
+      "tags": [
+        "AI硬件",
+        "Claude",
+        "DIY",
+        "产品案例"
+      ]
+    },
+    {
+      "product_id": "product-6a786c003f99df20",
+      "product_name": "Arca",
+      "builder_name": "Richard MacManus",
+      "first_seen": "2026-11-01",
+      "last_seen": "2026-11-01",
+      "occurrence_count": 1,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Arca 的 AI 负责人分享如何用持久记忆和自定义 harness 让 agent 连续数天处理金融工作；展示了长周期 agent 产品的真实设计取舍。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.0,
+      "summary": "Arca 的 AI 负责人分享如何用持久记忆和自定义 harness 让 agent 连续数天处理金融工作；展示了长周期 agent 产品的真实设计取舍。",
+      "title": "Agents Prompt People: Using Agents for Long-Horizon Financial Work",
+      "url": "https://latent.space/p/arca/",
+      "sources": [
+        {
+          "url": "https://latent.space/p/arca/",
+          "title": "Agents Prompt People: Using Agents for Long-Horizon Financial Work",
+          "source_type": "rss",
+          "published_at": "2026-10-31T16:05:00+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "arca-long-horizon-financial-agents",
+          "date": "2026-11-01",
+          "title": "Agents Prompt People: Using Agents for Long-Horizon Financial Work",
+          "summary": "Arca 的 AI 负责人分享如何用持久记忆和自定义 harness 让 agent 连续数天处理金融工作；展示了长周期 agent 产品的真实设计取舍。",
+          "score": 8.0,
+          "url": "https://latent.space/p/arca/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "金融",
+        "持久记忆"
+      ]
+    },
+    {
+      "product_id": "product-079759eb44953975",
+      "product_name": "DeepSeek Harness",
+      "builder_name": "财联社",
+      "first_seen": "2026-08-16",
+      "last_seen": "2026-11-01",
+      "occurrence_count": 2,
+      "intelligence_type": "model_capability",
+      "evidence_status": "reported",
+      "target_user": "AI 应用开发者、需要编排多模型/多工具流程的技术团队",
+      "user_problem": "开发者想快速搭建能调用多种工具、多步骤协作的 AI 应用时，常要自己写大量胶水代码，重复造轮子",
+      "what_it_is": "DeepSeek 在 V4 全系列模型上线后开放了 Harness 开发者预览版测试，为开发者提供新的模型调用与编排入口。",
+      "ai_role": "DeepSeek 大模型作为「大脑」理解任务、决策调用哪个插件，并生成最终回复",
+      "implementation_idea": "把每个功能（搜索、计算器、文件读取等）都做成独立插件，Harness 作为总调度器，根据用户输入让模型判断该激活哪些插件、按什么顺序执行，再把结果传回模型继续下一步",
+      "hands_on_exercise": "30 分钟：访问 DeepSeek Harness 官网，按文档安装桌面版；尝试运行一个内置示例（如「搜索网页并总结」），观察模型何时触发搜索插件、如何把搜索结果融入最终回答",
+      "limitations_or_uncertainties": "「V4 全系列模型上线」这一说法在提供的原始链接和搜索结果中均未找到官方直接确认，仅见于财联社新闻标题；Harness 与 V4 模型的具体兼容细节、预览版功能边界未公开",
+      "region": "china",
+      "score": 7.8,
+      "summary": "DeepSeek 在 V4 全系列模型上线后开放了 Harness 开发者预览版测试，为开发者提供新的模型调用与编排入口。",
+      "title": "V4全系列模型上线后，DeepSeek Harness开发者预览版开放测试 - 财联社",
+      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE4wd0JWNXNkT3NmUy1UV09ldm1iSXY3dTllQ1o1ZFg5MFZPS1BRY3RCTUJLc05UYWJTb1R6VHhoT0NXM3hJQU5xLQ?oc=5",
+      "sources": [
+        {
+          "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE4wd0JWNXNkT3NmUy1UV09ldm1iSXY3dTllQ1o1ZFg5MFZPS1BRY3RCTUJLc05UYWJTb1R6VHhoT0NXM3hJQU5xLQ?oc=5",
+          "title": "V4全系列模型上线后，DeepSeek Harness开发者预览版开放测试 - 财联社",
+          "source_type": "google_news",
+          "published_at": "2026-08-15T17:50:46+00:00"
+        },
+        {
+          "url": "https://www.deepseek.com/en/harness/",
+          "title": "DeepSeek Harness | Explore the limits of intelligence",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://github.com/deepseek-ai/deepseek-harness",
+          "title": "GitHub - deepseek -ai/ deepseek - harness : DeepSeek Harness ...",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "deepseek-harness-preview",
+          "date": "2026-08-16",
+          "title": "V4全系列模型上线后，DeepSeek Harness开发者预览版开放测试 - 财联社",
+          "summary": "DeepSeek 在 V4 全系列模型上线后开放 Harness 开发者预览版测试，值得关注其智能体框架能力。",
+          "score": 8.0,
+          "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE4wd0JWNXNkT3NmUy1UV09ldm1iSXY3dTllQ1o1ZFg5MFZPS1BRY3RCTUJLc05UYWJTb1R6VHhoT0NXM3hJQU5xLQ?oc=5"
+        },
+        {
+          "update_id": "deepseek-v4-harness-preview",
+          "date": "2026-10-11",
+          "title": "V4全系列模型上线后，DeepSeek Harness开发者预览版开放测试 - 财联社",
+          "summary": "DeepSeek 在 V4 全系列模型上线后开放了 Harness 开发者预览版测试，为开发者提供新的模型调用与编排入口。",
+          "score": 7.8,
+          "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE4wd0JWNXNkT3NmUy1UV09ldm1iSXY3dTllQ1o1ZFg5MFZPS1BRY3RCTUJLc05UYWJTb1R6VHhoT0NXM3hJQU5xLQ?oc=5"
+        }
+      ],
+      "usage_flow": [
+        "安装 Harness 桌面端或从代码启动 Web 界面",
+        "按需选择/开发插件（如搜索、代码执行、数据库连接等）",
+        "用 Harness 编排插件与 DeepSeek 模型的交互流程",
+        "运行并调试 Agent 任务，观察多步骤执行结果"
+      ],
+      "learning_points": [
+        "Agent：让 AI 不仅能聊天，还能自主决定「用什么工具、分几步完成」的系统",
+        "Function Calling（工具调用）：模型识别用户意图后，输出结构化指令去调用外部 API 或插件，而非直接生成答案",
+        "插件化架构：把复杂系统拆成可插拔的小模块，方便复用和扩展"
+      ],
+      "verticals": [],
+      "tags": [
+        "DeepSeek",
+        "智能体",
+        "开发者预览",
+        "模型能力",
+        "开发者工具"
+      ]
+    },
+    {
+      "product_id": "product-e0c8775b890fb1c2",
+      "product_name": "Memdoor",
+      "builder_name": "guregodevo",
+      "first_seen": "2026-11-01",
+      "last_seen": "2026-11-01",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "verified",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "开源项目 Memdoor 用 5 个 Qwen 模型组队解编程题，成绩超过 Fable 5；展示了多 agent 协作在本地模型上的可行做法。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.8,
+      "summary": "开源项目 Memdoor 用 5 个 Qwen 模型组队解编程题，成绩超过 Fable 5；展示了多 agent 协作在本地模型上的可行做法。",
+      "title": "Memdoor: A team of 5 Qwen3.8-27B models beats Fable 5 on LiveCodeBench Hard",
+      "url": "https://github.com/guregodevo/memdoor/tree/main/examples/workflows/team-solve",
+      "sources": [
+        {
+          "url": "https://github.com/guregodevo/memdoor/tree/main/examples/workflows/team-solve",
+          "title": "Memdoor: A team of 5 Qwen3.8-27B models beats Fable 5 on LiveCodeBench Hard",
+          "source_type": "hackernews",
+          "published_at": "2026-10-31T22:46:12+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "memdoor-team-solve-qwen",
+          "date": "2026-11-01",
+          "title": "Memdoor: A team of 5 Qwen3.8-27B models beats Fable 5 on LiveCodeBench Hard",
+          "summary": "开源项目 Memdoor 用 5 个 Qwen 模型组队解编程题，成绩超过 Fable 5；展示了多 agent 协作在本地模型上的可行做法。",
+          "score": 7.8,
+          "url": "https://github.com/guregodevo/memdoor/tree/main/examples/workflows/team-solve"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "多Agent",
+        "Qwen",
+        "开源"
+      ]
+    },
+    {
+      "product_id": "product-79a2b6dd7d7c7939",
+      "product_name": "ChatGPT",
+      "builder_name": "Simon Willison",
+      "first_seen": "2026-08-02",
+      "last_seen": "2026-11-01",
+      "occurrence_count": 2,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Parameter Labs 发现攻击者可通过 ChatGPT 的 HTML 预览沙箱漏洞接管账户；提醒做 AI 产品时沙箱隔离必须严格，否则用户数据会暴露。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.6,
+      "summary": "Parameter Labs 发现攻击者可通过 ChatGPT 的 HTML 预览沙箱漏洞接管账户；提醒做 AI 产品时沙箱隔离必须严格，否则用户数据会暴露。",
+      "title": "How We Took Over ChatGPT Accounts",
+      "url": "https://simonwillison.net/2026/Oct/31/how-we-took-over-chatgpt-accounts/",
+      "sources": [
+        {
+          "url": "https://simonwillison.net/2026/Aug/1/greg-brockman/#atom-everything",
+          "title": "Quoting Greg Brockman",
+          "source_type": "rss",
+          "published_at": "2026-08-01T22:29:44+00:00"
+        },
+        {
+          "url": "https://simonwillison.net/2026/Oct/31/how-we-took-over-chatgpt-accounts/",
+          "title": "How We Took Over ChatGPT Accounts",
+          "source_type": "rss",
+          "published_at": "2026-10-31T23:15:22+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "brockman-chatgpt-slack",
+          "date": "2026-08-02",
+          "title": "Quoting Greg Brockman",
+          "summary": "OpenAI联合创始人Greg Brockman透露内部员工不喜欢被同事的ChatGPT请求打扰，强调AI应增强而非隔阂人际关系。",
+          "score": 7.0,
+          "url": "https://simonwillison.net/2026/Aug/1/greg-brockman/#atom-everything"
+        },
+        {
+          "update_id": "chatgpt-artifacts-account-takeover",
+          "date": "2026-11-01",
+          "title": "How We Took Over ChatGPT Accounts",
+          "summary": "Parameter Labs 发现攻击者可通过 ChatGPT 的 HTML 预览沙箱漏洞接管账户；提醒做 AI 产品时沙箱隔离必须严格，否则用户数据会暴露。",
+          "score": 7.6,
+          "url": "https://simonwillison.net/2026/Oct/31/how-we-took-over-chatgpt-accounts/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "OpenAI",
+        "人机协作",
+        "安全",
+        "ChatGPT",
+        "沙箱"
+      ]
+    },
+    {
+      "product_id": "product-32f0e08cc9620bf3",
+      "product_name": "BBRouter",
+      "builder_name": "creack",
+      "first_seen": "2026-11-01",
+      "last_seen": "2026-11-01",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "开发者因自己接线老出错，做了 3D 虚拟面包板 BBRouter，可模拟 Ben Eater 8 位电脑并让 Claude 通过 MCP 帮忙搭建和排错；展示了 AI 辅助硬件学习的产品思路。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.2,
+      "summary": "开发者因自己接线老出错，做了 3D 虚拟面包板 BBRouter，可模拟 Ben Eater 8 位电脑并让 Claude 通过 MCP 帮忙搭建和排错；展示了 AI 辅助硬件学习的产品思路。",
+      "title": "Show HN: BBRouter – Ben Eater's 8-bit computer, simulated on 3D breadboards",
+      "url": "https://bbrouter.com/bbrouter/ben-eater-sap-1",
+      "sources": [
+        {
+          "url": "https://bbrouter.com/bbrouter/ben-eater-sap-1",
+          "title": "Show HN: BBRouter – Ben Eater's 8-bit computer, simulated on 3D breadboards",
+          "source_type": "hackernews",
+          "published_at": "2026-11-01T00:10:30+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "bbrouter-launch",
+          "date": "2026-11-01",
+          "title": "Show HN: BBRouter – Ben Eater's 8-bit computer, simulated on 3D breadboards",
+          "summary": "开发者因自己接线老出错，做了 3D 虚拟面包板 BBRouter，可模拟 Ben Eater 8 位电脑并让 Claude 通过 MCP 帮忙搭建和排错；展示了 AI 辅助硬件学习的产品思路。",
+          "score": 7.2,
+          "url": "https://bbrouter.com/bbrouter/ben-eater-sap-1"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "MCP",
+        "硬件",
+        "Show HN",
+        "个人产品"
+      ]
+    },
     {
       "product_id": "product-7f7811de59626bc9",
       "product_name": "Claude Code",
@@ -2676,85 +3102,6 @@
       "tags": [
         "多模态",
         "模型更新"
-      ]
-    },
-    {
-      "product_id": "product-079759eb44953975",
-      "product_name": "DeepSeek Harness",
-      "builder_name": "财联社",
-      "first_seen": "2026-08-16",
-      "last_seen": "2026-10-25",
-      "occurrence_count": 2,
-      "intelligence_type": "model_capability",
-      "evidence_status": "reported",
-      "target_user": "AI 应用开发者、需要编排多模型/多工具流程的技术团队",
-      "user_problem": "开发者想快速搭建能调用多种工具、多步骤协作的 AI 应用时，常要自己写大量胶水代码，重复造轮子",
-      "what_it_is": "DeepSeek 官方推出的开源 AI Agent 编排框架，用「插件化」思路让开发者像搭积木一样组合模型能力",
-      "ai_role": "DeepSeek 大模型作为「大脑」理解任务、决策调用哪个插件，并生成最终回复",
-      "implementation_idea": "把每个功能（搜索、计算器、文件读取等）都做成独立插件，Harness 作为总调度器，根据用户输入让模型判断该激活哪些插件、按什么顺序执行，再把结果传回模型继续下一步",
-      "hands_on_exercise": "30 分钟：访问 DeepSeek Harness 官网，按文档安装桌面版；尝试运行一个内置示例（如「搜索网页并总结」），观察模型何时触发搜索插件、如何把搜索结果融入最终回答",
-      "limitations_or_uncertainties": "「V4 全系列模型上线」这一说法在提供的原始链接和搜索结果中均未找到官方直接确认，仅见于财联社新闻标题；Harness 与 V4 模型的具体兼容细节、预览版功能边界未公开",
-      "region": "china",
-      "score": 7.8,
-      "summary": "DeepSeek 在 V4 全系列模型上线后开放了 Harness 开发者预览版测试，为开发者提供新的模型调用与编排入口。",
-      "title": "DeepSeek Harness 开发者预览版开放测试",
-      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE4wd0JWNXNkT3NmUy1UV09ldm1iSXY3dTllQ1o1ZFg5MFZPS1BRY3RCTUJLc05UYWJTb1R6VHhoT0NXM3hJQU5xLQ?oc=5",
-      "sources": [
-        {
-          "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE4wd0JWNXNkT3NmUy1UV09ldm1iSXY3dTllQ1o1ZFg5MFZPS1BRY3RCTUJLc05UYWJTb1R6VHhoT0NXM3hJQU5xLQ?oc=5",
-          "title": "V4全系列模型上线后，DeepSeek Harness开发者预览版开放测试 - 财联社",
-          "source_type": "google_news",
-          "published_at": "2026-08-15T17:50:46+00:00"
-        },
-        {
-          "url": "https://www.deepseek.com/en/harness/",
-          "title": "DeepSeek Harness | Explore the limits of intelligence",
-          "source_type": "supplemental",
-          "published_at": ""
-        },
-        {
-          "url": "https://github.com/deepseek-ai/deepseek-harness",
-          "title": "GitHub - deepseek -ai/ deepseek - harness : DeepSeek Harness ...",
-          "source_type": "supplemental",
-          "published_at": ""
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "deepseek-harness-preview",
-          "date": "2026-08-16",
-          "title": "V4全系列模型上线后，DeepSeek Harness开发者预览版开放测试 - 财联社",
-          "summary": "DeepSeek 在 V4 全系列模型上线后开放 Harness 开发者预览版测试，值得关注其智能体框架能力。",
-          "score": 8.0,
-          "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE4wd0JWNXNkT3NmUy1UV09ldm1iSXY3dTllQ1o1ZFg5MFZPS1BRY3RCTUJLc05UYWJTb1R6VHhoT0NXM3hJQU5xLQ?oc=5"
-        },
-        {
-          "update_id": "deepseek-v4-harness-preview",
-          "date": "2026-10-11",
-          "title": "V4全系列模型上线后，DeepSeek Harness开发者预览版开放测试 - 财联社",
-          "summary": "DeepSeek 在 V4 全系列模型上线后开放了 Harness 开发者预览版测试，为开发者提供新的模型调用与编排入口。",
-          "score": 7.8,
-          "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE4wd0JWNXNkT3NmUy1UV09ldm1iSXY3dTllQ1o1ZFg5MFZPS1BRY3RCTUJLc05UYWJTb1R6VHhoT0NXM3hJQU5xLQ?oc=5"
-        }
-      ],
-      "usage_flow": [
-        "安装 Harness 桌面端或从代码启动 Web 界面",
-        "按需选择/开发插件（如搜索、代码执行、数据库连接等）",
-        "用 Harness 编排插件与 DeepSeek 模型的交互流程",
-        "运行并调试 Agent 任务，观察多步骤执行结果"
-      ],
-      "learning_points": [
-        "Agent：让 AI 不仅能聊天，还能自主决定「用什么工具、分几步完成」的系统",
-        "Function Calling（工具调用）：模型识别用户意图后，输出结构化指令去调用外部 API 或插件，而非直接生成答案",
-        "插件化架构：把复杂系统拆成可插拔的小模块，方便复用和扩展"
-      ],
-      "verticals": [],
-      "tags": [
-        "DeepSeek",
-        "智能体",
-        "开发者预览",
-        "模型能力",
-        "开发者工具"
       ]
     },
     {
@@ -31127,53 +31474,6 @@
       "tags": [
         "微调",
         "本地AI"
-      ]
-    },
-    {
-      "product_id": "product-79a2b6dd7d7c7939",
-      "product_name": "ChatGPT",
-      "builder_name": "Simon Willison",
-      "first_seen": "2026-08-02",
-      "last_seen": "2026-08-02",
-      "occurrence_count": 1,
-      "intelligence_type": "builder_insight",
-      "evidence_status": "first_party",
-      "target_user": "未公开",
-      "user_problem": "未公开",
-      "what_it_is": "OpenAI联合创始人Greg Brockman透露内部员工不喜欢被同事的ChatGPT请求打扰，强调AI应增强而非隔阂人际关系。",
-      "ai_role": "未公开",
-      "implementation_idea": "未公开",
-      "hands_on_exercise": "未公开",
-      "limitations_or_uncertainties": "未公开",
-      "region": "global",
-      "score": 7.0,
-      "summary": "OpenAI联合创始人Greg Brockman透露内部员工不喜欢被同事的ChatGPT请求打扰，强调AI应增强而非隔阂人际关系。",
-      "title": "Quoting Greg Brockman",
-      "url": "https://simonwillison.net/2026/Aug/1/greg-brockman/#atom-everything",
-      "sources": [
-        {
-          "url": "https://simonwillison.net/2026/Aug/1/greg-brockman/#atom-everything",
-          "title": "Quoting Greg Brockman",
-          "source_type": "rss",
-          "published_at": "2026-08-01T22:29:44+00:00"
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "brockman-chatgpt-slack",
-          "date": "2026-08-02",
-          "title": "Quoting Greg Brockman",
-          "summary": "OpenAI联合创始人Greg Brockman透露内部员工不喜欢被同事的ChatGPT请求打扰，强调AI应增强而非隔阂人际关系。",
-          "score": 7.0,
-          "url": "https://simonwillison.net/2026/Aug/1/greg-brockman/#atom-everything"
-        }
-      ],
-      "usage_flow": [],
-      "learning_points": [],
-      "verticals": [],
-      "tags": [
-        "OpenAI",
-        "人机协作"
       ]
     },
     {

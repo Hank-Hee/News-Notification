@@ -8824,6 +8824,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "1544ef0d2a6918df10a2be9396d90d3d932820c5c8d37462e3c755decf1a3ee7": {
+      "created_at": "2026-11-01T06:00:14.420688+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "deepseek-super-agent-architecture",
+        "evidence_status": "reported",
+        "follow_up": "等待 DeepSeek 官方发布 Super Agent 架构的技术博客或产品 Demo，确认其能力边界和产品化路径。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "google_news:article:b306cf6c6701fe85",
+        "intelligence_type": "model_capability",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "DeepSeek Super Agent",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "极客公园的聚合新闻，标题提及 DeepSeek 公布 Super Agent 架构，但正文内容仅为标题链接，无具体架构细节、产品形态或用户反馈，无法验证实质增量；同时混杂苹果市值和 Meta 机器人传闻，信噪比低。作为模型公司动态有初步信号价值，但缺乏一手证据，按规则低于 7 分。",
+        "region": "china",
+        "score": 5.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "极客公园报道 DeepSeek 公布 Super Agent 架构，但未提供具体细节，对 AI 产品经理仅能作为早期信号参考。",
+        "tags": [
+          "Agent",
+          "DeepSeek"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "154923a0778d52a5ce99f0ccb9c402bf8a0fe27c851a7f452011c9a900811b56": {
       "created_at": "2026-09-01T06:13:37.417870+00:00",
       "model": "deepseek-v4-flash",
@@ -18418,6 +18456,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "2c037b1afbe1725ba08ec1e33f3ad2478a1e2a7a9b0058588a49996aee5ff904": {
+      "created_at": "2026-11-01T06:00:00.936232+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "memdoor-team-solve-qwen",
+        "evidence_status": "verified",
+        "follow_up": "关注项目是否公开复现细节和更多基准结果。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:50320995",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Memdoor",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Memdoor 开源项目展示用 5 个 Qwen3.8-27B 模型组队超过 Fable 5，有 GitHub 代码和可验证结果，属于多 agent 协作的一手实践，对做 agent 产品有迁移价值。",
+        "region": "global",
+        "score": 7.8,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "开源项目 Memdoor 用 5 个 Qwen 模型组队解编程题，成绩超过 Fable 5；展示了多 agent 协作在本地模型上的可行做法。",
+        "tags": [
+          "多Agent",
+          "Qwen",
+          "开源"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "2c1b845117f3ed00b33395ac86a1671a6f1dfab3b11c329fbbe1efc3f2eb91a4": {
       "created_at": "2026-08-24T01:57:26.041775+00:00",
       "model": "deepseek-v4-flash",
@@ -23524,6 +23601,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "38efb6a31bc57851223a33f14d35ed90e4d8046c1782fffd0e38b9f1cc4ace9a": {
+      "created_at": "2026-11-01T06:00:00.935965+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "chatgpt-artifacts-account-takeover",
+        "evidence_status": "reported",
+        "follow_up": "关注 OpenAI 是否修复该漏洞及官方回应。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:simonwillison.net_atom_everything_:a181817ce8345f3a",
+        "intelligence_type": "builder_insight",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "ChatGPT",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Parameter Labs 披露 ChatGPT HTML 预览沙箱逃逸攻击链，涉及 postMessage 与 innerHTML，对做 AI 产品安全设计有明确可迁移教训，但非产品构建主线。",
+        "region": "global",
+        "score": 7.6,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "Parameter Labs 发现攻击者可通过 ChatGPT 的 HTML 预览沙箱漏洞接管账户；提醒做 AI 产品时沙箱隔离必须严格，否则用户数据会暴露。",
+        "tags": [
+          "安全",
+          "ChatGPT",
+          "沙箱"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "38f7fbcb6510398a2907e61b84a3c31a289b873aefeda5825d80a0a0ba1fed8f": {
       "created_at": "2026-09-30T05:31:14.665652+00:00",
       "model": "deepseek-flash",
@@ -24811,6 +24927,44 @@
           "Hacker News",
           "Claude",
           "Codex"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "3badff8cadbec866efa588ea92292702c00b04b5cf4fcf9b4de0769945605511": {
+      "created_at": "2026-11-01T06:00:00.935797+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "naacp-xai-datacenter-lawsuit",
+        "evidence_status": "reported",
+        "follow_up": "关注案件进展是否影响 xAI 数据中心运营。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:6e2509f0f6227c0d",
+        "intelligence_type": "business_policy",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "诉讼与环保合规新闻，与 AI 产品构建、模型能力无直接关系。",
+        "region": "global",
+        "score": 3.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "NAACP 起诉 xAI 数据中心污染案获法院允许继续推进；属于法律与环保议题，对产品学习无增量。",
+        "tags": [
+          "xAI",
+          "法律"
         ],
         "target_user": "",
         "verticals": []
@@ -26516,6 +26670,45 @@
         "tags": [
           "微软",
           "多模型"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "400abce0263175c152f5a761b8077763b7a90efad9248ae7f11ba0e576ac8728": {
+      "created_at": "2026-11-01T06:00:00.936077+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "hackertube-karpathy-launch",
+        "evidence_status": "first_party",
+        "follow_up": "关注 HackerTube 用户反馈和后续迭代。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:50319510",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "HackerTube",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Karpathy 亲手做出 HackerTube 并公开上线，有可访问产品、明确数据来源和 HN 真实讨论，属于高价值一手产品案例，能启发用社区数据做推荐产品。",
+        "region": "global",
+        "score": 8.5,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Karpathy 用 HN 评论里推荐的视频做出 HackerTube；解决 YouTube 推荐被算法绑架的问题，展示了用社区信号做产品的一手实践。",
+        "tags": [
+          "Karpathy",
+          "推荐系统",
+          "社区产品"
         ],
         "target_user": "",
         "verticals": []
@@ -29000,6 +29193,45 @@
           "n8n",
           "自动化",
           "版本更新"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "4581567218f8273b66d259946753fcdb4ab8218f65504b5b5f8b31cb4f5f1de2": {
+      "created_at": "2026-11-01T06:00:00.936171+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "brazil-court-prompt-injection-sanction",
+        "evidence_status": "reported",
+        "follow_up": "关注法院判决细节及对法律 AI 工具的影响。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:50322173",
+        "intelligence_type": "business_policy",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "巴西法院因律师在诉状中嵌入提示注入而处罚，是 AI 使用边界的一手法律事件，对做法律/文档类 AI 产品有合规提醒，但非产品构建主线。",
+        "region": "global",
+        "score": 7.2,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "巴西法院处罚在诉状里藏提示注入指令的律师；说明 AI 被用于法律文书时已出现真实滥用，做相关产品需考虑防注入。",
+        "tags": [
+          "提示注入",
+          "法律",
+          "合规"
         ],
         "target_user": "",
         "verticals": []
@@ -33796,6 +34028,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "510e9ad23a8d20a2ffddb50d5c6c1dbe429771ec52ea4e0f95d1da94cebabe23": {
+      "created_at": "2026-11-01T06:00:00.935822+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-funding-target-lowered",
+        "evidence_status": "reported",
+        "follow_up": "关注融资规模变化是否影响 OpenAI 产品节奏。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:497b6bd61ec1f3a4",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "纯融资新闻，按规则通常低于 7 分，且无产品体验增量。",
+        "region": "global",
+        "score": 3.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "OpenAI 据报下调新一轮融资目标；属于资本层面消息，对产品构建无直接帮助。",
+        "tags": [
+          "OpenAI",
+          "融资"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "5134d6e4537fff25962f7571492c1a1bae00ccaebf18c6f6faa23564fb2bba69": {
       "created_at": "2026-08-20T01:51:42.044248+00:00",
       "model": "deepseek-v4-flash",
@@ -35337,6 +35607,45 @@
           "安全",
           "开源",
           "AI辅助"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "54d58c6d4e7c846261541821576222c705afb2d67ea64f26192935d39f7035a5": {
+      "created_at": "2026-11-01T06:00:00.935997+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "datasette-llm-0-1a9",
+        "evidence_status": "first_party",
+        "follow_up": "关注 Datasette Agent 后续大版本升级。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:simonwillison.net_atom_everything_:5433d48c0a4a7162",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "datasette-llm",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Datasette 插件小版本更新，自动读取 LLM 默认模型，属于开发者体验改进，但增量较小且偏工具链。",
+        "region": "global",
+        "score": 6.8,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "Simon Willison 发布 datasette-llm 0.1a9，让 Datasette Agent 自动使用 LLM 默认模型；省去手动配置，方便快速试用。",
+        "tags": [
+          "Datasette",
+          "LLM工具",
+          "开发者体验"
         ],
         "target_user": "",
         "verticals": []
@@ -46282,6 +46591,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "6dad7357b9eb4ad33adda515fd76bd37c3b0c35209f53fd017049755342f2e6c": {
+      "created_at": "2026-11-01T06:00:12.003370+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "deepseek-agent-architecture-release",
+        "evidence_status": "reported",
+        "follow_up": "查找 DeepSeek 官方公告",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "google_news:article:b728b21cb13e926a",
+        "intelligence_type": "model_capability",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "DeepSeek",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "浙江新闻转载标题，无正文细节，无法验证，属于低质量聚合。",
+        "region": "china",
+        "score": 5.0,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "浙江新闻转载 DeepSeek 发布最新 Agent 架构，让 AI 指挥 AI；但无具体内容，需等待官方一手信息。",
+        "tags": [
+          "DeepSeek",
+          "Agent",
+          "转载"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "6db4a2c84324f2615edfc79b0816f077e3e666d8b8d9518a9cc24b93f6f4d12b": {
       "created_at": "2026-08-28T11:22:26.162351+00:00",
       "model": "deepseek-v4-flash",
@@ -48107,6 +48455,45 @@
       },
       "stage": "deep_analysis"
     },
+    "72194a4f5d7c604faf5d6b3855cee1e6cd41a67076c647c8820bfbe198d07797": {
+      "created_at": "2026-11-01T06:00:00.936016+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "arca-long-horizon-financial-agents",
+        "evidence_status": "first_party",
+        "follow_up": "关注 Arca 是否公开更多 harness 细节或产品指标。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:www.latent.space_feed:48221db7043e718e",
+        "intelligence_type": "builder_insight",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Arca",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Arca AI 负责人一手讲述持久记忆、自定义 harness 和跨天 agent 工作流，属于构建者实践经验，对做垂直 Agent 产品有可迁移思路。",
+        "region": "global",
+        "score": 8.0,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "Arca 的 AI 负责人分享如何用持久记忆和自定义 harness 让 agent 连续数天处理金融工作；展示了长周期 agent 产品的真实设计取舍。",
+        "tags": [
+          "Agent",
+          "金融",
+          "持久记忆"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "723160cb267378127292d10ae39b2227a6c22e1446fa7ff54f1f923352a4f239": {
       "created_at": "2026-07-29T01:53:26.758049+00:00",
       "model": "deepseek-v4-flash",
@@ -48485,6 +48872,40 @@
         ],
         "user_problem": "其他 AI 工具界面复杂、需要下载 App 或学习新操作方式，用户不想被功能淹没，只想像发短信一样自然地让 AI 做事",
         "what_it_is": "一个 2024 年 8 月发布的、靠邀请制和短信界面走红的 AI Agent 产品，没有官网和营销，用户通过发短信与 AI 互动让它执行任务。"
+      },
+      "stage": "deep_analysis"
+    },
+    "72a23fb7f14d0ce9f95a5d62d9f6f7c23adc70b17cf33679f8ae7f7ef0436cdf": {
+      "created_at": "2026-11-01T06:00:45.491874+00:00",
+      "model": "kimi-k2.6",
+      "prompt_version": "deep-v3-beginner",
+      "result": {
+        "ai_role": "Karpathy 使用 AI 编码助手（Opus 5.5）辅助开发，约 2 小时完成；AI 负责根据自然语言指令生成代码，而非直接参与推荐逻辑",
+        "evidence_status": "first_party",
+        "hands_on_exercise": "30 分钟：去 Hacker News 搜索你感兴趣的任意关键词，收集 10 个评论里提到的 YouTube 视频链接，用 Notion 或飞书文档做一个简易的'个人推荐页'，体会'人工筛选 vs 算法推荐'的差异",
+        "implementation_idea": "核心思路是'用社区人工信号替代机器算法'：从 39,834 条 HN 评论里提取 YouTube 链接，去重后得到 6,454 个视频，套一个简洁的 YouTube 风格界面。推荐逻辑不是算法算出来的，而是'被真实人类在讨论中推荐过'这个社区背书。",
+        "learning_points": [
+          "RAG（检索增强生成）：这里不是典型 RAG，但思路相通——用外部真实数据（HN 评论）作为'知识库'来构建产品，而非让模型自己编造",
+          "Embedding（嵌入）：未公开是否使用，但初学者可理解为'把文本/视频变成向量'的技术，是推荐系统的常见底层",
+          "Vibe Coding（氛围编程）：Karpathy 倡导的一种开发方式，用自然语言指挥 AI 写代码，人负责把关方向和测试，不纠结具体代码实现"
+        ],
+        "limitations_or_uncertainties": "未公开具体的数据清洗规则（如何判断一条评论真的在'推荐'视频）、更新频率、是否持续维护；AI 辅助开发的具体 prompt 和分工细节 Karpathy 未详细披露",
+        "product_name": "HackerTube",
+        "sources": [
+          "https://karpathy.bearblog.dev/hacker-tube/",
+          "https://hackertube.org/",
+          "https://news.ycombinator.com/item?id=50319510",
+          "https://explorineer.com/en/trends/hackertube-youtube-built-from-videos-recommended-by-hn--91234"
+        ],
+        "target_users": "厌倦了 YouTube 算法推荐、想发现高质量技术/知识类视频的人",
+        "title_zh": "HackerTube：用 Hacker News 社区推荐替代 YouTube 算法推荐",
+        "usage_flow": [
+          "打开 hackertube.org，直接浏览视频列表",
+          "点击感兴趣的视频，跳转到 YouTube 播放",
+          "用搜索或分类找到特定主题的视频"
+        ],
+        "user_problem": "YouTube 推荐被算法绑架，充斥夸张缩略图、低质内容和成瘾性设计，用户需要时刻保持警惕不被' bait '（ bait 指标题党/诱饵内容）",
+        "what_it_is": "一个只展示 Hacker News 用户 2007 年以来在评论里推荐过的视频的类 YouTube 网站"
       },
       "stage": "deep_analysis"
     },
@@ -51231,6 +51652,46 @@
         "what_it_is": "一个把 AI 决策模型接入经典游戏《宝可梦红》，实时直播游玩过程并公开 token 消耗与成本的开源项目。"
       },
       "stage": "deep_analysis"
+    },
+    "79a430cde43a692c92f2fee3c68ac26ddd357f7d7171f8a260c91e9cd30e6a09": {
+      "created_at": "2026-11-01T06:00:00.935851+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "muse-charm-diy-ai-tamagotchi",
+        "evidence_status": "first_party",
+        "follow_up": "关注作者是否公开代码与物料清单，以及 Meta 官方 Muse Charm 的对比反馈。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:c0d950ed21688f61",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Muse Charm",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "记者用 ESP32 和 Claude 亲手做出 AI 电子宠物并给出构建过程与对比，属于有代码、有 Demo 的一手产品案例，能让初学者理解硬件+LLM 的产品形态。",
+        "region": "global",
+        "score": 8.2,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "The Verge 记者用 ESP32 和 Claude 自己动手做出 AI 电子宠物 Muse Charm；展示了从想法到可玩硬件的完整过程，适合学习如何把模型塞进小设备。",
+        "tags": [
+          "AI硬件",
+          "Claude",
+          "DIY",
+          "产品案例"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
     },
     "7a00271239a19ef307b4b0113bd55a82998ac88f5f2769c8bebb5416669c95c1": {
       "created_at": "2026-10-21T04:44:24.215793+00:00",
@@ -60564,6 +61025,46 @@
       },
       "stage": "candidate_analysis"
     },
+    "8da2e111ef61fb937824d527a0b79d7e2422139854fffb8664cee131ee47e1e1": {
+      "created_at": "2026-11-01T06:00:12.003254+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "bbrouter-launch",
+        "evidence_status": "first_party",
+        "follow_up": "观察用户反馈与 MCP 集成效果",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:50321522",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": true,
+        "market_signal": "",
+        "product_name": "BBRouter",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Show HN 发布虚拟面包板编辑器，有可运行 Demo、定价和 MCP 连接 AI 功能，属于有真实反馈的构建案例；但含推广码，且与 LLM 产品学习间接相关，给 7.2。",
+        "region": "global",
+        "score": 7.2,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "开发者因自己接线老出错，做了 3D 虚拟面包板 BBRouter，可模拟 Ben Eater 8 位电脑并让 Claude 通过 MCP 帮忙搭建和排错；展示了 AI 辅助硬件学习的产品思路。",
+        "tags": [
+          "MCP",
+          "硬件",
+          "Show HN",
+          "个人产品"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "8dab6be5500d7b75af80a34b7b1ad5f2af2c67e4703f2d83044d6328d080bb93": {
       "created_at": "2026-08-25T01:52:33.712648+00:00",
       "model": "deepseek-v4-flash",
@@ -63397,6 +63898,45 @@
           "AI编码",
           "研发流程",
           "源码管理"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "93213582dcf076808300a16f5666869a2e91bf740146f18a7c0f892e5cb88dbf": {
+      "created_at": "2026-11-01T06:00:12.003346+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "deepseek-agent-architecture-release",
+        "evidence_status": "reported",
+        "follow_up": "查找 DeepSeek 官方公告与 Demo",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "google_news:article:1928788c0ae9dad4",
+        "intelligence_type": "model_capability",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "DeepSeek",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "爱范儿转载标题称 DeepSeek 发布全新 Agent 架构，但无正文细节，无法验证，属于低质量聚合；标题有信息但证据不足。",
+        "region": "china",
+        "score": 5.5,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "爱范儿报道 DeepSeek 发布全新 Agent 架构，称 AI 开始指挥 AI 干活；但无正文细节，需等待官方一手信息。",
+        "tags": [
+          "DeepSeek",
+          "Agent",
+          "转载"
         ],
         "target_user": "",
         "verticals": []
@@ -69501,6 +70041,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "a05ac26aac13cf228b77f95306217d9fed3208f2452d293445523d6f93239bc5": {
+      "created_at": "2026-11-01T06:00:00.935757+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "apple-ceo-ai-strategy-comment",
+        "evidence_status": "reported",
+        "follow_up": "观察苹果后续是否发布具体 AI 功能或产品。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:1dc318155dc7f9c1",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "苹果 CEO 泛泛表态，无产品、无构建过程、无用户反馈，对 AI 产品经理无直接可迁移增量。",
+        "region": "global",
+        "score": 4.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "苹果新 CEO 公开表示公司不想为 AI 而 AI；这是战略表态而非产品动作，对做产品的人参考价值有限。",
+        "tags": [
+          "Apple",
+          "AI战略"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "a07538e9005094b152b97c6f55784202da218baca10698471b17b9346d15aed4": {
       "created_at": "2026-10-15T04:37:05.685210+00:00",
       "model": "deepseek-flash",
@@ -72792,6 +73370,45 @@
           "API",
           "定价",
           "DeepSeek"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "a71e34d1907fb4592fed69b5e385836eed5d07c03dc9815dcf63761d79afd1eb": {
+      "created_at": "2026-11-01T06:00:12.002961+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "openai-chatgpt-codex-usage-merge",
+        "evidence_status": "first_party",
+        "follow_up": "观察用户反馈与是否调整配额",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:50320588",
+        "intelligence_type": "business_policy",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "ChatGPT / Codex",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI 官方帮助文档确认 ChatGPT 与 Codex 用量限制合并，属于定价/配额政策变化，对重度用户有真实影响，但非产品能力或构建案例，按规则低于 7 分。",
+        "region": "global",
+        "score": 6.5,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "OpenAI 把 ChatGPT 和 Codex 的用量限制合并计算；付费用户可能因编码消耗挤占聊天额度，值得关注订阅产品设计。",
+        "tags": [
+          "OpenAI",
+          "定价",
+          "Codex"
         ],
         "target_user": "",
         "verticals": []
@@ -80007,6 +80624,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "b6c68f2eadef585ade59e2590d731b428f61fae5ea787f25eb43b95746fc6a1a": {
+      "created_at": "2026-11-01T06:00:12.003028+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "nes-contra-wasm-port",
+        "evidence_status": "first_party",
+        "follow_up": "无",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:50319169",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "NES Contra WebAssembly Port",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "个人开发者将 NES 游戏移植到 WebAssembly 并加在线多人，有代码和 Demo，但属于游戏逆向工程，与 LLM 产品学习无直接关系，可迁移增量有限。",
+        "region": "global",
+        "score": 5.5,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "开发者把 1987 年《魂斗罗》从 6502 汇编逐例翻译成 C 再编译为 WebAssembly，并加入在线双人合作；展示了个人项目从移植到上线的完整过程。",
+        "tags": [
+          "WebAssembly",
+          "游戏",
+          "个人项目"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "b6ce3574395c06739a007a38c304783b73289496c85500bacddf0dee3b6fd16f": {
       "created_at": "2026-09-21T04:54:01.291900+00:00",
       "model": "deepseek-flash",
@@ -82569,6 +83225,44 @@
         "summary_zh": "Simon Willison 用侏罗纪公园比喻，说现在拒绝关注 LLM 的计算机科学家就像拒绝关注侏罗纪公园的遗传学家。",
         "tags": [
           "LLM"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "bd1f802ebb6f048f4e57d85d25d54f3c483c6fd819d66432524a53380b49794a": {
+      "created_at": "2026-11-01T06:00:12.003196+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "scholar-duty-ieee",
+        "evidence_status": "first_party",
+        "follow_up": "无",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:50319061",
+        "intelligence_type": "market_signal",
+        "is_first_party": true,
+        "is_new_event": false,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "个人博客讨论学者/工程师职业伦理，与 AI 产品构建无直接关系，属于泛评论。",
+        "region": "global",
+        "score": 3.0,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "博主讨论 IEEE 工程师对公众安全的责任；与 AI 产品经理学习无直接关联。",
+        "tags": [
+          "伦理",
+          "评论"
         ],
         "target_user": "",
         "verticals": []
@@ -89238,6 +89932,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "cd2af71bd8c2668483f74f7c5efbdab107879ebd8b0f71d20c5ec9c4706f32a1": {
+      "created_at": "2026-11-01T06:00:12.003311+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "deepseek-agent-architecture-release",
+        "evidence_status": "reported",
+        "follow_up": "查找 DeepSeek 官方公告",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "google_news:article:0fe021c0608f126a",
+        "intelligence_type": "model_capability",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "DeepSeek",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "证券之星转载标题，无正文细节，无法验证，属于低质量聚合。",
+        "region": "china",
+        "score": 5.0,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "证券之星转载 DeepSeek 发布全新 Agent 架构，但无具体内容；需等待官方一手信息。",
+        "tags": [
+          "DeepSeek",
+          "转载"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "cd7608c1636296929a4a09076baa239f3cf07082dfed9126cea43554633e1d0c": {
       "created_at": "2026-08-27T09:47:01.156973+00:00",
       "model": "deepseek-v4-flash",
@@ -91653,6 +92385,44 @@
           "LLM 评测",
           "研究想法",
           "基准"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "d47c905ce935957a2da173a5bea5f179030dcc9ff401ea587e6cdae3817b196e": {
+      "created_at": "2026-11-01T06:00:12.003288+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "deepseek-agent-architecture-release",
+        "evidence_status": "reported",
+        "follow_up": "查找 DeepSeek 官方公告",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "google_news:article:420030654acef904",
+        "intelligence_type": "model_capability",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "DeepSeek",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "新浪财经转载标题，无正文细节，无法验证具体发布内容，属于低质量聚合，按规则扣分。",
+        "region": "china",
+        "score": 5.0,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "新浪财经转载 DeepSeek 最新发布消息，但无具体内容；需等待官方一手信息。",
+        "tags": [
+          "DeepSeek",
+          "转载"
         ],
         "target_user": "",
         "verticals": []
@@ -101129,6 +101899,44 @@
       },
       "stage": "deep_analysis"
     },
+    "e8f31f7841430631466f16c6ebb2a6ae6849bfcb17ad737bb90c28dac4ff2727": {
+      "created_at": "2026-11-01T06:00:12.002873+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "airgap-ram-radio-leak",
+        "evidence_status": "reported",
+        "follow_up": "无",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:50322022",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": false,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "安全研究论文，与 AI 产品构建无关，评论也指出攻击不实用，属于低相关噪音。",
+        "region": "global",
+        "score": 3.5,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "研究者演示通过 RAM 无线电信号从气隙电脑泄露数据；但攻击条件苛刻，对 AI 产品经理无直接可迁移价值。",
+        "tags": [
+          "安全",
+          "论文"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "e901ec67af680e5c94310192d96d434e9185c939ea626f3081341bc8c03b7e6a": {
       "created_at": "2026-10-08T06:01:42.536438+00:00",
       "model": "deepseek-flash",
@@ -105780,6 +106588,40 @@
       },
       "stage": "candidate_analysis"
     },
+    "f475d331f5bb7a629a1892615b9b55cb33c9e24cde768cdb7ea538f4e0ab1972": {
+      "created_at": "2026-11-01T06:01:04.803292+00:00",
+      "model": "kimi-k2.6",
+      "prompt_version": "deep-v3-beginner",
+      "result": {
+        "ai_role": "Claude 负责理解用户输入、生成个性化回复，并决定屏幕该显示什么表情/情绪状态",
+        "evidence_status": "verified",
+        "hands_on_exercise": "30 分钟：在 Claude 官网注册，打开 API 控制台，用自然语言描述\"我要一个会随机变换表情的电子宠物网页\"，让 Claude 生成代码；复制到本地 HTML 文件打开，观察 AI 怎么写交互逻辑。",
+        "implementation_idea": "把平时在网页聊天的 Claude，通过 API 接到一块能联网的小芯片上；芯片负责收音和显示，Claude 负责\"动脑\"，两者用 WiFi 或蓝牙传数据。关键是证明不需要等大公司，几十块钱的硬件就能跑起来。",
+        "learning_points": [
+          "API 调用：就是程序发一条网络请求给 Claude 服务器，问完拿回答，初学者可以先从网页版 API 控制台试",
+          "嵌入式设备（如 ESP32）：指便宜、省电、能联网的小芯片，手机里的传感器也类似，只是性能更弱",
+          "Vibe Coding：用 AI 辅助写代码，不是人一行行敲，而是描述需求让 Claude 生成，再人工改错"
+        ],
+        "limitations_or_uncertainties": "DIY 版本的续航、离线能力、量产成本未公开；Meta 官方 Muse Charm 的最终售价、发售日期、功能细节也未公开；文中未说明是否支持语音唤醒还是仅文字/按钮交互",
+        "product_name": "Muse Charm（DIY 版）",
+        "sources": [
+          "https://www.theverge.com/gadgets/1013375/muse-charm-gadgets-preview-waveshare-esp32-claude-vibe-code",
+          "https://www.the-independent.com/tech/meta-muse-charm-tamagotchi-b3055670.html",
+          "https://techcrunch.com/2026/09/24/metas-muse-charm-looks-like-a-tamagotchi-but-its-tapping-into-a-much-newer-trend/"
+        ],
+        "target_users": "想动手做 AI 硬件的初学者、电子爱好者、想验证 LLM+嵌入式可行性的开发者",
+        "title_zh": "记者用 ESP32 和 Claude 抢先做出 AI 电子宠物，比 Meta 的 Muse Charm 更早落地",
+        "usage_flow": [
+          "用 ESP32 开发板 + 墨水屏/小屏幕组装硬件外壳",
+          "通过代码把设备连上 Claude API，让 AI 能接收语音或按钮输入",
+          "AI 生成回复和\"情绪/表情\"，回传到屏幕显示",
+          "用户像养 Tamagotchi 一样日常互动，设备持续在线"
+        ],
+        "user_problem": "Meta 的 Muse Charm 还没发售，普通人想体验\"随身 AI 宠物\"只能等；且官方方案价格、开放度未知",
+        "what_it_is": "The Verge 记者 Sean Hollister 自己动手做的 AI 电子宠物硬件，用廉价芯片 ESP32 跑 Claude 大模型，能互动、有表情，功能对标 Meta 尚未发售的 Muse Charm"
+      },
+      "stage": "deep_analysis"
+    },
     "f476fe7c62d53c188b31d1dc9790ef50caa9f75c5c35ad0062f4ec4dd79b62db": {
       "created_at": "2026-09-05T04:26:40.722085+00:00",
       "model": "deepseek-v4-flash",
@@ -109395,6 +110237,45 @@
         "tags": [
           "生物学",
           "教育"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "faf0a8865b939bb5b448be956674786724ad6cf6103c075859858d6a88d6d10e": {
+      "created_at": "2026-11-01T06:00:12.003136+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "chatgpt-account-takeover-parameter",
+        "evidence_status": "reported",
+        "follow_up": "关注 OpenAI 后续安全公告",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:50314699",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "ChatGPT",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "安全公司披露 ChatGPT 账号接管漏洞并获 OpenAI 确认修复，属于产品安全事件，对 AI 产品经理有风险意识价值，但非构建案例或模型能力，按规则低于 7 分。",
+        "region": "global",
+        "score": 6.8,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "安全公司 Parameter 发现通过链接预览可接管 ChatGPT 账号的漏洞，OpenAI 确认并修复；提醒 AI 产品需重视前端安全与漏洞赏金。",
+        "tags": [
+          "安全",
+          "ChatGPT",
+          "漏洞"
         ],
         "target_user": "",
         "verticals": []
