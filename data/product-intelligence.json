@@ -1,7 +1,195 @@
 {
   "version": 1,
-  "updated_at": "2026-11-01T06:01:04.838164+00:00",
+  "updated_at": "2026-11-02T06:00:44.654123+00:00",
   "products": [
+    {
+      "product_id": "product-0aaf47f147161a73",
+      "product_name": "HackerBooks",
+      "builder_name": "roansh",
+      "first_seen": "2026-11-02",
+      "last_seen": "2026-11-02",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "verified",
+      "target_user": "想发现 HN 社区推荐书籍的读者、开发者，以及想参考 AI 辅助做个人产品的新手",
+      "user_problem": "HN 评论区散落着大量书籍推荐，但分散在十几万条评论里，没有集中索引；之前类似的聚合站点经常过几年就 404 消失",
+      "what_it_is": "一个自动抓取 Hacker News 评论中提到的书籍、统计出现次数并生成可浏览网页的工具",
+      "ai_role": "Claude（Opus 3.5）几乎写了全部代码，包括数据抓取管道和前端网站；人类作者主要负责提需求、做决策、买域名",
+      "implementation_idea": "持续抓取 HN 历史评论 → 用某种方式识别出其中的书名 → 同一本书合并计数 → 把书和原评论链接对应起来做成网页。作者明确说\"Claude 写的\"，但具体怎么从自然语言里准确提取书名、处理歧义和昵称，未公开技术细节。",
+      "hands_on_exercise": "用任意 AI 编程助手（Claude、ChatGPT、Cursor 等），给你自己常逛的一个论坛或评论区做\"迷你版 HackerBooks\"：手动复制 20-30 条含书名的评论，让 AI 写脚本提取书名并统计出现次数，输出一个简单的 HTML 表格。对比 AI 提取结果和你人工检查的结果，记录误识别和漏识别。",
+      "limitations_or_uncertainties": "具体书名识别技术未公开（正则、LLM 提取、还是混合方案？）；\"至少两个不同评论者提到\"的过滤规则可能漏掉有价值的小众书；只统计提及次数不区分褒贬（推荐和批评都计为一次）；长期维护和数据更新频率未说明；GitHub 仓库无 release，无法确认是否开源",
+      "region": "global",
+      "score": 8.6,
+      "summary": "作者用 Claude 做出 HackerBooks，把 HN 评论里提到的 1.6 万本书聚合成可浏览站点并链回原评论，HN 上拿到 1162 分和大量真实反馈。",
+      "title": "HackerBooks：把 HN 评论里提到的书自动聚合成可浏览站点",
+      "url": "https://hackerbooks.org/",
+      "sources": [
+        {
+          "url": "https://hackerbooks.org/",
+          "title": "Show HN: HackerBooks – HackerTube, but for books mentioned on HN",
+          "source_type": "hackernews",
+          "published_at": "2026-11-01T15:58:28+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "hackerbooks-show-hn-launch",
+          "date": "2026-11-02",
+          "title": "HackerBooks：把 HN 评论里提到的书自动聚合成可浏览站点",
+          "summary": "作者用 Claude 做出 HackerBooks，把 HN 评论里提到的 1.6 万本书聚合成可浏览站点并链回原评论，HN 上拿到 1162 分和大量真实反馈。",
+          "score": 8.6,
+          "url": "https://hackerbooks.org/"
+        }
+      ],
+      "usage_flow": [
+        "打开 hackerbooks.org，浏览按提及次数排序的书单",
+        "点击感兴趣的书，查看是哪些 HN 评论提到的、原评论怎么说的",
+        "去 about 页面下载完整数据（CSV 等格式）自行分析",
+        "发现错误或遗漏时，通过 HN 或站点渠道反馈给作者"
+      ],
+      "learning_points": [
+        "数据管道（Data Pipeline）：把分散的原始数据自动收集、清洗、转换成可用格式的流程，这里是从 HN 评论到结构化书单",
+        "实体链接/实体消歧：同一本书可能有不同叫法（如昵称、缩写），需要判断\"这是不是同一本书\"——从社区反馈看，这个环节仍有误匹配",
+        "AI 编程助手的工作边界：人类定方向、做判断，AI 写实现代码，但上线后仍需人工验证和迭代"
+      ],
+      "verticals": [],
+      "tags": [
+        "AI编程",
+        "个人产品",
+        "Show HN",
+        "数据聚合"
+      ]
+    },
+    {
+      "product_id": "product-caea7cf245ab1c0d",
+      "product_name": "Wispr Flow",
+      "builder_name": "Lenny Rachitsky",
+      "first_seen": "2026-11-02",
+      "last_seen": "2026-11-02",
+      "occurrence_count": 1,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "reported",
+      "target_user": "需要语音输入转文字效率工具的人，比如写作者、开发者、商务人士；以及想学习 SaaS 冷启动和付费增长的产品/运营初学者",
+      "user_problem": "传统打字输入慢、打断思路；AI 语音工具虽多，但用户不知道怎么选、不信任广告，更信真实创作者的实际演示",
+      "what_it_is": "Lenny's Newsletter 的一篇播客访谈文稿，讲 Hector Serrano 在 AI 语音转文字工具 Wispr Flow 从实习生做到内容负责人，用付费 UGC（用户生成内容）模式把公司收入放大30倍的过程复盘",
+      "ai_role": "Wispr Flow 本身是 AI 语音转文字工具（把说话实时转成文字并自动润色），但本文重点不是讲 AI 技术，而是讲「用真人创作者推广 AI 产品」的增长策略",
+      "implementation_idea": "核心思路是「把 DTC 品牌的网红分销模式搬到 SaaS」：不自己拍广告，而是养一批真实用户当创作者，让他们用产品、拍真实使用场景，按广告消耗比例分成。关键是创作者要「真的在用」而不是「假装推荐」，所以筛选时看其内容质量而非粉丝量，分成机制让好创作者能月入过万，形成正向循环",
+      "hands_on_exercise": "30分钟：选一个你常用的免费工具（如 Notion、Obsidian、某款 AI 插件），在抖音/小红书/B站搜3个真实用户的「使用场景」视频，记录：①他们展示了什么具体场景 ②痛点怎么呈现的 ③评论区问最多的是什么。然后写一段100字的「如果你是这个工具的实习生，你会找什么类型的创作者合作」",
+      "limitations_or_uncertainties": "文中「收入30倍增长」「20亿美元估值」是公司融资时的报道数字，未公开具体收入基数和时间跨度；50位创作者、每月500-600条素材、头部创作者月入1.3万美元等数字来自访谈自述，未经第三方审计；未公开具体分成比例和广告投放总额",
+      "region": "global",
+      "score": 8.2,
+      "summary": "Lenny 采访了一位 19 岁实习生，讲他如何从零搭起一家 20 亿美元 AI 公司的增长引擎，适合想学增长和产品冷启动的人看。",
+      "title": "19岁实习生如何为估值20亿美元的AI公司搭建增长引擎",
+      "url": "https://www.lennysnewsletter.com/p/how-a-19-year-old-intern-built-the",
+      "sources": [
+        {
+          "url": "https://www.lennysnewsletter.com/p/how-a-19-year-old-intern-built-the",
+          "title": "How a 19-year-old intern built the growth engine behind this $2B AI company | Hector Serrano",
+          "source_type": "newsletter",
+          "published_at": "2026-11-01T13:31:36+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "lenny-hector-growth-engine-2b-ai",
+          "date": "2026-11-02",
+          "title": "19岁实习生如何为估值20亿美元的AI公司搭建增长引擎",
+          "summary": "Lenny 采访了一位 19 岁实习生，讲他如何从零搭起一家 20 亿美元 AI 公司的增长引擎，适合想学增长和产品冷启动的人看。",
+          "score": 8.2,
+          "url": "https://www.lennysnewsletter.com/p/how-a-19-year-old-intern-built-the"
+        }
+      ],
+      "usage_flow": [
+        "创作者收到产品，真实使用 Wispr Flow 完成写作/工作流",
+        "创作者按效果付费模式制作 UGC 广告素材（视频/图文）",
+        "素材投放到 TikTok/YouTube/Instagram 等平台",
+        "用户看到真实场景演示后点击安装，按转化效果给创作者分成"
+      ],
+      "learning_points": [
+        "PMF（产品市场匹配）：产品还没验证市场需求时，增长手段要轻、要快测试，Hector 加入时 Wispr Flow 还没找到 PMF，先用低成本方式验证",
+        "UGC（用户生成内容）：不是让用户随便发，而是「付费+分成」驱动的高质量内容生产，本质是用真实场景降低信任门槛",
+        "创作者经济 vs 传统广告：AI 工具推广的特殊性——用户怕 AI 替代自己，所以「最好的营销人员对 AI 过敏」，反而需要真人展示「AI 帮我更高效」而非「AI 取代我」"
+      ],
+      "verticals": [],
+      "tags": [
+        "增长",
+        "AI产品",
+        "构建者访谈"
+      ]
+    },
+    {
+      "product_id": "product-118a6be4bc7faf83",
+      "product_name": "DeepSeek Agent",
+      "builder_name": "OSCHINA",
+      "first_seen": "2026-11-02",
+      "last_seen": "2026-11-02",
+      "occurrence_count": 1,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "OSCHINA报道DeepSeek团队把Agent设计成操作系统，认为多任务上限不应是人的注意力，提供产品设计思路。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "china",
+      "score": 7.8,
+      "summary": "OSCHINA报道DeepSeek团队把Agent设计成操作系统，认为多任务上限不应是人的注意力，提供产品设计思路。",
+      "title": "DeepSeek 团队把Agent 设计成“操作系统”：多任务的上限不该是人的注意力- OSCHINA - 开源 × AI · 开发者生态社区 - OSCHINA",
+      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE82OGpSWUVENXAtNWF2cEtTbTNyelMxaXhvc01TWnVtc2lIWFhVclRySzloZWNGdFRyZjRQc3k5RFFQWVdUeEFXM1hsTnAxSnNKYjVhSlQ1RUtkRjdYTnFHRTBRZ3E0T3N1WTFpY29GbU9Qdw?oc=5",
+      "sources": [
+        {
+          "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE82OGpSWUVENXAtNWF2cEtTbTNyelMxaXhvc01TWnVtc2lIWFhVclRySzloZWNGdFRyZjRQc3k5RFFQWVdUeEFXM1hsTnAxSnNKYjVhSlQ1RUtkRjdYTnFHRTBRZ3E0T3N1WTFpY29GbU9Qdw?oc=5",
+          "title": "DeepSeek 团队把Agent 设计成“操作系统”：多任务的上限不该是人的注意力- OSCHINA - 开源 × AI · 开发者生态社区 - OSCHINA",
+          "source_type": "google_news",
+          "published_at": "2026-11-02T02:50:43+00:00"
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFA4Tm1TYWdSeFp3X1Nab0o2cGs1djVVSWVTblZTQUxxTEw2WGs2UDBNNEJ2ZkJzMHJEbWZOUGV2VThiM2ptOUNKZg?oc=5",
+          "title": "刚刚，DeepSeek重磅开源：Agent底座架构！ - 智源社区",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBpeE1ZNVpVaWtBY1B5MUJQNlVTM3pHOTRLVC1YMXl1VEc3Y1EtaXI0RDN2dy1lSmZCOWFtczNWRU1KbXM1NVZDRkVuN0I2TnFVd1JhcA?oc=5",
+          "title": "DeepSeek开源Super-agent研究原型：让AI主动发现Bug并持续参与日常工作 - 虎嗅网",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBGRGxQRWdrWDBlcTJtN2VMR3hoMUhrZ2xRWV9OZkVTNFpLam93dmVtRTEySDk0S2hCV2dQNlhyN0tRa1o5aFF0dnFMaloyQUxUYVU2VnF4S3hlX1JVTy1HZU0tdmNmbDdYaWlXTHZraVFmN1g5S1Y5R3djV3FRVnM?oc=5",
+          "title": "DeepSeek「超级智能体」，我真养上了！没人 @ 自动干活，附保姆级教程 - 新浪财经",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9hejdWZ3Z6Ymp5clFWZHVVQkNhUFA0UFFyLVgyb0RTRGdLejNFYjl2LWtDd2V6VV91cXhncVhhSEJYQkcyV05VV2FvV3lzWG5GdTUtT2dCMmpwNFN0Zm1VdXY1UDI4Y1UtenZVS1dOVVI?oc=5",
+          "title": "DeepSeek重磅发布:AI开始指挥AI干活 构建自主智能体系统 - 中华网",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "deepseek-agent-os-design",
+          "date": "2026-11-02",
+          "title": "DeepSeek 团队把Agent 设计成“操作系统”：多任务的上限不该是人的注意力- OSCHINA - 开源 × AI · 开发者生态社区 - OSCHINA",
+          "summary": "OSCHINA报道DeepSeek团队把Agent设计成操作系统，认为多任务上限不应是人的注意力，提供产品设计思路。",
+          "score": 7.8,
+          "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE82OGpSWUVENXAtNWF2cEtTbTNyelMxaXhvc01TWnVtc2lIWFhVclRySzloZWNGdFRyZjRQc3k5RFFQWVdUeEFXM1hsTnAxSnNKYjVhSlQ1RUtkRjdYTnFHRTBRZ3E0T3N1WTFpY29GbU9Qdw?oc=5"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "DeepSeek",
+        "Agent",
+        "操作系统",
+        "产品设计"
+      ]
+    },
     {
       "product_id": "product-78b6dacdc065811b",
       "product_name": "HackerTube",
