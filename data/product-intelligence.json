@@ -1,7 +1,286 @@
 {
   "version": 1,
-  "updated_at": "2026-11-02T06:00:44.654123+00:00",
+  "updated_at": "2026-11-03T06:46:31.005753+00:00",
   "products": [
+    {
+      "product_id": "product-1bf0ffa2afff107f",
+      "product_name": "Legora",
+      "builder_name": "Latent.Space",
+      "first_seen": "2026-11-03",
+      "last_seen": "2026-11-03",
+      "occurrence_count": 1,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Legora CTO Jacob Lauritzen 讲述在法律客户数据不可见的情况下如何构建和测试法律智能体，对做垂直 AI 产品的人有参考价值。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.0,
+      "summary": "Legora CTO Jacob Lauritzen 讲述在法律客户数据不可见的情况下如何构建和测试法律智能体，对做垂直 AI 产品的人有参考价值。",
+      "title": "Building Legal Agents When You Can't See the Data - Jacob Lauritzen, CTO of Legora",
+      "url": "https://latent.space/p/building_legal_agents_when_you_can_t_see_the_data_-_jacob_lauritzen_cto_of_legora/",
+      "sources": [
+        {
+          "url": "https://latent.space/p/building_legal_agents_when_you_can_t_see_the_data_-_jacob_lauritzen_cto_of_legora/",
+          "title": "Building Legal Agents When You Can't See the Data - Jacob Lauritzen, CTO of Legora",
+          "source_type": "rss",
+          "published_at": "2026-11-02T22:54:03+00:00"
+        },
+        {
+          "url": "https://latent.space/p/building-ai-for-lawyers-jacob-lauritzen-cto-of-legora/",
+          "title": "Building AI for Lawyers - Jacob Lauritzen, CTO of Legora",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "legora-cto-interview-building-legal-agents",
+          "date": "2026-11-03",
+          "title": "Building Legal Agents When You Can't See the Data - Jacob Lauritzen, CTO of Legora",
+          "summary": "Legora CTO Jacob Lauritzen 讲述在法律客户数据不可见的情况下如何构建和测试法律智能体，对做垂直 AI 产品的人有参考价值。",
+          "score": 8.0,
+          "url": "https://latent.space/p/building_legal_agents_when_you_can_t_see_the_data_-_jacob_lauritzen_cto_of_legora/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "法律AI",
+        "垂直AI",
+        "智能体",
+        "数据隐私"
+      ]
+    },
+    {
+      "product_id": "product-28ad191ba3d4642d",
+      "product_name": "LLM (simonw/llm)",
+      "builder_name": "Simon Willison",
+      "first_seen": "2026-11-03",
+      "last_seen": "2026-11-03",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "习惯命令行、想快速调用各种 LLM 的开发者和技术用户；需要批量处理或脚本化 AI 任务的人",
+      "user_problem": "以前要调用不同厂商的模型得装不同 SDK、写不同代码；配置 OpenAI 兼容接口麻烦；Embedding 只支持文本，无法直接处理图片、音频、视频",
+      "what_it_is": "一个用命令行就能调用各种大语言模型的开源 Python 工具，由 Django 框架联合创始人 Simon Willison 开发。",
+      "ai_role": "AI 是后端被调用的能力：对话生成回答、Embedding 模型把内容转成向量。工具本身不训练模型，只做统一封装。",
+      "implementation_idea": "本质是个'翻译层'：用户输统一命令，工具根据配置把请求转给 OpenAI、Anthropic、Google 等不同 API；Embedding 部分通过识别文件类型（content-type），把二进制内容送给支持多模态的模型（如 Gemini Embedding 2）处理。",
+      "hands_on_exercise": "30 分钟上手：安装 llm（pip install llm），设置 OpenRouter 或 OpenAI 密钥，用 llm -m gpt-4o-mini '解释 Python 列表推导式' 对话；再找一张本地图片，尝试用 llm embed -m gemini-embedding-exp 生成向量，观察输出格式。",
+      "limitations_or_uncertainties": "gpt-6.1-sol、gpt-6.1-terra、gpt-6-luna 等模型名称为作者原文引用，未验证是否为真实商业模型或前瞻性命名；多模态 Embedding 的具体支持格式和错误处理未详细说明；AI 辅助 PR 的审查流程为作者个人经验，非通用最佳实践",
+      "region": "global",
+      "score": 7.6,
+      "summary": "Simon Willison 发布 LLM 命令行工具 0.37 版，新增模型接入命令、默认模型降价一半并支持多模态 embedding，是可直接上手的构建工具更新。",
+      "title": "LLM CLI 工具 0.37 版发布：模型接入更灵活、默认模型降价、支持多模态 Embedding",
+      "url": "https://simonwillison.net/2026/Nov/2/llm/",
+      "sources": [
+        {
+          "url": "https://simonwillison.net/2026/Nov/2/llm/",
+          "title": "llm 0.37",
+          "source_type": "rss",
+          "published_at": "2026-11-02T23:49:30+00:00"
+        },
+        {
+          "url": "https://github.com/simonw/llm",
+          "title": "GitHub - simonw/llm: Access large language models from the ...",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "llm-cli-0-37-release",
+          "date": "2026-11-03",
+          "title": "LLM CLI 工具 0.37 版发布：模型接入更灵活、默认模型降价、支持多模态 Embedding",
+          "summary": "Simon Willison 发布 LLM 命令行工具 0.37 版，新增模型接入命令、默认模型降价一半并支持多模态 embedding，是可直接上手的构建工具更新。",
+          "score": 7.6,
+          "url": "https://simonwillison.net/2026/Nov/2/llm/"
+        }
+      ],
+      "usage_flow": [
+        "pip install llm，用 llm keys set 配置 API 密钥",
+        "用 llm 命令直接聊天，或用 llm openai endpoint add 添加自定义模型端点",
+        "用 llm embed 生成文本/图片/音频的向量（Embedding），供搜索或比对",
+        "在 Python 脚本里 import llm 调用，或结合 Datasette 等工具做数据分析"
+      ],
+      "learning_points": [
+        "Embedding：把文字、图片等内容转成数字向量的技术，让计算机能'比较'语义相似度",
+        "OpenAI-compatible endpoint：按 OpenAI 的 API 格式设计的接口，很多国产/开源模型也兼容，换模型不用改代码",
+        "CLI 工具链思维：把 LLM 调用变成管道命令，能跟 grep、awk 等传统工具组合使用"
+      ],
+      "verticals": [],
+      "tags": [
+        "LLM CLI",
+        "开源工具",
+        "Embedding"
+      ]
+    },
+    {
+      "product_id": "product-4b97303dcff5d67d",
+      "product_name": "Claude Code",
+      "builder_name": "Jay Peters",
+      "first_seen": "2026-11-03",
+      "last_seen": "2026-11-03",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "reported",
+      "target_user": "使用 AI 辅助编程的开发者，尤其是游戏开发者和复古游戏爱好者",
+      "user_problem": "AI 编程工具被大量用于自动生成现有游戏的反编译、重编译和移植版本，引发版权争议；工具厂商需要明确法律边界，避免成为侵权帮凶",
+      "what_it_is": "Anthropic 修改其 AI 编程工具 Claude Code 的系统提示词，在技术层面阻止用户用它克隆现有电子游戏，但保留原创游戏开发功能",
+      "ai_role": "作为 Agent（智能体，能自主读取文件、执行命令的 AI 助手），Claude Code 在收到用户指令后，先由系统提示词进行合规过滤，再决定是否执行代码生成任务",
+      "implementation_idea": "在系统提示词里加一条规则：识别用户想'复制已有游戏'时直接拒绝。系统提示词是开发者预设给 AI 的'行为说明书'，用户通常看不到但会强制生效，相当于给 AI 装了一个版权安检门",
+      "hands_on_exercise": "打开 Claude Code（需申请或已有权限），尝试输入两个指令对比：①'帮我写一个类似超级玛丽的平台跳跃游戏'②'帮我复刻超级玛丽的第 1-1 关'，观察第二个是否被拒绝或给出版权警告，记录系统反馈的差异",
+      "limitations_or_uncertainties": "未公开具体如何识别'复刻现有游戏'的技术细节（关键词匹配、代码相似度检测、还是模型推理判断）；未公开该限制是否覆盖所有 Claude Code 版本（终端/IDE/桌面/浏览器）；未公开 Anthropic 是否因具体诉讼或 DMCA 通知而做出此改动",
+      "region": "global",
+      "score": 7.2,
+      "summary": "Anthropic 修改 Claude Code 的系统提示词，禁止用它复刻现有电子游戏，但仍允许做原创游戏，展示了 AI 编程工具如何划版权边界。",
+      "title": "Anthropic 收紧 Claude Code 版权边界：禁止复刻现有游戏，允许原创开发",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1024632/anthropic-claude-ai-video-game-clones",
+      "sources": [
+        {
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1024632/anthropic-claude-ai-video-game-clones",
+          "title": "Anthropic clamps down on Claude’s AI video game clones",
+          "source_type": "rss",
+          "published_at": "2026-11-02T18:56:02+00:00"
+        },
+        {
+          "url": "https://code.claude.com/docs/en/overview",
+          "title": "Overview - Claude Code Docs",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "anthropic-claude-code-game-clone-prompt",
+          "date": "2026-11-03",
+          "title": "Anthropic 收紧 Claude Code 版权边界：禁止复刻现有游戏，允许原创开发",
+          "summary": "Anthropic 修改 Claude Code 的系统提示词，禁止用它复刻现有电子游戏，但仍允许做原创游戏，展示了 AI 编程工具如何划版权边界。",
+          "score": 7.2,
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1024632/anthropic-claude-ai-video-game-clones"
+        }
+      ],
+      "usage_flow": [
+        "用户在终端/IDE/浏览器中打开 Claude Code，描述想做的游戏项目",
+        "Claude Code 读取代码库、编辑文件、运行命令，辅助开发",
+        "系统提示词（System Prompt）在后台判断请求是否涉及复刻现有游戏",
+        "若检测到克隆意图，AI 拒绝执行；原创游戏请求则正常继续"
+      ],
+      "learning_points": [
+        "System Prompt（系统提示词）：开发者写给 AI 的隐藏指令，决定 AI 能做什么、不能做什么，用户一般改不了",
+        "Agent（智能体）：不只是聊天，还能主动操作文件、运行程序的 AI，Claude Code 就是典型例子",
+        "RAG（检索增强生成）：未直接涉及，但类似思路——在 AI 生成内容前先检索/匹配规则库来做合规判断"
+      ],
+      "verticals": [],
+      "tags": [
+        "Claude Code",
+        "版权合规",
+        "系统提示词"
+      ]
+    },
+    {
+      "product_id": "product-ba513158b44a58c6",
+      "product_name": "Vercel MCP",
+      "builder_name": "Nathan Manousos",
+      "first_seen": "2026-11-03",
+      "last_seen": "2026-11-03",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Vercel MCP 现在能在 ChatGPT 等支持 MCP Apps 的聊天客户端里用交互卡片展示部署状态、构建日志和提交信息，用户可直接在对话中调试部署。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.2,
+      "summary": "Vercel MCP 现在能在 ChatGPT 等支持 MCP Apps 的聊天客户端里用交互卡片展示部署状态、构建日志和提交信息，用户可直接在对话中调试部署。",
+      "title": "Vercel MCP now renders deployments as an interactive card",
+      "url": "https://vercel.com/changelog/monitor-vercel-deployments-in-chatgpt",
+      "sources": [
+        {
+          "url": "https://vercel.com/changelog/monitor-vercel-deployments-in-chatgpt",
+          "title": "Vercel MCP now renders deployments as an interactive card",
+          "source_type": "rss",
+          "published_at": "2026-11-02T17:05:00+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "vercel-mcp-deployment-interactive-card",
+          "date": "2026-11-03",
+          "title": "Vercel MCP now renders deployments as an interactive card",
+          "summary": "Vercel MCP 现在能在 ChatGPT 等支持 MCP Apps 的聊天客户端里用交互卡片展示部署状态、构建日志和提交信息，用户可直接在对话中调试部署。",
+          "score": 7.2,
+          "url": "https://vercel.com/changelog/monitor-vercel-deployments-in-chatgpt"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "MCP",
+        "ChatGPT",
+        "开发者工具",
+        "交互卡片"
+      ]
+    },
+    {
+      "product_id": "product-21c194b970721f10",
+      "product_name": "Dreambeans",
+      "builder_name": "Jagmeet Singh",
+      "first_seen": "2026-11-03",
+      "last_seen": "2026-11-03",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Google 的 AI 实验产品 Dreambeans 进入印度市场，支持 13 种印度语言，用于生成个人故事，展示了 AI 内容生成产品在新市场的落地。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.0,
+      "summary": "Google 的 AI 实验产品 Dreambeans 进入印度市场，支持 13 种印度语言，用于生成个人故事，展示了 AI 内容生成产品在新市场的落地。",
+      "title": "Google takes Dreambeans to India in bid to bring AI-generated personal stories to the masses",
+      "url": "https://techcrunch.com/2026/11/02/google-takes-dreambeans-to-india-in-bid-to-bring-ai-generated-personal-stories-to-the-masses/",
+      "sources": [
+        {
+          "url": "https://techcrunch.com/2026/11/02/google-takes-dreambeans-to-india-in-bid-to-bring-ai-generated-personal-stories-to-the-masses/",
+          "title": "Google takes Dreambeans to India in bid to bring AI-generated personal stories to the masses",
+          "source_type": "rss",
+          "published_at": "2026-11-03T03:30:00+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "google-dreambeans-india-launch",
+          "date": "2026-11-03",
+          "title": "Google takes Dreambeans to India in bid to bring AI-generated personal stories to the masses",
+          "summary": "Google 的 AI 实验产品 Dreambeans 进入印度市场，支持 13 种印度语言，用于生成个人故事，展示了 AI 内容生成产品在新市场的落地。",
+          "score": 7.0,
+          "url": "https://techcrunch.com/2026/11/02/google-takes-dreambeans-to-india-in-bid-to-bring-ai-generated-personal-stories-to-the-masses/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Google",
+        "Dreambeans",
+        "印度",
+        "AI生成故事"
+      ]
+    },
     {
       "product_id": "product-0aaf47f147161a73",
       "product_name": "HackerBooks",
