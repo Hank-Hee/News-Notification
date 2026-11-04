@@ -1,7 +1,449 @@
 {
   "version": 1,
-  "updated_at": "2026-11-03T06:46:31.005753+00:00",
+  "updated_at": "2026-11-04T06:18:57.672647+00:00",
   "products": [
+    {
+      "product_id": "product-a5d2b31a0ff15e71",
+      "product_name": "Google Antigravity + Cheminformatics Skills",
+      "builder_name": "Google DeepMind",
+      "first_seen": "2026-11-04",
+      "last_seen": "2026-11-04",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "药物化学家、生物医药研发人员、需要用 AI 辅助化合物筛选和分子设计的开发者",
+      "user_problem": "传统药物发现里，搜索已知化合物库和设计新分子结构需要专业软件和大量手动操作，跨工具切换费时，且把化学家的意图翻译成软件指令门槛高。",
+      "what_it_is": "Google DeepMind 发布的一套面向医药研发的 AI 工具，把化学信息学能力做成可插拔的 Skill，让开发者在 Antigravity IDE 里用自然语言指挥 AI 搜索化合物、设计新的大环分子。",
+      "ai_role": "AI 充当'能听懂人话的化学研究助理'，负责把用户自然语言意图翻译成具体的化学信息学操作（搜索、筛选、生成），并返回可解释的结果。",
+      "implementation_idea": "核心思路是'Skill 化'——把专业的化学信息学功能（如分子相似性搜索、大环刚性化设计）封装成标准化接口，让大语言模型能通过 Function Calling（函数调用：AI 判断该调用哪个外部工具来完成任务）来按需调用。用户不用记复杂命令，说话就行。",
+      "hands_on_exercise": "30 分钟：访问 antigravity.google 下载 IDE，安装 Science 插件后，尝试用自然语言输入'搜索具有抗菌活性的大环化合物'，观察 AI 如何解析意图、调用 Skill、返回结果格式。记录哪些请求成功了、哪些需要更精确的化学描述。",
+      "limitations_or_uncertainties": "目前仅确认官方博客发布和'今日可用'的声明，未公开具体 Skill 的技术细节、支持的化合物数据库范围、是否免费/定价如何；缺少独立用户验证其设计新分子的实际成功率；未公开与传统专业软件（如 Schrödinger、MOE）的精度对比。",
+      "region": "global",
+      "score": 8.3,
+      "summary": "Google DeepMind 介绍用 Google Antigravity 和化学信息学技能加速药物发现、搜索化合物并提出新的大环分子，值得看的是 AI 在医药研发具体环节的落地方式。",
+      "title": "Google Antigravity 的化学信息学 Agent：让 AI 加速药物发现",
+      "url": "https://deepmind.google/blog/agentic-cheminformatics-with-google-antigravity/",
+      "sources": [
+        {
+          "url": "https://deepmind.google/blog/agentic-cheminformatics-with-google-antigravity/",
+          "title": "Agentic cheminformatics with Google Antigravity",
+          "source_type": "rss",
+          "published_at": "2026-11-03T17:01:49+00:00"
+        },
+        {
+          "url": "https://antigravity.google/",
+          "title": "Google Antigravity",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "google-antigravity-cheminformatics-skills",
+          "date": "2026-11-04",
+          "title": "Google Antigravity 的化学信息学 Agent：让 AI 加速药物发现",
+          "summary": "Google DeepMind 介绍用 Google Antigravity 和化学信息学技能加速药物发现、搜索化合物并提出新的大环分子，值得看的是 AI 在医药研发具体环节的落地方式。",
+          "score": 8.3,
+          "url": "https://deepmind.google/blog/agentic-cheminformatics-with-google-antigravity/"
+        }
+      ],
+      "usage_flow": [
+        "下载安装 Antigravity App，在插件里启用 Science 插件",
+        "用自然语言描述需求，比如'搜索类似某结构的化合物'或'设计刚性更强的大环分子'",
+        "AI 调用 Cheminformatics Skills 执行化合物检索或分子生成",
+        "查看 AI 返回的候选化合物列表或新分子结构，进一步迭代优化"
+      ],
+      "learning_points": [
+        "Agent：不只是聊天，而是能自主判断步骤、调用工具完成多步任务的 AI 系统",
+        "Function Calling / Skills：让 LLM 从'只会说话'变成'能动手操作专业软件'的关键机制",
+        "大环分子（Macrocycles）：一类环状结构的药物分子，'刚性化'（rigidified）设计能提升其稳定性和药效，是药物化学中的经典优化方向"
+      ],
+      "verticals": [],
+      "tags": [
+        "医药AI",
+        "药物发现",
+        "Agent",
+        "Google Antigravity"
+      ]
+    },
+    {
+      "product_id": "product-0c6f6761ff2eda93",
+      "product_name": "Kairos",
+      "builder_name": "ayanb9440",
+      "first_seen": "2026-11-04",
+      "last_seen": "2026-11-04",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "缺乏大量标注数据、需要快速迭代反欺诈策略的中小型企业欺诈团队，以及使用 Claude Code、Cursor、Codex 等 AI 编程工具的开发团队",
+      "user_problem": "1. 传统反欺诈工具依赖 XGBoost 等机器学习模型，需要大量高质量的标注训练数据，很多企业没有；2. 欺诈者会不断变换手法，传统规则或模型几周就会失效，需要大型数据科学团队持续维护更新",
+      "what_it_is": "Kairos 是一个开源的实时风险与反欺诈决策平台，让企业能用自然语言规则补充传统机器学习模型，快速识别欺诈行为而无需大量标注数据。",
+      "ai_role": "AI Agent（通过 MCP server）承担'自动运维'角色：根据新数据定义决策工作流、训练模型变体、对比效果并上线最优方案，替代传统需要人工持续迭代的工作",
+      "implementation_idea": "核心思路是'双系统决策'：System One 用自然语言规则快速覆盖没有数据的新欺诈模式（类似人凭经验快速判断），System Two 用传统 ML 模型处理有历史数据的稳定场景。两者结果合并输出。MCP server 相当于给 AI Agent 开了个'管理后台接口'，让 Agent 能自动读写配置、跑实验、部署最优策略，解决'欺诈者变招快、人工跟不上'的问题。",
+      "hands_on_exercise": "30 分钟体验：1）本地 Docker 启动 Kairos；2）在配置里添加一条自然语言规则如'用户注册邮箱域名是否在过去 24 小时内新注册'；3）用 curl 发送一条模拟交易请求，观察 System One 规则如何输出风险评分；4）（可选）如果你有 Claude Code 或 Cursor，尝试连接 MCP server 让它帮你修改规则并解释决策逻辑",
+      "limitations_or_uncertainties": "社区质疑 TypeScript/Node 运行时的安全性（运行时自修改风险、原型污染）；'System One'具体如何实现自然语言到可执行判断的转换未公开技术细节；MCP server 的实际自动化能力和错误处理机制未经大规模验证；未公开是否有生产环境用户案例或性能基准",
+      "region": "global",
+      "score": 8.2,
+      "summary": "Finic 开源了反欺诈决策平台 Kairos，让企业用自然语言问题补充传统模型，解决缺少标注数据和欺诈手法多变的问题，值得做垂直 AI 产品的人拆解。",
+      "title": "Show HN: Kairos — 开源实时反欺诈决策平台",
+      "url": "https://github.com/finic-ai/kairos",
+      "sources": [
+        {
+          "url": "https://github.com/finic-ai/kairos",
+          "title": "Show HN: Kairos – Open-source risk and fraud decisioning platform",
+          "source_type": "hackernews",
+          "published_at": "2026-11-03T21:16:48+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "kairos-open-source-fraud-decisioning-launch",
+          "date": "2026-11-04",
+          "title": "Show HN: Kairos — 开源实时反欺诈决策平台",
+          "summary": "Finic 开源了反欺诈决策平台 Kairos，让企业用自然语言问题补充传统模型，解决缺少标注数据和欺诈手法多变的问题，值得做垂直 AI 产品的人拆解。",
+          "score": 8.2,
+          "url": "https://github.com/finic-ai/kairos"
+        }
+      ],
+      "usage_flow": [
+        "用 Docker 自托管或直接使用 kairos.finic.ai 的托管版本",
+        "在决策流程中编写自然语言问题（如'这是临时邮箱吗'）作为'System One'规则，与传统 XGBoost/逻辑回归模型并行运行",
+        "通过 MCP server 连接你的 AI Agent（Claude Code/Cursor/Codex 等），让它帮你定义决策工作流、训练模型并自动选择表现最好的版本",
+        "系统实时输出欺诈风险评估结果，用于支付拦截、账号审核等场景"
+      ],
+      "learning_points": [
+        "MCP（Model Context Protocol）：一种让 AI Agent 能安全调用外部工具/数据的开放协议，这里用来让编程 Agent 直接操作反欺诈平台",
+        "System One / System Two： borrowed from 认知科学，System One 是快思考（直觉、规则），System Two 是慢思考（推理、模型），Kairos 把两者结合用于决策",
+        "Function Calling：LLM 识别用户意图后，自动调用预定义函数完成操作，这里体现为 Agent 通过 MCP 调用 Kairos 的训练/部署接口"
+      ],
+      "verticals": [],
+      "tags": [
+        "反欺诈",
+        "开源",
+        "垂直 AI",
+        "决策平台"
+      ]
+    },
+    {
+      "product_id": "product-84bdacdb47f92545",
+      "product_name": "Uncracked City",
+      "builder_name": "passkey1510",
+      "first_seen": "2026-11-04",
+      "last_seen": "2026-11-04",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "独立开发者做了款侦探游戏 Uncracked City，玩家审问由 LLM 扮演、会说谎的嫌疑人，已在安卓免费上线，展示了 LLM 在游戏叙事中的具体用法。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.0,
+      "summary": "独立开发者做了款侦探游戏 Uncracked City，玩家审问由 LLM 扮演、会说谎的嫌疑人，已在安卓免费上线，展示了 LLM 在游戏叙事中的具体用法。",
+      "title": "Show HN: Uncracked City, detective game where you question LLM suspects that lie",
+      "url": "https://uncracked.city/",
+      "sources": [
+        {
+          "url": "https://uncracked.city/",
+          "title": "Show HN: Uncracked City, detective game where you question LLM suspects that lie",
+          "source_type": "hackernews",
+          "published_at": "2026-11-03T21:20:03+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "uncracked-city-llm-detective-game-launch",
+          "date": "2026-11-04",
+          "title": "Show HN: Uncracked City, detective game where you question LLM suspects that lie",
+          "summary": "独立开发者做了款侦探游戏 Uncracked City，玩家审问由 LLM 扮演、会说谎的嫌疑人，已在安卓免费上线，展示了 LLM 在游戏叙事中的具体用法。",
+          "score": 8.0,
+          "url": "https://uncracked.city/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "LLM 游戏",
+        "独立开发",
+        "产品案例"
+      ]
+    },
+    {
+      "product_id": "product-2e12c5bd0a44574f",
+      "product_name": "Qwen 3.8 27B",
+      "builder_name": "Simon Willison",
+      "first_seen": "2026-08-17",
+      "last_seen": "2026-11-04",
+      "occurrence_count": 3,
+      "intelligence_type": "model_capability",
+      "evidence_status": "verified",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Simon Willison 在自己笔记本上用 Qwen 3.8 27B 复现了让大模型直接读懂和改写神经网络权重的实验，说明这种能力本地小模型也能跑，值得关注它未来能催生什么新工具。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.8,
+      "summary": "Simon Willison 在自己笔记本上用 Qwen 3.8 27B 复现了让大模型直接读懂和改写神经网络权重的实验，说明这种能力本地小模型也能跑，值得关注它未来能催生什么新工具。",
+      "title": "Qwen 3.8 27B on my laptop can interpret model weights, too",
+      "url": "https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/",
+      "sources": [
+        {
+          "url": "https://simonwillison.net/2026/Aug/16/qwen-38-27b/",
+          "title": "Qwen 3.8 27B is excellent, but it defaults to wildly overthinking things",
+          "source_type": "rss",
+          "published_at": "2026-08-16T22:00:39+00:00"
+        },
+        {
+          "url": "https://simonwillison.net/2026/Aug/17/qwen-38-27b-scores-52/",
+          "title": "Qwen 3.8 27B scores 52 on the Artificial Analysis Intelligence Index",
+          "source_type": "rss",
+          "published_at": "2026-08-17T23:58:14+00:00"
+        },
+        {
+          "url": "https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/",
+          "title": "Qwen 3.8 27B on my laptop can interpret model weights, too",
+          "source_type": "rss",
+          "published_at": "2026-11-03T16:29:48+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "qwen-3.8-27b-release",
+          "date": "2026-08-17",
+          "title": "Qwen 3.8 27B is excellent, but it defaults to wildly overthinking things",
+          "summary": "阿里Qwen 3.8 27B模型发布，Simon Willison实测发现其性能优秀但默认过度思考。",
+          "score": 8.5,
+          "url": "https://simonwillison.net/2026/Aug/16/qwen-38-27b/"
+        },
+        {
+          "update_id": "qwen-3.8-27b-benchmark",
+          "date": "2026-08-18",
+          "title": "Qwen 3.8 27B scores 52 on the Artificial Analysis Intelligence Index",
+          "summary": "Qwen 3.8 27B在Artificial Analysis Intelligence Index上得分52，与GPT-5.6 Luna持平，但参数远小。",
+          "score": 8.5,
+          "url": "https://simonwillison.net/2026/Aug/17/qwen-38-27b-scores-52/"
+        },
+        {
+          "update_id": "weight-space-programming-qwen-local-repro",
+          "date": "2026-11-04",
+          "title": "Qwen 3.8 27B on my laptop can interpret model weights, too",
+          "summary": "Simon Willison 在自己笔记本上用 Qwen 3.8 27B 复现了让大模型直接读懂和改写神经网络权重的实验，说明这种能力本地小模型也能跑，值得关注它未来能催生什么新工具。",
+          "score": 7.8,
+          "url": "https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Qwen",
+        "开源模型",
+        "本地部署",
+        "评测",
+        "模型能力",
+        "基准测试",
+        "实验复现"
+      ]
+    },
+    {
+      "product_id": "product-e8a8c1568e92222b",
+      "product_name": "Siri AI",
+      "builder_name": "Emma Roth",
+      "first_seen": "2026-11-04",
+      "last_seen": "2026-11-04",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "苹果在 iOS 27.3 里让开发者把 Siri AI 接进自己的 App，语音助手能结合用户上下文和屏幕内容直接操作第三方应用，做 AI 产品的人可以看平台级入口怎么开放。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.6,
+      "summary": "苹果在 iOS 27.3 里让开发者把 Siri AI 接进自己的 App，语音助手能结合用户上下文和屏幕内容直接操作第三方应用，做 AI 产品的人可以看平台级入口怎么开放。",
+      "title": "Apple starts giving Siri AI access to third-party apps",
+      "url": "https://www.theverge.com/tech/1025694/apple-siri-ai-third-party-apps",
+      "sources": [
+        {
+          "url": "https://www.theverge.com/tech/1025694/apple-siri-ai-third-party-apps",
+          "title": "Apple starts giving Siri AI access to third-party apps",
+          "source_type": "rss",
+          "published_at": "2026-11-03T20:16:17+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "apple-siri-ai-third-party-apps-ios27",
+          "date": "2026-11-04",
+          "title": "Apple starts giving Siri AI access to third-party apps",
+          "summary": "苹果在 iOS 27.3 里让开发者把 Siri AI 接进自己的 App，语音助手能结合用户上下文和屏幕内容直接操作第三方应用，做 AI 产品的人可以看平台级入口怎么开放。",
+          "score": 7.6,
+          "url": "https://www.theverge.com/tech/1025694/apple-siri-ai-third-party-apps"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "语音助手",
+        "平台生态"
+      ]
+    },
+    {
+      "product_id": "product-e6935703c77703b0",
+      "product_name": "ChatGPT / Codex",
+      "builder_name": "OpenAI News",
+      "first_seen": "2026-11-04",
+      "last_seen": "2026-11-04",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "OpenAI 发文介绍工程师如何用 ChatGPT 和 Codex 加速 CAD、PCB 设计和仿真等物理世界工作流，值得看的是它给出了 AI 在工程软件环节的具体用法。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.2,
+      "summary": "OpenAI 发文介绍工程师如何用 ChatGPT 和 Codex 加速 CAD、PCB 设计和仿真等物理世界工作流，值得看的是它给出了 AI 在工程软件环节的具体用法。",
+      "title": "Accelerating engineering for the physical world",
+      "url": "https://openai.com/index/accelerating-engineering-for-the-physical-world",
+      "sources": [
+        {
+          "url": "https://openai.com/index/accelerating-engineering-for-the-physical-world",
+          "title": "Accelerating engineering for the physical world",
+          "source_type": "rss",
+          "published_at": "2026-11-03T12:00:00+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "openai-chatgpt-codex-physical-engineering",
+          "date": "2026-11-04",
+          "title": "Accelerating engineering for the physical world",
+          "summary": "OpenAI 发文介绍工程师如何用 ChatGPT 和 Codex 加速 CAD、PCB 设计和仿真等物理世界工作流，值得看的是它给出了 AI 在工程软件环节的具体用法。",
+          "score": 7.2,
+          "url": "https://openai.com/index/accelerating-engineering-for-the-physical-world"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Codex",
+        "工程工作流",
+        "客户案例"
+      ]
+    },
+    {
+      "product_id": "product-a01f5cca61506c80",
+      "product_name": "Vercel Security Review",
+      "builder_name": "Sam Bernhardt",
+      "first_seen": "2026-11-04",
+      "last_seen": "2026-11-04",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Vercel 上线 Security Review 公测，代码一推送就自动查漏洞并给出 AI 评级和修复建议，展示了 AI 怎么嵌进开发流程里帮人干活。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.2,
+      "summary": "Vercel 上线 Security Review 公测，代码一推送就自动查漏洞并给出 AI 评级和修复建议，展示了 AI 怎么嵌进开发流程里帮人干活。",
+      "title": "Vercel Security Review now in public beta",
+      "url": "https://vercel.com/changelog/vercel-security-review-public-beta",
+      "sources": [
+        {
+          "url": "https://vercel.com/changelog/vercel-security-review-public-beta",
+          "title": "Vercel Security Review now in public beta",
+          "source_type": "rss",
+          "published_at": "2026-11-03T20:00:00+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "vercel-security-review-public-beta",
+          "date": "2026-11-04",
+          "title": "Vercel Security Review now in public beta",
+          "summary": "Vercel 上线 Security Review 公测，代码一推送就自动查漏洞并给出 AI 评级和修复建议，展示了 AI 怎么嵌进开发流程里帮人干活。",
+          "score": 7.2,
+          "url": "https://vercel.com/changelog/vercel-security-review-public-beta"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "AI 编程",
+        "安全",
+        "开发者工具"
+      ]
+    },
+    {
+      "product_id": "product-7ea893a9755b4ae9",
+      "product_name": "Astra",
+      "builder_name": "syllogism",
+      "first_seen": "2026-11-04",
+      "last_seen": "2026-11-04",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "有研究者发文指出 Astra 能读写 Qwen 权重提升数学能力的说法有误导性，实际只是减少推理循环，提醒做 AI 产品时别轻信模型能力宣传。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.2,
+      "summary": "有研究者发文指出 Astra 能读写 Qwen 权重提升数学能力的说法有误导性，实际只是减少推理循环，提醒做 AI 产品时别轻信模型能力宣传。",
+      "title": "The 'Astra can read and write weights to improve Qwen' post is misleading",
+      "url": "https://honnibal.dev/blog/astra-read-write-misleading",
+      "sources": [
+        {
+          "url": "https://honnibal.dev/blog/astra-read-write-misleading",
+          "title": "The 'Astra can read and write weights to improve Qwen' post is misleading",
+          "source_type": "hackernews",
+          "published_at": "2026-11-03T12:21:17+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "astra-qwen-weights-claim-misleading",
+          "date": "2026-11-04",
+          "title": "The 'Astra can read and write weights to improve Qwen' post is misleading",
+          "summary": "有研究者发文指出 Astra 能读写 Qwen 权重提升数学能力的说法有误导性，实际只是减少推理循环，提醒做 AI 产品时别轻信模型能力宣传。",
+          "score": 7.2,
+          "url": "https://honnibal.dev/blog/astra-read-write-misleading"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "模型能力",
+        "辟谣",
+        "Qwen"
+      ]
+    },
     {
       "product_id": "product-1bf0ffa2afff107f",
       "product_name": "Legora",
@@ -25379,71 +25821,6 @@
       "tags": [
         "Agent",
         "产品发布"
-      ]
-    },
-    {
-      "product_id": "product-2e12c5bd0a44574f",
-      "product_name": "Qwen 3.8 27B",
-      "builder_name": "Simon Willison",
-      "first_seen": "2026-08-17",
-      "last_seen": "2026-08-18",
-      "occurrence_count": 2,
-      "intelligence_type": "model_capability",
-      "evidence_status": "reported",
-      "target_user": "未公开",
-      "user_problem": "未公开",
-      "what_it_is": "Qwen 3.8 27B在Artificial Analysis Intelligence Index上得分52，与GPT-5.6 Luna持平，但参数远小。",
-      "ai_role": "未公开",
-      "implementation_idea": "未公开",
-      "hands_on_exercise": "未公开",
-      "limitations_or_uncertainties": "未公开",
-      "region": "china",
-      "score": 8.5,
-      "summary": "Qwen 3.8 27B在Artificial Analysis Intelligence Index上得分52，与GPT-5.6 Luna持平，但参数远小。",
-      "title": "Qwen 3.8 27B scores 52 on the Artificial Analysis Intelligence Index",
-      "url": "https://simonwillison.net/2026/Aug/17/qwen-38-27b-scores-52/",
-      "sources": [
-        {
-          "url": "https://simonwillison.net/2026/Aug/16/qwen-38-27b/",
-          "title": "Qwen 3.8 27B is excellent, but it defaults to wildly overthinking things",
-          "source_type": "rss",
-          "published_at": "2026-08-16T22:00:39+00:00"
-        },
-        {
-          "url": "https://simonwillison.net/2026/Aug/17/qwen-38-27b-scores-52/",
-          "title": "Qwen 3.8 27B scores 52 on the Artificial Analysis Intelligence Index",
-          "source_type": "rss",
-          "published_at": "2026-08-17T23:58:14+00:00"
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "qwen-3.8-27b-release",
-          "date": "2026-08-17",
-          "title": "Qwen 3.8 27B is excellent, but it defaults to wildly overthinking things",
-          "summary": "阿里Qwen 3.8 27B模型发布，Simon Willison实测发现其性能优秀但默认过度思考。",
-          "score": 8.5,
-          "url": "https://simonwillison.net/2026/Aug/16/qwen-38-27b/"
-        },
-        {
-          "update_id": "qwen-3.8-27b-benchmark",
-          "date": "2026-08-18",
-          "title": "Qwen 3.8 27B scores 52 on the Artificial Analysis Intelligence Index",
-          "summary": "Qwen 3.8 27B在Artificial Analysis Intelligence Index上得分52，与GPT-5.6 Luna持平，但参数远小。",
-          "score": 8.5,
-          "url": "https://simonwillison.net/2026/Aug/17/qwen-38-27b-scores-52/"
-        }
-      ],
-      "usage_flow": [],
-      "learning_points": [],
-      "verticals": [],
-      "tags": [
-        "Qwen",
-        "开源模型",
-        "本地部署",
-        "评测",
-        "模型能力",
-        "基准测试"
       ]
     },
     {
