@@ -1,7 +1,327 @@
 {
   "version": 1,
-  "updated_at": "2026-11-06T06:42:16.547965+00:00",
+  "updated_at": "2026-11-07T05:58:01.841578+00:00",
   "products": [
+    {
+      "product_id": "product-ec8a3248fe85fa02",
+      "product_name": "Chat SDK + json-render（Vercel 官方）",
+      "builder_name": "Ben Sabic",
+      "first_seen": "2026-11-07",
+      "last_seen": "2026-11-07",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "开发跨平台聊天机器人、AI 客服、内部工具的工程师和构建者",
+      "user_problem": "以前想让 AI 在 Slack 显示表格、在 Teams 显示图表，得分别学 Block Kit、Adaptive Cards 等不同格式，维护多套代码；AI 生成界面时也没法边生成边显示，用户要等很久才能看到结果。",
+      "what_it_is": "Vercel 给 Chat SDK 加了一套机制，让 AI Agent（能自动调用工具的 AI 程序）输出 JSON 格式的界面描述，实时转成 Slack、Teams 等平台能直接显示的消息卡片，不用为每个平台单独写代码。",
+      "ai_role": "Agent 负责根据用户请求，选择合适的组件并写出正确的 JSON 规格；如果写错了，开发者可以把错误列表发回给 AI 让它自行修正。",
+      "implementation_idea": "核心思路是\"写一次 JSON，到处渲染\"。中间加了一层抽象：左边是 AI 懂的组件目录（用 TypeScript 类型约束），右边是各平台的适配器。AI 只和中间层打交道，不用知道 Slack 和 Teams 的具体语法。流式更新靠一个计时器控制频率，避免消息闪得太快。",
+      "hands_on_exercise": "30 分钟：访问 https://chat-sdk-demo.json-render.dev 试用 playground，观察 AI 如何生成表格/图表；再花 30 分钟读 https://json-render.dev/docs/api/chat 的文档，尝试在本地用 Chat SDK 跑一个最简单的 streamCard 示例，把 AI 生成的 JSON 改成故意写错一个字段，看 toCard 会不会抛出 CardSpecError。",
+      "limitations_or_uncertainties": "未公开：具体支持哪些平台 adapter 的完整清单、组件目录目前有多少内置组件、是否支持自定义组件的详细规则、生产环境性能数据（延迟、并发）、定价模式。",
+      "region": "global",
+      "score": 8.2,
+      "summary": "Vercel 让 Chat SDK 代理用 json-render 流式生成表格、图表、按钮等 UI 卡片，解决跨平台消息格式维护问题，适合构建者学习如何让 AI 输出结构化界面。",
+      "title": "Chat SDK Agent 现在能用 json-render 流式生成 UI 卡片",
+      "url": "https://vercel.com/changelog/json-render-and-chat-sdk-agents",
+      "sources": [
+        {
+          "url": "https://vercel.com/changelog/json-render-and-chat-sdk-agents",
+          "title": "Chat SDK agents can now stream generative UI with json-render",
+          "source_type": "rss",
+          "published_at": "2026-11-06T21:00:00+00:00"
+        },
+        {
+          "url": "https://chat-sdk.dev/",
+          "title": "Chat SDK",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://vercel.com/chat",
+          "title": "Chat - Vercel",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "vercel-chat-sdk-json-render-streaming-ui",
+          "date": "2026-11-07",
+          "title": "Chat SDK Agent 现在能用 json-render 流式生成 UI 卡片",
+          "summary": "Vercel 让 Chat SDK 代理用 json-render 流式生成表格、图表、按钮等 UI 卡片，解决跨平台消息格式维护问题，适合构建者学习如何让 AI 输出结构化界面。",
+          "score": 8.2,
+          "url": "https://vercel.com/changelog/json-render-and-chat-sdk-agents"
+        }
+      ],
+      "usage_flow": [
+        "开发者在代码里定义一套组件目录（表格、图表、按钮等），告诉 Agent 有哪些 UI 可用",
+        "Agent 根据对话内容，写出一段 JSON 格式的界面规格说明",
+        "json-render 把 JSON 转成 Chat SDK 的通用卡片，同时 streamCard 边生成边推送给用户（最快每 500ms 更新一次）",
+        "Chat SDK 的 adapter 把卡片转成 Slack/Teams/Discord 等平台的原生格式发出去，超出平台限制时自动降级或报错"
+      ],
+      "learning_points": [
+        "Agent：一种能自主决定下一步行动的 AI 程序，不只是回答问题，还能调用工具、生成文件或界面",
+        "流式生成（Streaming）：AI 边想边输出，不用等全部想完才显示，用户体验更接近真人打字",
+        "结构化输出 / JSON Schema：用固定的 JSON 格式约束 AI 的输出，让程序能可靠地解析，比让 AI 自由写代码更安全"
+      ],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "生成式UI",
+        "Vercel",
+        "Chat SDK"
+      ]
+    },
+    {
+      "product_id": "product-3ffebea4ddcd029d",
+      "product_name": "Jev（TypeSafe AI 的小模型）+ Claude Opus（Anthropic 的大模型），由 Hightouch 集成使用",
+      "builder_name": "theanomaly",
+      "first_seen": "2026-11-07",
+      "last_seen": "2026-11-07",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "需要批量做身份解析（把不同来源的零碎用户数据拼成同一个人）的数据工程师、CDP/营销技术团队",
+      "user_problem": "用大模型做身份解析，准确率高但 API 账单贵；用小模型便宜但容易认错人。怎么不花冤枉钱又能保证准度？",
+      "what_it_is": "Hightouch 在自家产品里做的一个模型编排实验：让小模型 Jev 处理常规任务，没把握时再去问 Claude Opus，结果在身份解析任务上省了约 75% 的钱，准确率却没掉。",
+      "ai_role": "Jev 是第一道关卡，负责快速筛选和决策是否升级；Opus 是后备专家，只处理 Jev 没把握的硬案例。这种分工叫「模型编排」（Model Orchestration），白话就是「让合适的模型干合适的活」。",
+      "implementation_idea": "核心思路是「分级诊疗」：小病小医院看，大病转三甲。Jev 被训练/提示成能判断自己的不确定程度——如果输入模糊、字段缺失、或涉及复杂规则，就自动转交。关键是让 Jev「知道自己不知道」，而不是瞎猜。Hightouch 还给了 Jev 一份「Opus 能力说明书」，帮它更准地决定什么时候该升级。",
+      "hands_on_exercise": "30 分钟动手：用你熟悉的编程语言（Python/JS 都行），写一个两层路由脚本。第一层用便宜模型（如 GPT-3.5 或本地小模型），让它判断问题难度 1-5 分；4-5 分的问题转发给 GPT-4/Claude 3.5。准备 10 个真实问题跑一遍，对比「全部用大模型」和「分层路由」的成本与准确率差异。可以用 OpenRouter 统一 API 方便比价。",
+      "limitations_or_uncertainties": "实验仅限「身份解析」这一个任务，不能推广到通用场景；Jev 的「不确定度判断」具体怎么训练/提示的未公开；社区有人质疑校准图表解读可能有误（Luna 的校准误差可能比 Jev 更低）；Jev 本身信息极少，Wikipedia 显示其为 TypeSafe AI 的 proprietary 模型，2026 年才有限开放，但当前日期为 2025 年，该信息存疑。",
+      "region": "global",
+      "score": 8.1,
+      "summary": "Hightouch 让一个小模型 Jev 在不确定时向 Opus 求助，在身份解析任务上以约四分之一成本达到 Opus 的准确率，展示了多模型编排的产品思路。",
+      "title": "Hightouch 用「小模型+大模型」组合，把身份解析成本降到四分之一",
+      "url": "https://hightouch.com/blog/llm-judges-identity-resolution",
+      "sources": [
+        {
+          "url": "https://hightouch.com/blog/llm-judges-identity-resolution",
+          "title": "A Jev that can ask Opus for help gives Opus accuracy at 4x lower cost",
+          "source_type": "hackernews",
+          "published_at": "2026-11-06T19:48:51+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "jev-opus-identity-resolution",
+          "date": "2026-11-07",
+          "title": "Hightouch 用「小模型+大模型」组合，把身份解析成本降到四分之一",
+          "summary": "Hightouch 让一个小模型 Jev 在不确定时向 Opus 求助，在身份解析任务上以约四分之一成本达到 Opus 的准确率，展示了多模型编排的产品思路。",
+          "score": 8.1,
+          "url": "https://hightouch.com/blog/llm-judges-identity-resolution"
+        }
+      ],
+      "usage_flow": [
+        "把多条来源的用户记录丢给 Jev，让它判断是不是同一个人",
+        "Jev 自己打分：如果很确定，直接给答案；如果不确定，触发「向上求助」",
+        "Jev 把难题包装好，发给 Claude Opus 做最终判断",
+        "返回结果，同时记录这次 escalated（升级）花了多少成本"
+      ],
+      "learning_points": [
+        "模型编排（Model Orchestration）：不只用一个大模型，而是把多个模型串起来，像流水线一样分工，省钱又保效果",
+        "Agent：这里 Jev 就是一个简单 Agent——不只是回答问题，还能自己做决策（要不要调用外部工具/模型），Agent 白话就是「能自己动起来的 AI，不只是你问一句它答一句」",
+        "Function Calling：Jev 决定升级时，其实就是在调用另一个模型当工具，Function Calling 白话就是「让 AI 决定什么时候调用外部功能，比如查数据库或调用另一个 AI」"
+      ],
+      "verticals": [],
+      "tags": [
+        "模型编排",
+        "成本优化",
+        "Agent"
+      ]
+    },
+    {
+      "product_id": "product-106c815e9bebc255",
+      "product_name": "Meta Muse",
+      "builder_name": "Emma Roth",
+      "first_seen": "2026-11-07",
+      "last_seen": "2026-11-07",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Meta 在 Muse AI 助手中推出 spaces 功能，用户可让 AI 生成购物中心、学校仪表盘等定制化应用式体验，值得看大厂如何把助手变成可搭建产品的入口。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.8,
+      "summary": "Meta 在 Muse AI 助手中推出 spaces 功能，用户可让 AI 生成购物中心、学校仪表盘等定制化应用式体验，值得看大厂如何把助手变成可搭建产品的入口。",
+      "title": "Meta&#8217;s Muse AI can create custom &#8216;spaces&#8217; for the version of the app you need right now",
+      "url": "https://www.theverge.com/tech/1028871/meta-muse-ai-spaces",
+      "sources": [
+        {
+          "url": "https://www.theverge.com/tech/1028871/meta-muse-ai-spaces",
+          "title": "Meta&#8217;s Muse AI can create custom &#8216;spaces&#8217; for the version of the app you need right now",
+          "source_type": "rss",
+          "published_at": "2026-11-06T18:10:10+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "meta-muse-spaces-launch",
+          "date": "2026-11-07",
+          "title": "Meta&#8217;s Muse AI can create custom &#8216;spaces&#8217; for the version of the app you need right now",
+          "summary": "Meta 在 Muse AI 助手中推出 spaces 功能，用户可让 AI 生成购物中心、学校仪表盘等定制化应用式体验，值得看大厂如何把助手变成可搭建产品的入口。",
+          "score": 7.8,
+          "url": "https://www.theverge.com/tech/1028871/meta-muse-ai-spaces"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "AI助手",
+        "Meta",
+        "生成式UI"
+      ]
+    },
+    {
+      "product_id": "product-68b266974eab3cca",
+      "product_name": "Vercel AI Gateway",
+      "builder_name": "Zachary Chen",
+      "first_seen": "2026-11-07",
+      "last_seen": "2026-11-07",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Vercel AI Gateway 新增 DeepSeek Search 和 Fetch 工具，让任意支持工具调用的模型用同一 API key 完成搜索和网页抓取，解决多模型切换时搜索工具不统一的问题。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.6,
+      "summary": "Vercel AI Gateway 新增 DeepSeek Search 和 Fetch 工具，让任意支持工具调用的模型用同一 API key 完成搜索和网页抓取，解决多模型切换时搜索工具不统一的问题。",
+      "title": "AI Gateway adds DeepSeek Search and Fetch tools",
+      "url": "https://vercel.com/changelog/ai-gateway-adds-deepseek-search-and-fetch-tools",
+      "sources": [
+        {
+          "url": "https://vercel.com/changelog/ai-gateway-adds-deepseek-search-and-fetch-tools",
+          "title": "AI Gateway adds DeepSeek Search and Fetch tools",
+          "source_type": "rss",
+          "published_at": "2026-11-06T21:00:00+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "vercel-ai-gateway-deepseek-search-fetch",
+          "date": "2026-11-07",
+          "title": "AI Gateway adds DeepSeek Search and Fetch tools",
+          "summary": "Vercel AI Gateway 新增 DeepSeek Search 和 Fetch 工具，让任意支持工具调用的模型用同一 API key 完成搜索和网页抓取，解决多模型切换时搜索工具不统一的问题。",
+          "score": 7.6,
+          "url": "https://vercel.com/changelog/ai-gateway-adds-deepseek-search-and-fetch-tools"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "AI Gateway",
+        "搜索工具",
+        "Vercel",
+        "Agent"
+      ]
+    },
+    {
+      "product_id": "product-2f7a0ff4b1d6b467",
+      "product_name": "Claude Code",
+      "builder_name": "claude-code-publisher[bot]",
+      "first_seen": "2026-11-07",
+      "last_seen": "2026-11-07",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Anthropic 发布 Claude Code v2.1.319，让 MCP 工具调用可后台运行并新增权限拒绝设置，帮助开发者更顺畅地构建终端 Agent 工作流。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.2,
+      "summary": "Anthropic 发布 Claude Code v2.1.319，让 MCP 工具调用可后台运行并新增权限拒绝设置，帮助开发者更顺畅地构建终端 Agent 工作流。",
+      "title": "anthropics/claude-code released v2.1.319",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.319",
+      "sources": [
+        {
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.319",
+          "title": "anthropics/claude-code released v2.1.319",
+          "source_type": "github",
+          "published_at": "2026-11-06T17:04:01+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "claude-code-v2.1.319",
+          "date": "2026-11-07",
+          "title": "anthropics/claude-code released v2.1.319",
+          "summary": "Anthropic 发布 Claude Code v2.1.319，让 MCP 工具调用可后台运行并新增权限拒绝设置，帮助开发者更顺畅地构建终端 Agent 工作流。",
+          "score": 7.2,
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.319"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "MCP",
+        "开发者工具"
+      ]
+    },
+    {
+      "product_id": "product-893f72bd80d7bf10",
+      "product_name": "GitHub Copilot",
+      "builder_name": "Nick Liffen",
+      "first_seen": "2026-11-07",
+      "last_seen": "2026-11-07",
+      "occurrence_count": 1,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "GitHub 发布开发者指南，说明如何用 Copilot 完成规划、写代码、审查和排查生产问题，并指出哪些环节仍需人工判断，帮助理解 Agent 工程的实际用法。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.2,
+      "summary": "GitHub 发布开发者指南，说明如何用 Copilot 完成规划、写代码、审查和排查生产问题，并指出哪些环节仍需人工判断，帮助理解 Agent 工程的实际用法。",
+      "title": "Beyond code generation: A developer’s guide to agentic engineering",
+      "url": "https://github.blog/ai-and-ml/github-copilot/beyond-code-generation-a-developers-guide-to-agentic-engineering/",
+      "sources": [
+        {
+          "url": "https://github.blog/ai-and-ml/github-copilot/beyond-code-generation-a-developers-guide-to-agentic-engineering/",
+          "title": "Beyond code generation: A developer’s guide to agentic engineering",
+          "source_type": "rss",
+          "published_at": "2026-11-06T22:15:59+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "github-copilot-agentic-engineering-guide",
+          "date": "2026-11-07",
+          "title": "Beyond code generation: A developer’s guide to agentic engineering",
+          "summary": "GitHub 发布开发者指南，说明如何用 Copilot 完成规划、写代码、审查和排查生产问题，并指出哪些环节仍需人工判断，帮助理解 Agent 工程的实际用法。",
+          "score": 7.2,
+          "url": "https://github.blog/ai-and-ml/github-copilot/beyond-code-generation-a-developers-guide-to-agentic-engineering/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "GitHub Copilot",
+        "Agent",
+        "开发者工具"
+      ]
+    },
     {
       "product_id": "product-b12679b007b500f7",
       "product_name": "Personal Finance in Claude",

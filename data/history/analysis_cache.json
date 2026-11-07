@@ -17386,6 +17386,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "26ec3108397ef0e51f2fe5c6ce96cc7d08d23d664b8c5a382200bed4b42634a7": {
+      "created_at": "2026-11-07T05:56:45.681352+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "ai-dating-dealbreaker",
+        "evidence_status": "reported",
+        "follow_up": "关注约会类产品是否推出 AI 使用偏好匹配功能。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:5fc36de99f2c56dd",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "AI 成为约会话题的消费者趋势报道，有用户视角但无产品、构建过程或可迁移产品思路，低于收录线。",
+        "region": "global",
+        "score": 5.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "The Verge 报道 AI 使用态度正成为约会中的新筛选条件，反映用户对 AI 的社会接受度变化，但对产品构建者直接增量有限。",
+        "tags": [
+          "消费者趋势",
+          "AI社会影响"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "270cb87242fc6fa27f8cfc5d5ff3e4b959bc27d8605748725563166c110275c3": {
       "created_at": "2026-08-09T02:28:23.071693+00:00",
       "model": "deepseek-v4-flash",
@@ -23840,6 +23878,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "36c04170845c1e6ae5c7c3a63a2f48b5ca28d60644408c31451811e9be88cfb0": {
+      "created_at": "2026-11-07T05:56:57.944480+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "uefi-bare-metal-first-steps",
+        "evidence_status": "reported",
+        "follow_up": "无。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:50394855",
+        "intelligence_type": "builder_insight",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "UEFI 裸机编程入门教程，属于系统编程技术内容，与 AI 产品、模型能力或构建实践无关，按兴趣优先级归为噪音。",
+        "region": "global",
+        "score": 2.5,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "一篇 UEFI 裸机编程入门教程，属于系统编程技术内容，与 AI 产品构建无关。",
+        "tags": [
+          "系统编程",
+          "UEFI"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "36c97cfe6fd5e0d90a651618cf25b0e2a5677889f684ea685d3c7b80268cb758": {
       "created_at": "2026-09-02T04:32:24.335911+00:00",
       "model": "deepseek-v4-flash",
@@ -27109,6 +27185,38 @@
       },
       "stage": "candidate_analysis"
     },
+    "3d90b942996e9d38bae4e4508d14344b77f858359c973024b08d50c6b4a64bf5": {
+      "created_at": "2026-11-07T05:58:01.823409+00:00",
+      "model": "kimi-k2.6",
+      "prompt_version": "deep-v3-beginner",
+      "result": {
+        "ai_role": "Jev 是第一道关卡，负责快速筛选和决策是否升级；Opus 是后备专家，只处理 Jev 没把握的硬案例。这种分工叫「模型编排」（Model Orchestration），白话就是「让合适的模型干合适的活」。",
+        "evidence_status": "first_party",
+        "hands_on_exercise": "30 分钟动手：用你熟悉的编程语言（Python/JS 都行），写一个两层路由脚本。第一层用便宜模型（如 GPT-3.5 或本地小模型），让它判断问题难度 1-5 分；4-5 分的问题转发给 GPT-4/Claude 3.5。准备 10 个真实问题跑一遍，对比「全部用大模型」和「分层路由」的成本与准确率差异。可以用 OpenRouter 统一 API 方便比价。",
+        "implementation_idea": "核心思路是「分级诊疗」：小病小医院看，大病转三甲。Jev 被训练/提示成能判断自己的不确定程度——如果输入模糊、字段缺失、或涉及复杂规则，就自动转交。关键是让 Jev「知道自己不知道」，而不是瞎猜。Hightouch 还给了 Jev 一份「Opus 能力说明书」，帮它更准地决定什么时候该升级。",
+        "learning_points": [
+          "模型编排（Model Orchestration）：不只用一个大模型，而是把多个模型串起来，像流水线一样分工，省钱又保效果",
+          "Agent：这里 Jev 就是一个简单 Agent——不只是回答问题，还能自己做决策（要不要调用外部工具/模型），Agent 白话就是「能自己动起来的 AI，不只是你问一句它答一句」",
+          "Function Calling：Jev 决定升级时，其实就是在调用另一个模型当工具，Function Calling 白话就是「让 AI 决定什么时候调用外部功能，比如查数据库或调用另一个 AI」"
+        ],
+        "limitations_or_uncertainties": "实验仅限「身份解析」这一个任务，不能推广到通用场景；Jev 的「不确定度判断」具体怎么训练/提示的未公开；社区有人质疑校准图表解读可能有误（Luna 的校准误差可能比 Jev 更低）；Jev 本身信息极少，Wikipedia 显示其为 TypeSafe AI 的 proprietary 模型，2026 年才有限开放，但当前日期为 2025 年，该信息存疑。",
+        "product_name": "Jev（TypeSafe AI 的小模型）+ Claude Opus（Anthropic 的大模型），由 Hightouch 集成使用",
+        "sources": [
+          "https://hightouch.com/blog/llm-judges-identity-resolution"
+        ],
+        "target_users": "需要批量做身份解析（把不同来源的零碎用户数据拼成同一个人）的数据工程师、CDP/营销技术团队",
+        "title_zh": "Hightouch 用「小模型+大模型」组合，把身份解析成本降到四分之一",
+        "usage_flow": [
+          "把多条来源的用户记录丢给 Jev，让它判断是不是同一个人",
+          "Jev 自己打分：如果很确定，直接给答案；如果不确定，触发「向上求助」",
+          "Jev 把难题包装好，发给 Claude Opus 做最终判断",
+          "返回结果，同时记录这次 escalated（升级）花了多少成本"
+        ],
+        "user_problem": "用大模型做身份解析，准确率高但 API 账单贵；用小模型便宜但容易认错人。怎么不花冤枉钱又能保证准度？",
+        "what_it_is": "Hightouch 在自家产品里做的一个模型编排实验：让小模型 Jev 处理常规任务，没把握时再去问 Claude Opus，结果在身份解析任务上省了约 75% 的钱，准确率却没掉。"
+      },
+      "stage": "deep_analysis"
+    },
     "3da0ad24666c4776b36fc63a7dfd35982f67ada16e42fdd3ed393de7172856ca": {
       "created_at": "2026-09-07T04:39:49.724105+00:00",
       "model": "deepseek-v4-flash",
@@ -27341,6 +27449,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "3dec0e2352d379e1a71f11dd0e7fbd33d6e6e13050d66df87dae333bf054d406": {
+      "created_at": "2026-11-07T05:56:26.739149+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "artex-ai-hacking-tools-exposed",
+        "evidence_status": "reported",
+        "follow_up": "可关注 Artex 工具本身的产品形态及后续安全修复，但优先级低。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:d59915f58c67bdab",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Artex",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "安全事件报道，涉及 AI 渗透测试工具暴露，但与产品构建、模型能力或产品思路无直接关系，对 AI 产品经理初学者可迁移增量有限，低于收录阈值。",
+        "region": "global",
+        "score": 5.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "安全研究人员发现数百个托管 AI 渗透测试工具 Artex 的服务器暴露在公网，任何人都能访问该黑客工具；这是一起安全暴露事件，而非产品发布或构建实践。",
+        "tags": [
+          "AI Security",
+          "Penetration Testing"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "3e329dc75e6a9975343ab8ba65c369b15c743c83a360581cff6b78b467c14880": {
       "created_at": "2026-09-25T04:56:31.473603+00:00",
       "model": "deepseek-flash",
@@ -27412,6 +27558,44 @@
           "医疗健康",
           "Anthropic",
           "官方公告"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "3e6f164f46544f7d900f21c8acf4f2e7193391029e0e924e8910936bf2f32003": {
+      "created_at": "2026-11-07T05:56:57.944325+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "ai-selloff-comparison",
+        "evidence_status": "reported",
+        "follow_up": "无。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:50401029",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "AI 股票抛售与历史股灾对比的泛行业评论，无产品、代码或构建实践证据，属于低信噪比市场评论，按规则低于 7 分且不收录。",
+        "region": "global",
+        "score": 3.0,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "一篇将当前 AI 股票抛售与历史股灾对比的评论文章，缺乏产品实践证据，属于泛行业市场评论。",
+        "tags": [
+          "市场",
+          "股票"
         ],
         "target_user": "",
         "verticals": []
@@ -30933,6 +31117,46 @@
       },
       "stage": "candidate_analysis"
     },
+    "45a397064eb7641c6af5fef62e5404309d9ad4a3f5e0bed906b7d8cc683cec86": {
+      "created_at": "2026-11-07T05:56:45.681554+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "vercel-ai-gateway-deepseek-search-fetch",
+        "evidence_status": "first_party",
+        "follow_up": "观察开发者用 Search/Fetch 组合构建的检索类产品案例。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:vercel.com_changelog_rss:eb1486319416969d",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Vercel AI Gateway",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Vercel 官方更新，AI Gateway 新增 DeepSeek Search 和 Fetch 工具，有明确定价和接入方式，对构建带搜索能力的 AI 产品有可迁移增量，但属于基础设施功能。",
+        "region": "global",
+        "score": 7.6,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Vercel AI Gateway 新增 DeepSeek Search 和 Fetch 工具，让任意支持工具调用的模型用同一 API key 完成搜索和网页抓取，解决多模型切换时搜索工具不统一的问题。",
+        "tags": [
+          "AI Gateway",
+          "搜索工具",
+          "Vercel",
+          "Agent"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "45b684a2314f06e0dba47248b0fe8342526be21e6e6a8b63267d8a0f3e2087ed": {
       "created_at": "2026-10-09T06:07:18.184528+00:00",
       "model": "deepseek-flash",
@@ -34180,6 +34404,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "4cfcd7bd3e44da3e0c798d95b8d4a46bd6cc3b7666f13ac620b51668d67976c9": {
+      "created_at": "2026-11-07T05:56:19.799392+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "artificial-analysis-vials-aa",
+        "evidence_status": "first_party",
+        "follow_up": "确认该条目是否为有效文章或抓取错误。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "public_web:sitemap:42b4ee4be6a54ee8208b",
+        "intelligence_type": "market_signal",
+        "is_first_party": true,
+        "is_new_event": false,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "标题与正文均无实质信息，仅说明是 Artificial Analysis 的官方更新，无法判断内容与产品价值，属于弱相关噪音。",
+        "region": "global",
+        "score": 2.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Artificial Analysis 发布了一条标题为 Vials Aa 的更新，但内容为空泛描述，无法判断具体做了什么或解决什么问题。",
+        "tags": [
+          "Artificial Analysis",
+          "信息缺失"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "4d171edc29cc54ba52384309098c715569ce6c1fb9ad0f6d80e1fde1d94bc088": {
       "created_at": "2026-09-19T04:36:26.732668+00:00",
       "model": "deepseek-flash",
@@ -35098,6 +35360,45 @@
           "Anthropic",
           "Claude Code",
           "版本发布"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "4ea8fd57fc0ffbe25f509264b968b0ff811faa77e6035b49f837b780d22f4b75": {
+      "created_at": "2026-11-07T05:56:19.799463+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openrouter-rankings-top5-2026-11",
+        "evidence_status": "reported",
+        "follow_up": "关注这些模型是否被用于具体产品案例或 Agent 工作流。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "public_web:ranking:b0ab1ec5ca2d10da9cfa",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": false,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "聚合榜单展示模型热度，包含 DeepSeek、GLM、腾讯 Hy4、OpenAI GPT-6 Luna 等模型简介，但无产品案例、用户反馈或构建过程，对产品经理的迁移价值有限，且来源为聚合排名。",
+        "region": "global",
+        "score": 6.5,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "OpenRouter 更新模型热度 Top 5，列出 DeepSeek V4.1 Flash、GLM 5.3 Flash、腾讯 Hy4 和 GPT-6 Luna 等模型，但只是排名和简介，没有产品用法或用户反馈。",
+        "tags": [
+          "模型榜单",
+          "OpenRouter",
+          "模型能力"
         ],
         "target_user": "",
         "verticals": []
@@ -36301,6 +36602,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "513ebb9164751f69ea635aa148eb3f3890965b377be93ed993659eeb6ef141e9": {
+      "created_at": "2026-11-07T05:56:31.498767+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "us-midterm-data-center-ballot-measures-ai-industry",
+        "evidence_status": "reported",
+        "follow_up": "可关注后续数据中心政策对 AI 产品部署成本的影响，但非优先追踪。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:1ec610c577e32728",
+        "intelligence_type": "business_policy",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "TechCrunch 播客讨论美国中期选举对 AI 行业的影响，涉及数据中心相关投票措施，属于政策与行业观察，但缺乏产品、代码、Demo 或构建过程等一手证据，对 AI 产品经理的迁移价值有限，且为泛行业评论，按规则低于 7 分。",
+        "region": "global",
+        "score": 5.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "TechCrunch 播客讨论美国中期选举中 41 项数据中心相关投票措施多数倾向限制开发，可能影响 AI 行业，但无产品实践证据，对初学者参考价值有限。",
+        "tags": [
+          "AI政策",
+          "数据中心",
+          "行业观察"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "51554f7dcd5d7f11f80100f2624fe90db5254b6d6da8c261b9db48657c6ae8cd": {
       "created_at": "2026-09-18T04:42:20.502951+00:00",
       "model": "deepseek-flash",
@@ -36567,6 +36907,44 @@
           "ChatGPT",
           "搜索",
           "GEO"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "51d977687536cfb7b69d364cb6256d5d34e3cf0fa0ec9af4905bf569d2da73d0": {
+      "created_at": "2026-11-07T05:56:45.681568+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-codex-rust-v0.169.0-alpha.2",
+        "evidence_status": "first_party",
+        "follow_up": "等待该版本的具体变更日志或稳定版发布。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "github:release:437115053",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "OpenAI Codex",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI Codex 的 alpha 版本发布，无任何变更说明，属于低信息量版本号更新，对产品经理无增量。",
+        "region": "global",
+        "score": 3.0,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "OpenAI Codex 发布 rust-v0.169.0-alpha.2 版本，但 release note 为空，没有可读的功能变更或实践信息。",
+        "tags": [
+          "Codex",
+          "版本发布"
         ],
         "target_user": "",
         "verticals": []
@@ -48708,6 +49086,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "6c096b64a5906d8b61b75c7b1b92ecf28f15c594f79361368eeb10b0502cec74": {
+      "created_at": "2026-11-07T05:56:22.265466+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "crusoe-wyoming-datacenter-sale-google",
+        "evidence_status": "reported",
+        "follow_up": "不必追踪；除非后续出现与产品体验或模型能力相关的实质变化。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:73b9c8b61b1e6aac",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "报道的是数据中心资产出售与基建挑战，属于算力/资本层面动态，未涉及新产品体验、模型能力或可迁移的产品构建方法，对目标读者（LLM初学者、AI产品经理）的直接价值低，按规则低于7分不收录。",
+        "region": "global",
+        "score": 4.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Crusoe 把陷入困境的怀俄明州 AI 数据中心项目卖给 Google，说明大型 AI 数据中心建设并不容易；但这条是基建与资本新闻，对做 AI 产品没有直接可迁移的启发。",
+        "tags": [
+          "AI基础设施",
+          "数据中心",
+          "算力"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "6c33113abd0b96042ce814da4f73e2d5c015b9781b5644594f032f77afa04c7c": {
       "created_at": "2026-08-15T01:49:20.874137+00:00",
       "model": "deepseek-v4-flash",
@@ -51721,6 +52138,45 @@
         "what_it_is": "一个只展示 Hacker News 用户 2007 年以来在评论里推荐过的视频的类 YouTube 网站"
       },
       "stage": "deep_analysis"
+    },
+    "72db696daa17c875a4fdc5e927ab4f57ebc42d303c200b9557995a82b9a4a308": {
+      "created_at": "2026-11-07T05:56:19.799537+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-valuation-anthropic-ipo",
+        "evidence_status": "reported",
+        "follow_up": "无产品层面后续。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:aed31e48a42b0dfd",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "融资与估值新闻，与上一条 OpenAI 融资重复，且无产品、模型能力或构建过程信息，属于低价值重复报道。",
+        "region": "global",
+        "score": 2.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "The Verge 报道 OpenAI 在新一轮融资中估值达 1.25 万亿美元，同时提到 Anthropic 接近 IPO，属于融资消息，不涉及产品功能。",
+        "tags": [
+          "OpenAI",
+          "融资",
+          "Anthropic"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
     },
     "72e05377f280c621cc511d188442951903d48fe2a4fc882aae60a3111d53479c": {
       "created_at": "2026-10-21T04:44:19.635290+00:00",
@@ -58232,6 +58688,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "81b009f285c95f69e38d5f226962533daeca1b59a0016bcfd5adaa47d8431be4": {
+      "created_at": "2026-11-07T05:56:45.681408+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "nilay-patel-ai-products-critique",
+        "evidence_status": "reported",
+        "follow_up": "关注后续是否有产品用实际数据回应这一批评。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:simonwillison.net_atom_everything_:db8aad7567ee0d78",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": false,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Nilay Patel 对 AI 产品成本与价值不匹配的尖锐评论，有观点但无产品、代码或构建实践证据，属于高信噪比行业评论但未达 7 分。",
+        "region": "global",
+        "score": 6.5,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "Nilay Patel 批评 AI 产品不够好、成本太高、收益不真实，认为行业必须做出更好的产品才能走出困境，对产品经理有警示价值但无实践增量。",
+        "tags": [
+          "行业评论",
+          "AI产品价值"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "81b49269a5ddbe4fd91c669677822bc4708aade184984cd7f1add8921060435e": {
       "created_at": "2026-08-10T02:34:06.038274+00:00",
       "model": "deepseek-v4-flash",
@@ -60984,6 +61478,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "87870aee3637a4786081ac386ab583f4706649ba6ff74c6a619d98b788770d85": {
+      "created_at": "2026-11-07T05:56:19.799514+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "github-copilot-agentic-engineering-guide",
+        "evidence_status": "first_party",
+        "follow_up": "观察 Copilot 在 Agent 工作流中是否推出具体新功能或用户案例。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:github.blog_ai-and-ml_feed_:0cfbb20b8b5faebc",
+        "intelligence_type": "builder_insight",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "GitHub Copilot",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "GitHub 官方博客发布开发者指南，讲如何用 Copilot 做规划、写代码、审查和排查生产问题，并指出哪些工作仍需人工判断，属于构建者实践经验，对初学者理解 Agent 工作流有迁移价值，但偏教程而非产品发布。",
+        "region": "global",
+        "score": 7.2,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "GitHub 发布开发者指南，说明如何用 Copilot 完成规划、写代码、审查和排查生产问题，并指出哪些环节仍需人工判断，帮助理解 Agent 工程的实际用法。",
+        "tags": [
+          "GitHub Copilot",
+          "Agent",
+          "开发者工具"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "878757b53f675f2a5bd076e12629a0e0809dc38632c761dbd09c77ddd1a6c637": {
       "created_at": "2026-10-31T05:38:36.894646+00:00",
       "model": "deepseek-flash",
@@ -63646,6 +64179,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "8c6594c03b65f0f449963677c4d605e77019254d4fb38d4ca354c559f123a248": {
+      "created_at": "2026-11-07T05:56:45.681427+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "ainews-anthropic-ipo",
+        "evidence_status": "reported",
+        "follow_up": "等待 Anthropic IPO 的官方信息或深度分析。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:www.latent.space_feed:24eb4b61477c08c1",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "AINews 聚合摘要，标题涉及 Anthropic IPO 但正文仅一句话提及 ARC Prize 和 Thinking Machines，信息量低且无产品构建增量。",
+        "region": "global",
+        "score": 5.0,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "AINews 摘要提到 Anthropic IPO 话题，并简述 ARC Prize 测试 Inkling 2 Small 及 Thinking Machines 发现早期检查点绕过护栏，但内容过于简略。",
+        "tags": [
+          "Anthropic",
+          "IPO",
+          "AINews"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "8c766545eaf4caa793a124f4a50316363a75be27511eceb4332ce43cf8b72f6e": {
       "created_at": "2026-08-31T05:33:16.311148+00:00",
       "model": "deepseek-v4-flash",
@@ -66119,6 +66691,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "90443c51583f7236af4192f46c53652f8f65ec1642166a2761b622c32812a3c9": {
+      "created_at": "2026-11-07T05:56:45.681256+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "nvidia-china-spy-allegation",
+        "evidence_status": "reported",
+        "follow_up": "关注英伟达对华芯片政策是否因此变化。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:fb19b29f5bd7fa91",
+        "intelligence_type": "business_policy",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "地缘政治与间谍指控报道，与 AI 产品构建、模型能力或可迁移产品思路无关，属于噪音级行业新闻。",
+        "region": "global",
+        "score": 3.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "纽约时报报道称中国情报机构招募 Megaspeed 高管 Alice Huang 刺探英伟达 CEO 黄仁勋，涉及美国 AI 芯片信息，但与产品构建无关。",
+        "tags": [
+          "地缘政治",
+          "芯片"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "904b3e2ce050b439da3739ea17b399f671d40c79d8252f7b09acbc8bb333822a": {
       "created_at": "2026-08-06T03:35:45.969964+00:00",
       "model": "deepseek-v4-flash",
@@ -67804,6 +68414,43 @@
         "verticals": []
       },
       "stage": "candidate_analysis"
+    },
+    "936d95c36b799701f1041969c312bcd1e508a41c8fb00ce48131285be3bc8f02": {
+      "created_at": "2026-11-07T05:57:38.414090+00:00",
+      "model": "kimi-k2.6",
+      "prompt_version": "deep-v3-beginner",
+      "result": {
+        "ai_role": "Agent 负责根据用户请求，选择合适的组件并写出正确的 JSON 规格；如果写错了，开发者可以把错误列表发回给 AI 让它自行修正。",
+        "evidence_status": "first_party",
+        "hands_on_exercise": "30 分钟：访问 https://chat-sdk-demo.json-render.dev 试用 playground，观察 AI 如何生成表格/图表；再花 30 分钟读 https://json-render.dev/docs/api/chat 的文档，尝试在本地用 Chat SDK 跑一个最简单的 streamCard 示例，把 AI 生成的 JSON 改成故意写错一个字段，看 toCard 会不会抛出 CardSpecError。",
+        "implementation_idea": "核心思路是\"写一次 JSON，到处渲染\"。中间加了一层抽象：左边是 AI 懂的组件目录（用 TypeScript 类型约束），右边是各平台的适配器。AI 只和中间层打交道，不用知道 Slack 和 Teams 的具体语法。流式更新靠一个计时器控制频率，避免消息闪得太快。",
+        "learning_points": [
+          "Agent：一种能自主决定下一步行动的 AI 程序，不只是回答问题，还能调用工具、生成文件或界面",
+          "流式生成（Streaming）：AI 边想边输出，不用等全部想完才显示，用户体验更接近真人打字",
+          "结构化输出 / JSON Schema：用固定的 JSON 格式约束 AI 的输出，让程序能可靠地解析，比让 AI 自由写代码更安全"
+        ],
+        "limitations_or_uncertainties": "未公开：具体支持哪些平台 adapter 的完整清单、组件目录目前有多少内置组件、是否支持自定义组件的详细规则、生产环境性能数据（延迟、并发）、定价模式。",
+        "product_name": "Chat SDK + json-render（Vercel 官方）",
+        "sources": [
+          "https://vercel.com/changelog/json-render-and-chat-sdk-agents",
+          "https://chat-sdk.dev/",
+          "https://vercel.com/chat",
+          "https://github.com/vercel/chat",
+          "https://json-render.dev/docs/api/chat",
+          "https://chat-sdk-demo.json-render.dev"
+        ],
+        "target_users": "开发跨平台聊天机器人、AI 客服、内部工具的工程师和构建者",
+        "title_zh": "Chat SDK Agent 现在能用 json-render 流式生成 UI 卡片",
+        "usage_flow": [
+          "开发者在代码里定义一套组件目录（表格、图表、按钮等），告诉 Agent 有哪些 UI 可用",
+          "Agent 根据对话内容，写出一段 JSON 格式的界面规格说明",
+          "json-render 把 JSON 转成 Chat SDK 的通用卡片，同时 streamCard 边生成边推送给用户（最快每 500ms 更新一次）",
+          "Chat SDK 的 adapter 把卡片转成 Slack/Teams/Discord 等平台的原生格式发出去，超出平台限制时自动降级或报错"
+        ],
+        "user_problem": "以前想让 AI 在 Slack 显示表格、在 Teams 显示图表，得分别学 Block Kit、Adaptive Cards 等不同格式，维护多套代码；AI 生成界面时也没法边生成边显示，用户要等很久才能看到结果。",
+        "what_it_is": "Vercel 给 Chat SDK 加了一套机制，让 AI Agent（能自动调用工具的 AI 程序）输出 JSON 格式的界面描述，实时转成 Slack、Teams 等平台能直接显示的消息卡片，不用为每个平台单独写代码。"
+      },
+      "stage": "deep_analysis"
     },
     "93c37a48d46c2f089b1521a0e8760fb04c110bdff62c3ee5608811d098f9312f": {
       "created_at": "2026-07-28T03:49:03.132355+00:00",
@@ -73702,6 +74349,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "9fed92ab7d18fbc4c8a7ffe70365a0ad947d2fbb244189d925a15a15fda2359e": {
+      "created_at": "2026-11-07T05:56:45.681446+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "inkling-2-small-training-run",
+        "evidence_status": "reported",
+        "follow_up": "查找 Inkling 2 Small 的官方技术报告或可验证 Demo。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:www.latent.space_feed:0db7c7075109c394",
+        "intelligence_type": "model_capability",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Inkling 2 Small",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "AINews 聚合摘要，标题提到 Inkling 2 Small 训练细节，但正文仅一句话，缺乏可验证的一手信息或产品体验，属于模型能力动态但证据不足。",
+        "region": "global",
+        "score": 6.0,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "AINews 摘要称 Inkling 2 Small 以 17A-594B 参数在 68 小时内用 12T token 训练完成并击败 Muse Spark，但未提供一手细节或产品体验。",
+        "tags": [
+          "模型训练",
+          "Inkling"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "9ff06f7a50b6e5d86c75f311cb3d0d8d9dc2fda24d8ab9d520c753978623783c": {
       "created_at": "2026-09-17T04:51:37.239531+00:00",
       "model": "deepseek-flash",
@@ -76232,6 +76917,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "a4951a28f7546303b216b942afe78243f7b2cf8f01e34a8dddf7fe51cc9ddad1": {
+      "created_at": "2026-11-07T05:56:57.944292+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "firecracker-vm-escape-pwnescape-2",
+        "evidence_status": "reported",
+        "follow_up": "无。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:50397219",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Firecracker 虚拟机逃逸漏洞分析，属于底层安全研究，与 AI 产品构建、模型能力或产品思路无直接关系，低于收录阈值。",
+        "region": "global",
+        "score": 3.5,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "安全团队披露 Firecracker 虚拟机逃逸漏洞细节，属于底层基础设施安全研究，与 AI 产品构建无直接关联。",
+        "tags": [
+          "安全",
+          "虚拟化"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "a497411154dfb1f5ba48e28375cc53338842ef0b74cefeb5a5d52ca22956ffb5": {
       "created_at": "2026-09-17T04:51:37.239349+00:00",
       "model": "deepseek-flash",
@@ -76265,6 +76988,45 @@
           "AI助手",
           "Snap",
           "个人助理"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "a49e4b07e2d055f2f4303dcf520e630c2d140f442443c010cff55938199e2646": {
+      "created_at": "2026-11-07T05:56:29.053293+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "meta-muse-spaces-announcement",
+        "evidence_status": "reported",
+        "follow_up": "可追踪 Meta 官方后续是否发布 Spaces 的详细文档或 Demo，以判断其实际产品形态。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:dc3dd806aba67b25",
+        "intelligence_type": "early_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Meta Muse Spaces",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "TechCrunch 报道 Meta 为 Muse agent 推出 Spaces 协作功能，但正文仅有概述，缺少产品细节、用户反馈或可验证 Demo，属于功能预告性质，信息增量有限，低于收录阈值。",
+        "region": "global",
+        "score": 5.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Meta 为 Muse agent 推出 Spaces 协作功能，但报道未说明具体用法和效果，对产品经理参考价值有限。",
+        "tags": [
+          "Agent",
+          "Meta",
+          "协作工具"
         ],
         "target_user": "",
         "verticals": []
@@ -76885,6 +77647,44 @@
           "编程Agent",
           "CLI",
           "预发布"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "a5d0ac468e68af3454c801d1e566900a57941804cb2ca15f8ff8b55b5e68efe6": {
+      "created_at": "2026-11-07T05:56:57.944406+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "ai-accelerating-ai-research",
+        "evidence_status": "reported",
+        "follow_up": "无。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:50397994",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "关于 AI 加速 AI 研究的观点文章，评论中有 ML 研究者一手经验，但整体偏泛行业讨论，无具体产品、代码或可验证构建过程，低于收录阈值。",
+        "region": "global",
+        "score": 5.5,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "一篇讨论 AI 如何加速 AI 研究的观点文章，评论补充了研究者经验，但缺乏具体产品案例，属于泛行业观察。",
+        "tags": [
+          "AI研究",
+          "行业观察"
         ],
         "target_user": "",
         "verticals": []
@@ -77550,6 +78350,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "a780aefc70e4acfc5a4d209a14f4a6ff2b90cc038973b89caa3933c2e4ebcfac": {
+      "created_at": "2026-11-07T05:56:24.384920+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-funding-11b-1.25t-2026-11",
+        "evidence_status": "reported",
+        "follow_up": "无需追踪，除非后续披露资金用途与具体产品/模型发布挂钩。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:847e80ae4cf85eb9",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "纯融资报道，无产品、模型能力或构建过程增量，对 AI 产品经理初学者无直接可迁移价值，按规则低于 7 分不收录。",
+        "region": "global",
+        "score": 3.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "TechCrunch 报道 OpenAI 在尚未关闭的融资中又募得 110 亿美元、估值 1.25 万亿美元，但未涉及任何产品、模型或用户反馈信息。",
+        "tags": [
+          "OpenAI",
+          "融资",
+          "估值"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "a7a03d34149121361e9bd95d07cd2870ea637718f22d33532dc6dc31a51e9e08": {
       "created_at": "2026-10-28T05:40:13.297828+00:00",
       "model": "deepseek-flash",
@@ -78004,6 +78843,45 @@
         "tags": [
           "微调",
           "本地AI"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "a88dc7e84b5b11d3aba5b8226e8a2d48ae6ab226c1c2419730216af3152f8ad8": {
+      "created_at": "2026-11-07T05:56:57.943946+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "claude-code-v2.1.319",
+        "evidence_status": "first_party",
+        "follow_up": "观察 MCP 任务后台化在实际 Agent 产品中的采用情况，以及权限拒绝设置对安全性的影响。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "github:release:435952318",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Claude Code",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Claude Code 官方发布，新增 MCP 任务后台化、权限拒绝替代提示、API 延迟优化命令等，属于 Agent 工具链的实用功能更新，对构建 AI 产品有可迁移参考，但为常规版本迭代，非重大能力突破。",
+        "region": "global",
+        "score": 7.2,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "Anthropic 发布 Claude Code v2.1.319，让 MCP 工具调用可后台运行并新增权限拒绝设置，帮助开发者更顺畅地构建终端 Agent 工作流。",
+        "tags": [
+          "Agent",
+          "MCP",
+          "开发者工具"
         ],
         "target_user": "",
         "verticals": []
@@ -78697,6 +79575,45 @@
         "tags": [
           "融资",
           "算力"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "aa4d787925407f9d0c091d491841c4225d2f7127c36f2d3fb37d176456cd4142": {
+      "created_at": "2026-11-07T05:56:57.944155+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "jev-opus-identity-resolution",
+        "evidence_status": "reported",
+        "follow_up": "关注该方案是否开源或产品化，以及在其他任务上的泛化表现。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:50397429",
+        "intelligence_type": "product_case",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Jev",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Hightouch 博客展示用小模型 Jev 在需要时调用 Opus，在身份解析任务上以 4 倍低成本达到 Opus 准确率，属于可验证的模型编排产品实践，HN 高热度讨论补充了多模型路由经验，对构建 AI 产品有明确迁移价值。",
+        "region": "global",
+        "score": 8.1,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Hightouch 让一个小模型 Jev 在不确定时向 Opus 求助，在身份解析任务上以约四分之一成本达到 Opus 的准确率，展示了多模型编排的产品思路。",
+        "tags": [
+          "模型编排",
+          "成本优化",
+          "Agent"
         ],
         "target_user": "",
         "verticals": []
@@ -94719,6 +95636,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "cc8b20de71a7dfa2b14cd17d77c3363e7f1d9bd200edf39a23bc462c0dc2ea1c": {
+      "created_at": "2026-11-07T05:56:19.799488+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-hacktron-security-partnership",
+        "evidence_status": "first_party",
+        "follow_up": "无产品层面后续。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:openai.com_news_rss.xml:a0a44ed09dc9a108",
+        "intelligence_type": "business_policy",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI 官方宣布与 Hacktron 合作进行安全漏洞测试，属于企业安全合作，与 AI 产品构建、模型能力或垂直产品无直接关系，对目标读者价值低。",
+        "region": "global",
+        "score": 5.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "OpenAI 与 Hacktron 合作寻找系统漏洞并测试第三方服务连接，属于安全合作，不涉及产品功能或模型能力更新。",
+        "tags": [
+          "OpenAI",
+          "安全",
+          "合作"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "cc9236716dfa375d4c17d9aea7c252ff5ce8d58903f0c70bb1c52abab0ba8219": {
       "created_at": "2026-09-14T04:54:22.825969+00:00",
       "model": "deepseek-flash",
@@ -100349,6 +101305,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "d990caab274def56c845abe763fc7fb333ad360f66d1f49700cbe36be4222861": {
+      "created_at": "2026-11-07T05:56:57.944074+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "libghostty-1.0",
+        "evidence_status": "first_party",
+        "follow_up": "观察基于 Libghostty 的 Agent 编码工具（如 herdr、cmux）的产品形态和用户反馈。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:50399933",
+        "intelligence_type": "builder_insight",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Libghostty",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Libghostty 1.0 是终端模拟器库的正式发布，创建者一手长文，评论提到被 herdr、cmux 等 Agent 编码工具采用，对理解 Agent 工具底层生态有参考，但非 AI 产品直接案例，且与初学者产品构建距离较远。",
+        "region": "global",
+        "score": 6.8,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Ghostty 作者发布 Libghostty 1.0 终端库，让开发者能复用终端能力来构建 Agent 编码工具，而不是从头写模拟器。",
+        "tags": [
+          "终端",
+          "Agent工具",
+          "开源"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "d9a2ced75488a569ce8731c7c0642a92eb126f581f0707582c468bfb4e7c5d23": {
       "created_at": "2026-08-27T09:46:47.774821+00:00",
       "model": "deepseek-v4-flash",
@@ -102016,6 +103011,44 @@
           "安全",
           "滥用检测",
           "Anthropic"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "dd7f4c10e7fedd9f56171ae0254fc1407ec198bad3ed1ac388b45a0cb88efd13": {
+      "created_at": "2026-11-07T05:56:57.944246+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "tesla-cybertruck-production-wind-down",
+        "evidence_status": "reported",
+        "follow_up": "无。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:50391456",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Cybertruck",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "特斯拉 Cybertruck 停产新闻，属于汽车行业商业动态，与 AI 产品、模型能力或构建实践无关，按兴趣优先级和评分规则归为噪音。",
+        "region": "global",
+        "score": 2.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "特斯拉因销量不佳宣布逐步停产 Cybertruck，属于汽车行业新闻，与 AI 产品构建无关。",
+        "tags": [
+          "汽车",
+          "商业"
         ],
         "target_user": "",
         "verticals": []
@@ -105272,6 +106305,46 @@
       },
       "stage": "candidate_analysis"
     },
+    "e515b3774143c4304d035271fcaddf3dc1eb8ee4d9f42aedcb333b3c687295c8": {
+      "created_at": "2026-11-07T05:56:45.681505+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "vercel-chat-sdk-json-render-streaming-ui",
+        "evidence_status": "first_party",
+        "follow_up": "观察开发者用 json-render 构建的实际案例和组件生态扩展。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:vercel.com_changelog_rss:1b4254c65d9be0ff",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Vercel Chat SDK",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Vercel 官方更新，Chat SDK 代理可通过 json-render 流式生成 UI 卡片，有明确技术方案、组件目录和校验机制，对构建 AI 产品有直接可迁移增量。",
+        "region": "global",
+        "score": 8.2,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Vercel 让 Chat SDK 代理用 json-render 流式生成表格、图表、按钮等 UI 卡片，解决跨平台消息格式维护问题，适合构建者学习如何让 AI 输出结构化界面。",
+        "tags": [
+          "Agent",
+          "生成式UI",
+          "Vercel",
+          "Chat SDK"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "e52299ce987626cd492d1c467355e0fd1b5d8d3848cb5a3f9926d81d1794397c": {
       "created_at": "2026-09-06T04:37:15.087071+00:00",
       "model": "deepseek-v4-flash",
@@ -106797,6 +107870,44 @@
         "tags": [
           "GPT-6",
           "模型发布"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "e7d3f7f7087da3092529bc5ad29c8ea3f13e502b7b9ad65625df10a6f30729f6": {
+      "created_at": "2026-11-07T05:56:45.681304+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "ai-data-centers-updates",
+        "evidence_status": "reported",
+        "follow_up": "关注数据中心争议是否催生新的 AI 产品合规需求。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:9b9db893e8030769",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": false,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "数据中心能源与社区争议的持续更新合集，属于泛行业观察，无产品、代码或构建过程增量。",
+        "region": "global",
+        "score": 4.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "The Verge 汇总 AI 数据中心扩张引发的电力、社区和环境争议，但没有新产品或可迁移的构建经验。",
+        "tags": [
+          "数据中心",
+          "能源"
         ],
         "target_user": "",
         "verticals": []
@@ -113671,6 +114782,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "f686b438788c6c1d438d4a57e4575da21a37701a45117ae632975c05050db421": {
+      "created_at": "2026-11-07T05:56:45.681329+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "meta-muse-spaces-launch",
+        "evidence_status": "reported",
+        "follow_up": "观察 spaces 的实际使用案例、用户反馈和是否开放第三方组件。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:dabae33feafffcd1",
+        "intelligence_type": "product_case",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Meta Muse",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Meta 在 Muse 助手中推出可定制 app-like 体验的 spaces 功能，属于大厂 AI 产品新形态，有明确产品功能增量，但报道非一手且缺少用户反馈。",
+        "region": "global",
+        "score": 7.8,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Meta 在 Muse AI 助手中推出 spaces 功能，用户可让 AI 生成购物中心、学校仪表盘等定制化应用式体验，值得看大厂如何把助手变成可搭建产品的入口。",
+        "tags": [
+          "AI助手",
+          "Meta",
+          "生成式UI"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "f691289d0906867caae7a89c14581e4e6554d7aed3a3c34f92c4457016d5bbae": {
       "created_at": "2026-08-23T01:59:48.741606+00:00",
       "model": "deepseek-v4-flash",
@@ -114053,6 +115203,44 @@
           "Security",
           "Agent",
           "Modal"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "f71c128dca83ec32c3e0201edfd6e92a76cb0c895c810b994cae85f44a4cab31": {
+      "created_at": "2026-11-07T05:56:57.943985+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "ai-sdk-zai-3.0.48",
+        "evidence_status": "first_party",
+        "follow_up": "无。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "github:release:436925007",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Vercel AI SDK",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Vercel AI SDK 的 Z.AI 适配器补丁版本，仅重构模型 ID 逻辑为目录，请求行为不变，无新产品体验或可迁移增量，属于低价值依赖更新。",
+        "region": "global",
+        "score": 4.5,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "Vercel AI SDK 发布 @ai-sdk/zai 补丁版，把 Z.AI 模型 ID 逻辑整理成目录，请求行为不变，对产品构建无实质影响。",
+        "tags": [
+          "SDK",
+          "模型接入"
         ],
         "target_user": "",
         "verticals": []
