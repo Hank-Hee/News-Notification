@@ -1,7 +1,262 @@
 {
   "version": 1,
-  "updated_at": "2026-11-07T05:58:01.841578+00:00",
+  "updated_at": "2026-11-08T05:59:27.218311+00:00",
   "products": [
+    {
+      "product_id": "product-ab9072030c05ae88",
+      "product_name": "Claude Code",
+      "builder_name": "shmulc",
+      "first_seen": "2026-11-08",
+      "last_seen": "2026-11-08",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "verified",
+      "target_user": "在终端/命令行里用 AI 辅助编程的开发者",
+      "user_problem": "Claude Code 每次执行敏感命令前会弹窗确认，用户嫌烦点了\"不再询问\"（Don't Ask Again），结果含密码的命令被存进本地设置文件；这些文件又被用户手动提交到 GitHub 公开仓库，导致密钥泄露",
+      "what_it_is": "AI 编码代理工具（Agent，即自动帮你写代码、跑命令的 AI 助手）的安全事件：用户把含密码的命令保存到本地配置文件，又误提交到公开代码仓库",
+      "ai_role": "Claude Code 作为编码代理（Agent）自动执行命令并记录用户授权偏好，但不主动过滤或脱敏命令中的密码",
+      "implementation_idea": "Claude Code 用本地 JSON 文件记录\"用户已批准的命令\"来避免重复询问；问题在于它存的是完整命令字符串（含密码），且依赖 .gitignore 机制防提交——但手动创建的文件不会被自动忽略",
+      "hands_on_exercise": "30 分钟实操：在本地新建一个 Git 仓库，创建一个含假密码的 JSON 文件，测试 .gitignore 是否能真正阻止提交；然后故意绕过 .gitignore 提交成功，再用 git-filter-repo 或 BFG 清理历史记录，体会\"一旦入仓就永久留存\"的风险",
+      "limitations_or_uncertainties": "1122 个文件的具体泄露内容类型（是密码、API key 还是其他密钥）未公开；Claude Code 团队称\"将研究防护措施\"但具体方案和时间表未公开；不清楚是用户普遍误操作还是文档引导不足导致",
+      "region": "global",
+      "score": 8.1,
+      "summary": "安全公司发现 Claude Code 的“不再询问”设置让用户把含密码的命令写进本地配置并提交到 GitHub，共 1122 个公开文件泄露密钥；Claude Code 团队成员在评论区回应称将研究防护措施，值得看的是它暴露了 AI 编码代理的权限与密钥管理风险。",
+      "title": "Claude Code 的\"不再询问\"设置导致 1122 个 GitHub 公开文件泄露密钥",
+      "url": "https://apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again",
+      "sources": [
+        {
+          "url": "https://apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again",
+          "title": "Claude Code's \"Don't Ask Again\" exposes passwords in 1,122 public GitHub files",
+          "source_type": "hackernews",
+          "published_at": "2026-11-07T20:45:32+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "claude-code-dont-ask-again-secret-leak",
+          "date": "2026-11-08",
+          "title": "Claude Code 的\"不再询问\"设置导致 1122 个 GitHub 公开文件泄露密钥",
+          "summary": "安全公司发现 Claude Code 的“不再询问”设置让用户把含密码的命令写进本地配置并提交到 GitHub，共 1122 个公开文件泄露密钥；Claude Code 团队成员在评论区回应称将研究防护措施，值得看的是它暴露了 AI 编码代理的权限与密钥管理风险。",
+          "score": 8.1,
+          "url": "https://apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again"
+        }
+      ],
+      "usage_flow": [
+        "用户在 Claude Code 里执行需要密码的命令（如数据库连接、API 调用）",
+        "Claude Code 弹窗问\"是否允许执行\"，用户勾选\"不再询问\"并确认",
+        "命令（含明文密码）被保存到 .claude/settings.local.json 本地配置文件",
+        "用户将该文件提交到 GitHub 公开仓库，密码被公开扫描到"
+      ],
+      "learning_points": [
+        "Agent：能自动执行操作（如跑命令、改文件）的 AI，不只是聊天，有实际系统权限",
+        "密钥管理：AI 工具处理敏感信息时，不能把\"用户方便\"和\"安全\"完全交给用户自己把控",
+        "本地配置文件的安全边界：.gitignore 是软防护，需要额外校验防止敏感文件入仓"
+      ],
+      "verticals": [],
+      "tags": [
+        "Claude Code",
+        "编码代理",
+        "安全",
+        "密钥泄露"
+      ]
+    },
+    {
+      "product_id": "product-079759eb44953975",
+      "product_name": "DeepSeek Harness",
+      "builder_name": "财联社",
+      "first_seen": "2026-08-16",
+      "last_seen": "2026-11-08",
+      "occurrence_count": 2,
+      "intelligence_type": "model_capability",
+      "evidence_status": "reported",
+      "target_user": "AI 应用开发者、需要编排多模型/多工具流程的技术团队",
+      "user_problem": "开发者想快速搭建能调用多种工具、多步骤协作的 AI 应用时，常要自己写大量胶水代码，重复造轮子",
+      "what_it_is": "DeepSeek 在 V4 全系列模型上线后开放了 Harness 开发者预览版测试，为开发者提供新的模型调用与编排入口。",
+      "ai_role": "DeepSeek 大模型作为「大脑」理解任务、决策调用哪个插件，并生成最终回复",
+      "implementation_idea": "把每个功能（搜索、计算器、文件读取等）都做成独立插件，Harness 作为总调度器，根据用户输入让模型判断该激活哪些插件、按什么顺序执行，再把结果传回模型继续下一步",
+      "hands_on_exercise": "30 分钟：访问 DeepSeek Harness 官网，按文档安装桌面版；尝试运行一个内置示例（如「搜索网页并总结」），观察模型何时触发搜索插件、如何把搜索结果融入最终回答",
+      "limitations_or_uncertainties": "「V4 全系列模型上线」这一说法在提供的原始链接和搜索结果中均未找到官方直接确认，仅见于财联社新闻标题；Harness 与 V4 模型的具体兼容细节、预览版功能边界未公开",
+      "region": "china",
+      "score": 7.8,
+      "summary": "DeepSeek 在 V4 全系列模型上线后开放了 Harness 开发者预览版测试，为开发者提供新的模型调用与编排入口。",
+      "title": "V4全系列模型上线后，DeepSeek Harness开发者预览版开放测试 - 财联社",
+      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE4wd0JWNXNkT3NmUy1UV09ldm1iSXY3dTllQ1o1ZFg5MFZPS1BRY3RCTUJLc05UYWJTb1R6VHhoT0NXM3hJQU5xLQ?oc=5",
+      "sources": [
+        {
+          "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE4wd0JWNXNkT3NmUy1UV09ldm1iSXY3dTllQ1o1ZFg5MFZPS1BRY3RCTUJLc05UYWJTb1R6VHhoT0NXM3hJQU5xLQ?oc=5",
+          "title": "V4全系列模型上线后，DeepSeek Harness开发者预览版开放测试 - 财联社",
+          "source_type": "google_news",
+          "published_at": "2026-08-15T17:50:46+00:00"
+        },
+        {
+          "url": "https://www.deepseek.com/en/harness/",
+          "title": "DeepSeek Harness | Explore the limits of intelligence",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://github.com/deepseek-ai/deepseek-harness",
+          "title": "GitHub - deepseek -ai/ deepseek - harness : DeepSeek Harness ...",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "deepseek-harness-preview",
+          "date": "2026-08-16",
+          "title": "V4全系列模型上线后，DeepSeek Harness开发者预览版开放测试 - 财联社",
+          "summary": "DeepSeek 在 V4 全系列模型上线后开放 Harness 开发者预览版测试，值得关注其智能体框架能力。",
+          "score": 8.0,
+          "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE4wd0JWNXNkT3NmUy1UV09ldm1iSXY3dTllQ1o1ZFg5MFZPS1BRY3RCTUJLc05UYWJTb1R6VHhoT0NXM3hJQU5xLQ?oc=5"
+        },
+        {
+          "update_id": "deepseek-v4-harness-preview",
+          "date": "2026-10-11",
+          "title": "V4全系列模型上线后，DeepSeek Harness开发者预览版开放测试 - 财联社",
+          "summary": "DeepSeek 在 V4 全系列模型上线后开放了 Harness 开发者预览版测试，为开发者提供新的模型调用与编排入口。",
+          "score": 7.8,
+          "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE4wd0JWNXNkT3NmUy1UV09ldm1iSXY3dTllQ1o1ZFg5MFZPS1BRY3RCTUJLc05UYWJTb1R6VHhoT0NXM3hJQU5xLQ?oc=5"
+        }
+      ],
+      "usage_flow": [
+        "安装 Harness 桌面端或从代码启动 Web 界面",
+        "按需选择/开发插件（如搜索、代码执行、数据库连接等）",
+        "用 Harness 编排插件与 DeepSeek 模型的交互流程",
+        "运行并调试 Agent 任务，观察多步骤执行结果"
+      ],
+      "learning_points": [
+        "Agent：让 AI 不仅能聊天，还能自主决定「用什么工具、分几步完成」的系统",
+        "Function Calling（工具调用）：模型识别用户意图后，输出结构化指令去调用外部 API 或插件，而非直接生成答案",
+        "插件化架构：把复杂系统拆成可插拔的小模块，方便复用和扩展"
+      ],
+      "verticals": [],
+      "tags": [
+        "DeepSeek",
+        "智能体",
+        "开发者预览",
+        "模型能力",
+        "开发者工具"
+      ]
+    },
+    {
+      "product_id": "product-978152ced00bba79",
+      "product_name": "NYT Cooking AI assistant（NYT Cooking 内测 AI 功能，暂无独立产品名）",
+      "builder_name": "Jennifer Pattison Tuohy",
+      "first_seen": "2026-11-08",
+      "last_seen": "2026-11-08",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "verified",
+      "target_user": "已订阅 NYT Cooking、想快速解决\"今晚吃什么\"的居家做饭者",
+      "user_problem": "工作日晚餐时间紧、食材有限，想换花样做鸡肉避免家人吃腻；但用户自己不会灵活调整食谱，也懒得提前做一周饮食计划",
+      "what_it_is": "《纽约时报》烹饪 App 里内测的 AI 功能，能根据用户现有食材和口味偏好修改食谱",
+      "ai_role": "根据用户输入的约束条件，自动改写原食谱的食材配比、烹饪步骤或调味建议",
+      "implementation_idea": "底层应该是把用户的问题和原食谱一起发给 LLM，让模型按烹饪逻辑重新组合信息生成新步骤——类似你拿着菜谱问\"我没有 A 能用 B 代替吗\"，AI 帮你改写整道菜的做法",
+      "hands_on_exercise": "打开任意一个免费 AI 聊天工具（如 ChatGPT/Claude），找一道你常做的菜，尝试三次不同改法：①替换一种食材 ②改成素食 ③减少一半烹饪时间。记录哪次改得能用、哪次有明显错误，对比理解 AI 在什么场景下靠谱",
+      "limitations_or_uncertainties": "该 AI 功能目前处于内测阶段，未公开具体覆盖多少用户、是否基于 GPT 或其他模型、修改食谱时是否接入食材数据库做事实校验；The Verge 记者测试为单个案例，不代表普遍体验",
+      "region": "global",
+      "score": 7.6,
+      "summary": "《纽约时报》烹饪 AI 助手被记者实测：能帮忙解决工作日晚餐，却在烘焙蛋糕时出错；值得看的是它展示了 AI 在真实生活场景中哪些环节有用、哪些环节会翻车。",
+      "title": "NYT Cooking AI 助手实测：救了我的工作日鸡肉，却差点毁了蛋糕",
+      "url": "https://www.theverge.com/tech/1029489/nyt-cooking-ai-assistant-review",
+      "sources": [
+        {
+          "url": "https://www.theverge.com/tech/1029489/nyt-cooking-ai-assistant-review",
+          "title": "NYT Cooking’s AI assistant saved my weeknight chicken, but almost ruined my cake",
+          "source_type": "rss",
+          "published_at": "2026-11-07T15:50:00+00:00"
+        },
+        {
+          "url": "https://cooking.nytimes.com/",
+          "title": "NYT Cooking - Recipes and Cooking Guides From The New York ...",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://foxai.news/en/news/news-8d448df3e470faabd24cd2cf",
+          "title": "The NYT Cooking app is testing AI recipe modifications · AI NEWS",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "nyt-cooking-ai-assistant-review",
+          "date": "2026-11-08",
+          "title": "NYT Cooking AI 助手实测：救了我的工作日鸡肉，却差点毁了蛋糕",
+          "summary": "《纽约时报》烹饪 AI 助手被记者实测：能帮忙解决工作日晚餐，却在烘焙蛋糕时出错；值得看的是它展示了 AI 在真实生活场景中哪些环节有用、哪些环节会翻车。",
+          "score": 7.6,
+          "url": "https://www.theverge.com/tech/1029489/nyt-cooking-ai-assistant-review"
+        }
+      ],
+      "usage_flow": [
+        "打开 NYT Cooking App，找到想做的基础食谱",
+        "用 AI 功能输入现有食材或口味要求（如\"用鸡胸肉代替鸡腿\"\"做成辣味\"）",
+        "AI 生成修改后的食谱步骤",
+        "按新步骤烹饪，根据结果判断是否成功"
+      ],
+      "learning_points": [
+        "Prompt Engineering（提示工程）：用户怎么描述需求会直接影响 AI 改食谱的质量，说得太模糊容易翻车",
+        "LLM 的\"幻觉\"问题：AI 可能自信地给出错误的烘焙比例（比如蛋糕的化学发酵依赖精确配比，AI 改数字可能没意识到后果）",
+        "领域知识边界：烹饪里\"炒菜可以随便改\"和\"烘焙必须精确\"是两种逻辑，AI 未必能区分"
+      ],
+      "verticals": [],
+      "tags": [
+        "AI助手",
+        "消费产品",
+        "用户反馈"
+      ]
+    },
+    {
+      "product_id": "product-71474c295b11b32c",
+      "product_name": "Pi",
+      "builder_name": "karagenit",
+      "first_seen": "2026-11-08",
+      "last_seen": "2026-11-08",
+      "occurrence_count": 1,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "一位开发者写文说明自己从 Claude 换到 Pi 编码代理的原因，评论区多人分享长期使用 Pi 的体验和自建扩展；值得看的是它展示了编码代理的真实迁移动机和用户自建工具的做法。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.2,
+      "summary": "一位开发者写文说明自己从 Claude 换到 Pi 编码代理的原因，评论区多人分享长期使用 Pi 的体验和自建扩展；值得看的是它展示了编码代理的真实迁移动机和用户自建工具的做法。",
+      "title": "Goodbye Claude, Hello Pi",
+      "url": "https://caleb.software/posts/claude-to-pi.html",
+      "sources": [
+        {
+          "url": "https://caleb.software/posts/claude-to-pi.html",
+          "title": "Goodbye Claude, Hello Pi",
+          "source_type": "hackernews",
+          "published_at": "2026-11-08T03:11:48+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "claude-to-pi-agent-switch",
+          "date": "2026-11-08",
+          "title": "Goodbye Claude, Hello Pi",
+          "summary": "一位开发者写文说明自己从 Claude 换到 Pi 编码代理的原因，评论区多人分享长期使用 Pi 的体验和自建扩展；值得看的是它展示了编码代理的真实迁移动机和用户自建工具的做法。",
+          "score": 7.2,
+          "url": "https://caleb.software/posts/claude-to-pi.html"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "编码代理",
+        "Pi",
+        "开发者工具",
+        "用户反馈"
+      ]
+    },
     {
       "product_id": "product-ec8a3248fe85fa02",
       "product_name": "Chat SDK + json-render（Vercel 官方）",
@@ -2674,85 +2929,6 @@
         "Agent",
         "金融",
         "持久记忆"
-      ]
-    },
-    {
-      "product_id": "product-079759eb44953975",
-      "product_name": "DeepSeek Harness",
-      "builder_name": "财联社",
-      "first_seen": "2026-08-16",
-      "last_seen": "2026-11-01",
-      "occurrence_count": 2,
-      "intelligence_type": "model_capability",
-      "evidence_status": "reported",
-      "target_user": "AI 应用开发者、需要编排多模型/多工具流程的技术团队",
-      "user_problem": "开发者想快速搭建能调用多种工具、多步骤协作的 AI 应用时，常要自己写大量胶水代码，重复造轮子",
-      "what_it_is": "DeepSeek 在 V4 全系列模型上线后开放了 Harness 开发者预览版测试，为开发者提供新的模型调用与编排入口。",
-      "ai_role": "DeepSeek 大模型作为「大脑」理解任务、决策调用哪个插件，并生成最终回复",
-      "implementation_idea": "把每个功能（搜索、计算器、文件读取等）都做成独立插件，Harness 作为总调度器，根据用户输入让模型判断该激活哪些插件、按什么顺序执行，再把结果传回模型继续下一步",
-      "hands_on_exercise": "30 分钟：访问 DeepSeek Harness 官网，按文档安装桌面版；尝试运行一个内置示例（如「搜索网页并总结」），观察模型何时触发搜索插件、如何把搜索结果融入最终回答",
-      "limitations_or_uncertainties": "「V4 全系列模型上线」这一说法在提供的原始链接和搜索结果中均未找到官方直接确认，仅见于财联社新闻标题；Harness 与 V4 模型的具体兼容细节、预览版功能边界未公开",
-      "region": "china",
-      "score": 7.8,
-      "summary": "DeepSeek 在 V4 全系列模型上线后开放了 Harness 开发者预览版测试，为开发者提供新的模型调用与编排入口。",
-      "title": "V4全系列模型上线后，DeepSeek Harness开发者预览版开放测试 - 财联社",
-      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE4wd0JWNXNkT3NmUy1UV09ldm1iSXY3dTllQ1o1ZFg5MFZPS1BRY3RCTUJLc05UYWJTb1R6VHhoT0NXM3hJQU5xLQ?oc=5",
-      "sources": [
-        {
-          "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE4wd0JWNXNkT3NmUy1UV09ldm1iSXY3dTllQ1o1ZFg5MFZPS1BRY3RCTUJLc05UYWJTb1R6VHhoT0NXM3hJQU5xLQ?oc=5",
-          "title": "V4全系列模型上线后，DeepSeek Harness开发者预览版开放测试 - 财联社",
-          "source_type": "google_news",
-          "published_at": "2026-08-15T17:50:46+00:00"
-        },
-        {
-          "url": "https://www.deepseek.com/en/harness/",
-          "title": "DeepSeek Harness | Explore the limits of intelligence",
-          "source_type": "supplemental",
-          "published_at": ""
-        },
-        {
-          "url": "https://github.com/deepseek-ai/deepseek-harness",
-          "title": "GitHub - deepseek -ai/ deepseek - harness : DeepSeek Harness ...",
-          "source_type": "supplemental",
-          "published_at": ""
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "deepseek-harness-preview",
-          "date": "2026-08-16",
-          "title": "V4全系列模型上线后，DeepSeek Harness开发者预览版开放测试 - 财联社",
-          "summary": "DeepSeek 在 V4 全系列模型上线后开放 Harness 开发者预览版测试，值得关注其智能体框架能力。",
-          "score": 8.0,
-          "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE4wd0JWNXNkT3NmUy1UV09ldm1iSXY3dTllQ1o1ZFg5MFZPS1BRY3RCTUJLc05UYWJTb1R6VHhoT0NXM3hJQU5xLQ?oc=5"
-        },
-        {
-          "update_id": "deepseek-v4-harness-preview",
-          "date": "2026-10-11",
-          "title": "V4全系列模型上线后，DeepSeek Harness开发者预览版开放测试 - 财联社",
-          "summary": "DeepSeek 在 V4 全系列模型上线后开放了 Harness 开发者预览版测试，为开发者提供新的模型调用与编排入口。",
-          "score": 7.8,
-          "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE4wd0JWNXNkT3NmUy1UV09ldm1iSXY3dTllQ1o1ZFg5MFZPS1BRY3RCTUJLc05UYWJTb1R6VHhoT0NXM3hJQU5xLQ?oc=5"
-        }
-      ],
-      "usage_flow": [
-        "安装 Harness 桌面端或从代码启动 Web 界面",
-        "按需选择/开发插件（如搜索、代码执行、数据库连接等）",
-        "用 Harness 编排插件与 DeepSeek 模型的交互流程",
-        "运行并调试 Agent 任务，观察多步骤执行结果"
-      ],
-      "learning_points": [
-        "Agent：让 AI 不仅能聊天，还能自主决定「用什么工具、分几步完成」的系统",
-        "Function Calling（工具调用）：模型识别用户意图后，输出结构化指令去调用外部 API 或插件，而非直接生成答案",
-        "插件化架构：把复杂系统拆成可插拔的小模块，方便复用和扩展"
-      ],
-      "verticals": [],
-      "tags": [
-        "DeepSeek",
-        "智能体",
-        "开发者预览",
-        "模型能力",
-        "开发者工具"
       ]
     },
     {

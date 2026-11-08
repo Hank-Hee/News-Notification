@@ -1888,6 +1888,18 @@
       "title": "Message your other Claude Code sessions",
       "url": "https://code.claude.com/docs/en/cross-session-messaging"
     },
+    "claude-code-dont-ask-again-secret-leak": {
+      "content_hash": "060b9cdee71ff8fbe8d70a46dad43bea0605d82ec48125dc97706083bc2c2fcf",
+      "event_key": "claude-code-dont-ask-again-secret-leak",
+      "first_seen": "2026-11-08",
+      "last_seen": "2026-11-08",
+      "latest_update": "安全公司发现 Claude Code 的“不再询问”设置让用户把含密码的命令写进本地配置并提交到 GitHub，共 1122 个公开文件泄露密钥；Claude Code 团队成员在评论区回应称将研究防护措施，值得看的是它暴露了 AI 编码代理的权限与密钥管理风险。",
+      "normalized_title": "claude code s don t ask again exposes passwords in 1 122 public github files",
+      "normalized_url": "https://apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again",
+      "source_id": "hackernews:story:50407882",
+      "title": "Claude Code's \"Don't Ask Again\" exposes passwords in 1,122 public GitHub files",
+      "url": "https://apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again"
+    },
     "claude-code-email-leak-issue": {
       "content_hash": "779469993f33e93880e1686b4fa352b90138e1971ef800dfd97d77d0ce22ea62",
       "event_key": "claude-code-email-leak-issue",
@@ -2540,6 +2552,18 @@
       "title": "Claude: System Prompts",
       "url": "https://platform.claude.com/docs/en/release-notes/system-prompts"
     },
+    "claude-to-pi-agent-switch": {
+      "content_hash": "ca621945fb254e7300a40102d0620e2cea5ab7b1ba7cdfaeac67e6d0794c81e8",
+      "event_key": "claude-to-pi-agent-switch",
+      "first_seen": "2026-11-08",
+      "last_seen": "2026-11-08",
+      "latest_update": "一位开发者写文说明自己从 Claude 换到 Pi 编码代理的原因，评论区多人分享长期使用 Pi 的体验和自建扩展；值得看的是它展示了编码代理的真实迁移动机和用户自建工具的做法。",
+      "normalized_title": "goodbye claude hello pi",
+      "normalized_url": "https://caleb.software/posts/claude-to-pi.html",
+      "source_id": "hackernews:story:50410107",
+      "title": "Goodbye Claude, Hello Pi",
+      "url": "https://caleb.software/posts/claude-to-pi.html"
+    },
     "claude-token-theft": {
       "content_hash": "867c204e93ba858062cbbdd87545852608b8945bb961b8563705a359a0d93e03",
       "event_key": "claude-token-theft",
@@ -3160,7 +3184,7 @@
       "content_hash": "19b840d7c1e7d0da85aead1e49e9acc66f6696def91582ca61049380962b3ee3",
       "event_key": "deepseek-v4-harness-preview",
       "first_seen": "2026-10-11",
-      "last_seen": "2026-11-01",
+      "last_seen": "2026-11-08",
       "latest_update": "DeepSeek 在 V4 全系列模型上线后开放了 Harness 开发者预览版测试，为开发者提供新的模型调用与编排入口。",
       "normalized_title": "v4全系列模型上线后 deepseek harness开发者预览版开放测试 财联社",
       "normalized_url": "https://news.google.com/rss/articles/cbmisefvx3lxte4wd0jwnxnkt3nmuy1uv09ldm1isxy3dtllq1o1zfg5mfzps1bry3rctujlc05uywjtb1r6vhhot0nxm3hjqu5xlq?oc=5",
@@ -5536,7 +5560,7 @@
       "content_hash": "e24dc6807d9d7e3a82fd3f3213766a9dfbdf6e433d68b333cc57c3a5dda3268a",
       "event_key": "lenny-how-i-ai-grok-dot-muse-duet",
       "first_seen": "2026-11-03",
-      "last_seen": "2026-11-07",
+      "last_seen": "2026-11-08",
       "latest_update": "Lenny Rachitsky 在播客中对比 Grok、Dot、Muse 和 Claude Duet 等 AI 产品，并讨论 Figma 产品经理日常如何使用 AI，适合了解产品使用场景但缺少一手构建细节。",
       "normalized_title": "how i ai grok vs dot vs muse vs duet how figma s pms actually use ai every day",
       "normalized_url": "https://www.lennysnewsletter.com/p/how-i-ai-grok-vs-dot-vs-muse-vs-duet",
@@ -6951,6 +6975,18 @@
       "source_id": "rss:huggingface.co_blog_feed.xml:5890b1cfd4cc38aa",
       "title": "Build Low-Latency Multilingual Voice Agents: Open Weights & Full Deployment Control with NVIDIA Magpie TTS",
       "url": "https://huggingface.co/blog/nvidia/magpie-tts-multilingual-voice-agents"
+    },
+    "nyt-cooking-ai-assistant-review": {
+      "content_hash": "41ea99b18aab8a9b12c090d7dbdd6b77d4f329b06081a5d4152dd26b6f97da2b",
+      "event_key": "nyt-cooking-ai-assistant-review",
+      "first_seen": "2026-11-08",
+      "last_seen": "2026-11-08",
+      "latest_update": "《纽约时报》烹饪 AI 助手被记者实测：能帮忙解决工作日晚餐，却在烘焙蛋糕时出错；值得看的是它展示了 AI 在真实生活场景中哪些环节有用、哪些环节会翻车。",
+      "normalized_title": "nyt cooking s ai assistant saved my weeknight chicken but almost ruined my cake",
+      "normalized_url": "https://www.theverge.com/tech/1029489/nyt-cooking-ai-assistant-review",
+      "source_id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:0ba9614deb650130",
+      "title": "NYT Cooking’s AI assistant saved my weeknight chicken, but almost ruined my cake",
+      "url": "https://www.theverge.com/tech/1029489/nyt-cooking-ai-assistant-review"
     },
     "nyt-cooking-ai-recipe-modification-test": {
       "content_hash": "31a1acb270ee5c5e4860c31300d43b2302e43e96d7c0fc64fc9d83e775fc6630",
