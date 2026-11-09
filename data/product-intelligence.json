@@ -1,7 +1,302 @@
 {
   "version": 1,
-  "updated_at": "2026-11-08T05:59:27.218311+00:00",
+  "updated_at": "2026-11-09T06:24:46.487130+00:00",
   "products": [
+    {
+      "product_id": "product-59fec606a330825a",
+      "product_name": "PM OS",
+      "builder_name": "Claire Vo",
+      "first_seen": "2026-11-09",
+      "last_seen": "2026-11-09",
+      "occurrence_count": 1,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "first_party",
+      "target_user": "Figma 内部产品经理；概念可迁移至其他产品团队",
+      "user_problem": "PM 日常被 Slack 淹没、写代码门槛高、增长实验手动操作慢，且团队各自用 AI 没有统一标准，导致好经验无法复用",
+      "what_it_is": "Figma 增长 PM Ezra Mechaber 把个人 Claude Code 配置打包成 31 个可复用技能的共享代码仓库，供全公司 60-70 名产品经理日常使用",
+      "ai_role": "AI 是'执行助手+初稿生成器'：按预定义技能处理重复劳动（如每天 6 次整理 Slack），但关键决策保留人工检查点",
+      "implementation_idea": "把 prompt 和工具调用封装成'技能'存进 Git 仓库，PM 像装 App 一样按需调用；不同技能可以组合（如先用'读 Slack'技能提取信息，再用'写代码'技能生成脚本），团队通过 PR 评审来迭代技能质量",
+      "hands_on_exercise": "用 Claude Code 或 Cursor 创建一个个人'每日启动'技能：写一段 prompt 让 AI 读取你指定的 3 个信息源（如邮件摘要、日历、一个文档），生成今日待办优先级，保存为可重复加载的配置文件",
+      "limitations_or_uncertainties": "31 个技能的具体 prompt 内容未公开；AutoXP 首次实验的'huge win'具体指标未披露；Jev 写作助手的实际采用率未公开；PM OS 是否开源或对外发布未说明",
+      "region": "global",
+      "score": 8.6,
+      "summary": "Figma 产品经理 Ezra Mechaber 把个人 Claude Code 配置做成团队共享的 PM OS，包含 31 个技能，帮助产品经理用 AI 处理 Slack、写代码和做增长实验，展示了 AI 在日常产品工作中的真实用法。",
+      "title": "Figma 产品经理如何把 Claude Code 变成团队共享的 PM OS",
+      "url": "https://www.lennysnewsletter.com/p/how-figmas-pms-actually-use-ai-every",
+      "sources": [
+        {
+          "url": "https://www.lennysnewsletter.com/p/how-figmas-pms-actually-use-ai-every",
+          "title": "How Figma’s PMs actually use AI every day | Ezra Mechaber (PM, Figma)",
+          "source_type": "newsletter",
+          "published_at": "2026-11-02T13:04:11+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "figma-pm-os-ezra-mechaber",
+          "date": "2026-11-09",
+          "title": "Figma 产品经理如何把 Claude Code 变成团队共享的 PM OS",
+          "summary": "Figma 产品经理 Ezra Mechaber 把个人 Claude Code 配置做成团队共享的 PM OS，包含 31 个技能，帮助产品经理用 AI 处理 Slack、写代码和做增长实验，展示了 AI 在日常产品工作中的真实用法。",
+          "score": 8.6,
+          "url": "https://www.lennysnewsletter.com/p/how-figmas-pms-actually-use-ai-every"
+        }
+      ],
+      "usage_flow": [
+        "在 Claude Code 中加载 PM OS 仓库，选择对应技能（如整理 Slack、写代码、做实验）",
+        "AI 读取上下文（Slack 线程、代码库、实验数据）自动执行或生成草稿",
+        "人工检查关键节点（如 AutoXP 实验需一人确认后才上线）",
+        "输出结果直接发到 Slack、Figma 或代码库，同时把新经验沉淀为新技能"
+      ],
+      "learning_points": [
+        "Claude Code：Anthropic 出的命令行 AI 编程助手，可以直接操作你的代码仓库和文件系统",
+        "MCP（Model Context Protocol）：一种让 AI 安全连接外部工具的标准接口，比如让 AI 直接读写 Figma 文件",
+        "Function Calling：AI 不只是聊天，还能主动调用你定义的函数去执行实际操作（如发 Slack 消息、跑实验代码）"
+      ],
+      "verticals": [],
+      "tags": [
+        "Figma",
+        "Claude Code",
+        "PM OS",
+        "AI工作流"
+      ]
+    },
+    {
+      "product_id": "product-6a58de8e01d56e62",
+      "product_name": "Gemini",
+      "builder_name": "Lenny Rachitsky",
+      "first_seen": "2026-11-09",
+      "last_seen": "2026-11-09",
+      "occurrence_count": 1,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Lenny 采访了 Gemini 产品负责人 Tulsee Doshi，讨论为什么产品经理在 AI 时代再次变得重要；内容涉及前沿产品构建经验，对初学者有启发。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.2,
+      "summary": "Lenny 采访了 Gemini 产品负责人 Tulsee Doshi，讨论为什么产品经理在 AI 时代再次变得重要；内容涉及前沿产品构建经验，对初学者有启发。",
+      "title": "Why PMs are suddenly valuable again | Tulsee Doshi (Head of Product, Gemini)",
+      "url": "https://www.lennysnewsletter.com/p/what-it-actually-takes-to-build-frontier",
+      "sources": [
+        {
+          "url": "https://www.lennysnewsletter.com/p/what-it-actually-takes-to-build-frontier",
+          "title": "Why PMs are suddenly valuable again | Tulsee Doshi (Head of Product, Gemini)",
+          "source_type": "newsletter",
+          "published_at": "2026-11-08T13:31:32+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "lenny-tulsee-doshi-pm-value",
+          "date": "2026-11-09",
+          "title": "Why PMs are suddenly valuable again | Tulsee Doshi (Head of Product, Gemini)",
+          "summary": "Lenny 采访了 Gemini 产品负责人 Tulsee Doshi，讨论为什么产品经理在 AI 时代再次变得重要；内容涉及前沿产品构建经验，对初学者有启发。",
+          "score": 8.2,
+          "url": "https://www.lennysnewsletter.com/p/what-it-actually-takes-to-build-frontier"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "产品经理",
+        "AI 产品",
+        "访谈"
+      ]
+    },
+    {
+      "product_id": "product-abead1816c94c52f",
+      "product_name": "DeepSeek Harness",
+      "builder_name": "Moomoo",
+      "first_seen": "2026-11-09",
+      "last_seen": "2026-11-09",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "reported",
+      "target_user": "开发者、想搭建自定义 AI 工作流的技术用户，以及使用现成插件的普通用户",
+      "user_problem": "用户想调用大模型完成复杂任务（如查资料、写代码、自动操作软件），但单一 AI 对话窗口功能固定，无法灵活组合不同能力",
+      "what_it_is": "DeepSeek 开源的插件化 AI Agent（智能体）运行框架，用户可在桌面或网页端运行，通过安装插件扩展功能。",
+      "ai_role": "作为中央调度器，理解用户意图，决定调用哪些插件、如何组合它们，并生成最终回复",
+      "implementation_idea": "核心思路是'万物皆插件'——把每个功能（搜索、代码执行、文件读写等）都封装成独立插件，由一个叫 Cordis 的系统自动安装和解决插件之间的依赖关系。用户不用改 Harness 本体代码，装插件就能换能力。",
+      "hands_on_exercise": "访问 https://www.deepseek.com/en/harness/ 下载桌面版，安装后尝试从插件市场添加 1-2 个插件（如网页搜索或代码执行），输入一个需要多步骤的指令（例如'搜索今天科技新闻并总结成三点'），观察 Harness 是否会自动调用插件协作完成",
+      "limitations_or_uncertainties": "92 万亿 Token/日的具体统计口径未公开（是否包含所有插件内部调用、是否去重）；154 万日活的数据来源为媒体报道，非 DeepSeek 官方直接披露；第三方插件质量、审核机制未公开；Moomoo 作为金融资讯平台，其科技报道的原始信源链条不清晰",
+      "region": "china",
+      "score": 8.0,
+      "summary": "Moomoo报道DeepSeek Harness每日活跃用户154万，每日消耗Token约92万亿，数据与其它来源一致。",
+      "title": "DeepSeek Harness 日活 154 万，单日消耗约 92 万亿 Token",
+      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBPY1dPWjZtQlYtM0RWWHMxVkJBZG5HNzZEUUFydG1hM2FjcVd4MXNMNjF6MUxPX2FSWkxXY1F3WUZiNmpyY1RpSFN4ZmdFdTVaWVZBX0Y1Ml9pNnN0?oc=5",
+      "sources": [
+        {
+          "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBPY1dPWjZtQlYtM0RWWHMxVkJBZG5HNzZEUUFydG1hM2FjcVd4MXNMNjF6MUxPX2FSWkxXY1F3WUZiNmpyY1RpSFN4ZmdFdTVaWVZBX0Y1Ml9pNnN0?oc=5",
+          "title": "DeepSeek Harness每日活跃用户154万 每日消耗Token约92万亿 - Moomoo",
+          "source_type": "google_news",
+          "published_at": "2026-11-09T02:56:19+00:00"
+        },
+        {
+          "url": "https://www.deepseek.com/en/harness/",
+          "title": "DeepSeek Harness | Explore the limits of intelligence",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://github.com/deepseek-ai/deepseek-harness",
+          "title": "GitHub - deepseek -ai/ deepseek - harness : DeepSeek Harness ...",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFAwU0xGTGlBOXhiRWFILTIxNFhjb2tvSDIta1QwNUotN0RPM0JFME1iY19PTHRHckRkU0NvcE1TUElBQXNwZ2xncw?oc=5",
+          "title": "DeepSeek Harness 筹建官方插件市场与作者扶持计划，披露 154 万日活、约 3.5 万第三方插件 - 智源社区",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTFBWM21XSEIxSThmcFpKWnh0RkZYOGVxaGFHRG5MaTNsR0VETWxFWGFUb0JCMmJYWTRFcFhBLU5zMXA3MUVFbjZJUThlLXBWdw?oc=5",
+          "title": "DeepSeek 开源智能体应用Harness 日活突破154 万：上线不到三月，单日大模型消耗飙升至92T 词元 - AIBase",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5ERURxYzVYaDJtX2lVRnVrN3dHSzBBbGxFYklLVUZEeGZEQlM4T2NBWmd4Z0tieU9HU1ZPazBRUy1ESEdCd1U0VzVTR1BUbEdKNF8zbmlrX1JDdFlqWlE?oc=5",
+          "title": "DeepSeek Harness日活达154万，插件生态超3.5万个 - DoNews",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQcjhkcnF4RWJDeUJUN3pMMVNzR0VTaGx4V1RuSVZLeFotNV9TeDBtcS1ZcHVPV09qcVRGMTFENXZ3ZXhVY2h6N3M1RUEybUp0d3VoZ1F4SkdkUUt5cS1uUTE2N3pxMWRiX2xVRHJGRHVVZ1lfcEhUVE9XNkloRkVfNE03eUUzQmFvMmhaRQ?oc=5",
+          "title": "DeepSeek开源智能体框架Harness日活破154万 ｜#AI资讯# #DeepSeek# #智能体应用# - 搜狐网",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "deepseek_harness_dau_154w",
+          "date": "2026-11-09",
+          "title": "DeepSeek Harness 日活 154 万，单日消耗约 92 万亿 Token",
+          "summary": "Moomoo报道DeepSeek Harness每日活跃用户154万，每日消耗Token约92万亿，数据与其它来源一致。",
+          "score": 8.0,
+          "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBPY1dPWjZtQlYtM0RWWHMxVkJBZG5HNzZEUUFydG1hM2FjcVd4MXNMNjF6MUxPX2FSWkxXY1F3WUZiNmpyY1RpSFN4ZmdFdTVaWVZBX0Y1Ml9pNnN0?oc=5"
+        }
+      ],
+      "usage_flow": [
+        "安装 DeepSeek Harness（桌面应用或从代码启动网页版）",
+        "在插件市场浏览并安装需要的插件（已有约 3.5 万个第三方插件）",
+        "通过对话或配置让 Harness 调用一个或多个插件协作完成任务",
+        "Harness 自动调度插件、调用大模型，返回结果给用户"
+      ],
+      "learning_points": [
+        "Agent（智能体）：不只是聊天，而是能自主规划步骤、调用工具的 AI 系统",
+        "Function Calling（函数调用）：让大模型学会判断'现在该调用哪个外部工具'的机制",
+        "开源生态：框架代码公开，第三方开发者可以写插件、扩功能，形成正循环"
+      ],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "开源",
+        "用户增长"
+      ]
+    },
+    {
+      "product_id": "product-a7581742fc7b4429",
+      "product_name": "OpenAI Agents SDK",
+      "builder_name": "markstuart-oai",
+      "first_seen": "2026-11-09",
+      "last_seen": "2026-11-09",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "OpenAI 发布 Agents SDK v0.24.0-alpha.7，让开发者能把对话存在自己存储里、给 Agent 加语音和文件搜索等工具，并控制上下文和用量，适合想动手搭 Agent 产品的人参考。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.6,
+      "summary": "OpenAI 发布 Agents SDK v0.24.0-alpha.7，让开发者能把对话存在自己存储里、给 Agent 加语音和文件搜索等工具，并控制上下文和用量，适合想动手搭 Agent 产品的人参考。",
+      "title": "openai/openai-agents-python released v0.24.0-alpha.7",
+      "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.24.0-alpha.7",
+      "sources": [
+        {
+          "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.24.0-alpha.7",
+          "title": "openai/openai-agents-python released v0.24.0-alpha.7",
+          "source_type": "github",
+          "published_at": "2026-11-08T07:05:11+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "openai-agents-python-v0-24-0-alpha-7",
+          "date": "2026-11-09",
+          "title": "openai/openai-agents-python released v0.24.0-alpha.7",
+          "summary": "OpenAI 发布 Agents SDK v0.24.0-alpha.7，让开发者能把对话存在自己存储里、给 Agent 加语音和文件搜索等工具，并控制上下文和用量，适合想动手搭 Agent 产品的人参考。",
+          "score": 7.6,
+          "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.24.0-alpha.7"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "SDK",
+        "OpenAI"
+      ]
+    },
+    {
+      "product_id": "product-d753976d89d3fc21",
+      "product_name": "Claude Code",
+      "builder_name": "TheWiggles",
+      "first_seen": "2026-11-09",
+      "last_seen": "2026-11-09",
+      "occurrence_count": 1,
+      "intelligence_type": "market_signal",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "高盛把 Claude Code 从银行家和交易员机器上撤下，HN 讨论指出编码 Agent 放在能接触客户和交易信息的电脑上太危险，同时按量计费也让企业难以控制成本。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.2,
+      "summary": "高盛把 Claude Code 从银行家和交易员机器上撤下，HN 讨论指出编码 Agent 放在能接触客户和交易信息的电脑上太危险，同时按量计费也让企业难以控制成本。",
+      "title": "Goldman Sachs is pulling Claude Code from its bankers and traders",
+      "url": "https://www.thestateofai.com/news/goldman-sachs-claude-code-traders-bankers",
+      "sources": [
+        {
+          "url": "https://www.thestateofai.com/news/goldman-sachs-claude-code-traders-bankers",
+          "title": "Goldman Sachs is pulling Claude Code from its bankers and traders",
+          "source_type": "hackernews",
+          "published_at": "2026-11-08T18:16:07+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "goldman-sachs-pulls-claude-code",
+          "date": "2026-11-09",
+          "title": "Goldman Sachs is pulling Claude Code from its bankers and traders",
+          "summary": "高盛把 Claude Code 从银行家和交易员机器上撤下，HN 讨论指出编码 Agent 放在能接触客户和交易信息的电脑上太危险，同时按量计费也让企业难以控制成本。",
+          "score": 7.2,
+          "url": "https://www.thestateofai.com/news/goldman-sachs-claude-code-traders-bankers"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Claude Code",
+        "企业落地",
+        "Agent安全"
+      ]
+    },
     {
       "product_id": "product-ab9072030c05ae88",
       "product_name": "Claude Code",
