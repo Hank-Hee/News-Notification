@@ -1,7 +1,480 @@
 {
   "version": 1,
-  "updated_at": "2026-11-10T07:18:01.391760+00:00",
+  "updated_at": "2026-11-11T06:14:28.759386+00:00",
   "products": [
+    {
+      "product_id": "product-bf49e75d5eeabad6",
+      "product_name": "Gemini for Healthcare",
+      "builder_name": "Google AI",
+      "first_seen": "2026-11-11",
+      "last_seen": "2026-11-11",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "医疗机构的行政人员、临床医生、医院 IT 部门；未公开具体客户名单",
+      "user_problem": "医护人员被大量非临床行政工作淹没（如整理病历、跨系统查数据、填写表格），导致职业倦怠（burnout），减少实际照顾患者的时间",
+      "what_it_is": "Google Cloud 推出的医疗行业专用 AI 解决方案，属于 Gemini 行业垂直系列（政府、金融、法律之后的第四个），主打临床数据整合和行政工作流自动化。",
+      "ai_role": "AI 充当'跨系统数据中介'和'行政任务执行代理'——用自然语言理解用户需求，自动调用不同数据源，最后把结果整理成人能直接用的格式",
+      "implementation_idea": "核心思路是'行业 Agent'：在通用 Gemini 大模型之上，预置医疗领域的工具接口（连接医院常用系统如 Epic、Cerner 等）和合规框架（HIPAA 等），让模型不只是聊天，而是能实际操作企业软件完成特定任务。Agent（智能体）这里指：AI 能自主规划多步骤、调用外部工具、完成目标，不需要人一步步指挥。",
+      "hands_on_exercise": "30 分钟体验：用 Google AI Studio 或任何支持 Function Calling 的模型（如 GPT-4），写一个模拟场景——'用户问患者血糖趋势，模型自动调用 mock 数据库函数获取数据，再生成中文摘要'。重点感受：模型如何判断该调用哪个函数、如何处理返回的原始数据、如何组织成自然语言回答。",
+      "limitations_or_uncertainties": "未公开：具体定价、已签约客户案例、支持哪些医院信息系统（EHR）、是否通过 FDA 等医疗认证、实际部署需要的硬件/云资源、数据隐私的具体技术实现细节",
+      "region": "global",
+      "score": 8.2,
+      "summary": "Google Cloud 推出 Gemini for Healthcare，用 AI 统一临床数据并自动处理行政流程，目标是减轻医护行政负担；是医疗垂直 AI 产品的官方样本。",
+      "title": "Google Cloud 发布 Gemini for Healthcare：用 AI 统一医疗数据、自动处理行政流程",
+      "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/gemini-for-healthcare/",
+      "sources": [
+        {
+          "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/gemini-for-healthcare/",
+          "title": "Google Cloud launches Gemini for healthcare.",
+          "source_type": "rss",
+          "published_at": "2026-11-10T13:00:00+00:00"
+        },
+        {
+          "url": "https://cloud.google.com/blog/products/ai-machine-learning/gemini-for-healthcare",
+          "title": "Introducing Gemini for healthcare - Google Cloud Blog",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://www.prnewswire.com/news-releases/google-cloud-launches-gemini-for-healthcare-302934461.html",
+          "title": "Google Cloud Launches Gemini for Healthcare - PR Newswire",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "gemini-for-healthcare-launch",
+          "date": "2026-11-11",
+          "title": "Google Cloud 发布 Gemini for Healthcare：用 AI 统一医疗数据、自动处理行政流程",
+          "summary": "Google Cloud 推出 Gemini for Healthcare，用 AI 统一临床数据并自动处理行政流程，目标是减轻医护行政负担；是医疗垂直 AI 产品的官方样本。",
+          "score": 8.2,
+          "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/gemini-for-healthcare/"
+        }
+      ],
+      "usage_flow": [
+        "医护人员通过自然语言向 Gemini 提问或下达指令（如'整理这位患者过去一周的检验报告'）",
+        "AI 自动连接医院内多个分散系统（电子病历、影像、实验室等）提取并整合数据",
+        "AI 生成结构化摘要、填写表格或起草报告，供人工确认",
+        "确认后自动归档或推送到下游系统，完成行政闭环"
+      ],
+      "learning_points": [
+        "垂直行业 Agent：通用大模型如何针对特定行业（如医疗）做封装，预置行业知识和系统接口，降低企业使用门槛",
+        "Function Calling（函数调用）：大模型识别'需要查数据库'时，自动触发预设的代码函数去执行，而不是凭空编造答案",
+        "RAG（检索增强生成）：AI 先从医院私有数据库检索真实数据，再基于检索结果生成回答，避免幻觉且保护数据隐私"
+      ],
+      "verticals": [],
+      "tags": [
+        "医疗健康",
+        "Gemini",
+        "临床工作流"
+      ]
+    },
+    {
+      "product_id": "product-b6a1fb92601ede16",
+      "product_name": "未公开（报道中未给出具体产品名称，仅描述为 'AI-powered office suite'）",
+      "builder_name": "Hayden Field",
+      "first_seen": "2026-11-11",
+      "last_seen": "2026-11-11",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "reported",
+      "target_user": "企业用户，尤其是已使用 Claude Code 的开发团队及需要文档/表格/演示协作的办公人员",
+      "user_problem": "企业用户需要在不同工具间切换：用 Claude 写代码、用 Word/Excel/Google Docs 处理文档，AI 能力分散在各处，没有统一的工作流",
+      "what_it_is": "Anthropic 正在把 Claude 从代码助手扩展成一套通用办公工具，类似 AI 版的 Office 365",
+      "ai_role": "Claude 作为'副驾驶'嵌入每个环节：理解用户意图、生成草稿、调整格式、回答关于文档内容的问题",
+      "implementation_idea": "本质是把 Claude 的'对话能力'变成'画布能力'——不再只是你问我答，而是 AI 直接操作可编辑的文档、表格、幻灯片等结构化界面，像有一个实习生坐在你旁边帮你改 PPT",
+      "hands_on_exercise": "打开 Claude 官网（claude.ai），尝试用 Artifacts 功能让 Claude 生成一份带格式的简历或简单网页；然后对比传统对话模式，体会'可编辑画布' vs '纯文本回复'的差异（30 分钟）",
+      "limitations_or_uncertainties": "报道未公开具体功能清单（是否有表格、演示、多人协作等）、定价、上线时间、是否独立产品或集成在现有 Claude 中；无用户实际使用反馈；'SpaceXSI' 疑似原文笔误（应为 xAI 或其他公司）",
+      "region": "global",
+      "score": 7.8,
+      "summary": "Anthropic 推出自己的 AI 办公套件，从企业编码工具向通用办公场景扩张；值得看模型公司如何把 Claude 能力包装成办公产品。",
+      "title": "Anthropic 推出 AI 办公套件，从编码工具向通用办公场景扩张",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1030709/anthropic-has-its-own-ai-powered-office-suite-now",
+      "sources": [
+        {
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1030709/anthropic-has-its-own-ai-powered-office-suite-now",
+          "title": "Anthropic has its own AI-powered office suite now",
+          "source_type": "rss",
+          "published_at": "2026-11-10T17:30:00+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "anthropic-ai-office-suite",
+          "date": "2026-11-11",
+          "title": "Anthropic 推出 AI 办公套件，从编码工具向通用办公场景扩张",
+          "summary": "Anthropic 推出自己的 AI 办公套件，从企业编码工具向通用办公场景扩张；值得看模型公司如何把 Claude 能力包装成办公产品。",
+          "score": 7.8,
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1030709/anthropic-has-its-own-ai-powered-office-suite-now"
+        }
+      ],
+      "usage_flow": [
+        "用户在 Claude 界面中创建或打开文档/表格/演示文稿",
+        "用自然语言描述需求，Claude 直接生成或编辑内容",
+        "多人实时协作，AI 同步辅助修改和格式化",
+        "直接导出或分享给团队，无需跳转到其他办公软件"
+      ],
+      "learning_points": [
+        "Function Calling（函数调用）：让 AI 不仅能说话，还能'动手'操作软件功能，比如插入表格、调整字体",
+        "Agent（智能体）：AI 从一次性回答变成能持续执行多步骤任务，比如'帮我做一份季度报告'需要找数据、做图表、写总结",
+        "RAG（检索增强生成）：AI 生成内容时实时引用企业内部文档，避免胡说八道"
+      ],
+      "verticals": [],
+      "tags": [
+        "办公套件",
+        "Anthropic",
+        "企业AI"
+      ]
+    },
+    {
+      "product_id": "product-5edfc3af1d8d7680",
+      "product_name": "AlphaProof Code",
+      "builder_name": "ilreb",
+      "first_seen": "2026-11-11",
+      "last_seen": "2026-11-11",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "verified",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "DeepMind 推出 AlphaProof Code，用 AI 为代码写形式化证明；HN 上有人讨论它和普通编码 Agent 的区别，值得看 AI 在代码验证这一步怎么发挥作用。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.8,
+      "summary": "DeepMind 推出 AlphaProof Code，用 AI 为代码写形式化证明；HN 上有人讨论它和普通编码 Agent 的区别，值得看 AI 在代码验证这一步怎么发挥作用。",
+      "title": "AlphaProof Code",
+      "url": "https://deepmind.google/blog/introducing-alphaproof-code/",
+      "sources": [
+        {
+          "url": "https://deepmind.google/blog/introducing-alphaproof-code/",
+          "title": "AlphaProof Code",
+          "source_type": "hackernews",
+          "published_at": "2026-11-10T12:11:12+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "alphaproof-code-launch",
+          "date": "2026-11-11",
+          "title": "AlphaProof Code",
+          "summary": "DeepMind 推出 AlphaProof Code，用 AI 为代码写形式化证明；HN 上有人讨论它和普通编码 Agent 的区别，值得看 AI 在代码验证这一步怎么发挥作用。",
+          "score": 7.8,
+          "url": "https://deepmind.google/blog/introducing-alphaproof-code/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "AlphaProof",
+        "形式化验证",
+        "编码Agent"
+      ]
+    },
+    {
+      "product_id": "product-1d6aa3db544417b0",
+      "product_name": "Businesses in ChatGPT",
+      "builder_name": "OpenAI News",
+      "first_seen": "2026-11-11",
+      "last_seen": "2026-11-11",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "OpenAI 在 ChatGPT 里上线商家功能，让商家管理信息、查看曝光并引导用户行动；值得看的是对话式产品如何嵌入商业转化。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.6,
+      "summary": "OpenAI 在 ChatGPT 里上线商家功能，让商家管理信息、查看曝光并引导用户行动；值得看的是对话式产品如何嵌入商业转化。",
+      "title": "Introducing Businesses in ChatGPT",
+      "url": "https://openai.com/index/introducing-businesses-chatgpt",
+      "sources": [
+        {
+          "url": "https://openai.com/index/introducing-businesses-chatgpt",
+          "title": "Introducing Businesses in ChatGPT",
+          "source_type": "rss",
+          "published_at": "2026-11-10T10:00:00+00:00"
+        },
+        {
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1030552/openai-chatgpt-business-agents-hub",
+          "title": "ChatGPT is getting verified AI ‘Business Agents’",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "openai-businesses-in-chatgpt-launch",
+          "date": "2026-11-11",
+          "title": "Introducing Businesses in ChatGPT",
+          "summary": "OpenAI 在 ChatGPT 里上线商家功能，让商家管理信息、查看曝光并引导用户行动；值得看的是对话式产品如何嵌入商业转化。",
+          "score": 7.6,
+          "url": "https://openai.com/index/introducing-businesses-chatgpt"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "ChatGPT",
+        "商业化",
+        "商家工具"
+      ]
+    },
+    {
+      "product_id": "product-1d00dd42056a7579",
+      "product_name": "Meta Muse",
+      "builder_name": "Mia Sato",
+      "first_seen": "2026-11-11",
+      "last_seen": "2026-11-11",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "eBay 似乎封堵了 Meta Muse 等第三方 AI 购物 Agent 浏览平台，用户无法再用 Agent 自动整理每日手表清单；这是 Agent 产品与平台规则冲突的具体案例。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.6,
+      "summary": "eBay 似乎封堵了 Meta Muse 等第三方 AI 购物 Agent 浏览平台，用户无法再用 Agent 自动整理每日手表清单；这是 Agent 产品与平台规则冲突的具体案例。",
+      "title": "eBay appears to have shut the door on third-party AI agents",
+      "url": "https://www.theverge.com/tech/1030838/ebay-ai-agents-meta-muse-agentic-shopping",
+      "sources": [
+        {
+          "url": "https://www.theverge.com/tech/1030838/ebay-ai-agents-meta-muse-agentic-shopping",
+          "title": "eBay appears to have shut the door on third-party AI agents",
+          "source_type": "rss",
+          "published_at": "2026-11-10T16:20:30+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "ebay-blocks-third-party-ai-agents",
+          "date": "2026-11-11",
+          "title": "eBay appears to have shut the door on third-party AI agents",
+          "summary": "eBay 似乎封堵了 Meta Muse 等第三方 AI 购物 Agent 浏览平台，用户无法再用 Agent 自动整理每日手表清单；这是 Agent 产品与平台规则冲突的具体案例。",
+          "score": 7.6,
+          "url": "https://www.theverge.com/tech/1030838/ebay-ai-agents-meta-muse-agentic-shopping"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "电商",
+        "平台政策"
+      ]
+    },
+    {
+      "product_id": "product-e5d15204f8b20f87",
+      "product_name": "BotPsy",
+      "builder_name": "Hugging Face",
+      "first_seen": "2026-11-11",
+      "last_seen": "2026-11-11",
+      "occurrence_count": 1,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Hugging Face 博客介绍 BotPsy，一个跑在设备上的小参数个人助理 Agent；值得看小模型如何在本地完成助理任务。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.4,
+      "summary": "Hugging Face 博客介绍 BotPsy，一个跑在设备上的小参数个人助理 Agent；值得看小模型如何在本地完成助理任务。",
+      "title": "BotPsy: On-Device Personal Assistant with a Sub-Billion-Parameter Agentic Language Model",
+      "url": "https://huggingface.co/blog/qvac/botpsy",
+      "sources": [
+        {
+          "url": "https://huggingface.co/blog/qvac/botpsy",
+          "title": "BotPsy: On-Device Personal Assistant with a Sub-Billion-Parameter Agentic Language Model",
+          "source_type": "rss",
+          "published_at": "2026-11-11T05:01:16+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "botpsy-on-device-assistant",
+          "date": "2026-11-11",
+          "title": "BotPsy: On-Device Personal Assistant with a Sub-Billion-Parameter Agentic Language Model",
+          "summary": "Hugging Face 博客介绍 BotPsy，一个跑在设备上的小参数个人助理 Agent；值得看小模型如何在本地完成助理任务。",
+          "score": 7.4,
+          "url": "https://huggingface.co/blog/qvac/botpsy"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "端侧模型",
+        "Agent",
+        "个人助理"
+      ]
+    },
+    {
+      "product_id": "product-aeaf5f7414d18c49",
+      "product_name": "Lovable Realtime Service",
+      "builder_name": "Lovable Blog",
+      "first_seen": "2026-11-11",
+      "last_seen": "2026-11-11",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Lovable 推出 Realtime Service，可能让 AI 生成的应用支持实时功能，值得关注其如何降低实时能力的使用门槛。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.2,
+      "summary": "Lovable 推出 Realtime Service，可能让 AI 生成的应用支持实时功能，值得关注其如何降低实时能力的使用门槛。",
+      "title": "Lovable Realtime Service",
+      "url": "https://lovable.dev/blog/lovable-realtime-service",
+      "sources": [
+        {
+          "url": "https://lovable.dev/blog/lovable-realtime-service",
+          "title": "Lovable Realtime Service",
+          "source_type": "public_web",
+          "published_at": "2026-11-10T11:30:00+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "lovable-realtime-service",
+          "date": "2026-11-11",
+          "title": "Lovable Realtime Service",
+          "summary": "Lovable 推出 Realtime Service，可能让 AI 生成的应用支持实时功能，值得关注其如何降低实时能力的使用门槛。",
+          "score": 7.2,
+          "url": "https://lovable.dev/blog/lovable-realtime-service"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Lovable",
+        "实时服务",
+        "AI 编程"
+      ]
+    },
+    {
+      "product_id": "product-06c7cb32f14db117",
+      "product_name": "PSI",
+      "builder_name": "Tim Fernholz",
+      "first_seen": "2026-11-11",
+      "last_seen": "2026-11-11",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "PSI 用未发布的 Anthropic 模型回答量子计算领域悬而未决近二十年的基础问题，并尝试把 AI 科学发现做成生意；值得看它如何把模型能力变成可交付的研究服务。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.2,
+      "summary": "PSI 用未发布的 Anthropic 模型回答量子计算领域悬而未决近二十年的基础问题，并尝试把 AI 科学发现做成生意；值得看它如何把模型能力变成可交付的研究服务。",
+      "title": "PSI is trying to make a business out of AI-driven scientific discovery",
+      "url": "https://techcrunch.com/2026/11/10/psi-is-trying-to-make-a-business-out-of-ai-driven-scientific-discovery/",
+      "sources": [
+        {
+          "url": "https://techcrunch.com/2026/11/10/psi-is-trying-to-make-a-business-out-of-ai-driven-scientific-discovery/",
+          "title": "PSI is trying to make a business out of AI-driven scientific discovery",
+          "source_type": "rss",
+          "published_at": "2026-11-10T19:03:52+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "psi-ai-scientific-discovery-business",
+          "date": "2026-11-11",
+          "title": "PSI is trying to make a business out of AI-driven scientific discovery",
+          "summary": "PSI 用未发布的 Anthropic 模型回答量子计算领域悬而未决近二十年的基础问题，并尝试把 AI 科学发现做成生意；值得看它如何把模型能力变成可交付的研究服务。",
+          "score": 7.2,
+          "url": "https://techcrunch.com/2026/11/10/psi-is-trying-to-make-a-business-out-of-ai-driven-scientific-discovery/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "科学发现",
+        "垂直AI",
+        "Anthropic"
+      ]
+    },
+    {
+      "product_id": "product-f60659d1490e582f",
+      "product_name": "Gemini 4 Carbon",
+      "builder_name": "Google DeepMind",
+      "first_seen": "2026-11-11",
+      "last_seen": "2026-11-11",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Google DeepMind 宣布 Gemini 4 Carbon 上线；目前只有标题没有细节，值得关注但还无法判断能催生什么新产品。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.2,
+      "summary": "Google DeepMind 宣布 Gemini 4 Carbon 上线；目前只有标题没有细节，值得关注但还无法判断能催生什么新产品。",
+      "title": "Gemini 4 Carbon is now available",
+      "url": "https://deepmind.google/blog/gemini-4-carbon-is-now-available/",
+      "sources": [
+        {
+          "url": "https://deepmind.google/blog/gemini-4-carbon-is-now-available/",
+          "title": "Gemini 4 Carbon is now available",
+          "source_type": "rss",
+          "published_at": "2026-11-10T16:03:47+00:00"
+        },
+        {
+          "url": "https://simonwillison.net/2026/Nov/10/llm-gemini/",
+          "title": "llm-gemini 0.36",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "gemini-4-carbon-available",
+          "date": "2026-11-11",
+          "title": "Gemini 4 Carbon is now available",
+          "summary": "Google DeepMind 宣布 Gemini 4 Carbon 上线；目前只有标题没有细节，值得关注但还无法判断能催生什么新产品。",
+          "score": 7.2,
+          "url": "https://deepmind.google/blog/gemini-4-carbon-is-now-available/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Gemini",
+        "模型发布"
+      ]
+    },
     {
       "product_id": "product-2ce41ae9bb3aa46f",
       "product_name": "Beep Locator",
