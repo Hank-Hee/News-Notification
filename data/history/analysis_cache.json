@@ -5437,6 +5437,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "0c617bbd3671828d0246f7b669f4ea28f304d6ba8f4d689c64b0327346abcfbc": {
+      "created_at": "2026-11-12T07:08:00.305953+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "data-center-boom-obstacles",
+        "evidence_status": "reported",
+        "follow_up": "无需追踪，除非后续出现具体产品级影响或政策变化。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:2cb675d9894e0bd8",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": false,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "讨论数据中心建设面临的现实障碍（地方反对、许可延迟、电力短缺），属于泛行业评论，无产品、代码、Demo或用户反馈，对AI产品经理初学者无直接可迁移增量，且不涉及模型能力或产品构建实践，低于收录阈值。",
+        "region": "global",
+        "score": 4.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "TechCrunch播客讨论AI数据中心热潮遭遇地方反对、许可延迟和电力短缺等现实障碍，许多宣布的项目可能根本不会建成。",
+        "tags": [
+          "数据中心",
+          "AI基础设施",
+          "行业观察"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "0c6e74513a46c192169321e495afcff77890cbc154371de3ef0790c515b92ca6": {
       "created_at": "2026-10-21T04:44:08.622027+00:00",
       "model": "deepseek-flash",
@@ -15243,6 +15282,46 @@
       },
       "stage": "candidate_analysis"
     },
+    "214fcb865d5cffb578549c8103662ff60279dacd017db8e2c9dad9207e60695c": {
+      "created_at": "2026-11-12T07:08:15.081794+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "gemini-decisions-api-launch",
+        "evidence_status": "verified",
+        "follow_up": "观察开发者是否基于决策 API 做出分类、审核、评分类小产品，以及定价与延迟表现。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:simonwillison.net_atom_everything_:485ec329c8b74027",
+        "intelligence_type": "model_capability",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Gemini Decision 1",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Google 发布 Gemini Decision 1 决策模型 API，Simon Willison 一手实测并对比 Jev/OpenAI，含定价、多模态能力与视频测试，属于能直接催生新产品的新模型能力，对初学者理解“决策模型”产品形态有迁移价值。",
+        "region": "global",
+        "score": 8.2,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Google 推出 Gemini Decision 1 决策模型 API，支持是/否、多选和评分三类问题并覆盖文本图像音视频 PDF；Simon Willison 实测视频问答并对比 Jev 与 OpenAI，值得看因为它展示了“让模型做判断”这一新产品接口形态。",
+        "tags": [
+          "Gemini",
+          "决策模型",
+          "多模态",
+          "API"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "215a6c9a3f7da584d8aa3174b5b5298f2cd9dd2b2f015136964770e98b37c628": {
       "created_at": "2026-08-21T01:57:22.200644+00:00",
       "model": "deepseek-v4-flash",
@@ -19768,6 +19847,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "2b957ba63595f900cc13e4274b2926586c892d3b0b51df5ddc545a15566025ca": {
+      "created_at": "2026-11-12T07:08:19.257531+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "browser-use-1.0.3rc1",
+        "evidence_status": "first_party",
+        "follow_up": "关注正式版 1.0.3 的发布及社区反馈。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "github:release:442412481",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Browser-use",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Browser-use 发布 1.0.3 候选版，包含多项 CLI 和容器环境修复，对构建浏览器 Agent 的开发者有明确可迁移的实践价值。",
+        "region": "global",
+        "score": 7.2,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "Browser-use 发布了 1.0.3 候选版，修复了 CLI 和容器中浏览器连接等问题，让开发者更容易构建浏览器自动化 Agent。",
+        "tags": [
+          "Browser-use",
+          "Agent",
+          "浏览器自动化"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "2bb721d64ac83058954c9be5a8acf6644283218b9c9eae3f0d14ea751d1690c3": {
       "created_at": "2026-10-24T04:34:41.870417+00:00",
       "model": "deepseek-flash",
@@ -22095,6 +22213,45 @@
           "AI for Science",
           "播客",
           "科研"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "30ea837a2c67a479907a47584c2a88d14a965143f2d5c1ee3b3690cf179d2549": {
+      "created_at": "2026-11-12T07:08:19.257484+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "vercel-ai-sdk-workflow-2.0.102",
+        "evidence_status": "first_party",
+        "follow_up": "无需特别关注，除非后续有影响 Agent 可观测性的重大更新。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "github:release:442074760",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Vercel AI SDK",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Vercel AI SDK 的补丁版本，修复了流式传输停止时的遥测问题，属于底层开发工具维护，对产品思路无增量。",
+        "region": "global",
+        "score": 6.0,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "Vercel 更新了 AI SDK 的 workflow 包，修复了客户端工具流停止时的遥测记录问题，属于技术维护。",
+        "tags": [
+          "Vercel",
+          "AI SDK",
+          "Agent"
         ],
         "target_user": "",
         "verticals": []
@@ -24677,6 +24834,45 @@
           "融资",
           "估值",
           "YC"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "36e66799ba73502d5acebd0b1ac8c6aa949933e8551081e35717ea0e6a5f86cf": {
+      "created_at": "2026-11-12T07:08:19.257438+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-codex-rust-v0.170.0-alpha.1",
+        "evidence_status": "first_party",
+        "follow_up": "关注后续正式版是否包含影响产品体验的新功能。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "github:release:442158479",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Codex",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI Codex 的 alpha 版本发布，无变更说明，对产品经理和初学者无直接可迁移信息，属于低信噪比技术更新。",
+        "region": "global",
+        "score": 5.5,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "OpenAI 发布了 Codex 的 Rust 版 alpha 版本，但没有说明具体改动，对学习产品构建帮助有限。",
+        "tags": [
+          "Codex",
+          "OpenAI",
+          "Release"
         ],
         "target_user": "",
         "verticals": []
@@ -28409,6 +28605,85 @@
       },
       "stage": "candidate_analysis"
     },
+    "3e3fcabb3c8014b5e1569503b0bad8fd617b396c7d8a53ad69f4b101a4b883f3": {
+      "created_at": "2026-11-12T07:08:15.082171+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "ainews-decision-models-day",
+        "evidence_status": "reported",
+        "follow_up": "追踪 Cloudflare 与 TypeSafe AI 是否公开具体产品案例。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:www.latent.space_feed:580571e87c40cc97",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "AINews 汇总 Google 进入决策模型市场及 Cloudflare、TypeSafe AI 的分享，属于高信噪比行业观察，但内容为聚合摘要，缺少可拆解的一手细节。",
+        "region": "global",
+        "score": 6.8,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "AINews 汇总 11 月 11 日 Google 进入决策模型市场，以及 Cloudflare 展示分类器能处理构建失败哪些环节、TypeSafe AI 展示生产客户；值得看作为决策模型方向的行业速览。",
+        "tags": [
+          "决策模型",
+          "AINews",
+          "行业观察"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "3e4d40ac0c2e5ffc812d09c32a9f0caacf3255ca10b61597cbcbd533f8c918d1": {
+      "created_at": "2026-11-12T07:08:15.081945+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "aws-emulator-agent-built",
+        "evidence_status": "verified",
+        "follow_up": "观察该模拟器是否持续维护、是否被用于真实测试流程，以及 Agent 生成代码的质量边界。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:50456631",
+        "intelligence_type": "product_case",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "AWS Emulator",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "AWS 发布由自主 AI Agent 构建的 AWS 模拟器，GitHub 可验证，HN 高热度讨论含安全边界与替代品对比；属于“Agent 写代码”的实践案例，但偏基础设施工具，对产品经理的直接迁移增量中等。",
+        "region": "global",
+        "score": 7.6,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "AWS 公开一个由自主 AI Agent 写出的 AWS 模拟器并开源到 GitHub，用来在本地模拟云服务；值得看因为它是“Agent 参与真实工程交付”的可验证案例，评论区也指出其安全测试边界有限。",
+        "tags": [
+          "Agent",
+          "AWS",
+          "开源",
+          "工程实践"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "3e6548a5245303da6b50cf6564e9b9650827d62890c8562529ce370c88a7091c": {
       "created_at": "2026-09-18T04:41:50.736054+00:00",
       "model": "deepseek-flash",
@@ -30434,6 +30709,45 @@
         "what_it_is": "OpenAI 官方发布的客户案例，展示 Amp 这家公司如何组合使用 GPT-6 Astra、Ultrafast、GPT-Live-1 等多个模型，让 AI Agent（能自主执行任务的 AI 程序）不只会写代码，还能做更多业务工作。"
       },
       "stage": "deep_analysis"
+    },
+    "424c5495c21dcc835c775300e3823b49e809a387960d5d2dfdb14d6e52c0ea75": {
+      "created_at": "2026-11-12T07:07:57.782554+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "nvidia-jensen-huang-affair-allegation",
+        "evidence_status": "reported",
+        "follow_up": "不追踪",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:6d7d90a009aa9593",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Nvidia CEO 个人绯闻报道，与 AI 产品、模型能力、构建实践或行业产品信号无关，属于噪音，不进入日报。",
+        "region": "global",
+        "score": 1.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "TechCrunch 报道称英伟达 CEO 黄仁勋被指控与一名英伟达下属有婚外情；此事与 AI 产品构建和模型能力无关，不值得产品经理关注。",
+        "tags": [
+          "Nvidia",
+          "人物八卦",
+          "噪音"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
     },
     "4251fa05fc5fa33bbf4ba3e2ec5930d194dce2baee5345d872676003623017c8": {
       "created_at": "2026-09-08T04:33:57.303293+00:00",
@@ -36404,6 +36718,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "4e71ab7494fb2842cc574467528efeb76743772080ae6f521c38eef724879bf2": {
+      "created_at": "2026-11-12T07:08:15.082145+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "anthropic-ipo-roadshow-video",
+        "evidence_status": "reported",
+        "follow_up": "观察路演中是否披露更多产品收入结构与客户案例。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:simonwillison.net_atom_everything_:6e96a802abbc1d38",
+        "intelligence_type": "business_policy",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Anthropic IPO 路演视频披露多芯片训练与推理策略，属于公司商业与算力信息，非产品体验或构建实践，按规则纯融资/算力类低于 7 分。",
+        "region": "global",
+        "score": 5.8,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Anthropic 在 IPO 路演视频中首次披露 Claude 同时跑在 AWS Trainium、Google TPU、NVIDIA 和 AMD 四类芯片上；值得看仅在于了解模型公司的算力策略，对做产品帮助有限。",
+        "tags": [
+          "Anthropic",
+          "IPO",
+          "算力"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "4e76a3d0580f7df15a9d6680981c2dae4a82c2a2a3b10b279ccb3b421e025d1f": {
       "created_at": "2026-10-01T05:50:53.093204+00:00",
       "model": "deepseek-flash",
@@ -41754,6 +42107,46 @@
       },
       "stage": "candidate_analysis"
     },
+    "59aab0df2f3fb17456ca51d82ff53fd2467726cd587dd33882ca58612ed7b84c": {
+      "created_at": "2026-11-12T07:07:53.142071+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "google-labs-tabletop-waitlist",
+        "evidence_status": "early_signal",
+        "follow_up": "关注 waitlist 开放后的实际生成效果、可定制程度和是否支持多人实时协作。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:blog.google_innovation-and-ai_technology_ai_rss_:eac4d84ef949975e",
+        "intelligence_type": "early_signal",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Tabletop",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Google Labs 官方发布 Tabletop 实验，用 AI 生成可定制的协作空间（行程、投票、对阵表），属于有明确产品形态的新实验，但仍在 waitlist 阶段，无用户反馈。",
+        "region": "global",
+        "score": 7.2,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Google Labs 推出 Tabletop 实验，用户描述需求就能生成行程、投票等小组协作工具，解决家庭和朋友一起规划的问题，值得看 AI 生成协作应用的产品形态。",
+        "tags": [
+          "Google Labs",
+          "协作工具",
+          "AI 生成应用",
+          "vibecode"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "59ac645cdbec0f0bf74e7396659941372d2d6c49fac0a151260ad490fd91e6fa": {
       "created_at": "2026-07-26T04:07:29.874403+00:00",
       "model": "deepseek-v4-flash",
@@ -42046,6 +42439,46 @@
           "Anthropic",
           "AI治理",
           "政策"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "5a1d6973fdfc7497402ea513c78b83e864d7b4cebbe22b0b0c15679f369a01f0": {
+      "created_at": "2026-11-12T07:08:15.082196+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "jev-revolution-engineers-building",
+        "evidence_status": "reported",
+        "follow_up": "寻找 Glean 等公司使用 Jev 的具体场景与效果数据。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:www.latent.space_feed:b810f17530b5705d",
+        "intelligence_type": "product_case",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Jev",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Latent Space 报道 Jev 创建者 Diogo Almeida 在 AI Engineer Code Summit 呼吁自动化一切，并展示 Glean 等公司如何用 Jev 系统一模型，属于有具体使用方的产品案例，但为二手报道。",
+        "region": "global",
+        "score": 7.8,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Latent Space 报道 Jev 创建者 Diogo Almeida 在 AI Engineer Code Summit 上呼吁开发者把一切自动化，并介绍 Glean 等公司如何用 Jev 的 System One 模型；值得看因为它展示了决策模型在真实公司里的用法。",
+        "tags": [
+          "Jev",
+          "决策模型",
+          "Glean",
+          "AI Engineer"
         ],
         "target_user": "",
         "verticals": []
@@ -55704,6 +56137,45 @@
       },
       "stage": "deep_analysis"
     },
+    "7624e633731b3c6934d4cd826461893d8f5e4805c40c1d0fb92b452b241738bc": {
+      "created_at": "2026-11-12T07:08:15.082258+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-codex-rust-0-167-2",
+        "evidence_status": "first_party",
+        "follow_up": "观察该变更是否影响 Agent 工具调用的延迟与稳定性。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "github:release:442267349",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Codex",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Codex 0.167.2 在 Google Cloud Vertex AI 上默认增量发送工具更新，属于工程配置变更，对普通产品构建者迁移价值低。",
+        "region": "global",
+        "score": 5.2,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "openai/codex 发布 0.167.2，在 Google Cloud Vertex AI 上默认增量发送工具更新并可配置关闭；属于工程细节更新，对产品思路帮助有限。",
+        "tags": [
+          "Codex",
+          "Vertex AI",
+          "Release"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "7627e81b842277b50480632eafe75f7dcbe8626cea2ed30c96fb1ab6f2cdf82b": {
       "created_at": "2026-11-11T06:13:44.210092+00:00",
       "model": "deepseek-flash",
@@ -60004,6 +60476,46 @@
       },
       "stage": "candidate_analysis"
     },
+    "7f5c30a127db8df28b94c1c48c47dffab5cac9f25912dd72c803bf88662eedc2": {
+      "created_at": "2026-11-12T07:07:55.773298+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "nvidia-jensen-huang-affair-timeline",
+        "evidence_status": "reported",
+        "follow_up": "不追踪；除非后续出现与 AI 产品、模型能力或行业政策直接相关的实质进展。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:4818a1d82a735b82",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "这是关于英伟达 CEO 个人丑闻的时间线报道，不涉及 AI 产品、模型能力、构建实践或可迁移的产品思路，对目标读者（LLM 初学者、AI 产品经理）没有直接价值，属于低相关噪音。",
+        "region": "global",
+        "score": 3.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "TechCrunch 梳理了英伟达 CEO 黄仁勋与疑似中国间谍的婚外情时间线，讨论其可能的国家安全影响；但内容与 AI 产品构建无关，不值得拆解。",
+        "tags": [
+          "Nvidia",
+          "Jensen Huang",
+          "国家安全",
+          "行业八卦"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "7f6177d9890342a5535fab9e9f210381200775f2ed19b524236d4aef5adf69ff": {
       "created_at": "2026-10-09T06:06:56.588486+00:00",
       "model": "deepseek-flash",
@@ -63554,6 +64066,45 @@
         "tags": [
           "VMware",
           "商业"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "86f38a79ecec8546f076227ab8e1c88276a474f381956848edae63de4bdf7b02": {
+      "created_at": "2026-11-12T07:08:15.082008+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "simonwillison-tools-tag-browse",
+        "evidence_status": "first_party",
+        "follow_up": "观察这种标签化浏览是否被其他个人工具集复用，以及 AI 生成分类的准确度。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:simonwillison.net_atom_everything_:8ba32157965a133a",
+        "intelligence_type": "builder_insight",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "tools.simonwillison.net",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Simon Willison 用 AI 辅助为 244 个 vibe-coded 小工具做标签浏览，展示了“用 LLM 分析自己代码库再生成产品功能”的构建过程，对个人产品探索者有可迁移做法，但规模小、增量有限。",
+        "region": "global",
+        "score": 7.4,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Simon Willison 用 AI 加 tree-sitter 分析自己 244 个随手做的小工具，按 JavaScript 库和浏览器 API 生成标签云方便浏览；值得看因为它示范了个人开发者如何用 AI 快速给自己的产品加可用功能。",
+        "tags": [
+          "个人产品",
+          "vibe coding",
+          "工具集"
         ],
         "target_user": "",
         "verticals": []
@@ -68232,6 +68783,40 @@
         "verticals": []
       },
       "stage": "candidate_analysis"
+    },
+    "8e90a2403fb4b55791548faf82bf3f61a9c6168930c112d08ac738ed4cb9880e": {
+      "created_at": "2026-11-12T07:08:41.938760+00:00",
+      "model": "kimi-k2.6",
+      "prompt_version": "deep-v3-beginner",
+      "result": {
+        "ai_role": "AI 负责做判断/决策这一步，替代原来需要人工审批或硬编码规则的地方",
+        "evidence_status": "reported",
+        "hands_on_exercise": "找一个你工作中需要反复做判断的场景（比如\"邮件是不是垃圾邮件\"\"这个需求优先级高不高\"），用任何 LLM（ChatGPT/Claude）试做：先让它生成一段分析文字，再改成只输出一个判断结果（是/否/数字），体会\"生成型\"和\"决策型\"的区别。",
+        "implementation_idea": "把 AI 从\"写作文\"重新定位为\"做选择题\"——不是生成一段文字让你读，而是直接给你一个确定的决定，方便嵌入到自动化工作流里。",
+        "learning_points": [
+          "System One 模型：一种专门做快速、直觉式判断的 AI，区别于生成文字的 LLM",
+          "Function Calling（函数调用）：让 AI 能调用外部工具或系统执行操作的白话说法，就是 AI 决定\"现在该调用哪个功能\"",
+          "Agent（智能体）：能自主感知环境、做决策并采取行动的系统，不只是回答问题"
+        ],
+        "limitations_or_uncertainties": "Jev 的具体技术细节、准确率数据、定价、以及 Glean 等公司具体怎么用均未公开；目前信息主要来自会议演讲和媒体报道，非一手产品文档。",
+        "product_name": "Jev",
+        "sources": [
+          "https://latent.space/p/jev-revolution/",
+          "https://en.wikipedia.org/wiki/Jev_(AI_model)",
+          "https://grokipedia.com/page/Jev_TypeSafe_AI"
+        ],
+        "target_users": "企业开发者和工程师，尤其是需要把业务流程自动化的公司（如 Glean）",
+        "title_zh": "Jev 的 System One 模型：工程师正在用它做什么",
+        "usage_flow": [
+          "开发者把公司里的决策规则或场景接入 Jev",
+          "Jev 接收输入信息，直接输出决策结果（是/否、分类、数值等）",
+          "企业系统根据 Jev 的决策自动执行下一步操作",
+          "开发者监控决策质量，必要时调整规则"
+        ],
+        "user_problem": "传统 LLM 擅长写文字、写代码，但企业里很多决策场景（比如\"要不要批准这笔报销\"\"这个工单该派给谁\"）需要可靠的判断，而不是一段文字输出，现有工具不好直接用。",
+        "what_it_is": "Jev 是 TypeSafe AI 公司开发的一种\"决策型 AI 模型\"，不生成文字或代码，而是专门做判断和决策。"
+      },
+      "stage": "deep_analysis"
     },
     "8e961943b77ab220b1661c535f213e9ff157de68e8a2c32d844746b299f6806e": {
       "created_at": "2026-11-02T05:59:43.781805+00:00",
@@ -72943,6 +73528,46 @@
       },
       "stage": "candidate_analysis"
     },
+    "9793b28d44f0803d31457dcae1ba7e038d2eb02e3a5d28c7ef09a1fd3ee5db21": {
+      "created_at": "2026-11-12T07:07:53.141969+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "claude-code-obsidian-family-brain",
+        "evidence_status": "first_party",
+        "follow_up": "关注他如何组织 Markdown 文件结构、如何与家人共享，以及是否有可复用的模板或开源仓库。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "newsletter:feed:faeeacba26ef949f53a4",
+        "intelligence_type": "builder_insight",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Claude Code + Obsidian 家庭大脑",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "构建者一手讲述用 Claude Code + Obsidian 搭建家庭 AI 大脑的真实案例，有具体使用场景（保险、维修、共享、墙面展示），对初学者理解“解决什么问题、AI 在哪一步发挥作用”很有迁移价值。",
+        "region": "global",
+        "score": 8.6,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "数学教育者 Scott Farrar 用 Claude Code 加 Obsidian 搭了一个家庭 AI 大脑，管理家电、保单和待办，解决 AI 聊天记不住上下文的问题，值得看它如何把 AI 嵌进日常家务流程。",
+        "tags": [
+          "Claude Code",
+          "Obsidian",
+          "个人知识管理",
+          "AI Agent"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "97b37ff7ad8123ac10577d87c92c14c375f01a4f9664e3e68a4b53d25172c6d3": {
       "created_at": "2026-09-06T04:37:15.087411+00:00",
       "model": "deepseek-v4-flash",
@@ -75920,6 +76545,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "9dd7f5bc99bbdcd4c76648afc19a4d1cfda87c8b56449ef8b85b28cc0efd7e70": {
+      "created_at": "2026-11-12T07:07:53.142131+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "google-tabletop-verge-coverage",
+        "evidence_status": "reported",
+        "follow_up": "与官方公告对照，关注 waitlist 开放后的实际体验。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:10fe7f83b9de4e33",
+        "intelligence_type": "early_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Tabletop",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "The Verge 对 Google Tabletop 的报道，补充了产品形态细节（类似 Asana 但可 vibecode 个性化工具），属同一事件的媒体转述，价值略低于官方发布。",
+        "region": "global",
+        "score": 7.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "The Verge 报道 Google Tabletop 实验，用户描述需求就能生成类似 Asana 的个性化协作工具，解决家庭和朋友协调事务的问题，值得看 AI 生成协作应用的方向。",
+        "tags": [
+          "Google",
+          "协作工具",
+          "AI 生成应用"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "9dda6fba8939d864892a839e92bf36c17101c78c4e9f42df9d05279499697296": {
       "created_at": "2026-10-18T04:30:40.807583+00:00",
       "model": "deepseek-flash",
@@ -77756,6 +78420,46 @@
         "what_it_is": "Meta 推出的消费级 AI Agent（智能助手），声称能代替用户执行发邮件、在线购物等任务"
       },
       "stage": "deep_analysis"
+    },
+    "a0ed4a87f574725b721763078224a23987df0ca5f85347f9d6ee3da297fbc63f": {
+      "created_at": "2026-11-12T07:07:53.142161+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "alphagenome-2-release",
+        "evidence_status": "reported",
+        "follow_up": "关注是否有面向研究者的 API 或工具，以及能否催生疾病诊断类产品。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:5a2b51354f6b1234",
+        "intelligence_type": "model_capability",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "AlphaGenome 2",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "DeepMind 发布 AlphaGenome 2，能更细地看 DNA 变化如何影响细胞，属医疗健康方向的模型能力，但报道偏科研，未涉及产品化或用户使用方式。",
+        "region": "global",
+        "score": 6.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Google DeepMind 发布 AlphaGenome 2，能更细地分析 DNA 变化如何影响不同细胞，帮助研究疾病成因，属医疗健康方向的模型进展。",
+        "tags": [
+          "DeepMind",
+          "AlphaGenome",
+          "医疗健康",
+          "基因组"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
     },
     "a1164bc52503ee0b755e1ecf8e9ca7769a3fcbd9607e40c4346e7849ad8ca0bc": {
       "created_at": "2026-08-24T01:57:40.759686+00:00",
@@ -83696,6 +84400,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "ace774f0f3b1ea4043586d7cdea0c19978697a3e66cf72c93cf723315699beca": {
+      "created_at": "2026-11-12T07:08:15.082234+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-codex-rust-0-170-0-alpha-2",
+        "evidence_status": "first_party",
+        "follow_up": "等待正式版发布说明再评估。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "github:release:442382978",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Codex",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "openai/codex 的 alpha 版本发布，正文只有版本号，无任何功能说明，属于低信息量噪音。",
+        "region": "global",
+        "score": 3.5,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "openai/codex 发布 rust-v0.170.0-alpha.2，但发布说明只有版本号，没有可判断的功能变化；不值得拆解。",
+        "tags": [
+          "Codex",
+          "Release"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "acf3446f303e2b44780738a6ec1e25ccf16ba33a2fc2cbab8989d3bd45407cd1": {
       "created_at": "2026-08-29T07:03:48.092226+00:00",
       "model": "deepseek-v4-flash",
@@ -84603,6 +85345,45 @@
           "案例",
           "Codex",
           "效率"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "aeda041ed9fddb9f4b7f1d9e7ee9d2103988582e7fe7f0e04e845454ac593fc7": {
+      "created_at": "2026-11-12T07:07:53.142102+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "united-blocks-ai-agents-booking",
+        "evidence_status": "reported",
+        "follow_up": "观察其他航司和平台是否跟进，以及 AI 助手绕过限制或达成合作的方式。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:7bb59bd6c17a6c5f",
+        "intelligence_type": "business_policy",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "美联航明确禁止个人 AI 助手代订机票，是 AI Agent 落地遇到平台政策阻力的真实信号，对做 Agent 产品的人有参考价值，但无产品构建细节。",
+        "region": "global",
+        "score": 6.8,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "美联航以隐私和监管为由，不允许个人 AI 助手代订机票，说明 AI Agent 进入真实交易场景时会碰到平台政策壁垒，值得做 Agent 产品的人关注。",
+        "tags": [
+          "AI Agent",
+          "航空",
+          "平台政策"
         ],
         "target_user": "",
         "verticals": []
@@ -91757,6 +92538,45 @@
         "tags": [
           "AI伦理",
           "个人观点"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "bca47c8f644d50ecda5f31e261f66d5f99d6708a2c2a9ccd281cc1018c88fa5c": {
+      "created_at": "2026-11-12T07:08:15.082217+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "mercor-series-d-20b",
+        "evidence_status": "reported",
+        "follow_up": "观察 Mercor 的数据标注/人才匹配产品是否公开更多客户案例。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:www.latent.space_feed:0ef8e0cb9dba14e9",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Mercor",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Mercor 7.5 亿美元 D 轮、200 亿美元估值、30 亿美元年化收入，属于纯融资信息，按规则低于 7 分；Gemini 4 Carbon GA 仅一句提及无细节。",
+        "region": "global",
+        "score": 4.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "AINews 报道 Mercor 完成 7.5 亿美元 D 轮融资、估值 200 亿美元、年化收入 30 亿美元，并提及 Gemini 4 Carbon 正式可用；融资信息对产品构建的直接帮助有限。",
+        "tags": [
+          "融资",
+          "Mercor",
+          "Gemini"
         ],
         "target_user": "",
         "verticals": []
@@ -113159,6 +113979,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "ea02999de6270cba7b117bf4aae65aeebf129e0a481dcee71664734c542163a8": {
+      "created_at": "2026-11-12T07:08:15.082048+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "llm-0-37-2-security-fix",
+        "evidence_status": "first_party",
+        "follow_up": "观察多模型接入工具是否普遍增加密钥隔离与端点校验。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:simonwillison.net_atom_everything_:460872e68e9eeabb",
+        "intelligence_type": "builder_insight",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "llm",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "llm 0.37.2 修复 API key 可能被误发给第三方 OpenAI 兼容端点的安全问题，属于工具安全补丁，对产品构建有提醒意义但无新产品体验增量。",
+        "region": "global",
+        "score": 6.4,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "Simon Willison 的 llm 工具发布 0.37.2，修复了配置 OpenAI 兼容端点时 API key 可能被误发给第三方的问题；值得看因为它提醒做多模型接入的产品要注意密钥泄露风险。",
+        "tags": [
+          "LLM工具",
+          "安全",
+          "API密钥"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "ea177d264111fc6833d95c10a37849e5999b2edb6f0c44fc28d44e77d1bc7442": {
       "created_at": "2026-07-30T03:28:09.352177+00:00",
       "model": "deepseek-v4-flash",
@@ -113235,6 +114094,42 @@
         "verticals": []
       },
       "stage": "candidate_analysis"
+    },
+    "ea4084140ba7e63b54a36eef6ff29e690b53662a61b0ef5ad4ce617b4a496992": {
+      "created_at": "2026-11-12T07:09:03.373790+00:00",
+      "model": "kimi-k2.6",
+      "prompt_version": "deep-v3-beginner",
+      "result": {
+        "ai_role": "AWS 称该模拟器主要由自主 AI Agent（自主 AI 智能体，指能自己规划步骤、调用工具、完成多轮任务的大模型程序）自动编写代码完成，人类工程师负责审查和把关",
+        "evidence_status": "first_party",
+        "hands_on_exercise": "30 分钟动手：从 https://github.com/aws/aws-emulator 克隆项目，按 README 启动 Emulator，用 AWS CLI 执行 `aws s3 mb s3://test-bucket --endpoint-url http://localhost:8080` 创建一个本地模拟的 S3 存储桶，再用 `aws s3 ls --endpoint-url http://localhost:8080` 验证是否能列出，对比与真实 AWS 的行为差异",
+        "implementation_idea": "在本地跑一个假扮成 AWS 的 API 服务器，拦截你对 S3、DynamoDB 等服务的调用，在本地模拟响应和存储状态，而不是真的去 AWS 数据中心操作",
+        "learning_points": [
+          "Agent（智能体）：不只是回答问题，而是能自己分解任务、写代码、调试、提交的大模型自动化程序",
+          "云模拟器/本地仿真：在本地伪造云服务的 API 行为，用于快速开发和节省成本",
+          "Function Calling（函数调用）：大模型通过调用外部工具（如写文件、运行测试）来完成复杂工程任务，是 Agent 能写代码的关键机制"
+        ],
+        "limitations_or_uncertainties": "AWS 官方安全文档明确标注：不支持测试 IAM 策略、权限边界、KMS 密钥策略、跨账户/跨区域访问等安全控制；模拟器对 IAM 的评估方式与真实 AWS 不同，且不会拒绝用它自己签名的请求。社区质疑这是否仅为实验项目，还是会长期维护的产品。代码风格和质量存在争议。",
+        "product_name": "AWS Emulator",
+        "sources": [
+          "https://github.com/aws/aws-emulator",
+          "https://www.aboutamazon.com/news/aws/how-autonomous-ai-agents-built-aws-emulator",
+          "https://www.allthingsdistributed.com/2026/11/aws-emulator-and-the-engineers-job-when-agents-write-the-code.html",
+          "https://floci.io/",
+          "https://testcontainers.com/modules/floci/"
+        ],
+        "target_users": "在 AWS 上开发、测试云应用的工程师；需要本地快速验证而不用开真实 AWS 账户或产生费用的团队",
+        "title_zh": "AWS 开源本地云模拟器：由 AI Agent 自动编写的工程案例",
+        "usage_flow": [
+          "本地安装启动 Emulator（命令行运行，无图形界面）",
+          "设置环境变量，把 AWS CLI 或 SDK 指向本地模拟地址",
+          "用熟悉的 AWS CLI、SDK 或 Terraform 像操作真云一样开发测试",
+          "查看持久化状态，确认资源创建和配置效果"
+        ],
+        "user_problem": "开发 AWS 应用时，每次测试都要连真实云端、配置账户、可能产生费用，而且网络慢、反馈周期长；现有第三方模拟器（如 LocalStack）不是官方出品，兼容性和维护不确定",
+        "what_it_is": "AWS Emulator 是一个能在你电脑上本地运行、模拟 AWS 云服务的开源工具，让你不用连真云就能开发和测试。"
+      },
+      "stage": "deep_analysis"
     },
     "ea7b966ff70a8f5dcf731a10325b9c53ece168b81b360911187846b4627e97e7": {
       "created_at": "2026-07-28T03:48:25.674693+00:00",
@@ -115889,6 +116784,46 @@
       },
       "stage": "candidate_analysis"
     },
+    "f03e43e32a0c5b472f8b8a95de8799437b463f8be05ed3576b872f3d20fd78c9": {
+      "created_at": "2026-11-12T07:07:53.142043+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "gemini-decisions-api-launch",
+        "evidence_status": "first_party",
+        "follow_up": "观察开发者是否用它做出实际产品，以及定价和音视频输入场景的落地案例。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:50456791",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Gemini Decisions API",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Google 官方发布 Gemini Decisions API，让模型输出决策和概率而非纯文本，属于能解锁新交互的产品能力；HN 讨论热度高，但评论多为疑问，产品落地案例尚少。",
+        "region": "global",
+        "score": 7.6,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Google 发布 Gemini Decisions API，让模型直接给出带概率的决策结果，解决 LLM 置信度不可靠的问题，值得看它能否催生需要概率输出的新 AI 产品。",
+        "tags": [
+          "Gemini",
+          "API",
+          "决策模型",
+          "概率输出"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "f04e7c9c1adfacbd220b6a4d6ddf904a481cd8cd8e025ad5a9ab9b5a1cf4622d": {
       "created_at": "2026-10-06T06:19:42.142515+00:00",
       "model": "kimi-k2.6",
@@ -117924,6 +118859,46 @@
           "市场数据",
           "DeepSeek",
           "成本"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "f46804eb0c59126a87fd2d2ece2b60d80fd12e5acf45711249c909a61ae431c4": {
+      "created_at": "2026-11-12T07:07:53.142189+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "adobe-max-2026-sneaks-experiments",
+        "evidence_status": "reported",
+        "follow_up": "关注这些实验功能何时进入正式产品，以及是否有公开 Demo 可试用。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:3a2b7d73d90374bc",
+        "intelligence_type": "early_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Adobe Max 2026 Sneaks",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Adobe Max 公布实验性 AI 功能：照片变可探索 3D 场景、对话设计 AI 角色、复制粘贴式修图，有明确产品形态和 Demo 展示，但仍是实验阶段。",
+        "region": "global",
+        "score": 7.3,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Adobe 在 Max 大会公布实验性 AI 功能，能把照片变成可走动的 3D 场景、通过对话设计角色、把修图变成复制粘贴，值得看 AI 如何改变创作工具。",
+        "tags": [
+          "Adobe",
+          "图像编辑",
+          "3D",
+          "AI 角色"
         ],
         "target_user": "",
         "verticals": []

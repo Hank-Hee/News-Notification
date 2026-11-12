@@ -1,7 +1,484 @@
 {
   "version": 1,
-  "updated_at": "2026-11-11T06:14:28.759386+00:00",
+  "updated_at": "2026-11-12T07:09:03.397787+00:00",
   "products": [
+    {
+      "product_id": "product-c49d207ad5f6e552",
+      "product_name": "Claude Code + Obsidian 家庭大脑",
+      "builder_name": "Claire Vo",
+      "first_seen": "2026-11-12",
+      "last_seen": "2026-11-12",
+      "occurrence_count": 1,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "数学教育者 Scott Farrar 用 Claude Code 加 Obsidian 搭了一个家庭 AI 大脑，管理家电、保单和待办，解决 AI 聊天记不住上下文的问题，值得看它如何把 AI 嵌进日常家务流程。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.6,
+      "summary": "数学教育者 Scott Farrar 用 Claude Code 加 Obsidian 搭了一个家庭 AI 大脑，管理家电、保单和待办，解决 AI 聊天记不住上下文的问题，值得看它如何把 AI 嵌进日常家务流程。",
+      "title": "Claude Code + Obsidian: My family’s AI brain | Scott Farrar",
+      "url": "https://www.lennysnewsletter.com/p/claude-code-obsidian-my-familys-ai",
+      "sources": [
+        {
+          "url": "https://www.lennysnewsletter.com/p/claude-code-obsidian-my-familys-ai",
+          "title": "Claude Code + Obsidian: My family’s AI brain | Scott Farrar",
+          "source_type": "newsletter",
+          "published_at": "2026-11-11T13:04:09+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "claude-code-obsidian-family-brain",
+          "date": "2026-11-12",
+          "title": "Claude Code + Obsidian: My family’s AI brain | Scott Farrar",
+          "summary": "数学教育者 Scott Farrar 用 Claude Code 加 Obsidian 搭了一个家庭 AI 大脑，管理家电、保单和待办，解决 AI 聊天记不住上下文的问题，值得看它如何把 AI 嵌进日常家务流程。",
+          "score": 8.6,
+          "url": "https://www.lennysnewsletter.com/p/claude-code-obsidian-my-familys-ai"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Claude Code",
+        "Obsidian",
+        "个人知识管理",
+        "AI Agent"
+      ]
+    },
+    {
+      "product_id": "product-62ee12cd8cb0c7d5",
+      "product_name": "Jev",
+      "builder_name": "Richard MacManus",
+      "first_seen": "2026-11-12",
+      "last_seen": "2026-11-12",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "reported",
+      "target_user": "企业开发者和工程师，尤其是需要把业务流程自动化的公司（如 Glean）",
+      "user_problem": "传统 LLM 擅长写文字、写代码，但企业里很多决策场景（比如\"要不要批准这笔报销\"\"这个工单该派给谁\"）需要可靠的判断，而不是一段文字输出，现有工具不好直接用。",
+      "what_it_is": "Jev 是 TypeSafe AI 公司开发的一种\"决策型 AI 模型\"，不生成文字或代码，而是专门做判断和决策。",
+      "ai_role": "AI 负责做判断/决策这一步，替代原来需要人工审批或硬编码规则的地方",
+      "implementation_idea": "把 AI 从\"写作文\"重新定位为\"做选择题\"——不是生成一段文字让你读，而是直接给你一个确定的决定，方便嵌入到自动化工作流里。",
+      "hands_on_exercise": "找一个你工作中需要反复做判断的场景（比如\"邮件是不是垃圾邮件\"\"这个需求优先级高不高\"），用任何 LLM（ChatGPT/Claude）试做：先让它生成一段分析文字，再改成只输出一个判断结果（是/否/数字），体会\"生成型\"和\"决策型\"的区别。",
+      "limitations_or_uncertainties": "Jev 的具体技术细节、准确率数据、定价、以及 Glean 等公司具体怎么用均未公开；目前信息主要来自会议演讲和媒体报道，非一手产品文档。",
+      "region": "global",
+      "score": 7.8,
+      "summary": "Latent Space 报道 Jev 创建者 Diogo Almeida 在 AI Engineer Code Summit 上呼吁开发者把一切自动化，并介绍 Glean 等公司如何用 Jev 的 System One 模型；值得看因为它展示了决策模型在真实公司里的用法。",
+      "title": "Jev 的 System One 模型：工程师正在用它做什么",
+      "url": "https://latent.space/p/jev-revolution/",
+      "sources": [
+        {
+          "url": "https://latent.space/p/jev-revolution/",
+          "title": "The Jev Revolution: What Engineers Are Already Building with System One Models",
+          "source_type": "rss",
+          "published_at": "2026-11-12T05:08:20+00:00"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Jev_(AI_model)",
+          "title": "Jev (AI model) - Wikipedia",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://grokipedia.com/page/Jev_TypeSafe_AI",
+          "title": "Jev (TypeSafe AI)",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "jev-revolution-engineers-building",
+          "date": "2026-11-12",
+          "title": "Jev 的 System One 模型：工程师正在用它做什么",
+          "summary": "Latent Space 报道 Jev 创建者 Diogo Almeida 在 AI Engineer Code Summit 上呼吁开发者把一切自动化，并介绍 Glean 等公司如何用 Jev 的 System One 模型；值得看因为它展示了决策模型在真实公司里的用法。",
+          "score": 7.8,
+          "url": "https://latent.space/p/jev-revolution/"
+        }
+      ],
+      "usage_flow": [
+        "开发者把公司里的决策规则或场景接入 Jev",
+        "Jev 接收输入信息，直接输出决策结果（是/否、分类、数值等）",
+        "企业系统根据 Jev 的决策自动执行下一步操作",
+        "开发者监控决策质量，必要时调整规则"
+      ],
+      "learning_points": [
+        "System One 模型：一种专门做快速、直觉式判断的 AI，区别于生成文字的 LLM",
+        "Function Calling（函数调用）：让 AI 能调用外部工具或系统执行操作的白话说法，就是 AI 决定\"现在该调用哪个功能\"",
+        "Agent（智能体）：能自主感知环境、做决策并采取行动的系统，不只是回答问题"
+      ],
+      "verticals": [],
+      "tags": [
+        "Jev",
+        "决策模型",
+        "Glean",
+        "AI Engineer"
+      ]
+    },
+    {
+      "product_id": "product-817763ee08b08947",
+      "product_name": "AWS Emulator",
+      "builder_name": "super_linear",
+      "first_seen": "2026-11-12",
+      "last_seen": "2026-11-12",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "在 AWS 上开发、测试云应用的工程师；需要本地快速验证而不用开真实 AWS 账户或产生费用的团队",
+      "user_problem": "开发 AWS 应用时，每次测试都要连真实云端、配置账户、可能产生费用，而且网络慢、反馈周期长；现有第三方模拟器（如 LocalStack）不是官方出品，兼容性和维护不确定",
+      "what_it_is": "AWS Emulator 是一个能在你电脑上本地运行、模拟 AWS 云服务的开源工具，让你不用连真云就能开发和测试。",
+      "ai_role": "AWS 称该模拟器主要由自主 AI Agent（自主 AI 智能体，指能自己规划步骤、调用工具、完成多轮任务的大模型程序）自动编写代码完成，人类工程师负责审查和把关",
+      "implementation_idea": "在本地跑一个假扮成 AWS 的 API 服务器，拦截你对 S3、DynamoDB 等服务的调用，在本地模拟响应和存储状态，而不是真的去 AWS 数据中心操作",
+      "hands_on_exercise": "30 分钟动手：从 https://github.com/aws/aws-emulator 克隆项目，按 README 启动 Emulator，用 AWS CLI 执行 `aws s3 mb s3://test-bucket --endpoint-url http://localhost:8080` 创建一个本地模拟的 S3 存储桶，再用 `aws s3 ls --endpoint-url http://localhost:8080` 验证是否能列出，对比与真实 AWS 的行为差异",
+      "limitations_or_uncertainties": "AWS 官方安全文档明确标注：不支持测试 IAM 策略、权限边界、KMS 密钥策略、跨账户/跨区域访问等安全控制；模拟器对 IAM 的评估方式与真实 AWS 不同，且不会拒绝用它自己签名的请求。社区质疑这是否仅为实验项目，还是会长期维护的产品。代码风格和质量存在争议。",
+      "region": "global",
+      "score": 7.6,
+      "summary": "AWS 公开一个由自主 AI Agent 写出的 AWS 模拟器并开源到 GitHub，用来在本地模拟云服务；值得看因为它是“Agent 参与真实工程交付”的可验证案例，评论区也指出其安全测试边界有限。",
+      "title": "AWS 开源本地云模拟器：由 AI Agent 自动编写的工程案例",
+      "url": "https://github.com/aws/aws-emulator",
+      "sources": [
+        {
+          "url": "https://github.com/aws/aws-emulator",
+          "title": "AWS emulator",
+          "source_type": "hackernews",
+          "published_at": "2026-11-11T18:21:38+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "aws-emulator-agent-built",
+          "date": "2026-11-12",
+          "title": "AWS 开源本地云模拟器：由 AI Agent 自动编写的工程案例",
+          "summary": "AWS 公开一个由自主 AI Agent 写出的 AWS 模拟器并开源到 GitHub，用来在本地模拟云服务；值得看因为它是“Agent 参与真实工程交付”的可验证案例，评论区也指出其安全测试边界有限。",
+          "score": 7.6,
+          "url": "https://github.com/aws/aws-emulator"
+        }
+      ],
+      "usage_flow": [
+        "本地安装启动 Emulator（命令行运行，无图形界面）",
+        "设置环境变量，把 AWS CLI 或 SDK 指向本地模拟地址",
+        "用熟悉的 AWS CLI、SDK 或 Terraform 像操作真云一样开发测试",
+        "查看持久化状态，确认资源创建和配置效果"
+      ],
+      "learning_points": [
+        "Agent（智能体）：不只是回答问题，而是能自己分解任务、写代码、调试、提交的大模型自动化程序",
+        "云模拟器/本地仿真：在本地伪造云服务的 API 行为，用于快速开发和节省成本",
+        "Function Calling（函数调用）：大模型通过调用外部工具（如写文件、运行测试）来完成复杂工程任务，是 Agent 能写代码的关键机制"
+      ],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "AWS",
+        "开源",
+        "工程实践"
+      ]
+    },
+    {
+      "product_id": "product-e9a9b95611d3cbd0",
+      "product_name": "Gemini Decisions API",
+      "builder_name": "iamdelirium",
+      "first_seen": "2026-11-12",
+      "last_seen": "2026-11-12",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Google 发布 Gemini Decisions API，让模型直接给出带概率的决策结果，解决 LLM 置信度不可靠的问题，值得看它能否催生需要概率输出的新 AI 产品。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.6,
+      "summary": "Google 发布 Gemini Decisions API，让模型直接给出带概率的决策结果，解决 LLM 置信度不可靠的问题，值得看它能否催生需要概率输出的新 AI 产品。",
+      "title": "Gemini Decisions API",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/",
+      "sources": [
+        {
+          "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/",
+          "title": "Gemini Decisions API",
+          "source_type": "hackernews",
+          "published_at": "2026-11-11T18:32:42+00:00"
+        },
+        {
+          "url": "https://simonwillison.net/2026/Nov/11/gemini-decisions-api/",
+          "title": "Gemini Decisions API",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "gemini-decisions-api-launch",
+          "date": "2026-11-12",
+          "title": "Gemini Decisions API",
+          "summary": "Google 发布 Gemini Decisions API，让模型直接给出带概率的决策结果，解决 LLM 置信度不可靠的问题，值得看它能否催生需要概率输出的新 AI 产品。",
+          "score": 7.6,
+          "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Gemini",
+        "API",
+        "决策模型",
+        "概率输出"
+      ]
+    },
+    {
+      "product_id": "product-72fc4c89c87555c5",
+      "product_name": "tools.simonwillison.net",
+      "builder_name": "Simon Willison",
+      "first_seen": "2026-11-12",
+      "last_seen": "2026-11-12",
+      "occurrence_count": 1,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Simon Willison 用 AI 加 tree-sitter 分析自己 244 个随手做的小工具，按 JavaScript 库和浏览器 API 生成标签云方便浏览；值得看因为它示范了个人开发者如何用 AI 快速给自己的产品加可用功能。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.4,
+      "summary": "Simon Willison 用 AI 加 tree-sitter 分析自己 244 个随手做的小工具，按 JavaScript 库和浏览器 API 生成标签云方便浏览；值得看因为它示范了个人开发者如何用 AI 快速给自己的产品加可用功能。",
+      "title": "Browse tools.simonwillison.net by tag",
+      "url": "https://simonwillison.net/2026/Nov/11/tools-tags/",
+      "sources": [
+        {
+          "url": "https://simonwillison.net/2026/Nov/11/tools-tags/",
+          "title": "Browse tools.simonwillison.net by tag",
+          "source_type": "rss",
+          "published_at": "2026-11-11T18:42:50+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "simonwillison-tools-tag-browse",
+          "date": "2026-11-12",
+          "title": "Browse tools.simonwillison.net by tag",
+          "summary": "Simon Willison 用 AI 加 tree-sitter 分析自己 244 个随手做的小工具，按 JavaScript 库和浏览器 API 生成标签云方便浏览；值得看因为它示范了个人开发者如何用 AI 快速给自己的产品加可用功能。",
+          "score": 7.4,
+          "url": "https://simonwillison.net/2026/Nov/11/tools-tags/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "个人产品",
+        "vibe coding",
+        "工具集"
+      ]
+    },
+    {
+      "product_id": "product-e1421f7c5eb2e08f",
+      "product_name": "Adobe Max 2026 Sneaks",
+      "builder_name": "Jess Weatherbed",
+      "first_seen": "2026-11-12",
+      "last_seen": "2026-11-12",
+      "occurrence_count": 1,
+      "intelligence_type": "early_signal",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Adobe 在 Max 大会公布实验性 AI 功能，能把照片变成可走动的 3D 场景、通过对话设计角色、把修图变成复制粘贴，值得看 AI 如何改变创作工具。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.3,
+      "summary": "Adobe 在 Max 大会公布实验性 AI 功能，能把照片变成可走动的 3D 场景、通过对话设计角色、把修图变成复制粘贴，值得看 AI 如何改变创作工具。",
+      "title": "Adobe’s AI experiments let you walk around in photos and interview your characters",
+      "url": "https://www.theverge.com/tech/1031505/adobe-max-2026-sneaks-experiments-ai",
+      "sources": [
+        {
+          "url": "https://www.theverge.com/tech/1031505/adobe-max-2026-sneaks-experiments-ai",
+          "title": "Adobe’s AI experiments let you walk around in photos and interview your characters",
+          "source_type": "rss",
+          "published_at": "2026-11-11T14:00:00+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "adobe-max-2026-sneaks-experiments",
+          "date": "2026-11-12",
+          "title": "Adobe’s AI experiments let you walk around in photos and interview your characters",
+          "summary": "Adobe 在 Max 大会公布实验性 AI 功能，能把照片变成可走动的 3D 场景、通过对话设计角色、把修图变成复制粘贴，值得看 AI 如何改变创作工具。",
+          "score": 7.3,
+          "url": "https://www.theverge.com/tech/1031505/adobe-max-2026-sneaks-experiments-ai"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Adobe",
+        "图像编辑",
+        "3D",
+        "AI 角色"
+      ]
+    },
+    {
+      "product_id": "product-74fa894c1b640ab0",
+      "product_name": "Browser-use",
+      "builder_name": "gregpr07",
+      "first_seen": "2026-08-17",
+      "last_seen": "2026-11-12",
+      "occurrence_count": 3,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "需要让 AI 自动操作网页的开发者，比如做自动化测试、数据抓取、网页任务代理的人",
+      "user_problem": "以前让 AI 控制浏览器需要复杂的 DOM 序列化、动作 schema 转换，代码臃肿、慢、贵；开发者想要更简单、更快、更便宜的方案",
+      "what_it_is": "Browser-use 发布了 1.0.3 候选版，修复了 CLI 和容器中浏览器连接等问题，让开发者更容易构建浏览器自动化 Agent。",
+      "ai_role": "AI 负责根据任务描述，在 REPL 里逐行写出 Python 代码（如 `new_tab(url)`、`bu.click(41)`、`js(...)`），并读取执行结果决定下一步",
+      "implementation_idea": "以前的做法是先把网页 DOM 转成文本给 AI 看，AI 再输出固定格式的动作指令，中间有很多转换层。现在直接让 AI 写 Python 代码，代码通过 Chrome DevTools Protocol（浏览器自带的远程控制协议）直接在浏览器里执行，省掉了中间所有转换环节。就像以前是通过翻译官传话，现在是直接让 AI 用浏览器的'母语'下命令。",
+      "hands_on_exercise": "30 分钟：本地安装 browser-use 1.0.0，用免费 tier 的 API key，让 Agent 自动打开 GitHub 某个仓库页面，读取 star 数并打印。对比 0.x 版本（`pip install 'browser-use<1'`）的同样任务，感受配置差异和速度变化。",
+      "limitations_or_uncertainties": "官方声称的性能提升数字（33 分、2.7-5.2x 成本降低）来自自有基准测试，未公开第三方独立验证；cloud 浏览器需要 Browser Use 的 API key，本地模式需显式指定 `Browser('chromium')`；LangChain 模型直接报错不兼容；成本计算不包含 cloud 浏览器和代理费用",
+      "region": "global",
+      "score": 7.2,
+      "summary": "Browser-use 发布了 1.0.3 候选版，修复了 CLI 和容器中浏览器连接等问题，让开发者更容易构建浏览器自动化 Agent。",
+      "title": "browser-use/browser-use released 1.0.3rc1",
+      "url": "https://github.com/browser-use/browser-use/releases/tag/1.0.3rc1",
+      "sources": [
+        {
+          "url": "https://github.com/browser-use/browser-use/releases/tag/0.13.8",
+          "title": "browser-use/browser-use released 0.13.8",
+          "source_type": "github",
+          "published_at": "2026-08-16T18:48:54+00:00"
+        },
+        {
+          "url": "https://github.com/browser-use/browser-use/releases/tag/1.0.0",
+          "title": "browser-use/browser-use released 1.0.0",
+          "source_type": "github",
+          "published_at": "2026-11-10T02:04:48+00:00"
+        },
+        {
+          "url": "https://browser-use.com/",
+          "title": "Browser Use : Browser Agents and Cloud Browsers",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://github.com/browser-use/browser-use/releases/tag/1.0.3rc1",
+          "title": "browser-use/browser-use released 1.0.3rc1",
+          "source_type": "github",
+          "published_at": "2026-11-12T02:11:28+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "browser-use-release-0.13.8",
+          "date": "2026-08-17",
+          "title": "browser-use/browser-use released 0.13.8",
+          "summary": "browser-use 发布 0.13.8，修复了多个 Agent 和 DOM 处理问题，并更新了 Cerebras 模型支持。",
+          "score": 7.5,
+          "url": "https://github.com/browser-use/browser-use/releases/tag/0.13.8"
+        },
+        {
+          "update_id": "browser-use-1.0.0",
+          "date": "2026-11-10",
+          "title": "browser-use 1.0.0 发布：AI 浏览器代理重写引擎，代码砍掉 80%",
+          "summary": "browser-use 发布 1.0.0 正式版，重写引擎让 AI 代理在持久 REPL 中直接写 Python 控制 Chrome，代码减少 80%，性能提升最高 33 分，成本降低 2.7-5.2 倍。",
+          "score": 8.5,
+          "url": "https://github.com/browser-use/browser-use/releases/tag/1.0.0"
+        },
+        {
+          "update_id": "browser-use-1.0.3rc1",
+          "date": "2026-11-12",
+          "title": "browser-use/browser-use released 1.0.3rc1",
+          "summary": "Browser-use 发布了 1.0.3 候选版，修复了 CLI 和容器中浏览器连接等问题，让开发者更容易构建浏览器自动化 Agent。",
+          "score": 7.2,
+          "url": "https://github.com/browser-use/browser-use/releases/tag/1.0.3rc1"
+        }
+      ],
+      "usage_flow": [
+        "安装：`uv add 'browser-use==1.0.0'` 并设置 API key",
+        "写 Python 脚本创建 Agent 并描述任务，如 `'Find the number of stars of the browser-use repo'`",
+        "Agent 在持久 REPL（交互式执行环境：可以一行行运行代码并保留状态的地方）里写 Python 代码，通过 Chrome DevTools Protocol 直接控制浏览器",
+        "获取最终结果：`agent.run_sync().final_result()`"
+      ],
+      "learning_points": [
+        "Agent：不只是问答，而是能循环执行'思考-行动-观察'多轮直到任务完成的程序",
+        "REPL：交互式执行环境，代码一行行跑、变量状态保留，适合 AI 边写边试边改",
+        "Function Calling：让 AI 输出结构化指令去调用工具，这里扩展成让 AI 直接写完整代码来'调用'浏览器"
+      ],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "开源",
+        "浏览器自动化",
+        "AI Agent",
+        "Browser-use"
+      ]
+    },
+    {
+      "product_id": "product-fecc04d3ba25527d",
+      "product_name": "Tabletop",
+      "builder_name": "Roman Nurik",
+      "first_seen": "2026-11-12",
+      "last_seen": "2026-11-12",
+      "occurrence_count": 1,
+      "intelligence_type": "early_signal",
+      "evidence_status": "early_signal",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Google Labs 推出 Tabletop 实验，用户描述需求就能生成行程、投票等小组协作工具，解决家庭和朋友一起规划的问题，值得看 AI 生成协作应用的产品形态。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.2,
+      "summary": "Google Labs 推出 Tabletop 实验，用户描述需求就能生成行程、投票等小组协作工具，解决家庭和朋友一起规划的问题，值得看 AI 生成协作应用的产品形态。",
+      "title": "Try Tabletop: Customizable, collaborative spaces for groups to plan, play and do more together.",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/google-labs/tabletop/",
+      "sources": [
+        {
+          "url": "https://blog.google/innovation-and-ai/models-and-research/google-labs/tabletop/",
+          "title": "Try Tabletop: Customizable, collaborative spaces for groups to plan, play and do more together.",
+          "source_type": "rss",
+          "published_at": "2026-11-11T16:00:00+00:00"
+        },
+        {
+          "url": "https://www.theverge.com/tech/1031526/google-tabletop-ai-experiment-waitlist-availability",
+          "title": "Google’s Tabletop AI experiment lets you build custom collaboration apps",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "google-labs-tabletop-waitlist",
+          "date": "2026-11-12",
+          "title": "Try Tabletop: Customizable, collaborative spaces for groups to plan, play and do more together.",
+          "summary": "Google Labs 推出 Tabletop 实验，用户描述需求就能生成行程、投票等小组协作工具，解决家庭和朋友一起规划的问题，值得看 AI 生成协作应用的产品形态。",
+          "score": 7.2,
+          "url": "https://blog.google/innovation-and-ai/models-and-research/google-labs/tabletop/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Google Labs",
+        "协作工具",
+        "AI 生成应用",
+        "vibecode"
+      ]
+    },
     {
       "product_id": "product-bf49e75d5eeabad6",
       "product_name": "Gemini for Healthcare",
@@ -530,84 +1007,6 @@
         "Claude Code",
         "生活工具",
         "多设备"
-      ]
-    },
-    {
-      "product_id": "product-74fa894c1b640ab0",
-      "product_name": "browser-use",
-      "builder_name": "gregpr07",
-      "first_seen": "2026-08-17",
-      "last_seen": "2026-11-10",
-      "occurrence_count": 2,
-      "intelligence_type": "product_case",
-      "evidence_status": "first_party",
-      "target_user": "需要让 AI 自动操作网页的开发者，比如做自动化测试、数据抓取、网页任务代理的人",
-      "user_problem": "以前让 AI 控制浏览器需要复杂的 DOM 序列化、动作 schema 转换，代码臃肿、慢、贵；开发者想要更简单、更快、更便宜的方案",
-      "what_it_is": "一个开源框架，让 AI Agent（AI 代理：能自主完成多步骤任务的程序）直接写 Python 代码来控制浏览器，自动完成网页操作任务。",
-      "ai_role": "AI 负责根据任务描述，在 REPL 里逐行写出 Python 代码（如 `new_tab(url)`、`bu.click(41)`、`js(...)`），并读取执行结果决定下一步",
-      "implementation_idea": "以前的做法是先把网页 DOM 转成文本给 AI 看，AI 再输出固定格式的动作指令，中间有很多转换层。现在直接让 AI 写 Python 代码，代码通过 Chrome DevTools Protocol（浏览器自带的远程控制协议）直接在浏览器里执行，省掉了中间所有转换环节。就像以前是通过翻译官传话，现在是直接让 AI 用浏览器的'母语'下命令。",
-      "hands_on_exercise": "30 分钟：本地安装 browser-use 1.0.0，用免费 tier 的 API key，让 Agent 自动打开 GitHub 某个仓库页面，读取 star 数并打印。对比 0.x 版本（`pip install 'browser-use<1'`）的同样任务，感受配置差异和速度变化。",
-      "limitations_or_uncertainties": "官方声称的性能提升数字（33 分、2.7-5.2x 成本降低）来自自有基准测试，未公开第三方独立验证；cloud 浏览器需要 Browser Use 的 API key，本地模式需显式指定 `Browser('chromium')`；LangChain 模型直接报错不兼容；成本计算不包含 cloud 浏览器和代理费用",
-      "region": "global",
-      "score": 8.5,
-      "summary": "browser-use 发布 1.0.0 正式版，重写引擎让 AI 代理在持久 REPL 中直接写 Python 控制 Chrome，代码减少 80%，性能提升最高 33 分，成本降低 2.7-5.2 倍。",
-      "title": "browser-use 1.0.0 发布：AI 浏览器代理重写引擎，代码砍掉 80%",
-      "url": "https://github.com/browser-use/browser-use/releases/tag/1.0.0",
-      "sources": [
-        {
-          "url": "https://github.com/browser-use/browser-use/releases/tag/0.13.8",
-          "title": "browser-use/browser-use released 0.13.8",
-          "source_type": "github",
-          "published_at": "2026-08-16T18:48:54+00:00"
-        },
-        {
-          "url": "https://github.com/browser-use/browser-use/releases/tag/1.0.0",
-          "title": "browser-use/browser-use released 1.0.0",
-          "source_type": "github",
-          "published_at": "2026-11-10T02:04:48+00:00"
-        },
-        {
-          "url": "https://browser-use.com/",
-          "title": "Browser Use : Browser Agents and Cloud Browsers",
-          "source_type": "supplemental",
-          "published_at": ""
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "browser-use-release-0.13.8",
-          "date": "2026-08-17",
-          "title": "browser-use/browser-use released 0.13.8",
-          "summary": "browser-use 发布 0.13.8，修复了多个 Agent 和 DOM 处理问题，并更新了 Cerebras 模型支持。",
-          "score": 7.5,
-          "url": "https://github.com/browser-use/browser-use/releases/tag/0.13.8"
-        },
-        {
-          "update_id": "browser-use-1.0.0",
-          "date": "2026-11-10",
-          "title": "browser-use 1.0.0 发布：AI 浏览器代理重写引擎，代码砍掉 80%",
-          "summary": "browser-use 发布 1.0.0 正式版，重写引擎让 AI 代理在持久 REPL 中直接写 Python 控制 Chrome，代码减少 80%，性能提升最高 33 分，成本降低 2.7-5.2 倍。",
-          "score": 8.5,
-          "url": "https://github.com/browser-use/browser-use/releases/tag/1.0.0"
-        }
-      ],
-      "usage_flow": [
-        "安装：`uv add 'browser-use==1.0.0'` 并设置 API key",
-        "写 Python 脚本创建 Agent 并描述任务，如 `'Find the number of stars of the browser-use repo'`",
-        "Agent 在持久 REPL（交互式执行环境：可以一行行运行代码并保留状态的地方）里写 Python 代码，通过 Chrome DevTools Protocol 直接控制浏览器",
-        "获取最终结果：`agent.run_sync().final_result()`"
-      ],
-      "learning_points": [
-        "Agent：不只是问答，而是能循环执行'思考-行动-观察'多轮直到任务完成的程序",
-        "REPL：交互式执行环境，代码一行行跑、变量状态保留，适合 AI 边写边试边改",
-        "Function Calling：让 AI 输出结构化指令去调用工具，这里扩展成让 AI 直接写完整代码来'调用'浏览器"
-      ],
-      "verticals": [],
-      "tags": [
-        "Agent",
-        "开源",
-        "浏览器自动化",
-        "AI Agent"
       ]
     },
     {
