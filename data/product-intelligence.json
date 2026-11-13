@@ -1,7 +1,760 @@
 {
   "version": 1,
-  "updated_at": "2026-11-12T07:09:03.397787+00:00",
+  "updated_at": "2026-11-13T06:43:34.477758+00:00",
   "products": [
+    {
+      "product_id": "product-7dba368c4dbe037e",
+      "product_name": "Replit Agent",
+      "builder_name": "Replit Blog",
+      "first_seen": "2026-09-30",
+      "last_seen": "2026-11-13",
+      "occurrence_count": 2,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "不会写代码但想创业的人，以及会写代码但不擅长运营、采购、推广的创始人",
+      "user_problem": "很多人能用 AI 做出产品，但后续还要面对公司注册、服务器维护、找客户、买物资、打广告等一系列杂事，每件事都是新门槛，拖慢业务增长",
+      "what_it_is": "Replit Agent 是一个能用自然语言帮你写代码、建网站的 AI 助手，现在还能帮你采购办公物资和投放 Google 广告。",
+      "ai_role": "AI 扮演'全能队友'：写代码、接支付、采购、投广告，但每笔花钱操作都要经过你确认",
+      "implementation_idea": "核心思路是'Agent 即服务'——一个主智能体（Agent，能自主规划和执行任务的 AI 程序）拆解你的大白话需求，再调用不同子系统：写代码用 Replit 自己的开发环境，付钱走 Stripe Link + Visa 的支付接口，广告投放走 Google Ads API。关键是'人在回路'，花钱前必须你点确认。",
+      "hands_on_exercise": "去 replit.com 免费注册，用一句话让 Replit Agent 做一个'收集用户邮箱的落地页'，部署上线后，尝试在设置里找到 Stripe 连接入口（无需真绑定），体验'从想法到可收钱的产品'全流程，记录 Agent 每一步问了什么问题、做了什么决定。",
+      "limitations_or_uncertainties": "未公开具体支持哪些国家/地区的 Visa 支付；未公开 Google Ads 投放是否需要用户自己先有广告账户；未公开'九倍增长'的具体基数和统计口径；未说明采购功能是否覆盖非美国供应商",
+      "region": "global",
+      "score": 8.5,
+      "summary": "Replit Agent新增用Link和Visa采购物资、用Google Ads触达客户的功能，帮助创业者扩展业务。",
+      "title": "Replit Agent 新增采购和广告投放功能，帮创业者搞定生意琐事",
+      "url": "https://replit.com/blog/replit-agent-ads-commerce",
+      "sources": [
+        {
+          "url": "https://replit.com/blog/free-the-models",
+          "title": "Free the models: Harness design at the frontier",
+          "source_type": "rss",
+          "published_at": "2026-09-29T16:00:00+00:00"
+        },
+        {
+          "url": "https://replit.com/products/agent",
+          "title": "AI Coding Agent: Build Apps Through Chat | Replit",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://docs.replit.com/features/agent/overview",
+          "title": "Replit Agent",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://replit.com/blog/replit-agent-ads-commerce",
+          "title": "Replit Agent can now buy for your business and help you reach customers",
+          "source_type": "rss",
+          "published_at": "2026-11-12T16:45:00+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "replit-agent-harness-design",
+          "date": "2026-09-30",
+          "title": "Replit 官方揭秘：为什么 Agent 不该让「路由器」选模型，而该让主 Agent 自己决定",
+          "summary": "Replit 官方讲他们怎么设计 Agent：不让路由器选模型，而是让主 Agent 自己决定用哪个子 Agent、花多少算力，并给出跑分对比说明这样更省更准。",
+          "score": 8.6,
+          "url": "https://replit.com/blog/free-the-models"
+        },
+        {
+          "update_id": "replit-agent-ads-commerce",
+          "date": "2026-11-13",
+          "title": "Replit Agent 新增采购和广告投放功能，帮创业者搞定生意琐事",
+          "summary": "Replit Agent新增用Link和Visa采购物资、用Google Ads触达客户的功能，帮助创业者扩展业务。",
+          "score": 8.5,
+          "url": "https://replit.com/blog/replit-agent-ads-commerce"
+        }
+      ],
+      "usage_flow": [
+        "用户用自然语言描述想做的应用/任务",
+        "主 Agent（core loop）分析任务难度，自主决定是自己处理还是派给子 Agent",
+        "主 Agent 动态调整子 Agent 的「等级」和「投入程度」（tier and effort），比如简单代码交给便宜模型，复杂架构设计交给最强模型",
+        "多个子 Agent 并行或协作完成，最终输出可运行的应用或结果",
+        "用自然语言描述你想做的产品，Replit Agent 帮你写出代码并上线",
+        "把 Stripe 接入你的应用，开始收钱",
+        "告诉 Agent 需要买什么物资，它通过 Link/Visa 完成采购",
+        "告诉 Agent 你的目标客户，它在 Google Ads 上帮你投广告"
+      ],
+      "learning_points": [
+        "Agent：能自主规划步骤、调用工具、完成多轮任务的 AI 系统，不只是单次问答",
+        "模型路由（Model Router）：一种常见设计，用规则或小模型来决定「这次请求发给 GPT-4 还是 Claude 还是本地小模型」，但 Replit 认为这种设计有根本瓶颈",
+        "Pareto 效率：在成本和效果两个维度上都更优的状态——Replit 用这个词说明他们的方案比直接用最强模型或传统路由都更省钱且分更高",
+        "Agent（智能体）：不只是聊天回答，而是能自己规划步骤、调用工具、完成多环节任务的 AI 程序",
+        "Function Calling（函数调用）：AI 判断'现在该调用哪个外部 API'的能力，比如识别'我要买服务器'→调用 Stripe 支付接口",
+        "RAG（检索增强生成）：虽然本文未直接提及，但这类商业 Agent 通常需要实时查库存、查广告政策，把外部信息'喂'给 AI 再生成决策，避免胡说"
+      ],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "Harness",
+        "模型路由",
+        "Replit",
+        "AI Agent",
+        "创业工具",
+        "电商"
+      ]
+    },
+    {
+      "product_id": "product-7ff3235a272cf4b7",
+      "product_name": "Claude 4",
+      "builder_name": "Anthropic News",
+      "first_seen": "2026-11-13",
+      "last_seen": "2026-11-13",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Anthropic 官方发布 Claude 4 模型；为开发者提供新一代基础模型能力；值得关注其可能解锁的新产品体验。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.5,
+      "summary": "Anthropic 官方发布 Claude 4 模型；为开发者提供新一代基础模型能力；值得关注其可能解锁的新产品体验。",
+      "title": "Claude 4",
+      "url": "https://www.anthropic.com/news/claude-4",
+      "sources": [
+        {
+          "url": "https://www.anthropic.com/news/claude-4",
+          "title": "Claude 4",
+          "source_type": "public_web",
+          "published_at": "2026-11-12T21:02:17.838000+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "anthropic-claude-4-release",
+          "date": "2026-11-13",
+          "title": "Claude 4",
+          "summary": "Anthropic 官方发布 Claude 4 模型；为开发者提供新一代基础模型能力；值得关注其可能解锁的新产品体验。",
+          "score": 8.5,
+          "url": "https://www.anthropic.com/news/claude-4"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Claude",
+        "基础模型",
+        "Anthropic"
+      ]
+    },
+    {
+      "product_id": "product-5f7845615a5a7844",
+      "product_name": "Wave",
+      "builder_name": "OpenAI News",
+      "first_seen": "2026-11-13",
+      "last_seen": "2026-11-13",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "Amplitude 内部产品团队（产品经理、工程师）",
+      "user_problem": "传统产品迭代周期长，从发现需求到上线往往需要数周；团队难以快速判断该优先做什么、快速编码验证、并及时衡量上线效果",
+      "what_it_is": "Amplitude 基于 OpenAI 模型构建的主动式产品 Agent（代理）Wave，能自动发现该做什么功能、辅助编码上线、并衡量效果。Agent 指让 AI 自主完成多步骤任务的系统，不只是单次问答。",
+      "ai_role": "全程参与：需求识别（分析数据→建议）、编码执行（生成/辅助代码）、效果衡量（追踪指标变化）",
+      "implementation_idea": "把 LLM 包装成一个'能干活'的代理：先让它读产品数据做判断，再让它调用工具写代码，最后让它追踪结果——本质是'观察→行动→验证'的闭环，不是一次性聊天。",
+      "hands_on_exercise": "用任意 LLM（如 GPT-4）尝试：① 给它一段模拟的产品数据，让它分析并提出一个功能建议；② 要求它输出一段可运行的 Python 代码来实现该功能；③ 手动运行代码，把结果再丢给 LLM 让它评估效果是否达标。全程用自然语言对话完成，体会'观察→行动→验证'的 Agent 思路。",
+      "limitations_or_uncertainties": "未公开 Wave 具体使用哪个 OpenAI 模型、编码 Agent 的实现细节（是否完全自主或人机协作）、实际 1-2 天的成功率/覆盖场景比例、以及是否有外部用户验证过这些数字；原文为 OpenAI 官方客户故事，属于营销内容，无独立第三方验证",
+      "region": "global",
+      "score": 8.2,
+      "summary": "Amplitude 用 OpenAI 模型构建产品代理 Wave，帮团队判断该做什么、用编码代理快速上线并衡量效果；对想理解 AI 如何嵌入产品工作流的初学者有参考价值。",
+      "title": "Amplitude 如何用 OpenAI 在 1-2 天内交付产品改进",
+      "url": "https://openai.com/business/customer-stories/amplitude",
+      "sources": [
+        {
+          "url": "https://openai.com/business/customer-stories/amplitude",
+          "title": "How Amplitude ships product improvements in 1–2 days with OpenAI",
+          "source_type": "rss",
+          "published_at": "2026-11-12T20:00:00+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "amplitude-wave-openai-case-study",
+          "date": "2026-11-13",
+          "title": "Amplitude 如何用 OpenAI 在 1-2 天内交付产品改进",
+          "summary": "Amplitude 用 OpenAI 模型构建产品代理 Wave，帮团队判断该做什么、用编码代理快速上线并衡量效果；对想理解 AI 如何嵌入产品工作流的初学者有参考价值。",
+          "score": 8.2,
+          "url": "https://openai.com/business/customer-stories/amplitude"
+        }
+      ],
+      "usage_flow": [
+        "Wave 分析数据，主动识别该构建什么功能",
+        "团队确认方向后，Wave 调用编码 Agent 辅助写代码、快速上线",
+        "上线后 Wave 自动衡量该改动对产品指标的实际影响"
+      ],
+      "learning_points": [
+        "Agent：不只是问 AI 问题，而是让 AI 能自主调用工具、做多步决策的系统",
+        "Function Calling：让 LLM 决定调用哪个外部工具（如查数据、写代码）的机制，是 Agent 的'手脚'",
+        "RAG（检索增强生成）：Agent 可能需要先查内部数据再做判断，把相关数据'喂'给模型再生成答案"
+      ],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "产品工作流",
+        "OpenAI",
+        "Amplitude"
+      ]
+    },
+    {
+      "product_id": "product-cd389ef33a33b1dd",
+      "product_name": "ArtCraft",
+      "builder_name": "Richard MacManus",
+      "first_seen": "2026-11-13",
+      "last_seen": "2026-11-13",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "ArtCraft用AI将Photoshop重写为开源软件，CEO Brandon Thomas有更大愿景，访谈披露产品思路。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.2,
+      "summary": "ArtCraft用AI将Photoshop重写为开源软件，CEO Brandon Thomas有更大愿景，访谈披露产品思路。",
+      "title": "AI Ambition: ArtCraft Cloned Photoshop and Now Wants to \"Rebuild Everything\"",
+      "url": "https://latent.space/p/artcraft/",
+      "sources": [
+        {
+          "url": "https://latent.space/p/artcraft/",
+          "title": "AI Ambition: ArtCraft Cloned Photoshop and Now Wants to \"Rebuild Everything\"",
+          "source_type": "rss",
+          "published_at": "2026-11-13T04:17:25+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "artcraft-photoshop-clone",
+          "date": "2026-11-13",
+          "title": "AI Ambition: ArtCraft Cloned Photoshop and Now Wants to \"Rebuild Everything\"",
+          "summary": "ArtCraft用AI将Photoshop重写为开源软件，CEO Brandon Thomas有更大愿景，访谈披露产品思路。",
+          "score": 8.2,
+          "url": "https://latent.space/p/artcraft/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "AI设计",
+        "开源",
+        "产品案例"
+      ]
+    },
+    {
+      "product_id": "product-2f7a0ff4b1d6b467",
+      "product_name": "Claude Code",
+      "builder_name": "claude-code-publisher[bot]",
+      "first_seen": "2026-11-07",
+      "last_seen": "2026-11-13",
+      "occurrence_count": 3,
+      "intelligence_type": "model_capability",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Anthropic 给 Claude Code 加了实验性 Code Mode，让模型写 JavaScript 来调用工具，解决工具编排方式单一的问题，值得看它如何改变 Agent 的开发体验。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.6,
+      "summary": "Anthropic 给 Claude Code 加了实验性 Code Mode，让模型写 JavaScript 来调用工具，解决工具编排方式单一的问题，值得看它如何改变 Agent 的开发体验。",
+      "title": "anthropics/claude-code released v2.1.323",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.323",
+      "sources": [
+        {
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.319",
+          "title": "anthropics/claude-code released v2.1.319",
+          "source_type": "github",
+          "published_at": "2026-11-06T17:04:01+00:00"
+        },
+        {
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.321",
+          "title": "anthropics/claude-code released v2.1.321",
+          "source_type": "github",
+          "published_at": "2026-11-09T19:22:30+00:00"
+        },
+        {
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.323",
+          "title": "anthropics/claude-code released v2.1.323",
+          "source_type": "github",
+          "published_at": "2026-11-12T22:12:13+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "claude-code-v2.1.319",
+          "date": "2026-11-07",
+          "title": "anthropics/claude-code released v2.1.319",
+          "summary": "Anthropic 发布 Claude Code v2.1.319，让 MCP 工具调用可后台运行并新增权限拒绝设置，帮助开发者更顺畅地构建终端 Agent 工作流。",
+          "score": 7.2,
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.319"
+        },
+        {
+          "update_id": "claude-code-v2.1.321",
+          "date": "2026-11-10",
+          "title": "anthropics/claude-code released v2.1.321",
+          "summary": "Claude Code 发布 v2.1.321，新增 Claude Fable 5.2 作为默认模型，支持 1M 上下文，定价 $8/$40 每百万 token，并修复多个安全与功能问题。",
+          "score": 7.8,
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.321"
+        },
+        {
+          "update_id": "claude-code-v2.1.323-code-mode",
+          "date": "2026-11-13",
+          "title": "anthropics/claude-code released v2.1.323",
+          "summary": "Anthropic 给 Claude Code 加了实验性 Code Mode，让模型写 JavaScript 来调用工具，解决工具编排方式单一的问题，值得看它如何改变 Agent 的开发体验。",
+          "score": 7.6,
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.323"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "MCP",
+        "开发者工具",
+        "AI 编程",
+        "模型更新",
+        "安全修复",
+        "Coding Agent",
+        "Claude Code",
+        "工具调用"
+      ]
+    },
+    {
+      "product_id": "product-8b77e109cc463b7a",
+      "product_name": "GitHub Copilot",
+      "builder_name": "Andrea Griffiths",
+      "first_seen": "2026-11-13",
+      "last_seen": "2026-11-13",
+      "occurrence_count": 1,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "GitHub 发布 agent skills 实践指南，教团队把重复工程工作写成可审查复用的文件；帮助初学者理解如何让 AI 代理稳定执行任务。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.6,
+      "summary": "GitHub 发布 agent skills 实践指南，教团队把重复工程工作写成可审查复用的文件；帮助初学者理解如何让 AI 代理稳定执行任务。",
+      "title": "Build once, run on any agent: A practical guide to agent skills",
+      "url": "https://github.blog/ai-and-ml/github-copilot/build-once-run-on-any-agent-a-practical-guide-to-agent-skills/",
+      "sources": [
+        {
+          "url": "https://github.blog/ai-and-ml/github-copilot/build-once-run-on-any-agent-a-practical-guide-to-agent-skills/",
+          "title": "Build once, run on any agent: A practical guide to agent skills",
+          "source_type": "rss",
+          "published_at": "2026-11-12T22:54:52+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "github-agent-skills-guide",
+          "date": "2026-11-13",
+          "title": "Build once, run on any agent: A practical guide to agent skills",
+          "summary": "GitHub 发布 agent skills 实践指南，教团队把重复工程工作写成可审查复用的文件；帮助初学者理解如何让 AI 代理稳定执行任务。",
+          "score": 7.6,
+          "url": "https://github.blog/ai-and-ml/github-copilot/build-once-run-on-any-agent-a-practical-guide-to-agent-skills/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "Agent Skills",
+        "GitHub",
+        "工程实践"
+      ]
+    },
+    {
+      "product_id": "product-3f6ecadd8fb654ff",
+      "product_name": "Google Search",
+      "builder_name": "Robby Stein",
+      "first_seen": "2026-11-13",
+      "last_seen": "2026-11-13",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Google 搜索接入 Gemini 4 Hydrogen 进行重大升级；让搜索体验用上新模型能力；对观察模型能力如何直接改变产品交互有参考价值。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.5,
+      "summary": "Google 搜索接入 Gemini 4 Hydrogen 进行重大升级；让搜索体验用上新模型能力；对观察模型能力如何直接改变产品交互有参考价值。",
+      "title": "Google Search gets a major upgrade with Gemini 4 Hydrogen",
+      "url": "https://blog.google/products-and-platforms/products/search/gemini-4-hydrogen-search-upgrade/",
+      "sources": [
+        {
+          "url": "https://blog.google/products-and-platforms/products/search/gemini-4-hydrogen-search-upgrade/",
+          "title": "Google Search gets a major upgrade with Gemini 4 Hydrogen",
+          "source_type": "rss",
+          "published_at": "2026-11-12T18:00:00+00:00"
+        },
+        {
+          "url": "https://deepmind.google/blog/introducing-gemini-4-hydrogen/",
+          "title": "Introducing Gemini 4 Hydrogen",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1032505/google-search-ai-mode-gemini-4-hydrogen",
+          "title": "Google’s new Gemini model is better at understanding complicated questions",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "google-search-gemini-4-hydrogen-upgrade",
+          "date": "2026-11-13",
+          "title": "Google Search gets a major upgrade with Gemini 4 Hydrogen",
+          "summary": "Google 搜索接入 Gemini 4 Hydrogen 进行重大升级；让搜索体验用上新模型能力；对观察模型能力如何直接改变产品交互有参考价值。",
+          "score": 7.5,
+          "url": "https://blog.google/products-and-platforms/products/search/gemini-4-hydrogen-search-upgrade/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Google Search",
+        "Gemini",
+        "产品集成"
+      ]
+    },
+    {
+      "product_id": "product-dddb7b79c2bc1e7c",
+      "product_name": "llm-gemini",
+      "builder_name": "Simon Willison",
+      "first_seen": "2026-08-14",
+      "last_seen": "2026-11-13",
+      "occurrence_count": 4,
+      "intelligence_type": "model_capability",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Simon Willison发布llm-gemini 0.37，支持Gemini 4 Hydrogen模型，并指出其定价复杂。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.2,
+      "summary": "Simon Willison发布llm-gemini 0.37，支持Gemini 4 Hydrogen模型，并指出其定价复杂。",
+      "title": "llm-gemini 0.37",
+      "url": "https://simonwillison.net/2026/Nov/12/llm-gemini/",
+      "sources": [
+        {
+          "url": "https://simonwillison.net/2026/Aug/13/llm-gemini/",
+          "title": "llm-gemini 0.33",
+          "source_type": "rss",
+          "published_at": "2026-08-13T19:37:34+00:00"
+        },
+        {
+          "url": "https://simonwillison.net/2026/Sep/2/llm-gemini/",
+          "title": "llm-gemini 0.34",
+          "source_type": "rss",
+          "published_at": "2026-09-02T16:39:38+00:00"
+        },
+        {
+          "url": "https://deepmind.google/blog/introducing-gemini-3-8-flash-and-38-flash-cyber/",
+          "title": "Introducing Gemini 3.8 Flash and 3.8 Flash Cyber",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://www.theverge.com/ai-artificial-intelligence/988742/google-gemini-3-8-flash",
+          "title": "Google says its new Gemini 3.8 Flash model ‘works harder’ but might cost more",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://artificialanalysis.ai/articles/gemini-3-8-flash",
+          "title": "Gemini 3 8 Flash",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://simonwillison.net/2026/Oct/13/llm-gemini/",
+          "title": "llm-gemini 0.35",
+          "source_type": "rss",
+          "published_at": "2026-10-13T22:28:54+00:00"
+        },
+        {
+          "url": "https://simonwillison.net/2026/Nov/12/llm-gemini/",
+          "title": "llm-gemini 0.37",
+          "source_type": "rss",
+          "published_at": "2026-11-12T22:55:19+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "llm-gemini-0.33-release-2026",
+          "date": "2026-08-14",
+          "title": "llm-gemini 0.33",
+          "summary": "llm-gemini 0.33发布，新增Gemini 3.7 Flash支持和服务端工具调用，开发者可快速体验新模型能力。",
+          "score": 8.0,
+          "url": "https://simonwillison.net/2026/Aug/13/llm-gemini/"
+        },
+        {
+          "update_id": "llm-gemini-0.34-release",
+          "date": "2026-09-03",
+          "title": "llm-gemini 0.34",
+          "summary": "llm-gemini 0.34发布，新增支持Gemini 3.8 Flash模型及思考级别选项。",
+          "score": 8.5,
+          "url": "https://simonwillison.net/2026/Sep/2/llm-gemini/"
+        },
+        {
+          "update_id": "llm-gemini-0-35-gemini4-argon",
+          "date": "2026-10-14",
+          "title": "llm-gemini 0.35",
+          "summary": "Simon Willison 给自己的 llm-gemini 工具加上 Gemini 4 Argon 支持，并实测了生成效果和单次成本，值得看新模型怎么接进现有工具链。",
+          "score": 7.6,
+          "url": "https://simonwillison.net/2026/Oct/13/llm-gemini/"
+        },
+        {
+          "update_id": "llm-gemini-0.37",
+          "date": "2026-11-13",
+          "title": "llm-gemini 0.37",
+          "summary": "Simon Willison发布llm-gemini 0.37，支持Gemini 4 Hydrogen模型，并指出其定价复杂。",
+          "score": 7.2,
+          "url": "https://simonwillison.net/2026/Nov/12/llm-gemini/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Gemini",
+        "开发者工具",
+        "模型",
+        "LLM工具",
+        "模型接入",
+        "开发者"
+      ]
+    },
+    {
+      "product_id": "product-9f820fe56c9a4e39",
+      "product_name": "Gondola",
+      "builder_name": "OpenAI News",
+      "first_seen": "2026-11-13",
+      "last_seen": "2026-11-13",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Gondola 用 Codex 和 ChatGPT 提升创意人才匹配平台的开发效率，首席工程师产出提高 50%、收入翻倍；可作为小团队用 AI 编码代理的参考案例。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.2,
+      "summary": "Gondola 用 Codex 和 ChatGPT 提升创意人才匹配平台的开发效率，首席工程师产出提高 50%、收入翻倍；可作为小团队用 AI 编码代理的参考案例。",
+      "title": "Gondola doubles revenue as its team builds more with Codex",
+      "url": "https://openai.com/business/customer-stories/gondola",
+      "sources": [
+        {
+          "url": "https://openai.com/business/customer-stories/gondola",
+          "title": "Gondola doubles revenue as its team builds more with Codex",
+          "source_type": "rss",
+          "published_at": "2026-11-12T12:00:00+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "gondola-codex-case-study",
+          "date": "2026-11-13",
+          "title": "Gondola doubles revenue as its team builds more with Codex",
+          "summary": "Gondola 用 Codex 和 ChatGPT 提升创意人才匹配平台的开发效率，首席工程师产出提高 50%、收入翻倍；可作为小团队用 AI 编码代理的参考案例。",
+          "score": 7.2,
+          "url": "https://openai.com/business/customer-stories/gondola"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Codex",
+        "AI 编码",
+        "OpenAI",
+        "小团队"
+      ]
+    },
+    {
+      "product_id": "product-5a8d4a609aeb6733",
+      "product_name": "Brave Search API",
+      "builder_name": "sjdh76",
+      "first_seen": "2026-11-13",
+      "last_seen": "2026-11-13",
+      "occurrence_count": 1,
+      "intelligence_type": "early_signal",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Brave 让搜索 API 接受 Agent 通过 x402 协议按次付费，解决 AI Agent 调用搜索服务时的自动支付问题，值得看它能否成为 Agent 付费的新模式。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.2,
+      "summary": "Brave 让搜索 API 接受 Agent 通过 x402 协议按次付费，解决 AI Agent 调用搜索服务时的自动支付问题，值得看它能否成为 Agent 付费的新模式。",
+      "title": "Brave Search API now accepts agentic payments via the x402 protocol",
+      "url": "https://brave.com/blog/search-api-agentic-payments/",
+      "sources": [
+        {
+          "url": "https://brave.com/blog/search-api-agentic-payments/",
+          "title": "Brave Search API now accepts agentic payments via the x402 protocol",
+          "source_type": "hackernews",
+          "published_at": "2026-11-13T03:08:08+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "brave-search-api-x402-agentic-payments",
+          "date": "2026-11-13",
+          "title": "Brave Search API now accepts agentic payments via the x402 protocol",
+          "summary": "Brave 让搜索 API 接受 Agent 通过 x402 协议按次付费，解决 AI Agent 调用搜索服务时的自动支付问题，值得看它能否成为 Agent 付费的新模式。",
+          "score": 7.2,
+          "url": "https://brave.com/blog/search-api-agentic-payments/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Agent 支付",
+        "搜索 API",
+        "x402"
+      ]
+    },
+    {
+      "product_id": "product-5c74e3424927ba6a",
+      "product_name": "Codex",
+      "builder_name": "github-actions[bot]",
+      "first_seen": "2026-07-29",
+      "last_seen": "2026-11-13",
+      "occurrence_count": 5,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "OpenAI Codex发布rust-v0.168.0，新增模型提供者选择、侧边对话、音频附件和GIF生成等功能。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.0,
+      "summary": "OpenAI Codex发布rust-v0.168.0，新增模型提供者选择、侧边对话、音频附件和GIF生成等功能。",
+      "title": "openai/codex released rust-v0.168.0",
+      "url": "https://github.com/openai/codex/releases/tag/rust-v0.168.0",
+      "sources": [
+        {
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.146.0",
+          "title": "openai/codex released rust-v0.146.0",
+          "source_type": "github",
+          "published_at": "2026-07-29T01:42:51+00:00"
+        },
+        {
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.147.0",
+          "title": "openai/codex released rust-v0.147.0",
+          "source_type": "github",
+          "published_at": "2026-08-07T01:41:49+00:00"
+        },
+        {
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.148.0",
+          "title": "openai/codex released rust-v0.148.0",
+          "source_type": "github",
+          "published_at": "2026-08-18T22:26:03+00:00"
+        },
+        {
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.154.0-alpha.6",
+          "title": "openai/codex released rust-v0.154.0-alpha.6",
+          "source_type": "github",
+          "published_at": "2026-09-07T18:03:36+00:00"
+        },
+        {
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.168.0",
+          "title": "openai/codex released rust-v0.168.0",
+          "source_type": "github",
+          "published_at": "2026-11-13T03:54:29+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "openai-codex-rust-v0.146.0",
+          "date": "2026-07-29",
+          "title": "openai/codex released rust-v0.146.0",
+          "summary": "OpenAI Codex 发布 rust-v0.146.0，新增会话管理、Agent插件支持和WebSocket远程连接等功能。",
+          "score": 7.0,
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.146.0"
+        },
+        {
+          "update_id": "openai-codex-rust-v0.147.0",
+          "date": "2026-08-07",
+          "title": "openai/codex released rust-v0.147.0",
+          "summary": "OpenAI Codex发布rust-v0.147.0，新增Agent插件、会话组织、自动审批等功能，提升开发体验。",
+          "score": 8.5,
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.147.0"
+        },
+        {
+          "update_id": "openai-codex-rust-v0.148.0",
+          "date": "2026-08-19",
+          "title": "openai/codex released rust-v0.148.0",
+          "summary": "OpenAI Codex 发布 v0.148.0，新增导出对话、fork 会话、Amazon Bedrock 支持等功能。",
+          "score": 8.0,
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.148.0"
+        },
+        {
+          "update_id": "openai-codex-rust-v0.154.0-alpha.6",
+          "date": "2026-09-08",
+          "title": "openai/codex released rust-v0.154.0-alpha.6",
+          "summary": "OpenAI Codex发布rust-v0.154.0-alpha.6版本，但未提供详细更新说明。",
+          "score": 7.0,
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.154.0-alpha.6"
+        },
+        {
+          "update_id": "codex-rust-v0.168.0",
+          "date": "2026-11-13",
+          "title": "openai/codex released rust-v0.168.0",
+          "summary": "OpenAI Codex发布rust-v0.168.0，新增模型提供者选择、侧边对话、音频附件和GIF生成等功能。",
+          "score": 7.0,
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.168.0"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "Codex",
+        "OpenAI",
+        "CLI",
+        "开发者工具",
+        "AI编程"
+      ]
+    },
     {
       "product_id": "product-c49d207ad5f6e552",
       "product_name": "Claude Code + Obsidian 家庭大脑",
@@ -1200,71 +1953,6 @@
         "提示词工程",
         "Claude",
         "代码生成"
-      ]
-    },
-    {
-      "product_id": "product-2f7a0ff4b1d6b467",
-      "product_name": "Claude Code",
-      "builder_name": "claude-code-publisher[bot]",
-      "first_seen": "2026-11-07",
-      "last_seen": "2026-11-10",
-      "occurrence_count": 2,
-      "intelligence_type": "product_case",
-      "evidence_status": "first_party",
-      "target_user": "未公开",
-      "user_problem": "未公开",
-      "what_it_is": "Claude Code 发布 v2.1.321，新增 Claude Fable 5.2 作为默认模型，支持 1M 上下文，定价 $8/$40 每百万 token，并修复多个安全与功能问题。",
-      "ai_role": "未公开",
-      "implementation_idea": "未公开",
-      "hands_on_exercise": "未公开",
-      "limitations_or_uncertainties": "未公开",
-      "region": "global",
-      "score": 7.8,
-      "summary": "Claude Code 发布 v2.1.321，新增 Claude Fable 5.2 作为默认模型，支持 1M 上下文，定价 $8/$40 每百万 token，并修复多个安全与功能问题。",
-      "title": "anthropics/claude-code released v2.1.321",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.321",
-      "sources": [
-        {
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.319",
-          "title": "anthropics/claude-code released v2.1.319",
-          "source_type": "github",
-          "published_at": "2026-11-06T17:04:01+00:00"
-        },
-        {
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.321",
-          "title": "anthropics/claude-code released v2.1.321",
-          "source_type": "github",
-          "published_at": "2026-11-09T19:22:30+00:00"
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "claude-code-v2.1.319",
-          "date": "2026-11-07",
-          "title": "anthropics/claude-code released v2.1.319",
-          "summary": "Anthropic 发布 Claude Code v2.1.319，让 MCP 工具调用可后台运行并新增权限拒绝设置，帮助开发者更顺畅地构建终端 Agent 工作流。",
-          "score": 7.2,
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.319"
-        },
-        {
-          "update_id": "claude-code-v2.1.321",
-          "date": "2026-11-10",
-          "title": "anthropics/claude-code released v2.1.321",
-          "summary": "Claude Code 发布 v2.1.321，新增 Claude Fable 5.2 作为默认模型，支持 1M 上下文，定价 $8/$40 每百万 token，并修复多个安全与功能问题。",
-          "score": 7.8,
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.321"
-        }
-      ],
-      "usage_flow": [],
-      "learning_points": [],
-      "verticals": [],
-      "tags": [
-        "Agent",
-        "MCP",
-        "开发者工具",
-        "AI 编程",
-        "模型更新",
-        "安全修复"
       ]
     },
     {
@@ -11595,102 +12283,6 @@
       ]
     },
     {
-      "product_id": "product-dddb7b79c2bc1e7c",
-      "product_name": "llm-gemini",
-      "builder_name": "Simon Willison",
-      "first_seen": "2026-08-14",
-      "last_seen": "2026-10-14",
-      "occurrence_count": 3,
-      "intelligence_type": "model_capability",
-      "evidence_status": "verified",
-      "target_user": "未公开",
-      "user_problem": "未公开",
-      "what_it_is": "Simon Willison 给自己的 llm-gemini 工具加上 Gemini 4 Argon 支持，并实测了生成效果和单次成本，值得看新模型怎么接进现有工具链。",
-      "ai_role": "未公开",
-      "implementation_idea": "未公开",
-      "hands_on_exercise": "未公开",
-      "limitations_or_uncertainties": "未公开",
-      "region": "global",
-      "score": 7.6,
-      "summary": "Simon Willison 给自己的 llm-gemini 工具加上 Gemini 4 Argon 支持，并实测了生成效果和单次成本，值得看新模型怎么接进现有工具链。",
-      "title": "llm-gemini 0.35",
-      "url": "https://simonwillison.net/2026/Oct/13/llm-gemini/",
-      "sources": [
-        {
-          "url": "https://simonwillison.net/2026/Aug/13/llm-gemini/",
-          "title": "llm-gemini 0.33",
-          "source_type": "rss",
-          "published_at": "2026-08-13T19:37:34+00:00"
-        },
-        {
-          "url": "https://simonwillison.net/2026/Sep/2/llm-gemini/",
-          "title": "llm-gemini 0.34",
-          "source_type": "rss",
-          "published_at": "2026-09-02T16:39:38+00:00"
-        },
-        {
-          "url": "https://deepmind.google/blog/introducing-gemini-3-8-flash-and-38-flash-cyber/",
-          "title": "Introducing Gemini 3.8 Flash and 3.8 Flash Cyber",
-          "source_type": "supplemental",
-          "published_at": ""
-        },
-        {
-          "url": "https://www.theverge.com/ai-artificial-intelligence/988742/google-gemini-3-8-flash",
-          "title": "Google says its new Gemini 3.8 Flash model ‘works harder’ but might cost more",
-          "source_type": "supplemental",
-          "published_at": ""
-        },
-        {
-          "url": "https://artificialanalysis.ai/articles/gemini-3-8-flash",
-          "title": "Gemini 3 8 Flash",
-          "source_type": "supplemental",
-          "published_at": ""
-        },
-        {
-          "url": "https://simonwillison.net/2026/Oct/13/llm-gemini/",
-          "title": "llm-gemini 0.35",
-          "source_type": "rss",
-          "published_at": "2026-10-13T22:28:54+00:00"
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "llm-gemini-0.33-release-2026",
-          "date": "2026-08-14",
-          "title": "llm-gemini 0.33",
-          "summary": "llm-gemini 0.33发布，新增Gemini 3.7 Flash支持和服务端工具调用，开发者可快速体验新模型能力。",
-          "score": 8.0,
-          "url": "https://simonwillison.net/2026/Aug/13/llm-gemini/"
-        },
-        {
-          "update_id": "llm-gemini-0.34-release",
-          "date": "2026-09-03",
-          "title": "llm-gemini 0.34",
-          "summary": "llm-gemini 0.34发布，新增支持Gemini 3.8 Flash模型及思考级别选项。",
-          "score": 8.5,
-          "url": "https://simonwillison.net/2026/Sep/2/llm-gemini/"
-        },
-        {
-          "update_id": "llm-gemini-0-35-gemini4-argon",
-          "date": "2026-10-14",
-          "title": "llm-gemini 0.35",
-          "summary": "Simon Willison 给自己的 llm-gemini 工具加上 Gemini 4 Argon 支持，并实测了生成效果和单次成本，值得看新模型怎么接进现有工具链。",
-          "score": 7.6,
-          "url": "https://simonwillison.net/2026/Oct/13/llm-gemini/"
-        }
-      ],
-      "usage_flow": [],
-      "learning_points": [],
-      "verticals": [],
-      "tags": [
-        "Gemini",
-        "开发者工具",
-        "模型",
-        "LLM工具",
-        "模型接入"
-      ]
-    },
-    {
       "product_id": "product-f27ced46a082baa3",
       "product_name": "Azure Content Understanding",
       "builder_name": "Chu Lahlou",
@@ -16074,76 +16666,6 @@
         "Agent",
         "DevTool",
         "Vercel"
-      ]
-    },
-    {
-      "product_id": "product-7dba368c4dbe037e",
-      "product_name": "Replit Agent",
-      "builder_name": "Replit Blog",
-      "first_seen": "2026-09-30",
-      "last_seen": "2026-09-30",
-      "occurrence_count": 1,
-      "intelligence_type": "builder_insight",
-      "evidence_status": "first_party",
-      "target_user": "正在构建 AI Agent 产品的开发者、架构师；对 Agent 调度设计感兴趣的技术初学者",
-      "user_problem": "传统模型路由器（用一个独立小模型或规则来判断每次该调哪个大模型）存在天花板：路由器的判断能力永远比不上它要挑选的那个模型，容易选错、浪费算力或效果打折",
-      "what_it_is": "Replit 官方博客披露其 Agent 架构设计——放弃传统的模型路由器（Model Router），改由主 Agent 自主决定何时调用哪个子 Agent、投入多少算力，并给出实测数据证明这样更省 token 且效果更好。",
-      "ai_role": "主 Agent 像项目经理，自己判断任务拆分、资源分配和质量把关；子 Agent 像专项组员，各自负责代码、UI、测试等具体环节",
-      "implementation_idea": "核心思路是「少搭脚手架，多给模型自主权」。Replit 发现模型变强后，自己就会学会「委派任务」和「并行协作」，不需要人类写死复杂的路由规则。所以他们的 harness（ harness：把模型包装成可用产品的框架层）只做最低限度的护栏，让模型按自己的方式工作，目标是用最少成本保质量。",
-      "hands_on_exercise": "30 分钟：打开 Replit Agent（https://replit.com/products/agent），用同一句话描述一个简单任务（如「做一个待办事项网页」），观察它是否自动拆分了多个步骤；再描述一个复杂任务（如「做一个带用户登录和数据库的博客」），对比它调用的模型/步骤数量是否有明显变化，体会「主 Agent 自主分配」的实际表现。",
-      "limitations_or_uncertainties": "博客未提供可独立验证的 Demo 链接或完整技术细节；11/16 分提升的对比基准（sidekick architecture 具体配置）未公开；无真实用户反馈验证实际体验；文中提到的 GPT-6 Astra 为未正式发布模型，其具体能力和可用性未确认",
-      "region": "global",
-      "score": 8.6,
-      "summary": "Replit 官方讲他们怎么设计 Agent：不让路由器选模型，而是让主 Agent 自己决定用哪个子 Agent、花多少算力，并给出跑分对比说明这样更省更准。",
-      "title": "Replit 官方揭秘：为什么 Agent 不该让「路由器」选模型，而该让主 Agent 自己决定",
-      "url": "https://replit.com/blog/free-the-models",
-      "sources": [
-        {
-          "url": "https://replit.com/blog/free-the-models",
-          "title": "Free the models: Harness design at the frontier",
-          "source_type": "rss",
-          "published_at": "2026-09-29T16:00:00+00:00"
-        },
-        {
-          "url": "https://replit.com/products/agent",
-          "title": "AI Coding Agent: Build Apps Through Chat | Replit",
-          "source_type": "supplemental",
-          "published_at": ""
-        },
-        {
-          "url": "https://docs.replit.com/features/agent/overview",
-          "title": "Replit Agent",
-          "source_type": "supplemental",
-          "published_at": ""
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "replit-agent-harness-design",
-          "date": "2026-09-30",
-          "title": "Replit 官方揭秘：为什么 Agent 不该让「路由器」选模型，而该让主 Agent 自己决定",
-          "summary": "Replit 官方讲他们怎么设计 Agent：不让路由器选模型，而是让主 Agent 自己决定用哪个子 Agent、花多少算力，并给出跑分对比说明这样更省更准。",
-          "score": 8.6,
-          "url": "https://replit.com/blog/free-the-models"
-        }
-      ],
-      "usage_flow": [
-        "用户用自然语言描述想做的应用/任务",
-        "主 Agent（core loop）分析任务难度，自主决定是自己处理还是派给子 Agent",
-        "主 Agent 动态调整子 Agent 的「等级」和「投入程度」（tier and effort），比如简单代码交给便宜模型，复杂架构设计交给最强模型",
-        "多个子 Agent 并行或协作完成，最终输出可运行的应用或结果"
-      ],
-      "learning_points": [
-        "Agent：能自主规划步骤、调用工具、完成多轮任务的 AI 系统，不只是单次问答",
-        "模型路由（Model Router）：一种常见设计，用规则或小模型来决定「这次请求发给 GPT-4 还是 Claude 还是本地小模型」，但 Replit 认为这种设计有根本瓶颈",
-        "Pareto 效率：在成本和效果两个维度上都更优的状态——Replit 用这个词说明他们的方案比直接用最强模型或传统路由都更省钱且分更高"
-      ],
-      "verticals": [],
-      "tags": [
-        "Agent",
-        "Harness",
-        "模型路由",
-        "Replit"
       ]
     },
     {
@@ -22110,98 +22632,6 @@
         "LLM",
         "推理轨迹",
         "模型支持"
-      ]
-    },
-    {
-      "product_id": "product-5c74e3424927ba6a",
-      "product_name": "Codex",
-      "builder_name": "github-actions[bot]",
-      "first_seen": "2026-07-29",
-      "last_seen": "2026-09-08",
-      "occurrence_count": 4,
-      "intelligence_type": "builder_insight",
-      "evidence_status": "first_party",
-      "target_user": "未公开",
-      "user_problem": "未公开",
-      "what_it_is": "OpenAI Codex发布rust-v0.154.0-alpha.6版本，但未提供详细更新说明。",
-      "ai_role": "未公开",
-      "implementation_idea": "未公开",
-      "hands_on_exercise": "未公开",
-      "limitations_or_uncertainties": "未公开",
-      "region": "global",
-      "score": 7.0,
-      "summary": "OpenAI Codex发布rust-v0.154.0-alpha.6版本，但未提供详细更新说明。",
-      "title": "openai/codex released rust-v0.154.0-alpha.6",
-      "url": "https://github.com/openai/codex/releases/tag/rust-v0.154.0-alpha.6",
-      "sources": [
-        {
-          "url": "https://github.com/openai/codex/releases/tag/rust-v0.146.0",
-          "title": "openai/codex released rust-v0.146.0",
-          "source_type": "github",
-          "published_at": "2026-07-29T01:42:51+00:00"
-        },
-        {
-          "url": "https://github.com/openai/codex/releases/tag/rust-v0.147.0",
-          "title": "openai/codex released rust-v0.147.0",
-          "source_type": "github",
-          "published_at": "2026-08-07T01:41:49+00:00"
-        },
-        {
-          "url": "https://github.com/openai/codex/releases/tag/rust-v0.148.0",
-          "title": "openai/codex released rust-v0.148.0",
-          "source_type": "github",
-          "published_at": "2026-08-18T22:26:03+00:00"
-        },
-        {
-          "url": "https://github.com/openai/codex/releases/tag/rust-v0.154.0-alpha.6",
-          "title": "openai/codex released rust-v0.154.0-alpha.6",
-          "source_type": "github",
-          "published_at": "2026-09-07T18:03:36+00:00"
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "openai-codex-rust-v0.146.0",
-          "date": "2026-07-29",
-          "title": "openai/codex released rust-v0.146.0",
-          "summary": "OpenAI Codex 发布 rust-v0.146.0，新增会话管理、Agent插件支持和WebSocket远程连接等功能。",
-          "score": 7.0,
-          "url": "https://github.com/openai/codex/releases/tag/rust-v0.146.0"
-        },
-        {
-          "update_id": "openai-codex-rust-v0.147.0",
-          "date": "2026-08-07",
-          "title": "openai/codex released rust-v0.147.0",
-          "summary": "OpenAI Codex发布rust-v0.147.0，新增Agent插件、会话组织、自动审批等功能，提升开发体验。",
-          "score": 8.5,
-          "url": "https://github.com/openai/codex/releases/tag/rust-v0.147.0"
-        },
-        {
-          "update_id": "openai-codex-rust-v0.148.0",
-          "date": "2026-08-19",
-          "title": "openai/codex released rust-v0.148.0",
-          "summary": "OpenAI Codex 发布 v0.148.0，新增导出对话、fork 会话、Amazon Bedrock 支持等功能。",
-          "score": 8.0,
-          "url": "https://github.com/openai/codex/releases/tag/rust-v0.148.0"
-        },
-        {
-          "update_id": "openai-codex-rust-v0.154.0-alpha.6",
-          "date": "2026-09-08",
-          "title": "openai/codex released rust-v0.154.0-alpha.6",
-          "summary": "OpenAI Codex发布rust-v0.154.0-alpha.6版本，但未提供详细更新说明。",
-          "score": 7.0,
-          "url": "https://github.com/openai/codex/releases/tag/rust-v0.154.0-alpha.6"
-        }
-      ],
-      "usage_flow": [],
-      "learning_points": [],
-      "verticals": [],
-      "tags": [
-        "Agent",
-        "Codex",
-        "OpenAI",
-        "CLI",
-        "开发者工具"
       ]
     },
     {

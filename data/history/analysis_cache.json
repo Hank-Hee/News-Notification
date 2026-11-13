@@ -1036,6 +1036,46 @@
       },
       "stage": "candidate_analysis"
     },
+    "038dcee68fd386ff2bdfc80b302300d0bfe23ae10e68476cbb18b3df9767ece2": {
+      "created_at": "2026-11-13T06:42:29.035842+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "didit-mcp-launch",
+        "evidence_status": "first_party",
+        "follow_up": "关注 Didit MCP 的实际调用案例、定价和开发者反馈。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:www.producthunt.com_feed:6dd848c25123a19e",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": true,
+        "market_signal": "",
+        "product_name": "Didit MCP",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Product Hunt 上的 Didit MCP 发布，是身份验证与反欺诈的 MCP 服务器，属于已做出来的 AI 产品；但来源为聚合社区、信息极简、无用户反馈，且偏基础设施，给 6.5。",
+        "region": "global",
+        "score": 6.5,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "Didit 发布 MCP 服务器，为 AI 代理提供身份验证和欺诈检查能力；解决代理调用身份核验服务的问题；对做垂直 AI 产品的开发者有集成参考价值。",
+        "tags": [
+          "MCP",
+          "身份验证",
+          "反欺诈",
+          "Product Hunt"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "03a02acb5335553af304066f5735f54766dc181580e37a53e2463b9af4336597": {
       "created_at": "2026-08-28T11:23:03.952677+00:00",
       "model": "deepseek-v4-flash",
@@ -1952,6 +1992,46 @@
           "Agent",
           "技能包",
           "Vercel"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "053bfd3b1e139b87aa319fa60826a7f0817dd3c7c830814622fd2435be19d407": {
+      "created_at": "2026-11-13T06:42:29.035668+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "amplitude-wave-openai-case-study",
+        "evidence_status": "first_party",
+        "follow_up": "关注 Wave 的具体交互设计、用户采用数据和 1–2 天交付的量化证据。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:openai.com_news_rss.xml:67672a694e389b29",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": true,
+        "market_signal": "",
+        "product_name": "Amplitude Wave",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI 官方客户案例，描述 Amplitude 的 Wave 产品代理如何用模型识别需求、辅助编码并衡量影响，属于有产品形态和构建过程的一手案例；但本质是客户营销内容，缺少用户反馈和量化指标，扣分至 8.2。",
+        "region": "global",
+        "score": 8.2,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Amplitude 用 OpenAI 模型构建产品代理 Wave，帮团队判断该做什么、用编码代理快速上线并衡量效果；对想理解 AI 如何嵌入产品工作流的初学者有参考价值。",
+        "tags": [
+          "Agent",
+          "产品工作流",
+          "OpenAI",
+          "Amplitude"
         ],
         "target_user": "",
         "verticals": []
@@ -4061,6 +4141,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "096ee6c648bd190a108b9b0590ac27b33eeff89e01b61f53569d40fc103e1b43": {
+      "created_at": "2026-11-13T06:42:29.035871+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "muse-outbound-calls-paid",
+        "evidence_status": "reported",
+        "follow_up": "关注 Muse 的定价、通话质量、合规问题和用户采用情况。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:dae3c68404a1cf67",
+        "intelligence_type": "product_case",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Muse",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "TechCrunch 报道 Muse 的 AI 可付费拨打美国企业电话，属于产品功能更新且有明确商业化动作；但报道极简、缺少产品细节和用户反馈，对产品经理的可迁移增量有限，给 6.2。",
+        "region": "global",
+        "score": 6.2,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Muse 的 AI 现在可以付费拨打美国企业电话；把语音代理用于外呼场景；对关注 AI 语音产品商业化的人有信号价值。",
+        "tags": [
+          "语音代理",
+          "AI 外呼",
+          "Muse"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "0975173b3d9f072578b90672579108656437e348e445f7027903eb7dc3520047": {
       "created_at": "2026-08-13T02:47:09.863728+00:00",
       "model": "deepseek-v4-flash",
@@ -4776,6 +4895,46 @@
         "tags": [
           "RuneScape",
           "网络技术"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "0a85ca26a24b3e0c26830cd8920c5eb3058fb34f003567d732dc8f5a18a9c7ff": {
+      "created_at": "2026-11-13T06:42:29.035802+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "llmon-granite-4-1-release",
+        "evidence_status": "first_party",
+        "follow_up": "关注 LLMON 的实际输出质量、开发者采用情况和产品化案例。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:huggingface.co_blog_feed.xml:84ec87286cb35a64",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Granite 4.1",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Hugging Face 博客介绍 LLM 原生标记语言 LLMON 并集成到 Granite 4.1 小模型，属于模型能力更新；但正文为空，且偏底层格式与模型发布，对产品经理的直接可迁移增量有限，给 6.8。",
+        "region": "global",
+        "score": 6.8,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "IBM 在 Granite 4.1 3B 和 8B 模型中引入 LLM 原生标记语言 LLMON；试图让模型更高效地处理结构化输出；对关注小模型产品化的开发者有参考价值。",
+        "tags": [
+          "Granite",
+          "LLMON",
+          "小模型",
+          "Hugging Face"
         ],
         "target_user": "",
         "verticals": []
@@ -5697,6 +5856,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "0cc391756cdb373890d029c89739941f85d8064b5458ea0e3166f78e1d47bb91": {
+      "created_at": "2026-11-13T06:42:46.954098+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "browser-use-1.0.3",
+        "evidence_status": "first_party",
+        "follow_up": "观察 1.0.x 版本在真实用户中的稳定性反馈，以及 MCP 集成是否成为主流用法。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "github:release:443245664",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Browser Use",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Browser Use 1.0.3 修复了 CLI 与 MCP 场景下的浏览器启动、连接超时和容器兼容问题，属于 Agent 产品落地时的真实工程细节，对做浏览器 Agent 的构建者有迁移价值，但偏补丁级。",
+        "region": "global",
+        "score": 6.8,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "Browser Use 发布 1.0.3，修好了命令行和 MCP 场景下浏览器启动、连接超时和容器兼容的问题，解决 Agent 跑浏览器时容易卡住的环境问题，对做浏览器 Agent 的人有参考价值。",
+        "tags": [
+          "Browser Agent",
+          "MCP",
+          "开源"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "0ceda52545268807de360215ff336aa71a9bf0c8a9e783227254f03746b72085": {
       "created_at": "2026-07-30T03:28:09.352455+00:00",
       "model": "deepseek-v4-flash",
@@ -6573,6 +6771,46 @@
           "版权",
           "模型行为",
           "内容生成"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "0f35d1e1c964131e5c2876bf5b0a972120b7759fe7cba1b8f99b947bed22b439": {
+      "created_at": "2026-11-13T06:42:29.035698+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "gondola-codex-case-study",
+        "evidence_status": "first_party",
+        "follow_up": "关注 Gondola 的具体工作流、Codex 使用方式和收入增长的归因证据。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:openai.com_news_rss.xml:b9840fd67063a36a",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": true,
+        "market_signal": "",
+        "product_name": "Gondola",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI 官方客户案例，提到 Codex 让首席工程师产出提升 50%、收入翻倍，属于有指标的一手实践；但内容偏营销，缺少产品细节和可验证方法，对产品经理的可迁移增量有限，给 7.2。",
+        "region": "global",
+        "score": 7.2,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Gondola 用 Codex 和 ChatGPT 提升创意人才匹配平台的开发效率，首席工程师产出提高 50%、收入翻倍；可作为小团队用 AI 编码代理的参考案例。",
+        "tags": [
+          "Codex",
+          "AI 编码",
+          "OpenAI",
+          "小团队"
         ],
         "target_user": "",
         "verticals": []
@@ -10826,6 +11064,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "181b638672b6bc5713a8605415bb093a2c2cac80eb3b19ff94e8a5e81af3c842": {
+      "created_at": "2026-11-13T06:42:40.218018+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "codex-rust-v0.168.0",
+        "evidence_status": "first_party",
+        "follow_up": "关注这些功能对编程工作流的影响。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "github:release:443793906",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Codex",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI Codex正式版本发布，包含多项新功能（模型提供者选择、侧边对话、音频附件等），对开发者有直接价值，但属于工具更新，对产品经理增量中等。",
+        "region": "global",
+        "score": 7.0,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "OpenAI Codex发布rust-v0.168.0，新增模型提供者选择、侧边对话、音频附件和GIF生成等功能。",
+        "tags": [
+          "Codex",
+          "开发者工具",
+          "AI编程"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "181c40fa1675a6b972134c1ea84cb905f22342a7d08d6af261b9c8ad5c0aa8b9": {
       "created_at": "2026-09-29T05:42:50.667010+00:00",
       "model": "deepseek-flash",
@@ -11209,6 +11486,44 @@
           "医疗AI",
           "脑机接口",
           "垂直产品"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "18dc53d4942fb1a3946d4ef21033730cfb49bfe61fd04a40dce6f3958d7545ca": {
+      "created_at": "2026-11-13T06:42:40.216222+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "ai-agents-maya-site-debunk",
+        "evidence_status": "reported",
+        "follow_up": "关注AI代理在专业领域的可靠性验证方法。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:b0959160e54c1e35",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "AI代理误报考古发现，属于负面案例，对产品构建无直接可迁移经验，且无产品/代码/用户反馈。",
+        "region": "global",
+        "score": 4.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Google研究员用AI代理声称发现玛雅遗址，但该遗址去年已被发表，引发考古学家批评。",
+        "tags": [
+          "AI代理",
+          "误报"
         ],
         "target_user": "",
         "verticals": []
@@ -12406,6 +12721,44 @@
         "tags": [
           "AI安全",
           "访谈"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "1b2a632d160ff343a8b942430e6052bafeebe757eb67e7288defa5266b6d7d1e": {
+      "created_at": "2026-11-13T06:42:40.216262+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "jensen-huang-scandal",
+        "evidence_status": "reported",
+        "follow_up": "无",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:6fac6df4cee86b0a",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "关于英伟达CEO的个人丑闻，与AI产品、模型能力、构建实践无关，属于噪音。",
+        "region": "global",
+        "score": 3.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "The Verge评论文章讨论英伟达CEO黄仁勋的第二次婚外情丑闻及其影响。",
+        "tags": [
+          "英伟达",
+          "人物"
         ],
         "target_user": "",
         "verticals": []
@@ -17773,6 +18126,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "2609241c2be5db3fae1c4656638be92026c7eb0f3725a9a8fe8fd5c4c41e5c73": {
+      "created_at": "2026-11-13T06:42:40.216841+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "replit-agent-ads-commerce",
+        "evidence_status": "first_party",
+        "follow_up": "观察这些新功能对Replit业务增长的实际影响。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:blog.replit.com_feed.xml:0a329ae0af3fef3f",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Replit Agent",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Replit Agent新增采购和广告功能，是一手产品发布，有明确用户场景（创业者），且提到九倍增长指标，对产品经理有参考价值。",
+        "region": "global",
+        "score": 8.5,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Replit Agent新增用Link和Visa采购物资、用Google Ads触达客户的功能，帮助创业者扩展业务。",
+        "tags": [
+          "AI Agent",
+          "创业工具",
+          "电商"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "264b8c1935b7c135f8f74c546e37f0cf9e0113e3175dc52f26affc957bba42fc": {
       "created_at": "2026-10-20T04:48:15.567404+00:00",
       "model": "deepseek-flash",
@@ -18960,6 +19352,45 @@
         "tags": [
           "DeepSeek",
           "Agent"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "28e82bc85dbe0cb567cedd99b05c6a64591316e7dff948cfe7262e3c1bd5e91d": {
+      "created_at": "2026-11-13T06:42:29.035612+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "anthropic-claude-4-release",
+        "evidence_status": "first_party",
+        "follow_up": "关注 Claude 4 的具体能力参数、定价、API 可用性及首批产品案例。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "public_web:sitemap:4ec03078d3169fe59abb",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Claude 4",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Anthropic 官方发布 Claude 4，属于模型公司核心能力动态，对产品经理理解新模型能力边界有直接价值，但正文信息极简，缺少具体能力细节和产品体验描述，因此未达 9 分。",
+        "region": "global",
+        "score": 8.5,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Anthropic 官方发布 Claude 4 模型；为开发者提供新一代基础模型能力；值得关注其可能解锁的新产品体验。",
+        "tags": [
+          "Claude",
+          "基础模型",
+          "Anthropic"
         ],
         "target_user": "",
         "verticals": []
@@ -22714,6 +23145,44 @@
           "AI训练",
           "数据获取",
           "政策"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "31fc6804bb047cf3cd744e5c10dd12839c6e53d39b3ea03bcf7814b22a31b07d": {
+      "created_at": "2026-11-13T06:42:40.216106+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "nebius-40b-spending",
+        "evidence_status": "reported",
+        "follow_up": "关注其融资模式是否影响AI云服务定价和可用性。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:7a754332c120f6d8",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Nebius",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "涉及AI基础设施融资模式，但属于算力/资本层面，对AI产品经理和初学者无直接可迁移增量，且无产品/代码/用户反馈。",
+        "region": "global",
+        "score": 5.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Nebius计划用客户预付款和贷款支撑400亿美元AI基础设施扩张，但微软数据中心延迟引发对其融资模式的质疑。",
+        "tags": [
+          "AI基础设施",
+          "融资"
         ],
         "target_user": "",
         "verticals": []
@@ -36606,6 +37075,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "4e397d7229d419c2e4a21e1b18531beca6869e06ae7b7220ef1c7564eb5f1a99": {
+      "created_at": "2026-11-13T06:42:46.954148+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "brave-search-api-x402-agentic-payments",
+        "evidence_status": "first_party",
+        "follow_up": "观察是否有开发者实际接入、定价与结算体验，以及是否引发其他搜索或 API 服务跟进。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:50477649",
+        "intelligence_type": "early_signal",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Brave Search API",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Brave 搜索 API 支持 x402 协议让 Agent 用加密货币按次付费，是 Agent 商业化支付路径的新尝试，HN 讨论有真实观点碰撞；但尚属早期信号，实际采用情况未知，对产品经理有启发但非成熟案例。",
+        "region": "global",
+        "score": 7.2,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Brave 让搜索 API 接受 Agent 通过 x402 协议按次付费，解决 AI Agent 调用搜索服务时的自动支付问题，值得看它能否成为 Agent 付费的新模式。",
+        "tags": [
+          "Agent 支付",
+          "搜索 API",
+          "x402"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "4e46ea7e8583fa644005198339ac4964450a2e3fc89d7c18d373c0980b360cda": {
       "created_at": "2026-09-22T04:54:47.799104+00:00",
       "model": "kimi-k2.6",
@@ -43100,6 +43608,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "5b2ebdcc8653d36b3340e7c372b297fa881be720579e9b8d536277faf8244d98": {
+      "created_at": "2026-11-13T06:42:40.216716+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "artcraft-photoshop-clone",
+        "evidence_status": "reported",
+        "follow_up": "关注ArtCraft开源产品的用户反馈和迭代。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:www.latent.space_feed:154908b806457877",
+        "intelligence_type": "product_case",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "ArtCraft",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "ArtCraft用AI重写Photoshop为开源软件，属于有产品、有构建过程的一手案例，对产品经理有迁移价值，但来源为Newsletter访谈，非直接一手。",
+        "region": "global",
+        "score": 8.2,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "ArtCraft用AI将Photoshop重写为开源软件，CEO Brandon Thomas有更大愿景，访谈披露产品思路。",
+        "tags": [
+          "AI设计",
+          "开源",
+          "产品案例"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "5b3fae69effa1f3e88d348530f3b4272ffda268b58bebf461c8ac5fa8a36ad24": {
       "created_at": "2026-08-23T01:59:35.260239+00:00",
       "model": "deepseek-v4-flash",
@@ -43950,6 +44497,42 @@
         "verticals": []
       },
       "stage": "candidate_analysis"
+    },
+    "5cdf716162f320a083ab3df367a41faa36bea5bb88962bfac5147a96d34399f4": {
+      "created_at": "2026-11-13T06:43:13.258935+00:00",
+      "model": "kimi-k2.6",
+      "prompt_version": "deep-v3-beginner",
+      "result": {
+        "ai_role": "AI 扮演'全能队友'：写代码、接支付、采购、投广告，但每笔花钱操作都要经过你确认",
+        "evidence_status": "first_party",
+        "hands_on_exercise": "去 replit.com 免费注册，用一句话让 Replit Agent 做一个'收集用户邮箱的落地页'，部署上线后，尝试在设置里找到 Stripe 连接入口（无需真绑定），体验'从想法到可收钱的产品'全流程，记录 Agent 每一步问了什么问题、做了什么决定。",
+        "implementation_idea": "核心思路是'Agent 即服务'——一个主智能体（Agent，能自主规划和执行任务的 AI 程序）拆解你的大白话需求，再调用不同子系统：写代码用 Replit 自己的开发环境，付钱走 Stripe Link + Visa 的支付接口，广告投放走 Google Ads API。关键是'人在回路'，花钱前必须你点确认。",
+        "learning_points": [
+          "Agent（智能体）：不只是聊天回答，而是能自己规划步骤、调用工具、完成多环节任务的 AI 程序",
+          "Function Calling（函数调用）：AI 判断'现在该调用哪个外部 API'的能力，比如识别'我要买服务器'→调用 Stripe 支付接口",
+          "RAG（检索增强生成）：虽然本文未直接提及，但这类商业 Agent 通常需要实时查库存、查广告政策，把外部信息'喂'给 AI 再生成决策，避免胡说"
+        ],
+        "limitations_or_uncertainties": "未公开具体支持哪些国家/地区的 Visa 支付；未公开 Google Ads 投放是否需要用户自己先有广告账户；未公开'九倍增长'的具体基数和统计口径；未说明采购功能是否覆盖非美国供应商",
+        "product_name": "Replit Agent",
+        "sources": [
+          "https://replit.com/blog/replit-agent-ads-commerce",
+          "https://replit.com/products/agent",
+          "https://docs.replit.com/features/agent/overview",
+          "https://replit.com/blog",
+          "https://replit.com/"
+        ],
+        "target_users": "不会写代码但想创业的人，以及会写代码但不擅长运营、采购、推广的创始人",
+        "title_zh": "Replit Agent 新增采购和广告投放功能，帮创业者搞定生意琐事",
+        "usage_flow": [
+          "用自然语言描述你想做的产品，Replit Agent 帮你写出代码并上线",
+          "把 Stripe 接入你的应用，开始收钱",
+          "告诉 Agent 需要买什么物资，它通过 Link/Visa 完成采购",
+          "告诉 Agent 你的目标客户，它在 Google Ads 上帮你投广告"
+        ],
+        "user_problem": "很多人能用 AI 做出产品，但后续还要面对公司注册、服务器维护、找客户、买物资、打广告等一系列杂事，每件事都是新门槛，拖慢业务增长",
+        "what_it_is": "Replit Agent 是一个能用自然语言帮你写代码、建网站的 AI 助手，现在还能帮你采购办公物资和投放 Google 广告。"
+      },
+      "stage": "deep_analysis"
     },
     "5ce1f34638e7cee1a9d4d8effda2f26757fc6b539b4590932c4a30dbfd7c44bb": {
       "created_at": "2026-08-30T05:23:30.474209+00:00",
@@ -52256,6 +52839,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "6dbf9518bffda7cf4d4e41c246d8d9859a3c779e24b0fdd33c5ec3886295bc40": {
+      "created_at": "2026-11-13T06:42:46.953960+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "claude-code-v2.1.323-code-mode",
+        "evidence_status": "first_party",
+        "follow_up": "观察 Code Mode 的实际使用反馈、是否默认开启，以及社区是否出现基于它的新工作流。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "github:release:443483677",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Claude Code",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Claude Code 新增实验性 Code Mode，让 Claude 写 JavaScript 调用工具，这是 Agent 工具调用范式的可迁移变化；同时有插件版本约束、TypeScript 钩子校验等工程化改进，对构建者有参考价值。",
+        "region": "global",
+        "score": 7.6,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "Anthropic 给 Claude Code 加了实验性 Code Mode，让模型写 JavaScript 来调用工具，解决工具编排方式单一的问题，值得看它如何改变 Agent 的开发体验。",
+        "tags": [
+          "Coding Agent",
+          "Claude Code",
+          "工具调用"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "6dc698470644d186695483fa28b1cba4c1c5f7148a5da0bc36b35951cd9bac90": {
       "created_at": "2026-08-06T03:36:17.593015+00:00",
       "model": "deepseek-v4-flash",
@@ -53817,6 +54439,45 @@
           "OpenAI",
           "Sam Altman",
           "AI安全"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "7180c833e83c8e921b70b225cd405ec240d312f3fd5ebd58285524b9985314c0": {
+      "created_at": "2026-11-13T06:42:29.035897+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "jensen-huang-resignation-timeline",
+        "evidence_status": "reported",
+        "follow_up": "无需跟进，除非出现对 AI 产品生态有实质影响的后续。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:4818a1d82a735b82",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "TechCrunch 报道黄仁勋因绯闻辞职的时间线，属于公司人事与国家安全话题，与 AI 产品构建、模型能力或产品思路无直接关系，对目标读者价值低，给 3.0。",
+        "region": "global",
+        "score": 3.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "TechCrunch 梳理英伟达 CEO 黄仁勋因绯闻辞职的时间线；涉及公司治理与国家安全；与 AI 产品实践无关，不建议收录。",
+        "tags": [
+          "英伟达",
+          "人事变动",
+          "TechCrunch"
         ],
         "target_user": "",
         "verticals": []
@@ -59940,6 +60601,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "7e218a103a32a383eb4a4eb3d8eeac80e7f43388f5629d07ca9a7cc723257287": {
+      "created_at": "2026-11-13T06:42:40.216681+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "llm-gemini-0.37",
+        "evidence_status": "first_party",
+        "follow_up": "观察该插件在开发者中的采用情况。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:simonwillison.net_atom_everything_:5b86eed0286e0e3b",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "llm-gemini",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Simon Willison发布llm-gemini插件更新，支持新模型，属于开发者工具的一手更新，但内容主要是版本发布和定价困惑，对产品经理增量有限。",
+        "region": "global",
+        "score": 7.2,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "Simon Willison发布llm-gemini 0.37，支持Gemini 4 Hydrogen模型，并指出其定价复杂。",
+        "tags": [
+          "LLM工具",
+          "Gemini",
+          "开发者"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "7e304749c94bdca41f20483fbcc83621edacf9f66aa1fe0502d9ab43b8d91ec8": {
       "created_at": "2026-11-10T07:15:41.746044+00:00",
       "model": "deepseek-flash",
@@ -61704,6 +62404,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "81fa08ed12c04eed945f95f4749f3437d649278bdb86f6a850f47a84059022f8": {
+      "created_at": "2026-11-13T06:42:46.954031+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "ai-sdk-zai-3.0.54",
+        "evidence_status": "first_party",
+        "follow_up": "无。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "github:release:443872793",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Vercel AI SDK",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "仅依赖版本号更新的补丁发布，无功能变化或产品信息，属于噪音级更新。",
+        "region": "global",
+        "score": 2.5,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "Vercel AI SDK 的 Z.ai 适配包只更新了依赖版本，没有新功能，不值得关注。",
+        "tags": [
+          "SDK",
+          "Vercel"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "81fd8e6d88638e09a4fec7cf816cf0189eb0ca578136a4c1f56bedd9787a83f8": {
       "created_at": "2026-09-24T04:48:54.844353+00:00",
       "model": "deepseek-flash",
@@ -62880,6 +63618,45 @@
           "AI伦理",
           "游戏",
           "争议"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "847e0249331ddcdea0134df7542e881717cc99c8bcd340cf1b617ac6918b7e59": {
+      "created_at": "2026-11-13T06:42:29.035719+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "gemini-4-hydrogen-release",
+        "evidence_status": "first_party",
+        "follow_up": "关注 Gemini 4 Hydrogen 的能力评测、API 开放情况和首批产品集成案例。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:deepmind.google_blog_rss.xml:c7a410ad3b862809",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Gemini 4 Hydrogen",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Google DeepMind 官方发布 Gemini 4 Hydrogen，属于模型公司核心能力动态，对判断新模型能否催生产品有信号价值；但正文为空，缺少能力细节和产品体验证据，只能给 7.8。",
+        "region": "global",
+        "score": 7.8,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Google DeepMind 发布 Gemini 4 Hydrogen 模型；为搜索等产品提供新模型能力；值得关注其后续在产品中的实际表现。",
+        "tags": [
+          "Gemini",
+          "基础模型",
+          "Google DeepMind"
         ],
         "target_user": "",
         "verticals": []
@@ -69547,6 +70324,45 @@
           "提示词工程",
           "Claude",
           "代码生成"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "8f9bc27a48e689e2944c15442eeabcba55b144516b2136d83d3eec1248ac00dd": {
+      "created_at": "2026-11-13T06:42:40.216304+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "ai-chatbots-fake-retail-study",
+        "evidence_status": "reported",
+        "follow_up": "关注AI产品如何改进引用来源验证机制。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:2b81ee03f7ad39ec",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "揭示AI聊天机器人推荐虚假购物网站的问题，对产品经理有警示价值，但属于问题报告而非构建案例，且无解决方案或产品实践。",
+        "region": "global",
+        "score": 6.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "研究发现ChatGPT、Gemini和Perplexity在购物推荐中可能引导用户至假冒网站，存在风险。",
+        "tags": [
+          "AI购物",
+          "安全",
+          "聊天机器人"
         ],
         "target_user": "",
         "verticals": []
@@ -83972,6 +84788,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "abf481c6c5644800a58ad0dcc26d93b2c3854f4fe19237ee7d3e9acb8c074504": {
+      "created_at": "2026-11-13T06:42:40.216177+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "gemini-4-hydrogen-launch",
+        "evidence_status": "reported",
+        "follow_up": "观察开发者如何利用该模型构建复杂问答产品。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:264b125e10aa07bc",
+        "intelligence_type": "model_capability",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Gemini 4 Hydrogen",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "新模型能力发布，能更好理解复杂问题，可能解锁新的产品体验（如多部分问题拆解），但报道来自媒体而非官方一手，且缺乏具体产品案例。",
+        "region": "global",
+        "score": 7.8,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Google发布Gemini 4 Hydrogen模型，能拆解复杂问题并逐部分回答，已在搜索和Gemini应用中上线。",
+        "tags": [
+          "Gemini",
+          "模型能力",
+          "搜索"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "ac0b6a7c2bb805490d103c47a19cc9bb300dca57d10a7a70e0ee2f8a80bf305e": {
       "created_at": "2026-10-24T04:34:29.512002+00:00",
       "model": "deepseek-flash",
@@ -89586,6 +90441,46 @@
         "tags": [
           "行业评论",
           "算力"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "b684d77d286e9cc8782e36cd20a575899d5c1b742d7aaf890b551a7260216e5b": {
+      "created_at": "2026-11-13T06:42:29.035782+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "github-agent-skills-guide",
+        "evidence_status": "first_party",
+        "follow_up": "关注 agent skills 的实际采用案例和跨代理复用的真实效果。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:github.blog_ai-and-ml_feed_:648bb7e0f000d2bb",
+        "intelligence_type": "builder_insight",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "GitHub Copilot",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "GitHub 官方博客的 agent skills 实践指南，讲如何把可重复工程工作沉淀为可复用文件，属于构建者方法论；但偏教程、缺少真实产品案例和用户反馈，对产品经理的可迁移增量中等，给 7.6。",
+        "region": "global",
+        "score": 7.6,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "GitHub 发布 agent skills 实践指南，教团队把重复工程工作写成可审查复用的文件；帮助初学者理解如何让 AI 代理稳定执行任务。",
+        "tags": [
+          "Agent",
+          "Agent Skills",
+          "GitHub",
+          "工程实践"
         ],
         "target_user": "",
         "verticals": []
@@ -96456,6 +97351,45 @@
           "AI检测",
           "信任",
           "访谈"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "c5085c574b700e62e620df168c503a8c0845eea419cf5bd94f5930dd925aa28a": {
+      "created_at": "2026-11-13T06:42:29.035745+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "google-search-gemini-4-hydrogen-upgrade",
+        "evidence_status": "first_party",
+        "follow_up": "关注搜索升级的具体功能、用户实际体验反馈和与竞品的差异。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:blog.google_innovation-and-ai_technology_ai_rss_:f19cddd04797ae7d",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": true,
+        "market_signal": "",
+        "product_name": "Google Search",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Google 官方博客宣布搜索接入 Gemini 4 Hydrogen，属于模型能力落地到具体产品的官方更新；但正文仅为轮播卡片描述，缺少功能细节和用户反馈，营销属性明显，给 7.5。",
+        "region": "global",
+        "score": 7.5,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Google 搜索接入 Gemini 4 Hydrogen 进行重大升级；让搜索体验用上新模型能力；对观察模型能力如何直接改变产品交互有参考价值。",
+        "tags": [
+          "Google Search",
+          "Gemini",
+          "产品集成"
         ],
         "target_user": "",
         "verticals": []
@@ -113524,6 +114458,37 @@
       },
       "stage": "candidate_analysis"
     },
+    "e92d36c7270bdb4efe0ab25b395c893c174d95e63d07d5d24b5eb0b2e645ef36": {
+      "created_at": "2026-11-13T06:43:34.448037+00:00",
+      "model": "kimi-k2.6",
+      "prompt_version": "deep-v3-beginner",
+      "result": {
+        "ai_role": "全程参与：需求识别（分析数据→建议）、编码执行（生成/辅助代码）、效果衡量（追踪指标变化）",
+        "evidence_status": "first_party",
+        "hands_on_exercise": "用任意 LLM（如 GPT-4）尝试：① 给它一段模拟的产品数据，让它分析并提出一个功能建议；② 要求它输出一段可运行的 Python 代码来实现该功能；③ 手动运行代码，把结果再丢给 LLM 让它评估效果是否达标。全程用自然语言对话完成，体会'观察→行动→验证'的 Agent 思路。",
+        "implementation_idea": "把 LLM 包装成一个'能干活'的代理：先让它读产品数据做判断，再让它调用工具写代码，最后让它追踪结果——本质是'观察→行动→验证'的闭环，不是一次性聊天。",
+        "learning_points": [
+          "Agent：不只是问 AI 问题，而是让 AI 能自主调用工具、做多步决策的系统",
+          "Function Calling：让 LLM 决定调用哪个外部工具（如查数据、写代码）的机制，是 Agent 的'手脚'",
+          "RAG（检索增强生成）：Agent 可能需要先查内部数据再做判断，把相关数据'喂'给模型再生成答案"
+        ],
+        "limitations_or_uncertainties": "未公开 Wave 具体使用哪个 OpenAI 模型、编码 Agent 的实现细节（是否完全自主或人机协作）、实际 1-2 天的成功率/覆盖场景比例、以及是否有外部用户验证过这些数字；原文为 OpenAI 官方客户故事，属于营销内容，无独立第三方验证",
+        "product_name": "Wave",
+        "sources": [
+          "https://openai.com/business/customer-stories/amplitude"
+        ],
+        "target_users": "Amplitude 内部产品团队（产品经理、工程师）",
+        "title_zh": "Amplitude 如何用 OpenAI 在 1-2 天内交付产品改进",
+        "usage_flow": [
+          "Wave 分析数据，主动识别该构建什么功能",
+          "团队确认方向后，Wave 调用编码 Agent 辅助写代码、快速上线",
+          "上线后 Wave 自动衡量该改动对产品指标的实际影响"
+        ],
+        "user_problem": "传统产品迭代周期长，从发现需求到上线往往需要数周；团队难以快速判断该优先做什么、快速编码验证、并及时衡量上线效果",
+        "what_it_is": "Amplitude 基于 OpenAI 模型构建的主动式产品 Agent（代理）Wave，能自动发现该做什么功能、辅助编码上线、并衡量效果。Agent 指让 AI 自主完成多步骤任务的系统，不只是单次问答。"
+      },
+      "stage": "deep_analysis"
+    },
     "e93bf49af6a59eb714f90d32c66a9582b4343a061c9cfd36ec681aedf2dea168": {
       "created_at": "2026-09-15T04:53:27.148711+00:00",
       "model": "deepseek-flash",
@@ -114472,6 +115437,44 @@
           "推理加速",
           "vLLM",
           "并行解码"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "eba76396bda86174573202e6169d9b9082f896032de8127c1d37e5481d93a039": {
+      "created_at": "2026-11-13T06:42:46.950448+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-codex-rust-v0.170.0-alpha.4",
+        "evidence_status": "first_party",
+        "follow_up": "等待正式版发布说明或功能变更日志。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "github:release:443607923",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "OpenAI Codex",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI Codex 的 alpha 版本发布，正文无任何变更说明，属于无实质信息的版本号更新，对产品经理学习无增量价值。",
+        "region": "global",
+        "score": 3.5,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "OpenAI 发布了 Codex 的 Rust 版 alpha 补丁，但没有说明改了什么，不值得拆解。",
+        "tags": [
+          "Coding Agent",
+          "OpenAI"
         ],
         "target_user": "",
         "verticals": []
@@ -122741,6 +123744,44 @@
           "Vercel",
           "CLI",
           "开发者工具"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "fad456f242494c472ea241e027b862c3ec70f1051455270d5ca8ed186c8f8e1e": {
+      "created_at": "2026-11-13T06:42:40.218053+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "codex-rust-v0.171.0-alpha.1",
+        "evidence_status": "first_party",
+        "follow_up": "等待正式版本发布说明。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "github:release:443807982",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Codex",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "仅是一个alpha版本发布，无实质内容描述，属于低信息量更新。",
+        "region": "global",
+        "score": 3.0,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "OpenAI Codex发布0.171.0-alpha.1版本，无详细更新说明。",
+        "tags": [
+          "Codex",
+          "版本发布"
         ],
         "target_user": "",
         "verticals": []
