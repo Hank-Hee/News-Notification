@@ -1,7 +1,607 @@
 {
   "version": 1,
-  "updated_at": "2026-11-13T06:43:34.477758+00:00",
+  "updated_at": "2026-11-14T06:20:36.041769+00:00",
   "products": [
+    {
+      "product_id": "product-ea48d0cc00ede2d3",
+      "product_name": "Claude Duet",
+      "builder_name": "Allison Johnson",
+      "first_seen": "2026-11-14",
+      "last_seen": "2026-11-14",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "verified",
+      "target_user": "不会编程的普通消费者，需要 AI 主动帮忙处理日常数字任务的人",
+      "user_problem": "普通用户想用上 AI Agent 自动做事，但市面上的 Agent 大多面向程序员，需要写代码或操作终端，门槛太高",
+      "what_it_is": "Anthropic 推出的面向普通消费者的 AI Agent，能在云端虚拟机上自主运行，帮用户完成写文档、整理资料等日常任务，不需要用户会写代码。",
+      "ai_role": "作为主动干活的'代理'——理解任务后自主规划步骤、操作云端电脑、调用应用、生成内容，全程不需要用户逐步指令",
+      "implementation_idea": "给 AI 配了一台'云端的个人电脑'，它能像人一样打开软件、浏览网页、写文档。用户只需要像发微信一样交代任务，AI 自己决定怎么一步步做完。",
+      "hands_on_exercise": "打开 Claude 官网的 Claude Duet 页面（claude.com/product/claude-duet），阅读官方功能说明；然后用 Claude 免费版尝试用一句话描述一个多步骤任务（如'帮我查明天北京天气并写一段出行建议'），观察 AI 是否能自主拆分步骤，对比'普通问答'和'Agent 模式'的体验差异。约 30 分钟。",
+      "limitations_or_uncertainties": "具体定价、支持的应用连接清单、单次任务最长运行时间、与 Claude Code 的功能重叠边界均未公开；The Verge 评测为记者个人体验，非大规模用户验证",
+      "region": "global",
+      "score": 8.6,
+      "summary": "记者实测 Anthropic 面向普通消费者的 Claude Duet 智能体，记录它主动帮忙写稿等真实体验，值得看消费级 agent 到底好不好用。",
+      "title": "Claude Duet 实测：一个有点神经质但意外好用的消费级 AI Agent",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1032518/claude-duet-ai-agent-hands-on",
+      "sources": [
+        {
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1032518/claude-duet-ai-agent-hands-on",
+          "title": "Claude’s Duet agent is a little neurotic and surprisingly helpful",
+          "source_type": "rss",
+          "published_at": "2026-11-13T14:00:00+00:00"
+        },
+        {
+          "url": "https://claude.com/product/claude-duet",
+          "title": "Claude Duet | A proactive AI agent to assist you",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Claude_Duet",
+          "title": "Claude Duet",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "anthropic-claude-duet-hands-on",
+          "date": "2026-11-14",
+          "title": "Claude Duet 实测：一个有点神经质但意外好用的消费级 AI Agent",
+          "summary": "记者实测 Anthropic 面向普通消费者的 Claude Duet 智能体，记录它主动帮忙写稿等真实体验，值得看消费级 agent 到底好不好用。",
+          "score": 8.6,
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1032518/claude-duet-ai-agent-hands-on"
+        }
+      ],
+      "usage_flow": [
+        "用户通过消息告诉 Duet 需要什么（比如'帮我写篇体验文章'）",
+        "Duet 在云端自己的虚拟机上独立工作，无需用户实时盯着",
+        "Duet 可以调用用户已连接的应用程序来收集信息或执行操作",
+        "完成后把结果返回给用户"
+      ],
+      "learning_points": [
+        "Agent（智能体）：不只是回答问题的聊天机器人，而是能自主行动、调用工具完成多步骤任务的 AI",
+        "Function Calling（函数调用）：AI 判断需要时主动调用外部工具或应用的能力，比如打开文档软件或查资料",
+        "云端虚拟机运行：AI 不在你本地电脑操作，而是在服务商的远程电脑上工作，保证安全和隔离"
+      ],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "消费级AI",
+        "实测"
+      ]
+    },
+    {
+      "product_id": "product-b65778aad37ae4a6",
+      "product_name": "ChatGPT Wallet",
+      "builder_name": "OpenAI News",
+      "first_seen": "2026-11-14",
+      "last_seen": "2026-11-14",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "美国 ChatGPT Pro 订阅用户，18 岁及以上，使用美国账单地址和符合条件的美国发行信用卡（American Express、Chase、Mastercard、Visa）",
+      "user_problem": "AI Agent 想帮用户买东西时，要么没法直接支付，要么让用户把银行卡信息交给 AI 不安全；用户也不放心让 AI 自主花钱，怕 unauthorized charge（未经授权的扣款）。",
+      "what_it_is": "ChatGPT Wallet 是 OpenAI 推出的支付功能，让 ChatGPT Work、Codex 和 dots 里的 AI Agent（智能体，能自主执行任务的 AI 程序）在用户明确批准后，用用户已有的信用卡完成购买。",
+      "ai_role": "Agent 负责找到商品、填好订单信息、发起支付请求；但最终扣款必须等用户点确认，AI 不能自己直接刷钱。",
+      "implementation_idea": "OpenAI 没有自建新支付网络，而是复用用户已有的信用卡体系，加上一层'人工审批'的权限控制——Agent 生成支付请求 → 用户确认 → 通过现有卡组织通道完成交易。这样既让 Agent 能'干活'，又把最终花钱的决定权留在用户手里。",
+      "hands_on_exercise": "打开 ChatGPT（需 Pro 订阅且在美国），检查设置里是否出现 Wallet 入口；如果没有，说明还没轮到你。然后观察你让 GPT-4o 或 o1 执行任何涉及'购买''订阅''下单'的任务时，它的回复是否主动拒绝或提示无法支付——对比有 Wallet 和没 Wallet 时的行为差异，理解'Agent 能力'和'支付权限'是怎么解耦的。",
+      "limitations_or_uncertainties": "目前仅向美国 Pro 用户限量推出；未公开是否支持非美国地区、非 Pro 用户、企业账户；未公开 OpenAI 是否从交易中抽成；未公开用户批准的具体交互细节（是弹窗、验证码还是生物识别）；未公开交易纠纷时 OpenAI 和银行的责任划分。",
+      "region": "global",
+      "score": 8.5,
+      "summary": "OpenAI 推出 ChatGPT Wallet，让 ChatGPT Work、Codex 和 dots 里的 Agent 在用户批准后用已有银行卡完成购买；这解决了 Agent 代付的安全与授权问题，是 Agent 商业化的重要产品案例。",
+      "title": "OpenAI 推出 ChatGPT Wallet：让 AI Agent 帮你在用户批准后代付款",
+      "url": "https://openai.com/index/introducing-chatgpt-wallet",
+      "sources": [
+        {
+          "url": "https://openai.com/index/introducing-chatgpt-wallet",
+          "title": "Introducing ChatGPT Wallet",
+          "source_type": "rss",
+          "published_at": "2026-11-13T15:00:00+00:00"
+        },
+        {
+          "url": "https://techcrunch.com/2026/11/13/chatgpts-new-wallet-lets-ai-agents-shop-and-check-out-for-you/",
+          "title": "ChatGPT's new Wallet lets AI agents shop and check out for ...",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1033425/openai-chatgpt-wallet",
+          "title": "ChatGPT Wallet lets OpenAI’s Dots agents make purchases for you",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "chatgpt-wallet-launch",
+          "date": "2026-11-14",
+          "title": "OpenAI 推出 ChatGPT Wallet：让 AI Agent 帮你在用户批准后代付款",
+          "summary": "OpenAI 推出 ChatGPT Wallet，让 ChatGPT Work、Codex 和 dots 里的 Agent 在用户批准后用已有银行卡完成购买；这解决了 Agent 代付的安全与授权问题，是 Agent 商业化的重要产品案例。",
+          "score": 8.5,
+          "url": "https://openai.com/index/introducing-chatgpt-wallet"
+        }
+      ],
+      "usage_flow": [
+        "用户在 ChatGPT 中添加符合条件的美国信用卡到 Wallet",
+        "在 ChatGPT Work、Codex 或 dots 中让 Agent 执行需要购买的任务",
+        "Agent 结账时弹出请求，用户明确批准这笔交易",
+        "用现有银行卡完成支付，享受原有卡片的欺诈保护和退款政策"
+      ],
+      "learning_points": [
+        "Agent（智能体）：不只是聊天回复，而是能调用工具、执行多步骤任务的 AI，比如这里它能浏览商品、填表、发起支付",
+        "Function Calling（函数调用）：AI 判断'现在该调用支付功能了'，但系统设计上强制要求人类确认这一步，不是 AI 想调就调",
+        "人机协同的权限设计：Agent 商业化的关键不是让 AI 多强，而是让用户敢用——明确谁对钱负责、出事了找谁"
+      ],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "支付",
+        "商业化"
+      ]
+    },
+    {
+      "product_id": "product-5af1bf574f28cc04",
+      "product_name": "Forge",
+      "builder_name": "OpenAI News",
+      "first_seen": "2026-11-14",
+      "last_seen": "2026-11-14",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Shield 用 OpenAI 的 Forge Agent 帮 IT 技术员在旧系统门户里自动完成交接操作；这解决了旧系统操作繁琐的问题，是 Agent 落地企业工作流的具体案例。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.8,
+      "summary": "Shield 用 OpenAI 的 Forge Agent 帮 IT 技术员在旧系统门户里自动完成交接操作；这解决了旧系统操作繁琐的问题，是 Agent 落地企业工作流的具体案例。",
+      "title": "Shield helps technicians hand off legacy portal work with OpenAI",
+      "url": "https://openai.com/business/customer-stories/shield",
+      "sources": [
+        {
+          "url": "https://openai.com/business/customer-stories/shield",
+          "title": "Shield helps technicians hand off legacy portal work with OpenAI",
+          "source_type": "rss",
+          "published_at": "2026-11-13T08:00:00+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "shield-forge-agents-openai",
+          "date": "2026-11-14",
+          "title": "Shield helps technicians hand off legacy portal work with OpenAI",
+          "summary": "Shield 用 OpenAI 的 Forge Agent 帮 IT 技术员在旧系统门户里自动完成交接操作；这解决了旧系统操作繁琐的问题，是 Agent 落地企业工作流的具体案例。",
+          "score": 7.8,
+          "url": "https://openai.com/business/customer-stories/shield"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "企业服务",
+        "工作流"
+      ]
+    },
+    {
+      "product_id": "product-74fa894c1b640ab0",
+      "product_name": "browser-use",
+      "builder_name": "gregpr07",
+      "first_seen": "2026-08-17",
+      "last_seen": "2026-11-14",
+      "occurrence_count": 4,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "verified",
+      "target_user": "需要让 AI 自动操作网页的开发者，比如做自动化测试、数据抓取、网页任务代理的人",
+      "user_problem": "以前让 AI 控制浏览器需要复杂的 DOM 序列化、动作 schema 转换，代码臃肿、慢、贵；开发者想要更简单、更快、更便宜的方案",
+      "what_it_is": "browser-use 发布 1.0.4，通过批量清理旧截图保住模型缓存，在基准分数不变的情况下把单任务成本从 0.434 美元降到 0.208 美元，做浏览器 Agent 的人可以直接借鉴这个省钱做法。",
+      "ai_role": "AI 负责根据任务描述，在 REPL 里逐行写出 Python 代码（如 `new_tab(url)`、`bu.click(41)`、`js(...)`），并读取执行结果决定下一步",
+      "implementation_idea": "以前的做法是先把网页 DOM 转成文本给 AI 看，AI 再输出固定格式的动作指令，中间有很多转换层。现在直接让 AI 写 Python 代码，代码通过 Chrome DevTools Protocol（浏览器自带的远程控制协议）直接在浏览器里执行，省掉了中间所有转换环节。就像以前是通过翻译官传话，现在是直接让 AI 用浏览器的'母语'下命令。",
+      "hands_on_exercise": "30 分钟：本地安装 browser-use 1.0.0，用免费 tier 的 API key，让 Agent 自动打开 GitHub 某个仓库页面，读取 star 数并打印。对比 0.x 版本（`pip install 'browser-use<1'`）的同样任务，感受配置差异和速度变化。",
+      "limitations_or_uncertainties": "官方声称的性能提升数字（33 分、2.7-5.2x 成本降低）来自自有基准测试，未公开第三方独立验证；cloud 浏览器需要 Browser Use 的 API key，本地模式需显式指定 `Browser('chromium')`；LangChain 模型直接报错不兼容；成本计算不包含 cloud 浏览器和代理费用",
+      "region": "global",
+      "score": 7.6,
+      "summary": "browser-use 发布 1.0.4，通过批量清理旧截图保住模型缓存，在基准分数不变的情况下把单任务成本从 0.434 美元降到 0.208 美元，做浏览器 Agent 的人可以直接借鉴这个省钱做法。",
+      "title": "browser-use/browser-use released 1.0.4",
+      "url": "https://github.com/browser-use/browser-use/releases/tag/1.0.4",
+      "sources": [
+        {
+          "url": "https://github.com/browser-use/browser-use/releases/tag/0.13.8",
+          "title": "browser-use/browser-use released 0.13.8",
+          "source_type": "github",
+          "published_at": "2026-08-16T18:48:54+00:00"
+        },
+        {
+          "url": "https://github.com/browser-use/browser-use/releases/tag/1.0.0",
+          "title": "browser-use/browser-use released 1.0.0",
+          "source_type": "github",
+          "published_at": "2026-11-10T02:04:48+00:00"
+        },
+        {
+          "url": "https://browser-use.com/",
+          "title": "Browser Use : Browser Agents and Cloud Browsers",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://github.com/browser-use/browser-use/releases/tag/1.0.3rc1",
+          "title": "browser-use/browser-use released 1.0.3rc1",
+          "source_type": "github",
+          "published_at": "2026-11-12T02:11:28+00:00"
+        },
+        {
+          "url": "https://github.com/browser-use/browser-use/releases/tag/1.0.4",
+          "title": "browser-use/browser-use released 1.0.4",
+          "source_type": "github",
+          "published_at": "2026-11-13T20:50:13+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "browser-use-release-0.13.8",
+          "date": "2026-08-17",
+          "title": "browser-use/browser-use released 0.13.8",
+          "summary": "browser-use 发布 0.13.8，修复了多个 Agent 和 DOM 处理问题，并更新了 Cerebras 模型支持。",
+          "score": 7.5,
+          "url": "https://github.com/browser-use/browser-use/releases/tag/0.13.8"
+        },
+        {
+          "update_id": "browser-use-1.0.0",
+          "date": "2026-11-10",
+          "title": "browser-use 1.0.0 发布：AI 浏览器代理重写引擎，代码砍掉 80%",
+          "summary": "browser-use 发布 1.0.0 正式版，重写引擎让 AI 代理在持久 REPL 中直接写 Python 控制 Chrome，代码减少 80%，性能提升最高 33 分，成本降低 2.7-5.2 倍。",
+          "score": 8.5,
+          "url": "https://github.com/browser-use/browser-use/releases/tag/1.0.0"
+        },
+        {
+          "update_id": "browser-use-1.0.3rc1",
+          "date": "2026-11-12",
+          "title": "browser-use/browser-use released 1.0.3rc1",
+          "summary": "Browser-use 发布了 1.0.3 候选版，修复了 CLI 和容器中浏览器连接等问题，让开发者更容易构建浏览器自动化 Agent。",
+          "score": 7.2,
+          "url": "https://github.com/browser-use/browser-use/releases/tag/1.0.3rc1"
+        },
+        {
+          "update_id": "browser-use-1-0-4",
+          "date": "2026-11-14",
+          "title": "browser-use/browser-use released 1.0.4",
+          "summary": "browser-use 发布 1.0.4，通过批量清理旧截图保住模型缓存，在基准分数不变的情况下把单任务成本从 0.434 美元降到 0.208 美元，做浏览器 Agent 的人可以直接借鉴这个省钱做法。",
+          "score": 7.6,
+          "url": "https://github.com/browser-use/browser-use/releases/tag/1.0.4"
+        }
+      ],
+      "usage_flow": [
+        "安装：`uv add 'browser-use==1.0.0'` 并设置 API key",
+        "写 Python 脚本创建 Agent 并描述任务，如 `'Find the number of stars of the browser-use repo'`",
+        "Agent 在持久 REPL（交互式执行环境：可以一行行运行代码并保留状态的地方）里写 Python 代码，通过 Chrome DevTools Protocol 直接控制浏览器",
+        "获取最终结果：`agent.run_sync().final_result()`"
+      ],
+      "learning_points": [
+        "Agent：不只是问答，而是能循环执行'思考-行动-观察'多轮直到任务完成的程序",
+        "REPL：交互式执行环境，代码一行行跑、变量状态保留，适合 AI 边写边试边改",
+        "Function Calling：让 AI 输出结构化指令去调用工具，这里扩展成让 AI 直接写完整代码来'调用'浏览器"
+      ],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "开源",
+        "浏览器自动化",
+        "AI Agent",
+        "Browser-use",
+        "Browser Agent",
+        "成本优化"
+      ]
+    },
+    {
+      "product_id": "product-1e9b8bbdeb596e93",
+      "product_name": "OpenAI Codex",
+      "builder_name": "github-actions[bot]",
+      "first_seen": "2026-08-21",
+      "last_seen": "2026-11-14",
+      "occurrence_count": 9,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "需要 AI 辅助编程的开发者，尤其是使用命令行工具或 IDE 插件、关注自动化编码工作流的技术团队",
+      "user_problem": "开发者想让 AI 自动执行代码任务，但担心安全问题（比如 AI 执行高权限命令需要反复确认）、连接外部工具时认证麻烦、以及 AI 生成图像背景无法透明等细节控制不足",
+      "what_it_is": "OpenAI Codex 发布 0.169.0，新增终端多侧聊标签、历史任务搜索和自定义模型提供商，让编码 agent 更好用。",
+      "ai_role": "理解用户意图后，自动编写/修改代码、调用工具、执行终端命令，并在敏感操作前等待人类确认",
+      "implementation_idea": "Codex 本质上是一个'有手脚的 LLM'——它把大模型的推理能力包装成可执行的动作循环：接收任务→规划步骤→调用工具（读文件、跑命令、连外部服务）→返回结果。这次更新主要加固了安全边界（默认审批、沙箱修复）和扩展了工具连接能力（MCP OAuth、WebSocket 认证）。MCP（Model Context Protocol）是一种让 AI 统一调用外部工具的标准协议，类似'AI 的 USB 接口'。",
+      "hands_on_exercise": "30 分钟体验：在 GitHub Codespaces 或本地安装 Codex CLI（rust-v0.158.0），让它帮你给一个小项目（如 Python 计算器）添加单元测试，故意触发一个需要 sudo 权限的命令（如安装依赖），观察终端审批提示；然后尝试用 'codex mcp add' 连接一个公开的 MCP 服务（如文件系统工具），体验 OAuth 配置流程",
+      "limitations_or_uncertainties": "未公开具体支持的 MCP 服务列表；未公开透明背景图像生成背后的模型版本（DALL-E 3 或 4？）；未公开 WebSocket bearer token 的具体加密方案细节；'多 Agent v2 直接消息'功能标注为可禁用，但未公开其默认行为与稳定性",
+      "region": "global",
+      "score": 7.4,
+      "summary": "OpenAI Codex 发布 0.169.0，新增终端多侧聊标签、历史任务搜索和自定义模型提供商，让编码 agent 更好用。",
+      "title": "openai/codex released rust-v0.169.0",
+      "url": "https://github.com/openai/codex/releases/tag/rust-v0.169.0",
+      "sources": [
+        {
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.149.0",
+          "title": "openai/codex released rust-v0.149.0",
+          "source_type": "github",
+          "published_at": "2026-08-20T21:04:55+00:00"
+        },
+        {
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.151.0",
+          "title": "openai/codex released rust-v0.151.0",
+          "source_type": "github",
+          "published_at": "2026-08-29T09:55:39+00:00"
+        },
+        {
+          "url": "https://learn.chatgpt.com/docs/plugins?surface=app",
+          "title": "Browse, install, and use plugins on supported ChatGPT and Codex ...",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.153.0",
+          "title": "openai/codex released rust-v0.153.0",
+          "source_type": "github",
+          "published_at": "2026-09-03T01:37:38+00:00"
+        },
+        {
+          "url": "https://openai.com/codex/",
+          "title": "Codex | AI Coding Partner from OpenAI",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.158.0",
+          "title": "openai/codex released rust-v0.158.0",
+          "source_type": "github",
+          "published_at": "2026-09-28T05:07:23+00:00"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/OpenAI_Codex_(AI_agent)",
+          "title": "OpenAI Codex (AI agent) - Wikipedia",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.163.0",
+          "title": "openai/codex released rust-v0.163.0",
+          "source_type": "github",
+          "published_at": "2026-10-15T21:30:38+00:00"
+        },
+        {
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.164.0",
+          "title": "openai/codex released rust-v0.164.0",
+          "source_type": "github",
+          "published_at": "2026-10-23T04:48:10+00:00"
+        },
+        {
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.166.0",
+          "title": "openai/codex released rust-v0.166.0",
+          "source_type": "github",
+          "published_at": "2026-10-29T19:47:53+00:00"
+        },
+        {
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.167.0",
+          "title": "openai/codex released rust-v0.167.0",
+          "source_type": "github",
+          "published_at": "2026-11-06T01:40:00+00:00"
+        },
+        {
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.169.0",
+          "title": "openai/codex released rust-v0.169.0",
+          "source_type": "github",
+          "published_at": "2026-11-13T08:37:05+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "openai-codex-rust-v0.149.0",
+          "date": "2026-08-21",
+          "title": "openai/codex released rust-v0.149.0",
+          "summary": "OpenAI Codex发布rust-v0.149.0，新增agents仪表盘、队列和更多Vim编辑命令。",
+          "score": 7.5,
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.149.0"
+        },
+        {
+          "update_id": "openai-codex-rust-v0.151.0",
+          "date": "2026-08-30",
+          "title": "OpenAI Codex CLI 发布 Rust 版 v0.151.0：强化 MCP 工具发现与插件管理",
+          "summary": "OpenAI Codex 发布 v0.151.0，增强 MCP 工具发现和插件管理。",
+          "score": 8.0,
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.151.0"
+        },
+        {
+          "update_id": "openai-codex-rust-v0.153.0",
+          "date": "2026-09-03",
+          "title": "OpenAI Codex 发布 Rust 版 v0.153.0：Vim 撤销重做、插件市场与上下文管理实验功能",
+          "summary": "OpenAI Codex发布rust-v0.153.0，新增Vim撤销重做、插件市场等多项功能。",
+          "score": 8.0,
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.153.0"
+        },
+        {
+          "update_id": "openai-codex-rust-v0-158-0",
+          "date": "2026-09-28",
+          "title": "OpenAI Codex 发布 Rust 版 v0.158.0：MCP OAuth 密钥、透明背景图像生成、终端审批默认开启",
+          "summary": "OpenAI Codex 发布 rust-v0.158.0，新增 MCP OAuth 客户端密钥、图像透明背景生成、终端审批默认开启等功能，适合关注编码 Agent 工具链的人。",
+          "score": 7.0,
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.158.0"
+        },
+        {
+          "update_id": "openai-codex-rust-v0.163.0",
+          "date": "2026-10-16",
+          "title": "openai/codex released rust-v0.163.0",
+          "summary": "OpenAI Codex 发布 v0.163.0，新增配置搜索、响应中追加指令、并行只读工具等功能，并默认开启 Daybreak。",
+          "score": 7.2,
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.163.0"
+        },
+        {
+          "update_id": "openai-codex-rust-v0-164-0",
+          "date": "2026-10-24",
+          "title": "openai/codex released rust-v0.164.0",
+          "summary": "OpenAI Codex CLI 发布 v0.164.0，新增可复用提示预设、内联模型参数、终端图像预览和企业 MCP 认证等功能。",
+          "score": 7.2,
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.164.0"
+        },
+        {
+          "update_id": "openai-codex-rust-v0.166.0",
+          "date": "2026-10-30",
+          "title": "openai/codex released rust-v0.166.0",
+          "summary": "OpenAI Codex 发布 v0.166.0，新增 GPT-6.1 Terra 模型支持、键盘选择转录和网络诊断命令，解决终端编码体验和模型接入问题；可观察编码 Agent 的产品细节。",
+          "score": 7.0,
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.166.0"
+        },
+        {
+          "update_id": "openai-codex-rust-v0-167-0",
+          "date": "2026-11-06",
+          "title": "openai/codex released rust-v0.167.0",
+          "summary": "OpenAI Codex 发布 v0.167.0，加了 agent 命令中心、多后端切换和 Vertex AI 配置向导，值得看编码 agent 怎么把多模型和多会话管理做进终端。",
+          "score": 7.4,
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.167.0"
+        },
+        {
+          "update_id": "openai-codex-rust-0-169-0",
+          "date": "2026-11-14",
+          "title": "openai/codex released rust-v0.169.0",
+          "summary": "OpenAI Codex 发布 0.169.0，新增终端多侧聊标签、历史任务搜索和自定义模型提供商，让编码 agent 更好用。",
+          "score": 7.4,
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.169.0"
+        }
+      ],
+      "usage_flow": [
+        "在终端安装/更新 Codex CLI：`npm install -g @openai/codex` 或从 GitHub Release 获取",
+        "配置 MCP 服务器（如文件系统、数据库等外部工具），设置可选的启动等待时间（grace period）",
+        "在对话中让 Codex 调用工具完成任务，必要时通过插件扩展拦截或修改工具返回结果",
+        "通过插件目录（plugin catalog）按仓库级别管理插件来源，过滤无效市场",
+        "终端运行 codex 启动 TUI（文本交互界面），或用 codex exec 直接执行命令",
+        "在 Vim 模式下用 u 撤销、Ctrl+R 重做，包括粘贴内容和附件都能完整恢复",
+        "用 codex plugin 命令从远程插件市场搜索、安装、卸载插件",
+        "需要时输入 /recap 手动总结，或开启实验性上下文管理让 AI 自动压缩历史记录",
+        "安装 Codex CLI 并配置项目环境",
+        "用自然语言描述需求（如'给这个函数加单元测试'），Codex 自动规划并执行",
+        "高权限命令（如 sudo）默认需要终端审批，确认后 AI 继续运行",
+        "需要时连接外部 MCP 服务（如数据库、API），通过 OAuth 密钥安全认证"
+      ],
+      "learning_points": [
+        "MCP（Model Context Protocol）：一种让 AI 应用统一调用外部工具/数据的标准协议，类似 AI 的'USB 接口'",
+        "Agent 与单次问答的区别：Agent 能自主分解任务、多次调用工具、根据中间结果调整下一步，不只是'问一答一'",
+        "Sandbox（沙盒）：给 AI 执行环境加限制（如不能随意读/写特定路径），防止自动化操作破坏真实系统",
+        "TUI（Text User Interface）：不是网页也不是 GUI，是在终端里用字符画出的交互界面，Vim 就是典型 TUI",
+        "MCP（Model Context Protocol）：一种让 AI 调用外部工具（如读文件、查数据库）的标准接口，Codex 通过它扩展能力",
+        "Token 预算上下文管理：LLM 有输入长度限制，超出后要么遗忘早期内容，要么费用飙升，所以需要智能压缩历史记录",
+        "Agent：不只是聊天，而是能自主规划、执行多步骤任务并调用工具的 AI 系统",
+        "MCP（Model Context Protocol）：让 AI 以统一方式连接外部数据源和工具的开放协议，避免每个工具都要单独适配",
+        "Function Calling：LLM 识别需要调用外部功能时，输出结构化指令（如'运行 git status'）而非纯文本，让 AI 能实际操作软件"
+      ],
+      "verticals": [],
+      "tags": [
+        "Codex",
+        "Agent",
+        "CLI",
+        "开发者工具",
+        "更新",
+        "GitHub Release",
+        "OpenAI",
+        "编程Agent",
+        "Release",
+        "OpenAI Codex",
+        "编码Agent"
+      ]
+    },
+    {
+      "product_id": "product-8deae6792212bc5c",
+      "product_name": "Vercel Token Pass",
+      "builder_name": "Roman Olynyk",
+      "first_seen": "2026-11-14",
+      "last_seen": "2026-11-14",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Vercel Token Pass 月费不变但额度从 80 美元提到 150 美元，覆盖 Kimi、GLM、DeepSeek 等开源模型，降低个人开发者跑 agent 的成本。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.0,
+      "summary": "Vercel Token Pass 月费不变但额度从 80 美元提到 150 美元，覆盖 Kimi、GLM、DeepSeek 等开源模型，降低个人开发者跑 agent 的成本。",
+      "title": "Token Pass now includes $150 in tokens for $30/month",
+      "url": "https://vercel.com/changelog/vercel-token-pass-now-includes-one-hundred-fifty-dollars-of-monthly-tokens",
+      "sources": [
+        {
+          "url": "https://vercel.com/changelog/vercel-token-pass-now-includes-one-hundred-fifty-dollars-of-monthly-tokens",
+          "title": "Token Pass now includes $150 in tokens for $30/month",
+          "source_type": "rss",
+          "published_at": "2026-11-13T18:42:00+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "vercel-token-pass-150-credit",
+          "date": "2026-11-14",
+          "title": "Token Pass now includes $150 in tokens for $30/month",
+          "summary": "Vercel Token Pass 月费不变但额度从 80 美元提到 150 美元，覆盖 Kimi、GLM、DeepSeek 等开源模型，降低个人开发者跑 agent 的成本。",
+          "score": 7.0,
+          "url": "https://vercel.com/changelog/vercel-token-pass-now-includes-one-hundred-fifty-dollars-of-monthly-tokens"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "定价",
+        "开源模型",
+        "开发者工具"
+      ]
+    },
+    {
+      "product_id": "product-ec774c8df2dfd54a",
+      "product_name": "llama.cpp",
+      "builder_name": "Hugging Face",
+      "first_seen": "2026-11-14",
+      "last_seen": "2026-11-14",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "llama.cpp 发布 v1.0.0，为本地运行 AI 模型提供更稳定的基础；这对做本地化 AI 产品的开发者有直接帮助，但属于底层工具更新。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.0,
+      "summary": "llama.cpp 发布 v1.0.0，为本地运行 AI 模型提供更稳定的基础；这对做本地化 AI 产品的开发者有直接帮助，但属于底层工具更新。",
+      "title": "llama.cpp v1.0.0 : A stronger foundation for the local AI ecosystem",
+      "url": "https://huggingface.co/blog/ggml-org/llama-cpp-v1",
+      "sources": [
+        {
+          "url": "https://huggingface.co/blog/ggml-org/llama-cpp-v1",
+          "title": "llama.cpp v1.0.0 : A stronger foundation for the local AI ecosystem",
+          "source_type": "rss",
+          "published_at": "2026-11-13T14:05:22+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "llama-cpp-v1-release",
+          "date": "2026-11-14",
+          "title": "llama.cpp v1.0.0 : A stronger foundation for the local AI ecosystem",
+          "summary": "llama.cpp 发布 v1.0.0，为本地运行 AI 模型提供更稳定的基础；这对做本地化 AI 产品的开发者有直接帮助，但属于底层工具更新。",
+          "score": 7.0,
+          "url": "https://huggingface.co/blog/ggml-org/llama-cpp-v1"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "本地推理",
+        "开源",
+        "基础设施"
+      ]
+    },
     {
       "product_id": "product-7dba368c4dbe037e",
       "product_name": "Replit Agent",
@@ -1082,99 +1682,6 @@
         "图像编辑",
         "3D",
         "AI 角色"
-      ]
-    },
-    {
-      "product_id": "product-74fa894c1b640ab0",
-      "product_name": "Browser-use",
-      "builder_name": "gregpr07",
-      "first_seen": "2026-08-17",
-      "last_seen": "2026-11-12",
-      "occurrence_count": 3,
-      "intelligence_type": "product_case",
-      "evidence_status": "first_party",
-      "target_user": "需要让 AI 自动操作网页的开发者，比如做自动化测试、数据抓取、网页任务代理的人",
-      "user_problem": "以前让 AI 控制浏览器需要复杂的 DOM 序列化、动作 schema 转换，代码臃肿、慢、贵；开发者想要更简单、更快、更便宜的方案",
-      "what_it_is": "Browser-use 发布了 1.0.3 候选版，修复了 CLI 和容器中浏览器连接等问题，让开发者更容易构建浏览器自动化 Agent。",
-      "ai_role": "AI 负责根据任务描述，在 REPL 里逐行写出 Python 代码（如 `new_tab(url)`、`bu.click(41)`、`js(...)`），并读取执行结果决定下一步",
-      "implementation_idea": "以前的做法是先把网页 DOM 转成文本给 AI 看，AI 再输出固定格式的动作指令，中间有很多转换层。现在直接让 AI 写 Python 代码，代码通过 Chrome DevTools Protocol（浏览器自带的远程控制协议）直接在浏览器里执行，省掉了中间所有转换环节。就像以前是通过翻译官传话，现在是直接让 AI 用浏览器的'母语'下命令。",
-      "hands_on_exercise": "30 分钟：本地安装 browser-use 1.0.0，用免费 tier 的 API key，让 Agent 自动打开 GitHub 某个仓库页面，读取 star 数并打印。对比 0.x 版本（`pip install 'browser-use<1'`）的同样任务，感受配置差异和速度变化。",
-      "limitations_or_uncertainties": "官方声称的性能提升数字（33 分、2.7-5.2x 成本降低）来自自有基准测试，未公开第三方独立验证；cloud 浏览器需要 Browser Use 的 API key，本地模式需显式指定 `Browser('chromium')`；LangChain 模型直接报错不兼容；成本计算不包含 cloud 浏览器和代理费用",
-      "region": "global",
-      "score": 7.2,
-      "summary": "Browser-use 发布了 1.0.3 候选版，修复了 CLI 和容器中浏览器连接等问题，让开发者更容易构建浏览器自动化 Agent。",
-      "title": "browser-use/browser-use released 1.0.3rc1",
-      "url": "https://github.com/browser-use/browser-use/releases/tag/1.0.3rc1",
-      "sources": [
-        {
-          "url": "https://github.com/browser-use/browser-use/releases/tag/0.13.8",
-          "title": "browser-use/browser-use released 0.13.8",
-          "source_type": "github",
-          "published_at": "2026-08-16T18:48:54+00:00"
-        },
-        {
-          "url": "https://github.com/browser-use/browser-use/releases/tag/1.0.0",
-          "title": "browser-use/browser-use released 1.0.0",
-          "source_type": "github",
-          "published_at": "2026-11-10T02:04:48+00:00"
-        },
-        {
-          "url": "https://browser-use.com/",
-          "title": "Browser Use : Browser Agents and Cloud Browsers",
-          "source_type": "supplemental",
-          "published_at": ""
-        },
-        {
-          "url": "https://github.com/browser-use/browser-use/releases/tag/1.0.3rc1",
-          "title": "browser-use/browser-use released 1.0.3rc1",
-          "source_type": "github",
-          "published_at": "2026-11-12T02:11:28+00:00"
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "browser-use-release-0.13.8",
-          "date": "2026-08-17",
-          "title": "browser-use/browser-use released 0.13.8",
-          "summary": "browser-use 发布 0.13.8，修复了多个 Agent 和 DOM 处理问题，并更新了 Cerebras 模型支持。",
-          "score": 7.5,
-          "url": "https://github.com/browser-use/browser-use/releases/tag/0.13.8"
-        },
-        {
-          "update_id": "browser-use-1.0.0",
-          "date": "2026-11-10",
-          "title": "browser-use 1.0.0 发布：AI 浏览器代理重写引擎，代码砍掉 80%",
-          "summary": "browser-use 发布 1.0.0 正式版，重写引擎让 AI 代理在持久 REPL 中直接写 Python 控制 Chrome，代码减少 80%，性能提升最高 33 分，成本降低 2.7-5.2 倍。",
-          "score": 8.5,
-          "url": "https://github.com/browser-use/browser-use/releases/tag/1.0.0"
-        },
-        {
-          "update_id": "browser-use-1.0.3rc1",
-          "date": "2026-11-12",
-          "title": "browser-use/browser-use released 1.0.3rc1",
-          "summary": "Browser-use 发布了 1.0.3 候选版，修复了 CLI 和容器中浏览器连接等问题，让开发者更容易构建浏览器自动化 Agent。",
-          "score": 7.2,
-          "url": "https://github.com/browser-use/browser-use/releases/tag/1.0.3rc1"
-        }
-      ],
-      "usage_flow": [
-        "安装：`uv add 'browser-use==1.0.0'` 并设置 API key",
-        "写 Python 脚本创建 Agent 并描述任务，如 `'Find the number of stars of the browser-use repo'`",
-        "Agent 在持久 REPL（交互式执行环境：可以一行行运行代码并保留状态的地方）里写 Python 代码，通过 Chrome DevTools Protocol 直接控制浏览器",
-        "获取最终结果：`agent.run_sync().final_result()`"
-      ],
-      "learning_points": [
-        "Agent：不只是问答，而是能循环执行'思考-行动-观察'多轮直到任务完成的程序",
-        "REPL：交互式执行环境，代码一行行跑、变量状态保留，适合 AI 边写边试边改",
-        "Function Calling：让 AI 输出结构化指令去调用工具，这里扩展成让 AI 直接写完整代码来'调用'浏览器"
-      ],
-      "verticals": [],
-      "tags": [
-        "Agent",
-        "开源",
-        "浏览器自动化",
-        "AI Agent",
-        "Browser-use"
       ]
     },
     {
@@ -3414,201 +3921,6 @@
       "tags": [
         "多模态",
         "视频生成"
-      ]
-    },
-    {
-      "product_id": "product-1e9b8bbdeb596e93",
-      "product_name": "OpenAI Codex",
-      "builder_name": "github-actions[bot]",
-      "first_seen": "2026-08-21",
-      "last_seen": "2026-11-06",
-      "occurrence_count": 8,
-      "intelligence_type": "product_case",
-      "evidence_status": "first_party",
-      "target_user": "需要 AI 辅助编程的开发者，尤其是使用命令行工具或 IDE 插件、关注自动化编码工作流的技术团队",
-      "user_problem": "开发者想让 AI 自动执行代码任务，但担心安全问题（比如 AI 执行高权限命令需要反复确认）、连接外部工具时认证麻烦、以及 AI 生成图像背景无法透明等细节控制不足",
-      "what_it_is": "OpenAI Codex 发布 v0.167.0，加了 agent 命令中心、多后端切换和 Vertex AI 配置向导，值得看编码 agent 怎么把多模型和多会话管理做进终端。",
-      "ai_role": "理解用户意图后，自动编写/修改代码、调用工具、执行终端命令，并在敏感操作前等待人类确认",
-      "implementation_idea": "Codex 本质上是一个'有手脚的 LLM'——它把大模型的推理能力包装成可执行的动作循环：接收任务→规划步骤→调用工具（读文件、跑命令、连外部服务）→返回结果。这次更新主要加固了安全边界（默认审批、沙箱修复）和扩展了工具连接能力（MCP OAuth、WebSocket 认证）。MCP（Model Context Protocol）是一种让 AI 统一调用外部工具的标准协议，类似'AI 的 USB 接口'。",
-      "hands_on_exercise": "30 分钟体验：在 GitHub Codespaces 或本地安装 Codex CLI（rust-v0.158.0），让它帮你给一个小项目（如 Python 计算器）添加单元测试，故意触发一个需要 sudo 权限的命令（如安装依赖），观察终端审批提示；然后尝试用 'codex mcp add' 连接一个公开的 MCP 服务（如文件系统工具），体验 OAuth 配置流程",
-      "limitations_or_uncertainties": "未公开具体支持的 MCP 服务列表；未公开透明背景图像生成背后的模型版本（DALL-E 3 或 4？）；未公开 WebSocket bearer token 的具体加密方案细节；'多 Agent v2 直接消息'功能标注为可禁用，但未公开其默认行为与稳定性",
-      "region": "global",
-      "score": 7.4,
-      "summary": "OpenAI Codex 发布 v0.167.0，加了 agent 命令中心、多后端切换和 Vertex AI 配置向导，值得看编码 agent 怎么把多模型和多会话管理做进终端。",
-      "title": "openai/codex released rust-v0.167.0",
-      "url": "https://github.com/openai/codex/releases/tag/rust-v0.167.0",
-      "sources": [
-        {
-          "url": "https://github.com/openai/codex/releases/tag/rust-v0.149.0",
-          "title": "openai/codex released rust-v0.149.0",
-          "source_type": "github",
-          "published_at": "2026-08-20T21:04:55+00:00"
-        },
-        {
-          "url": "https://github.com/openai/codex/releases/tag/rust-v0.151.0",
-          "title": "openai/codex released rust-v0.151.0",
-          "source_type": "github",
-          "published_at": "2026-08-29T09:55:39+00:00"
-        },
-        {
-          "url": "https://learn.chatgpt.com/docs/plugins?surface=app",
-          "title": "Browse, install, and use plugins on supported ChatGPT and Codex ...",
-          "source_type": "supplemental",
-          "published_at": ""
-        },
-        {
-          "url": "https://github.com/openai/codex/releases/tag/rust-v0.153.0",
-          "title": "openai/codex released rust-v0.153.0",
-          "source_type": "github",
-          "published_at": "2026-09-03T01:37:38+00:00"
-        },
-        {
-          "url": "https://openai.com/codex/",
-          "title": "Codex | AI Coding Partner from OpenAI",
-          "source_type": "supplemental",
-          "published_at": ""
-        },
-        {
-          "url": "https://github.com/openai/codex/releases/tag/rust-v0.158.0",
-          "title": "openai/codex released rust-v0.158.0",
-          "source_type": "github",
-          "published_at": "2026-09-28T05:07:23+00:00"
-        },
-        {
-          "url": "https://en.wikipedia.org/wiki/OpenAI_Codex_(AI_agent)",
-          "title": "OpenAI Codex (AI agent) - Wikipedia",
-          "source_type": "supplemental",
-          "published_at": ""
-        },
-        {
-          "url": "https://github.com/openai/codex/releases/tag/rust-v0.163.0",
-          "title": "openai/codex released rust-v0.163.0",
-          "source_type": "github",
-          "published_at": "2026-10-15T21:30:38+00:00"
-        },
-        {
-          "url": "https://github.com/openai/codex/releases/tag/rust-v0.164.0",
-          "title": "openai/codex released rust-v0.164.0",
-          "source_type": "github",
-          "published_at": "2026-10-23T04:48:10+00:00"
-        },
-        {
-          "url": "https://github.com/openai/codex/releases/tag/rust-v0.166.0",
-          "title": "openai/codex released rust-v0.166.0",
-          "source_type": "github",
-          "published_at": "2026-10-29T19:47:53+00:00"
-        },
-        {
-          "url": "https://github.com/openai/codex/releases/tag/rust-v0.167.0",
-          "title": "openai/codex released rust-v0.167.0",
-          "source_type": "github",
-          "published_at": "2026-11-06T01:40:00+00:00"
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "openai-codex-rust-v0.149.0",
-          "date": "2026-08-21",
-          "title": "openai/codex released rust-v0.149.0",
-          "summary": "OpenAI Codex发布rust-v0.149.0，新增agents仪表盘、队列和更多Vim编辑命令。",
-          "score": 7.5,
-          "url": "https://github.com/openai/codex/releases/tag/rust-v0.149.0"
-        },
-        {
-          "update_id": "openai-codex-rust-v0.151.0",
-          "date": "2026-08-30",
-          "title": "OpenAI Codex CLI 发布 Rust 版 v0.151.0：强化 MCP 工具发现与插件管理",
-          "summary": "OpenAI Codex 发布 v0.151.0，增强 MCP 工具发现和插件管理。",
-          "score": 8.0,
-          "url": "https://github.com/openai/codex/releases/tag/rust-v0.151.0"
-        },
-        {
-          "update_id": "openai-codex-rust-v0.153.0",
-          "date": "2026-09-03",
-          "title": "OpenAI Codex 发布 Rust 版 v0.153.0：Vim 撤销重做、插件市场与上下文管理实验功能",
-          "summary": "OpenAI Codex发布rust-v0.153.0，新增Vim撤销重做、插件市场等多项功能。",
-          "score": 8.0,
-          "url": "https://github.com/openai/codex/releases/tag/rust-v0.153.0"
-        },
-        {
-          "update_id": "openai-codex-rust-v0-158-0",
-          "date": "2026-09-28",
-          "title": "OpenAI Codex 发布 Rust 版 v0.158.0：MCP OAuth 密钥、透明背景图像生成、终端审批默认开启",
-          "summary": "OpenAI Codex 发布 rust-v0.158.0，新增 MCP OAuth 客户端密钥、图像透明背景生成、终端审批默认开启等功能，适合关注编码 Agent 工具链的人。",
-          "score": 7.0,
-          "url": "https://github.com/openai/codex/releases/tag/rust-v0.158.0"
-        },
-        {
-          "update_id": "openai-codex-rust-v0.163.0",
-          "date": "2026-10-16",
-          "title": "openai/codex released rust-v0.163.0",
-          "summary": "OpenAI Codex 发布 v0.163.0，新增配置搜索、响应中追加指令、并行只读工具等功能，并默认开启 Daybreak。",
-          "score": 7.2,
-          "url": "https://github.com/openai/codex/releases/tag/rust-v0.163.0"
-        },
-        {
-          "update_id": "openai-codex-rust-v0-164-0",
-          "date": "2026-10-24",
-          "title": "openai/codex released rust-v0.164.0",
-          "summary": "OpenAI Codex CLI 发布 v0.164.0，新增可复用提示预设、内联模型参数、终端图像预览和企业 MCP 认证等功能。",
-          "score": 7.2,
-          "url": "https://github.com/openai/codex/releases/tag/rust-v0.164.0"
-        },
-        {
-          "update_id": "openai-codex-rust-v0.166.0",
-          "date": "2026-10-30",
-          "title": "openai/codex released rust-v0.166.0",
-          "summary": "OpenAI Codex 发布 v0.166.0，新增 GPT-6.1 Terra 模型支持、键盘选择转录和网络诊断命令，解决终端编码体验和模型接入问题；可观察编码 Agent 的产品细节。",
-          "score": 7.0,
-          "url": "https://github.com/openai/codex/releases/tag/rust-v0.166.0"
-        },
-        {
-          "update_id": "openai-codex-rust-v0-167-0",
-          "date": "2026-11-06",
-          "title": "openai/codex released rust-v0.167.0",
-          "summary": "OpenAI Codex 发布 v0.167.0，加了 agent 命令中心、多后端切换和 Vertex AI 配置向导，值得看编码 agent 怎么把多模型和多会话管理做进终端。",
-          "score": 7.4,
-          "url": "https://github.com/openai/codex/releases/tag/rust-v0.167.0"
-        }
-      ],
-      "usage_flow": [
-        "在终端安装/更新 Codex CLI：`npm install -g @openai/codex` 或从 GitHub Release 获取",
-        "配置 MCP 服务器（如文件系统、数据库等外部工具），设置可选的启动等待时间（grace period）",
-        "在对话中让 Codex 调用工具完成任务，必要时通过插件扩展拦截或修改工具返回结果",
-        "通过插件目录（plugin catalog）按仓库级别管理插件来源，过滤无效市场",
-        "终端运行 codex 启动 TUI（文本交互界面），或用 codex exec 直接执行命令",
-        "在 Vim 模式下用 u 撤销、Ctrl+R 重做，包括粘贴内容和附件都能完整恢复",
-        "用 codex plugin 命令从远程插件市场搜索、安装、卸载插件",
-        "需要时输入 /recap 手动总结，或开启实验性上下文管理让 AI 自动压缩历史记录",
-        "安装 Codex CLI 并配置项目环境",
-        "用自然语言描述需求（如'给这个函数加单元测试'），Codex 自动规划并执行",
-        "高权限命令（如 sudo）默认需要终端审批，确认后 AI 继续运行",
-        "需要时连接外部 MCP 服务（如数据库、API），通过 OAuth 密钥安全认证"
-      ],
-      "learning_points": [
-        "MCP（Model Context Protocol）：一种让 AI 应用统一调用外部工具/数据的标准协议，类似 AI 的'USB 接口'",
-        "Agent 与单次问答的区别：Agent 能自主分解任务、多次调用工具、根据中间结果调整下一步，不只是'问一答一'",
-        "Sandbox（沙盒）：给 AI 执行环境加限制（如不能随意读/写特定路径），防止自动化操作破坏真实系统",
-        "TUI（Text User Interface）：不是网页也不是 GUI，是在终端里用字符画出的交互界面，Vim 就是典型 TUI",
-        "MCP（Model Context Protocol）：一种让 AI 调用外部工具（如读文件、查数据库）的标准接口，Codex 通过它扩展能力",
-        "Token 预算上下文管理：LLM 有输入长度限制，超出后要么遗忘早期内容，要么费用飙升，所以需要智能压缩历史记录",
-        "Agent：不只是聊天，而是能自主规划、执行多步骤任务并调用工具的 AI 系统",
-        "MCP（Model Context Protocol）：让 AI 以统一方式连接外部数据源和工具的开放协议，避免每个工具都要单独适配",
-        "Function Calling：LLM 识别需要调用外部功能时，输出结构化指令（如'运行 git status'）而非纯文本，让 AI 能实际操作软件"
-      ],
-      "verticals": [],
-      "tags": [
-        "Codex",
-        "Agent",
-        "CLI",
-        "开发者工具",
-        "更新",
-        "GitHub Release",
-        "OpenAI",
-        "编程Agent",
-        "Release",
-        "OpenAI Codex",
-        "编码Agent"
       ]
     },
     {
