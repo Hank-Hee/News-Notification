@@ -1,7 +1,456 @@
 {
   "version": 1,
-  "updated_at": "2026-11-14T06:20:36.041769+00:00",
+  "updated_at": "2026-11-15T06:28:07.981891+00:00",
   "products": [
+    {
+      "product_id": "product-171c314a55a03b79",
+      "product_name": "browser-use",
+      "builder_name": "sarath-menon",
+      "first_seen": "2026-11-15",
+      "last_seen": "2026-11-15",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "需要让 AI 自动操作网页的开发者、做 Agent 产品的团队",
+      "user_problem": "Agent 跑完任务后，开发者不知道它真成功了还是假装成功；遇到网站报错、验证码、格式限制时，Agent 不会主动记录，导致同样错误反复踩坑",
+      "what_it_is": "一个开源的浏览器自动化框架，让 AI Agent（能自主执行任务的 AI 程序）像真人一样操作网页，新版本增加了「自动判分」功能来验证任务到底成没成",
+      "ai_role": "执行浏览器操作（点击、输入、截图等），并在任务结束后由用户指定的模型自动复盘整个操作轨迹，判定成败并提取踩坑经验",
+      "implementation_idea": "把 Agent 的操作轨迹（做了哪些动作）+ 最后几张截图 + 最终页面内容，打包发给用户自己指定的 LLM 模型，让这个'裁判模型'独立做判断，而不是让干活的 Agent 自己给自己打分",
+      "hands_on_exercise": "30 分钟：安装 browser-use 1.0.5，写一个简单任务（如'查北京今天天气'），分别用 judge=True 和 judge=False 各跑一次，对比 result.judgement 的输出差异；再故意写一个会触发格式错误的任务（如注册时乱填手机号），观察 gotchas 是否被记录",
+      "limitations_or_uncertainties": "13 次真实运行、每次判 3 次的对比数据由项目方自行提供，未公开完整测试任务类型和模型版本；judge 的准确性高度依赖用户指定的模型能力；未公开是否支持非 OpenAI 的模型做 judge",
+      "region": "global",
+      "score": 8.2,
+      "summary": "browser-use 发布 1.0.5，让每次浏览器 agent 运行都由自有模型判定成败并记录踩坑，解决 agent 结果不可验证的问题，附真实运行数据，值得做 agent 产品的人拆解。",
+      "title": "browser-use 1.0.5：让 AI 自动给每次浏览器任务打成败分、记坑",
+      "url": "https://github.com/browser-use/browser-use/releases/tag/1.0.5",
+      "sources": [
+        {
+          "url": "https://github.com/browser-use/browser-use/releases/tag/1.0.5",
+          "title": "browser-use/browser-use released 1.0.5",
+          "source_type": "github",
+          "published_at": "2026-11-14T08:24:22+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "browser-use-1-0-5-judge",
+          "date": "2026-11-15",
+          "title": "browser-use 1.0.5：让 AI 自动给每次浏览器任务打成败分、记坑",
+          "summary": "browser-use 发布 1.0.5，让每次浏览器 agent 运行都由自有模型判定成败并记录踩坑，解决 agent 结果不可验证的问题，附真实运行数据，值得做 agent 产品的人拆解。",
+          "score": 8.2,
+          "url": "https://github.com/browser-use/browser-use/releases/tag/1.0.5"
+        }
+      ],
+      "usage_flow": [
+        "pip install 'browser-use==1.0.5' 安装",
+        "写任务描述（如'买一双 42 码、120 美元以下的越野跑鞋'），可选传 judge_context=自定义成败标准",
+        "运行后自动获得 result.judgement，包含 success/failure_reason/gotchas 等字段",
+        "查看 gotchas 记录，针对性修复（如'该网站要求电话号码格式为 (###) ###-####'）"
+      ],
+      "learning_points": [
+        "Agent：能自主规划步骤、调用工具完成任务的 AI 程序，这里指自动操作浏览器的程序",
+        "Function Calling：让 LLM 可以调用外部功能（如点击网页、截图）的机制，这里用于浏览器操作和判分",
+        "RAG（检索增强生成）：未直接涉及，但 gotchas 的积累方式类似——把历史踩坑记录喂给后续任务做参考"
+      ],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "浏览器自动化",
+        "开源"
+      ]
+    },
+    {
+      "product_id": "product-079759eb44953975",
+      "product_name": "DeepSeek Harness",
+      "builder_name": "财联社",
+      "first_seen": "2026-08-16",
+      "last_seen": "2026-11-15",
+      "occurrence_count": 2,
+      "intelligence_type": "model_capability",
+      "evidence_status": "reported",
+      "target_user": "AI 应用开发者、需要编排多模型/多工具流程的技术团队",
+      "user_problem": "开发者想快速搭建能调用多种工具、多步骤协作的 AI 应用时，常要自己写大量胶水代码，重复造轮子",
+      "what_it_is": "DeepSeek 在 V4 全系列模型上线后开放了 Harness 开发者预览版测试，为开发者提供新的模型调用与编排入口。",
+      "ai_role": "DeepSeek 大模型作为「大脑」理解任务、决策调用哪个插件，并生成最终回复",
+      "implementation_idea": "把每个功能（搜索、计算器、文件读取等）都做成独立插件，Harness 作为总调度器，根据用户输入让模型判断该激活哪些插件、按什么顺序执行，再把结果传回模型继续下一步",
+      "hands_on_exercise": "30 分钟：访问 DeepSeek Harness 官网，按文档安装桌面版；尝试运行一个内置示例（如「搜索网页并总结」），观察模型何时触发搜索插件、如何把搜索结果融入最终回答",
+      "limitations_or_uncertainties": "「V4 全系列模型上线」这一说法在提供的原始链接和搜索结果中均未找到官方直接确认，仅见于财联社新闻标题；Harness 与 V4 模型的具体兼容细节、预览版功能边界未公开",
+      "region": "china",
+      "score": 7.8,
+      "summary": "DeepSeek 在 V4 全系列模型上线后开放了 Harness 开发者预览版测试，为开发者提供新的模型调用与编排入口。",
+      "title": "V4全系列模型上线后，DeepSeek Harness开发者预览版开放测试 - 财联社",
+      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE4wd0JWNXNkT3NmUy1UV09ldm1iSXY3dTllQ1o1ZFg5MFZPS1BRY3RCTUJLc05UYWJTb1R6VHhoT0NXM3hJQU5xLQ?oc=5",
+      "sources": [
+        {
+          "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE4wd0JWNXNkT3NmUy1UV09ldm1iSXY3dTllQ1o1ZFg5MFZPS1BRY3RCTUJLc05UYWJTb1R6VHhoT0NXM3hJQU5xLQ?oc=5",
+          "title": "V4全系列模型上线后，DeepSeek Harness开发者预览版开放测试 - 财联社",
+          "source_type": "google_news",
+          "published_at": "2026-08-15T17:50:46+00:00"
+        },
+        {
+          "url": "https://www.deepseek.com/en/harness/",
+          "title": "DeepSeek Harness | Explore the limits of intelligence",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://github.com/deepseek-ai/deepseek-harness",
+          "title": "GitHub - deepseek -ai/ deepseek - harness : DeepSeek Harness ...",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "deepseek-harness-preview",
+          "date": "2026-08-16",
+          "title": "V4全系列模型上线后，DeepSeek Harness开发者预览版开放测试 - 财联社",
+          "summary": "DeepSeek 在 V4 全系列模型上线后开放 Harness 开发者预览版测试，值得关注其智能体框架能力。",
+          "score": 8.0,
+          "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE4wd0JWNXNkT3NmUy1UV09ldm1iSXY3dTllQ1o1ZFg5MFZPS1BRY3RCTUJLc05UYWJTb1R6VHhoT0NXM3hJQU5xLQ?oc=5"
+        },
+        {
+          "update_id": "deepseek-v4-harness-preview",
+          "date": "2026-10-11",
+          "title": "V4全系列模型上线后，DeepSeek Harness开发者预览版开放测试 - 财联社",
+          "summary": "DeepSeek 在 V4 全系列模型上线后开放了 Harness 开发者预览版测试，为开发者提供新的模型调用与编排入口。",
+          "score": 7.8,
+          "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE4wd0JWNXNkT3NmUy1UV09ldm1iSXY3dTllQ1o1ZFg5MFZPS1BRY3RCTUJLc05UYWJTb1R6VHhoT0NXM3hJQU5xLQ?oc=5"
+        }
+      ],
+      "usage_flow": [
+        "安装 Harness 桌面端或从代码启动 Web 界面",
+        "按需选择/开发插件（如搜索、代码执行、数据库连接等）",
+        "用 Harness 编排插件与 DeepSeek 模型的交互流程",
+        "运行并调试 Agent 任务，观察多步骤执行结果"
+      ],
+      "learning_points": [
+        "Agent：让 AI 不仅能聊天，还能自主决定「用什么工具、分几步完成」的系统",
+        "Function Calling（工具调用）：模型识别用户意图后，输出结构化指令去调用外部 API 或插件，而非直接生成答案",
+        "插件化架构：把复杂系统拆成可插拔的小模块，方便复用和扩展"
+      ],
+      "verticals": [],
+      "tags": [
+        "DeepSeek",
+        "智能体",
+        "开发者预览",
+        "模型能力",
+        "开发者工具"
+      ]
+    },
+    {
+      "product_id": "product-2af72e34b3464cf6",
+      "product_name": "Antigravity",
+      "builder_name": "acossta",
+      "first_seen": "2026-11-15",
+      "last_seen": "2026-11-15",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Google 在 Antigravity 中推出 /teamwork 多智能体协作功能，让多个 AI 角色分工完成工程任务；开发者讨论其省时但上下文重复消耗大的问题，值得关注多智能体产品如何设计协作与成本控制。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.6,
+      "summary": "Google 在 Antigravity 中推出 /teamwork 多智能体协作功能，让多个 AI 角色分工完成工程任务；开发者讨论其省时但上下文重复消耗大的问题，值得关注多智能体产品如何设计协作与成本控制。",
+      "title": "Advancing science and engineering with Antigravity's /teamwork",
+      "url": "https://research.google/blog/advancing-science-engineering-with-antigravitys-teamwork-feature/",
+      "sources": [
+        {
+          "url": "https://research.google/blog/advancing-science-engineering-with-antigravitys-teamwork-feature/",
+          "title": "Advancing science and engineering with Antigravity's /teamwork",
+          "source_type": "hackernews",
+          "published_at": "2026-11-14T13:20:43+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "antigravity-teamwork-feature",
+          "date": "2026-11-15",
+          "title": "Advancing science and engineering with Antigravity's /teamwork",
+          "summary": "Google 在 Antigravity 中推出 /teamwork 多智能体协作功能，让多个 AI 角色分工完成工程任务；开发者讨论其省时但上下文重复消耗大的问题，值得关注多智能体产品如何设计协作与成本控制。",
+          "score": 7.6,
+          "url": "https://research.google/blog/advancing-science-engineering-with-antigravitys-teamwork-feature/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "多智能体",
+        "Google",
+        "开发工具"
+      ]
+    },
+    {
+      "product_id": "product-03e9b084a307db8c",
+      "product_name": "DeepSeek API",
+      "builder_name": "Sohu",
+      "first_seen": "2026-11-15",
+      "last_seen": "2026-11-15",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "DeepSeek发布全套API，让开发者能轻松复刻完整DeepSeek App；这降低了AI产品开发门槛，值得初学者研究如何用API搭建产品。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "china",
+      "score": 7.5,
+      "summary": "DeepSeek发布全套API，让开发者能轻松复刻完整DeepSeek App；这降低了AI产品开发门槛，值得初学者研究如何用API搭建产品。",
+      "title": "【华西计算机】1114｜DeepSeek发布全家桶API，开发者可轻松复刻完整DeepSeek App - Sohu",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQZU00M0VsLXYyd1M5dVRiRjh1WjlCZF9OUlJKQmRQS0FXcU9EckdkVzVva3RRR1AzRUNNYlBEQUN1bXJfRTVMY1BSVVZqWjRGZU5ZMU1tZ2dpZVRLeXNuQUpnUS1IbWhvSW9PVTRobkZORjRYazRLMGlhNGRpakM2WlhYYWRwdUpMa1JIUQ?oc=5",
+      "sources": [
+        {
+          "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQZU00M0VsLXYyd1M5dVRiRjh1WjlCZF9OUlJKQmRQS0FXcU9EckdkVzVva3RRR1AzRUNNYlBEQUN1bXJfRTVMY1BSVVZqWjRGZU5ZMU1tZ2dpZVRLeXNuQUpnUS1IbWhvSW9PVTRobkZORjRYazRLMGlhNGRpakM2WlhYYWRwdUpMa1JIUQ?oc=5",
+          "title": "【华西计算机】1114｜DeepSeek发布全家桶API，开发者可轻松复刻完整DeepSeek App - Sohu",
+          "source_type": "google_news",
+          "published_at": "2026-11-14T14:52:47+00:00"
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE82VVFKRC02Wjl1SWFVTDQ1UHFwbEltVkRsYTljcmROQ1FmQ1JYTjVLMlZJNTl1LWtHT3E1QlMtd1R4QTF0NGY4dQ?oc=5",
+          "title": "突发！DeepSeek开放全家桶API：官方App功能均可自由组合调用 - 智源社区",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFA5SWZrU1ZKMkFheUlZeEdsQXZ6MzFZb29hN2o4X1lMVTBFOEVybzgtazM0aWdhSWZHcDJ5cV9hZmdzc2Z0THZ2S0RidFQzdEZ3dEltUUxWZFJBc3ZwV0ExR0xKa0pNc3ROekE?oc=5",
+          "title": "杀疯了，DeepSeek 又开源了全家桶应用 - 53AI",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "deepseek-api-suite-release",
+          "date": "2026-11-15",
+          "title": "【华西计算机】1114｜DeepSeek发布全家桶API，开发者可轻松复刻完整DeepSeek App - Sohu",
+          "summary": "DeepSeek发布全套API，让开发者能轻松复刻完整DeepSeek App；这降低了AI产品开发门槛，值得初学者研究如何用API搭建产品。",
+          "score": 7.5,
+          "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQZU00M0VsLXYyd1M5dVRiRjh1WjlCZF9OUlJKQmRQS0FXcU9EckdkVzVva3RRR1AzRUNNYlBEQUN1bXJfRTVMY1BSVVZqWjRGZU5ZMU1tZ2dpZVRLeXNuQUpnUS1IbWhvSW9PVTRobkZORjRYazRLMGlhNGRpakM2WlhYYWRwdUpMa1JIUQ?oc=5"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "API",
+        "开发者工具",
+        "DeepSeek"
+      ]
+    },
+    {
+      "product_id": "product-ae1065e4562085e4",
+      "product_name": "Turbo-Browser-MCP",
+      "builder_name": "tthanh2k6",
+      "first_seen": "2026-11-15",
+      "last_seen": "2026-11-15",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "正在用 MCP 协议开发 AI Agent、需要让 Agent 自动操作网页的开发者",
+      "user_problem": "AI Agent 操作网页时，现有工具要么一次只能填一个表单字段（效率低），要么把整个网页 DOM 全传给模型（ token 浪费、速度慢），要么 Agent 容易手滑点错提交按钮造成不可逆操作",
+      "what_it_is": "一套开源的 MCP 工具扩展，让 AI Agent 批量填网页表单、只传 DOM 变化部分、防止误提交",
+      "ai_role": "AI Agent 作为\"操作员\"，通过 MCP 调用这些精确工具来执行浏览器自动化任务；工具设计决定了 Agent 能做什么、做得多稳",
+      "implementation_idea": "在 MCP 协议（AI 和外部工具之间的\"通用插座\"）和浏览器之间加一层中间件：批量填表是把多个字段打包成一次调用；DOM delta 是用 diff 算法只传变化的部分；提交保护是在真正触发 submit 之前加一道\"门禁\"，需要 Agent 或用户显式确认",
+      "hands_on_exercise": "30 分钟：克隆该 GitHub 仓库，按 README 启动 MCP Server，用 Claude Desktop 或任意 MCP 客户端连接，让 AI 尝试在一个本地测试网页上批量填写 3 个表单字段，观察 DOM delta 返回的数据量是否比全页小",
+      "limitations_or_uncertainties": "项目 2025 年 6 月刚发布，GitHub star 数和实际用户反馈极少；未验证是否支持非 Chromium 浏览器；批量填表的具体并发策略、DOM delta 的 diff 算法细节未在文档中说明；无版本号或长期维护承诺",
+      "region": "global",
+      "score": 7.4,
+      "summary": "开发者开源 Turbo-Browser-MCP，给 AI agent 的浏览器操作加上批量填表、DOM 增量和提交保护；它解决 agent 操作网页时工具不够精确的问题，适合看 MCP 工具设计如何影响 agent 能力。",
+      "title": "Turbo-Browser-MCP：给 AI Agent 的浏览器操作加\"保险\"的开源工具集",
+      "url": "https://github.com/Tthanh2k6/turbo-browser-mcp",
+      "sources": [
+        {
+          "url": "https://github.com/Tthanh2k6/turbo-browser-mcp",
+          "title": "Show HN: Turbo-Browser-MCP – Batch forms, DOM deltas and submit guards for MCP",
+          "source_type": "hackernews",
+          "published_at": "2026-11-15T04:09:11+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "turbo-browser-mcp-showhn",
+          "date": "2026-11-15",
+          "title": "Turbo-Browser-MCP：给 AI Agent 的浏览器操作加\"保险\"的开源工具集",
+          "summary": "开发者开源 Turbo-Browser-MCP，给 AI agent 的浏览器操作加上批量填表、DOM 增量和提交保护；它解决 agent 操作网页时工具不够精确的问题，适合看 MCP 工具设计如何影响 agent 能力。",
+          "score": 7.4,
+          "url": "https://github.com/Tthanh2k6/turbo-browser-mcp"
+        }
+      ],
+      "usage_flow": [
+        "开发者把 Turbo-Browser-MCP 接入自己的 MCP Server",
+        "Agent 收到填表任务时，调用批量填表工具一次性填多个字段",
+        "Agent 获取网页信息时，只收到 DOM 变化的部分（DOM delta），而不是整页",
+        "Agent 想点提交前，提交保护工具会先拦截，等待确认或额外验证"
+      ],
+      "learning_points": [
+        "MCP（Model Context Protocol）：Anthropic 推出的开放协议，相当于 AI 模型的'USB-C 接口'，让不同 AI 都能统一调用外部工具",
+        "Agent 的能力边界不只取决于模型多聪明，更取决于工具设计得多精确——就像给工人好扳手比给天才用手拧更快",
+        "DOM（Document Object Model）：网页的'骨架地图'，AI 要操作网页就得读懂这张地图，但全图太大，只传变化部分更省资源"
+      ],
+      "verticals": [],
+      "tags": [
+        "MCP",
+        "Agent",
+        "浏览器自动化",
+        "开源"
+      ]
+    },
+    {
+      "product_id": "product-0b18c94f6ba3be9d",
+      "product_name": "datasette-llm",
+      "builder_name": "Simon Willison",
+      "first_seen": "2026-11-15",
+      "last_seen": "2026-11-15",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Simon Willison 发布 datasette-llm 0.1a11，让 Datasette 可以配置任意 OpenAI 兼容端点，从而用本地模型跑数据查询，适合初学者理解 LLM 接入方式。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.2,
+      "summary": "Simon Willison 发布 datasette-llm 0.1a11，让 Datasette 可以配置任意 OpenAI 兼容端点，从而用本地模型跑数据查询，适合初学者理解 LLM 接入方式。",
+      "title": "datasette-llm 0.1a11",
+      "url": "https://simonwillison.net/2026/Nov/14/datasette-llm/",
+      "sources": [
+        {
+          "url": "https://simonwillison.net/2026/Nov/14/datasette-llm/",
+          "title": "datasette-llm 0.1a11",
+          "source_type": "rss",
+          "published_at": "2026-11-14T23:59:28+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "datasette-llm-0-1a11-openai-compatible-endpoints",
+          "date": "2026-11-15",
+          "title": "datasette-llm 0.1a11",
+          "summary": "Simon Willison 发布 datasette-llm 0.1a11，让 Datasette 可以配置任意 OpenAI 兼容端点，从而用本地模型跑数据查询，适合初学者理解 LLM 接入方式。",
+          "score": 7.2,
+          "url": "https://simonwillison.net/2026/Nov/14/datasette-llm/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "LLM 工具",
+        "开源",
+        "本地模型"
+      ]
+    },
+    {
+      "product_id": "product-c8f44c48ab994683",
+      "product_name": "terminactory",
+      "builder_name": "snipedbywifi",
+      "first_seen": "2026-11-15",
+      "last_seen": "2026-11-15",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "开发者用 Claude 辅助做了一个终端里的工厂游戏，还接入 Claude Code hooks 让 agent 的回复以游戏内电报形式出现；这是 AI 辅助个人产品开发的真实案例，可看 AI 在开发流程中如何被嵌入。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.2,
+      "summary": "开发者用 Claude 辅助做了一个终端里的工厂游戏，还接入 Claude Code hooks 让 agent 的回复以游戏内电报形式出现；这是 AI 辅助个人产品开发的真实案例，可看 AI 在开发流程中如何被嵌入。",
+      "title": "Show HN: A terminal-native idle factory game, written in Rust with ratatui",
+      "url": "https://gitlab.com/snipedbywifi/terminactory",
+      "sources": [
+        {
+          "url": "https://gitlab.com/snipedbywifi/terminactory",
+          "title": "Show HN: A terminal-native idle factory game, written in Rust with ratatui",
+          "source_type": "hackernews",
+          "published_at": "2026-11-14T14:05:54+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "terminactory-showhn",
+          "date": "2026-11-15",
+          "title": "Show HN: A terminal-native idle factory game, written in Rust with ratatui",
+          "summary": "开发者用 Claude 辅助做了一个终端里的工厂游戏，还接入 Claude Code hooks 让 agent 的回复以游戏内电报形式出现；这是 AI 辅助个人产品开发的真实案例，可看 AI 在开发流程中如何被嵌入。",
+          "score": 7.2,
+          "url": "https://gitlab.com/snipedbywifi/terminactory"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "AI 辅助开发",
+        "个人产品",
+        "Claude Code",
+        "游戏"
+      ]
+    },
+    {
+      "product_id": "product-4ed299d1e851fd2b",
+      "product_name": "deepseek-v3-jax",
+      "builder_name": "VaibhaavTiwari",
+      "first_seen": "2026-11-15",
+      "last_seen": "2026-11-15",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "开发者用约 200 行纯 JAX 代码复现 DeepSeek V3 并开源，有人在 AMD 显卡上跑通，适合初学者从代码理解大模型结构，但不是产品级案例。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.0,
+      "summary": "开发者用约 200 行纯 JAX 代码复现 DeepSeek V3 并开源，有人在 AMD 显卡上跑通，适合初学者从代码理解大模型结构，但不是产品级案例。",
+      "title": "Show HN: DeepSeek V3 in ~200 lines of pure Jax",
+      "url": "https://github.com/Vaibhaav-Tiwari/deepseek-v3-jax",
+      "sources": [
+        {
+          "url": "https://github.com/Vaibhaav-Tiwari/deepseek-v3-jax",
+          "title": "Show HN: DeepSeek V3 in ~200 lines of pure Jax",
+          "source_type": "hackernews",
+          "published_at": "2026-11-14T15:04:15+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "deepseek-v3-jax-200-lines",
+          "date": "2026-11-15",
+          "title": "Show HN: DeepSeek V3 in ~200 lines of pure Jax",
+          "summary": "开发者用约 200 行纯 JAX 代码复现 DeepSeek V3 并开源，有人在 AMD 显卡上跑通，适合初学者从代码理解大模型结构，但不是产品级案例。",
+          "score": 7.0,
+          "url": "https://github.com/Vaibhaav-Tiwari/deepseek-v3-jax"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "DeepSeek",
+        "JAX",
+        "开源",
+        "模型实现"
+      ]
+    },
     {
       "product_id": "product-ea48d0cc00ede2d3",
       "product_name": "Claude Duet",
@@ -3075,85 +3524,6 @@
         "编码代理",
         "安全",
         "密钥泄露"
-      ]
-    },
-    {
-      "product_id": "product-079759eb44953975",
-      "product_name": "DeepSeek Harness",
-      "builder_name": "财联社",
-      "first_seen": "2026-08-16",
-      "last_seen": "2026-11-08",
-      "occurrence_count": 2,
-      "intelligence_type": "model_capability",
-      "evidence_status": "reported",
-      "target_user": "AI 应用开发者、需要编排多模型/多工具流程的技术团队",
-      "user_problem": "开发者想快速搭建能调用多种工具、多步骤协作的 AI 应用时，常要自己写大量胶水代码，重复造轮子",
-      "what_it_is": "DeepSeek 在 V4 全系列模型上线后开放了 Harness 开发者预览版测试，为开发者提供新的模型调用与编排入口。",
-      "ai_role": "DeepSeek 大模型作为「大脑」理解任务、决策调用哪个插件，并生成最终回复",
-      "implementation_idea": "把每个功能（搜索、计算器、文件读取等）都做成独立插件，Harness 作为总调度器，根据用户输入让模型判断该激活哪些插件、按什么顺序执行，再把结果传回模型继续下一步",
-      "hands_on_exercise": "30 分钟：访问 DeepSeek Harness 官网，按文档安装桌面版；尝试运行一个内置示例（如「搜索网页并总结」），观察模型何时触发搜索插件、如何把搜索结果融入最终回答",
-      "limitations_or_uncertainties": "「V4 全系列模型上线」这一说法在提供的原始链接和搜索结果中均未找到官方直接确认，仅见于财联社新闻标题；Harness 与 V4 模型的具体兼容细节、预览版功能边界未公开",
-      "region": "china",
-      "score": 7.8,
-      "summary": "DeepSeek 在 V4 全系列模型上线后开放了 Harness 开发者预览版测试，为开发者提供新的模型调用与编排入口。",
-      "title": "V4全系列模型上线后，DeepSeek Harness开发者预览版开放测试 - 财联社",
-      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE4wd0JWNXNkT3NmUy1UV09ldm1iSXY3dTllQ1o1ZFg5MFZPS1BRY3RCTUJLc05UYWJTb1R6VHhoT0NXM3hJQU5xLQ?oc=5",
-      "sources": [
-        {
-          "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE4wd0JWNXNkT3NmUy1UV09ldm1iSXY3dTllQ1o1ZFg5MFZPS1BRY3RCTUJLc05UYWJTb1R6VHhoT0NXM3hJQU5xLQ?oc=5",
-          "title": "V4全系列模型上线后，DeepSeek Harness开发者预览版开放测试 - 财联社",
-          "source_type": "google_news",
-          "published_at": "2026-08-15T17:50:46+00:00"
-        },
-        {
-          "url": "https://www.deepseek.com/en/harness/",
-          "title": "DeepSeek Harness | Explore the limits of intelligence",
-          "source_type": "supplemental",
-          "published_at": ""
-        },
-        {
-          "url": "https://github.com/deepseek-ai/deepseek-harness",
-          "title": "GitHub - deepseek -ai/ deepseek - harness : DeepSeek Harness ...",
-          "source_type": "supplemental",
-          "published_at": ""
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "deepseek-harness-preview",
-          "date": "2026-08-16",
-          "title": "V4全系列模型上线后，DeepSeek Harness开发者预览版开放测试 - 财联社",
-          "summary": "DeepSeek 在 V4 全系列模型上线后开放 Harness 开发者预览版测试，值得关注其智能体框架能力。",
-          "score": 8.0,
-          "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE4wd0JWNXNkT3NmUy1UV09ldm1iSXY3dTllQ1o1ZFg5MFZPS1BRY3RCTUJLc05UYWJTb1R6VHhoT0NXM3hJQU5xLQ?oc=5"
-        },
-        {
-          "update_id": "deepseek-v4-harness-preview",
-          "date": "2026-10-11",
-          "title": "V4全系列模型上线后，DeepSeek Harness开发者预览版开放测试 - 财联社",
-          "summary": "DeepSeek 在 V4 全系列模型上线后开放了 Harness 开发者预览版测试，为开发者提供新的模型调用与编排入口。",
-          "score": 7.8,
-          "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE4wd0JWNXNkT3NmUy1UV09ldm1iSXY3dTllQ1o1ZFg5MFZPS1BRY3RCTUJLc05UYWJTb1R6VHhoT0NXM3hJQU5xLQ?oc=5"
-        }
-      ],
-      "usage_flow": [
-        "安装 Harness 桌面端或从代码启动 Web 界面",
-        "按需选择/开发插件（如搜索、代码执行、数据库连接等）",
-        "用 Harness 编排插件与 DeepSeek 模型的交互流程",
-        "运行并调试 Agent 任务，观察多步骤执行结果"
-      ],
-      "learning_points": [
-        "Agent：让 AI 不仅能聊天，还能自主决定「用什么工具、分几步完成」的系统",
-        "Function Calling（工具调用）：模型识别用户意图后，输出结构化指令去调用外部 API 或插件，而非直接生成答案",
-        "插件化架构：把复杂系统拆成可插拔的小模块，方便复用和扩展"
-      ],
-      "verticals": [],
-      "tags": [
-        "DeepSeek",
-        "智能体",
-        "开发者预览",
-        "模型能力",
-        "开发者工具"
       ]
     },
     {
