@@ -9454,6 +9454,46 @@
       },
       "stage": "candidate_analysis"
     },
+    "147da6f91f45e30bbeac8ddc03747fd8061a0e43899091efe6860261a04166c7": {
+      "created_at": "2026-11-16T06:25:45.440862+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "db-branch-launch",
+        "evidence_status": "first_party",
+        "follow_up": "是否支持分支合并回主库；与 Postgres 18 原生 clone 的差异；真实用户采用反馈。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:50506940",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "db-branch",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Show HN 开源项目，用 ZFS 为 AI Agent 和 CI 秒级创建数据库分支，有代码和真实讨论，属于可迁移的构建案例；但偏基础设施，对产品经理的直接增量有限。",
+        "region": "global",
+        "score": 7.2,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "有人开源 db-branch，用 ZFS 给 AI Agent 和 CI 秒级复制数据库；解决测试和 Agent 改数据时环境隔离的问题，有代码可看。",
+        "tags": [
+          "开源",
+          "数据库",
+          "Agent",
+          "CI"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "14833ef107b3804850f27d09ea5a620f2bc75653d238a9def2b42a33a46a005f": {
       "created_at": "2026-11-08T05:58:44.196397+00:00",
       "model": "deepseek-flash",
@@ -11376,6 +11416,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "183bbcd9d49697e9361570c2468edb4b07d426b3aff33ddac1beaaf16e1db4e7": {
+      "created_at": "2026-11-16T06:25:39.240848+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "browser-use-1-0-6-bu4-default",
+        "evidence_status": "first_party",
+        "follow_up": "观察默认模型升级后用户留存与成本投诉，以及 mini/pro 分层是否成为 Agent 产品标配。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "github:release:446490054",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Browser Use",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "浏览器 Agent 产品把自研 BU 4.0 设为默认模型，并公开了成本变化（默认任务从 $0.0014 涨到 $0.022）和分级模型选择，是可直接迁移的产品定价与默认值设计案例。",
+        "region": "global",
+        "score": 8.2,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "Browser Use 发布 1.0.6，把自研 BU 4.0 设为默认模型并公开成本涨了约 15 倍，用户可按任务难度选 mini 或 pro，是 Agent 产品默认值与定价设计的真实案例。",
+        "tags": [
+          "Agent",
+          "浏览器自动化",
+          "定价策略"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "1865691a6d4e3551f2825f502408a13faacb754ab3f444b39d43322122b461b1": {
       "created_at": "2026-10-28T05:39:57.646465+00:00",
       "model": "deepseek-flash",
@@ -12147,6 +12226,46 @@
         "tags": [
           "法律",
           "版权"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "199d97d106e4b9d6cc0789e83eab6e8413ef58e02634eb4ac191a1a5b6953517": {
+      "created_at": "2026-11-16T06:25:20.074676+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-agents-python-v0-24-0-alpha-8",
+        "evidence_status": "first_party",
+        "follow_up": "关注正式版发布和审批机制的实际使用反馈。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "github:release:446612606",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "OpenAI Agents SDK",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI Agents SDK 发布 alpha 版本，新增工具调用审批、自定义模型客户端、Realtime 语音接入和任务恢复，属于 Agent 构建基础设施的一手更新，对做 AI 产品有明确迁移价值，但仍是 alpha。",
+        "region": "global",
+        "score": 7.6,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "OpenAI 发布 Agents SDK v0.24.0-alpha.8，新增 Python 工具调用审批、自定义模型客户端和 Realtime 语音接入；这些能力能帮助开发者构建更可控的 Agent 产品。",
+        "tags": [
+          "OpenAI",
+          "Agents SDK",
+          "Agent",
+          "语音"
         ],
         "target_user": "",
         "verticals": []
@@ -15721,6 +15840,46 @@
       },
       "stage": "deep_analysis"
     },
+    "20da9bd580d4a30627fbd96feaccfb0e87498403328c3fe32e0e1f426bd17a3f": {
+      "created_at": "2026-11-16T06:25:20.073806+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "datasette-maplibre-0-1a0",
+        "evidence_status": "first_party",
+        "follow_up": "观察插件后续迭代和提示词工程细节。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:simonwillison.net_atom_everything_:3c506afcbc502083",
+        "intelligence_type": "builder_insight",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "datasette-maplibre",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Simon Willison 发布 Datasette 地理空间插件，并公开用单条提示词让 Claude 构建插件的完整过程，属于构建者一手实践，能让初学者理解 AI 在开发中如何发挥作用，有代码和 Release 可验证。",
+        "region": "global",
+        "score": 8.2,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Simon Willison 发布 Datasette 地图插件 datasette-maplibre，并公开用一条提示词让 Claude 生成大部分代码；这是构建者用 AI 做产品的真实过程，适合学习 AI 辅助开发。",
+        "tags": [
+          "Datasette",
+          "Claude",
+          "AI辅助开发",
+          "开源"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "20de18c4e4f3c46cc462031b0cec0b45c4aebcc5d59b790e5162ccf060d4da60": {
       "created_at": "2026-10-23T04:47:28.193637+00:00",
       "model": "deepseek-flash",
@@ -18896,6 +19055,46 @@
           "开源",
           "连接组",
           "3D"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "2720740d6795da4a62f93d606286c76804b692a1b6b81614473168fbbbf293e2": {
+      "created_at": "2026-11-16T06:25:22.742673+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "apple-health-ai-study-app-launch",
+        "evidence_status": "reported",
+        "follow_up": "值得追踪：等待 Apple 官方公告或应用详情页，确认功能、研究设计和用户反馈。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:a922fee543c55d0e",
+        "intelligence_type": "product_case",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Apple AI Health Study App",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Apple 推出研究应用，探索用户如何用 AI 回答日常医疗问题，属于医疗垂直 AI 产品案例，对转型 AI 产品经理有参考价值；但报道仅一句话，缺少产品细节、用户反馈和构建过程，证据不足，暂不进入高分区间。",
+        "region": "global",
+        "score": 6.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Apple 推出新应用，研究人们如何用 AI 回答日常医疗问题；这能帮助理解医疗 AI 产品的真实使用场景，但报道信息太少，暂时只能作为早期信号。",
+        "tags": [
+          "医疗AI",
+          "健康",
+          "产品案例",
+          "Apple"
         ],
         "target_user": "",
         "verticals": []
@@ -23573,6 +23772,44 @@
           "AI训练",
           "数据获取",
           "政策"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "31e6a26bc4c5ba8fea6f95fe4137c513a7ce53434973ee0bd34865e68826da65": {
+      "created_at": "2026-11-16T06:25:45.440776+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "turbo-pascal-size-2011",
+        "evidence_status": "reported",
+        "follow_up": "无",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:50506894",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": false,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "2011 年旧文重提，讨论编程语言历史，与 AI 产品无关，属于旧闻噪音。",
+        "region": "global",
+        "score": 2.0,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "一篇 2011 年旧文比较 Turbo Pascal 的体积；与 AI 产品无关，不值得收录。",
+        "tags": [
+          "编程语言",
+          "旧闻"
         ],
         "target_user": "",
         "verticals": []
@@ -31419,6 +31656,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "4178a2c40c984ef914120bb1f6420a21e807827426a208e1b6016972ba0bdf8a": {
+      "created_at": "2026-11-16T06:25:39.240403+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-codex-rust-0-171-0-alpha-7",
+        "evidence_status": "first_party",
+        "follow_up": "等待正式版或带变更日志的发布。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "github:release:446438496",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": false,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "OpenAI Codex",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "仅版本号递增的 alpha 发布，无任何变更说明，对产品经理无迁移价值。",
+        "region": "global",
+        "score": 3.5,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "OpenAI 发布 Codex 的 Rust 版 0.171.0-alpha.7，但正文只有版本号，看不出改了什么，不值得拆解。",
+        "tags": [
+          "Codex",
+          "编程Agent"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "41816f3ecf265b5e5b0b60ecbb612329b7fa58650a18cd4be244ad5af77c226b": {
       "created_at": "2026-11-08T05:58:50.415521+00:00",
       "model": "deepseek-flash",
@@ -31528,6 +31803,46 @@
         "tags": [
           "版权",
           "法律"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "41c8812db1d53dfe014f740db955369d345b2ca0bffcb7eece0c3fce575b5e6e": {
+      "created_at": "2026-11-16T06:25:20.073970+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "datasette-1-0a43",
+        "evidence_status": "first_party",
+        "follow_up": "跟踪 1.0 里程碑完成度和流式渲染的插件生态。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:simonwillison.net_atom_everything_:0139ca5c534e35bb",
+        "intelligence_type": "builder_insight",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Datasette",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Datasette 1.0a43 发布，包含流式输出渲染器和安全修复，创建者公开用 Claude 推进里程碑的实践，属于构建者一手动态，但偏底层工具更新，产品经理迁移价值中等。",
+        "region": "global",
+        "score": 7.5,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Simon Willison 发布 Datasette 1.0a43，新增流式输出渲染器并修复安全问题，同时公开借助 Claude 推进 1.0 里程碑；适合了解 AI 辅助开源维护的实践。",
+        "tags": [
+          "Datasette",
+          "Claude",
+          "开源",
+          "AI辅助开发"
         ],
         "target_user": "",
         "verticals": []
@@ -41471,6 +41786,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "55b7a1e74bc79dd1c86b99e87377998f560d987ef5e2c2fd2027920211931a74": {
+      "created_at": "2026-11-16T06:25:39.240776+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "langchain-groq-1-2-0",
+        "evidence_status": "first_party",
+        "follow_up": "观察统一错误映射是否降低多模型切换成本。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "github:release:446391603",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "LangChain",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Groq 集成包版本更新，含上下文溢出错误映射和网关路由，属底层维护。",
+        "region": "global",
+        "score": 4.5,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "LangChain 发布 Groq 集成包 1.2.0，把上下文超长错误映射为统一异常并改走 LangSmith 网关，是工程维护。",
+        "tags": [
+          "LangChain",
+          "Groq",
+          "开发者工具"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "55b8df8cc4b9147674a0ba1d667094171d397cb6cd712e0cfabbb91208816a2a": {
       "created_at": "2026-10-05T05:37:56.478888+00:00",
       "model": "deepseek-flash",
@@ -42041,6 +42395,45 @@
         "tags": [
           "编码Agent",
           "预发布"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "5709c22fe222cd3d77b45248a1695873342436d3664603407f14d6a156f17b61": {
+      "created_at": "2026-11-16T06:25:25.013550+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "bharat-semi-seed-24m-ai-sensor",
+        "evidence_status": "reported",
+        "follow_up": "不追踪；除非后续出现可验证的 AI 传感器产品 Demo 或具体应用案例。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:108e94930f04077d",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "芯片初创公司融资新闻，属于纯融资和硬件底层，没有可拆解的产品体验、构建过程或用户反馈，对 AI 产品经理初学者和垂直 AI 产品探索价值低，按规则低于 7 分不收录。",
+        "region": "global",
+        "score": 4.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "印度芯片初创公司 Bharat Semi 获得 2400 万美元种子轮融资，并称其 AI 传感器技术已获得包括 General Atomics 在内的公司设计订单；但这是融资和硬件新闻，没有产品使用细节，对做 AI 产品的人参考有限。",
+        "tags": [
+          "AI 传感器",
+          "芯片",
+          "融资"
         ],
         "target_user": "",
         "verticals": []
@@ -50642,6 +51035,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "670ba4e2aaedba2512db2a942d58583a06d2d641101f4b9d88670f8b68965434": {
+      "created_at": "2026-11-16T06:25:27.847755+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "techcrunch-nvidia-huang-ai-industry-commentary",
+        "evidence_status": "reported",
+        "follow_up": "不追踪；除非后续出现英伟达产品、定价或生态合作的具体增量信息。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:2ea4dcf242e75901",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": false,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "纯评论性文章，围绕英伟达与黄仁勋的泛行业讨论，无产品、代码、Demo、用户反馈或一手构建过程，也未解锁新模型能力或产品体验；属于泛行业评论，按规则低于7分不收录。",
+        "region": "global",
+        "score": 3.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "TechCrunch 作者 Anthony Ha 以一句引述讨论英伟达与黄仁勋的坏消息是否等于 AI 行业的坏消息，没有提供新产品、数据或可验证事实，对 AI 产品经理的实践参考价值低。",
+        "tags": [
+          "Nvidia",
+          "行业评论",
+          "泛AI"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "67150af29e054eb6994f96ba275f0315259d38c97048a7dac4cbd9cc4e03ac35": {
       "created_at": "2026-07-30T03:28:09.352006+00:00",
       "model": "deepseek-v4-flash",
@@ -54221,6 +54653,43 @@
           "Claude Duet",
           "产品体验",
           "用户反馈"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "6ea718a9f87127e68b5c1330e56367b2ca928e8f01c4ed1075bec5bdcca7b859": {
+      "created_at": "2026-11-16T06:25:39.241341+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "el-nino-explainer-video",
+        "evidence_status": "reported",
+        "follow_up": "无。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:50509308",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": false,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "气候科普视频，与 LLM 和 AI 产品完全无关。",
+        "region": "global",
+        "score": 1.5,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "一个解释厄尔尼诺现象的科普视频，与 AI 产品无关。",
+        "tags": [
+          "气候科普"
         ],
         "target_user": "",
         "verticals": []
@@ -60127,6 +60596,46 @@
         "tags": [
           "DeepSeek",
           "定价"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "7b54ec5f026a5fab2758e5b463ba262002f476df936b1068c821b0fd72800ac2": {
+      "created_at": "2026-11-16T06:25:20.074073+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "qwen4-max-ai-gateway",
+        "evidence_status": "verified",
+        "follow_up": "关注实际开发者试用反馈、定价和 Live Delivery 插件开源情况。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:vercel.com_changelog_rss:dc1ef78483e2e42f",
+        "intelligence_type": "model_capability",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Qwen4-Max",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "阿里 Qwen4-Max 上线 Vercel AI Gateway，官方 changelog 披露原生视觉、100 万 token 上下文、可操作 Blender/Unity 等专业工具并基于视觉反馈修正，属于能直接催生新产品的新模型能力，信息具体可验证。",
+        "region": "china",
+        "score": 8.5,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "阿里 Qwen4-Max 上线 Vercel AI Gateway，支持原生视觉和 100 万 token 上下文，能操作 Blender、Unity 等工具并根据视觉反馈修正；这种能力可能直接解锁新的 AI 产品体验。",
+        "tags": [
+          "Qwen",
+          "多模态",
+          "Agent",
+          "模型能力"
         ],
         "target_user": "",
         "verticals": []
@@ -67033,6 +67542,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "889766997f109f24c497a131de570d68b1e4f1569311d54243450a4ca85b5d0c": {
+      "created_at": "2026-11-16T06:25:39.240972+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "qwen4-max-release",
+        "evidence_status": "reported",
+        "follow_up": "等待官方模型卡与定价页，验证速度与成本数据。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:50513215",
+        "intelligence_type": "model_capability",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Qwen4-Max",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "阿里 Qwen4-Max 发布，HN 讨论给出第三方评测分数与成本对比，并暴露推理速度慢的实际使用痛点，属于新模型能力动态，但证据来自社区转述而非官方一手。",
+        "region": "china",
+        "score": 7.6,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "阿里发布 Qwen4-Max，社区讨论显示其评测分 43、均价 $3.27，而 GPT-6.1 Sol 为 46 分、$0.36，且被吐槽推理速度慢，是观察新模型性价比与可用性的信号。",
+        "tags": [
+          "Qwen",
+          "模型发布",
+          "推理成本"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "88c9b367652c9929e3d5d89667c7c4cf7f8be7f41a5a15cdddfae3c7fd85449b": {
       "created_at": "2026-09-23T04:44:14.317609+00:00",
       "model": "deepseek-flash",
@@ -67220,6 +67768,43 @@
         "tags": [
           "AI评估",
           "融资"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "8906381113f3837346a3d87a0b16951e9211695e7931af14075764bda29c807b": {
+      "created_at": "2026-11-16T06:25:45.440689+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "coles-cybersecurity-incident",
+        "evidence_status": "reported",
+        "follow_up": "无",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:50512824",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "网络安全事件新闻，与 AI 产品构建无关，且原文信息量低，属于噪音。",
+        "region": "global",
+        "score": 2.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "澳洲超市 Coles 发生网络安全事件；与 AI 产品无关，信息也不充分。",
+        "tags": [
+          "安全"
         ],
         "target_user": "",
         "verticals": []
@@ -67460,6 +68045,41 @@
         "verticals": []
       },
       "stage": "candidate_analysis"
+    },
+    "897f0792a1c34e3385a309941562e54848fd4f2c5fa64c4f828dc8922c2926c7": {
+      "created_at": "2026-11-16T06:26:35.257586+00:00",
+      "model": "kimi-k2.6",
+      "prompt_version": "deep-v3-beginner",
+      "result": {
+        "ai_role": "OpenEvidence 的临床 AI 负责根据循证医学资料生成回答；Apple 负责收集交互数据和用户反馈，评估效果",
+        "evidence_status": "first_party",
+        "hands_on_exercise": "打开任意 AI（ChatGPT/Claude/Kimi），用同一个健康问题分别问『普通模式』和带『请基于医学文献回答』的提示词，对比两次回答的差异；记录哪次给了你具体可行动的建议、哪次更让你安心/更不放心。30 分钟完成，体会『通用 AI』和『有约束的垂直 AI』的区别。",
+        "implementation_idea": "把『通用聊天机器人』换成『有医学文献背书的临床 AI』，再包一层研究框架：用户提问 → 专业 AI 回答 → 用户打分反馈 → 研究者看哪种问法、哪种回答真正帮到人。本质上是给医疗 AI 做『用户验收测试』。",
+        "learning_points": [
+          "RAG（检索增强生成）：AI 回答前先去查医学数据库，不是瞎编，降低『幻觉』风险",
+          "对话式 AI 的评估难题：回答『看起来对』和『真的有用』是两回事，需要真人反馈来测",
+          "联邦学习/隐私计算（可能涉及）：研究个人健康数据时，如何在不上传原始数据的情况下完成分析"
+        ],
+        "limitations_or_uncertainties": "研究 App 的具体界面、用户反馈问卷长什么样、数据是否本地处理后再上传、OpenEvidence 回答的医学数据库覆盖范围，均未公开；200K 参与者数字来自第三方博客 explainx.ai，非 Apple 官方确认。",
+        "product_name": "Apple Health AI Usage Study（研究项目）；OpenEvidence（合作平台）",
+        "sources": [
+          "https://www.theverge.com/tech/1033355/apples-new-study-looks-to-improve-the-effectiveness-of-ai-health-tools",
+          "https://www.apple.com/newsroom/2026/11/apple-launches-research-study-to-explore-the-use-of-ai-for-health/",
+          "https://explainx.ai/blog/apple-health-ai-usage-study-openevidence-2026",
+          "https://www.cnet.com/health/apple-launches-ai-health-app-study/"
+        ],
+        "target_users": "年满 18 岁、拥有 iPhone、能使用英语的美国用户；研究中会接触 OpenEvidence 提供的临床级健康 AI 工具",
+        "title_zh": "Apple 联手 OpenEvidence 研究用户如何与健康 AI 对话",
+        "usage_flow": [
+          "用户下载研究专用 App 并同意参与，完成资格确认",
+          "在 App 内用自然语言向健康 AI 提问（如症状、用药问题）",
+          "AI 基于医学文献生成回答，用户可继续追问或结束对话",
+          "用户提交反馈（如回答是否有用），数据用于研究分析"
+        ],
+        "user_problem": "普通人用 ChatGPT 等通用 AI 问健康问题时，回答可能不准、缺少医学依据，或不知道该怎么判断可信度；医生端也缺乏大规模真实用户交互数据来改进这类工具。",
+        "what_it_is": "Apple 在美国发起的一项虚拟健康研究，通过独立 App 收集用户与对话式健康 AI 的互动数据，评估回答是否有用。"
+      },
+      "stage": "deep_analysis"
     },
     "897fc326ae7a114d67d40b1647aebb1064f9fb3a7aa19f8597eb8bd7001e51c7": {
       "created_at": "2026-09-28T05:22:24.332693+00:00",
@@ -69698,6 +70318,45 @@
           "工具",
           "token",
           "开源"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "8ceb91842001763fc3465ea964c3c47c9e082cc89fd3bb63e6c85f14dfa5e5a3": {
+      "created_at": "2026-11-16T06:25:20.073683+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "congress-ai-chip-export-rules-nvidia",
+        "evidence_status": "reported",
+        "follow_up": "无。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:e9d9f643800715e7",
+        "intelligence_type": "business_policy",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "芯片出口管制政策新闻，属于 business_policy 但涉及 GPU 和地缘政治，与产品构建学习关联弱。",
+        "region": "global",
+        "score": 4.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "美国国会因 Nvidia 间谍丑闻推动收紧 AI 芯片出口规则；属于政策新闻，对产品经理的直接价值低。",
+        "tags": [
+          "出口管制",
+          "Nvidia",
+          "政策"
         ],
         "target_user": "",
         "verticals": []
@@ -74500,6 +75159,46 @@
       },
       "stage": "candidate_analysis"
     },
+    "9511a63270ad84acbd312f37968ca49aa984a038ccb2ccef29a902a575547584": {
+      "created_at": "2026-11-16T06:25:20.073638+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "apple-health-ai-usage-study-openevidence",
+        "evidence_status": "reported",
+        "follow_up": "关注研究设计、评估指标和 OpenEvidence 的产品能力披露。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:d35ff3f4b98b6167",
+        "intelligence_type": "product_case",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Apple Health AI Usage Study",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "The Verge 补充了 Apple 与临床 AI 平台 OpenEvidence 合作开展健康 AI 使用研究的细节，属于医疗健康垂直 AI 产品案例，有合作方和明确研究目标，但缺少用户反馈和产品界面信息。",
+        "region": "global",
+        "score": 7.8,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Apple 与临床 AI 平台 OpenEvidence 合作研究人们如何使用对话式健康 AI 工具及其回答是否有用；这是医疗 AI 产品的一手合作案例，值得拆解其评估方法。",
+        "tags": [
+          "Apple",
+          "OpenEvidence",
+          "医疗健康",
+          "AI健康"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "951de1ff28517715230ba5923eb1a620ab9163f84b74719a23bb5078179ca85f": {
       "created_at": "2026-08-06T03:36:01.226711+00:00",
       "model": "deepseek-v4-flash",
@@ -77478,6 +78177,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "9aeff7463a37df86fccc0011e31476cd49c61780d4cb3243c8263c407954e9f3": {
+      "created_at": "2026-11-16T06:25:39.240538+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "langchain-xai-1-4-0",
+        "evidence_status": "first_party",
+        "follow_up": "观察 LangSmith 网关是否成为统一模型调用入口。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "github:release:446383553",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "LangChain",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "LangChain 的 xAI 集成包版本更新，主要是依赖升级和路由到 LangSmith 网关，属于底层集成维护，对产品思路无增量。",
+        "region": "global",
+        "score": 4.5,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "LangChain 发布 xAI 集成包 1.4.0，把 ChatXAI 调用改走 LangSmith 网关并升级依赖，属于工程维护而非产品能力。",
+        "tags": [
+          "LangChain",
+          "xAI",
+          "开发者工具"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "9b03aae7b8dff549e1f149d0ea143702e5cbfab1ac659a9cf29a1fd08bc17dc1": {
       "created_at": "2026-09-16T04:47:53.112129+00:00",
       "model": "deepseek-flash",
@@ -79542,6 +80280,45 @@
         "summary_zh": "维基媒体基金会员工投票成立工会，与AI产品无关。",
         "tags": [
           "工会"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "9f05391c68111becc114c176b72457ea8e1ffe5a4d5dc186ee119c0703b83409": {
+      "created_at": "2026-11-16T06:25:20.073556+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-science-blog-launch",
+        "evidence_status": "first_party",
+        "follow_up": "观察博客是否披露具体科研工作流和可复现方法。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:openai.com_news_rss.xml:33b95c2112c46efd",
+        "intelligence_type": "market_signal",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI 官方开设科学博客，属于内容渠道发布，无具体产品、代码或用户反馈，对产品经理的直接迁移价值有限，但作为一手动态可作背景参考。",
+        "region": "global",
+        "score": 6.5,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "OpenAI 上线科学博客，分享研究者用 AI 推动科学发现的方法和一手经验；对初学者理解 AI 在科研场景的用法有参考价值，但无产品增量。",
+        "tags": [
+          "OpenAI",
+          "科学AI",
+          "内容渠道"
         ],
         "target_user": "",
         "verticals": []
@@ -83889,6 +84666,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "a6eda861173b1b8ef01f48dae34f9855079d0a55af796e066d790fc59285f7a0": {
+      "created_at": "2026-11-16T06:25:39.240667+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "langchain-mistralai-1-2-0",
+        "evidence_status": "first_party",
+        "follow_up": "观察推理模型流式输出修复是否影响下游应用体验。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "github:release:446419000",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "LangChain",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "修复推理模型流式输出并接入 LangSmith 网关，属于集成层修复，对初学者理解产品价值有限。",
+        "region": "global",
+        "score": 4.5,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "LangChain 发布 MistralAI 集成包 1.2.0，修复推理模型流式输出问题并改走 LangSmith 网关，是工程层更新。",
+        "tags": [
+          "LangChain",
+          "Mistral",
+          "开发者工具"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "a6eef12364df5d137739826d1aecc2c01394ad000e00338e88712ba2156aba91": {
       "created_at": "2026-09-18T04:42:02.171595+00:00",
       "model": "deepseek-flash",
@@ -84810,6 +85626,44 @@
           "工作流自动化",
           "Agent",
           "n8n"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "a8d741fc65d393b77a14e2e20cf2419aec68fcc5cef02b7151a3ff2c1b735dcf": {
+      "created_at": "2026-11-16T06:25:39.241132+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "nvidia-whats-next-commentary",
+        "evidence_status": "reported",
+        "follow_up": "无。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:50512235",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": false,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "关于英伟达战略的泛行业评论，无产品、无构建过程、无一手证据，属于低相关噪音。",
+        "region": "global",
+        "score": 3.0,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "一篇讨论英伟达下一步战略的博客引发 HN 热议，但内容是对大公司战略的泛评论，没有可迁移的产品实践。",
+        "tags": [
+          "英伟达",
+          "行业评论"
         ],
         "target_user": "",
         "verticals": []
@@ -97696,6 +98550,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "c2a85cd5c9203d5c6e5a6ba543ad3aaf3a47cfc16dd01037f48e2f90e360ee2f": {
+      "created_at": "2026-11-16T06:25:39.241273+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "protomaps-self-host-tiles",
+        "evidence_status": "reported",
+        "follow_up": "无。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:50509837",
+        "intelligence_type": "builder_insight",
+        "is_first_party": false,
+        "is_new_event": false,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Protomaps",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "自托管地图瓦片的技术实践，有真实构建经验，但与 LLM 产品经理主线弱相关，仅作边缘参考。",
+        "region": "global",
+        "score": 5.5,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "一篇讲自托管地图瓦片变便宜变简单的文章，评论区补充了 OpenFreeMap 等同类方案，属于独立开发者基础设施实践，与 LLM 主线弱相关。",
+        "tags": [
+          "自托管",
+          "地图",
+          "独立开发"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "c2adbec619a86d177027371c420daae8fc7031bde30c2765cf4d6f8fb41fcf10": {
       "created_at": "2026-08-03T03:54:11.107208+00:00",
       "model": "deepseek-v4-flash",
@@ -100967,6 +101860,44 @@
           "AI Agent",
           "浏览器自动化",
           "开源"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "c92e8fe81c9e2097b9ab0e046dd5e907bd499de304cb620ead8c18b332285b1a": {
+      "created_at": "2026-11-16T06:25:39.240446+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-codex-rust-0-171-0-alpha-6",
+        "evidence_status": "first_party",
+        "follow_up": "等待正式版或带变更日志的发布。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "github:release:446288908",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": false,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "OpenAI Codex",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "同上，纯 alpha 版本号发布，无实质内容。",
+        "region": "global",
+        "score": 3.5,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "OpenAI 发布 Codex 的 Rust 版 0.171.0-alpha.6，正文只有版本号，没有可读的更新内容。",
+        "tags": [
+          "Codex",
+          "编程Agent"
         ],
         "target_user": "",
         "verticals": []
@@ -114916,6 +115847,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "e6bb36fb9f1ffc09a0be1c940b050638c5adcfa85beb0e80c8de0c07a2e29a27": {
+      "created_at": "2026-11-16T06:25:45.440458+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "hn-email-scraping-scam-warning",
+        "evidence_status": "reported",
+        "follow_up": "无",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:50513451",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "安全提醒帖，与 AI 产品构建无直接关系，无产品、代码或可迁移实践，属于社区噪音。",
+        "region": "global",
+        "score": 3.5,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "HN 用户提醒招聘帖公开邮箱被爬取用于诈骗；与 AI 产品无关，不值得拆解。",
+        "tags": [
+          "安全",
+          "社区"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "e6bfbe7d0ca0e3dac99b1f6200bc53e2225db9325c6caed542224ae1d9127e03": {
       "created_at": "2026-07-31T03:49:36.342793+00:00",
       "model": "deepseek-v4-flash",
@@ -120691,6 +121660,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "f292889769e647c1d6ea4c93777dc4d1914c7c315a357e6be9f8f2782ed2d256": {
+      "created_at": "2026-11-16T06:25:45.440541+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "webgl-flight-sim-seed-terrain",
+        "evidence_status": "reported",
+        "follow_up": "是否公开构建过程、提示词和成本；AI 在生成地形和代码中的具体角色。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:50510296",
+        "intelligence_type": "product_case",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "WebGL Flight Simulator",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "可玩的 WebGL 飞行模拟 Demo，有真实用户反馈，但未展示 AI 在产品中的具体作用，构建过程信息不足，低于 7 分。",
+        "region": "global",
+        "score": 6.8,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "有人用 AI 辅助做出可玩的 WebGL 飞行模拟器；用户能直接试玩并反馈，但 AI 具体怎么参与还不清楚。",
+        "tags": [
+          "AI编程",
+          "Demo",
+          "游戏"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "f2a4734ac8f6ecffeae6c6248792c581b9e65c1c30ff25fcb8e085b14bbb7a49": {
       "created_at": "2026-08-29T07:04:35.595368+00:00",
       "model": "deepseek-v4-flash",
@@ -124093,6 +125101,44 @@
         "verticals": []
       },
       "stage": "candidate_analysis"
+    },
+    "f7f1dff1ee7fff62f65d4ab0782b7afed0a171f181e4e1590cc2fbf811c13f95": {
+      "created_at": "2026-11-16T06:26:12.221688+00:00",
+      "model": "kimi-k2.6",
+      "prompt_version": "deep-v3-beginner",
+      "result": {
+        "ai_role": "Agent（智能体）：AI 根据用户给的任务目标，自主决定点击哪里、输入什么、如何导航网页，直到任务完成",
+        "evidence_status": "first_party",
+        "hands_on_exercise": "30 分钟练习：安装 browser-use==1.0.6，分别用默认（不填 llm）、llm='bu-4.0-mini'、llm='bu-fast' 运行同一个简单任务（如'去 Hacker News 首页找出标题最长的帖子'），对比执行结果和终端显示的费用，体会模型选择对成本和效果的影响。",
+        "implementation_idea": "Browser Use 自己搭了一个'网关'，用户代码不直接调 OpenAI 等第三方，而是把请求发给 Browser Use 的服务器，由他们调度不同的自研模型（bu-fast/bu-4.0 系列）。这样他们能统一计费、控制质量，也让用户用一行代码就能切换模型档次。",
+        "learning_points": [
+          "Agent：不只是回答问题，而是能自己规划步骤、调用工具（这里是浏览器）去完成目标的 AI",
+          "模型分级定价：同一产品里把 AI 按能力分 mini/pro 档，让用户按任务难度选，是常见的成本控制设计",
+          "默认值的威力：不填参数时用的'默认模型'直接影响用户体验和厂商收入，改默认值是产品层面的重大决策"
+        ],
+        "limitations_or_uncertainties": "bu-4.0 的具体技术架构未公开（是否自研基座模型还是封装第三方未知）；'high/medium reasoning' 的具体区别未公开；cloud browser 的 live-view 链接是否安全、是否可被他人截获未公开；Judge gotchas 的具体机制未公开",
+        "product_name": "Browser Use",
+        "sources": [
+          "https://github.com/browser-use/browser-use/releases/tag/1.0.6",
+          "https://docs.browser-use.com/open-source/models",
+          "https://github.com/browser-use/browser-use/pull/6430",
+          "https://github.com/browser-use/browser-use/pull/6425",
+          "https://github.com/browser-use/browser-use/pull/6418",
+          "https://github.com/browser-use/browser-use/pull/6431",
+          "https://browser-use.com/"
+        ],
+        "target_users": "需要让 AI 自动操作网页的开发者，比如做自动化测试、数据采集、网页任务执行的人",
+        "title_zh": "Browser Use 1.0.6：自研模型升级默认，成本涨 15 倍但可选降级",
+        "usage_flow": [
+          "pip 安装 browser-use==1.0.6",
+          "写代码创建 Agent(task='你的任务描述')，不指定模型则默认用 bu-4.0",
+          "首次运行会弹出 Browser Use 登录页，授权后继续",
+          "看运行结果和费用；想省钱就加参数 llm='bu-4.0-mini'，想更强用 llm='bu-4.0-pro'"
+        ],
+        "user_problem": "用户想让 AI 自动完成网页上的复杂任务（如填表、搜索、下单），但自己写脚本太麻烦，且需要选择合适的 AI 模型平衡能力和成本",
+        "what_it_is": "一个开源的浏览器 Agent 框架，让 AI 能自动操控网页浏览器完成任务。"
+      },
+      "stage": "deep_analysis"
     },
     "f8012ea169ef5ace2f7dc8641d193bdb1651c8344465950544ad6523a110bcc5": {
       "created_at": "2026-10-25T04:39:17.016333+00:00",

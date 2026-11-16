@@ -1,7 +1,406 @@
 {
   "version": 1,
-  "updated_at": "2026-11-15T06:28:07.981891+00:00",
+  "updated_at": "2026-11-16T06:26:35.286769+00:00",
   "products": [
+    {
+      "product_id": "product-9a5cc9327c864eb5",
+      "product_name": "Qwen4-Max",
+      "builder_name": "Zachary Chen",
+      "first_seen": "2026-11-16",
+      "last_seen": "2026-11-16",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "verified",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "阿里 Qwen4-Max 上线 Vercel AI Gateway，支持原生视觉和 100 万 token 上下文，能操作 Blender、Unity 等工具并根据视觉反馈修正；这种能力可能直接解锁新的 AI 产品体验。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "china",
+      "score": 8.5,
+      "summary": "阿里 Qwen4-Max 上线 Vercel AI Gateway，支持原生视觉和 100 万 token 上下文，能操作 Blender、Unity 等工具并根据视觉反馈修正；这种能力可能直接解锁新的 AI 产品体验。",
+      "title": "Qwen4-Max now available on AI Gateway",
+      "url": "https://vercel.com/changelog/qwen4-max-now-available-on-ai-gateway",
+      "sources": [
+        {
+          "url": "https://vercel.com/changelog/qwen4-max-now-available-on-ai-gateway",
+          "title": "Qwen4-Max now available on AI Gateway",
+          "source_type": "rss",
+          "published_at": "2026-11-15T20:00:00+00:00"
+        },
+        {
+          "url": "https://qwen.ai/blog?id=qwen4-max",
+          "title": "Qwen4-Max",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "qwen4-max-ai-gateway",
+          "date": "2026-11-16",
+          "title": "Qwen4-Max now available on AI Gateway",
+          "summary": "阿里 Qwen4-Max 上线 Vercel AI Gateway，支持原生视觉和 100 万 token 上下文，能操作 Blender、Unity 等工具并根据视觉反馈修正；这种能力可能直接解锁新的 AI 产品体验。",
+          "score": 8.5,
+          "url": "https://vercel.com/changelog/qwen4-max-now-available-on-ai-gateway"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Qwen",
+        "多模态",
+        "Agent",
+        "模型能力"
+      ]
+    },
+    {
+      "product_id": "product-78841eafc7eb983b",
+      "product_name": "Browser Use",
+      "builder_name": "sarath-menon",
+      "first_seen": "2026-11-16",
+      "last_seen": "2026-11-16",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "需要让 AI 自动操作网页的开发者，比如做自动化测试、数据采集、网页任务执行的人",
+      "user_problem": "用户想让 AI 自动完成网页上的复杂任务（如填表、搜索、下单），但自己写脚本太麻烦，且需要选择合适的 AI 模型平衡能力和成本",
+      "what_it_is": "一个开源的浏览器 Agent 框架，让 AI 能自动操控网页浏览器完成任务。",
+      "ai_role": "Agent（智能体）：AI 根据用户给的任务目标，自主决定点击哪里、输入什么、如何导航网页，直到任务完成",
+      "implementation_idea": "Browser Use 自己搭了一个'网关'，用户代码不直接调 OpenAI 等第三方，而是把请求发给 Browser Use 的服务器，由他们调度不同的自研模型（bu-fast/bu-4.0 系列）。这样他们能统一计费、控制质量，也让用户用一行代码就能切换模型档次。",
+      "hands_on_exercise": "30 分钟练习：安装 browser-use==1.0.6，分别用默认（不填 llm）、llm='bu-4.0-mini'、llm='bu-fast' 运行同一个简单任务（如'去 Hacker News 首页找出标题最长的帖子'），对比执行结果和终端显示的费用，体会模型选择对成本和效果的影响。",
+      "limitations_or_uncertainties": "bu-4.0 的具体技术架构未公开（是否自研基座模型还是封装第三方未知）；'high/medium reasoning' 的具体区别未公开；cloud browser 的 live-view 链接是否安全、是否可被他人截获未公开；Judge gotchas 的具体机制未公开",
+      "region": "global",
+      "score": 8.2,
+      "summary": "Browser Use 发布 1.0.6，把自研 BU 4.0 设为默认模型并公开成本涨了约 15 倍，用户可按任务难度选 mini 或 pro，是 Agent 产品默认值与定价设计的真实案例。",
+      "title": "Browser Use 1.0.6：自研模型升级默认，成本涨 15 倍但可选降级",
+      "url": "https://github.com/browser-use/browser-use/releases/tag/1.0.6",
+      "sources": [
+        {
+          "url": "https://github.com/browser-use/browser-use/releases/tag/1.0.6",
+          "title": "browser-use/browser-use released 1.0.6",
+          "source_type": "github",
+          "published_at": "2026-11-16T00:51:24+00:00"
+        },
+        {
+          "url": "https://browser-use.com/",
+          "title": "Browser Use : Browser Agents and Cloud Browsers",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "browser-use-1-0-6-bu4-default",
+          "date": "2026-11-16",
+          "title": "Browser Use 1.0.6：自研模型升级默认，成本涨 15 倍但可选降级",
+          "summary": "Browser Use 发布 1.0.6，把自研 BU 4.0 设为默认模型并公开成本涨了约 15 倍，用户可按任务难度选 mini 或 pro，是 Agent 产品默认值与定价设计的真实案例。",
+          "score": 8.2,
+          "url": "https://github.com/browser-use/browser-use/releases/tag/1.0.6"
+        }
+      ],
+      "usage_flow": [
+        "pip 安装 browser-use==1.0.6",
+        "写代码创建 Agent(task='你的任务描述')，不指定模型则默认用 bu-4.0",
+        "首次运行会弹出 Browser Use 登录页，授权后继续",
+        "看运行结果和费用；想省钱就加参数 llm='bu-4.0-mini'，想更强用 llm='bu-4.0-pro'"
+      ],
+      "learning_points": [
+        "Agent：不只是回答问题，而是能自己规划步骤、调用工具（这里是浏览器）去完成目标的 AI",
+        "模型分级定价：同一产品里把 AI 按能力分 mini/pro 档，让用户按任务难度选，是常见的成本控制设计",
+        "默认值的威力：不填参数时用的'默认模型'直接影响用户体验和厂商收入，改默认值是产品层面的重大决策"
+      ],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "浏览器自动化",
+        "定价策略"
+      ]
+    },
+    {
+      "product_id": "product-329a0f99661d0796",
+      "product_name": "datasette-maplibre",
+      "builder_name": "Simon Willison",
+      "first_seen": "2026-11-16",
+      "last_seen": "2026-11-16",
+      "occurrence_count": 1,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Simon Willison 发布 Datasette 地图插件 datasette-maplibre，并公开用一条提示词让 Claude 生成大部分代码；这是构建者用 AI 做产品的真实过程，适合学习 AI 辅助开发。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.2,
+      "summary": "Simon Willison 发布 Datasette 地图插件 datasette-maplibre，并公开用一条提示词让 Claude 生成大部分代码；这是构建者用 AI 做产品的真实过程，适合学习 AI 辅助开发。",
+      "title": "datasette-maplibre 0.1a0",
+      "url": "https://simonwillison.net/2026/Nov/15/datasette-maplibre/",
+      "sources": [
+        {
+          "url": "https://simonwillison.net/2026/Nov/15/datasette-maplibre/",
+          "title": "datasette-maplibre 0.1a0",
+          "source_type": "rss",
+          "published_at": "2026-11-15T23:58:36+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "datasette-maplibre-0-1a0",
+          "date": "2026-11-16",
+          "title": "datasette-maplibre 0.1a0",
+          "summary": "Simon Willison 发布 Datasette 地图插件 datasette-maplibre，并公开用一条提示词让 Claude 生成大部分代码；这是构建者用 AI 做产品的真实过程，适合学习 AI 辅助开发。",
+          "score": 8.2,
+          "url": "https://simonwillison.net/2026/Nov/15/datasette-maplibre/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Datasette",
+        "Claude",
+        "AI辅助开发",
+        "开源"
+      ]
+    },
+    {
+      "product_id": "product-0649bcdbc1c47755",
+      "product_name": "Apple Health AI Usage Study（研究项目）；OpenEvidence（合作平台）",
+      "builder_name": "Andrew Liszewski",
+      "first_seen": "2026-11-16",
+      "last_seen": "2026-11-16",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "年满 18 岁、拥有 iPhone、能使用英语的美国用户；研究中会接触 OpenEvidence 提供的临床级健康 AI 工具",
+      "user_problem": "普通人用 ChatGPT 等通用 AI 问健康问题时，回答可能不准、缺少医学依据，或不知道该怎么判断可信度；医生端也缺乏大规模真实用户交互数据来改进这类工具。",
+      "what_it_is": "Apple 在美国发起的一项虚拟健康研究，通过独立 App 收集用户与对话式健康 AI 的互动数据，评估回答是否有用。",
+      "ai_role": "OpenEvidence 的临床 AI 负责根据循证医学资料生成回答；Apple 负责收集交互数据和用户反馈，评估效果",
+      "implementation_idea": "把『通用聊天机器人』换成『有医学文献背书的临床 AI』，再包一层研究框架：用户提问 → 专业 AI 回答 → 用户打分反馈 → 研究者看哪种问法、哪种回答真正帮到人。本质上是给医疗 AI 做『用户验收测试』。",
+      "hands_on_exercise": "打开任意 AI（ChatGPT/Claude/Kimi），用同一个健康问题分别问『普通模式』和带『请基于医学文献回答』的提示词，对比两次回答的差异；记录哪次给了你具体可行动的建议、哪次更让你安心/更不放心。30 分钟完成，体会『通用 AI』和『有约束的垂直 AI』的区别。",
+      "limitations_or_uncertainties": "研究 App 的具体界面、用户反馈问卷长什么样、数据是否本地处理后再上传、OpenEvidence 回答的医学数据库覆盖范围，均未公开；200K 参与者数字来自第三方博客 explainx.ai，非 Apple 官方确认。",
+      "region": "global",
+      "score": 7.8,
+      "summary": "Apple 与临床 AI 平台 OpenEvidence 合作研究人们如何使用对话式健康 AI 工具及其回答是否有用；这是医疗 AI 产品的一手合作案例，值得拆解其评估方法。",
+      "title": "Apple 联手 OpenEvidence 研究用户如何与健康 AI 对话",
+      "url": "https://www.theverge.com/tech/1033355/apples-new-study-looks-to-improve-the-effectiveness-of-ai-health-tools",
+      "sources": [
+        {
+          "url": "https://www.theverge.com/tech/1033355/apples-new-study-looks-to-improve-the-effectiveness-of-ai-health-tools",
+          "title": "Apple’s new study looks to improve the effectiveness of AI health tools",
+          "source_type": "rss",
+          "published_at": "2026-11-16T01:26:56+00:00"
+        },
+        {
+          "url": "https://www.apple.com/newsroom/2026/11/apple-launches-research-study-to-explore-the-use-of-ai-for-health/",
+          "title": "Apple launches research study to explore the use of AI for health",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://explainx.ai/blog/apple-health-ai-usage-study-openevidence-2026",
+          "title": "Apple Health AI Study: 200K Users, OpenEvidence (2026 ...",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "apple-health-ai-usage-study-openevidence",
+          "date": "2026-11-16",
+          "title": "Apple 联手 OpenEvidence 研究用户如何与健康 AI 对话",
+          "summary": "Apple 与临床 AI 平台 OpenEvidence 合作研究人们如何使用对话式健康 AI 工具及其回答是否有用；这是医疗 AI 产品的一手合作案例，值得拆解其评估方法。",
+          "score": 7.8,
+          "url": "https://www.theverge.com/tech/1033355/apples-new-study-looks-to-improve-the-effectiveness-of-ai-health-tools"
+        }
+      ],
+      "usage_flow": [
+        "用户下载研究专用 App 并同意参与，完成资格确认",
+        "在 App 内用自然语言向健康 AI 提问（如症状、用药问题）",
+        "AI 基于医学文献生成回答，用户可继续追问或结束对话",
+        "用户提交反馈（如回答是否有用），数据用于研究分析"
+      ],
+      "learning_points": [
+        "RAG（检索增强生成）：AI 回答前先去查医学数据库，不是瞎编，降低『幻觉』风险",
+        "对话式 AI 的评估难题：回答『看起来对』和『真的有用』是两回事，需要真人反馈来测",
+        "联邦学习/隐私计算（可能涉及）：研究个人健康数据时，如何在不上传原始数据的情况下完成分析"
+      ],
+      "verticals": [],
+      "tags": [
+        "Apple",
+        "OpenEvidence",
+        "医疗健康",
+        "AI健康"
+      ]
+    },
+    {
+      "product_id": "product-a7581742fc7b4429",
+      "product_name": "OpenAI Agents SDK",
+      "builder_name": "markstuart-oai",
+      "first_seen": "2026-11-09",
+      "last_seen": "2026-11-16",
+      "occurrence_count": 2,
+      "intelligence_type": "model_capability",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "OpenAI 发布 Agents SDK v0.24.0-alpha.8，新增 Python 工具调用审批、自定义模型客户端和 Realtime 语音接入；这些能力能帮助开发者构建更可控的 Agent 产品。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.6,
+      "summary": "OpenAI 发布 Agents SDK v0.24.0-alpha.8，新增 Python 工具调用审批、自定义模型客户端和 Realtime 语音接入；这些能力能帮助开发者构建更可控的 Agent 产品。",
+      "title": "openai/openai-agents-python released v0.24.0-alpha.8",
+      "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.24.0-alpha.8",
+      "sources": [
+        {
+          "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.24.0-alpha.7",
+          "title": "openai/openai-agents-python released v0.24.0-alpha.7",
+          "source_type": "github",
+          "published_at": "2026-11-08T07:05:11+00:00"
+        },
+        {
+          "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.24.0-alpha.8",
+          "title": "openai/openai-agents-python released v0.24.0-alpha.8",
+          "source_type": "github",
+          "published_at": "2026-11-16T04:39:19+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "openai-agents-python-v0-24-0-alpha-7",
+          "date": "2026-11-09",
+          "title": "openai/openai-agents-python released v0.24.0-alpha.7",
+          "summary": "OpenAI 发布 Agents SDK v0.24.0-alpha.7，让开发者能把对话存在自己存储里、给 Agent 加语音和文件搜索等工具，并控制上下文和用量，适合想动手搭 Agent 产品的人参考。",
+          "score": 7.6,
+          "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.24.0-alpha.7"
+        },
+        {
+          "update_id": "openai-agents-python-v0-24-0-alpha-8",
+          "date": "2026-11-16",
+          "title": "openai/openai-agents-python released v0.24.0-alpha.8",
+          "summary": "OpenAI 发布 Agents SDK v0.24.0-alpha.8，新增 Python 工具调用审批、自定义模型客户端和 Realtime 语音接入；这些能力能帮助开发者构建更可控的 Agent 产品。",
+          "score": 7.6,
+          "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.24.0-alpha.8"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "SDK",
+        "OpenAI",
+        "Agents SDK",
+        "语音"
+      ]
+    },
+    {
+      "product_id": "product-4fee760326014370",
+      "product_name": "Datasette",
+      "builder_name": "Simon Willison",
+      "first_seen": "2026-11-16",
+      "last_seen": "2026-11-16",
+      "occurrence_count": 1,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Simon Willison 发布 Datasette 1.0a43，新增流式输出渲染器并修复安全问题，同时公开借助 Claude 推进 1.0 里程碑；适合了解 AI 辅助开源维护的实践。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.5,
+      "summary": "Simon Willison 发布 Datasette 1.0a43，新增流式输出渲染器并修复安全问题，同时公开借助 Claude 推进 1.0 里程碑；适合了解 AI 辅助开源维护的实践。",
+      "title": "datasette 1.0a43",
+      "url": "https://simonwillison.net/2026/Nov/15/datasette/",
+      "sources": [
+        {
+          "url": "https://simonwillison.net/2026/Nov/15/datasette/",
+          "title": "datasette 1.0a43",
+          "source_type": "rss",
+          "published_at": "2026-11-15T23:20:27+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "datasette-1-0a43",
+          "date": "2026-11-16",
+          "title": "datasette 1.0a43",
+          "summary": "Simon Willison 发布 Datasette 1.0a43，新增流式输出渲染器并修复安全问题，同时公开借助 Claude 推进 1.0 里程碑；适合了解 AI 辅助开源维护的实践。",
+          "score": 7.5,
+          "url": "https://simonwillison.net/2026/Nov/15/datasette/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Datasette",
+        "Claude",
+        "开源",
+        "AI辅助开发"
+      ]
+    },
+    {
+      "product_id": "product-f1fe3325456d2a71",
+      "product_name": "db-branch",
+      "builder_name": "nu_nu11",
+      "first_seen": "2026-11-16",
+      "last_seen": "2026-11-16",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "有人开源 db-branch，用 ZFS 给 AI Agent 和 CI 秒级复制数据库；解决测试和 Agent 改数据时环境隔离的问题，有代码可看。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.2,
+      "summary": "有人开源 db-branch，用 ZFS 给 AI Agent 和 CI 秒级复制数据库；解决测试和 Agent 改数据时环境隔离的问题，有代码可看。",
+      "title": "Show HN: db-branch – database branches in seconds for AI agents and CI, via ZFS",
+      "url": "https://github.com/db-branch/db-branch",
+      "sources": [
+        {
+          "url": "https://github.com/db-branch/db-branch",
+          "title": "Show HN: db-branch – database branches in seconds for AI agents and CI, via ZFS",
+          "source_type": "hackernews",
+          "published_at": "2026-11-15T13:50:51+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "db-branch-launch",
+          "date": "2026-11-16",
+          "title": "Show HN: db-branch – database branches in seconds for AI agents and CI, via ZFS",
+          "summary": "有人开源 db-branch，用 ZFS 给 AI Agent 和 CI 秒级复制数据库；解决测试和 Agent 改数据时环境隔离的问题，有代码可看。",
+          "score": 7.2,
+          "url": "https://github.com/db-branch/db-branch"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "开源",
+        "数据库",
+        "Agent",
+        "CI"
+      ]
+    },
     {
       "product_id": "product-171c314a55a03b79",
       "product_name": "browser-use",
@@ -3370,54 +3769,6 @@
         "Agent",
         "开源",
         "用户增长"
-      ]
-    },
-    {
-      "product_id": "product-a7581742fc7b4429",
-      "product_name": "OpenAI Agents SDK",
-      "builder_name": "markstuart-oai",
-      "first_seen": "2026-11-09",
-      "last_seen": "2026-11-09",
-      "occurrence_count": 1,
-      "intelligence_type": "model_capability",
-      "evidence_status": "first_party",
-      "target_user": "未公开",
-      "user_problem": "未公开",
-      "what_it_is": "OpenAI 发布 Agents SDK v0.24.0-alpha.7，让开发者能把对话存在自己存储里、给 Agent 加语音和文件搜索等工具，并控制上下文和用量，适合想动手搭 Agent 产品的人参考。",
-      "ai_role": "未公开",
-      "implementation_idea": "未公开",
-      "hands_on_exercise": "未公开",
-      "limitations_or_uncertainties": "未公开",
-      "region": "global",
-      "score": 7.6,
-      "summary": "OpenAI 发布 Agents SDK v0.24.0-alpha.7，让开发者能把对话存在自己存储里、给 Agent 加语音和文件搜索等工具，并控制上下文和用量，适合想动手搭 Agent 产品的人参考。",
-      "title": "openai/openai-agents-python released v0.24.0-alpha.7",
-      "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.24.0-alpha.7",
-      "sources": [
-        {
-          "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.24.0-alpha.7",
-          "title": "openai/openai-agents-python released v0.24.0-alpha.7",
-          "source_type": "github",
-          "published_at": "2026-11-08T07:05:11+00:00"
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "openai-agents-python-v0-24-0-alpha-7",
-          "date": "2026-11-09",
-          "title": "openai/openai-agents-python released v0.24.0-alpha.7",
-          "summary": "OpenAI 发布 Agents SDK v0.24.0-alpha.7，让开发者能把对话存在自己存储里、给 Agent 加语音和文件搜索等工具，并控制上下文和用量，适合想动手搭 Agent 产品的人参考。",
-          "score": 7.6,
-          "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.24.0-alpha.7"
-        }
-      ],
-      "usage_flow": [],
-      "learning_points": [],
-      "verticals": [],
-      "tags": [
-        "Agent",
-        "SDK",
-        "OpenAI"
       ]
     },
     {
