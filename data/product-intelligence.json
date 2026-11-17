@@ -1,7 +1,680 @@
 {
   "version": 1,
-  "updated_at": "2026-11-16T06:26:35.286769+00:00",
+  "updated_at": "2026-11-17T07:54:16.939505+00:00",
   "products": [
+    {
+      "product_id": "product-86c15e1854a2e59e",
+      "product_name": "ChatPRD",
+      "builder_name": "Claire Vo",
+      "first_seen": "2026-09-05",
+      "last_seen": "2026-11-17",
+      "occurrence_count": 2,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "ChatPRD 创始人 Claire Vo 讲述如何对抗 token 欺诈并最终取消免费试用；解决 AI SaaS 被滥用算力的问题；值得看因为是一手实战经验。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.2,
+      "summary": "ChatPRD 创始人 Claire Vo 讲述如何对抗 token 欺诈并最终取消免费试用；解决 AI SaaS 被滥用算力的问题；值得看因为是一手实战经验。",
+      "title": "How I fight token fraud as a solo founder",
+      "url": "https://www.lennysnewsletter.com/p/how-i-fight-token-fraud-as-a-solo",
+      "sources": [
+        {
+          "url": "https://www.lennysnewsletter.com/p/gpt-6-astra-is-a-banger-heres-everything",
+          "title": "GPT-6 Astra is a banger - here’s everything I’ve built",
+          "source_type": "newsletter",
+          "published_at": "2026-09-03T19:34:20+00:00"
+        },
+        {
+          "url": "https://www.lennysnewsletter.com/p/how-i-fight-token-fraud-as-a-solo",
+          "title": "How I fight token fraud as a solo founder",
+          "source_type": "newsletter",
+          "published_at": "2026-11-16T13:04:09+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "gpt6-astra-builder-experiences",
+          "date": "2026-09-05",
+          "title": "GPT-6 Astra is a banger - here’s everything I’ve built",
+          "summary": "产品构建者 Claire Vo 分享用 GPT-6 Astra 早期访问权限成功构建产品功能、3D 游戏和硬件 hack 的一手经验。",
+          "score": 8.5,
+          "url": "https://www.lennysnewsletter.com/p/gpt-6-astra-is-a-banger-heres-everything"
+        },
+        {
+          "update_id": "chatprd-token-fraud-solo-founder",
+          "date": "2026-11-17",
+          "title": "How I fight token fraud as a solo founder",
+          "summary": "ChatPRD 创始人 Claire Vo 讲述如何对抗 token 欺诈并最终取消免费试用；解决 AI SaaS 被滥用算力的问题；值得看因为是一手实战经验。",
+          "score": 8.2,
+          "url": "https://www.lennysnewsletter.com/p/how-i-fight-token-fraud-as-a-solo"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "GPT-6",
+        "构建者经验",
+        "产品案例",
+        "AI SaaS",
+        "反欺诈",
+        "产品运营"
+      ]
+    },
+    {
+      "product_id": "product-35f80b1f1104eb35",
+      "product_name": "tamserve",
+      "builder_name": "aryaman_darda",
+      "first_seen": "2026-11-17",
+      "last_seen": "2026-11-17",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "需要实时视频分析的开发者，尤其是安防、仓储安全、零售分析、养老监护、机器人视觉等场景的工程师",
+      "user_problem": "SAM 3 官方代码只能处理单个录好的视频，实时摄像头场景下：① 帧率低（约 8 fps）；② 长视频跑到几百帧就内存耗尽；③ 每个摄像头都要单独加载一份模型，GPU 撑不住多路并发",
+      "what_it_is": "一个让 Meta 的 SAM 3 能同时服务多个实时摄像头的开源推理引擎，用轻量跟踪器减少 GPU 占用，解决长视频内存爆炸问题",
+      "ai_role": "SAM 3 负责'每隔几帧重新确认物体在哪、轮廓是什么'，EdgeTAM 负责'在两次确认之间快速预测物体移动到哪里'",
+      "implementation_idea": "把'重活'和'轻活'分开：SAM 3 像视力好的质检员，偶尔来仔细辨认；EdgeTAM 像反应快的助手，在中间帧靠运动规律推测位置。所有摄像头共享同一套模型，避免重复加载吃光显存",
+      "hands_on_exercise": "30 分钟：有 RTX 显卡的话按 README 装 tamserve，用手机当摄像头推流，输入 'cup' 或 'phone' 看实时跟踪效果；没显卡的话读 GitHub 的 benchmark 表格，对比 SAM 3 原版和 tamserve 的内存曲线，理解'共享模型'为什么省显存",
+      "limitations_or_uncertainties": "正文提到 SAM 3 但 GitHub 描述写 SAM 2，具体默认集成版本未确认；EdgeTAM 的具体模型来源和许可证未在摘要中说明；16 路并发的延迟抖动、摄像头协议支持范围未公开",
+      "region": "global",
+      "score": 8.2,
+      "summary": "开发者 aryaman_darda 开源了 tamserve，用 Meta 的 SAM 3 加轻量跟踪器在实时摄像头画面里追踪任意指定物体，解决长视频和实时多路视频的内存与速度问题，适合做安防、仓储和养老监护等产品的人参考。",
+      "title": "tamserve：开源实时多摄像头目标追踪，单卡跑 16 路视频",
+      "url": "https://github.com/aryamandarda/tamserve",
+      "sources": [
+        {
+          "url": "https://github.com/aryamandarda/tamserve",
+          "title": "Show HN: Open-source, real-time object tracking for live video feeds",
+          "source_type": "hackernews",
+          "published_at": "2026-11-16T21:14:39+00:00"
+        },
+        {
+          "url": "https://www.vibeleaderboard.ai/app/90ed57f3-8d25-4cbe-a1d8-221bfd4908f2",
+          "title": "tamserve - VibeLeaderboard",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "tamserve-launch",
+          "date": "2026-11-17",
+          "title": "tamserve：开源实时多摄像头目标追踪，单卡跑 16 路视频",
+          "summary": "开发者 aryaman_darda 开源了 tamserve，用 Meta 的 SAM 3 加轻量跟踪器在实时摄像头画面里追踪任意指定物体，解决长视频和实时多路视频的内存与速度问题，适合做安防、仓储和养老监护等产品的人参考。",
+          "score": 8.2,
+          "url": "https://github.com/aryamandarda/tamserve"
+        }
+      ],
+      "usage_flow": [
+        "pip install \"tamserve[sam3]\" 安装",
+        "启动摄像头流，输入想追踪的物体名称（如 'forklift'、'person'）",
+        "系统自动用 SAM 3 隔几帧检测一次，中间帧用 EdgeTAM 轻量跟踪器接力",
+        "随时追加新物体类型，无需重启"
+      ],
+      "learning_points": [
+        "SAM（Segment Anything Model）：Meta 出的图像分割模型，能根据文字或点击找出任意物体的精确轮廓，是'视觉版的大模型'",
+        "跟踪器（Tracker）：在视频里让 AI 记住'这个物体是上一帧那个'，不是每帧都重新检测，省算力",
+        "推理优化：大模型直接跑很贵，工程上常用'大模型做关键帧+小模型做插帧'的组合拳来提速降本"
+      ],
+      "verticals": [],
+      "tags": [
+        "开源",
+        "实时视频",
+        "目标跟踪",
+        "SAM 3",
+        "垂直AI"
+      ]
+    },
+    {
+      "product_id": "product-0a38c0ad3d456000",
+      "product_name": "lend",
+      "builder_name": "antoniomika",
+      "first_seen": "2026-11-17",
+      "last_seen": "2026-11-17",
+      "occurrence_count": 1,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "开发者 Antonio 写文介绍自己做的 lend，让编码 Agent 不直接拿到密钥也能执行需要权限的操作，解决 Agent 安全使用凭证的问题，HN 上讨论了这类设计的实际收益。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.6,
+      "summary": "开发者 Antonio 写文介绍自己做的 lend，让编码 Agent 不直接拿到密钥也能执行需要权限的操作，解决 Agent 安全使用凭证的问题，HN 上讨论了这类设计的实际收益。",
+      "title": "Running coding agents without handing them my credentials",
+      "url": "https://blog.antonio.cx/running-agents-with-lend",
+      "sources": [
+        {
+          "url": "https://blog.antonio.cx/running-agents-with-lend",
+          "title": "Running coding agents without handing them my credentials",
+          "source_type": "hackernews",
+          "published_at": "2026-11-17T01:18:56+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "lend-agent-credential-proxy",
+          "date": "2026-11-17",
+          "title": "Running coding agents without handing them my credentials",
+          "summary": "开发者 Antonio 写文介绍自己做的 lend，让编码 Agent 不直接拿到密钥也能执行需要权限的操作，解决 Agent 安全使用凭证的问题，HN 上讨论了这类设计的实际收益。",
+          "score": 7.6,
+          "url": "https://blog.antonio.cx/running-agents-with-lend"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "安全",
+        "凭证管理",
+        "开发者工具"
+      ]
+    },
+    {
+      "product_id": "product-0b4232b80432d8e3",
+      "product_name": "Claude Frontier Academy",
+      "builder_name": "Anthropic News",
+      "first_seen": "2026-10-03",
+      "last_seen": "2026-11-17",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Anthropic 官方推出 Claude Frontier Academy，帮用户系统学习怎么用 Claude 解决实际问题，值得看是因为它把模型能力翻译成了可上手的用法。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.5,
+      "summary": "Anthropic 官方推出 Claude Frontier Academy，帮用户系统学习怎么用 Claude 解决实际问题，值得看是因为它把模型能力翻译成了可上手的用法。",
+      "title": "Claude Frontier Academy",
+      "url": "https://www.anthropic.com/news/claude-frontier-academy",
+      "sources": [
+        {
+          "url": "https://www.anthropic.com/news/claude-frontier-academy",
+          "title": "Claude Frontier Academy",
+          "source_type": "public_web",
+          "published_at": "2026-10-02T17:12:50+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "anthropic-claude-frontier-academy",
+          "date": "2026-10-03",
+          "title": "Claude Frontier Academy",
+          "summary": "Anthropic 官方推出 Claude Frontier Academy，帮用户系统学习怎么用 Claude 解决实际问题，值得看是因为它把模型能力翻译成了可上手的用法。",
+          "score": 7.5,
+          "url": "https://www.anthropic.com/news/claude-frontier-academy"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Anthropic",
+        "Claude",
+        "官方教育"
+      ]
+    },
+    {
+      "product_id": "product-d61c196174aaf123",
+      "product_name": "Claude Code",
+      "builder_name": "Lenny Rachitsky",
+      "first_seen": "2026-11-17",
+      "last_seen": "2026-11-17",
+      "occurrence_count": 1,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Lenny  newsletter 汇总 Fable 5.2 评测和用 Claude Code 搭建家庭 AI 系统的案例；解决 AI 工具实践分享问题；值得看因为包含真实构建过程。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.5,
+      "summary": "Lenny  newsletter 汇总 Fable 5.2 评测和用 Claude Code 搭建家庭 AI 系统的案例；解决 AI 工具实践分享问题；值得看因为包含真实构建过程。",
+      "title": "🎙️ How I AI: Fable 5.2 Review + How I fight token fraud as a solo founder + Building a Claude Code family OS",
+      "url": "https://www.lennysnewsletter.com/p/how-i-ai-fable-52-review-how-i-fight",
+      "sources": [
+        {
+          "url": "https://www.lennysnewsletter.com/p/how-i-ai-fable-52-review-how-i-fight",
+          "title": "🎙️ How I AI: Fable 5.2 Review + How I fight token fraud as a solo founder + Building a Claude Code family OS",
+          "source_type": "newsletter",
+          "published_at": "2026-11-16T16:02:55+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "lenny-how-i-ai-fable-review-family-os",
+          "date": "2026-11-17",
+          "title": "🎙️ How I AI: Fable 5.2 Review + How I fight token fraud as a solo founder + Building a Claude Code family OS",
+          "summary": "Lenny  newsletter 汇总 Fable 5.2 评测和用 Claude Code 搭建家庭 AI 系统的案例；解决 AI 工具实践分享问题；值得看因为包含真实构建过程。",
+          "score": 7.5,
+          "url": "https://www.lennysnewsletter.com/p/how-i-ai-fable-52-review-how-i-fight"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Claude Code",
+        "AI工具",
+        "构建实践"
+      ]
+    },
+    {
+      "product_id": "product-7d4a9a49e26bd907",
+      "product_name": "Hy4 Flash",
+      "builder_name": "Jerilyn Zheng",
+      "first_seen": "2026-11-17",
+      "last_seen": "2026-11-17",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "腾讯Hy4 Flash模型上线Vercel AI Gateway，输入输出五折至11月29日；它保留完整Hy4功能但价格约十分之一，适合高并发编码、Agent和文档任务。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.5,
+      "summary": "腾讯Hy4 Flash模型上线Vercel AI Gateway，输入输出五折至11月29日；它保留完整Hy4功能但价格约十分之一，适合高并发编码、Agent和文档任务。",
+      "title": "Hy4 Flash now available on AI Gateway for 50% off",
+      "url": "https://vercel.com/changelog/hy4-flash-now-available-on-ai-gateway-for-50-off",
+      "sources": [
+        {
+          "url": "https://vercel.com/changelog/hy4-flash-now-available-on-ai-gateway-for-50-off",
+          "title": "Hy4 Flash now available on AI Gateway for 50% off",
+          "source_type": "rss",
+          "published_at": "2026-11-16T17:00:00+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "hy4-flash-vercel-ai-gateway",
+          "date": "2026-11-17",
+          "title": "Hy4 Flash now available on AI Gateway for 50% off",
+          "summary": "腾讯Hy4 Flash模型上线Vercel AI Gateway，输入输出五折至11月29日；它保留完整Hy4功能但价格约十分之一，适合高并发编码、Agent和文档任务。",
+          "score": 7.5,
+          "url": "https://vercel.com/changelog/hy4-flash-now-available-on-ai-gateway-for-50-off"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "模型",
+        "AI Gateway",
+        "腾讯"
+      ]
+    },
+    {
+      "product_id": "product-3e3cbda2938f9119",
+      "product_name": "Lovable",
+      "builder_name": "Lovable Blog",
+      "first_seen": "2026-07-28",
+      "last_seen": "2026-11-17",
+      "occurrence_count": 7,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "使用 Lovable 构建全栈应用、需要连接数据库或第三方服务的开发者和团队",
+      "user_problem": "用户用 AI 生成应用后，需要连接真实数据库或 API，但担心数据泄露、权限失控、合规风险",
+      "what_it_is": "Lovable 推出 Drafts 功能；解决 AI 生成应用草稿管理问题；值得看因为它是 AI 建站产品的新交互尝试。",
+      "ai_role": "AI 负责根据用户描述生成完整应用代码，并在连接数据时自动配置安全最佳实践（如认证流程）",
+      "implementation_idea": "核心思路是'分层管控'：传输层加密（防止数据被窃听）、身份层统一认证（谁有权访问）、治理层审计追踪（做了什么操作）。AI 生成代码时内置这些安全模板，而非让用户手动配置。",
+      "hands_on_exercise": "在 Lovable 免费版创建一个待办应用，尝试连接 Supabase 数据库，观察平台自动生成的认证流程和 API 密钥管理方式，对比你手动配置时的步骤差异（约 45 分钟）",
+      "limitations_or_uncertainties": "原文未公开具体加密协议版本、第三方审计机构名称、数据驻留地域选项；AIUC-1 认证的具体覆盖范围未详细说明",
+      "region": "global",
+      "score": 7.2,
+      "summary": "Lovable 推出 Drafts 功能；解决 AI 生成应用草稿管理问题；值得看因为它是 AI 建站产品的新交互尝试。",
+      "title": "Introducing Drafts",
+      "url": "https://lovable.dev/blog/introducing-drafts",
+      "sources": [
+        {
+          "url": "https://lovable.dev/blog/how-we-run-swarms-of-ai-hacking-agents-against-ourselves",
+          "title": "How We Run Swarms Of Ai Hacking Agents Against Ourselves",
+          "source_type": "public_web",
+          "published_at": "2026-07-24T14:30:00+00:00"
+        },
+        {
+          "url": "https://lovable.dev/blog/how-lovable-secures-connected-data",
+          "title": "How Lovable Secures Connected Data",
+          "source_type": "public_web",
+          "published_at": "2026-07-29T08:00:00+00:00"
+        },
+        {
+          "url": "https://lovable.dev/blog",
+          "title": "Blog - Lovable",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://lovable.dev/pricing",
+          "title": "Lovable Pricing",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://lovable.dev/blog/app-user-connectors",
+          "title": "App User Connectors",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://lovable.dev/blog/introducing-growth-tools",
+          "title": "Introducing Growth Tools",
+          "source_type": "public_web",
+          "published_at": "2026-10-14T12:50:00+00:00"
+        },
+        {
+          "url": "https://lovable.dev/blog/enterprise-features-october-roundup",
+          "title": "Enterprise Features October Roundup",
+          "source_type": "public_web",
+          "published_at": "2026-10-20T11:30:00+00:00"
+        },
+        {
+          "url": "https://lovable.dev/blog/how-we-built-lovable-and-why-we-keep-rebuilding-it",
+          "title": "How We Built Lovable And Why We Keep Rebuilding It",
+          "source_type": "public_web",
+          "published_at": "2026-11-04T12:30:00+00:00"
+        },
+        {
+          "url": "https://lovable.dev/blog/introducing-drafts",
+          "title": "Introducing Drafts",
+          "source_type": "public_web",
+          "published_at": "2026-11-16T13:30:00+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "lovable-ai-hacking-swarms",
+          "date": "2026-07-28",
+          "title": "How We Run Swarms Of Ai Hacking Agents Against Ourselves",
+          "summary": "Lovable分享运行AI黑客代理群组进行自我安全测试的实践经验。",
+          "score": 8.0,
+          "url": "https://lovable.dev/blog/how-we-run-swarms-of-ai-hacking-agents-against-ourselves"
+        },
+        {
+          "update_id": "lovable-secures-connected-data",
+          "date": "2026-07-30",
+          "title": "Lovable 如何保障已连接数据的安全",
+          "summary": "Lovable官方博客介绍其AI产品如何安全连接用户数据，值得产品经理关注。",
+          "score": 7.0,
+          "url": "https://lovable.dev/blog/how-lovable-secures-connected-data"
+        },
+        {
+          "update_id": "lovable-app-user-connectors",
+          "date": "2026-07-31",
+          "title": "App User Connectors",
+          "summary": "Lovable发布App用户连接器功能，帮助用户集成外部应用数据。",
+          "score": 7.0,
+          "url": "https://lovable.dev/blog/app-user-connectors"
+        },
+        {
+          "update_id": "lovable-growth-tools",
+          "date": "2026-10-20",
+          "title": "Introducing Growth Tools",
+          "summary": "Lovable 推出了 Growth Tools 新功能，帮助用户增长，但未提供具体使用案例或效果数据。",
+          "score": 7.0,
+          "url": "https://lovable.dev/blog/introducing-growth-tools"
+        },
+        {
+          "update_id": "lovable-enterprise-features-october",
+          "date": "2026-10-21",
+          "title": "Enterprise Features October Roundup",
+          "summary": "Lovable 发布十月企业功能更新，帮助团队更好地用 AI 构建应用，值得关注其产品化路径。",
+          "score": 7.2,
+          "url": "https://lovable.dev/blog/enterprise-features-october-roundup"
+        },
+        {
+          "update_id": "lovable-rebuild-blog",
+          "date": "2026-11-05",
+          "title": "How We Built Lovable And Why We Keep Rebuilding It",
+          "summary": "Lovable 团队公开讲自己怎么搭建产品、为什么反复重写，能帮初学者理解 AI 产品从想法到落地的真实过程。",
+          "score": 8.6,
+          "url": "https://lovable.dev/blog/how-we-built-lovable-and-why-we-keep-rebuilding-it"
+        },
+        {
+          "update_id": "lovable-drafts-launch",
+          "date": "2026-11-17",
+          "title": "Introducing Drafts",
+          "summary": "Lovable 推出 Drafts 功能；解决 AI 生成应用草稿管理问题；值得看因为它是 AI 建站产品的新交互尝试。",
+          "score": 7.2,
+          "url": "https://lovable.dev/blog/introducing-drafts"
+        }
+      ],
+      "usage_flow": [
+        "用户在 Lovable 中通过自然语言描述应用需求，AI 生成前后端代码",
+        "用户选择连接外部数据源（如数据库、API），平台建立加密连接",
+        "管理员通过企业级治理面板设置权限、认证和发布控制",
+        "平台自动进行安全扫描，清理废弃应用，输出合规报告"
+      ],
+      "learning_points": [
+        "RAG（检索增强生成）：AI 需要查外部数据库时，如何不让敏感数据泄露给模型本身",
+        "Function Calling（函数调用）：AI 不直接碰数据，而是调用预定义的安全函数去读写，类似'按规矩办事'",
+        "Embedding（嵌入向量）：用户数据转成向量存储时的脱敏处理，防止原始信息被还原"
+      ],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "security",
+        "AI产品",
+        "数据安全",
+        "集成",
+        "增长工具",
+        "产品更新",
+        "AI 编程",
+        "企业功能",
+        "构建过程",
+        "产品思路",
+        "AI建站",
+        "产品功能"
+      ]
+    },
+    {
+      "product_id": "product-8bf44d7619edcd4e",
+      "product_name": "Claude",
+      "builder_name": "Anthropic News",
+      "first_seen": "2026-08-28",
+      "last_seen": "2026-11-17",
+      "occurrence_count": 3,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "巴克莱银行内部员工（具体部门未公开）",
+      "user_problem": "未公开具体痛点；从上下文推断为大银行内部工作流程效率、信息处理或知识获取方面的需求",
+      "what_it_is": "Anthropic 官方发布的客户案例，说明英国巴克莱银行如何在全行范围内推广使用 Claude AI 助手",
+      "ai_role": "作为嵌入内部工作流的 AI 助手，辅助员工完成文本类任务（具体功能未公开）",
+      "implementation_idea": "大银行把 Claude 接进自己的办公系统，让员工不用跳出去就能用；同时由 IT 部门管权限、管用量，确保符合金融行业的合规要求。RAG（检索增强生成，即让 AI 先查内部资料再回答）可能是关键，但原文未确认。",
+      "hands_on_exercise": "用 Claude 免费版处理一份你自己的工作文档（如邮件、会议纪要），记录：①你输入了什么 ②Claude 给了什么 ③你改了哪些地方才放心用。体会‘AI 辅助 + 人工审核’这个企业落地的核心模式。",
+      "limitations_or_uncertainties": "原文为 Anthropic 官方客户宣传文，未披露：具体使用人数、部署技术架构、是否用到 RAG 或 Function Calling、员工实际使用频率、合规细节、成本数据、以及‘规模化’的具体衡量标准。",
+      "region": "global",
+      "score": 7.2,
+      "summary": "Anthropic 官方披露 Barclays 规模化使用 Claude，说明大银行如何把 AI 助手接入内部工作流程，值得关注企业级 AI 产品的真实落地方式。",
+      "title": "巴克莱银行规模化部署 Claude 的企业落地案例",
+      "url": "https://www.anthropic.com/news/barclays-scales-claude",
+      "sources": [
+        {
+          "url": "https://www.anthropic.com/news/advancing-claude-for-education",
+          "title": "Advancing Claude For Education",
+          "source_type": "public_web",
+          "published_at": "2026-08-27T15:13:58+00:00"
+        },
+        {
+          "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system",
+          "title": "Claude Discovers Novel Enzyme System",
+          "source_type": "public_web",
+          "published_at": "2026-09-24T10:25:16+00:00"
+        },
+        {
+          "url": "https://www.anthropic.com/news/barclays-scales-claude",
+          "title": "Barclays Scales Claude",
+          "source_type": "public_web",
+          "published_at": "2026-10-01T09:16:50+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "anthropic-claude-for-education",
+          "date": "2026-08-28",
+          "title": "Advancing Claude For Education",
+          "summary": "Anthropic宣布推进Claude在教育领域的应用，但具体功能或合作未详述。",
+          "score": 7.0,
+          "url": "https://www.anthropic.com/news/advancing-claude-for-education"
+        },
+        {
+          "update_id": "anthropic-claude-novel-enzyme-system",
+          "date": "2026-09-25",
+          "title": "Claude Discovers Novel Enzyme System",
+          "summary": "Anthropic 官方称 Claude 发现了一种新的酶系统，展示大模型在生物科学发现中的实际用途，值得关注 AI 在医药研发场景的产品化可能。",
+          "score": 8.2,
+          "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system"
+        },
+        {
+          "update_id": "anthropic-barclays-claude-enterprise",
+          "date": "2026-10-02",
+          "title": "Barclays Scales Claude",
+          "summary": "Anthropic 官方披露 Barclays 规模化使用 Claude，说明大银行如何把 AI 助手接入内部工作流程，值得关注企业级 AI 产品的真实落地方式。",
+          "score": 7.2,
+          "url": "https://www.anthropic.com/news/barclays-scales-claude"
+        }
+      ],
+      "usage_flow": [
+        "员工在日常工作中通过内部系统调用 Claude",
+        "Claude 协助处理文本分析、写作或信息查询等任务",
+        "员工审核 AI 输出结果并决定后续操作",
+        "银行层面统一管理使用规模、权限与合规"
+      ],
+      "learning_points": [
+        "企业级 AI 落地 ≠ 直接让员工上公开网页，通常要接进内部系统做权限隔离",
+        "规模化（Scaling）指的是从试点小组扩展到全公司，需要 IT 治理和安全管控",
+        "金融行业的 AI 部署特别重视合规审计，输出可追溯比功能多更重要"
+      ],
+      "verticals": [],
+      "tags": [
+        "Anthropic",
+        "教育",
+        "Claude",
+        "科学发现",
+        "医药AI",
+        "企业AI",
+        "金融",
+        "客户案例"
+      ]
+    },
+    {
+      "product_id": "product-038f7a64faa1739f",
+      "product_name": "OpenCode Browse",
+      "builder_name": "mfiguiere",
+      "first_seen": "2026-11-17",
+      "last_seen": "2026-11-17",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "OpenCode 推出 Browse，让编码 Agent 能操作浏览器，解决 Agent 访问网页的问题，评论区讨论其与 Playwright MCP 的差异和安全风险，值得关注 Agent 工具链演进。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.2,
+      "summary": "OpenCode 推出 Browse，让编码 Agent 能操作浏览器，解决 Agent 访问网页的问题，评论区讨论其与 Playwright MCP 的差异和安全风险，值得关注 Agent 工具链演进。",
+      "title": "OpenCode Browse",
+      "url": "https://opencode.ai/product/browse",
+      "sources": [
+        {
+          "url": "https://opencode.ai/product/browse",
+          "title": "OpenCode Browse",
+          "source_type": "hackernews",
+          "published_at": "2026-11-16T21:20:37+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "opencode-browse-launch",
+          "date": "2026-11-17",
+          "title": "OpenCode Browse",
+          "summary": "OpenCode 推出 Browse，让编码 Agent 能操作浏览器，解决 Agent 访问网页的问题，评论区讨论其与 Playwright MCP 的差异和安全风险，值得关注 Agent 工具链演进。",
+          "score": 7.2,
+          "url": "https://opencode.ai/product/browse"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "浏览器",
+        "MCP",
+        "OpenCode"
+      ]
+    },
+    {
+      "product_id": "product-74ccf9b728a57325",
+      "product_name": "OpenAI Codex",
+      "builder_name": "OpenAI News",
+      "first_seen": "2026-11-17",
+      "last_seen": "2026-11-17",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Revolut 使用 OpenAI 模型和 Codex 将编码时间减少 30-60%；解决金融企业开发效率和反犯罪调查问题；值得看因为提供企业级 AI 落地指标。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.0,
+      "summary": "Revolut 使用 OpenAI 模型和 Codex 将编码时间减少 30-60%；解决金融企业开发效率和反犯罪调查问题；值得看因为提供企业级 AI 落地指标。",
+      "title": "How Revolut raises ambition without lowering the bar",
+      "url": "https://openai.com/business/customer-stories/revolut",
+      "sources": [
+        {
+          "url": "https://openai.com/business/customer-stories/revolut",
+          "title": "How Revolut raises ambition without lowering the bar",
+          "source_type": "rss",
+          "published_at": "2026-11-16T09:30:00+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "revolut-openai-codex-case-study",
+          "date": "2026-11-17",
+          "title": "How Revolut raises ambition without lowering the bar",
+          "summary": "Revolut 使用 OpenAI 模型和 Codex 将编码时间减少 30-60%；解决金融企业开发效率和反犯罪调查问题；值得看因为提供企业级 AI 落地指标。",
+          "score": 7.0,
+          "url": "https://openai.com/business/customer-stories/revolut"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Codex",
+        "企业案例",
+        "金融科技"
+      ]
+    },
     {
       "product_id": "product-9a5cc9327c864eb5",
       "product_name": "Qwen4-Max",
@@ -4737,153 +5410,6 @@
         "编码Agent",
         "隐私",
         "Claude Code"
-      ]
-    },
-    {
-      "product_id": "product-3e3cbda2938f9119",
-      "product_name": "Lovable",
-      "builder_name": "Lovable Blog",
-      "first_seen": "2026-07-28",
-      "last_seen": "2026-11-05",
-      "occurrence_count": 6,
-      "intelligence_type": "builder_insight",
-      "evidence_status": "first_party",
-      "target_user": "使用 Lovable 构建全栈应用、需要连接数据库或第三方服务的开发者和团队",
-      "user_problem": "用户用 AI 生成应用后，需要连接真实数据库或 API，但担心数据泄露、权限失控、合规风险",
-      "what_it_is": "Lovable 团队公开讲自己怎么搭建产品、为什么反复重写，能帮初学者理解 AI 产品从想法到落地的真实过程。",
-      "ai_role": "AI 负责根据用户描述生成完整应用代码，并在连接数据时自动配置安全最佳实践（如认证流程）",
-      "implementation_idea": "核心思路是'分层管控'：传输层加密（防止数据被窃听）、身份层统一认证（谁有权访问）、治理层审计追踪（做了什么操作）。AI 生成代码时内置这些安全模板，而非让用户手动配置。",
-      "hands_on_exercise": "在 Lovable 免费版创建一个待办应用，尝试连接 Supabase 数据库，观察平台自动生成的认证流程和 API 密钥管理方式，对比你手动配置时的步骤差异（约 45 分钟）",
-      "limitations_or_uncertainties": "原文未公开具体加密协议版本、第三方审计机构名称、数据驻留地域选项；AIUC-1 认证的具体覆盖范围未详细说明",
-      "region": "global",
-      "score": 8.6,
-      "summary": "Lovable 团队公开讲自己怎么搭建产品、为什么反复重写，能帮初学者理解 AI 产品从想法到落地的真实过程。",
-      "title": "How We Built Lovable And Why We Keep Rebuilding It",
-      "url": "https://lovable.dev/blog/how-we-built-lovable-and-why-we-keep-rebuilding-it",
-      "sources": [
-        {
-          "url": "https://lovable.dev/blog/how-we-run-swarms-of-ai-hacking-agents-against-ourselves",
-          "title": "How We Run Swarms Of Ai Hacking Agents Against Ourselves",
-          "source_type": "public_web",
-          "published_at": "2026-07-24T14:30:00+00:00"
-        },
-        {
-          "url": "https://lovable.dev/blog/how-lovable-secures-connected-data",
-          "title": "How Lovable Secures Connected Data",
-          "source_type": "public_web",
-          "published_at": "2026-07-29T08:00:00+00:00"
-        },
-        {
-          "url": "https://lovable.dev/blog",
-          "title": "Blog - Lovable",
-          "source_type": "supplemental",
-          "published_at": ""
-        },
-        {
-          "url": "https://lovable.dev/pricing",
-          "title": "Lovable Pricing",
-          "source_type": "supplemental",
-          "published_at": ""
-        },
-        {
-          "url": "https://lovable.dev/blog/app-user-connectors",
-          "title": "App User Connectors",
-          "source_type": "supplemental",
-          "published_at": ""
-        },
-        {
-          "url": "https://lovable.dev/blog/introducing-growth-tools",
-          "title": "Introducing Growth Tools",
-          "source_type": "public_web",
-          "published_at": "2026-10-14T12:50:00+00:00"
-        },
-        {
-          "url": "https://lovable.dev/blog/enterprise-features-october-roundup",
-          "title": "Enterprise Features October Roundup",
-          "source_type": "public_web",
-          "published_at": "2026-10-20T11:30:00+00:00"
-        },
-        {
-          "url": "https://lovable.dev/blog/how-we-built-lovable-and-why-we-keep-rebuilding-it",
-          "title": "How We Built Lovable And Why We Keep Rebuilding It",
-          "source_type": "public_web",
-          "published_at": "2026-11-04T12:30:00+00:00"
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "lovable-ai-hacking-swarms",
-          "date": "2026-07-28",
-          "title": "How We Run Swarms Of Ai Hacking Agents Against Ourselves",
-          "summary": "Lovable分享运行AI黑客代理群组进行自我安全测试的实践经验。",
-          "score": 8.0,
-          "url": "https://lovable.dev/blog/how-we-run-swarms-of-ai-hacking-agents-against-ourselves"
-        },
-        {
-          "update_id": "lovable-secures-connected-data",
-          "date": "2026-07-30",
-          "title": "Lovable 如何保障已连接数据的安全",
-          "summary": "Lovable官方博客介绍其AI产品如何安全连接用户数据，值得产品经理关注。",
-          "score": 7.0,
-          "url": "https://lovable.dev/blog/how-lovable-secures-connected-data"
-        },
-        {
-          "update_id": "lovable-app-user-connectors",
-          "date": "2026-07-31",
-          "title": "App User Connectors",
-          "summary": "Lovable发布App用户连接器功能，帮助用户集成外部应用数据。",
-          "score": 7.0,
-          "url": "https://lovable.dev/blog/app-user-connectors"
-        },
-        {
-          "update_id": "lovable-growth-tools",
-          "date": "2026-10-20",
-          "title": "Introducing Growth Tools",
-          "summary": "Lovable 推出了 Growth Tools 新功能，帮助用户增长，但未提供具体使用案例或效果数据。",
-          "score": 7.0,
-          "url": "https://lovable.dev/blog/introducing-growth-tools"
-        },
-        {
-          "update_id": "lovable-enterprise-features-october",
-          "date": "2026-10-21",
-          "title": "Enterprise Features October Roundup",
-          "summary": "Lovable 发布十月企业功能更新，帮助团队更好地用 AI 构建应用，值得关注其产品化路径。",
-          "score": 7.2,
-          "url": "https://lovable.dev/blog/enterprise-features-october-roundup"
-        },
-        {
-          "update_id": "lovable-rebuild-blog",
-          "date": "2026-11-05",
-          "title": "How We Built Lovable And Why We Keep Rebuilding It",
-          "summary": "Lovable 团队公开讲自己怎么搭建产品、为什么反复重写，能帮初学者理解 AI 产品从想法到落地的真实过程。",
-          "score": 8.6,
-          "url": "https://lovable.dev/blog/how-we-built-lovable-and-why-we-keep-rebuilding-it"
-        }
-      ],
-      "usage_flow": [
-        "用户在 Lovable 中通过自然语言描述应用需求，AI 生成前后端代码",
-        "用户选择连接外部数据源（如数据库、API），平台建立加密连接",
-        "管理员通过企业级治理面板设置权限、认证和发布控制",
-        "平台自动进行安全扫描，清理废弃应用，输出合规报告"
-      ],
-      "learning_points": [
-        "RAG（检索增强生成）：AI 需要查外部数据库时，如何不让敏感数据泄露给模型本身",
-        "Function Calling（函数调用）：AI 不直接碰数据，而是调用预定义的安全函数去读写，类似'按规矩办事'",
-        "Embedding（嵌入向量）：用户数据转成向量存储时的脱敏处理，防止原始信息被还原"
-      ],
-      "verticals": [],
-      "tags": [
-        "Agent",
-        "security",
-        "AI产品",
-        "数据安全",
-        "集成",
-        "增长工具",
-        "产品更新",
-        "AI 编程",
-        "企业功能",
-        "构建过程",
-        "产品思路"
       ]
     },
     {
@@ -11354,87 +11880,6 @@
       ]
     },
     {
-      "product_id": "product-8bf44d7619edcd4e",
-      "product_name": "Claude",
-      "builder_name": "Anthropic News",
-      "first_seen": "2026-08-28",
-      "last_seen": "2026-10-18",
-      "occurrence_count": 3,
-      "intelligence_type": "model_capability",
-      "evidence_status": "first_party",
-      "target_user": "未公开",
-      "user_problem": "未公开",
-      "what_it_is": "Anthropic 官方称 Claude 发现了一种新的酶系统，展示大模型在生物科学发现中的实际用途，值得关注 AI 在医药研发场景的产品化可能。",
-      "ai_role": "未公开",
-      "implementation_idea": "未公开",
-      "hands_on_exercise": "未公开",
-      "limitations_or_uncertainties": "未公开",
-      "region": "global",
-      "score": 8.2,
-      "summary": "Anthropic 官方称 Claude 发现了一种新的酶系统，展示大模型在生物科学发现中的实际用途，值得关注 AI 在医药研发场景的产品化可能。",
-      "title": "Claude Discovers Novel Enzyme System",
-      "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system",
-      "sources": [
-        {
-          "url": "https://www.anthropic.com/news/advancing-claude-for-education",
-          "title": "Advancing Claude For Education",
-          "source_type": "public_web",
-          "published_at": "2026-08-27T15:13:58+00:00"
-        },
-        {
-          "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system",
-          "title": "Claude Discovers Novel Enzyme System",
-          "source_type": "public_web",
-          "published_at": "2026-09-24T10:25:16+00:00"
-        },
-        {
-          "url": "https://www.anthropic.com/news/barclays-scales-claude",
-          "title": "Barclays Scales Claude",
-          "source_type": "public_web",
-          "published_at": "2026-10-01T09:16:50+00:00"
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "anthropic-claude-for-education",
-          "date": "2026-08-28",
-          "title": "Advancing Claude For Education",
-          "summary": "Anthropic宣布推进Claude在教育领域的应用，但具体功能或合作未详述。",
-          "score": 7.0,
-          "url": "https://www.anthropic.com/news/advancing-claude-for-education"
-        },
-        {
-          "update_id": "anthropic-claude-novel-enzyme-system",
-          "date": "2026-09-25",
-          "title": "Claude Discovers Novel Enzyme System",
-          "summary": "Anthropic 官方称 Claude 发现了一种新的酶系统，展示大模型在生物科学发现中的实际用途，值得关注 AI 在医药研发场景的产品化可能。",
-          "score": 8.2,
-          "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system"
-        },
-        {
-          "update_id": "anthropic-barclays-claude-enterprise",
-          "date": "2026-10-02",
-          "title": "Barclays Scales Claude",
-          "summary": "Anthropic 官方披露 Barclays 规模化使用 Claude，说明大银行如何把 AI 助手接入内部工作流程，值得关注企业级 AI 产品的真实落地方式。",
-          "score": 7.2,
-          "url": "https://www.anthropic.com/news/barclays-scales-claude"
-        }
-      ],
-      "usage_flow": [],
-      "learning_points": [],
-      "verticals": [],
-      "tags": [
-        "Anthropic",
-        "教育",
-        "Claude",
-        "科学发现",
-        "医药AI",
-        "企业AI",
-        "金融",
-        "客户案例"
-      ]
-    },
-    {
       "product_id": "product-c44e9ef84c5ae593",
       "product_name": "DeepSeek-V4.1-Flash-1017",
       "builder_name": "theykk",
@@ -16644,54 +17089,6 @@
         "本地推理",
         "开源",
         "个人产品"
-      ]
-    },
-    {
-      "product_id": "product-0b4232b80432d8e3",
-      "product_name": "Claude Frontier Academy",
-      "builder_name": "Anthropic News",
-      "first_seen": "2026-10-03",
-      "last_seen": "2026-10-03",
-      "occurrence_count": 1,
-      "intelligence_type": "model_capability",
-      "evidence_status": "first_party",
-      "target_user": "未公开",
-      "user_problem": "未公开",
-      "what_it_is": "Anthropic 官方推出 Claude Frontier Academy，帮用户系统学习怎么用 Claude 解决实际问题，值得看是因为它把模型能力翻译成了可上手的用法。",
-      "ai_role": "未公开",
-      "implementation_idea": "未公开",
-      "hands_on_exercise": "未公开",
-      "limitations_or_uncertainties": "未公开",
-      "region": "global",
-      "score": 7.5,
-      "summary": "Anthropic 官方推出 Claude Frontier Academy，帮用户系统学习怎么用 Claude 解决实际问题，值得看是因为它把模型能力翻译成了可上手的用法。",
-      "title": "Claude Frontier Academy",
-      "url": "https://www.anthropic.com/news/claude-frontier-academy",
-      "sources": [
-        {
-          "url": "https://www.anthropic.com/news/claude-frontier-academy",
-          "title": "Claude Frontier Academy",
-          "source_type": "public_web",
-          "published_at": "2026-10-02T17:12:50+00:00"
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "anthropic-claude-frontier-academy",
-          "date": "2026-10-03",
-          "title": "Claude Frontier Academy",
-          "summary": "Anthropic 官方推出 Claude Frontier Academy，帮用户系统学习怎么用 Claude 解决实际问题，值得看是因为它把模型能力翻译成了可上手的用法。",
-          "score": 7.5,
-          "url": "https://www.anthropic.com/news/claude-frontier-academy"
-        }
-      ],
-      "usage_flow": [],
-      "learning_points": [],
-      "verticals": [],
-      "tags": [
-        "Anthropic",
-        "Claude",
-        "官方教育"
       ]
     },
     {
@@ -24190,54 +24587,6 @@
       "tags": [
         "Blender",
         "编码代理"
-      ]
-    },
-    {
-      "product_id": "product-86c15e1854a2e59e",
-      "product_name": "ChatPRD",
-      "builder_name": "Claire Vo",
-      "first_seen": "2026-09-05",
-      "last_seen": "2026-09-05",
-      "occurrence_count": 1,
-      "intelligence_type": "builder_insight",
-      "evidence_status": "first_party",
-      "target_user": "未公开",
-      "user_problem": "未公开",
-      "what_it_is": "产品构建者 Claire Vo 分享用 GPT-6 Astra 早期访问权限成功构建产品功能、3D 游戏和硬件 hack 的一手经验。",
-      "ai_role": "未公开",
-      "implementation_idea": "未公开",
-      "hands_on_exercise": "未公开",
-      "limitations_or_uncertainties": "未公开",
-      "region": "global",
-      "score": 8.5,
-      "summary": "产品构建者 Claire Vo 分享用 GPT-6 Astra 早期访问权限成功构建产品功能、3D 游戏和硬件 hack 的一手经验。",
-      "title": "GPT-6 Astra is a banger - here’s everything I’ve built",
-      "url": "https://www.lennysnewsletter.com/p/gpt-6-astra-is-a-banger-heres-everything",
-      "sources": [
-        {
-          "url": "https://www.lennysnewsletter.com/p/gpt-6-astra-is-a-banger-heres-everything",
-          "title": "GPT-6 Astra is a banger - here’s everything I’ve built",
-          "source_type": "newsletter",
-          "published_at": "2026-09-03T19:34:20+00:00"
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "gpt6-astra-builder-experiences",
-          "date": "2026-09-05",
-          "title": "GPT-6 Astra is a banger - here’s everything I’ve built",
-          "summary": "产品构建者 Claire Vo 分享用 GPT-6 Astra 早期访问权限成功构建产品功能、3D 游戏和硬件 hack 的一手经验。",
-          "score": 8.5,
-          "url": "https://www.lennysnewsletter.com/p/gpt-6-astra-is-a-banger-heres-everything"
-        }
-      ],
-      "usage_flow": [],
-      "learning_points": [],
-      "verticals": [],
-      "tags": [
-        "GPT-6",
-        "构建者经验",
-        "产品案例"
       ]
     },
     {
