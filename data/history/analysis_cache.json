@@ -3305,6 +3305,46 @@
       },
       "stage": "candidate_analysis"
     },
+    "0745017f2b0cc9be36bd34aa5128dc369e31bd1ededc04395199b061025f9ed6": {
+      "created_at": "2026-11-18T07:25:31.420374+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "external-sandbox-pattern-v86",
+        "evidence_status": "first_party",
+        "follow_up": "关注三个沙箱实现的 GitHub 使用反馈，以及是否有产品团队将其集成到 coding agent 工作流中。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:simonwillison.net_atom_everything_:b4439a7527ca175b",
+        "intelligence_type": "builder_insight",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "external-sandbox-v86",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Simon Willison 与 Prime Radiant 合作提出 external sandbox 模式并开源三个沙箱服务器实现，属于构建者一手实践，有代码可验证，能帮助初学者理解 agent 安全执行边界；但偏基础设施，对产品经理的直接迁移性略低于完整产品案例。",
+        "region": "global",
+        "score": 8.6,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Simon Willison 和 Prime Radiant 提出让 agent 在外部沙箱里跑代码的模式，并开源三个沙箱服务器，解决本地模型试错时怕误操作或提示注入破坏机器的问题，值得看是因为它给出可复用的 agent 安全落地做法。",
+        "tags": [
+          "Agent",
+          "沙箱",
+          "开源",
+          "安全"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "0747d2733cf7848d9057ee27a80cbc2ca6a35dd89dc01d3510fd49df6e53ed1e": {
       "created_at": "2026-11-09T06:23:17.697761+00:00",
       "model": "deepseek-flash",
@@ -5322,6 +5362,46 @@
           "OpenAI",
           "SDK",
           "Agent"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "0b3e84aa89e79f7c76061d140ec0144cfdeacaaefc5648e958dde36d3193fe92": {
+      "created_at": "2026-11-18T07:25:13.642298+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "chatgpt-for-sales-launch",
+        "evidence_status": "first_party",
+        "follow_up": "关注插件实际使用反馈和销售场景效果数据。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:openai.com_news_rss.xml:3047d7657748ea76",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "ChatGPT for Sales",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI 官方发布 ChatGPT for Sales 插件和 30 多个合作伙伴插件，属于具体产品发布，能帮助初学者理解 AI 在销售工作流中解决什么问题，但缺少用户反馈。",
+        "region": "global",
+        "score": 8.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "OpenAI 推出 ChatGPT for Sales 插件和 30 多个合作插件，帮销售研究客户、准备话术和更新 CRM，值得看 AI 如何嵌入具体工作流。",
+        "tags": [
+          "ChatGPT",
+          "销售",
+          "插件",
+          "工作流"
         ],
         "target_user": "",
         "verticals": []
@@ -8339,6 +8419,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "121abb51da0cdd2708f6f66608a94d61abd3809ef9670496893affd6b9f19a2f": {
+      "created_at": "2026-11-18T07:25:13.641533+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-gpt-6-2-astra-sol-release",
+        "evidence_status": "reported",
+        "follow_up": "关注模型实际产品体验和开发者反馈。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "public_web:sitemap:c19f50a3e9a385a84e1e",
+        "intelligence_type": "model_capability",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "GPT-6.2 Astra / Sol",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Artificial Analysis 对 GPT-6.2 Astra 和 Sol 的基准排名报道，属于模型能力动态，但基准测试类内容按规则通常低于 7 分，且缺少产品体验层面的增量。",
+        "region": "global",
+        "score": 6.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Artificial Analysis 报道 OpenAI 发布 GPT-6.2 Astra 和 Sol 并进入智能指数第二，解决模型选型参考问题，但属于基准测试信息。",
+        "tags": [
+          "OpenAI",
+          "模型发布",
+          "基准测试"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "122594d635ed817baedd66d584df70e6b1fd9e3b52862ac41194120d2f08ed44": {
       "created_at": "2026-09-14T04:54:46.124885+00:00",
       "model": "deepseek-flash",
@@ -10457,6 +10576,46 @@
       },
       "stage": "candidate_analysis"
     },
+    "161d2de3eaa7d90996bf3cdfbc0334af1a3df22a31003e2152da97cd56c9223e": {
+      "created_at": "2026-11-18T07:25:31.422808+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "claude-code-v2-1-327",
+        "evidence_status": "first_party",
+        "follow_up": "关注 MCP 配置安全改进的实际使用反馈与状态页排错效果。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "github:release:449173658",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Claude Code",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Claude Code 发布 v2.1.327，新增安装确认、MCP JSON 从 stdin 读取、状态页列出损坏配置等多项可用性改进，属于官方工具常规迭代；对重度用户有明确增量，但无产品案例或用户反馈，按规则低于 7 分。",
+        "region": "global",
+        "score": 6.8,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "Anthropic 的 Claude Code 发布 v2.1.327，加入安装前确认、从标准输入读 MCP 配置以隐藏 token、状态页列出损坏的 agent 与技能文件，解决配置排错和密钥安全问题，值得看是因为它反映 coding agent 工具在工程细节上的打磨。",
+        "tags": [
+          "Anthropic",
+          "Claude Code",
+          "开发工具",
+          "MCP"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "161d488ace7a8e1bed80271d1adfdef9c71676fcf49d7a731816c2c8c5756127": {
       "created_at": "2026-08-01T03:49:06.725912+00:00",
       "model": "deepseek-v4-flash",
@@ -12155,6 +12314,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "1975f8f0f72ddfe7d819039ee894e4cdfafb63accd7c17e59faa7ba9b22508b5": {
+      "created_at": "2026-11-18T07:25:13.642370+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "meta-muse-deepfake-instagram",
+        "evidence_status": "reported",
+        "follow_up": "关注 Muse 产品本身的实际功能。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:d6530a5c2d1ebe71",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Muse",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "关于 Instagram 上 AI 深度伪造内容的报道，涉及 Meta 高管推广 Muse 的争议，属于社会新闻，与产品构建和模型能力关系弱。",
+        "region": "global",
+        "score": 3.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "The Verge 报道 Meta 高管在 Instagram 发布深度伪造视频推广 Muse，属于 AI 内容争议新闻，对产品构建帮助有限。",
+        "tags": [
+          "Meta",
+          "深度伪造",
+          "Muse"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "198a53513c8a079410abf69373d1a803fa1b4668b2f0214052965f12474404b8": {
       "created_at": "2026-09-25T04:56:21.899801+00:00",
       "model": "deepseek-flash",
@@ -13035,6 +13233,45 @@
         "tags": [
           "AI安全",
           "访谈"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "1b24c330e4ae2cbfdeadc204b41e454555c14b63853d8a1afe45305c6376d231": {
+      "created_at": "2026-11-18T07:25:43.574986+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "gemini-4-carbon-slow",
+        "evidence_status": "reported",
+        "follow_up": "关注 Google 官方是否发布 Carbon 的性能基准或优化计划。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:50541790",
+        "intelligence_type": "model_capability",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Gemini 4 Carbon",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "讨论 Gemini 4 Carbon 模型响应慢、token 效率低，涉及模型能力与产品体验的权衡，对产品经理理解模型选型有参考价值，但来源为个人博客和 HN 评论，缺乏官方数据。",
+        "region": "global",
+        "score": 6.8,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "有开发者讨论 Gemini 4 Carbon 模型推理慢、token 效率低，但代码架构感好；这提醒产品经理在选模型时要权衡速度与质量，但证据来自个人体验。",
+        "tags": [
+          "Gemini",
+          "模型能力",
+          "推理速度"
         ],
         "target_user": "",
         "verticals": []
@@ -17950,6 +18187,46 @@
       },
       "stage": "candidate_analysis"
     },
+    "2492d82595f45d7aa0042ed725df34d96c55037379f00dc97aeb878429fa202e": {
+      "created_at": "2026-11-18T07:25:31.420706+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-gpt-6-2-astra-sol",
+        "evidence_status": "first_party",
+        "follow_up": "关注 Astra 在长时 agent 任务中的实际表现与开发者成本反馈，以及是否有产品基于新价格设计新体验。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:simonwillison.net_atom_everything_:0b5f35342ecc69a5",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "GPT-6.2 Astra / GPT-6.2 Sol",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI 发布 GPT-6.2 Astra 与 Sol 两款模型，Simon Willison 一手记录价格与 API 接入，属于模型公司核心能力动态；价格下降对长时 agent 会话有直接产品意义，但内容偏模型发布与定价，未展示新体验，因此未进 9 分。",
+        "region": "global",
+        "score": 8.2,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "OpenAI 发布 GPT-6.2 Astra 和 GPT-6.2 Sol 两款模型并开放 API，Astra 价格降到前代八成、缓存价更低，解决长时 agent 会话成本高的问题，值得看是因为模型降价会直接改变 agent 产品的成本结构。",
+        "tags": [
+          "OpenAI",
+          "模型发布",
+          "定价",
+          "Agent"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "24b5bd96a4461b28facda75edbe90e795adcc107336e5d3fcfa81863d586e24a": {
       "created_at": "2026-09-04T04:31:27.733063+00:00",
       "model": "deepseek-v4-flash",
@@ -18097,6 +18374,46 @@
           "语音模型",
           "多语言",
           "Azure"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "24f6b12fb0a4d7ac19f068a2f61c2e3374afb9bac1f8cec065a996f422e28a21": {
+      "created_at": "2026-11-18T07:25:31.421678+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-codex-rust-v0-170-0",
+        "evidence_status": "first_party",
+        "follow_up": "关注实时语音在 TUI 中的实际使用反馈与跨环境 MCP 的稳定性。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "github:release:449494076",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "OpenAI Codex",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI Codex 发布 rust-v0.170.0，新增实时语音 WebRTC、OpenTelemetry 认证刷新和跨环境同名 MCP 服务器实验支持，属于官方工具常规功能迭代；对 coding agent 用户有增量，但无产品案例或用户反馈，按规则低于 7 分。",
+        "region": "global",
+        "score": 6.5,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "OpenAI Codex 发布 rust-v0.170.0，加入终端实时语音通话、遥测认证自动刷新和跨环境同名 MCP 服务器实验支持，解决 coding agent 在语音与多环境配置上的使用问题，值得看是因为它扩展了 agent 工具的交互方式。",
+        "tags": [
+          "OpenAI",
+          "Codex",
+          "Agent",
+          "开发工具"
         ],
         "target_user": "",
         "verticals": []
@@ -18821,6 +19138,45 @@
         "tags": [
           "金融",
           "安全"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "2678bbdea3ee387764e7b0d3e1946de0f74767da7fc2f4934b18e08bf1799341": {
+      "created_at": "2026-11-18T07:25:13.642196+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "lenny-product-pass-tools-2026",
+        "evidence_status": "reported",
+        "follow_up": "无实质后续，除非其中工具出现真实产品案例。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "newsletter:feed:dd86f379a3b90bb6cf7f",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": true,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Lenny Newsletter 的付费订阅促销，核心是工具包和折扣，属于营销内容，没有产品构建或用户反馈证据，按规则扣分。",
+        "region": "global",
+        "score": 3.5,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "Lenny Rachitsky 推广付费订阅附赠 35 款工具一年免费，解决读者工具获取问题，但本质是促销内容。",
+        "tags": [
+          "Newsletter",
+          "促销",
+          "工具包"
         ],
         "target_user": "",
         "verticals": []
@@ -20583,6 +20939,45 @@
         "summary": null,
         "summary_zh": "DeepSeek服务宕机超12小时后修复，但无产品构建或用户反馈细节。",
         "tags": [],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "2a3c24c9d39a9225d2eaf31d195d214c6224d08e12ab7aaac02368bba65a7974": {
+      "created_at": "2026-11-18T07:25:13.641599+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openrouter-rankings-top5",
+        "evidence_status": "reported",
+        "follow_up": "关注榜单变化是否对应新模型能力或产品采用。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "public_web:ranking:b0ab1ec5ca2d10da9cfa",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": false,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenRouter 模型热度榜单，属于聚合排名信息，没有产品案例或构建过程，对初学者理解产品帮助有限，按规则低于 7 分。",
+        "region": "china",
+        "score": 5.8,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "OpenRouter 列出当前热度前五模型，包括 DeepSeek V4.1 Flash、腾讯 Hy4 和 GLM 5.3 Flash，反映开发者使用趋势但缺少产品实践。",
+        "tags": [
+          "模型榜单",
+          "OpenRouter",
+          "趋势"
+        ],
         "target_user": "",
         "verticals": []
       },
@@ -35789,6 +36184,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "485e08db00748085b75331ecad220404ab699ea6acccb859b9ea4b1e8fab6768": {
+      "created_at": "2026-11-18T07:25:31.420253+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "google-spark-tasks-free",
+        "evidence_status": "reported",
+        "follow_up": "关注 Tasks 的官方产品页、实际可用范围与用户反馈，以及 Gemini 4 Hydrogen 模型在其中的具体作用。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:e1fe091022d29a57",
+        "intelligence_type": "product_case",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Google Tasks (原 Spark)",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Google 将 Spark AI agent 更名为 Tasks 并免费开放，属于正式产品发布与定价变化，有明确增量；但报道来自媒体转述，缺少一手产品页与用户反馈，且功能描述较泛，未展示具体使用流程与 AI 介入细节，因此未达 8 分。",
+        "region": "global",
+        "score": 7.8,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Google 把 Spark AI agent 改名为 Tasks 并免费开放，帮用户做餐食计划、管日历、翻邮件找可省开支，值得看是因为大厂 agent 产品从付费试点走向免费大众化。",
+        "tags": [
+          "Agent",
+          "Google",
+          "产品发布"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "486e2c257289830fbf902813036b6d4ff40e15cd751e156dc87a2f30fef223ea": {
       "created_at": "2026-08-26T01:58:41.401983+00:00",
       "model": "deepseek-v4-flash",
@@ -38154,6 +38588,45 @@
           "LLM Generated",
           "Game",
           "Builder Case"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "4dd807f0261ae01c3142488a5f993ff3d62ff1af544b477a6d9425de59761e94": {
+      "created_at": "2026-11-18T07:25:31.422866+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "vercel-ai-7-0-174",
+        "evidence_status": "first_party",
+        "follow_up": "关注批量输出支持在真实 AI 应用中的采用情况。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "github:release:449045929",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Vercel AI SDK",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Vercel AI SDK 发布 7.0.174 补丁，新增 batch 输出支持并修复流式与消息校验的内存问题，属于底层库常规维护；对开发者有稳定性价值，但无新产品体验，按规则低于 7 分。",
+        "region": "global",
+        "score": 5.8,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "Vercel 的 AI SDK 发布 7.0.174，给批量接口加上输出支持并修复深层嵌套消息校验导致的内存与 CPU 过高问题，解决 AI 应用在批量调用和消息校验上的稳定性问题，值得看是因为它影响 AI 产品的工程可靠性。",
+        "tags": [
+          "Vercel",
+          "SDK",
+          "开发工具"
         ],
         "target_user": "",
         "verticals": []
@@ -42092,6 +42565,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "552e698ac22dafe4650a08e8b397c098d7c7f5949b639440a03d86f80e028314": {
+      "created_at": "2026-11-18T07:25:43.574767+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "id-me-irs-signin",
+        "evidence_status": "reported",
+        "follow_up": "无。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:50540437",
+        "intelligence_type": "business_policy",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "身份认证政策与用户体验讨论，不涉及 AI 产品构建或模型能力，与兴趣优先级弱相关。",
+        "region": "global",
+        "score": 3.5,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "美国国税局登录强制使用 ID.me 引发争议，讨论数字身份认证的可用性问题；与 AI 产品无直接关系。",
+        "tags": [
+          "身份认证",
+          "政策",
+          "用户体验"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "55496a149e77402df170cb7d3e4f2e4ae26dcc036300a0bb3f77bff7692b545b": {
       "created_at": "2026-07-25T16:39:02.820591+00:00",
       "model": "deepseek-v4-flash",
@@ -44113,6 +44625,45 @@
         "tags": [
           "教育",
           "AI导师"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "59a208ee31b7ce61a28c4ed002d6d92f542ac39f16d1fe99d2c225c8f5aea29c": {
+      "created_at": "2026-11-18T07:25:43.574912+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "onnxruntime-github-removed",
+        "evidence_status": "reported",
+        "follow_up": "等待微软官方回应，确认是否与安全事件相关。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:50539610",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "ONNX Runtime",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "ONNX Runtime 仓库从 GitHub 消失，涉及供应链安全，但与 AI 产品构建或模型能力无直接关系，且信息未经官方确认。",
+        "region": "global",
+        "score": 4.5,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "微软 ONNX Runtime 的 GitHub 仓库突然消失，引发供应链安全猜测；这与 AI 产品思路无关，且缺乏官方说明。",
+        "tags": [
+          "ONNX",
+          "供应链",
+          "安全"
         ],
         "target_user": "",
         "verticals": []
@@ -49916,6 +50467,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "644e5b56fd695ae8c8caa214249f52b41c01166ddaa7461cf69b8428860685f8": {
+      "created_at": "2026-11-18T07:25:31.421708+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-codex-rust-v0-170-0-alpha-4-2",
+        "evidence_status": "first_party",
+        "follow_up": "等待该版本正式发布并附带变更说明。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "github:release:449424831",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "OpenAI Codex",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "仅有版本号、无变更说明的 alpha 发布，信息量极低，无实质增量，按规则归为噪音。",
+        "region": "global",
+        "score": 3.0,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "OpenAI Codex 发布 rust-v0.170.0-alpha.4.2，但没有任何变更说明，无法判断解决了什么问题，不值得拆解。",
+        "tags": [
+          "OpenAI",
+          "Codex",
+          "版本发布"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "64548fa1f35ab90bf35fbff2d45b87db2fc7bd025d68b8f79b6c003b0d48cadd": {
       "created_at": "2026-10-09T06:07:06.924837+00:00",
       "model": "deepseek-flash",
@@ -55041,6 +55631,46 @@
       },
       "stage": "candidate_analysis"
     },
+    "6e7fe47973000d9fc0b13fff5bfa816bbfd07576a700971e1b447a13992b6cf8": {
+      "created_at": "2026-11-18T07:25:43.572086+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "n8n-3-3-0",
+        "evidence_status": "first_party",
+        "follow_up": "观察这些修复是否显著提升 n8n 作为 AI 产品原型的可靠性，以及社区反馈。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "github:release:448417834",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "n8n",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "n8n 3.3.0 包含多项 AI Agent 节点修复，如保留工具调用前的模型文本、按输入项隔离工具调用历史、保存每轮工具调用到聊天记忆，这些修复直接改善 Agent 工作流的产品体验，对构建者有参考价值。",
+        "region": "global",
+        "score": 6.5,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "n8n 发布 3.3.0，修复 AI Agent 节点在工具调用历史、聊天记忆和 PDF 处理上的多个问题；这能让用 n8n 搭 AI 工作流的人获得更稳定的 Agent 行为，值得关注。",
+        "tags": [
+          "n8n",
+          "AI Agent",
+          "工作流",
+          "开源"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "6e8d5d48d6ace193b96110d9fbc763e640e0cd1efa942902cedde6619cc904d4": {
       "created_at": "2026-10-22T04:41:53.441557+00:00",
       "model": "deepseek-flash",
@@ -57238,6 +57868,45 @@
           "Spotify",
           "AI生成内容",
           "推荐系统"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "72f92e85113cac8debd27fb42643816eb7204e2e2a54029dab8bdafb98d06c84": {
+      "created_at": "2026-11-18T07:25:13.642316+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "gemini-tasks-free-features",
+        "evidence_status": "first_party",
+        "follow_up": "关注功能具体能力和用户实测。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:blog.google_innovation-and-ai_technology_ai_rss_:b451aff394adbb42",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Gemini",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Google 官方博客介绍 Gemini 任务功能更新，属于产品功能发布，但正文只有界面截图描述，缺少具体功能细节和用户反馈，信息增量有限。",
+        "region": "global",
+        "score": 6.8,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Google 官方介绍 Gemini 任务功能更新，让用户直接描述任务让 AI 执行，但正文信息太少，难以判断实际价值。",
+        "tags": [
+          "Gemini",
+          "任务",
+          "Google"
         ],
         "target_user": "",
         "verticals": []
@@ -59766,6 +60435,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "781a57025a63a4c1ebcfa439363bf54935687837d5f7fd9bc8c805813079f93b": {
+      "created_at": "2026-11-18T07:25:43.570580+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "langchain-openai-1-8-1",
+        "evidence_status": "first_party",
+        "follow_up": "观察后续版本是否引入新的 Agent 能力或工具调用模式。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "github:release:449171093",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "langchain-openai",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "LangChain 的 OpenAI 集成补丁版本，仅修复函数调用参数恢复问题，属于底层库维护，对产品经理理解产品逻辑无直接增量。",
+        "region": "global",
+        "score": 5.5,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "LangChain 发布 langchain-openai 1.8.1，修复从 done 事件恢复函数调用参数的问题；这是底层库维护，对产品构建无直接启发。",
+        "tags": [
+          "LangChain",
+          "OpenAI",
+          "SDK"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "78262a7937d6d85948ce75d5ebd0eb307e2429f9bc4dd4d5fde83bd4d5ffa15b": {
       "created_at": "2026-10-21T04:44:59.006623+00:00",
       "model": "kimi-k2.6",
@@ -60596,6 +61304,45 @@
           "模型能力",
           "辟谣",
           "Qwen"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "7a2fe9100130f05d31eec1eadae5e2edb8c211142378e5082f0eacdb9a000bf1": {
+      "created_at": "2026-11-18T07:25:31.421694+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-codex-rust-v0-171-0-alpha-13",
+        "evidence_status": "first_party",
+        "follow_up": "等待该版本正式发布并附带变更说明。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "github:release:449575190",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "OpenAI Codex",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "仅有版本号、无任何变更说明的 alpha 发布，属于低信息量常规构建，无实质增量，按规则归为噪音。",
+        "region": "global",
+        "score": 3.0,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "OpenAI Codex 发布 rust-v0.171.0-alpha.13，但没有任何变更说明，无法判断解决了什么问题，不值得拆解。",
+        "tags": [
+          "OpenAI",
+          "Codex",
+          "版本发布"
         ],
         "target_user": "",
         "verticals": []
@@ -61952,6 +62699,43 @@
       },
       "stage": "candidate_analysis"
     },
+    "7cd1e25e4cae5006b43cd558260f00d1dff85ec2b51431296d11949a2f51914e": {
+      "created_at": "2026-11-18T07:26:16.531491+00:00",
+      "model": "kimi-k2.6",
+      "prompt_version": "deep-v3-beginner",
+      "result": {
+        "ai_role": "AI 负责全流程自主执行：规划方案、编写代码、搭建监控/告警、执行测试、根据反馈迭代优化，而非仅生成代码片段",
+        "evidence_status": "first_party",
+        "hands_on_exercise": "30 分钟体验：在 Replit 免费版创建一个简单应用（如'一个能记录每日心情并显示统计图表的网页'），观察 AI 如何从需求到可运行代码；然后手动给 AI 加一个约束条件（如'必须用本地存储，不能连外部数据库'），看它如何调整方案。这能体会'目标+边界'如何塑造 AI 输出。",
+        "implementation_idea": "核心思路是'多智能体协作'——把一个大任务拆成多个子任务，分配给不同角色的 Agent（有的负责架构设计、有的写代码、有的测性能），它们像一个小型外包团队一样互相配合，在预算框内反复试错直到达标。用户只负责定目标和验收。",
+        "learning_points": [
+          "Agent（智能体）：不只是聊天或写代码，而是能自主规划步骤、调用工具、完成多轮任务的 AI 系统",
+          "多智能体协作（Multi-Agent / Agent Swarm）：多个 Agent 分工合作，模拟团队 workflow，解决单 Agent 搞不定的复杂项目",
+          "Function Calling（函数调用）：Agent 能主动调用外部工具（如查数据库、部署服务、发告警），这是 Agent 能'动手做事'的关键能力"
+        ],
+        "limitations_or_uncertainties": "目前仅见官方自述案例（DataCat），尚无外部独立用户验证完成质量和真实成本；Agent 集群的协调机制、失败时的回退策略、安全沙箱细节均未公开；企业级任务的定价模型和实际可用性未明确",
+        "product_name": "Replit Missions",
+        "sources": [
+          "https://replit.com/blog/introducing-replit-missions",
+          "https://www.turingpost.com/p/replit",
+          "https://replit.com/",
+          "https://www.notboring.co/p/replit-remix-the-internet",
+          "https://www.banani.co/blog/replit-ai-review",
+          "https://www.youtube.com/channel/UCgoJjdR6-7AMu9fDitb6nVw"
+        ],
+        "target_users": "有复杂业务需求但缺乏人力或时间的团队，尤其是需要替代遗留系统、拓展企业客户或改进产品性能的企业",
+        "title_zh": "Replit Missions：给定目标和预算，让 AI Agent 集群替你完成复杂任务",
+        "usage_flow": [
+          "用自然语言描述任务目标（如'赢得首批 10 个付费企业客户'），并设置预算和边界条件",
+          "回答系统追问以明确成功标准（如'付费试用算不算'、'合同最低金额多少'）",
+          "Replit 调度一群 Agent 自主规划、开发、测试和迭代",
+          "验收交付成果，按实际消耗付费"
+        ],
+        "user_problem": "团队想做重要但不紧急的复杂工作（如替换老旧软件、赢得首批企业客户），但要么没空启动，要么需要投入大量人力去协调多个环节（调研、开发、测试、迭代）",
+        "what_it_is": "一个让用户设定业务目标和预算上限，由多个 AI Agent 自动规划、编码、测试并迭代交付结果的产品化服务"
+      },
+      "stage": "deep_analysis"
+    },
     "7cd4ec1984de8db5f5e0a24222c7393e195b7fe66ef4efde49b685699a223ff9": {
       "created_at": "2026-10-13T06:47:01.228814+00:00",
       "model": "deepseek-flash",
@@ -62945,6 +63729,45 @@
           "OpenAI",
           "Codex",
           "版本发布"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "7ea9e0ac859bfb99e40a3cca9f1301d53237efd26d3f874369826eb6b31b32b1": {
+      "created_at": "2026-11-18T07:25:43.574703+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "java4shell-openjdk-rce",
+        "evidence_status": "reported",
+        "follow_up": "无。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:50538240",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Java 安全漏洞讨论，与 AI 产品、模型能力或构建实践无关，属于纯技术安全话题，对目标读者无直接价值。",
+        "region": "global",
+        "score": 3.0,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "OpenJDK 被曝 Base64 处理远程代码执行漏洞，引发安全讨论；这与 AI 产品构建无关，不推荐。",
+        "tags": [
+          "安全",
+          "Java",
+          "漏洞"
         ],
         "target_user": "",
         "verticals": []
@@ -64169,6 +64992,46 @@
           "OpenAI",
           "Codex",
           "Agent"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "816c00cec59d9b739e01c50639699cdef240d8bc22c488890feafeb17552d6e2": {
+      "created_at": "2026-11-18T07:25:31.420787+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "replit-missions-launch",
+        "evidence_status": "first_party",
+        "follow_up": "关注 Missions 的外部团队使用案例、预算控制效果与失败率，以及 DataCat 是否开源可验证。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:blog.replit.com_feed.xml:863bc3ddf7555937",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Replit Missions",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Replit 官方发布 Missions，用 agent 集群按目标和预算完成复杂任务，并给出内部两天、3000 美元预算构建 DataCat 的具体案例，属于有构建过程与可验证指标的一手产品案例；但案例来自官方自述，缺少外部用户反馈，因此未到 9 分。",
+        "region": "global",
+        "score": 8.8,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Replit 推出 Missions，用户定目标和预算，它调度一群 agent 规划、构建、测试并迭代，官方用两天和 3000 美元预算做出内部监控平台 DataCat，值得看是因为它把 agent 从写代码推进到按结果交付。",
+        "tags": [
+          "Agent",
+          "Replit",
+          "产品发布",
+          "多智能体"
         ],
         "target_user": "",
         "verticals": []
@@ -66012,6 +66875,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "84bfa40313a519bc5846d7d522d204b24094659c4b52d59b0c1b3e62a5c8886f": {
+      "created_at": "2026-11-18T07:25:13.642344+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "nadella-agi-pilled-comments",
+        "evidence_status": "reported",
+        "follow_up": "无直接产品后续。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:7e36a95f43b42f14",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "微软 CEO 的 AGI 宏观评论，属于泛行业观点，没有产品、代码或实践证据，按规则低于 7 分。",
+        "region": "global",
+        "score": 4.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "微软 CEO Satya Nadella 表示自己在经济层面相信 AGI 影响，属于宏观观点，对产品构建没有直接增量。",
+        "tags": [
+          "微软",
+          "AGI",
+          "观点"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "84c47e2417e043ad2366c544c1e9358f29ed800f2e4f3e8ada3f77b308fe9e50": {
       "created_at": "2026-10-26T04:44:36.979917+00:00",
       "model": "deepseek-flash",
@@ -67114,6 +68016,46 @@
         "tags": [
           "VMware",
           "商业"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "86ed34f07a4630eb9defed3d81c3813ee7cb3582c1df43ffaf36a66f1c1e9238": {
+      "created_at": "2026-11-18T07:25:31.421545+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-agents-python-v0-25-0",
+        "evidence_status": "first_party",
+        "follow_up": "关注第三方 session adapter 的生态接入情况与移除 Runloop 后的迁移反馈。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "github:release:449362518",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "openai-agents-python",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI Agents SDK 发布 v0.25.0，新增第三方 session adapter 工具并移除 Runloop sandbox provider，属于官方 SDK 常规迭代；对开发者有迁移价值，但无新产品体验或用户反馈，按规则低于 7 分。",
+        "region": "global",
+        "score": 6.2,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "OpenAI 的 Agents Python SDK 发布 v0.25.0，开放第三方 session adapter 工具并移除 Runloop 沙箱提供方，解决开发者接入自定义会话存储的问题，值得看是因为它影响 agent 应用的工程集成方式。",
+        "tags": [
+          "OpenAI",
+          "SDK",
+          "Agent",
+          "开源"
         ],
         "target_user": "",
         "verticals": []
@@ -72248,6 +73190,38 @@
         "verticals": []
       },
       "stage": "candidate_analysis"
+    },
+    "8eca985f995b36bbebb4e8ed65076ec6a1722b6fbe1c0055fd290bbf6e01a7ad": {
+      "created_at": "2026-11-18T07:26:37.132243+00:00",
+      "model": "kimi-k2.6",
+      "prompt_version": "deep-v3-beginner",
+      "result": {
+        "ai_role": "AI 负责自动抓取并整合客户公开信息、生成个性化话术草稿、以及将结构化数据推送到外部系统",
+        "evidence_status": "first_party",
+        "hands_on_exercise": "30 分钟练习：注册一个免费 CRM（如 HubSpot 免费版），手动模拟一次完整销售流程——查一家真实公司背景、写一段 3 分钟话术、录入一条跟进记录。记录哪些步骤最耗时，再对比 ChatGPT for Sales 声称能自动化的环节，写下 3 个你最想验证的问题",
+        "implementation_idea": "本质上是给 ChatGPT 装了'外接手脚'——通过插件（Plugin）让 AI 能实时访问外部数据库和工具，再把结果以对话形式呈现给用户。RAG（检索增强生成，即 AI 先查资料再回答，不是瞎编）和 Function Calling（函数调用，即 AI 判断何时该调用外部工具）是底层关键技术。",
+        "learning_points": [
+          "插件（Plugin）：让 LLM 突破训练数据截止日期，实时连接外部系统和数据库",
+          "Function Calling：LLM 自己判断'现在该调用哪个工具'，比如查 CRM 还是搜客户信息",
+          "工作流嵌入（Workflow Integration）：AI 不是独立聊天窗口，而是嵌在现有业务链条里替代重复步骤"
+        ],
+        "limitations_or_uncertainties": "未公开具体合作伙伴名单、插件定价、企业级安全合规细节；无用户实际使用反馈或性能数据；不清楚是否支持国内 CRM 系统",
+        "product_name": "ChatGPT for Sales",
+        "sources": [
+          "https://openai.com/index/introducing-chatgpt-for-sales"
+        ],
+        "target_users": "销售人员、销售团队、商务拓展（BD）人员",
+        "title_zh": "OpenAI 推出 ChatGPT 销售插件及 30+ 合作伙伴插件",
+        "usage_flow": [
+          "在 ChatGPT 中启用 Sales 插件或合作伙伴插件",
+          "输入客户名称或销售场景，让 AI 研究客户背景",
+          "根据研究结果生成或优化销售话术/提案",
+          "一键将更新内容同步到 CRM 系统"
+        ],
+        "user_problem": "销售需要反复切换多个工具查客户背景、手动整理话术、再手动录入 CRM，流程碎片化、耗时长",
+        "what_it_is": "OpenAI 官方发布的销售场景插件套件，让 ChatGPT 能直接对接客户研究、话术准备和 CRM 更新等销售日常工作"
+      },
+      "stage": "deep_analysis"
     },
     "8ed0eae8e8c519fb2b781f29edbdb46a71021fb79bffe4b8409bf464b91eab80": {
       "created_at": "2026-08-17T01:55:13.927661+00:00",
@@ -80898,6 +81872,46 @@
       },
       "stage": "candidate_analysis"
     },
+    "9ec42404e0ebb801e8e83cdc903ca5b3185eb7b86f85d99ff7e7bff9edaa4569": {
+      "created_at": "2026-11-18T07:25:15.869799+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "nvidia-open-source-strategy-huggingface-acquisition",
+        "evidence_status": "reported",
+        "follow_up": "值得后续追踪收购是否正式落地及对Hugging Face社区和产品的影响。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:fb12875ea4394a2a",
+        "intelligence_type": "business_policy",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Hugging Face",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "报道英伟达临时CEO重申开源AI战略并计划收购Hugging Face，属于公司战略与并购信号，但缺乏产品、代码、Demo或用户反馈等一手构建证据，对AI产品经理的直接可迁移增量有限，且涉及高管变动与并购传闻，证据强度一般，因此不进入高价值区间。",
+        "region": "global",
+        "score": 5.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "英伟达临时CEO在黄仁勋突然离职后重申开源AI战略不变，并计划收购Hugging Face，这条消息值得关注是因为它可能影响开源AI生态和模型分发平台格局。",
+        "tags": [
+          "Nvidia",
+          "Hugging Face",
+          "开源AI",
+          "并购"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "9ec5137decc11c0db1018320e2679552d40d9a59d47ed8f6e8d76f1a7aac27cb": {
       "created_at": "2026-09-04T04:31:38.284295+00:00",
       "model": "deepseek-v4-flash",
@@ -85190,6 +86204,46 @@
         "tags": [
           "开发者体验",
           "社区讨论"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "a5e6b2860a071c96bf70127ebe13abd9c3321bc2f5f079af76997c2816733aae": {
+      "created_at": "2026-11-18T07:25:43.574868+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "google-ai-search-traffic-drop",
+        "evidence_status": "reported",
+        "follow_up": "寻找 Google 官方数据或更多独立测量来验证流量下降幅度。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:50540178",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Google AI Search",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "讨论 Google AI 摘要导致搜索流量下降 40%，属于行业观察，对理解 AI 对内容生态的影响有参考价值，但缺乏一手数据或产品构建细节，且来源为博客聚合。",
+        "region": "global",
+        "score": 6.0,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "有博客称 Google AI 搜索摘要使网站流量下降 40%，引发 HN 讨论；这反映 AI 搜索对内容发现的影响，但证据来自二手博客，适合作为行业信号观察。",
+        "tags": [
+          "Google",
+          "AI搜索",
+          "SEO",
+          "流量"
         ],
         "target_user": "",
         "verticals": []
@@ -94863,6 +95917,46 @@
       },
       "stage": "candidate_analysis"
     },
+    "b7ffb057614beb399228e8b70a542af4c6b830c912184f6db5bfafebe9b563d7": {
+      "created_at": "2026-11-18T07:25:13.642277+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-gpt-6-2-astra-sol-release",
+        "evidence_status": "first_party",
+        "follow_up": "关注更多垂直场景实测和产品集成案例。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:50535230",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "GPT-6.2 Astra / Sol",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI 官方发布 GPT-6.2 Astra 和 Sol，HN 讨论中有开发者实测成本下降和 CAD 评测反馈，属于一手发布加真实用户反馈，对理解模型能力如何催生产品有参考价值。",
+        "region": "global",
+        "score": 8.3,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "OpenAI 发布 GPT-6.2 Astra 和 Sol，开发者反馈成本大幅下降且 CAD 评测表现好，值得看新模型能力如何降低产品构建成本。",
+        "tags": [
+          "OpenAI",
+          "模型发布",
+          "开发者反馈",
+          "成本"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "b80ff09e0a93ebf16d8c9fd050827c5d37bfa32f700eaea0142feba8ef724338": {
       "created_at": "2026-09-30T05:32:03.179340+00:00",
       "model": "kimi-k2.6",
@@ -101005,6 +102099,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "c509841ab157f3afc6ca24176049356b4358e22981b09a6c1ea24f7fbbec82d8": {
+      "created_at": "2026-11-18T07:25:13.641472+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "anthropic-claude-financial-services",
+        "evidence_status": "first_party",
+        "follow_up": "关注是否有具体客户案例、定价和金融场景功能细节。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "public_web:sitemap:96bb717697d4896736e2",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Claude",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Anthropic 官方发布面向金融服务行业的 Claude 能力更新，属于垂直行业产品落地，对做垂直 AI 产品有参考价值，但正文信息有限，缺少具体客户案例和用户反馈。",
+        "region": "global",
+        "score": 7.2,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Anthropic 官方发布 Claude 面向金融服务行业的更新，解决金融场景使用 AI 的问题，值得看垂直行业产品如何切入。",
+        "tags": [
+          "金融",
+          "垂直行业",
+          "Claude"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "c522a11d2c7fde24df9c902ca7f9e6bc8207eb3298b98bf58b35bc6b7ca331bf": {
       "created_at": "2026-11-11T06:13:18.630958+00:00",
       "model": "deepseek-flash",
@@ -103882,6 +105015,45 @@
           "桌面应用",
           "自动化",
           "AI代理"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "caf1d289302db2c70b0d7537896df33026dc21d45ff0aaefaeb943935e5362ee": {
+      "created_at": "2026-11-18T07:25:43.575046+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "apple-support-community-archive",
+        "evidence_status": "reported",
+        "follow_up": "无。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:50539747",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "苹果支持社区关闭与存档，属于互联网存档话题，与 AI 产品、模型能力或构建实践无关。",
+        "region": "global",
+        "score": 2.5,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "Archive Team 正在存档即将关闭的苹果支持社区；这是互联网存档事件，与 AI 产品无关。",
+        "tags": [
+          "苹果",
+          "存档",
+          "社区"
         ],
         "target_user": "",
         "verticals": []
@@ -108166,6 +109338,45 @@
           "Gemini",
           "Newsletter",
           "Benchmark"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "d4ee98dd93108219ac228e289f0956c5397783d416fa5ba9e3b1255c009cd342": {
+      "created_at": "2026-11-18T07:25:43.574599+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "n8n-beta-2-49-0",
+        "evidence_status": "first_party",
+        "follow_up": "无需跟进。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "github:release:448411439",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": false,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "n8n",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "beta 标签发布内容与 2.49.0 完全相同，属于重复信息，无新增量。",
+        "region": "global",
+        "score": 5.0,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "n8n 的 beta 标签发布了与 2.49.0 相同的内容，没有新信息，可忽略。",
+        "tags": [
+          "n8n",
+          "beta",
+          "重复"
         ],
         "target_user": "",
         "verticals": []
@@ -117795,6 +119006,46 @@
           "Meta",
           "数据抓取",
           "政策"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "e7e5e0f27d7a138f9d9335251f0f97f298c3133d687b6c08d5c461cbb78e57ea": {
+      "created_at": "2026-11-18T07:25:43.573347+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "n8n-2-49-0",
+        "evidence_status": "first_party",
+        "follow_up": "对比 2.49.0 与 3.3.0 的差异，确认稳定版是否包含全部 Agent 修复。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "github:release:448411376",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "n8n",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "n8n 2.49.0 与 3.3.0 内容高度重叠，同样包含 AI Agent 节点修复，但版本号不同，属于同一批修复的稳定版发布，增量价值与 3.3.0 类似。",
+        "region": "global",
+        "score": 6.5,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "n8n 发布 2.49.0，同样修复 AI Agent 节点的工具调用历史和聊天记忆问题；这是稳定版更新，对用 n8n 构建 AI 工作流的人有实际帮助。",
+        "tags": [
+          "n8n",
+          "AI Agent",
+          "工作流",
+          "开源"
         ],
         "target_user": "",
         "verticals": []

@@ -1,7 +1,392 @@
 {
   "version": 1,
-  "updated_at": "2026-11-17T07:54:16.939505+00:00",
+  "updated_at": "2026-11-18T07:26:37.155040+00:00",
   "products": [
+    {
+      "product_id": "product-36b99e1f8b539766",
+      "product_name": "Replit Missions",
+      "builder_name": "Replit Blog",
+      "first_seen": "2026-11-18",
+      "last_seen": "2026-11-18",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "有复杂业务需求但缺乏人力或时间的团队，尤其是需要替代遗留系统、拓展企业客户或改进产品性能的企业",
+      "user_problem": "团队想做重要但不紧急的复杂工作（如替换老旧软件、赢得首批企业客户），但要么没空启动，要么需要投入大量人力去协调多个环节（调研、开发、测试、迭代）",
+      "what_it_is": "一个让用户设定业务目标和预算上限，由多个 AI Agent 自动规划、编码、测试并迭代交付结果的产品化服务",
+      "ai_role": "AI 负责全流程自主执行：规划方案、编写代码、搭建监控/告警、执行测试、根据反馈迭代优化，而非仅生成代码片段",
+      "implementation_idea": "核心思路是'多智能体协作'——把一个大任务拆成多个子任务，分配给不同角色的 Agent（有的负责架构设计、有的写代码、有的测性能），它们像一个小型外包团队一样互相配合，在预算框内反复试错直到达标。用户只负责定目标和验收。",
+      "hands_on_exercise": "30 分钟体验：在 Replit 免费版创建一个简单应用（如'一个能记录每日心情并显示统计图表的网页'），观察 AI 如何从需求到可运行代码；然后手动给 AI 加一个约束条件（如'必须用本地存储，不能连外部数据库'），看它如何调整方案。这能体会'目标+边界'如何塑造 AI 输出。",
+      "limitations_or_uncertainties": "目前仅见官方自述案例（DataCat），尚无外部独立用户验证完成质量和真实成本；Agent 集群的协调机制、失败时的回退策略、安全沙箱细节均未公开；企业级任务的定价模型和实际可用性未明确",
+      "region": "global",
+      "score": 8.8,
+      "summary": "Replit 推出 Missions，用户定目标和预算，它调度一群 agent 规划、构建、测试并迭代，官方用两天和 3000 美元预算做出内部监控平台 DataCat，值得看是因为它把 agent 从写代码推进到按结果交付。",
+      "title": "Replit Missions：给定目标和预算，让 AI Agent 集群替你完成复杂任务",
+      "url": "https://replit.com/blog/introducing-replit-missions",
+      "sources": [
+        {
+          "url": "https://replit.com/blog/introducing-replit-missions",
+          "title": "Introducing Replit Missions",
+          "source_type": "rss",
+          "published_at": "2026-11-17T18:00:00+00:00"
+        },
+        {
+          "url": "https://www.turingpost.com/p/replit",
+          "title": "Replit Company Overview: AI Coding Platform for Everyone",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://replit.com/",
+          "title": "AI App and Website Builder | Replit",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "replit-missions-launch",
+          "date": "2026-11-18",
+          "title": "Replit Missions：给定目标和预算，让 AI Agent 集群替你完成复杂任务",
+          "summary": "Replit 推出 Missions，用户定目标和预算，它调度一群 agent 规划、构建、测试并迭代，官方用两天和 3000 美元预算做出内部监控平台 DataCat，值得看是因为它把 agent 从写代码推进到按结果交付。",
+          "score": 8.8,
+          "url": "https://replit.com/blog/introducing-replit-missions"
+        }
+      ],
+      "usage_flow": [
+        "用自然语言描述任务目标（如'赢得首批 10 个付费企业客户'），并设置预算和边界条件",
+        "回答系统追问以明确成功标准（如'付费试用算不算'、'合同最低金额多少'）",
+        "Replit 调度一群 Agent 自主规划、开发、测试和迭代",
+        "验收交付成果，按实际消耗付费"
+      ],
+      "learning_points": [
+        "Agent（智能体）：不只是聊天或写代码，而是能自主规划步骤、调用工具、完成多轮任务的 AI 系统",
+        "多智能体协作（Multi-Agent / Agent Swarm）：多个 Agent 分工合作，模拟团队 workflow，解决单 Agent 搞不定的复杂项目",
+        "Function Calling（函数调用）：Agent 能主动调用外部工具（如查数据库、部署服务、发告警），这是 Agent 能'动手做事'的关键能力"
+      ],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "Replit",
+        "产品发布",
+        "多智能体"
+      ]
+    },
+    {
+      "product_id": "product-7db132087f91a321",
+      "product_name": "external-sandbox-v86",
+      "builder_name": "Simon Willison",
+      "first_seen": "2026-11-18",
+      "last_seen": "2026-11-18",
+      "occurrence_count": 1,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Simon Willison 和 Prime Radiant 提出让 agent 在外部沙箱里跑代码的模式，并开源三个沙箱服务器，解决本地模型试错时怕误操作或提示注入破坏机器的问题，值得看是因为它给出可复用的 agent 安全落地做法。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.6,
+      "summary": "Simon Willison 和 Prime Radiant 提出让 agent 在外部沙箱里跑代码的模式，并开源三个沙箱服务器，解决本地模型试错时怕误操作或提示注入破坏机器的问题，值得看是因为它给出可复用的 agent 安全落地做法。",
+      "title": "External sandboxes for coding agents",
+      "url": "https://simonwillison.net/2026/Nov/17/external-sandboxes-for-coding-agents/",
+      "sources": [
+        {
+          "url": "https://simonwillison.net/2026/Nov/17/external-sandboxes-for-coding-agents/",
+          "title": "External sandboxes for coding agents",
+          "source_type": "rss",
+          "published_at": "2026-11-17T22:52:29+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "external-sandbox-pattern-v86",
+          "date": "2026-11-18",
+          "title": "External sandboxes for coding agents",
+          "summary": "Simon Willison 和 Prime Radiant 提出让 agent 在外部沙箱里跑代码的模式，并开源三个沙箱服务器，解决本地模型试错时怕误操作或提示注入破坏机器的问题，值得看是因为它给出可复用的 agent 安全落地做法。",
+          "score": 8.6,
+          "url": "https://simonwillison.net/2026/Nov/17/external-sandboxes-for-coding-agents/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "沙箱",
+        "开源",
+        "安全"
+      ]
+    },
+    {
+      "product_id": "product-9d78ae9a5cc8be89",
+      "product_name": "GPT-6.2 Astra / GPT-6.2 Sol",
+      "builder_name": "Simon Willison",
+      "first_seen": "2026-11-18",
+      "last_seen": "2026-11-18",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "OpenAI 发布 GPT-6.2 Astra 和 GPT-6.2 Sol 两款模型并开放 API，Astra 价格降到前代八成、缓存价更低，解决长时 agent 会话成本高的问题，值得看是因为模型降价会直接改变 agent 产品的成本结构。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.2,
+      "summary": "OpenAI 发布 GPT-6.2 Astra 和 GPT-6.2 Sol 两款模型并开放 API，Astra 价格降到前代八成、缓存价更低，解决长时 agent 会话成本高的问题，值得看是因为模型降价会直接改变 agent 产品的成本结构。",
+      "title": "GPT‑6.2 Astra and GPT‑6.2 Sol",
+      "url": "https://simonwillison.net/2026/Nov/17/gpt62-astra-and-sol/",
+      "sources": [
+        {
+          "url": "https://simonwillison.net/2026/Nov/17/gpt62-astra-and-sol/",
+          "title": "GPT‑6.2 Astra and GPT‑6.2 Sol",
+          "source_type": "rss",
+          "published_at": "2026-11-17T22:38:52+00:00"
+        },
+        {
+          "url": "https://openai.com/index/introducing-gpt-6-2-astra-sol/",
+          "title": "GPT‑6.2 Astra and Sol",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "openai-gpt-6-2-astra-sol",
+          "date": "2026-11-18",
+          "title": "GPT‑6.2 Astra and GPT‑6.2 Sol",
+          "summary": "OpenAI 发布 GPT-6.2 Astra 和 GPT-6.2 Sol 两款模型并开放 API，Astra 价格降到前代八成、缓存价更低，解决长时 agent 会话成本高的问题，值得看是因为模型降价会直接改变 agent 产品的成本结构。",
+          "score": 8.2,
+          "url": "https://simonwillison.net/2026/Nov/17/gpt62-astra-and-sol/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "OpenAI",
+        "模型发布",
+        "定价",
+        "Agent"
+      ]
+    },
+    {
+      "product_id": "product-867f3549bd91d551",
+      "product_name": "ChatGPT for Sales",
+      "builder_name": "OpenAI News",
+      "first_seen": "2026-11-18",
+      "last_seen": "2026-11-18",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "销售人员、销售团队、商务拓展（BD）人员",
+      "user_problem": "销售需要反复切换多个工具查客户背景、手动整理话术、再手动录入 CRM，流程碎片化、耗时长",
+      "what_it_is": "OpenAI 官方发布的销售场景插件套件，让 ChatGPT 能直接对接客户研究、话术准备和 CRM 更新等销售日常工作",
+      "ai_role": "AI 负责自动抓取并整合客户公开信息、生成个性化话术草稿、以及将结构化数据推送到外部系统",
+      "implementation_idea": "本质上是给 ChatGPT 装了'外接手脚'——通过插件（Plugin）让 AI 能实时访问外部数据库和工具，再把结果以对话形式呈现给用户。RAG（检索增强生成，即 AI 先查资料再回答，不是瞎编）和 Function Calling（函数调用，即 AI 判断何时该调用外部工具）是底层关键技术。",
+      "hands_on_exercise": "30 分钟练习：注册一个免费 CRM（如 HubSpot 免费版），手动模拟一次完整销售流程——查一家真实公司背景、写一段 3 分钟话术、录入一条跟进记录。记录哪些步骤最耗时，再对比 ChatGPT for Sales 声称能自动化的环节，写下 3 个你最想验证的问题",
+      "limitations_or_uncertainties": "未公开具体合作伙伴名单、插件定价、企业级安全合规细节；无用户实际使用反馈或性能数据；不清楚是否支持国内 CRM 系统",
+      "region": "global",
+      "score": 8.0,
+      "summary": "OpenAI 推出 ChatGPT for Sales 插件和 30 多个合作插件，帮销售研究客户、准备话术和更新 CRM，值得看 AI 如何嵌入具体工作流。",
+      "title": "OpenAI 推出 ChatGPT 销售插件及 30+ 合作伙伴插件",
+      "url": "https://openai.com/index/introducing-chatgpt-for-sales",
+      "sources": [
+        {
+          "url": "https://openai.com/index/introducing-chatgpt-for-sales",
+          "title": "Introducing ChatGPT for Sales",
+          "source_type": "rss",
+          "published_at": "2026-11-17T08:00:00+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "chatgpt-for-sales-launch",
+          "date": "2026-11-18",
+          "title": "OpenAI 推出 ChatGPT 销售插件及 30+ 合作伙伴插件",
+          "summary": "OpenAI 推出 ChatGPT for Sales 插件和 30 多个合作插件，帮销售研究客户、准备话术和更新 CRM，值得看 AI 如何嵌入具体工作流。",
+          "score": 8.0,
+          "url": "https://openai.com/index/introducing-chatgpt-for-sales"
+        }
+      ],
+      "usage_flow": [
+        "在 ChatGPT 中启用 Sales 插件或合作伙伴插件",
+        "输入客户名称或销售场景，让 AI 研究客户背景",
+        "根据研究结果生成或优化销售话术/提案",
+        "一键将更新内容同步到 CRM 系统"
+      ],
+      "learning_points": [
+        "插件（Plugin）：让 LLM 突破训练数据截止日期，实时连接外部系统和数据库",
+        "Function Calling：LLM 自己判断'现在该调用哪个工具'，比如查 CRM 还是搜客户信息",
+        "工作流嵌入（Workflow Integration）：AI 不是独立聊天窗口，而是嵌在现有业务链条里替代重复步骤"
+      ],
+      "verticals": [],
+      "tags": [
+        "ChatGPT",
+        "销售",
+        "插件",
+        "工作流"
+      ]
+    },
+    {
+      "product_id": "product-e502ba3698e43c42",
+      "product_name": "Google Tasks (原 Spark)",
+      "builder_name": "Emma Roth",
+      "first_seen": "2026-11-18",
+      "last_seen": "2026-11-18",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Google 把 Spark AI agent 改名为 Tasks 并免费开放，帮用户做餐食计划、管日历、翻邮件找可省开支，值得看是因为大厂 agent 产品从付费试点走向免费大众化。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.8,
+      "summary": "Google 把 Spark AI agent 改名为 Tasks 并免费开放，帮用户做餐食计划、管日历、翻邮件找可省开支，值得看是因为大厂 agent 产品从付费试点走向免费大众化。",
+      "title": "Google’s Spark AI agent becomes ‘Tasks’ — and now it’s free",
+      "url": "https://www.theverge.com/tech/1035756/google-spark-ai-tasks-free",
+      "sources": [
+        {
+          "url": "https://www.theverge.com/tech/1035756/google-spark-ai-tasks-free",
+          "title": "Google’s Spark AI agent becomes ‘Tasks’ — and now it’s free",
+          "source_type": "rss",
+          "published_at": "2026-11-17T18:58:01+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "google-spark-tasks-free",
+          "date": "2026-11-18",
+          "title": "Google’s Spark AI agent becomes ‘Tasks’ — and now it’s free",
+          "summary": "Google 把 Spark AI agent 改名为 Tasks 并免费开放，帮用户做餐食计划、管日历、翻邮件找可省开支，值得看是因为大厂 agent 产品从付费试点走向免费大众化。",
+          "score": 7.8,
+          "url": "https://www.theverge.com/tech/1035756/google-spark-ai-tasks-free"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "Google",
+        "产品发布"
+      ]
+    },
+    {
+      "product_id": "product-8bf44d7619edcd4e",
+      "product_name": "Claude",
+      "builder_name": "Anthropic News",
+      "first_seen": "2026-08-28",
+      "last_seen": "2026-11-18",
+      "occurrence_count": 4,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "巴克莱银行内部员工（具体部门未公开）",
+      "user_problem": "未公开具体痛点；从上下文推断为大银行内部工作流程效率、信息处理或知识获取方面的需求",
+      "what_it_is": "Anthropic 官方发布 Claude 面向金融服务行业的更新，解决金融场景使用 AI 的问题，值得看垂直行业产品如何切入。",
+      "ai_role": "作为嵌入内部工作流的 AI 助手，辅助员工完成文本类任务（具体功能未公开）",
+      "implementation_idea": "大银行把 Claude 接进自己的办公系统，让员工不用跳出去就能用；同时由 IT 部门管权限、管用量，确保符合金融行业的合规要求。RAG（检索增强生成，即让 AI 先查内部资料再回答）可能是关键，但原文未确认。",
+      "hands_on_exercise": "用 Claude 免费版处理一份你自己的工作文档（如邮件、会议纪要），记录：①你输入了什么 ②Claude 给了什么 ③你改了哪些地方才放心用。体会‘AI 辅助 + 人工审核’这个企业落地的核心模式。",
+      "limitations_or_uncertainties": "原文为 Anthropic 官方客户宣传文，未披露：具体使用人数、部署技术架构、是否用到 RAG 或 Function Calling、员工实际使用频率、合规细节、成本数据、以及‘规模化’的具体衡量标准。",
+      "region": "global",
+      "score": 7.2,
+      "summary": "Anthropic 官方发布 Claude 面向金融服务行业的更新，解决金融场景使用 AI 的问题，值得看垂直行业产品如何切入。",
+      "title": "Advancing Claude For Financial Services",
+      "url": "https://www.anthropic.com/news/advancing-claude-for-financial-services",
+      "sources": [
+        {
+          "url": "https://www.anthropic.com/news/advancing-claude-for-education",
+          "title": "Advancing Claude For Education",
+          "source_type": "public_web",
+          "published_at": "2026-08-27T15:13:58+00:00"
+        },
+        {
+          "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system",
+          "title": "Claude Discovers Novel Enzyme System",
+          "source_type": "public_web",
+          "published_at": "2026-09-24T10:25:16+00:00"
+        },
+        {
+          "url": "https://www.anthropic.com/news/barclays-scales-claude",
+          "title": "Barclays Scales Claude",
+          "source_type": "public_web",
+          "published_at": "2026-10-01T09:16:50+00:00"
+        },
+        {
+          "url": "https://www.anthropic.com/news/advancing-claude-for-financial-services",
+          "title": "Advancing Claude For Financial Services",
+          "source_type": "public_web",
+          "published_at": "2026-11-17T17:10:23.887000+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "anthropic-claude-for-education",
+          "date": "2026-08-28",
+          "title": "Advancing Claude For Education",
+          "summary": "Anthropic宣布推进Claude在教育领域的应用，但具体功能或合作未详述。",
+          "score": 7.0,
+          "url": "https://www.anthropic.com/news/advancing-claude-for-education"
+        },
+        {
+          "update_id": "anthropic-claude-novel-enzyme-system",
+          "date": "2026-09-25",
+          "title": "Claude Discovers Novel Enzyme System",
+          "summary": "Anthropic 官方称 Claude 发现了一种新的酶系统，展示大模型在生物科学发现中的实际用途，值得关注 AI 在医药研发场景的产品化可能。",
+          "score": 8.2,
+          "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system"
+        },
+        {
+          "update_id": "anthropic-barclays-claude-enterprise",
+          "date": "2026-10-02",
+          "title": "Barclays Scales Claude",
+          "summary": "Anthropic 官方披露 Barclays 规模化使用 Claude，说明大银行如何把 AI 助手接入内部工作流程，值得关注企业级 AI 产品的真实落地方式。",
+          "score": 7.2,
+          "url": "https://www.anthropic.com/news/barclays-scales-claude"
+        },
+        {
+          "update_id": "anthropic-claude-financial-services",
+          "date": "2026-11-18",
+          "title": "Advancing Claude For Financial Services",
+          "summary": "Anthropic 官方发布 Claude 面向金融服务行业的更新，解决金融场景使用 AI 的问题，值得看垂直行业产品如何切入。",
+          "score": 7.2,
+          "url": "https://www.anthropic.com/news/advancing-claude-for-financial-services"
+        }
+      ],
+      "usage_flow": [
+        "员工在日常工作中通过内部系统调用 Claude",
+        "Claude 协助处理文本分析、写作或信息查询等任务",
+        "员工审核 AI 输出结果并决定后续操作",
+        "银行层面统一管理使用规模、权限与合规"
+      ],
+      "learning_points": [
+        "企业级 AI 落地 ≠ 直接让员工上公开网页，通常要接进内部系统做权限隔离",
+        "规模化（Scaling）指的是从试点小组扩展到全公司，需要 IT 治理和安全管控",
+        "金融行业的 AI 部署特别重视合规审计，输出可追溯比功能多更重要"
+      ],
+      "verticals": [],
+      "tags": [
+        "Anthropic",
+        "教育",
+        "Claude",
+        "科学发现",
+        "医药AI",
+        "企业AI",
+        "金融",
+        "客户案例",
+        "垂直行业"
+      ]
+    },
     {
       "product_id": "product-86c15e1854a2e59e",
       "product_name": "ChatPRD",
@@ -486,96 +871,6 @@
         "产品思路",
         "AI建站",
         "产品功能"
-      ]
-    },
-    {
-      "product_id": "product-8bf44d7619edcd4e",
-      "product_name": "Claude",
-      "builder_name": "Anthropic News",
-      "first_seen": "2026-08-28",
-      "last_seen": "2026-11-17",
-      "occurrence_count": 3,
-      "intelligence_type": "product_case",
-      "evidence_status": "first_party",
-      "target_user": "巴克莱银行内部员工（具体部门未公开）",
-      "user_problem": "未公开具体痛点；从上下文推断为大银行内部工作流程效率、信息处理或知识获取方面的需求",
-      "what_it_is": "Anthropic 官方发布的客户案例，说明英国巴克莱银行如何在全行范围内推广使用 Claude AI 助手",
-      "ai_role": "作为嵌入内部工作流的 AI 助手，辅助员工完成文本类任务（具体功能未公开）",
-      "implementation_idea": "大银行把 Claude 接进自己的办公系统，让员工不用跳出去就能用；同时由 IT 部门管权限、管用量，确保符合金融行业的合规要求。RAG（检索增强生成，即让 AI 先查内部资料再回答）可能是关键，但原文未确认。",
-      "hands_on_exercise": "用 Claude 免费版处理一份你自己的工作文档（如邮件、会议纪要），记录：①你输入了什么 ②Claude 给了什么 ③你改了哪些地方才放心用。体会‘AI 辅助 + 人工审核’这个企业落地的核心模式。",
-      "limitations_or_uncertainties": "原文为 Anthropic 官方客户宣传文，未披露：具体使用人数、部署技术架构、是否用到 RAG 或 Function Calling、员工实际使用频率、合规细节、成本数据、以及‘规模化’的具体衡量标准。",
-      "region": "global",
-      "score": 7.2,
-      "summary": "Anthropic 官方披露 Barclays 规模化使用 Claude，说明大银行如何把 AI 助手接入内部工作流程，值得关注企业级 AI 产品的真实落地方式。",
-      "title": "巴克莱银行规模化部署 Claude 的企业落地案例",
-      "url": "https://www.anthropic.com/news/barclays-scales-claude",
-      "sources": [
-        {
-          "url": "https://www.anthropic.com/news/advancing-claude-for-education",
-          "title": "Advancing Claude For Education",
-          "source_type": "public_web",
-          "published_at": "2026-08-27T15:13:58+00:00"
-        },
-        {
-          "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system",
-          "title": "Claude Discovers Novel Enzyme System",
-          "source_type": "public_web",
-          "published_at": "2026-09-24T10:25:16+00:00"
-        },
-        {
-          "url": "https://www.anthropic.com/news/barclays-scales-claude",
-          "title": "Barclays Scales Claude",
-          "source_type": "public_web",
-          "published_at": "2026-10-01T09:16:50+00:00"
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "anthropic-claude-for-education",
-          "date": "2026-08-28",
-          "title": "Advancing Claude For Education",
-          "summary": "Anthropic宣布推进Claude在教育领域的应用，但具体功能或合作未详述。",
-          "score": 7.0,
-          "url": "https://www.anthropic.com/news/advancing-claude-for-education"
-        },
-        {
-          "update_id": "anthropic-claude-novel-enzyme-system",
-          "date": "2026-09-25",
-          "title": "Claude Discovers Novel Enzyme System",
-          "summary": "Anthropic 官方称 Claude 发现了一种新的酶系统，展示大模型在生物科学发现中的实际用途，值得关注 AI 在医药研发场景的产品化可能。",
-          "score": 8.2,
-          "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system"
-        },
-        {
-          "update_id": "anthropic-barclays-claude-enterprise",
-          "date": "2026-10-02",
-          "title": "Barclays Scales Claude",
-          "summary": "Anthropic 官方披露 Barclays 规模化使用 Claude，说明大银行如何把 AI 助手接入内部工作流程，值得关注企业级 AI 产品的真实落地方式。",
-          "score": 7.2,
-          "url": "https://www.anthropic.com/news/barclays-scales-claude"
-        }
-      ],
-      "usage_flow": [
-        "员工在日常工作中通过内部系统调用 Claude",
-        "Claude 协助处理文本分析、写作或信息查询等任务",
-        "员工审核 AI 输出结果并决定后续操作",
-        "银行层面统一管理使用规模、权限与合规"
-      ],
-      "learning_points": [
-        "企业级 AI 落地 ≠ 直接让员工上公开网页，通常要接进内部系统做权限隔离",
-        "规模化（Scaling）指的是从试点小组扩展到全公司，需要 IT 治理和安全管控",
-        "金融行业的 AI 部署特别重视合规审计，输出可追溯比功能多更重要"
-      ],
-      "verticals": [],
-      "tags": [
-        "Anthropic",
-        "教育",
-        "Claude",
-        "科学发现",
-        "医药AI",
-        "企业AI",
-        "金融",
-        "客户案例"
       ]
     },
     {
