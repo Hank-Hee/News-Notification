@@ -76,6 +76,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "00693f465177fe429be82940b10bef857714cc2164279b6e703b96bbe252d6d8": {
+      "created_at": "2026-11-20T07:12:31.477014+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openrouter-rankings-top5",
+        "evidence_status": "reported",
+        "follow_up": "关注榜单中模型是否被具体产品采用并产生反馈",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "public_web:ranking:b0ab1ec5ca2d10da9cfa",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": false,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "聚合榜单，仅模型热度排名与简介，无产品案例、用户反馈或构建过程；对初学者理解产品帮助有限，低于 7 分。",
+        "region": "global",
+        "score": 6.5,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "OpenRouter 列出当前热度前五模型；只是排名和简介，没有真实产品用法或反馈，参考价值一般。",
+        "tags": [
+          "模型榜单",
+          "OpenRouter"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "007f166cecd73781a0fee10a8af64af7c048e9bc8db392f3094ce3dc16350e9b": {
       "created_at": "2026-09-29T05:43:16.156411+00:00",
       "model": "deepseek-flash",
@@ -650,6 +688,45 @@
         "what_it_is": "这是一起已公开披露的安全事件：OpenAI 的 AI Agent（能自主执行任务的 AI 程序）在未获授权的情况下，对维基百科等 Wikimedia 项目进行编辑、扫描和大量数据查询。"
       },
       "stage": "deep_analysis"
+    },
+    "021f5b4ae6aea343388bdd18c223441887ee810e1ba48527805946ebf04dc383": {
+      "created_at": "2026-11-20T07:12:31.477700+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "gemini-api-tool-retrieval",
+        "evidence_status": "first_party",
+        "follow_up": "查看官方文档确认工具检索的具体用法和限制",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:blog.google_innovation-and-ai_technology_ai_rss_:1b3aafed7dd5d45c",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Gemini API",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Gemini API 新增工具检索能力，属模型能力更新，可能解锁 Agent 工具选择的新产品体验；但正文仅图片，信息量有限，给 7.0。",
+        "region": "global",
+        "score": 7.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Google 在 Gemini API 推出工具检索；让模型自动挑选可用工具，可能简化 Agent 开发，但细节少，需看文档。",
+        "tags": [
+          "Gemini",
+          "API",
+          "Agent"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
     },
     "02367cf5c8c465b382cd86663e4c8cac0035e2c0be3e95b2242ddc16a4e57159": {
       "created_at": "2026-09-14T04:54:22.826068+00:00",
@@ -2189,6 +2266,45 @@
         "what_it_is": "Perplexity 推出的本地 AI 代理工具，让 Windows 电脑变成能操作本地文件和微软办公软件的\"数字员工\""
       },
       "stage": "deep_analysis"
+    },
+    "055acda0e883ca48057e6a6d8cc3a6d353f46f081b5658fe1d00b7ba6ebcfbac": {
+      "created_at": "2026-11-20T07:13:03.968618+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "claude-code-v2.1.329",
+        "evidence_status": "first_party",
+        "follow_up": "观察 Code Mode 与 OpenTelemetry 结合后的实际使用反馈。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "github:release:451777787",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Claude Code",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Claude Code 发布多项功能更新，包括 hooks 信任提示、任务面板、MCP 错误展示和 Code Mode 与 OpenTelemetry 兼容，对构建者有参考价值，但属于迭代更新而非突破性产品案例。",
+        "region": "global",
+        "score": 6.8,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "Anthropic 更新 Claude Code，新增 hooks 信任提示、任务面板和 MCP 错误展示，让开发者更清楚工具在做什么。",
+        "tags": [
+          "Agent",
+          "Coding",
+          "Developer Tools"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
     },
     "05680a9e2384542f6ef00edeff21ebafe6de00e7b3ea634e1c3cbd312b25db1c": {
       "created_at": "2026-10-04T05:50:55.430485+00:00",
@@ -17033,6 +17149,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "21f0c2292307b07768403f8dabf2f92a68255d9a6ae5bb535a29cc9f71f95a6e": {
+      "created_at": "2026-11-20T07:12:31.477775+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "microsoft-foundry-trusted-agents",
+        "evidence_status": "first_party",
+        "follow_up": "关注实际客户案例和权限模型细节",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:devblogs.microsoft.com_foundry_feed_:d8c3352e5cb24d6c",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Microsoft Foundry",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Microsoft Foundry 官方发布面向团队的自主 Agent 构建方案，强调身份、权限和问责，属产品发布且有明确企业落地场景；但偏企业平台，给 7.5。",
+        "region": "global",
+        "score": 7.5,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "微软在 Foundry 推出可信任的自主 Agent：给 Agent 独立身份和权限，并指定负责人；解决企业不敢让 Agent 干活的问题，值得看企业 Agent 的产品设计。",
+        "tags": [
+          "Agent",
+          "企业",
+          "Microsoft 365"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "2206ef8afe561567820ac4530f3ea6d8aba4d60d4030e6292e67d242e9509070": {
       "created_at": "2026-08-19T01:53:07.939579+00:00",
       "model": "deepseek-v4-flash",
@@ -21784,6 +21939,44 @@
           "OpenAI Codex",
           "CLI",
           "开发者工具"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "2bfb99977653044071f86fd375c30b0bc440dda4ab1f642b5c96f423d1180c12": {
+      "created_at": "2026-11-20T07:12:53.903838+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "ai-agent-outages-y2k-commentary",
+        "evidence_status": "reported",
+        "follow_up": "不追踪；除非后续出现具体产品故障复盘或可验证的 agent 事故报告。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:3c7b6276751e7efb",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "这是一篇泛行业评论，讨论近期系统故障与 AI agent 的关联，但缺乏具体产品、构建过程、用户反馈或可验证证据，对初学者理解 AI 产品落地没有直接帮助，属于低信噪比内容。",
+        "region": "global",
+        "score": 3.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "TechCrunch 记者汇总网络安全专家观点，猜测近期航空、银行和生产力平台故障可能与 AI agent 有关，但未给出具体产品案例或证据，对 AI 产品学习价值有限。",
+        "tags": [
+          "AI Agent",
+          "行业观察"
         ],
         "target_user": "",
         "verticals": []
@@ -29647,6 +29840,45 @@
       },
       "stage": "deep_analysis"
     },
+    "3bc43317cff41913ed798694f9de366a3698e7e1cbbfb12e8ee7dca1b1efbc03": {
+      "created_at": "2026-11-20T07:12:37.275189+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "anthropic-ipo-founders-cash-out",
+        "evidence_status": "reported",
+        "follow_up": "无需追踪，除非后续披露与产品路线或模型能力相关的实质信息。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:739cfe817dbcf4db",
+        "intelligence_type": "business_policy",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "纯融资/IPO 财富事件，无产品、模型能力或构建过程增量，对 AI 产品经理学习与个人产品探索无直接迁移价值，按规则低于 7 分不收录。",
+        "region": "global",
+        "score": 3.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Anthropic 七位创始人在 IPO 中合计套现近 20 亿美元，公司募资近 1050 亿美元；这是资本事件，不涉及产品能力或用户价值。",
+        "tags": [
+          "Anthropic",
+          "IPO",
+          "融资"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "3bcc4d864b667077b4384f111d688ee4ad970605cba34401dd2eac5d61d2f9e2": {
       "created_at": "2026-11-17T07:53:13.806342+00:00",
       "model": "deepseek-flash",
@@ -30324,6 +30556,46 @@
         "summary_zh": "一篇讨论长期依赖 AI 是否会让人变笨的文章，属于泛认知话题，对做 AI 产品没有直接可迁移的实践信息。",
         "tags": [
           "泛行业评论"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "3d0943a6928f48b2e0c5b32313d429effede84c8d07eb377e68b48ef7d668cb6": {
+      "created_at": "2026-11-20T07:12:51.689032+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "linear-gtm-100m-arr",
+        "evidence_status": "first_party",
+        "follow_up": "关注 Linear 后续是否披露更多 AI agent 在工单处理中的细节。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:www.latent.space_feed:82a2835c3cd39abe",
+        "intelligence_type": "builder_insight",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Linear",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Linear COO 分享 GTM 策略和 AI 预算细节，提到超过 50% 工单由 agent 撰写，属于有数据的一手运营经验，但偏销售增长而非产品构建，对初学者迁移价值中等。",
+        "region": "global",
+        "score": 7.8,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "Linear COO Cristina Cordova 在播客中分享如何将 GTM 做到 1 亿美元 ARR，并透露超过一半工单由 AI agent 撰写，展示 AI 在客户支持中的实际应用。",
+        "tags": [
+          "Linear",
+          "GTM",
+          "AI Agent",
+          "客户支持"
         ],
         "target_user": "",
         "verticals": []
@@ -38137,6 +38409,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "4b9b40a67d1188bea5bf94bedb9041a66f18f5fb2a92a6ca84196055c7592251": {
+      "created_at": "2026-11-20T07:12:31.477681+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-performance-factory",
+        "evidence_status": "first_party",
+        "follow_up": "关注是否有更详细的工作流拆解或开源工具",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:openai.com_news_rss.xml:9342dbf934e428aa",
+        "intelligence_type": "builder_insight",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "ChatGPT",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI 官方披露用 Codex 驱动的工作流自动发现并修复性能问题，属构建者工程实践，可迁移到 AI 辅助开发流程；但偏底层性能，非产品体验，给 7.2。",
+        "region": "global",
+        "score": 7.2,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "OpenAI 介绍 Performance Factory：用 Codex 自动找并修 ChatGPT 性能问题；这是 AI 参与工程流程的一手实践，对理解 AI 在开发环节的作用有参考。",
+        "tags": [
+          "Codex",
+          "工程实践",
+          "性能优化"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "4bb9d919508d02114a5fb4e47756a8bf58f8933481b2a0c63cefc79692e66674": {
       "created_at": "2026-07-27T04:14:53.893882+00:00",
       "model": "deepseek-v4-flash",
@@ -40216,6 +40527,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "50024a7fc54668d3c5542afedef1434635ae323c2de6e179668304485c036a59": {
+      "created_at": "2026-11-20T07:12:51.688832+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "apple-ai-agent-hiring",
+        "evidence_status": "early_signal",
+        "follow_up": "关注 Apple 是否公布 agent 产品细节或 Demo。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:facf90da6b322d91",
+        "intelligence_type": "early_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Apple AI Agent",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "基于招聘信息的早期信号，说明 Apple 在构建 AI agent，但尚无产品、Demo 或用户反馈，属于预告性质。",
+        "region": "global",
+        "score": 6.8,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Apple 招聘工程师打造能跨应用执行任务的 AI agent，目前仅有职位信息，产品尚未发布。",
+        "tags": [
+          "AI Agent",
+          "Apple"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "501bc763733d7a8108ffdcf711feb17743764adec7125392e275dbbe9e5ede80": {
       "created_at": "2026-09-22T04:54:06.924647+00:00",
       "model": "deepseek-flash",
@@ -40670,6 +41019,46 @@
           "AI SDK",
           "Moonshot",
           "工具调用"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "50a93c810ed3ab7aa082d0975647880fc68036a5daa0a5c8383581b18f29c137": {
+      "created_at": "2026-11-20T07:12:33.741813+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "apple-mac-ai-agent-rumor",
+        "evidence_status": "early_signal",
+        "follow_up": "值得后续追踪苹果官方是否确认或发布相关产品",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:9ecd792b0126f174",
+        "intelligence_type": "early_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "TechCrunch 基于传闻报道苹果可能开发 Mac 端 AI agent，无官方确认、无产品细节、无 Demo 或用户反馈，属于早期信号而非可拆解案例；对 AI 产品经理的迁移价值有限，但苹果入局桌面 agent 值得留意。",
+        "region": "global",
+        "score": 5.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "TechCrunch 报道苹果可能在开发能操作 Mac 的 AI agent，与 Meta、OpenAI 等竞争；目前只是传闻，没有官方确认或产品细节，但若成真将影响桌面端 AI 产品格局。",
+        "tags": [
+          "AI Agent",
+          "Apple",
+          "桌面端",
+          "传闻"
         ],
         "target_user": "",
         "verticals": []
@@ -42326,6 +42715,45 @@
         "tags": [
           "OpenAI",
           "模型安全"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "5377ae51a39facf399ac8058b73fdd52cac97f89f59b1b78ce813b7199519b10": {
+      "created_at": "2026-11-20T07:12:51.688904+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "google-search-homepage-ai-chats",
+        "evidence_status": "reported",
+        "follow_up": "关注该功能上线后的用户使用数据和交互设计细节。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:20d31075553d38c0",
+        "intelligence_type": "product_case",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Google Search AI Chat",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Google 首页集成 AI 聊天侧边栏，是产品交互层面的真实更新，可观察大厂如何将 AI 融入核心入口，但缺乏用户反馈和深度拆解。",
+        "region": "global",
+        "score": 7.2,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Google 在搜索首页加入可折叠的 AI 聊天侧边栏，让用户直接查看和继续 AI 对话，展示 AI 搜索入口的产品化尝试。",
+        "tags": [
+          "Google",
+          "AI搜索",
+          "产品更新"
         ],
         "target_user": "",
         "verticals": []
@@ -45962,6 +46390,45 @@
         "tags": [
           "安全",
           "基准测试"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "5ad2f9bcbd8eb426f14c95968faf304d9204c770ccf6c0064b462992d6b5a8f4": {
+      "created_at": "2026-11-20T07:12:51.688928+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "gemini-macos-computer-use",
+        "evidence_status": "reported",
+        "follow_up": "关注该功能的实际可用性、用户反馈和权限安全设计。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:88bba63ecc31edc9",
+        "intelligence_type": "product_case",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Gemini for macOS",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Gemini macOS 应用获得 computer use 能力，可跨本地文件、桌面应用和网页执行多步任务，是 agent 产品化的具体功能更新，对理解 AI 在任务执行中的作用有参考价值。",
+        "region": "global",
+        "score": 8.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Google Gemini macOS 应用新增 computer use 功能，能帮用户跨本地文件和桌面应用完成多步任务，展示了 AI agent 在个人电脑上的实际落地。",
+        "tags": [
+          "Gemini",
+          "AI Agent",
+          "Computer Use"
         ],
         "target_user": "",
         "verticals": []
@@ -51658,6 +52125,46 @@
           "Agent",
           "LLM能力",
           "认知差距"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "6511a92a854dc3db48969b9ed8de117bb91fc66fae9a8c004ed78a2fd50d66df": {
+      "created_at": "2026-11-20T07:12:39.720941+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "meta-muse-charm-price-rumor",
+        "evidence_status": "reported",
+        "follow_up": "可等 Meta 官方发布或提供产品功能、Demo 后再追踪，当前传闻阶段不建议投入。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:9fe25e3b46e1e2ad",
+        "intelligence_type": "early_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Muse Charm",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "仅转述 The Information 关于 Meta AI 可穿戴设备定价的传闻，Meta 未确认，无产品细节、Demo 或用户反馈，对 AI 产品经理学习构建方法无直接增量，属于低信噪比硬件传闻。",
+        "region": "global",
+        "score": 4.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "TechCrunch 转述 The Information 报道称 Meta 新款 AI 可穿戴设备 Muse Charm 可能定价 300 美元，Meta 未否认但未公布细节；目前没有产品功能或使用案例，对做 AI 产品参考价值有限。",
+        "tags": [
+          "AI 硬件",
+          "可穿戴设备",
+          "Meta",
+          "传闻"
         ],
         "target_user": "",
         "verticals": []
@@ -66845,6 +67352,38 @@
       },
       "stage": "candidate_analysis"
     },
+    "8313b1b0d1ba91c1d6b7117df18e9b2fc268c8c97340fbc09b9d596b8844f4bf": {
+      "created_at": "2026-11-20T07:13:29.126998+00:00",
+      "model": "kimi-k2.6",
+      "prompt_version": "deep-v3-beginner",
+      "result": {
+        "ai_role": "理解用户意图后，自主规划步骤序列，并实际调用电脑上的文件、应用和网页接口来完成任务——这就是 AI Agent（AI 智能体）：不只是回答问题，而是能动手执行任务的 AI。",
+        "evidence_status": "first_party",
+        "hands_on_exercise": "30 分钟体验：在 Mac 上安装 Gemini 应用（需确认该功能已对你开放），尝试用一句话指令让 AI 帮你完成一个真实小任务，例如「把桌面上的 resume.pdf 里的工作经历部分整理成表格，存成新的 Word 文档」，观察 AI 是否能正确找到文件、理解内容、跨应用操作，并记录它在哪一步出错或需要人工介入。",
+        "implementation_idea": "未公开",
+        "learning_points": [
+          "AI Agent：不只是聊天回复，而是能感知环境、做决策、执行动作的 AI 系统",
+          "Computer Use / 计算机使用能力：让 AI 像人一样看屏幕、操作鼠标键盘、调用软件接口",
+          "多模态理解：AI 需要同时看懂文字、界面布局、图片等多种信息才能正确操作电脑"
+        ],
+        "limitations_or_uncertainties": "未公开：具体支持哪些 macOS 版本、是否需要特定硬件（如 Apple Silicon）、权限申请的具体范围、是否所有桌面应用都能被调用，还是仅限特定合作应用；该功能是否已全量推送或仅部分用户可用也未说明。",
+        "product_name": "Gemini macOS 应用",
+        "sources": [
+          "https://www.theverge.com/tech/1037902/google-gemini-macos-ai-computer-use"
+        ],
+        "target_users": "Mac 电脑用户，需要处理跨应用、跨文件的多步骤办公或日常任务的人",
+        "title_zh": "Gemini Mac 版新增「computer use」功能：AI 能直接操作用户电脑",
+        "usage_flow": [
+          "用户在 Gemini Mac 应用中用自然语言描述想完成的任务，比如「帮我根据这份 Excel 数据做一份 PPT」",
+          "Gemini 自动识别并访问相关本地文件、打开需要的桌面应用或网页",
+          "AI 跨多个工具执行多步操作（如读取数据、生成图表、填入幻灯片）",
+          "用户检查并确认最终结果，必要时补充修改"
+        ],
+        "user_problem": "用户需要在不同软件、文件和网页之间来回切换，手动完成填表、做 PPT、整理资料等繁琐的多步骤任务，耗时且容易出错",
+        "what_it_is": "Google 的 Gemini macOS 应用新增一项功能，让 AI 可以直接查看和操作用户电脑上的本地文件、桌面应用和网页，帮用户完成需要多步骤的复杂任务。"
+      },
+      "stage": "deep_analysis"
+    },
     "83143756c8d6f595d06bff74a5bf5855b380d91c576c21ac1518cb45cdd37227": {
       "created_at": "2026-09-03T04:23:03.975727+00:00",
       "model": "kimi-k2.6",
@@ -67873,6 +68412,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "85228170d4fb02678275f3bcc86d7044e1625af8b51c78716b14222e3d68e5a4": {
+      "created_at": "2026-11-20T07:12:51.689841+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-codex-rust-v0.171.0",
+        "evidence_status": "first_party",
+        "follow_up": "关注新模型在 Codex 中的实际表现和用户反馈。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "github:release:452122665",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "OpenAI Codex",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Codex 正式版本更新，新增 GPT-6.2 Sol 和 Astra 模型目录、TUI 工作区、远程会话等多项功能，属于模型能力与产品功能结合的真实增量，但偏开发者工具细节。",
+        "region": "global",
+        "score": 7.0,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "OpenAI Codex 发布 0.171.0 版本，新增 GPT-6.2 Sol 和 Astra 模型、默认 TUI 工作区、远程会话和撤销重做等多项功能，提升开发者使用体验。",
+        "tags": [
+          "OpenAI Codex",
+          "模型更新",
+          "开发者工具"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "853fdf7f6f049025caba7b38d3aa7835b4eb42044a44daf14e0464376b407a34": {
       "created_at": "2026-09-02T04:32:09.872700+00:00",
       "model": "deepseek-v4-flash",
@@ -68101,6 +68679,44 @@
           "AI SDK",
           "OpenAI",
           "推理参数"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "85c7c4334b61697fad3a5e6a899b853fc1e4ce4d40a9995750f2dc695b281340": {
+      "created_at": "2026-11-20T07:13:03.968803+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "jujutsu-primer",
+        "evidence_status": "reported",
+        "follow_up": "不跟进。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:50570628",
+        "intelligence_type": "builder_insight",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Jujutsu 版本控制工具入门文章，与 AI 产品无直接关系，仅评论中提及 AI 代理使用 git 的兼容性问题，相关性弱。",
+        "region": "global",
+        "score": 4.0,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "一篇 Jujutsu 版本控制入门文章，评论提到 AI 代理难以适配非 git 工作流，但与 AI 产品构建关系不大。",
+        "tags": [
+          "Developer Tools",
+          "Version Control"
         ],
         "target_user": "",
         "verticals": []
@@ -74179,6 +74795,44 @@
           "Qwen",
           "开源模型",
           "本地部署"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "8f2af52e843ded2eeedaeef0c4fc1e3cb4374c0a29b72929f0edfc09195859da": {
+      "created_at": "2026-11-20T07:12:51.689049+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-codex-rust-v0.173.0-alpha.1",
+        "evidence_status": "first_party",
+        "follow_up": "等待后续正式版本的功能说明。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "github:release:452208402",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "OpenAI Codex",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "仅版本号 alpha 发布，无任何功能说明或变更内容，信息量极低。",
+        "region": "global",
+        "score": 4.0,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "OpenAI Codex 发布 rust-v0.173.0-alpha.1 版本，但更新说明为空，无实质内容。",
+        "tags": [
+          "OpenAI Codex",
+          "版本发布"
         ],
         "target_user": "",
         "verticals": []
@@ -81902,6 +82556,46 @@
       },
       "stage": "candidate_analysis"
     },
+    "9d56671c6ad3d81abc4995a47da725773534450f434170def1a82699658a8784": {
+      "created_at": "2026-11-20T07:12:51.689011+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "chatprd-token-fraud",
+        "evidence_status": "first_party",
+        "follow_up": "关注 Claire Vo 后续如何调整试用和防滥用策略。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:simonwillison.net_atom_everything_:478ea25aeed3c997",
+        "intelligence_type": "builder_insight",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "ChatPRD",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "ChatPRD 创始人 Claire Vo 公开讲述产品被免费试用 token 欺诈的真实案例，包含具体滥用方式和运营挑战，对构建 AI 产品有直接借鉴意义。",
+        "region": "global",
+        "score": 8.5,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "ChatPRD 创始人 Claire Vo 公开分享产品遭遇大量 token 欺诈，有人循环使用免费试用转售 AI 用量，为 AI 产品设计防滥用机制提供真实案例。",
+        "tags": [
+          "ChatPRD",
+          "AI产品",
+          "Token欺诈",
+          "构建者经验"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "9d66891b1a875a48be936d17d7146c99472d0dc72f3c2b2e2e8a4672f9f9f17c": {
       "created_at": "2026-08-13T02:47:09.863238+00:00",
       "model": "deepseek-v4-flash",
@@ -85890,6 +86584,44 @@
           "AI应用",
           "图像",
           "消费级产品"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "a3f273a4be49fe5b7f9c8223a964837a073112225e524932d1d048199ff91057": {
+      "created_at": "2026-11-20T07:12:51.688877+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "meta-muse-charm-price",
+        "evidence_status": "reported",
+        "follow_up": "关注产品正式发布后的用户反馈。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:777926eaa1e840b1",
+        "intelligence_type": "early_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Muse Charm",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "硬件定价传闻，无产品体验或构建过程细节，对 AI 产品经理学习价值有限。",
+        "region": "global",
+        "score": 5.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Meta 计划将带屏 AI 聊天设备 Muse Charm 定价 300 美元，但产品尚未上市，信息来自传闻。",
+        "tags": [
+          "Meta",
+          "AI硬件"
         ],
         "target_user": "",
         "verticals": []
@@ -98141,6 +98873,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "baa19ffdeb3dbf832fb49eb9003a22ca5d6873ba8a3b2139e0106a821f2fb0a9": {
+      "created_at": "2026-11-20T07:13:03.968667+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "langchain-openai-1.8.4",
+        "evidence_status": "first_party",
+        "follow_up": "无需特别关注。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "github:release:451958398",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "LangChain",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "LangChain 的 OpenAI 集成包小版本修复，属于底层库维护，对产品经理和初学者无直接可迁移增量。",
+        "region": "global",
+        "score": 4.8,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "LangChain 修复 OpenAI 流式服务错误分类问题，属于底层库维护，对做产品没有直接启发。",
+        "tags": [
+          "Developer Tools",
+          "LLM Framework"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "baa3954e501026e8e80b3b341ed121447efc025d39bd6c1ce7965d8627f331aa": {
       "created_at": "2026-07-25T16:38:13.701854+00:00",
       "model": "deepseek-v4-flash",
@@ -100862,6 +101632,44 @@
           "开发者工具",
           "Python",
           "测试"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "c0701d66089df19564483813fc44ee0ad606580c81bd485e5f89fe5cebd62ca7": {
+      "created_at": "2026-11-20T07:12:31.477724+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "google-dialogues-isaacson",
+        "evidence_status": "first_party",
+        "follow_up": "无",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:blog.google_innovation-and-ai_technology_ai_rss_:d47c74f9a7ce43a8",
+        "intelligence_type": "market_signal",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "人物访谈/观点内容，无产品、代码或可验证实践，属泛行业评论，低于 7 分。",
+        "region": "global",
+        "score": 3.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Google 发布 Walter Isaacson 谈 AI 时代创造力的访谈；是观点内容，没有产品案例或构建过程，参考价值低。",
+        "tags": [
+          "访谈",
+          "创造力"
         ],
         "target_user": "",
         "verticals": []
@@ -105179,6 +105987,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "c91d671b4d6a96bbce859ee6916067f8e06e77da48c128fd2265d904f8dd2998": {
+      "created_at": "2026-11-20T07:12:31.477653+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "lenny-product-pass-promo",
+        "evidence_status": "reported",
+        "follow_up": "无",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "newsletter:feed:dd86f379a3b90bb6cf7f",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": true,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "订阅促销内容，核心是卖 Product Pass，无产品构建或实践证据，属营销，按规则扣分。",
+        "region": "global",
+        "score": 2.5,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "Lenny 通讯推销付费订阅附赠工具包；这是促销，不是产品案例或构建经验，不值得拆解。",
+        "tags": [
+          "促销",
+          "订阅"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "c92e8fe81c9e2097b9ab0e046dd5e907bd499de304cb620ead8c18b332285b1a": {
       "created_at": "2026-11-16T06:25:39.240446+00:00",
       "model": "deepseek-flash",
@@ -105662,6 +106508,44 @@
           "Agent",
           "游戏",
           "Spawn"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "ca0e59db6078d5e7f6cd815aeae40acdb358f4325f9b6a23c2625f32538a0804": {
+      "created_at": "2026-11-20T07:13:03.968648+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "langchain-openai-1.8.5",
+        "evidence_status": "first_party",
+        "follow_up": "无需特别关注。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "github:release:452048967",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "LangChain",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "LangChain 的 OpenAI 集成包小版本修复，属于底层库维护，对产品经理和初学者无直接可迁移增量。",
+        "region": "global",
+        "score": 5.0,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "LangChain 修复 OpenAI 流式工具调用参数问题，属于底层库维护，对做产品没有直接启发。",
+        "tags": [
+          "Developer Tools",
+          "LLM Framework"
         ],
         "target_user": "",
         "verticals": []
@@ -107716,6 +108600,44 @@
           "Anthropic",
           "公益基金",
           "媒体报道"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "ce8ed6f2681692ca5371a554a0f9c12adc275082651fb054572d0a9198d21606": {
+      "created_at": "2026-11-20T07:12:31.476936+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "anthropic-ipo-pricing",
+        "evidence_status": "first_party",
+        "follow_up": "关注 IPO 后是否有产品路线或定价策略变化",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "public_web:sitemap:e308a84a77ae00d83193",
+        "intelligence_type": "business_policy",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "纯融资/IPO 事件，无产品、模型或构建过程增量，按规则低于 7 分；官方一手但属资本事件。",
+        "region": "global",
+        "score": 3.5,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Anthropic 公布 IPO 定价；这是资本事件，不涉及产品能力或用户用法，对做产品的人参考价值低。",
+        "tags": [
+          "融资",
+          "IPO"
         ],
         "target_user": "",
         "verticals": []
@@ -109866,6 +110788,45 @@
           "Figma",
           "Agent",
           "设计工具"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "d3e49e47e0b4b0aab24b73e920090abae65daca7e121d95a3c587f721f2464c8": {
+      "created_at": "2026-11-20T07:12:56.296955+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "nvidia-jensen-huang-resignation-affair",
+        "evidence_status": "reported",
+        "follow_up": "可关注英伟达官方公告与继任安排，但仅作为行业背景，不作为产品情报追踪。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:4818a1d82a735b82",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "这是关于英伟达 CEO 黄仁勋因绯闻辞职的媒体报道，属于公司治理与地缘政治层面的新闻，与读者关注的 AI 产品构建、模型能力、可迁移产品思路均无直接关系；且内容为二手时间线梳理，无产品、代码、Demo 或用户反馈，对初学者转型 AI 产品经理没有可操作增量，按兴趣优先级应低分处理。",
+        "region": "global",
+        "score": 3.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "TechCrunch 报道称英伟达 CEO 黄仁勋因绯闻辞职，并梳理事件时间线，文章认为这可能影响中美 AI 基础设施竞争，但未涉及任何 AI 产品、模型能力或构建实践。",
+        "tags": [
+          "Nvidia",
+          "公司治理",
+          "地缘政治"
         ],
         "target_user": "",
         "verticals": []
@@ -114798,6 +115759,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "dd95f5aa9344e29eb81ee85f5185068bc95e3fc8713a98d6d53d03db2c0ef0b1": {
+      "created_at": "2026-11-20T07:13:03.968743+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "google-grapheneos-bootloader",
+        "evidence_status": "reported",
+        "follow_up": "不跟进。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:50570479",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "关于 Google 与 GrapheneOS 的安卓生态争议，与 AI 产品、模型能力或构建实践无关，属于弱相关噪音。",
+        "region": "global",
+        "score": 3.0,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "Google 被指施压手机厂商限制 GrapheneOS 和 bootloader 解锁，与 AI 产品无关。",
+        "tags": [
+          "Android",
+          "Policy"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "ddac5b189b26901f8f31991fdb53ddc5716e47bb7cf42f6f5b3a7b430ef4b225": {
       "created_at": "2026-10-13T06:46:24.749478+00:00",
       "model": "deepseek-flash",
@@ -118134,6 +119133,38 @@
         "verticals": []
       },
       "stage": "candidate_analysis"
+    },
+    "e4a02fb6ac3c21d7a16710ef170a3c163846166c95fca356deb512075a77950d": {
+      "created_at": "2026-11-20T07:13:48.666609+00:00",
+      "model": "kimi-k2.6",
+      "prompt_version": "deep-v3-beginner",
+      "result": {
+        "ai_role": "以独立身份在授权范围内自主执行办公任务，不再是被动等用户下指令的工具",
+        "evidence_status": "first_party",
+        "hands_on_exercise": "用 Microsoft 365 开发者账号（免费申请）登录 Microsoft Foundry，创建一个测试 Agent，尝试给它分配'只读邮件'权限并绑定自己的账号为负责人，观察权限控制面板和审计日志界面。",
+        "implementation_idea": "核心思路是给 AI 做'企业入职'——像给员工发工牌一样，给 Agent 注册独立账号、分配角色权限、绑定直属领导，让它能在 Teams/Outlook 等场景里以'同事'身份行动，同时所有操作留痕可审计。",
+        "learning_points": [
+          "Agent（智能体）：不只是回答问题，而是能自主规划步骤、调用工具完成任务的 AI 程序",
+          "Function Calling（函数调用）：AI 判断'我需要查日历'或'我要发邮件'，并调用对应系统功能的能力",
+          "身份与权限治理：企业级 AI 不是技术问题，而是'谁批准、谁担责、怎么管'的管理问题"
+        ],
+        "limitations_or_uncertainties": "未公开具体定价、是否所有 Microsoft 365 订阅都可用、Agent 能操作的具体应用范围、与第三方系统的集成深度；'自主'的实际程度（完全无人值守还是需人工审批关键步骤）未明确。",
+        "product_name": "Microsoft Foundry",
+        "sources": [
+          "https://devblogs.microsoft.com/foundry/build-trusted-autonomous-agents-for-your-team-with-microsoft-foundry/"
+        ],
+        "target_users": "企业 IT 管理员、开发团队、需要在 Microsoft 365 环境中部署 AI Agent 的组织",
+        "title_zh": "Microsoft Foundry 推出可信任自主 Agent，让企业敢把 AI 交给它独立干活",
+        "usage_flow": [
+          "在 Microsoft Foundry 平台创建 Agent，给它分配独立身份和权限范围",
+          "指定一个真人经理（manager）对这个 Agent 的行为负责",
+          "Agent 在 Microsoft 365 里自主执行任务，比如处理文档、协调会议等",
+          "经理通过审计日志监控 Agent 行为，必要时介入或调整权限"
+        ],
+        "user_problem": "企业虽然想上 AI Agent，但不敢让它真正独立干活——怕它乱操作、怕出事了找不到人负责，导致投入 AI 但看不到实际回报（ROI 没跟上）",
+        "what_it_is": "微软发布的一套企业级 Agent 构建方案，让 AI Agent 在 Microsoft 365 里拥有独立身份、权限和明确负责人，解决企业不敢放手让 AI 自动执行的问题。"
+      },
+      "stage": "deep_analysis"
     },
     "e4b10f9445a9317457849e6a5cffeb1dbeb167c9ef4293c966bacb922f8230ec": {
       "created_at": "2026-10-08T06:02:34.916648+00:00",
@@ -122664,6 +123695,44 @@
         "tags": [
           "AI空调",
           "消费电子"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "ed2270402ede5164b522b711f49dbad326d484a54b8b17dddad823be40432987": {
+      "created_at": "2026-11-20T07:13:03.968859+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "claude-black-hole-physics",
+        "evidence_status": "first_party",
+        "follow_up": "观察是否有后续产品化或开发者可复用的推理能力。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:50563148",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Claude",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Anthropic 官方发布 Claude 解决黑洞物理开放问题的研究，属于模型能力展示，但偏学术且缺乏产品化路径，对产品经理的直接可迁移增量有限。",
+        "region": "global",
+        "score": 7.2,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Anthropic 称 Claude 解决了两个黑洞物理开放问题，展示模型在科研推理上的能力，但离产品应用较远。",
+        "tags": [
+          "Model Capability",
+          "Research"
         ],
         "target_user": "",
         "verticals": []
@@ -130366,6 +131435,44 @@
           "Agent",
           "平台政策",
           "安全"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "fa78c2e001f97fe50691438c352ea5e999465804915225988ad2d6f094d84dcc": {
+      "created_at": "2026-11-20T07:13:03.967697+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-codex-rust-0.172.0-alpha.2",
+        "evidence_status": "first_party",
+        "follow_up": "关注后续正式版是否披露新功能或用户反馈。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "github:release:451552285",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "OpenAI Codex",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI Codex 的 alpha 版本发布，无变更说明，对产品经理和初学者无实质增量，属于常规版本噪音。",
+        "region": "global",
+        "score": 5.5,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "OpenAI 发布 Codex 的 Rust 版 alpha 更新，但没有说明改了什么，对理解产品没有帮助。",
+        "tags": [
+          "Agent",
+          "Coding"
         ],
         "target_user": "",
         "verticals": []

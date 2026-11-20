@@ -1,7 +1,732 @@
 {
   "version": 1,
-  "updated_at": "2026-11-19T07:23:12.720242+00:00",
+  "updated_at": "2026-11-20T07:13:48.755711+00:00",
   "products": [
+    {
+      "product_id": "product-bdbc60e4f59cbc1a",
+      "product_name": "ChatPRD",
+      "builder_name": "Simon Willison",
+      "first_seen": "2026-11-20",
+      "last_seen": "2026-11-20",
+      "occurrence_count": 1,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "ChatPRD 创始人 Claire Vo 公开分享产品遭遇大量 token 欺诈，有人循环使用免费试用转售 AI 用量，为 AI 产品设计防滥用机制提供真实案例。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.5,
+      "summary": "ChatPRD 创始人 Claire Vo 公开分享产品遭遇大量 token 欺诈，有人循环使用免费试用转售 AI 用量，为 AI 产品设计防滥用机制提供真实案例。",
+      "title": "Token fraud is here and it’s BAD (YouTube)",
+      "url": "https://simonwillison.net/2026/Nov/20/token-fraud-is-here-and-its-bad/",
+      "sources": [
+        {
+          "url": "https://simonwillison.net/2026/Nov/20/token-fraud-is-here-and-its-bad/",
+          "title": "Token fraud is here and it’s BAD (YouTube)",
+          "source_type": "rss",
+          "published_at": "2026-11-20T02:49:57+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "chatprd-token-fraud",
+          "date": "2026-11-20",
+          "title": "Token fraud is here and it’s BAD (YouTube)",
+          "summary": "ChatPRD 创始人 Claire Vo 公开分享产品遭遇大量 token 欺诈，有人循环使用免费试用转售 AI 用量，为 AI 产品设计防滥用机制提供真实案例。",
+          "score": 8.5,
+          "url": "https://simonwillison.net/2026/Nov/20/token-fraud-is-here-and-its-bad/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "ChatPRD",
+        "AI产品",
+        "Token欺诈",
+        "构建者经验"
+      ]
+    },
+    {
+      "product_id": "product-b54a1a9a10892347",
+      "product_name": "Gemini macOS 应用",
+      "builder_name": "Jay Peters",
+      "first_seen": "2026-11-20",
+      "last_seen": "2026-11-20",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "Mac 电脑用户，需要处理跨应用、跨文件的多步骤办公或日常任务的人",
+      "user_problem": "用户需要在不同软件、文件和网页之间来回切换，手动完成填表、做 PPT、整理资料等繁琐的多步骤任务，耗时且容易出错",
+      "what_it_is": "Google 的 Gemini macOS 应用新增一项功能，让 AI 可以直接查看和操作用户电脑上的本地文件、桌面应用和网页，帮用户完成需要多步骤的复杂任务。",
+      "ai_role": "理解用户意图后，自主规划步骤序列，并实际调用电脑上的文件、应用和网页接口来完成任务——这就是 AI Agent（AI 智能体）：不只是回答问题，而是能动手执行任务的 AI。",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "30 分钟体验：在 Mac 上安装 Gemini 应用（需确认该功能已对你开放），尝试用一句话指令让 AI 帮你完成一个真实小任务，例如「把桌面上的 resume.pdf 里的工作经历部分整理成表格，存成新的 Word 文档」，观察 AI 是否能正确找到文件、理解内容、跨应用操作，并记录它在哪一步出错或需要人工介入。",
+      "limitations_or_uncertainties": "未公开：具体支持哪些 macOS 版本、是否需要特定硬件（如 Apple Silicon）、权限申请的具体范围、是否所有桌面应用都能被调用，还是仅限特定合作应用；该功能是否已全量推送或仅部分用户可用也未说明。",
+      "region": "global",
+      "score": 8.0,
+      "summary": "Google Gemini macOS 应用新增 computer use 功能，能帮用户跨本地文件和桌面应用完成多步任务，展示了 AI agent 在个人电脑上的实际落地。",
+      "title": "Gemini Mac 版新增「computer use」功能：AI 能直接操作用户电脑",
+      "url": "https://www.theverge.com/tech/1037902/google-gemini-macos-ai-computer-use",
+      "sources": [
+        {
+          "url": "https://www.theverge.com/tech/1037902/google-gemini-macos-ai-computer-use",
+          "title": "Gemini on Mac can now use your computer",
+          "source_type": "rss",
+          "published_at": "2026-11-19T18:21:13+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "gemini-macos-computer-use",
+          "date": "2026-11-20",
+          "title": "Gemini Mac 版新增「computer use」功能：AI 能直接操作用户电脑",
+          "summary": "Google Gemini macOS 应用新增 computer use 功能，能帮用户跨本地文件和桌面应用完成多步任务，展示了 AI agent 在个人电脑上的实际落地。",
+          "score": 8.0,
+          "url": "https://www.theverge.com/tech/1037902/google-gemini-macos-ai-computer-use"
+        }
+      ],
+      "usage_flow": [
+        "用户在 Gemini Mac 应用中用自然语言描述想完成的任务，比如「帮我根据这份 Excel 数据做一份 PPT」",
+        "Gemini 自动识别并访问相关本地文件、打开需要的桌面应用或网页",
+        "AI 跨多个工具执行多步操作（如读取数据、生成图表、填入幻灯片）",
+        "用户检查并确认最终结果，必要时补充修改"
+      ],
+      "learning_points": [
+        "AI Agent：不只是聊天回复，而是能感知环境、做决策、执行动作的 AI 系统",
+        "Computer Use / 计算机使用能力：让 AI 像人一样看屏幕、操作鼠标键盘、调用软件接口",
+        "多模态理解：AI 需要同时看懂文字、界面布局、图片等多种信息才能正确操作电脑"
+      ],
+      "verticals": [],
+      "tags": [
+        "Gemini",
+        "AI Agent",
+        "Computer Use"
+      ]
+    },
+    {
+      "product_id": "product-b4281ecb57e9d7e4",
+      "product_name": "Linear",
+      "builder_name": "Basil Chatha",
+      "first_seen": "2026-11-20",
+      "last_seen": "2026-11-20",
+      "occurrence_count": 1,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Linear COO Cristina Cordova 在播客中分享如何将 GTM 做到 1 亿美元 ARR，并透露超过一半工单由 AI agent 撰写，展示 AI 在客户支持中的实际应用。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.8,
+      "summary": "Linear COO Cristina Cordova 在播客中分享如何将 GTM 做到 1 亿美元 ARR，并透露超过一半工单由 AI agent 撰写，展示 AI 在客户支持中的实际应用。",
+      "title": "Scaling Linear’s GTM to $100M ARR — Cristina Cordova, COO",
+      "url": "https://latent.space/p/linear-scaling/",
+      "sources": [
+        {
+          "url": "https://latent.space/p/linear-scaling/",
+          "title": "Scaling Linear’s GTM to $100M ARR — Cristina Cordova, COO",
+          "source_type": "rss",
+          "published_at": "2026-11-19T23:58:21+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "linear-gtm-100m-arr",
+          "date": "2026-11-20",
+          "title": "Scaling Linear’s GTM to $100M ARR — Cristina Cordova, COO",
+          "summary": "Linear COO Cristina Cordova 在播客中分享如何将 GTM 做到 1 亿美元 ARR，并透露超过一半工单由 AI agent 撰写，展示 AI 在客户支持中的实际应用。",
+          "score": 7.8,
+          "url": "https://latent.space/p/linear-scaling/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Linear",
+        "GTM",
+        "AI Agent",
+        "客户支持"
+      ]
+    },
+    {
+      "product_id": "product-c071b05c1631a2c9",
+      "product_name": "Microsoft Foundry",
+      "builder_name": "Amanda Foster",
+      "first_seen": "2026-11-20",
+      "last_seen": "2026-11-20",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "企业 IT 管理员、开发团队、需要在 Microsoft 365 环境中部署 AI Agent 的组织",
+      "user_problem": "企业虽然想上 AI Agent，但不敢让它真正独立干活——怕它乱操作、怕出事了找不到人负责，导致投入 AI 但看不到实际回报（ROI 没跟上）",
+      "what_it_is": "微软发布的一套企业级 Agent 构建方案，让 AI Agent 在 Microsoft 365 里拥有独立身份、权限和明确负责人，解决企业不敢放手让 AI 自动执行的问题。",
+      "ai_role": "以独立身份在授权范围内自主执行办公任务，不再是被动等用户下指令的工具",
+      "implementation_idea": "核心思路是给 AI 做'企业入职'——像给员工发工牌一样，给 Agent 注册独立账号、分配角色权限、绑定直属领导，让它能在 Teams/Outlook 等场景里以'同事'身份行动，同时所有操作留痕可审计。",
+      "hands_on_exercise": "用 Microsoft 365 开发者账号（免费申请）登录 Microsoft Foundry，创建一个测试 Agent，尝试给它分配'只读邮件'权限并绑定自己的账号为负责人，观察权限控制面板和审计日志界面。",
+      "limitations_or_uncertainties": "未公开具体定价、是否所有 Microsoft 365 订阅都可用、Agent 能操作的具体应用范围、与第三方系统的集成深度；'自主'的实际程度（完全无人值守还是需人工审批关键步骤）未明确。",
+      "region": "global",
+      "score": 7.5,
+      "summary": "微软在 Foundry 推出可信任的自主 Agent：给 Agent 独立身份和权限，并指定负责人；解决企业不敢让 Agent 干活的问题，值得看企业 Agent 的产品设计。",
+      "title": "Microsoft Foundry 推出可信任自主 Agent，让企业敢把 AI 交给它独立干活",
+      "url": "https://devblogs.microsoft.com/foundry/build-trusted-autonomous-agents-for-your-team-with-microsoft-foundry/",
+      "sources": [
+        {
+          "url": "https://devblogs.microsoft.com/foundry/build-trusted-autonomous-agents-for-your-team-with-microsoft-foundry/",
+          "title": "Build trusted autonomous agents for your team with Microsoft Foundry",
+          "source_type": "rss",
+          "published_at": "2026-11-19T19:53:30+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "microsoft-foundry-trusted-agents",
+          "date": "2026-11-20",
+          "title": "Microsoft Foundry 推出可信任自主 Agent，让企业敢把 AI 交给它独立干活",
+          "summary": "微软在 Foundry 推出可信任的自主 Agent：给 Agent 独立身份和权限，并指定负责人；解决企业不敢让 Agent 干活的问题，值得看企业 Agent 的产品设计。",
+          "score": 7.5,
+          "url": "https://devblogs.microsoft.com/foundry/build-trusted-autonomous-agents-for-your-team-with-microsoft-foundry/"
+        }
+      ],
+      "usage_flow": [
+        "在 Microsoft Foundry 平台创建 Agent，给它分配独立身份和权限范围",
+        "指定一个真人经理（manager）对这个 Agent 的行为负责",
+        "Agent 在 Microsoft 365 里自主执行任务，比如处理文档、协调会议等",
+        "经理通过审计日志监控 Agent 行为，必要时介入或调整权限"
+      ],
+      "learning_points": [
+        "Agent（智能体）：不只是回答问题，而是能自主规划步骤、调用工具完成任务的 AI 程序",
+        "Function Calling（函数调用）：AI 判断'我需要查日历'或'我要发邮件'，并调用对应系统功能的能力",
+        "身份与权限治理：企业级 AI 不是技术问题，而是'谁批准、谁担责、怎么管'的管理问题"
+      ],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "企业",
+        "Microsoft 365"
+      ]
+    },
+    {
+      "product_id": "product-92d1b297c66cce17",
+      "product_name": "ChatGPT",
+      "builder_name": "OpenAI News",
+      "first_seen": "2026-07-30",
+      "last_seen": "2026-11-20",
+      "occurrence_count": 7,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "OpenAI 介绍 Performance Factory：用 Codex 自动找并修 ChatGPT 性能问题；这是 AI 参与工程流程的一手实践，对理解 AI 在开发环节的作用有参考。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.2,
+      "summary": "OpenAI 介绍 Performance Factory：用 Codex 自动找并修 ChatGPT 性能问题；这是 AI 参与工程流程的一手实践，对理解 AI 在开发环节的作用有参考。",
+      "title": "How OpenAI’s Performance Factory keeps ChatGPT fast",
+      "url": "https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast",
+      "sources": [
+        {
+          "url": "https://openai.com/index/chatgpt-for-academic-researchers",
+          "title": "Accelerating scientific discovery with ChatGPT for Academic Researchers",
+          "source_type": "rss",
+          "published_at": "2026-07-29T10:00:00+00:00"
+        },
+        {
+          "url": "https://openai.com/index/testing-ads-in-chatgpt",
+          "title": "Testing ads in ChatGPT",
+          "source_type": "rss",
+          "published_at": "2026-08-11T10:00:00+00:00"
+        },
+        {
+          "url": "https://openai.com/index/how-enterprises-put-ai-to-work",
+          "title": "From assistance to execution: How enterprises put AI to work",
+          "source_type": "rss",
+          "published_at": "2026-08-12T06:00:00+00:00"
+        },
+        {
+          "url": "https://openai.com/index/jump-trading",
+          "title": "How Jump Trading is scaling quant research with ChatGPT",
+          "source_type": "rss",
+          "published_at": "2026-10-06T12:00:00+00:00"
+        },
+        {
+          "url": "https://openai.com/index/low-resource-programming-languages",
+          "title": "Advancing coding in low‑resource programming languages",
+          "source_type": "rss",
+          "published_at": "2026-10-19T12:00:00+00:00"
+        },
+        {
+          "url": "https://openai.com/index/chatgpt-expanding-world-of-work",
+          "title": "ChatGPT’s expanding world of work",
+          "source_type": "rss",
+          "published_at": "2026-10-26T10:00:00+00:00"
+        },
+        {
+          "url": "https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast",
+          "title": "How OpenAI’s Performance Factory keeps ChatGPT fast",
+          "source_type": "rss",
+          "published_at": "2026-11-19T08:00:00+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "openai-chatgpt-academic-researchers",
+          "date": "2026-07-30",
+          "title": "Accelerating scientific discovery with ChatGPT for Academic Researchers",
+          "summary": "OpenAI向10万学术研究者免费提供ChatGPT高级模型，加速科学发现。",
+          "score": 8.0,
+          "url": "https://openai.com/index/chatgpt-for-academic-researchers"
+        },
+        {
+          "update_id": "openai-testing-ads-in-chatgpt",
+          "date": "2026-08-12",
+          "title": "Testing ads in ChatGPT",
+          "summary": "OpenAI开始在ChatGPT中测试广告，以支持免费访问，但强调广告清晰标注、不影响回答独立性。",
+          "score": 8.5,
+          "url": "https://openai.com/index/testing-ads-in-chatgpt"
+        },
+        {
+          "update_id": "openai-enterprise-agentic-ai-report",
+          "date": "2026-08-13",
+          "title": "From assistance to execution: How enterprises put AI to work",
+          "summary": "OpenAI 发布研究报告，揭示企业如何采用 agentic AI，使用 ChatGPT 和 Codex，前沿企业领先。",
+          "score": 7.5,
+          "url": "https://openai.com/index/how-enterprises-put-ai-to-work"
+        },
+        {
+          "update_id": "openai-jump-trading-chatgpt-quant-research",
+          "date": "2026-10-07",
+          "title": "How Jump Trading is scaling quant research with ChatGPT",
+          "summary": "OpenAI 发布 Jump Trading 案例，讲量化团队用 ChatGPT 把多数据源的长流程研究串起来并保留人工复核，可参考企业级 AI 工作流怎么设计。",
+          "score": 7.2,
+          "url": "https://openai.com/index/jump-trading"
+        },
+        {
+          "update_id": "openai-low-resource-programming-languages",
+          "date": "2026-10-20",
+          "title": "Advancing coding in low‑resource programming languages",
+          "summary": "OpenAI 改进了 ChatGPT 在低资源编程语言（如 COBOL）上的表现，并发布了新的评估，有助于软件工程和迁移任务。",
+          "score": 7.0,
+          "url": "https://openai.com/index/low-resource-programming-languages"
+        },
+        {
+          "update_id": "chatgpt-signals-work-activities",
+          "date": "2026-10-27",
+          "title": "ChatGPT’s expanding world of work",
+          "summary": "OpenAI 发布 Signals 数据，展示近 100 个国家 165 种工作活动中人们怎么用 ChatGPT，能帮产品经理理解真实工作场景。",
+          "score": 7.0,
+          "url": "https://openai.com/index/chatgpt-expanding-world-of-work"
+        },
+        {
+          "update_id": "openai-performance-factory",
+          "date": "2026-11-20",
+          "title": "How OpenAI’s Performance Factory keeps ChatGPT fast",
+          "summary": "OpenAI 介绍 Performance Factory：用 Codex 自动找并修 ChatGPT 性能问题；这是 AI 参与工程流程的一手实践，对理解 AI 在开发环节的作用有参考。",
+          "score": 7.2,
+          "url": "https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "OpenAI",
+        "ChatGPT",
+        "学术",
+        "广告",
+        "商业模式",
+        "企业应用",
+        "Agent",
+        "企业落地",
+        "工作流",
+        "金融",
+        "编程语言",
+        "模型能力",
+        "工作场景",
+        "行业观察",
+        "Codex",
+        "工程实践",
+        "性能优化"
+      ]
+    },
+    {
+      "product_id": "product-2e9f408b5ee9d9af",
+      "product_name": "Google Search AI Chat",
+      "builder_name": "Emma Roth",
+      "first_seen": "2026-11-20",
+      "last_seen": "2026-11-20",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Google 在搜索首页加入可折叠的 AI 聊天侧边栏，让用户直接查看和继续 AI 对话，展示 AI 搜索入口的产品化尝试。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.2,
+      "summary": "Google 在搜索首页加入可折叠的 AI 聊天侧边栏，让用户直接查看和继续 AI 对话，展示 AI 搜索入口的产品化尝试。",
+      "title": "Google is putting AI chats right on the homepage",
+      "url": "https://www.theverge.com/tech/1038059/google-search-homepage-ai-chats",
+      "sources": [
+        {
+          "url": "https://www.theverge.com/tech/1038059/google-search-homepage-ai-chats",
+          "title": "Google is putting AI chats right on the homepage",
+          "source_type": "rss",
+          "published_at": "2026-11-19T20:05:06+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "google-search-homepage-ai-chats",
+          "date": "2026-11-20",
+          "title": "Google is putting AI chats right on the homepage",
+          "summary": "Google 在搜索首页加入可折叠的 AI 聊天侧边栏，让用户直接查看和继续 AI 对话，展示 AI 搜索入口的产品化尝试。",
+          "score": 7.2,
+          "url": "https://www.theverge.com/tech/1038059/google-search-homepage-ai-chats"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Google",
+        "AI搜索",
+        "产品更新"
+      ]
+    },
+    {
+      "product_id": "product-58f72022d7cbf360",
+      "product_name": "Claude",
+      "builder_name": "cybermango",
+      "first_seen": "2026-11-20",
+      "last_seen": "2026-11-20",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Anthropic 称 Claude 解决了两个黑洞物理开放问题，展示模型在科研推理上的能力，但离产品应用较远。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.2,
+      "summary": "Anthropic 称 Claude 解决了两个黑洞物理开放问题，展示模型在科研推理上的能力，但离产品应用较远。",
+      "title": "Claude solves two open problems in the physics of black holes",
+      "url": "https://www.anthropic.com/research/claude-black-hole-physics",
+      "sources": [
+        {
+          "url": "https://www.anthropic.com/research/claude-black-hole-physics",
+          "title": "Claude solves two open problems in the physics of black holes",
+          "source_type": "hackernews",
+          "published_at": "2026-11-19T17:30:44+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "claude-black-hole-physics",
+          "date": "2026-11-20",
+          "title": "Claude solves two open problems in the physics of black holes",
+          "summary": "Anthropic 称 Claude 解决了两个黑洞物理开放问题，展示模型在科研推理上的能力，但离产品应用较远。",
+          "score": 7.2,
+          "url": "https://www.anthropic.com/research/claude-black-hole-physics"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Model Capability",
+        "Research"
+      ]
+    },
+    {
+      "product_id": "product-1e9b8bbdeb596e93",
+      "product_name": "OpenAI Codex",
+      "builder_name": "github-actions[bot]",
+      "first_seen": "2026-08-21",
+      "last_seen": "2026-11-20",
+      "occurrence_count": 10,
+      "intelligence_type": "model_capability",
+      "evidence_status": "first_party",
+      "target_user": "需要 AI 辅助编程的开发者，尤其是使用命令行工具或 IDE 插件、关注自动化编码工作流的技术团队",
+      "user_problem": "开发者想让 AI 自动执行代码任务，但担心安全问题（比如 AI 执行高权限命令需要反复确认）、连接外部工具时认证麻烦、以及 AI 生成图像背景无法透明等细节控制不足",
+      "what_it_is": "OpenAI Codex 发布 0.171.0 版本，新增 GPT-6.2 Sol 和 Astra 模型、默认 TUI 工作区、远程会话和撤销重做等多项功能，提升开发者使用体验。",
+      "ai_role": "理解用户意图后，自动编写/修改代码、调用工具、执行终端命令，并在敏感操作前等待人类确认",
+      "implementation_idea": "Codex 本质上是一个'有手脚的 LLM'——它把大模型的推理能力包装成可执行的动作循环：接收任务→规划步骤→调用工具（读文件、跑命令、连外部服务）→返回结果。这次更新主要加固了安全边界（默认审批、沙箱修复）和扩展了工具连接能力（MCP OAuth、WebSocket 认证）。MCP（Model Context Protocol）是一种让 AI 统一调用外部工具的标准协议，类似'AI 的 USB 接口'。",
+      "hands_on_exercise": "30 分钟体验：在 GitHub Codespaces 或本地安装 Codex CLI（rust-v0.158.0），让它帮你给一个小项目（如 Python 计算器）添加单元测试，故意触发一个需要 sudo 权限的命令（如安装依赖），观察终端审批提示；然后尝试用 'codex mcp add' 连接一个公开的 MCP 服务（如文件系统工具），体验 OAuth 配置流程",
+      "limitations_or_uncertainties": "未公开具体支持的 MCP 服务列表；未公开透明背景图像生成背后的模型版本（DALL-E 3 或 4？）；未公开 WebSocket bearer token 的具体加密方案细节；'多 Agent v2 直接消息'功能标注为可禁用，但未公开其默认行为与稳定性",
+      "region": "global",
+      "score": 7.0,
+      "summary": "OpenAI Codex 发布 0.171.0 版本，新增 GPT-6.2 Sol 和 Astra 模型、默认 TUI 工作区、远程会话和撤销重做等多项功能，提升开发者使用体验。",
+      "title": "openai/codex released rust-v0.171.0",
+      "url": "https://github.com/openai/codex/releases/tag/rust-v0.171.0",
+      "sources": [
+        {
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.149.0",
+          "title": "openai/codex released rust-v0.149.0",
+          "source_type": "github",
+          "published_at": "2026-08-20T21:04:55+00:00"
+        },
+        {
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.151.0",
+          "title": "openai/codex released rust-v0.151.0",
+          "source_type": "github",
+          "published_at": "2026-08-29T09:55:39+00:00"
+        },
+        {
+          "url": "https://learn.chatgpt.com/docs/plugins?surface=app",
+          "title": "Browse, install, and use plugins on supported ChatGPT and Codex ...",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.153.0",
+          "title": "openai/codex released rust-v0.153.0",
+          "source_type": "github",
+          "published_at": "2026-09-03T01:37:38+00:00"
+        },
+        {
+          "url": "https://openai.com/codex/",
+          "title": "Codex | AI Coding Partner from OpenAI",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.158.0",
+          "title": "openai/codex released rust-v0.158.0",
+          "source_type": "github",
+          "published_at": "2026-09-28T05:07:23+00:00"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/OpenAI_Codex_(AI_agent)",
+          "title": "OpenAI Codex (AI agent) - Wikipedia",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.163.0",
+          "title": "openai/codex released rust-v0.163.0",
+          "source_type": "github",
+          "published_at": "2026-10-15T21:30:38+00:00"
+        },
+        {
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.164.0",
+          "title": "openai/codex released rust-v0.164.0",
+          "source_type": "github",
+          "published_at": "2026-10-23T04:48:10+00:00"
+        },
+        {
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.166.0",
+          "title": "openai/codex released rust-v0.166.0",
+          "source_type": "github",
+          "published_at": "2026-10-29T19:47:53+00:00"
+        },
+        {
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.167.0",
+          "title": "openai/codex released rust-v0.167.0",
+          "source_type": "github",
+          "published_at": "2026-11-06T01:40:00+00:00"
+        },
+        {
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.169.0",
+          "title": "openai/codex released rust-v0.169.0",
+          "source_type": "github",
+          "published_at": "2026-11-13T08:37:05+00:00"
+        },
+        {
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.171.0",
+          "title": "openai/codex released rust-v0.171.0",
+          "source_type": "github",
+          "published_at": "2026-11-20T00:44:47+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "openai-codex-rust-v0.149.0",
+          "date": "2026-08-21",
+          "title": "openai/codex released rust-v0.149.0",
+          "summary": "OpenAI Codex发布rust-v0.149.0，新增agents仪表盘、队列和更多Vim编辑命令。",
+          "score": 7.5,
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.149.0"
+        },
+        {
+          "update_id": "openai-codex-rust-v0.151.0",
+          "date": "2026-08-30",
+          "title": "OpenAI Codex CLI 发布 Rust 版 v0.151.0：强化 MCP 工具发现与插件管理",
+          "summary": "OpenAI Codex 发布 v0.151.0，增强 MCP 工具发现和插件管理。",
+          "score": 8.0,
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.151.0"
+        },
+        {
+          "update_id": "openai-codex-rust-v0.153.0",
+          "date": "2026-09-03",
+          "title": "OpenAI Codex 发布 Rust 版 v0.153.0：Vim 撤销重做、插件市场与上下文管理实验功能",
+          "summary": "OpenAI Codex发布rust-v0.153.0，新增Vim撤销重做、插件市场等多项功能。",
+          "score": 8.0,
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.153.0"
+        },
+        {
+          "update_id": "openai-codex-rust-v0-158-0",
+          "date": "2026-09-28",
+          "title": "OpenAI Codex 发布 Rust 版 v0.158.0：MCP OAuth 密钥、透明背景图像生成、终端审批默认开启",
+          "summary": "OpenAI Codex 发布 rust-v0.158.0，新增 MCP OAuth 客户端密钥、图像透明背景生成、终端审批默认开启等功能，适合关注编码 Agent 工具链的人。",
+          "score": 7.0,
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.158.0"
+        },
+        {
+          "update_id": "openai-codex-rust-v0.163.0",
+          "date": "2026-10-16",
+          "title": "openai/codex released rust-v0.163.0",
+          "summary": "OpenAI Codex 发布 v0.163.0，新增配置搜索、响应中追加指令、并行只读工具等功能，并默认开启 Daybreak。",
+          "score": 7.2,
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.163.0"
+        },
+        {
+          "update_id": "openai-codex-rust-v0-164-0",
+          "date": "2026-10-24",
+          "title": "openai/codex released rust-v0.164.0",
+          "summary": "OpenAI Codex CLI 发布 v0.164.0，新增可复用提示预设、内联模型参数、终端图像预览和企业 MCP 认证等功能。",
+          "score": 7.2,
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.164.0"
+        },
+        {
+          "update_id": "openai-codex-rust-v0.166.0",
+          "date": "2026-10-30",
+          "title": "openai/codex released rust-v0.166.0",
+          "summary": "OpenAI Codex 发布 v0.166.0，新增 GPT-6.1 Terra 模型支持、键盘选择转录和网络诊断命令，解决终端编码体验和模型接入问题；可观察编码 Agent 的产品细节。",
+          "score": 7.0,
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.166.0"
+        },
+        {
+          "update_id": "openai-codex-rust-v0-167-0",
+          "date": "2026-11-06",
+          "title": "openai/codex released rust-v0.167.0",
+          "summary": "OpenAI Codex 发布 v0.167.0，加了 agent 命令中心、多后端切换和 Vertex AI 配置向导，值得看编码 agent 怎么把多模型和多会话管理做进终端。",
+          "score": 7.4,
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.167.0"
+        },
+        {
+          "update_id": "openai-codex-rust-0-169-0",
+          "date": "2026-11-14",
+          "title": "openai/codex released rust-v0.169.0",
+          "summary": "OpenAI Codex 发布 0.169.0，新增终端多侧聊标签、历史任务搜索和自定义模型提供商，让编码 agent 更好用。",
+          "score": 7.4,
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.169.0"
+        },
+        {
+          "update_id": "openai-codex-rust-v0.171.0",
+          "date": "2026-11-20",
+          "title": "openai/codex released rust-v0.171.0",
+          "summary": "OpenAI Codex 发布 0.171.0 版本，新增 GPT-6.2 Sol 和 Astra 模型、默认 TUI 工作区、远程会话和撤销重做等多项功能，提升开发者使用体验。",
+          "score": 7.0,
+          "url": "https://github.com/openai/codex/releases/tag/rust-v0.171.0"
+        }
+      ],
+      "usage_flow": [
+        "在终端安装/更新 Codex CLI：`npm install -g @openai/codex` 或从 GitHub Release 获取",
+        "配置 MCP 服务器（如文件系统、数据库等外部工具），设置可选的启动等待时间（grace period）",
+        "在对话中让 Codex 调用工具完成任务，必要时通过插件扩展拦截或修改工具返回结果",
+        "通过插件目录（plugin catalog）按仓库级别管理插件来源，过滤无效市场",
+        "终端运行 codex 启动 TUI（文本交互界面），或用 codex exec 直接执行命令",
+        "在 Vim 模式下用 u 撤销、Ctrl+R 重做，包括粘贴内容和附件都能完整恢复",
+        "用 codex plugin 命令从远程插件市场搜索、安装、卸载插件",
+        "需要时输入 /recap 手动总结，或开启实验性上下文管理让 AI 自动压缩历史记录",
+        "安装 Codex CLI 并配置项目环境",
+        "用自然语言描述需求（如'给这个函数加单元测试'），Codex 自动规划并执行",
+        "高权限命令（如 sudo）默认需要终端审批，确认后 AI 继续运行",
+        "需要时连接外部 MCP 服务（如数据库、API），通过 OAuth 密钥安全认证"
+      ],
+      "learning_points": [
+        "MCP（Model Context Protocol）：一种让 AI 应用统一调用外部工具/数据的标准协议，类似 AI 的'USB 接口'",
+        "Agent 与单次问答的区别：Agent 能自主分解任务、多次调用工具、根据中间结果调整下一步，不只是'问一答一'",
+        "Sandbox（沙盒）：给 AI 执行环境加限制（如不能随意读/写特定路径），防止自动化操作破坏真实系统",
+        "TUI（Text User Interface）：不是网页也不是 GUI，是在终端里用字符画出的交互界面，Vim 就是典型 TUI",
+        "MCP（Model Context Protocol）：一种让 AI 调用外部工具（如读文件、查数据库）的标准接口，Codex 通过它扩展能力",
+        "Token 预算上下文管理：LLM 有输入长度限制，超出后要么遗忘早期内容，要么费用飙升，所以需要智能压缩历史记录",
+        "Agent：不只是聊天，而是能自主规划、执行多步骤任务并调用工具的 AI 系统",
+        "MCP（Model Context Protocol）：让 AI 以统一方式连接外部数据源和工具的开放协议，避免每个工具都要单独适配",
+        "Function Calling：LLM 识别需要调用外部功能时，输出结构化指令（如'运行 git status'）而非纯文本，让 AI 能实际操作软件"
+      ],
+      "verticals": [],
+      "tags": [
+        "Codex",
+        "Agent",
+        "CLI",
+        "开发者工具",
+        "更新",
+        "GitHub Release",
+        "OpenAI",
+        "编程Agent",
+        "Release",
+        "OpenAI Codex",
+        "编码Agent",
+        "模型更新"
+      ]
+    },
+    {
+      "product_id": "product-668ce52d04e03ec0",
+      "product_name": "Gemini API",
+      "builder_name": "Nora Kassner",
+      "first_seen": "2026-11-20",
+      "last_seen": "2026-11-20",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Google 在 Gemini API 推出工具检索；让模型自动挑选可用工具，可能简化 Agent 开发，但细节少，需看文档。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.0,
+      "summary": "Google 在 Gemini API 推出工具检索；让模型自动挑选可用工具，可能简化 Agent 开发，但细节少，需看文档。",
+      "title": "Introducing Tool Retrieval in the Gemini API",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-api-tool-retrieval/",
+      "sources": [
+        {
+          "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-api-tool-retrieval/",
+          "title": "Introducing Tool Retrieval in the Gemini API",
+          "source_type": "rss",
+          "published_at": "2026-11-19T18:00:00+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "gemini-api-tool-retrieval",
+          "date": "2026-11-20",
+          "title": "Introducing Tool Retrieval in the Gemini API",
+          "summary": "Google 在 Gemini API 推出工具检索；让模型自动挑选可用工具，可能简化 Agent 开发，但细节少，需看文档。",
+          "score": 7.0,
+          "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-api-tool-retrieval/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Gemini",
+        "API",
+        "Agent"
+      ]
+    },
     {
       "product_id": "product-9795e9f58a804f47",
       "product_name": "Vercel Board",
@@ -2624,215 +3349,6 @@
         "Browser-use",
         "Browser Agent",
         "成本优化"
-      ]
-    },
-    {
-      "product_id": "product-1e9b8bbdeb596e93",
-      "product_name": "OpenAI Codex",
-      "builder_name": "github-actions[bot]",
-      "first_seen": "2026-08-21",
-      "last_seen": "2026-11-14",
-      "occurrence_count": 9,
-      "intelligence_type": "product_case",
-      "evidence_status": "first_party",
-      "target_user": "需要 AI 辅助编程的开发者，尤其是使用命令行工具或 IDE 插件、关注自动化编码工作流的技术团队",
-      "user_problem": "开发者想让 AI 自动执行代码任务，但担心安全问题（比如 AI 执行高权限命令需要反复确认）、连接外部工具时认证麻烦、以及 AI 生成图像背景无法透明等细节控制不足",
-      "what_it_is": "OpenAI Codex 发布 0.169.0，新增终端多侧聊标签、历史任务搜索和自定义模型提供商，让编码 agent 更好用。",
-      "ai_role": "理解用户意图后，自动编写/修改代码、调用工具、执行终端命令，并在敏感操作前等待人类确认",
-      "implementation_idea": "Codex 本质上是一个'有手脚的 LLM'——它把大模型的推理能力包装成可执行的动作循环：接收任务→规划步骤→调用工具（读文件、跑命令、连外部服务）→返回结果。这次更新主要加固了安全边界（默认审批、沙箱修复）和扩展了工具连接能力（MCP OAuth、WebSocket 认证）。MCP（Model Context Protocol）是一种让 AI 统一调用外部工具的标准协议，类似'AI 的 USB 接口'。",
-      "hands_on_exercise": "30 分钟体验：在 GitHub Codespaces 或本地安装 Codex CLI（rust-v0.158.0），让它帮你给一个小项目（如 Python 计算器）添加单元测试，故意触发一个需要 sudo 权限的命令（如安装依赖），观察终端审批提示；然后尝试用 'codex mcp add' 连接一个公开的 MCP 服务（如文件系统工具），体验 OAuth 配置流程",
-      "limitations_or_uncertainties": "未公开具体支持的 MCP 服务列表；未公开透明背景图像生成背后的模型版本（DALL-E 3 或 4？）；未公开 WebSocket bearer token 的具体加密方案细节；'多 Agent v2 直接消息'功能标注为可禁用，但未公开其默认行为与稳定性",
-      "region": "global",
-      "score": 7.4,
-      "summary": "OpenAI Codex 发布 0.169.0，新增终端多侧聊标签、历史任务搜索和自定义模型提供商，让编码 agent 更好用。",
-      "title": "openai/codex released rust-v0.169.0",
-      "url": "https://github.com/openai/codex/releases/tag/rust-v0.169.0",
-      "sources": [
-        {
-          "url": "https://github.com/openai/codex/releases/tag/rust-v0.149.0",
-          "title": "openai/codex released rust-v0.149.0",
-          "source_type": "github",
-          "published_at": "2026-08-20T21:04:55+00:00"
-        },
-        {
-          "url": "https://github.com/openai/codex/releases/tag/rust-v0.151.0",
-          "title": "openai/codex released rust-v0.151.0",
-          "source_type": "github",
-          "published_at": "2026-08-29T09:55:39+00:00"
-        },
-        {
-          "url": "https://learn.chatgpt.com/docs/plugins?surface=app",
-          "title": "Browse, install, and use plugins on supported ChatGPT and Codex ...",
-          "source_type": "supplemental",
-          "published_at": ""
-        },
-        {
-          "url": "https://github.com/openai/codex/releases/tag/rust-v0.153.0",
-          "title": "openai/codex released rust-v0.153.0",
-          "source_type": "github",
-          "published_at": "2026-09-03T01:37:38+00:00"
-        },
-        {
-          "url": "https://openai.com/codex/",
-          "title": "Codex | AI Coding Partner from OpenAI",
-          "source_type": "supplemental",
-          "published_at": ""
-        },
-        {
-          "url": "https://github.com/openai/codex/releases/tag/rust-v0.158.0",
-          "title": "openai/codex released rust-v0.158.0",
-          "source_type": "github",
-          "published_at": "2026-09-28T05:07:23+00:00"
-        },
-        {
-          "url": "https://en.wikipedia.org/wiki/OpenAI_Codex_(AI_agent)",
-          "title": "OpenAI Codex (AI agent) - Wikipedia",
-          "source_type": "supplemental",
-          "published_at": ""
-        },
-        {
-          "url": "https://github.com/openai/codex/releases/tag/rust-v0.163.0",
-          "title": "openai/codex released rust-v0.163.0",
-          "source_type": "github",
-          "published_at": "2026-10-15T21:30:38+00:00"
-        },
-        {
-          "url": "https://github.com/openai/codex/releases/tag/rust-v0.164.0",
-          "title": "openai/codex released rust-v0.164.0",
-          "source_type": "github",
-          "published_at": "2026-10-23T04:48:10+00:00"
-        },
-        {
-          "url": "https://github.com/openai/codex/releases/tag/rust-v0.166.0",
-          "title": "openai/codex released rust-v0.166.0",
-          "source_type": "github",
-          "published_at": "2026-10-29T19:47:53+00:00"
-        },
-        {
-          "url": "https://github.com/openai/codex/releases/tag/rust-v0.167.0",
-          "title": "openai/codex released rust-v0.167.0",
-          "source_type": "github",
-          "published_at": "2026-11-06T01:40:00+00:00"
-        },
-        {
-          "url": "https://github.com/openai/codex/releases/tag/rust-v0.169.0",
-          "title": "openai/codex released rust-v0.169.0",
-          "source_type": "github",
-          "published_at": "2026-11-13T08:37:05+00:00"
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "openai-codex-rust-v0.149.0",
-          "date": "2026-08-21",
-          "title": "openai/codex released rust-v0.149.0",
-          "summary": "OpenAI Codex发布rust-v0.149.0，新增agents仪表盘、队列和更多Vim编辑命令。",
-          "score": 7.5,
-          "url": "https://github.com/openai/codex/releases/tag/rust-v0.149.0"
-        },
-        {
-          "update_id": "openai-codex-rust-v0.151.0",
-          "date": "2026-08-30",
-          "title": "OpenAI Codex CLI 发布 Rust 版 v0.151.0：强化 MCP 工具发现与插件管理",
-          "summary": "OpenAI Codex 发布 v0.151.0，增强 MCP 工具发现和插件管理。",
-          "score": 8.0,
-          "url": "https://github.com/openai/codex/releases/tag/rust-v0.151.0"
-        },
-        {
-          "update_id": "openai-codex-rust-v0.153.0",
-          "date": "2026-09-03",
-          "title": "OpenAI Codex 发布 Rust 版 v0.153.0：Vim 撤销重做、插件市场与上下文管理实验功能",
-          "summary": "OpenAI Codex发布rust-v0.153.0，新增Vim撤销重做、插件市场等多项功能。",
-          "score": 8.0,
-          "url": "https://github.com/openai/codex/releases/tag/rust-v0.153.0"
-        },
-        {
-          "update_id": "openai-codex-rust-v0-158-0",
-          "date": "2026-09-28",
-          "title": "OpenAI Codex 发布 Rust 版 v0.158.0：MCP OAuth 密钥、透明背景图像生成、终端审批默认开启",
-          "summary": "OpenAI Codex 发布 rust-v0.158.0，新增 MCP OAuth 客户端密钥、图像透明背景生成、终端审批默认开启等功能，适合关注编码 Agent 工具链的人。",
-          "score": 7.0,
-          "url": "https://github.com/openai/codex/releases/tag/rust-v0.158.0"
-        },
-        {
-          "update_id": "openai-codex-rust-v0.163.0",
-          "date": "2026-10-16",
-          "title": "openai/codex released rust-v0.163.0",
-          "summary": "OpenAI Codex 发布 v0.163.0，新增配置搜索、响应中追加指令、并行只读工具等功能，并默认开启 Daybreak。",
-          "score": 7.2,
-          "url": "https://github.com/openai/codex/releases/tag/rust-v0.163.0"
-        },
-        {
-          "update_id": "openai-codex-rust-v0-164-0",
-          "date": "2026-10-24",
-          "title": "openai/codex released rust-v0.164.0",
-          "summary": "OpenAI Codex CLI 发布 v0.164.0，新增可复用提示预设、内联模型参数、终端图像预览和企业 MCP 认证等功能。",
-          "score": 7.2,
-          "url": "https://github.com/openai/codex/releases/tag/rust-v0.164.0"
-        },
-        {
-          "update_id": "openai-codex-rust-v0.166.0",
-          "date": "2026-10-30",
-          "title": "openai/codex released rust-v0.166.0",
-          "summary": "OpenAI Codex 发布 v0.166.0，新增 GPT-6.1 Terra 模型支持、键盘选择转录和网络诊断命令，解决终端编码体验和模型接入问题；可观察编码 Agent 的产品细节。",
-          "score": 7.0,
-          "url": "https://github.com/openai/codex/releases/tag/rust-v0.166.0"
-        },
-        {
-          "update_id": "openai-codex-rust-v0-167-0",
-          "date": "2026-11-06",
-          "title": "openai/codex released rust-v0.167.0",
-          "summary": "OpenAI Codex 发布 v0.167.0，加了 agent 命令中心、多后端切换和 Vertex AI 配置向导，值得看编码 agent 怎么把多模型和多会话管理做进终端。",
-          "score": 7.4,
-          "url": "https://github.com/openai/codex/releases/tag/rust-v0.167.0"
-        },
-        {
-          "update_id": "openai-codex-rust-0-169-0",
-          "date": "2026-11-14",
-          "title": "openai/codex released rust-v0.169.0",
-          "summary": "OpenAI Codex 发布 0.169.0，新增终端多侧聊标签、历史任务搜索和自定义模型提供商，让编码 agent 更好用。",
-          "score": 7.4,
-          "url": "https://github.com/openai/codex/releases/tag/rust-v0.169.0"
-        }
-      ],
-      "usage_flow": [
-        "在终端安装/更新 Codex CLI：`npm install -g @openai/codex` 或从 GitHub Release 获取",
-        "配置 MCP 服务器（如文件系统、数据库等外部工具），设置可选的启动等待时间（grace period）",
-        "在对话中让 Codex 调用工具完成任务，必要时通过插件扩展拦截或修改工具返回结果",
-        "通过插件目录（plugin catalog）按仓库级别管理插件来源，过滤无效市场",
-        "终端运行 codex 启动 TUI（文本交互界面），或用 codex exec 直接执行命令",
-        "在 Vim 模式下用 u 撤销、Ctrl+R 重做，包括粘贴内容和附件都能完整恢复",
-        "用 codex plugin 命令从远程插件市场搜索、安装、卸载插件",
-        "需要时输入 /recap 手动总结，或开启实验性上下文管理让 AI 自动压缩历史记录",
-        "安装 Codex CLI 并配置项目环境",
-        "用自然语言描述需求（如'给这个函数加单元测试'），Codex 自动规划并执行",
-        "高权限命令（如 sudo）默认需要终端审批，确认后 AI 继续运行",
-        "需要时连接外部 MCP 服务（如数据库、API），通过 OAuth 密钥安全认证"
-      ],
-      "learning_points": [
-        "MCP（Model Context Protocol）：一种让 AI 应用统一调用外部工具/数据的标准协议，类似 AI 的'USB 接口'",
-        "Agent 与单次问答的区别：Agent 能自主分解任务、多次调用工具、根据中间结果调整下一步，不只是'问一答一'",
-        "Sandbox（沙盒）：给 AI 执行环境加限制（如不能随意读/写特定路径），防止自动化操作破坏真实系统",
-        "TUI（Text User Interface）：不是网页也不是 GUI，是在终端里用字符画出的交互界面，Vim 就是典型 TUI",
-        "MCP（Model Context Protocol）：一种让 AI 调用外部工具（如读文件、查数据库）的标准接口，Codex 通过它扩展能力",
-        "Token 预算上下文管理：LLM 有输入长度限制，超出后要么遗忘早期内容，要么费用飙升，所以需要智能压缩历史记录",
-        "Agent：不只是聊天，而是能自主规划、执行多步骤任务并调用工具的 AI 系统",
-        "MCP（Model Context Protocol）：让 AI 以统一方式连接外部数据源和工具的开放协议，避免每个工具都要单独适配",
-        "Function Calling：LLM 识别需要调用外部功能时，输出结构化指令（如'运行 git status'）而非纯文本，让 AI 能实际操作软件"
-      ],
-      "verticals": [],
-      "tags": [
-        "Codex",
-        "Agent",
-        "CLI",
-        "开发者工具",
-        "更新",
-        "GitHub Release",
-        "OpenAI",
-        "编程Agent",
-        "Release",
-        "OpenAI Codex",
-        "编码Agent"
       ]
     },
     {
@@ -10093,135 +10609,6 @@
         "Agent",
         "评估",
         "Scale AI"
-      ]
-    },
-    {
-      "product_id": "product-92d1b297c66cce17",
-      "product_name": "ChatGPT",
-      "builder_name": "OpenAI News",
-      "first_seen": "2026-07-30",
-      "last_seen": "2026-10-27",
-      "occurrence_count": 6,
-      "intelligence_type": "market_signal",
-      "evidence_status": "first_party",
-      "target_user": "未公开",
-      "user_problem": "未公开",
-      "what_it_is": "OpenAI 发布 Signals 数据，展示近 100 个国家 165 种工作活动中人们怎么用 ChatGPT，能帮产品经理理解真实工作场景。",
-      "ai_role": "未公开",
-      "implementation_idea": "未公开",
-      "hands_on_exercise": "未公开",
-      "limitations_or_uncertainties": "未公开",
-      "region": "global",
-      "score": 7.0,
-      "summary": "OpenAI 发布 Signals 数据，展示近 100 个国家 165 种工作活动中人们怎么用 ChatGPT，能帮产品经理理解真实工作场景。",
-      "title": "ChatGPT’s expanding world of work",
-      "url": "https://openai.com/index/chatgpt-expanding-world-of-work",
-      "sources": [
-        {
-          "url": "https://openai.com/index/chatgpt-for-academic-researchers",
-          "title": "Accelerating scientific discovery with ChatGPT for Academic Researchers",
-          "source_type": "rss",
-          "published_at": "2026-07-29T10:00:00+00:00"
-        },
-        {
-          "url": "https://openai.com/index/testing-ads-in-chatgpt",
-          "title": "Testing ads in ChatGPT",
-          "source_type": "rss",
-          "published_at": "2026-08-11T10:00:00+00:00"
-        },
-        {
-          "url": "https://openai.com/index/how-enterprises-put-ai-to-work",
-          "title": "From assistance to execution: How enterprises put AI to work",
-          "source_type": "rss",
-          "published_at": "2026-08-12T06:00:00+00:00"
-        },
-        {
-          "url": "https://openai.com/index/jump-trading",
-          "title": "How Jump Trading is scaling quant research with ChatGPT",
-          "source_type": "rss",
-          "published_at": "2026-10-06T12:00:00+00:00"
-        },
-        {
-          "url": "https://openai.com/index/low-resource-programming-languages",
-          "title": "Advancing coding in low‑resource programming languages",
-          "source_type": "rss",
-          "published_at": "2026-10-19T12:00:00+00:00"
-        },
-        {
-          "url": "https://openai.com/index/chatgpt-expanding-world-of-work",
-          "title": "ChatGPT’s expanding world of work",
-          "source_type": "rss",
-          "published_at": "2026-10-26T10:00:00+00:00"
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "openai-chatgpt-academic-researchers",
-          "date": "2026-07-30",
-          "title": "Accelerating scientific discovery with ChatGPT for Academic Researchers",
-          "summary": "OpenAI向10万学术研究者免费提供ChatGPT高级模型，加速科学发现。",
-          "score": 8.0,
-          "url": "https://openai.com/index/chatgpt-for-academic-researchers"
-        },
-        {
-          "update_id": "openai-testing-ads-in-chatgpt",
-          "date": "2026-08-12",
-          "title": "Testing ads in ChatGPT",
-          "summary": "OpenAI开始在ChatGPT中测试广告，以支持免费访问，但强调广告清晰标注、不影响回答独立性。",
-          "score": 8.5,
-          "url": "https://openai.com/index/testing-ads-in-chatgpt"
-        },
-        {
-          "update_id": "openai-enterprise-agentic-ai-report",
-          "date": "2026-08-13",
-          "title": "From assistance to execution: How enterprises put AI to work",
-          "summary": "OpenAI 发布研究报告，揭示企业如何采用 agentic AI，使用 ChatGPT 和 Codex，前沿企业领先。",
-          "score": 7.5,
-          "url": "https://openai.com/index/how-enterprises-put-ai-to-work"
-        },
-        {
-          "update_id": "openai-jump-trading-chatgpt-quant-research",
-          "date": "2026-10-07",
-          "title": "How Jump Trading is scaling quant research with ChatGPT",
-          "summary": "OpenAI 发布 Jump Trading 案例，讲量化团队用 ChatGPT 把多数据源的长流程研究串起来并保留人工复核，可参考企业级 AI 工作流怎么设计。",
-          "score": 7.2,
-          "url": "https://openai.com/index/jump-trading"
-        },
-        {
-          "update_id": "openai-low-resource-programming-languages",
-          "date": "2026-10-20",
-          "title": "Advancing coding in low‑resource programming languages",
-          "summary": "OpenAI 改进了 ChatGPT 在低资源编程语言（如 COBOL）上的表现，并发布了新的评估，有助于软件工程和迁移任务。",
-          "score": 7.0,
-          "url": "https://openai.com/index/low-resource-programming-languages"
-        },
-        {
-          "update_id": "chatgpt-signals-work-activities",
-          "date": "2026-10-27",
-          "title": "ChatGPT’s expanding world of work",
-          "summary": "OpenAI 发布 Signals 数据，展示近 100 个国家 165 种工作活动中人们怎么用 ChatGPT，能帮产品经理理解真实工作场景。",
-          "score": 7.0,
-          "url": "https://openai.com/index/chatgpt-expanding-world-of-work"
-        }
-      ],
-      "usage_flow": [],
-      "learning_points": [],
-      "verticals": [],
-      "tags": [
-        "OpenAI",
-        "ChatGPT",
-        "学术",
-        "广告",
-        "商业模式",
-        "企业应用",
-        "Agent",
-        "企业落地",
-        "工作流",
-        "金融",
-        "编程语言",
-        "模型能力",
-        "工作场景",
-        "行业观察"
       ]
     },
     {
