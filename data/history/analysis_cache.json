@@ -5176,6 +5176,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "0a7576d3d953a45cba7d00c7efedc8f01d89371c146a8ffb48fd35cd3ce72a00": {
+      "created_at": "2026-11-21T07:03:42.248085+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "europa-fusion-daniel-ek-backing",
+        "evidence_status": "reported",
+        "follow_up": "无。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:02b3e3765f7a158d",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "AI 研究者创办的聚变能源公司获 Daniel Ek 投资，属于能源领域融资新闻，与 AI 产品、模型能力或构建实践无关。",
+        "region": "global",
+        "score": 2.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Spotify 创始人投资了一家 AI 研究者创办的聚变能源公司，和 AI 产品经理要做的事基本无关。",
+        "tags": [
+          "融资",
+          "能源"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "0a78f54ccc1cfbbcd116e8aebfcc9206eb786ec20add69dcf0e04643da0baf1e": {
       "created_at": "2026-09-01T06:13:51.970490+00:00",
       "model": "deepseek-v4-flash",
@@ -17575,6 +17613,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "22af6c4fd345d1844cb91b44cfd0601d60fa8b751f9f26e042796cd328507cbc": {
+      "created_at": "2026-11-21T07:03:42.247834+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "lovable-app-studio-atlanta",
+        "evidence_status": "first_party",
+        "follow_up": "查看活动是否发布新功能或用户案例。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "public_web:sitemap:9eadb871940306735f6d",
+        "intelligence_type": "early_signal",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Lovable",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Lovable 官方博客的线下活动页面，正文只有通用占位描述，没有产品功能、Demo 或用户反馈，对产品经理的可迁移信息很少。",
+        "region": "global",
+        "score": 4.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Lovable 在亚特兰大办 App Studio 活动，但页面没有说明活动内容或产品新功能，暂时看不出对做产品的人有什么可学的东西。",
+        "tags": [
+          "AI 编程",
+          "线下活动"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "22b12707f89bbc592714abd500a3691063deab806e2de17fd030d08da84717e8": {
       "created_at": "2026-08-16T01:57:45.685687+00:00",
       "model": "deepseek-v4-flash",
@@ -18261,6 +18337,45 @@
           "像素动画",
           "提示词",
           "Demo"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "23be95d20afbfc9ebfeb95d2623e3d9d6213bd1348178fc59748c858a2c0f087": {
+      "created_at": "2026-11-21T07:03:53.926604+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "replit-tunnels-private-network",
+        "evidence_status": "first_party",
+        "follow_up": "观察 Tunnels 的实际客户案例和与竞品的安全方案对比。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:blog.replit.com_feed.xml:fd4934c9560b28d1",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Replit Tunnels",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Replit 官方发布 Tunnels 功能，让 AI 代理安全访问企业私有网络数据，属于产品能力更新，有明确使用场景和权限设计，对做企业级 AI 产品有迁移价值。",
+        "region": "global",
+        "score": 7.8,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Replit 推出 Tunnels，让 AI 代理安全连接企业私有网络中的数据库和内部 API，解决用私有数据构建应用时的安全与可用矛盾。",
+        "tags": [
+          "AI Agent",
+          "企业安全",
+          "私有网络"
         ],
         "target_user": "",
         "verticals": []
@@ -19634,6 +19749,45 @@
         "tags": [
           "金融",
           "安全"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "265eb2e18b1fcfc1e3016f0105441133c03d0073ac3d2a52b51a5678b80a3d8c": {
+      "created_at": "2026-11-21T07:03:53.926451+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "levent-alpoge-riemann-claude",
+        "evidence_status": "reported",
+        "follow_up": "等待数学界对该证明的验证或正式发表。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:simonwillison.net_atom_everything_:f27b1f34ce20932c",
+        "intelligence_type": "model_capability",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Claude",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "引用个人声称用 Claude 证明黎曼猜想，属于未经验证的宣称，无产品、代码或可复现证据；对 AI 产品经理的直接迁移价值低，且需警惕夸大。",
+        "region": "global",
+        "score": 6.5,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "Levent Alpöge 声称与 Claude 合作发现黎曼猜想的证明，但该说法尚未经过同行验证，对产品构建的直接参考有限。",
+        "tags": [
+          "Claude",
+          "数学",
+          "未验证宣称"
         ],
         "target_user": "",
         "verticals": []
@@ -31670,6 +31824,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "3ee6ef7bae79f4f18315d018e77576ea08cdee879748a6c48690221bd5e58a71": {
+      "created_at": "2026-11-21T07:03:42.247793+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "anthropic-ipo-close",
+        "evidence_status": "first_party",
+        "follow_up": "确认是否为真实 IPO 事件，补充金额、估值和官方公告原文。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "public_web:sitemap:fd109fdc361c3cd3d582",
+        "intelligence_type": "market_signal",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "标题为 IPO Close，但正文只有一句通用占位描述，没有融资规模、估值、条款或产品信息，无法判断真实增量，属于信息不足的官方页面。",
+        "region": "global",
+        "score": 3.5,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Anthropic 官网出现 IPO Close 页面，但内容只有一句通用描述，看不出解决了什么问题，也没有可验证的融资细节，暂不值得拆解。",
+        "tags": [
+          "融资",
+          "公司动态"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "3f0459c7ea822f0df60e1e7863f129394da391771521fd42fd17f580abf032b4": {
       "created_at": "2026-09-21T04:54:24.660179+00:00",
       "model": "deepseek-flash",
@@ -38254,6 +38446,45 @@
       },
       "stage": "deep_analysis"
     },
+    "4b25061485f1beb30e674602ddbc91a5e596a8bddad82cc74ef48baf605f8bb7": {
+      "created_at": "2026-11-21T07:04:02.793774+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "vercel-ai-7.0.178-bugfix",
+        "evidence_status": "first_party",
+        "follow_up": "关注 experimental_extract 后续是否稳定并形成可用的结构化抽取产品能力。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "github:release:452949793",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Vercel AI SDK",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Vercel AI SDK 的常规补丁，修复 prepareStep 消息数组复用、工具审批签名、遥测等 bug，并给 experimental_extract 加遥测。属于工程维护，无新产品体验或能力解锁，对初学者可迁移增量有限。",
+        "region": "global",
+        "score": 5.8,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "Vercel AI SDK 发布补丁修了一批工具调用和审批相关的 bug，并给实验性抽取功能加了遥测，属于日常维护。",
+        "tags": [
+          "AI SDK",
+          "工具调用",
+          "工程维护"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "4b321108e57d60ba4911675c67019320f2c0d8ba9c1a22a3b6a0e45e50ea93ef": {
       "created_at": "2026-07-25T16:39:02.820616+00:00",
       "model": "deepseek-v4-flash",
@@ -43683,6 +43914,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "558e0b846740458e8a2e74315850b166f98e0801d30ff738a2a25a5420c65848": {
+      "created_at": "2026-11-21T07:03:42.248142+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "ai-home-office-gadgets-roundup",
+        "evidence_status": "reported",
+        "follow_up": "无。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:3a49b88638df86d3",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": true,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "AI 办公硬件导购清单，属于媒体带货式汇总，没有一手产品体验或构建过程，信息密度低。",
+        "region": "global",
+        "score": 4.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "TechCrunch 列了六款 AI 办公小工具，属于导购清单，没有真实使用反馈，参考价值有限。",
+        "tags": [
+          "AI 硬件",
+          "导购"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "55931b45890bde70559339899021005654f95da89f4e357e1c2bed794cc6f635": {
       "created_at": "2026-09-04T04:31:27.733013+00:00",
       "model": "deepseek-v4-flash",
@@ -47083,6 +47352,44 @@
           "企业应用",
           "税务",
           "ChatGPT Enterprise"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "5b993fe829711c3cba71d274c348f03305bdcfdd0e20e4d8dbbda6fe7a062d7a": {
+      "created_at": "2026-11-21T07:03:53.926941+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-codex-rust-v0-173-0-alpha-3",
+        "evidence_status": "first_party",
+        "follow_up": "无。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "github:release:453237794",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "OpenAI Codex",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "仅版本号发布，无任何变更说明，属于低信息量更新，不收录。",
+        "region": "global",
+        "score": 3.0,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "OpenAI Codex 发布 rust-v0.173.0-alpha.3，无变更说明。",
+        "tags": [
+          "Codex",
+          "版本发布"
         ],
         "target_user": "",
         "verticals": []
@@ -56597,6 +56904,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "6defac15dcbf1756b631a8523a36d3815e2becd58a2e549f79fa56ee2f456450": {
+      "created_at": "2026-11-21T07:03:53.927762+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "claude-code-v2-1-330",
+        "evidence_status": "first_party",
+        "follow_up": "关注 easel 图表功能的实际体验和自托管运行器的采用情况。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "github:release:453086311",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Claude Code",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Claude Code 版本更新，新增企业组织登录、内置图表绘制和自托管运行器改进，属于产品功能增量，对使用 Claude Code 构建产品的开发者有参考价值。",
+        "region": "global",
+        "score": 7.0,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "Claude Code 发布 v2.1.330，新增企业组织登录、内置图表绘制和自托管运行器起始目录等功能。",
+        "tags": [
+          "Claude Code",
+          "开发者工具",
+          "企业功能"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "6df656a47388a505fd6fc5f85a35fab887129eeca551f6064ac059c0673f4a57": {
       "created_at": "2026-08-22T01:50:05.527377+00:00",
       "model": "deepseek-v4-flash",
@@ -56630,6 +56976,45 @@
           "Vercel AI SDK",
           "Release",
           "Bug Fix"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "6e09c03961bfad21d4796640dd727b94ba3a4bff666d40abc2273fc9082b7359": {
+      "created_at": "2026-11-21T07:03:42.248019+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openrouter-rankings-top5-2026-11",
+        "evidence_status": "reported",
+        "follow_up": "观察榜单变化及这些模型在具体产品中的落地案例。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "public_web:ranking:b0ab1ec5ca2d10da9cfa",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenRouter 热度榜显示腾讯 Hy4、DeepSeek V4.1 Flash、GLM 5.3 Flash 等中国模型占据前五，是模型使用趋势信号，但只是聚合榜单，缺少产品案例和用户反馈，信息增量有限。",
+        "region": "china",
+        "score": 6.5,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "OpenRouter 模型热度前五全是中国模型，说明开发者在实际调用中更偏向便宜好用的国产模型，对选型有参考但缺少具体产品案例。",
+        "tags": [
+          "模型榜单",
+          "开发者趋势",
+          "中国模型"
         ],
         "target_user": "",
         "verticals": []
@@ -56749,6 +57134,41 @@
         "verticals": []
       },
       "stage": "candidate_analysis"
+    },
+    "6e56ac07cd72846fffdc1fcdbbfb8af7d80f3120ebb9f5383a2b01799bd70477": {
+      "created_at": "2026-11-21T07:06:34.076000+00:00",
+      "model": "kimi-k2.6",
+      "prompt_version": "deep-v3-beginner",
+      "result": {
+        "ai_role": "AI 作为 Agent（智能体，能自主决策并执行多步操作的 AI）负责理解任务、决定点击/输入/滚动等浏览器操作，并通过 Playwright 实际执行",
+        "evidence_status": "first_party",
+        "hands_on_exercise": "30 分钟练习：本地安装 browser-use 1.0.8rc1，用 DeepSeek API 写一个小脚本让 AI 自动登录某个测试网站（用假密码），检查终端日志里密码是否显示为星号，并尝试在另一台手机或电脑上完成授权流程",
+        "implementation_idea": "框架把「用户给的任务」拆成一步步浏览器操作，每步让 LLM 决定下一步做什么，再通过 Playwright 驱动真实浏览器执行。本次更新加了：设备码授权流程（类似 CLI 登录 GitHub 时的体验）、对模型「思考模式」的兼容重试、以及自动识别 password 输入框并替换为星号再传给 LLM。",
+        "learning_points": [
+          "Agent：不只是回答问题的 AI，而是能自己决定调用工具、执行多步操作的系统",
+          "无头浏览器（Headless）：没有图形界面的浏览器，适合跑在服务器上，但遇到需要人机交互的环节就要想办法绕过",
+          "Function Calling（函数调用）：LLM 输出结构化指令让程序执行特定操作，本项目里就是让模型决定「点击哪个元素」「输入什么文字」"
+        ],
+        "limitations_or_uncertainties": "候选版本（rc1）非正式稳定版，生产环境需谨慎；Gateway 的 token 预留策略调整是否完全解决小余额问题，需用户实际验证；未公开具体支持哪些国产模型的「思考模式」版本",
+        "product_name": "browser-use",
+        "sources": [
+          "https://github.com/browser-use/browser-use/releases/tag/1.0.8rc1",
+          "https://github.com/browser-use/browser-use/pull/6489",
+          "https://browser-use.com/",
+          "https://grokipedia.com/page/Browser_Use"
+        ],
+        "target_users": "需要让 AI 自动操作网页的开发者、做浏览器自动化产品的构建者",
+        "title_zh": "browser-use 发布 1.0.8rc1：无头设备扫码授权、国产模型兼容修复、密码脱敏",
+        "usage_flow": [
+          "pip install 'browser-use==1.0.8rc1' 安装候选版",
+          "写 Python 脚本让 AI Agent 执行网页任务（如填表、抓取数据）",
+          "若在无头机器运行，终端会打印授权链接和验证码，用手机扫码或输入确认",
+          "Agent 自动完成浏览任务，日志中密码字段会被脱敏"
+        ],
+        "user_problem": "1) 在无显示器的服务器/SSH 环境里，没法扫码或输入密码授权 AI 操作浏览器；2) DeepSeek、Qwen 等国产模型在「思考模式」下会拒绝强制结束调用，导致任务卡死；3) AI 日志里可能意外打印出用户填的密码；4) 小余额账户调用云端浏览器时，因预留 token 过多而被拒绝",
+        "what_it_is": "一个开源的浏览器 Agent 框架，让 AI 能自动操控网页浏览器完成任务。"
+      },
+      "stage": "deep_analysis"
     },
     "6e62342cbf4e5a2fe69a53079946ee6209b1ef6acd9af0dde939ffe1f8f02512": {
       "created_at": "2026-10-24T04:34:41.867857+00:00",
@@ -72799,6 +73219,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "8c5a21369b60a290b6382c4c790d35dc3f2336c896f284bbaa13e5ddcf9bfae1": {
+      "created_at": "2026-11-21T07:03:53.926346+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "signal-block-ai-screen-reading",
+        "evidence_status": "reported",
+        "follow_up": "观察 Signal 是否发布技术细节，以及苹果和谷歌如何回应系统级 AI 读取屏幕的权限问题。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:fe3c442fadc2b80a",
+        "intelligence_type": "product_case",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Signal",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "隐私通讯产品对系统级 AI 代理读取屏幕的主动防御，属于产品策略与 AI 交互边界的一手信号，对做 AI 产品理解权限与隐私设计有迁移价值；但非构建者长文，证据来自媒体报道。",
+        "region": "global",
+        "score": 7.2,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Signal 限制安卓和 iOS 截图，防止系统内置 AI 代理读取用户消息，因为这类能力削弱了 Signal 独立保证隐私的能力。",
+        "tags": [
+          "AI Agent",
+          "隐私",
+          "产品策略"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "8c6594c03b65f0f449963677c4d605e77019254d4fb38d4ca354c559f123a248": {
       "created_at": "2026-11-07T05:56:45.681427+00:00",
       "model": "deepseek-flash",
@@ -73997,6 +74456,45 @@
           "ChatGPT插件",
           "旅游",
           "落地案例"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "8dd53b86b7ee421bc3fec4f6d4ea50cacf83f5fd49ea3a37b169203928fc6e0c": {
+      "created_at": "2026-11-21T07:03:53.926522+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "anthropic-ipo-1-5t",
+        "evidence_status": "reported",
+        "follow_up": "无产品层面后续，不追踪。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:www.latent.space_feed:fd920042af6a9bd9",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Anthropic",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "纯融资与股价信息，属于明确低优先级内容；虽为重大事件，但对 AI 产品经理学习构建产品无直接帮助。",
+        "region": "global",
+        "score": 4.0,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "Anthropic 完成史上最大 IPO，估值 1.5 万亿美元，开盘价 111.50 美元，收盘 97.17 美元。",
+        "tags": [
+          "融资",
+          "IPO",
+          "Anthropic"
         ],
         "target_user": "",
         "verticals": []
@@ -77677,6 +78175,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "93d6721886a8b3bf8ec27d1a855f834a5a242cb6d5687fc679f246de2972c0a3": {
+      "created_at": "2026-11-21T07:03:42.248117+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "riemann-hypothesis-ai-claim",
+        "evidence_status": "reported",
+        "follow_up": "等待数学界验证结果。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:93435b4a7de2f359",
+        "intelligence_type": "model_capability",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "AI 声称解决黎曼猜想同时有人类解法，属于数学研究新闻，没有产品、代码或可迁移的构建经验，且结论未经验证。",
+        "region": "global",
+        "score": 4.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "有 AI 声称解决了黎曼猜想，同时也有数学家给出人类解法，但都还没被验证，和做 AI 产品关系不大。",
+        "tags": [
+          "数学",
+          "AI 研究"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "93efbd0afda1c5e862e60894de7fe44273ce2879ca8b56f26bbee2c6957f7a72": {
       "created_at": "2026-07-26T04:07:02.363637+00:00",
       "model": "deepseek-v4-flash",
@@ -77710,6 +78246,45 @@
           "Debian",
           "开源",
           "LLM政策"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "9405aa2ab07cb8a6cdad06d26cb6824f9929c689e7efb1b81f5447b5e430cd38": {
+      "created_at": "2026-11-21T07:03:42.248053+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-combatting-adversarial-distillation",
+        "evidence_status": "first_party",
+        "follow_up": "观察是否影响 API 使用条款或第三方模型训练。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:openai.com_news_rss.xml:7ad44f990f0c53ef",
+        "intelligence_type": "business_policy",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI 官方介绍对抗蒸馏的防护方法，属于模型安全与商业政策，对做产品的人来说没有直接可迁移的产品思路或新体验。",
+        "region": "global",
+        "score": 5.5,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "OpenAI 发文介绍如何防止别人用蒸馏偷模型能力，属于公司安全策略，和做 AI 产品没有直接关系。",
+        "tags": [
+          "模型安全",
+          "蒸馏",
+          "政策"
         ],
         "target_user": "",
         "verticals": []
@@ -79085,6 +79660,46 @@
       },
       "stage": "candidate_analysis"
     },
+    "9697ca933e67f68bb319945467e2c993cbb321a7f551cbce74acf271c6032ccc": {
+      "created_at": "2026-11-21T07:04:02.793838+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "browser-use-1.0.8rc1",
+        "evidence_status": "first_party",
+        "follow_up": "观察 1.0.8 正式版发布及 judge 缓存机制对成本的实际影响。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "github:release:453255803",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "browser-use",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "浏览器 Agent 开源项目 browser-use 发布 1.0.8rc1，包含无 API key 的 SSH/无头设备授权流程、DeepSeek/Qwen 思考模式下的重试修复、密码字段脱敏等真实可用性改进。属于有代码可验证的产品迭代，对做浏览器 Agent 产品的构建者有参考价值，但为候选版本。",
+        "region": "global",
+        "score": 7.4,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "浏览器 Agent 工具 browser-use 发布候选版，支持在无头机器上扫码授权、修复国产模型思考模式下的卡死，并避免泄露密码，让自动化浏览更可靠。",
+        "tags": [
+          "浏览器Agent",
+          "开源",
+          "DeepSeek",
+          "Qwen"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "96998b32daba56d94b92c38906a6549aa695e1dfdf942ecaf6f04a6bc2a32e81": {
       "created_at": "2026-07-26T04:07:02.363558+00:00",
       "model": "deepseek-v4-flash",
@@ -79386,6 +80001,44 @@
           "Agent",
           "开发者工具",
           "Show HN"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "9756bfdf202c22deed85881aeb89ca3fdf53fca1064fa9139eaaec2391e0ff45": {
+      "created_at": "2026-11-21T07:03:42.248178+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "trump-tax-foreign-ai-data-centers",
+        "evidence_status": "reported",
+        "follow_up": "观察是否影响模型 API 价格和可用性。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:f8bb322af0ceece4",
+        "intelligence_type": "business_policy",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "特朗普威胁对在海外建 AI 数据中心征税，属于政策与算力基础设施新闻，对产品经理没有直接可用的产品增量。",
+        "region": "global",
+        "score": 3.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "特朗普说要对把 AI 数据中心建到国外的公司征重税，属于政策新闻，和做 AI 产品没有直接关系。",
+        "tags": [
+          "政策",
+          "数据中心"
         ],
         "target_user": "",
         "verticals": []
@@ -82360,6 +83013,45 @@
           "前端框架",
           "SvelteKit",
           "低相关"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "9cb74b76bdea0753efd5c4fc474f2afaff1840c2874bd41717fa9abb8d06329f": {
+      "created_at": "2026-11-21T07:03:53.926486+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "formal-verification-ai-lean",
+        "evidence_status": "reported",
+        "follow_up": "关注是否有基于形式验证的 AI 编程产品发布或开源项目。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:www.latent.space_feed:b185934b78bd61e8",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "讨论 AI 加 Lean 自动化形式验证，属于技术方向观察，有潜在产品化价值但缺乏具体产品案例和用户反馈，对初学者理解产品路径帮助有限。",
+        "region": "global",
+        "score": 7.0,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "文章讨论 AI 和 Lean 如何帮助自动化形式验证，减少软件正确性证明对专家的依赖。",
+        "tags": [
+          "形式验证",
+          "Lean",
+          "AI 编程"
         ],
         "target_user": "",
         "verticals": []
@@ -88560,6 +89252,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "a787c15287902bf5ba7ed62117aeda2bcbe7bcca5fa4bd2015117098d9d906fd": {
+      "created_at": "2026-11-21T07:03:53.926961+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-codex-rust-v0-173-0-alpha-2",
+        "evidence_status": "first_party",
+        "follow_up": "无。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "github:release:453161536",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "OpenAI Codex",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "仅版本号发布，无任何变更说明，属于低信息量更新，不收录。",
+        "region": "global",
+        "score": 3.0,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "OpenAI Codex 发布 rust-v0.173.0-alpha.2，无变更说明。",
+        "tags": [
+          "Codex",
+          "版本发布"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "a79dfd1ad763ed3314b48c9292809cbdcb8c347684f4d32c66a0a50cd5f845d9": {
       "created_at": "2026-11-10T07:15:16.239912+00:00",
       "model": "deepseek-flash",
@@ -90249,6 +90979,45 @@
           "Agent",
           "AI眼镜",
           "Meta"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "ab3b3d3685493b55e01681215ad733bd6dc736011177857fadd607a7fd2de9ac": {
+      "created_at": "2026-11-21T07:03:53.926894+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-agents-python-v1-alpha1-codex",
+        "evidence_status": "first_party",
+        "follow_up": "关注正式版发布和 Codex 提供者的稳定性与文档完善程度。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "github:release:453166042",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "OpenAI Agents SDK",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI Agents SDK 首个 v1 预览版，将 Codex 作为可选模型提供者嵌入 Python SDK，属于开发者工具的重要更新，对构建 AI 代理产品有直接参考价值。",
+        "region": "global",
+        "score": 7.5,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "OpenAI 发布 Agents SDK v1.0.0-alpha.1，允许在 Python 中按运行选择 Codex 作为模型提供者，并复用 Codex Core。",
+        "tags": [
+          "Agents SDK",
+          "Codex",
+          "开发者工具"
         ],
         "target_user": "",
         "verticals": []
@@ -93013,6 +93782,46 @@
       },
       "stage": "candidate_analysis"
     },
+    "b0504159074760de36c9ce655abf495ec0bf229d86634c7ed14ae53af8db9b3c": {
+      "created_at": "2026-11-21T07:04:02.793664+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "vercel-ai-gateway-live-websocket",
+        "evidence_status": "first_party",
+        "follow_up": "观察 Live 模型在 Vercel Gateway 上的可用范围、定价与延迟表现，以及是否有官方示例应用。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "github:release:453274878",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Vercel AI SDK",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Vercel AI SDK 官方补丁版本，新增 Gateway 对 Live 模型（如 openai/gpt-live-1）的 WebSocket 连续会话支持，并支持客户端短时 token 直连，省去应用中转。属于可验证的官方能力增量，对做实时语音/多模态产品的构建者有直接迁移价值，但仍是 patch 级更新，非重大发布。",
+        "region": "global",
+        "score": 7.2,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "Vercel AI SDK 发布补丁，让开发者能通过 Gateway 用 WebSocket 直连实时语音模型，省去自建中转服务器，做实时 AI 产品更省事。",
+        "tags": [
+          "AI SDK",
+          "实时语音",
+          "WebSocket",
+          "Agent"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "b051927f274966392a0cb17d4b47102efb5d13b67d011e1ce3fbfd5ce5de0766": {
       "created_at": "2026-09-18T04:42:14.415121+00:00",
       "model": "deepseek-flash",
@@ -93652,6 +94461,44 @@
         "tags": [
           "Andrew Ng",
           "AI工程"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "b14805a78c3213100239ef069092da3a49a7b1a807afef78fd441be2466376fd": {
+      "created_at": "2026-11-21T07:04:02.794038+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "grh-proof-announcement-race",
+        "evidence_status": "reported",
+        "follow_up": "无需跟进，除非后续出现可验证的 AI 辅助数学证明产品。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:50579568",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "关于广义黎曼猜想证明的抢先发布与 AI 公司公告的讨论，属于数学学术事件与社区情绪，与 AI 产品构建、模型能力落地无直接关系，且为聚合社区讨论，信噪比低。",
+        "region": "global",
+        "score": 3.5,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "一位数学家赶在 Anthropic 公告前发布广义黎曼猜想的证明草稿，引发社区对 AI 与学术优先权的讨论，但与 AI 产品无关。",
+        "tags": [
+          "学术",
+          "社区讨论"
         ],
         "target_user": "",
         "verticals": []
@@ -97410,6 +98257,44 @@
         "tags": [
           "LangChain",
           "维护更新"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "b7d5aef92325992d5d4f65a79b5543928c704dba4f69087cc42faf743f8ea2b1": {
+      "created_at": "2026-11-21T07:04:02.794156+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "ninlive-live-archive",
+        "evidence_status": "reported",
+        "follow_up": "无。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:50583274",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Nine Inch Nails 现场录音归档网站，与 AI、LLM 及产品构建完全无关，属于噪音。",
+        "region": "global",
+        "score": 1.5,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "一个粉丝做的 Nine Inch Nails 现场演出归档网站，和 AI 产品无关。",
+        "tags": [
+          "音乐",
+          "无关"
         ],
         "target_user": "",
         "verticals": []
@@ -112605,6 +113490,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "d724f8a50f4cabfcd144ca99de5033fbfbf855efcdadf0555d37cb1646774d64": {
+      "created_at": "2026-11-21T07:03:42.247947+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "thinking-machines-inkling-2-mini",
+        "evidence_status": "verified",
+        "follow_up": "跟踪官方模型卡、许可证和更多真实场景评测。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:50581260",
+        "intelligence_type": "model_capability",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Inkling 2 Mini",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Thinking Machines 发布 Inkling 2 Mini 小模型，HN 893 分、166 条评论，有开发者实测本地推理速度并给出补丁，属于可验证的模型能力动态，对做本地 AI 产品有直接参考价值。",
+        "region": "global",
+        "score": 8.2,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "Thinking Machines 发布小模型 Inkling 2 Mini，开发者实测能在本地电脑上跑出 27 tokens/s，解决了小模型本地可用的问题，值得关注它能否支撑个人 AI 产品。",
+        "tags": [
+          "小模型",
+          "本地部署",
+          "开源模型"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "d73ce3dd882ad4990d620194f7a02ebbd998889c2869dbf51bfd5a8778502991": {
       "created_at": "2026-11-17T07:53:11.047463+00:00",
       "model": "deepseek-flash",
@@ -116334,6 +117258,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "dea67d447c468acb5c6d6e619bb75584575bcc118c40c18e06ed23a6447bd0ee": {
+      "created_at": "2026-11-21T07:03:53.926920+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-codex-rust-v0-173-0-alpha-4",
+        "evidence_status": "first_party",
+        "follow_up": "无。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "github:release:453327817",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "OpenAI Codex",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "仅版本号发布，无任何变更说明，属于低信息量更新，不收录。",
+        "region": "global",
+        "score": 3.0,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "OpenAI Codex 发布 rust-v0.173.0-alpha.4，无变更说明。",
+        "tags": [
+          "Codex",
+          "版本发布"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "deb044817fc145d7eb6062c342fd76648c85ea428564595dd15f2a97ab27ab98": {
       "created_at": "2026-11-06T06:41:30.520283+00:00",
       "model": "deepseek-flash",
@@ -119128,6 +120090,45 @@
         "tags": [
           "AI安全",
           "政策"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "e4828e8189d7c5d77869afd223457d8481cb6ac647b9c5b78fda0d93a9114f51": {
+      "created_at": "2026-11-21T07:04:02.793884+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "browser-use-1.0.7-mcp-timeout",
+        "evidence_status": "first_party",
+        "follow_up": "观察 MCP 长任务续取机制在真实工作流中的稳定性。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "github:release:453125712",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "browser-use",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "browser-use 1.0.7 正式版解决 MCP 调用 60 秒超时问题，长任务先返回部分输出并可续取，对在 Cursor 等客户端里集成浏览器 Agent 的开发者是实际体验改进。属于可验证的产品迭代，但增量偏工程细节。",
+        "region": "global",
+        "score": 7.0,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "浏览器 Agent 工具 browser-use 发布 1.0.7，解决 MCP 调用 60 秒超时问题，长任务可先拿部分结果再续取，方便在 Cursor 里用。",
+        "tags": [
+          "浏览器Agent",
+          "MCP",
+          "开源"
         ],
         "target_user": "",
         "verticals": []
@@ -125173,6 +126174,39 @@
       },
       "stage": "candidate_analysis"
     },
+    "efffcb7e40c09673bb00b2941c463b64b2cca818a8d7eae61432010c8fca9bb5": {
+      "created_at": "2026-11-21T07:06:09.693910+00:00",
+      "model": "kimi-k2.6",
+      "prompt_version": "deep-v3-beginner",
+      "result": {
+        "ai_role": "Replit 的 AI Agent（智能体，能自主分析需求、写代码、查数据的 AI 助手）在开发过程中自动通过隧道查询私有数据、调试内部 API，开发者不用手动配置网络",
+        "evidence_status": "first_party",
+        "hands_on_exercise": "30 分钟体验：在本地用 Docker 跑一个带简单 API 的私有服务（如 SQLite + Python Flask），再用 ngrok 或 Cloudflare Tunnel 模拟'隧道'概念，最后用 curl 从外网访问。对比'直接暴露端口'和'通过隧道+身份验证访问'的安全差异。注意：Replit Tunnels 本身需企业版，个人无法直接试用",
+        "implementation_idea": "核心思路像'企业版 VPN 专线'：内网放一个受控的'桥接程序'，Replit 云端只连这座桥，不直接碰内网。桥接程序由 IT 全权控制开哪些门、关哪些门，桥上的通信全程加密+双向验证身份",
+        "learning_points": [
+          "AI Agent：能自主完成多步骤任务的 AI，不只是聊天，还能自己查资料、写代码、调用工具",
+          "mTLS（双向 TLS）：不仅客户端验证服务器身份，服务器也验证客户端身份，比常见 HTTPS 更安全",
+          "零信任网络：默认不信任任何连接，每次访问都要验证身份和权限，不是'进了内网就畅通无阻'"
+        ],
+        "limitations_or_uncertainties": "未公开具体定价；未说明是否支持非 TCP 协议（如 UDP）；未公开隧道性能数据（延迟、带宽）；个人/免费版用户是否可用未明确",
+        "product_name": "Replit Tunnels",
+        "sources": [
+          "https://replit.com/blog/build-with-private-data-using-tunnels",
+          "https://docs.replit.com/features/security/tunnels"
+        ],
+        "target_users": "企业 IT 管理员 + 需要在私有数据上构建应用的开发团队（尤其是使用 Replit AI Agent 的工程师）",
+        "title_zh": "Replit 推出 Tunnels：让 AI Agent 安全连进企业私有网络",
+        "usage_flow": [
+          "IT 在企业内网部署 Tunnels 客户端（Docker/Helm），作为'看门人'",
+          "IT 配置哪些私有服务（如内部数据库、API）对哪个 Replit 工作空间开放",
+          "开发者在 Replit 里写需求，AI Agent 自动通过加密隧道调用这些私有服务",
+          "全程 mTLS 加密，IT 可随时调整或撤销访问权限"
+        ],
+        "user_problem": "企业数据存在私有网络里，AI 开发工具够不着；如果直接暴露到公网，安全风险大。团队被迫在'数据安全'和'AI 能用'之间二选一",
+        "what_it_is": "Replit 企业版的一项新功能，让云端 AI 开发环境通过加密隧道安全访问企业内网的数据库和内部 API，不用把数据搬到公网"
+      },
+      "stage": "deep_analysis"
+    },
     "f00f284506e1141597c74f9db97c6afff515dbeecd7b7298804cace54acb8395": {
       "created_at": "2026-09-09T04:40:45.545367+00:00",
       "model": "deepseek-v4-flash",
@@ -130896,6 +131930,45 @@
         "tags": [
           "会议",
           "TechCrunch"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "f9b241e7acbddb6025b1d0508af2d491313d446ddd3840274ed0519f84b53bd9": {
+      "created_at": "2026-11-21T07:03:42.248213+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "anthropic-claude-riemann-hypothesis-claim",
+        "evidence_status": "early_signal",
+        "follow_up": "等待数学界验证和 Anthropic 官方说明。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:24d51b07a653d065",
+        "intelligence_type": "model_capability",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Claude",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Anthropic 数学家声称用 Claude 证明黎曼猜想，属于模型能力宣称，但未经同行验证，且没有产品化或可复现的构建过程，只能算早期信号。",
+        "region": "global",
+        "score": 5.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Anthropic 一位数学家说用 Claude 证明了黎曼猜想，如果属实是模型能力的大新闻，但目前还没验证，也看不出对做产品有什么直接帮助。",
+        "tags": [
+          "Claude",
+          "数学",
+          "模型能力"
         ],
         "target_user": "",
         "verticals": []

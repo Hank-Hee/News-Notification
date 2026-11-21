@@ -1,7 +1,712 @@
 {
   "version": 1,
-  "updated_at": "2026-11-20T07:13:48.755711+00:00",
+  "updated_at": "2026-11-21T07:06:34.107253+00:00",
   "products": [
+    {
+      "product_id": "product-61e05d3a740816a5",
+      "product_name": "Inkling 2 Mini",
+      "builder_name": "jasondavies",
+      "first_seen": "2026-11-21",
+      "last_seen": "2026-11-21",
+      "occurrence_count": 1,
+      "intelligence_type": "model_capability",
+      "evidence_status": "verified",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Thinking Machines 发布小模型 Inkling 2 Mini，开发者实测能在本地电脑上跑出 27 tokens/s，解决了小模型本地可用的问题，值得关注它能否支撑个人 AI 产品。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 8.2,
+      "summary": "Thinking Machines 发布小模型 Inkling 2 Mini，开发者实测能在本地电脑上跑出 27 tokens/s，解决了小模型本地可用的问题，值得关注它能否支撑个人 AI 产品。",
+      "title": "Inkling 2 Mini",
+      "url": "https://thinkingmachines.ai/news/inkling-2-mini/",
+      "sources": [
+        {
+          "url": "https://thinkingmachines.ai/news/inkling-2-mini/",
+          "title": "Inkling 2 Mini",
+          "source_type": "hackernews",
+          "published_at": "2026-11-20T20:12:19+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "thinking-machines-inkling-2-mini",
+          "date": "2026-11-21",
+          "title": "Inkling 2 Mini",
+          "summary": "Thinking Machines 发布小模型 Inkling 2 Mini，开发者实测能在本地电脑上跑出 27 tokens/s，解决了小模型本地可用的问题，值得关注它能否支撑个人 AI 产品。",
+          "score": 8.2,
+          "url": "https://thinkingmachines.ai/news/inkling-2-mini/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "小模型",
+        "本地部署",
+        "开源模型"
+      ]
+    },
+    {
+      "product_id": "product-5fb87bc868aff743",
+      "product_name": "Replit Tunnels",
+      "builder_name": "Replit Blog",
+      "first_seen": "2026-11-21",
+      "last_seen": "2026-11-21",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "企业 IT 管理员 + 需要在私有数据上构建应用的开发团队（尤其是使用 Replit AI Agent 的工程师）",
+      "user_problem": "企业数据存在私有网络里，AI 开发工具够不着；如果直接暴露到公网，安全风险大。团队被迫在'数据安全'和'AI 能用'之间二选一",
+      "what_it_is": "Replit 企业版的一项新功能，让云端 AI 开发环境通过加密隧道安全访问企业内网的数据库和内部 API，不用把数据搬到公网",
+      "ai_role": "Replit 的 AI Agent（智能体，能自主分析需求、写代码、查数据的 AI 助手）在开发过程中自动通过隧道查询私有数据、调试内部 API，开发者不用手动配置网络",
+      "implementation_idea": "核心思路像'企业版 VPN 专线'：内网放一个受控的'桥接程序'，Replit 云端只连这座桥，不直接碰内网。桥接程序由 IT 全权控制开哪些门、关哪些门，桥上的通信全程加密+双向验证身份",
+      "hands_on_exercise": "30 分钟体验：在本地用 Docker 跑一个带简单 API 的私有服务（如 SQLite + Python Flask），再用 ngrok 或 Cloudflare Tunnel 模拟'隧道'概念，最后用 curl 从外网访问。对比'直接暴露端口'和'通过隧道+身份验证访问'的安全差异。注意：Replit Tunnels 本身需企业版，个人无法直接试用",
+      "limitations_or_uncertainties": "未公开具体定价；未说明是否支持非 TCP 协议（如 UDP）；未公开隧道性能数据（延迟、带宽）；个人/免费版用户是否可用未明确",
+      "region": "global",
+      "score": 7.8,
+      "summary": "Replit 推出 Tunnels，让 AI 代理安全连接企业私有网络中的数据库和内部 API，解决用私有数据构建应用时的安全与可用矛盾。",
+      "title": "Replit 推出 Tunnels：让 AI Agent 安全连进企业私有网络",
+      "url": "https://replit.com/blog/build-with-private-data-using-tunnels",
+      "sources": [
+        {
+          "url": "https://replit.com/blog/build-with-private-data-using-tunnels",
+          "title": "Securely connect Replit to your private network with Tunnels",
+          "source_type": "rss",
+          "published_at": "2026-11-20T17:55:00+00:00"
+        },
+        {
+          "url": "https://docs.replit.com/features/security/tunnels",
+          "title": "Set up Tunnels - Replit",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "replit-tunnels-private-network",
+          "date": "2026-11-21",
+          "title": "Replit 推出 Tunnels：让 AI Agent 安全连进企业私有网络",
+          "summary": "Replit 推出 Tunnels，让 AI 代理安全连接企业私有网络中的数据库和内部 API，解决用私有数据构建应用时的安全与可用矛盾。",
+          "score": 7.8,
+          "url": "https://replit.com/blog/build-with-private-data-using-tunnels"
+        }
+      ],
+      "usage_flow": [
+        "IT 在企业内网部署 Tunnels 客户端（Docker/Helm），作为'看门人'",
+        "IT 配置哪些私有服务（如内部数据库、API）对哪个 Replit 工作空间开放",
+        "开发者在 Replit 里写需求，AI Agent 自动通过加密隧道调用这些私有服务",
+        "全程 mTLS 加密，IT 可随时调整或撤销访问权限"
+      ],
+      "learning_points": [
+        "AI Agent：能自主完成多步骤任务的 AI，不只是聊天，还能自己查资料、写代码、调用工具",
+        "mTLS（双向 TLS）：不仅客户端验证服务器身份，服务器也验证客户端身份，比常见 HTTPS 更安全",
+        "零信任网络：默认不信任任何连接，每次访问都要验证身份和权限，不是'进了内网就畅通无阻'"
+      ],
+      "verticals": [],
+      "tags": [
+        "AI Agent",
+        "企业安全",
+        "私有网络"
+      ]
+    },
+    {
+      "product_id": "product-a7581742fc7b4429",
+      "product_name": "OpenAI Agents SDK",
+      "builder_name": "markstuart-oai",
+      "first_seen": "2026-11-09",
+      "last_seen": "2026-11-21",
+      "occurrence_count": 3,
+      "intelligence_type": "model_capability",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "OpenAI 发布 Agents SDK v1.0.0-alpha.1，允许在 Python 中按运行选择 Codex 作为模型提供者，并复用 Codex Core。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.5,
+      "summary": "OpenAI 发布 Agents SDK v1.0.0-alpha.1，允许在 Python 中按运行选择 Codex 作为模型提供者，并复用 Codex Core。",
+      "title": "openai/openai-agents-python released v1.0.0-alpha.1",
+      "url": "https://github.com/openai/openai-agents-python/releases/tag/v1.0.0-alpha.1",
+      "sources": [
+        {
+          "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.24.0-alpha.7",
+          "title": "openai/openai-agents-python released v0.24.0-alpha.7",
+          "source_type": "github",
+          "published_at": "2026-11-08T07:05:11+00:00"
+        },
+        {
+          "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.24.0-alpha.8",
+          "title": "openai/openai-agents-python released v0.24.0-alpha.8",
+          "source_type": "github",
+          "published_at": "2026-11-16T04:39:19+00:00"
+        },
+        {
+          "url": "https://github.com/openai/openai-agents-python/releases/tag/v1.0.0-alpha.1",
+          "title": "openai/openai-agents-python released v1.0.0-alpha.1",
+          "source_type": "github",
+          "published_at": "2026-11-20T20:51:28+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "openai-agents-python-v0-24-0-alpha-7",
+          "date": "2026-11-09",
+          "title": "openai/openai-agents-python released v0.24.0-alpha.7",
+          "summary": "OpenAI 发布 Agents SDK v0.24.0-alpha.7，让开发者能把对话存在自己存储里、给 Agent 加语音和文件搜索等工具，并控制上下文和用量，适合想动手搭 Agent 产品的人参考。",
+          "score": 7.6,
+          "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.24.0-alpha.7"
+        },
+        {
+          "update_id": "openai-agents-python-v0-24-0-alpha-8",
+          "date": "2026-11-16",
+          "title": "openai/openai-agents-python released v0.24.0-alpha.8",
+          "summary": "OpenAI 发布 Agents SDK v0.24.0-alpha.8，新增 Python 工具调用审批、自定义模型客户端和 Realtime 语音接入；这些能力能帮助开发者构建更可控的 Agent 产品。",
+          "score": 7.6,
+          "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.24.0-alpha.8"
+        },
+        {
+          "update_id": "openai-agents-python-v1-alpha1-codex",
+          "date": "2026-11-21",
+          "title": "openai/openai-agents-python released v1.0.0-alpha.1",
+          "summary": "OpenAI 发布 Agents SDK v1.0.0-alpha.1，允许在 Python 中按运行选择 Codex 作为模型提供者，并复用 Codex Core。",
+          "score": 7.5,
+          "url": "https://github.com/openai/openai-agents-python/releases/tag/v1.0.0-alpha.1"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "SDK",
+        "OpenAI",
+        "Agents SDK",
+        "语音",
+        "Codex",
+        "开发者工具"
+      ]
+    },
+    {
+      "product_id": "product-74fa894c1b640ab0",
+      "product_name": "browser-use",
+      "builder_name": "gregpr07",
+      "first_seen": "2026-08-17",
+      "last_seen": "2026-11-21",
+      "occurrence_count": 5,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "需要让 AI 自动操作网页的开发者、做浏览器自动化产品的构建者",
+      "user_problem": "1) 在无显示器的服务器/SSH 环境里，没法扫码或输入密码授权 AI 操作浏览器；2) DeepSeek、Qwen 等国产模型在「思考模式」下会拒绝强制结束调用，导致任务卡死；3) AI 日志里可能意外打印出用户填的密码；4) 小余额账户调用云端浏览器时，因预留 token 过多而被拒绝",
+      "what_it_is": "一个开源的浏览器 Agent 框架，让 AI 能自动操控网页浏览器完成任务。",
+      "ai_role": "AI 作为 Agent（智能体，能自主决策并执行多步操作的 AI）负责理解任务、决定点击/输入/滚动等浏览器操作，并通过 Playwright 实际执行",
+      "implementation_idea": "框架把「用户给的任务」拆成一步步浏览器操作，每步让 LLM 决定下一步做什么，再通过 Playwright 驱动真实浏览器执行。本次更新加了：设备码授权流程（类似 CLI 登录 GitHub 时的体验）、对模型「思考模式」的兼容重试、以及自动识别 password 输入框并替换为星号再传给 LLM。",
+      "hands_on_exercise": "30 分钟练习：本地安装 browser-use 1.0.8rc1，用 DeepSeek API 写一个小脚本让 AI 自动登录某个测试网站（用假密码），检查终端日志里密码是否显示为星号，并尝试在另一台手机或电脑上完成授权流程",
+      "limitations_or_uncertainties": "候选版本（rc1）非正式稳定版，生产环境需谨慎；Gateway 的 token 预留策略调整是否完全解决小余额问题，需用户实际验证；未公开具体支持哪些国产模型的「思考模式」版本",
+      "region": "global",
+      "score": 7.4,
+      "summary": "浏览器 Agent 工具 browser-use 发布候选版，支持在无头机器上扫码授权、修复国产模型思考模式下的卡死，并避免泄露密码，让自动化浏览更可靠。",
+      "title": "browser-use 发布 1.0.8rc1：无头设备扫码授权、国产模型兼容修复、密码脱敏",
+      "url": "https://github.com/browser-use/browser-use/releases/tag/1.0.8rc1",
+      "sources": [
+        {
+          "url": "https://github.com/browser-use/browser-use/releases/tag/0.13.8",
+          "title": "browser-use/browser-use released 0.13.8",
+          "source_type": "github",
+          "published_at": "2026-08-16T18:48:54+00:00"
+        },
+        {
+          "url": "https://github.com/browser-use/browser-use/releases/tag/1.0.0",
+          "title": "browser-use/browser-use released 1.0.0",
+          "source_type": "github",
+          "published_at": "2026-11-10T02:04:48+00:00"
+        },
+        {
+          "url": "https://browser-use.com/",
+          "title": "Browser Use : Browser Agents and Cloud Browsers",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://github.com/browser-use/browser-use/releases/tag/1.0.3rc1",
+          "title": "browser-use/browser-use released 1.0.3rc1",
+          "source_type": "github",
+          "published_at": "2026-11-12T02:11:28+00:00"
+        },
+        {
+          "url": "https://github.com/browser-use/browser-use/releases/tag/1.0.4",
+          "title": "browser-use/browser-use released 1.0.4",
+          "source_type": "github",
+          "published_at": "2026-11-13T20:50:13+00:00"
+        },
+        {
+          "url": "https://github.com/browser-use/browser-use/releases/tag/1.0.8rc1",
+          "title": "browser-use/browser-use released 1.0.8rc1",
+          "source_type": "github",
+          "published_at": "2026-11-20T22:48:28+00:00"
+        },
+        {
+          "url": "https://grokipedia.com/page/Browser_Use",
+          "title": "Browser Use",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "browser-use-release-0.13.8",
+          "date": "2026-08-17",
+          "title": "browser-use/browser-use released 0.13.8",
+          "summary": "browser-use 发布 0.13.8，修复了多个 Agent 和 DOM 处理问题，并更新了 Cerebras 模型支持。",
+          "score": 7.5,
+          "url": "https://github.com/browser-use/browser-use/releases/tag/0.13.8"
+        },
+        {
+          "update_id": "browser-use-1.0.0",
+          "date": "2026-11-10",
+          "title": "browser-use 1.0.0 发布：AI 浏览器代理重写引擎，代码砍掉 80%",
+          "summary": "browser-use 发布 1.0.0 正式版，重写引擎让 AI 代理在持久 REPL 中直接写 Python 控制 Chrome，代码减少 80%，性能提升最高 33 分，成本降低 2.7-5.2 倍。",
+          "score": 8.5,
+          "url": "https://github.com/browser-use/browser-use/releases/tag/1.0.0"
+        },
+        {
+          "update_id": "browser-use-1.0.3rc1",
+          "date": "2026-11-12",
+          "title": "browser-use/browser-use released 1.0.3rc1",
+          "summary": "Browser-use 发布了 1.0.3 候选版，修复了 CLI 和容器中浏览器连接等问题，让开发者更容易构建浏览器自动化 Agent。",
+          "score": 7.2,
+          "url": "https://github.com/browser-use/browser-use/releases/tag/1.0.3rc1"
+        },
+        {
+          "update_id": "browser-use-1-0-4",
+          "date": "2026-11-14",
+          "title": "browser-use/browser-use released 1.0.4",
+          "summary": "browser-use 发布 1.0.4，通过批量清理旧截图保住模型缓存，在基准分数不变的情况下把单任务成本从 0.434 美元降到 0.208 美元，做浏览器 Agent 的人可以直接借鉴这个省钱做法。",
+          "score": 7.6,
+          "url": "https://github.com/browser-use/browser-use/releases/tag/1.0.4"
+        },
+        {
+          "update_id": "browser-use-1.0.8rc1",
+          "date": "2026-11-21",
+          "title": "browser-use 发布 1.0.8rc1：无头设备扫码授权、国产模型兼容修复、密码脱敏",
+          "summary": "浏览器 Agent 工具 browser-use 发布候选版，支持在无头机器上扫码授权、修复国产模型思考模式下的卡死，并避免泄露密码，让自动化浏览更可靠。",
+          "score": 7.4,
+          "url": "https://github.com/browser-use/browser-use/releases/tag/1.0.8rc1"
+        }
+      ],
+      "usage_flow": [
+        "安装：`uv add 'browser-use==1.0.0'` 并设置 API key",
+        "写 Python 脚本创建 Agent 并描述任务，如 `'Find the number of stars of the browser-use repo'`",
+        "Agent 在持久 REPL（交互式执行环境：可以一行行运行代码并保留状态的地方）里写 Python 代码，通过 Chrome DevTools Protocol 直接控制浏览器",
+        "获取最终结果：`agent.run_sync().final_result()`",
+        "pip install 'browser-use==1.0.8rc1' 安装候选版",
+        "写 Python 脚本让 AI Agent 执行网页任务（如填表、抓取数据）",
+        "若在无头机器运行，终端会打印授权链接和验证码，用手机扫码或输入确认",
+        "Agent 自动完成浏览任务，日志中密码字段会被脱敏"
+      ],
+      "learning_points": [
+        "Agent：不只是问答，而是能循环执行'思考-行动-观察'多轮直到任务完成的程序",
+        "REPL：交互式执行环境，代码一行行跑、变量状态保留，适合 AI 边写边试边改",
+        "Function Calling：让 AI 输出结构化指令去调用工具，这里扩展成让 AI 直接写完整代码来'调用'浏览器",
+        "Agent：不只是回答问题的 AI，而是能自己决定调用工具、执行多步操作的系统",
+        "无头浏览器（Headless）：没有图形界面的浏览器，适合跑在服务器上，但遇到需要人机交互的环节就要想办法绕过",
+        "Function Calling（函数调用）：LLM 输出结构化指令让程序执行特定操作，本项目里就是让模型决定「点击哪个元素」「输入什么文字」"
+      ],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "开源",
+        "浏览器自动化",
+        "AI Agent",
+        "Browser-use",
+        "Browser Agent",
+        "成本优化",
+        "浏览器Agent",
+        "DeepSeek",
+        "Qwen"
+      ]
+    },
+    {
+      "product_id": "product-f72e709087406552",
+      "product_name": "Vercel AI SDK",
+      "builder_name": "github-actions[bot]",
+      "first_seen": "2026-07-26",
+      "last_seen": "2026-11-21",
+      "occurrence_count": 7,
+      "intelligence_type": "model_capability",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Vercel AI SDK 发布补丁，让开发者能通过 Gateway 用 WebSocket 直连实时语音模型，省去自建中转服务器，做实时 AI 产品更省事。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.2,
+      "summary": "Vercel AI SDK 发布补丁，让开发者能通过 Gateway 用 WebSocket 直连实时语音模型，省去自建中转服务器，做实时 AI 产品更省事。",
+      "title": "vercel/ai released ai@7.0.179",
+      "url": "https://github.com/vercel/ai/releases/tag/ai%407.0.179",
+      "sources": [
+        {
+          "url": "https://github.com/vercel/ai/releases/tag/%40ai-sdk/anthropic%404.0.20",
+          "title": "vercel/ai released @ai-sdk/anthropic@4.0.20",
+          "source_type": "github",
+          "published_at": "2026-07-24T17:25:31+00:00"
+        },
+        {
+          "url": "https://github.com/vercel/ai/releases/tag/%40ai-sdk/anthropic%403.0.102",
+          "title": "vercel/ai released @ai-sdk/anthropic@3.0.102",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://github.com/vercel/ai/releases/tag/%40ai-sdk/anthropic%402.0.91",
+          "title": "vercel/ai released @ai-sdk/anthropic@2.0.91",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://github.com/vercel/ai/releases/tag/%40ai-sdk/deepgram%403.1.0",
+          "title": "vercel/ai released @ai-sdk/deepgram@3.1.0",
+          "source_type": "github",
+          "published_at": "2026-08-23T01:45:50+00:00"
+        },
+        {
+          "url": "https://github.com/vercel/ai/releases/tag/ai%406.0.272",
+          "title": "vercel/ai released ai@6.0.272",
+          "source_type": "github",
+          "published_at": "2026-08-30T08:52:49+00:00"
+        },
+        {
+          "url": "https://github.com/vercel/ai/releases/tag/ai%407.0.85",
+          "title": "vercel/ai released ai@7.0.85",
+          "source_type": "github",
+          "published_at": "2026-08-30T08:04:57+00:00"
+        },
+        {
+          "url": "https://github.com/vercel/ai/releases/tag/%40ai-sdk/openai%404.0.60",
+          "title": "vercel/ai released @ai-sdk/openai@4.0.60",
+          "source_type": "github",
+          "published_at": "2026-09-05T18:26:03+00:00"
+        },
+        {
+          "url": "https://github.com/vercel/ai/releases/tag/ai%407.0.102",
+          "title": "vercel/ai released ai@7.0.102",
+          "source_type": "github",
+          "published_at": "2026-09-15T17:21:36+00:00"
+        },
+        {
+          "url": "https://github.com/vercel/ai/releases/tag/ai%407.0.179",
+          "title": "vercel/ai released ai@7.0.179",
+          "source_type": "github",
+          "published_at": "2026-11-20T23:17:40+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "vercel-ai-sdk-anthropic-4.0.20-features",
+          "date": "2026-07-26",
+          "title": "vercel/ai released @ai-sdk/anthropic@4.0.20",
+          "summary": "Vercel AI SDK 的 Anthropic 包 v4.0.20 新增 Claude Opus 5 模型、安全回退和对话中工具变更支持。",
+          "score": 8.0,
+          "url": "https://github.com/vercel/ai/releases/tag/%40ai-sdk/anthropic%404.0.20"
+        },
+        {
+          "update_id": "vercel-ai-deepgram-3.1.0",
+          "date": "2026-08-23",
+          "title": "vercel/ai released @ai-sdk/deepgram@3.1.0",
+          "summary": "Vercel AI SDK 更新了 Deepgram 集成，修复转录参数并调整说话人分离默认行为，开发者需注意配置变化。",
+          "score": 7.5,
+          "url": "https://github.com/vercel/ai/releases/tag/%40ai-sdk/deepgram%403.1.0"
+        },
+        {
+          "update_id": "vercel-ai-release-6.0.272",
+          "date": "2026-08-31",
+          "title": "vercel/ai released ai@6.0.272",
+          "summary": "Vercel AI SDK 发布 6.0.272，修复工具调用违规时响应处理并暴露错误内容，方便开发者恢复。",
+          "score": 7.5,
+          "url": "https://github.com/vercel/ai/releases/tag/ai%406.0.272"
+        },
+        {
+          "update_id": "vercel-ai-v7.0.85",
+          "date": "2026-08-31",
+          "title": "vercel/ai released ai@7.0.85",
+          "summary": "Vercel AI SDK发布7.0.85版本，修复多项问题并新增图像生成调用功能。",
+          "score": 7.0,
+          "url": "https://github.com/vercel/ai/releases/tag/ai%407.0.85"
+        },
+        {
+          "update_id": "ai-sdk-openai-4.0.60",
+          "date": "2026-09-06",
+          "title": "vercel/ai released @ai-sdk/openai@4.0.60",
+          "summary": "Vercel AI SDK更新，增加GPT-6推理配置支持。",
+          "score": 7.0,
+          "url": "https://github.com/vercel/ai/releases/tag/%40ai-sdk/openai%404.0.60"
+        },
+        {
+          "update_id": "vercel-ai-sdk-7.0.102-realtime-webrtc",
+          "date": "2026-09-16",
+          "title": "vercel/ai released ai@7.0.102",
+          "summary": "Vercel AI SDK 加入实验性浏览器直连 WebRTC 和 OpenAI 实时语音支持，让开发者能在自己的应用里搭建可委托上下文的实时语音 Agent。",
+          "score": 7.6,
+          "url": "https://github.com/vercel/ai/releases/tag/ai%407.0.102"
+        },
+        {
+          "update_id": "vercel-ai-gateway-live-websocket",
+          "date": "2026-11-21",
+          "title": "vercel/ai released ai@7.0.179",
+          "summary": "Vercel AI SDK 发布补丁，让开发者能通过 Gateway 用 WebSocket 直连实时语音模型，省去自建中转服务器，做实时 AI 产品更省事。",
+          "score": 7.2,
+          "url": "https://github.com/vercel/ai/releases/tag/ai%407.0.179"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "AI SDK",
+        "Vercel",
+        "Anthropic",
+        "Claude Opus 5",
+        "Vercel AI SDK",
+        "Deepgram",
+        "语音识别",
+        "工具调用",
+        "Agent",
+        "Vercel AI",
+        "SDK",
+        "版本发布",
+        "GPT-6",
+        "实时语音",
+        "WebRTC",
+        "WebSocket"
+      ]
+    },
+    {
+      "product_id": "product-4932ba1531158009",
+      "product_name": "Signal",
+      "builder_name": "Jess Weatherbed",
+      "first_seen": "2026-11-21",
+      "last_seen": "2026-11-21",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Signal 限制安卓和 iOS 截图，防止系统内置 AI 代理读取用户消息，因为这类能力削弱了 Signal 独立保证隐私的能力。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.2,
+      "summary": "Signal 限制安卓和 iOS 截图，防止系统内置 AI 代理读取用户消息，因为这类能力削弱了 Signal 独立保证隐私的能力。",
+      "title": "Signal is blocking Gemini and Siri AI from reading your screen",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1038390/signal-blocking-ai-agent-screenshots-mobile-app",
+      "sources": [
+        {
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1038390/signal-blocking-ai-agent-screenshots-mobile-app",
+          "title": "Signal is blocking Gemini and Siri AI from reading your screen",
+          "source_type": "rss",
+          "published_at": "2026-11-20T12:30:47+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "signal-block-ai-screen-reading",
+          "date": "2026-11-21",
+          "title": "Signal is blocking Gemini and Siri AI from reading your screen",
+          "summary": "Signal 限制安卓和 iOS 截图，防止系统内置 AI 代理读取用户消息，因为这类能力削弱了 Signal 独立保证隐私的能力。",
+          "score": 7.2,
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1038390/signal-blocking-ai-agent-screenshots-mobile-app"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "AI Agent",
+        "隐私",
+        "产品策略"
+      ]
+    },
+    {
+      "product_id": "product-171c314a55a03b79",
+      "product_name": "browser-use",
+      "builder_name": "sarath-menon",
+      "first_seen": "2026-11-15",
+      "last_seen": "2026-11-21",
+      "occurrence_count": 2,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "需要让 AI 自动操作网页的开发者、做 Agent 产品的团队",
+      "user_problem": "Agent 跑完任务后，开发者不知道它真成功了还是假装成功；遇到网站报错、验证码、格式限制时，Agent 不会主动记录，导致同样错误反复踩坑",
+      "what_it_is": "浏览器 Agent 工具 browser-use 发布 1.0.7，解决 MCP 调用 60 秒超时问题，长任务可先拿部分结果再续取，方便在 Cursor 里用。",
+      "ai_role": "执行浏览器操作（点击、输入、截图等），并在任务结束后由用户指定的模型自动复盘整个操作轨迹，判定成败并提取踩坑经验",
+      "implementation_idea": "把 Agent 的操作轨迹（做了哪些动作）+ 最后几张截图 + 最终页面内容，打包发给用户自己指定的 LLM 模型，让这个'裁判模型'独立做判断，而不是让干活的 Agent 自己给自己打分",
+      "hands_on_exercise": "30 分钟：安装 browser-use 1.0.5，写一个简单任务（如'查北京今天天气'），分别用 judge=True 和 judge=False 各跑一次，对比 result.judgement 的输出差异；再故意写一个会触发格式错误的任务（如注册时乱填手机号），观察 gotchas 是否被记录",
+      "limitations_or_uncertainties": "13 次真实运行、每次判 3 次的对比数据由项目方自行提供，未公开完整测试任务类型和模型版本；judge 的准确性高度依赖用户指定的模型能力；未公开是否支持非 OpenAI 的模型做 judge",
+      "region": "global",
+      "score": 7.0,
+      "summary": "浏览器 Agent 工具 browser-use 发布 1.0.7，解决 MCP 调用 60 秒超时问题，长任务可先拿部分结果再续取，方便在 Cursor 里用。",
+      "title": "browser-use/browser-use released 1.0.7",
+      "url": "https://github.com/browser-use/browser-use/releases/tag/1.0.7",
+      "sources": [
+        {
+          "url": "https://github.com/browser-use/browser-use/releases/tag/1.0.5",
+          "title": "browser-use/browser-use released 1.0.5",
+          "source_type": "github",
+          "published_at": "2026-11-14T08:24:22+00:00"
+        },
+        {
+          "url": "https://github.com/browser-use/browser-use/releases/tag/1.0.7",
+          "title": "browser-use/browser-use released 1.0.7",
+          "source_type": "github",
+          "published_at": "2026-11-20T20:01:20+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "browser-use-1-0-5-judge",
+          "date": "2026-11-15",
+          "title": "browser-use 1.0.5：让 AI 自动给每次浏览器任务打成败分、记坑",
+          "summary": "browser-use 发布 1.0.5，让每次浏览器 agent 运行都由自有模型判定成败并记录踩坑，解决 agent 结果不可验证的问题，附真实运行数据，值得做 agent 产品的人拆解。",
+          "score": 8.2,
+          "url": "https://github.com/browser-use/browser-use/releases/tag/1.0.5"
+        },
+        {
+          "update_id": "browser-use-1.0.7-mcp-timeout",
+          "date": "2026-11-21",
+          "title": "browser-use/browser-use released 1.0.7",
+          "summary": "浏览器 Agent 工具 browser-use 发布 1.0.7，解决 MCP 调用 60 秒超时问题，长任务可先拿部分结果再续取，方便在 Cursor 里用。",
+          "score": 7.0,
+          "url": "https://github.com/browser-use/browser-use/releases/tag/1.0.7"
+        }
+      ],
+      "usage_flow": [
+        "pip install 'browser-use==1.0.5' 安装",
+        "写任务描述（如'买一双 42 码、120 美元以下的越野跑鞋'），可选传 judge_context=自定义成败标准",
+        "运行后自动获得 result.judgement，包含 success/failure_reason/gotchas 等字段",
+        "查看 gotchas 记录，针对性修复（如'该网站要求电话号码格式为 (###) ###-####'）"
+      ],
+      "learning_points": [
+        "Agent：能自主规划步骤、调用工具完成任务的 AI 程序，这里指自动操作浏览器的程序",
+        "Function Calling：让 LLM 可以调用外部功能（如点击网页、截图）的机制，这里用于浏览器操作和判分",
+        "RAG（检索增强生成）：未直接涉及，但 gotchas 的积累方式类似——把历史踩坑记录喂给后续任务做参考"
+      ],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "浏览器自动化",
+        "开源",
+        "浏览器Agent",
+        "MCP"
+      ]
+    },
+    {
+      "product_id": "product-2f7a0ff4b1d6b467",
+      "product_name": "Claude Code",
+      "builder_name": "claude-code-publisher[bot]",
+      "first_seen": "2026-11-07",
+      "last_seen": "2026-11-21",
+      "occurrence_count": 4,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Claude Code 发布 v2.1.330，新增企业组织登录、内置图表绘制和自托管运行器起始目录等功能。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.0,
+      "summary": "Claude Code 发布 v2.1.330，新增企业组织登录、内置图表绘制和自托管运行器起始目录等功能。",
+      "title": "anthropics/claude-code released v2.1.330",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.330",
+      "sources": [
+        {
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.319",
+          "title": "anthropics/claude-code released v2.1.319",
+          "source_type": "github",
+          "published_at": "2026-11-06T17:04:01+00:00"
+        },
+        {
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.321",
+          "title": "anthropics/claude-code released v2.1.321",
+          "source_type": "github",
+          "published_at": "2026-11-09T19:22:30+00:00"
+        },
+        {
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.323",
+          "title": "anthropics/claude-code released v2.1.323",
+          "source_type": "github",
+          "published_at": "2026-11-12T22:12:13+00:00"
+        },
+        {
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.330",
+          "title": "anthropics/claude-code released v2.1.330",
+          "source_type": "github",
+          "published_at": "2026-11-20T22:32:56+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "claude-code-v2.1.319",
+          "date": "2026-11-07",
+          "title": "anthropics/claude-code released v2.1.319",
+          "summary": "Anthropic 发布 Claude Code v2.1.319，让 MCP 工具调用可后台运行并新增权限拒绝设置，帮助开发者更顺畅地构建终端 Agent 工作流。",
+          "score": 7.2,
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.319"
+        },
+        {
+          "update_id": "claude-code-v2.1.321",
+          "date": "2026-11-10",
+          "title": "anthropics/claude-code released v2.1.321",
+          "summary": "Claude Code 发布 v2.1.321，新增 Claude Fable 5.2 作为默认模型，支持 1M 上下文，定价 $8/$40 每百万 token，并修复多个安全与功能问题。",
+          "score": 7.8,
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.321"
+        },
+        {
+          "update_id": "claude-code-v2.1.323-code-mode",
+          "date": "2026-11-13",
+          "title": "anthropics/claude-code released v2.1.323",
+          "summary": "Anthropic 给 Claude Code 加了实验性 Code Mode，让模型写 JavaScript 来调用工具，解决工具编排方式单一的问题，值得看它如何改变 Agent 的开发体验。",
+          "score": 7.6,
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.323"
+        },
+        {
+          "update_id": "claude-code-v2-1-330",
+          "date": "2026-11-21",
+          "title": "anthropics/claude-code released v2.1.330",
+          "summary": "Claude Code 发布 v2.1.330，新增企业组织登录、内置图表绘制和自托管运行器起始目录等功能。",
+          "score": 7.0,
+          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.330"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "MCP",
+        "开发者工具",
+        "AI 编程",
+        "模型更新",
+        "安全修复",
+        "Coding Agent",
+        "Claude Code",
+        "工具调用",
+        "企业功能"
+      ]
+    },
     {
       "product_id": "product-bdbc60e4f59cbc1a",
       "product_name": "ChatPRD",
@@ -2446,70 +3151,6 @@
       ]
     },
     {
-      "product_id": "product-a7581742fc7b4429",
-      "product_name": "OpenAI Agents SDK",
-      "builder_name": "markstuart-oai",
-      "first_seen": "2026-11-09",
-      "last_seen": "2026-11-16",
-      "occurrence_count": 2,
-      "intelligence_type": "model_capability",
-      "evidence_status": "first_party",
-      "target_user": "未公开",
-      "user_problem": "未公开",
-      "what_it_is": "OpenAI 发布 Agents SDK v0.24.0-alpha.8，新增 Python 工具调用审批、自定义模型客户端和 Realtime 语音接入；这些能力能帮助开发者构建更可控的 Agent 产品。",
-      "ai_role": "未公开",
-      "implementation_idea": "未公开",
-      "hands_on_exercise": "未公开",
-      "limitations_or_uncertainties": "未公开",
-      "region": "global",
-      "score": 7.6,
-      "summary": "OpenAI 发布 Agents SDK v0.24.0-alpha.8，新增 Python 工具调用审批、自定义模型客户端和 Realtime 语音接入；这些能力能帮助开发者构建更可控的 Agent 产品。",
-      "title": "openai/openai-agents-python released v0.24.0-alpha.8",
-      "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.24.0-alpha.8",
-      "sources": [
-        {
-          "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.24.0-alpha.7",
-          "title": "openai/openai-agents-python released v0.24.0-alpha.7",
-          "source_type": "github",
-          "published_at": "2026-11-08T07:05:11+00:00"
-        },
-        {
-          "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.24.0-alpha.8",
-          "title": "openai/openai-agents-python released v0.24.0-alpha.8",
-          "source_type": "github",
-          "published_at": "2026-11-16T04:39:19+00:00"
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "openai-agents-python-v0-24-0-alpha-7",
-          "date": "2026-11-09",
-          "title": "openai/openai-agents-python released v0.24.0-alpha.7",
-          "summary": "OpenAI 发布 Agents SDK v0.24.0-alpha.7，让开发者能把对话存在自己存储里、给 Agent 加语音和文件搜索等工具，并控制上下文和用量，适合想动手搭 Agent 产品的人参考。",
-          "score": 7.6,
-          "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.24.0-alpha.7"
-        },
-        {
-          "update_id": "openai-agents-python-v0-24-0-alpha-8",
-          "date": "2026-11-16",
-          "title": "openai/openai-agents-python released v0.24.0-alpha.8",
-          "summary": "OpenAI 发布 Agents SDK v0.24.0-alpha.8，新增 Python 工具调用审批、自定义模型客户端和 Realtime 语音接入；这些能力能帮助开发者构建更可控的 Agent 产品。",
-          "score": 7.6,
-          "url": "https://github.com/openai/openai-agents-python/releases/tag/v0.24.0-alpha.8"
-        }
-      ],
-      "usage_flow": [],
-      "learning_points": [],
-      "verticals": [],
-      "tags": [
-        "Agent",
-        "SDK",
-        "OpenAI",
-        "Agents SDK",
-        "语音"
-      ]
-    },
-    {
       "product_id": "product-4fee760326014370",
       "product_name": "Datasette",
       "builder_name": "Simon Willison",
@@ -2605,63 +3246,6 @@
         "数据库",
         "Agent",
         "CI"
-      ]
-    },
-    {
-      "product_id": "product-171c314a55a03b79",
-      "product_name": "browser-use",
-      "builder_name": "sarath-menon",
-      "first_seen": "2026-11-15",
-      "last_seen": "2026-11-15",
-      "occurrence_count": 1,
-      "intelligence_type": "product_case",
-      "evidence_status": "first_party",
-      "target_user": "需要让 AI 自动操作网页的开发者、做 Agent 产品的团队",
-      "user_problem": "Agent 跑完任务后，开发者不知道它真成功了还是假装成功；遇到网站报错、验证码、格式限制时，Agent 不会主动记录，导致同样错误反复踩坑",
-      "what_it_is": "一个开源的浏览器自动化框架，让 AI Agent（能自主执行任务的 AI 程序）像真人一样操作网页，新版本增加了「自动判分」功能来验证任务到底成没成",
-      "ai_role": "执行浏览器操作（点击、输入、截图等），并在任务结束后由用户指定的模型自动复盘整个操作轨迹，判定成败并提取踩坑经验",
-      "implementation_idea": "把 Agent 的操作轨迹（做了哪些动作）+ 最后几张截图 + 最终页面内容，打包发给用户自己指定的 LLM 模型，让这个'裁判模型'独立做判断，而不是让干活的 Agent 自己给自己打分",
-      "hands_on_exercise": "30 分钟：安装 browser-use 1.0.5，写一个简单任务（如'查北京今天天气'），分别用 judge=True 和 judge=False 各跑一次，对比 result.judgement 的输出差异；再故意写一个会触发格式错误的任务（如注册时乱填手机号），观察 gotchas 是否被记录",
-      "limitations_or_uncertainties": "13 次真实运行、每次判 3 次的对比数据由项目方自行提供，未公开完整测试任务类型和模型版本；judge 的准确性高度依赖用户指定的模型能力；未公开是否支持非 OpenAI 的模型做 judge",
-      "region": "global",
-      "score": 8.2,
-      "summary": "browser-use 发布 1.0.5，让每次浏览器 agent 运行都由自有模型判定成败并记录踩坑，解决 agent 结果不可验证的问题，附真实运行数据，值得做 agent 产品的人拆解。",
-      "title": "browser-use 1.0.5：让 AI 自动给每次浏览器任务打成败分、记坑",
-      "url": "https://github.com/browser-use/browser-use/releases/tag/1.0.5",
-      "sources": [
-        {
-          "url": "https://github.com/browser-use/browser-use/releases/tag/1.0.5",
-          "title": "browser-use/browser-use released 1.0.5",
-          "source_type": "github",
-          "published_at": "2026-11-14T08:24:22+00:00"
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "browser-use-1-0-5-judge",
-          "date": "2026-11-15",
-          "title": "browser-use 1.0.5：让 AI 自动给每次浏览器任务打成败分、记坑",
-          "summary": "browser-use 发布 1.0.5，让每次浏览器 agent 运行都由自有模型判定成败并记录踩坑，解决 agent 结果不可验证的问题，附真实运行数据，值得做 agent 产品的人拆解。",
-          "score": 8.2,
-          "url": "https://github.com/browser-use/browser-use/releases/tag/1.0.5"
-        }
-      ],
-      "usage_flow": [
-        "pip install 'browser-use==1.0.5' 安装",
-        "写任务描述（如'买一双 42 码、120 美元以下的越野跑鞋'），可选传 judge_context=自定义成败标准",
-        "运行后自动获得 result.judgement，包含 success/failure_reason/gotchas 等字段",
-        "查看 gotchas 记录，针对性修复（如'该网站要求电话号码格式为 (###) ###-####'）"
-      ],
-      "learning_points": [
-        "Agent：能自主规划步骤、调用工具完成任务的 AI 程序，这里指自动操作浏览器的程序",
-        "Function Calling：让 LLM 可以调用外部功能（如点击网页、截图）的机制，这里用于浏览器操作和判分",
-        "RAG（检索增强生成）：未直接涉及，但 gotchas 的积累方式类似——把历史踩坑记录喂给后续任务做参考"
-      ],
-      "verticals": [],
-      "tags": [
-        "Agent",
-        "浏览器自动化",
-        "开源"
       ]
     },
     {
@@ -3243,115 +3827,6 @@
       ]
     },
     {
-      "product_id": "product-74fa894c1b640ab0",
-      "product_name": "browser-use",
-      "builder_name": "gregpr07",
-      "first_seen": "2026-08-17",
-      "last_seen": "2026-11-14",
-      "occurrence_count": 4,
-      "intelligence_type": "builder_insight",
-      "evidence_status": "verified",
-      "target_user": "需要让 AI 自动操作网页的开发者，比如做自动化测试、数据抓取、网页任务代理的人",
-      "user_problem": "以前让 AI 控制浏览器需要复杂的 DOM 序列化、动作 schema 转换，代码臃肿、慢、贵；开发者想要更简单、更快、更便宜的方案",
-      "what_it_is": "browser-use 发布 1.0.4，通过批量清理旧截图保住模型缓存，在基准分数不变的情况下把单任务成本从 0.434 美元降到 0.208 美元，做浏览器 Agent 的人可以直接借鉴这个省钱做法。",
-      "ai_role": "AI 负责根据任务描述，在 REPL 里逐行写出 Python 代码（如 `new_tab(url)`、`bu.click(41)`、`js(...)`），并读取执行结果决定下一步",
-      "implementation_idea": "以前的做法是先把网页 DOM 转成文本给 AI 看，AI 再输出固定格式的动作指令，中间有很多转换层。现在直接让 AI 写 Python 代码，代码通过 Chrome DevTools Protocol（浏览器自带的远程控制协议）直接在浏览器里执行，省掉了中间所有转换环节。就像以前是通过翻译官传话，现在是直接让 AI 用浏览器的'母语'下命令。",
-      "hands_on_exercise": "30 分钟：本地安装 browser-use 1.0.0，用免费 tier 的 API key，让 Agent 自动打开 GitHub 某个仓库页面，读取 star 数并打印。对比 0.x 版本（`pip install 'browser-use<1'`）的同样任务，感受配置差异和速度变化。",
-      "limitations_or_uncertainties": "官方声称的性能提升数字（33 分、2.7-5.2x 成本降低）来自自有基准测试，未公开第三方独立验证；cloud 浏览器需要 Browser Use 的 API key，本地模式需显式指定 `Browser('chromium')`；LangChain 模型直接报错不兼容；成本计算不包含 cloud 浏览器和代理费用",
-      "region": "global",
-      "score": 7.6,
-      "summary": "browser-use 发布 1.0.4，通过批量清理旧截图保住模型缓存，在基准分数不变的情况下把单任务成本从 0.434 美元降到 0.208 美元，做浏览器 Agent 的人可以直接借鉴这个省钱做法。",
-      "title": "browser-use/browser-use released 1.0.4",
-      "url": "https://github.com/browser-use/browser-use/releases/tag/1.0.4",
-      "sources": [
-        {
-          "url": "https://github.com/browser-use/browser-use/releases/tag/0.13.8",
-          "title": "browser-use/browser-use released 0.13.8",
-          "source_type": "github",
-          "published_at": "2026-08-16T18:48:54+00:00"
-        },
-        {
-          "url": "https://github.com/browser-use/browser-use/releases/tag/1.0.0",
-          "title": "browser-use/browser-use released 1.0.0",
-          "source_type": "github",
-          "published_at": "2026-11-10T02:04:48+00:00"
-        },
-        {
-          "url": "https://browser-use.com/",
-          "title": "Browser Use : Browser Agents and Cloud Browsers",
-          "source_type": "supplemental",
-          "published_at": ""
-        },
-        {
-          "url": "https://github.com/browser-use/browser-use/releases/tag/1.0.3rc1",
-          "title": "browser-use/browser-use released 1.0.3rc1",
-          "source_type": "github",
-          "published_at": "2026-11-12T02:11:28+00:00"
-        },
-        {
-          "url": "https://github.com/browser-use/browser-use/releases/tag/1.0.4",
-          "title": "browser-use/browser-use released 1.0.4",
-          "source_type": "github",
-          "published_at": "2026-11-13T20:50:13+00:00"
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "browser-use-release-0.13.8",
-          "date": "2026-08-17",
-          "title": "browser-use/browser-use released 0.13.8",
-          "summary": "browser-use 发布 0.13.8，修复了多个 Agent 和 DOM 处理问题，并更新了 Cerebras 模型支持。",
-          "score": 7.5,
-          "url": "https://github.com/browser-use/browser-use/releases/tag/0.13.8"
-        },
-        {
-          "update_id": "browser-use-1.0.0",
-          "date": "2026-11-10",
-          "title": "browser-use 1.0.0 发布：AI 浏览器代理重写引擎，代码砍掉 80%",
-          "summary": "browser-use 发布 1.0.0 正式版，重写引擎让 AI 代理在持久 REPL 中直接写 Python 控制 Chrome，代码减少 80%，性能提升最高 33 分，成本降低 2.7-5.2 倍。",
-          "score": 8.5,
-          "url": "https://github.com/browser-use/browser-use/releases/tag/1.0.0"
-        },
-        {
-          "update_id": "browser-use-1.0.3rc1",
-          "date": "2026-11-12",
-          "title": "browser-use/browser-use released 1.0.3rc1",
-          "summary": "Browser-use 发布了 1.0.3 候选版，修复了 CLI 和容器中浏览器连接等问题，让开发者更容易构建浏览器自动化 Agent。",
-          "score": 7.2,
-          "url": "https://github.com/browser-use/browser-use/releases/tag/1.0.3rc1"
-        },
-        {
-          "update_id": "browser-use-1-0-4",
-          "date": "2026-11-14",
-          "title": "browser-use/browser-use released 1.0.4",
-          "summary": "browser-use 发布 1.0.4，通过批量清理旧截图保住模型缓存，在基准分数不变的情况下把单任务成本从 0.434 美元降到 0.208 美元，做浏览器 Agent 的人可以直接借鉴这个省钱做法。",
-          "score": 7.6,
-          "url": "https://github.com/browser-use/browser-use/releases/tag/1.0.4"
-        }
-      ],
-      "usage_flow": [
-        "安装：`uv add 'browser-use==1.0.0'` 并设置 API key",
-        "写 Python 脚本创建 Agent 并描述任务，如 `'Find the number of stars of the browser-use repo'`",
-        "Agent 在持久 REPL（交互式执行环境：可以一行行运行代码并保留状态的地方）里写 Python 代码，通过 Chrome DevTools Protocol 直接控制浏览器",
-        "获取最终结果：`agent.run_sync().final_result()`"
-      ],
-      "learning_points": [
-        "Agent：不只是问答，而是能循环执行'思考-行动-观察'多轮直到任务完成的程序",
-        "REPL：交互式执行环境，代码一行行跑、变量状态保留，适合 AI 边写边试边改",
-        "Function Calling：让 AI 输出结构化指令去调用工具，这里扩展成让 AI 直接写完整代码来'调用'浏览器"
-      ],
-      "verticals": [],
-      "tags": [
-        "Agent",
-        "开源",
-        "浏览器自动化",
-        "AI Agent",
-        "Browser-use",
-        "Browser Agent",
-        "成本优化"
-      ]
-    },
-    {
       "product_id": "product-8deae6792212bc5c",
       "product_name": "Vercel Token Pass",
       "builder_name": "Roman Olynyk",
@@ -3692,88 +4167,6 @@
         "AI设计",
         "开源",
         "产品案例"
-      ]
-    },
-    {
-      "product_id": "product-2f7a0ff4b1d6b467",
-      "product_name": "Claude Code",
-      "builder_name": "claude-code-publisher[bot]",
-      "first_seen": "2026-11-07",
-      "last_seen": "2026-11-13",
-      "occurrence_count": 3,
-      "intelligence_type": "model_capability",
-      "evidence_status": "first_party",
-      "target_user": "未公开",
-      "user_problem": "未公开",
-      "what_it_is": "Anthropic 给 Claude Code 加了实验性 Code Mode，让模型写 JavaScript 来调用工具，解决工具编排方式单一的问题，值得看它如何改变 Agent 的开发体验。",
-      "ai_role": "未公开",
-      "implementation_idea": "未公开",
-      "hands_on_exercise": "未公开",
-      "limitations_or_uncertainties": "未公开",
-      "region": "global",
-      "score": 7.6,
-      "summary": "Anthropic 给 Claude Code 加了实验性 Code Mode，让模型写 JavaScript 来调用工具，解决工具编排方式单一的问题，值得看它如何改变 Agent 的开发体验。",
-      "title": "anthropics/claude-code released v2.1.323",
-      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.323",
-      "sources": [
-        {
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.319",
-          "title": "anthropics/claude-code released v2.1.319",
-          "source_type": "github",
-          "published_at": "2026-11-06T17:04:01+00:00"
-        },
-        {
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.321",
-          "title": "anthropics/claude-code released v2.1.321",
-          "source_type": "github",
-          "published_at": "2026-11-09T19:22:30+00:00"
-        },
-        {
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.323",
-          "title": "anthropics/claude-code released v2.1.323",
-          "source_type": "github",
-          "published_at": "2026-11-12T22:12:13+00:00"
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "claude-code-v2.1.319",
-          "date": "2026-11-07",
-          "title": "anthropics/claude-code released v2.1.319",
-          "summary": "Anthropic 发布 Claude Code v2.1.319，让 MCP 工具调用可后台运行并新增权限拒绝设置，帮助开发者更顺畅地构建终端 Agent 工作流。",
-          "score": 7.2,
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.319"
-        },
-        {
-          "update_id": "claude-code-v2.1.321",
-          "date": "2026-11-10",
-          "title": "anthropics/claude-code released v2.1.321",
-          "summary": "Claude Code 发布 v2.1.321，新增 Claude Fable 5.2 作为默认模型，支持 1M 上下文，定价 $8/$40 每百万 token，并修复多个安全与功能问题。",
-          "score": 7.8,
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.321"
-        },
-        {
-          "update_id": "claude-code-v2.1.323-code-mode",
-          "date": "2026-11-13",
-          "title": "anthropics/claude-code released v2.1.323",
-          "summary": "Anthropic 给 Claude Code 加了实验性 Code Mode，让模型写 JavaScript 来调用工具，解决工具编排方式单一的问题，值得看它如何改变 Agent 的开发体验。",
-          "score": 7.6,
-          "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.323"
-        }
-      ],
-      "usage_flow": [],
-      "learning_points": [],
-      "verticals": [],
-      "tags": [
-        "Agent",
-        "MCP",
-        "开发者工具",
-        "AI 编程",
-        "模型更新",
-        "安全修复",
-        "Coding Agent",
-        "Claude Code",
-        "工具调用"
       ]
     },
     {
@@ -23581,148 +23974,6 @@
         "Microsoft Foundry",
         "开发工具",
         "Agent"
-      ]
-    },
-    {
-      "product_id": "product-f72e709087406552",
-      "product_name": "Vercel AI SDK",
-      "builder_name": "github-actions[bot]",
-      "first_seen": "2026-07-26",
-      "last_seen": "2026-09-16",
-      "occurrence_count": 6,
-      "intelligence_type": "model_capability",
-      "evidence_status": "first_party",
-      "target_user": "未公开",
-      "user_problem": "未公开",
-      "what_it_is": "Vercel AI SDK 加入实验性浏览器直连 WebRTC 和 OpenAI 实时语音支持，让开发者能在自己的应用里搭建可委托上下文的实时语音 Agent。",
-      "ai_role": "未公开",
-      "implementation_idea": "未公开",
-      "hands_on_exercise": "未公开",
-      "limitations_or_uncertainties": "未公开",
-      "region": "global",
-      "score": 7.6,
-      "summary": "Vercel AI SDK 加入实验性浏览器直连 WebRTC 和 OpenAI 实时语音支持，让开发者能在自己的应用里搭建可委托上下文的实时语音 Agent。",
-      "title": "vercel/ai released ai@7.0.102",
-      "url": "https://github.com/vercel/ai/releases/tag/ai%407.0.102",
-      "sources": [
-        {
-          "url": "https://github.com/vercel/ai/releases/tag/%40ai-sdk/anthropic%404.0.20",
-          "title": "vercel/ai released @ai-sdk/anthropic@4.0.20",
-          "source_type": "github",
-          "published_at": "2026-07-24T17:25:31+00:00"
-        },
-        {
-          "url": "https://github.com/vercel/ai/releases/tag/%40ai-sdk/anthropic%403.0.102",
-          "title": "vercel/ai released @ai-sdk/anthropic@3.0.102",
-          "source_type": "supplemental",
-          "published_at": ""
-        },
-        {
-          "url": "https://github.com/vercel/ai/releases/tag/%40ai-sdk/anthropic%402.0.91",
-          "title": "vercel/ai released @ai-sdk/anthropic@2.0.91",
-          "source_type": "supplemental",
-          "published_at": ""
-        },
-        {
-          "url": "https://github.com/vercel/ai/releases/tag/%40ai-sdk/deepgram%403.1.0",
-          "title": "vercel/ai released @ai-sdk/deepgram@3.1.0",
-          "source_type": "github",
-          "published_at": "2026-08-23T01:45:50+00:00"
-        },
-        {
-          "url": "https://github.com/vercel/ai/releases/tag/ai%406.0.272",
-          "title": "vercel/ai released ai@6.0.272",
-          "source_type": "github",
-          "published_at": "2026-08-30T08:52:49+00:00"
-        },
-        {
-          "url": "https://github.com/vercel/ai/releases/tag/ai%407.0.85",
-          "title": "vercel/ai released ai@7.0.85",
-          "source_type": "github",
-          "published_at": "2026-08-30T08:04:57+00:00"
-        },
-        {
-          "url": "https://github.com/vercel/ai/releases/tag/%40ai-sdk/openai%404.0.60",
-          "title": "vercel/ai released @ai-sdk/openai@4.0.60",
-          "source_type": "github",
-          "published_at": "2026-09-05T18:26:03+00:00"
-        },
-        {
-          "url": "https://github.com/vercel/ai/releases/tag/ai%407.0.102",
-          "title": "vercel/ai released ai@7.0.102",
-          "source_type": "github",
-          "published_at": "2026-09-15T17:21:36+00:00"
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "vercel-ai-sdk-anthropic-4.0.20-features",
-          "date": "2026-07-26",
-          "title": "vercel/ai released @ai-sdk/anthropic@4.0.20",
-          "summary": "Vercel AI SDK 的 Anthropic 包 v4.0.20 新增 Claude Opus 5 模型、安全回退和对话中工具变更支持。",
-          "score": 8.0,
-          "url": "https://github.com/vercel/ai/releases/tag/%40ai-sdk/anthropic%404.0.20"
-        },
-        {
-          "update_id": "vercel-ai-deepgram-3.1.0",
-          "date": "2026-08-23",
-          "title": "vercel/ai released @ai-sdk/deepgram@3.1.0",
-          "summary": "Vercel AI SDK 更新了 Deepgram 集成，修复转录参数并调整说话人分离默认行为，开发者需注意配置变化。",
-          "score": 7.5,
-          "url": "https://github.com/vercel/ai/releases/tag/%40ai-sdk/deepgram%403.1.0"
-        },
-        {
-          "update_id": "vercel-ai-release-6.0.272",
-          "date": "2026-08-31",
-          "title": "vercel/ai released ai@6.0.272",
-          "summary": "Vercel AI SDK 发布 6.0.272，修复工具调用违规时响应处理并暴露错误内容，方便开发者恢复。",
-          "score": 7.5,
-          "url": "https://github.com/vercel/ai/releases/tag/ai%406.0.272"
-        },
-        {
-          "update_id": "vercel-ai-v7.0.85",
-          "date": "2026-08-31",
-          "title": "vercel/ai released ai@7.0.85",
-          "summary": "Vercel AI SDK发布7.0.85版本，修复多项问题并新增图像生成调用功能。",
-          "score": 7.0,
-          "url": "https://github.com/vercel/ai/releases/tag/ai%407.0.85"
-        },
-        {
-          "update_id": "ai-sdk-openai-4.0.60",
-          "date": "2026-09-06",
-          "title": "vercel/ai released @ai-sdk/openai@4.0.60",
-          "summary": "Vercel AI SDK更新，增加GPT-6推理配置支持。",
-          "score": 7.0,
-          "url": "https://github.com/vercel/ai/releases/tag/%40ai-sdk/openai%404.0.60"
-        },
-        {
-          "update_id": "vercel-ai-sdk-7.0.102-realtime-webrtc",
-          "date": "2026-09-16",
-          "title": "vercel/ai released ai@7.0.102",
-          "summary": "Vercel AI SDK 加入实验性浏览器直连 WebRTC 和 OpenAI 实时语音支持，让开发者能在自己的应用里搭建可委托上下文的实时语音 Agent。",
-          "score": 7.6,
-          "url": "https://github.com/vercel/ai/releases/tag/ai%407.0.102"
-        }
-      ],
-      "usage_flow": [],
-      "learning_points": [],
-      "verticals": [],
-      "tags": [
-        "AI SDK",
-        "Vercel",
-        "Anthropic",
-        "Claude Opus 5",
-        "Vercel AI SDK",
-        "Deepgram",
-        "语音识别",
-        "工具调用",
-        "Agent",
-        "Vercel AI",
-        "SDK",
-        "版本发布",
-        "GPT-6",
-        "实时语音",
-        "WebRTC"
       ]
     },
     {
