@@ -6555,6 +6555,43 @@
       },
       "stage": "candidate_analysis"
     },
+    "0d44ce85dec01302eee900ce7e0f05c4540a239f0eef1bf6b45dd52791b2ed7a": {
+      "created_at": "2026-11-22T06:44:52.864706+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "upload2shell-cve-2026-125396",
+        "evidence_status": "reported",
+        "follow_up": "无",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:50592097",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "安全漏洞披露页面，与 AI 产品构建无直接关系，且页面可读性差，属于噪音。",
+        "region": "global",
+        "score": 3.5,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "安全团队披露 Upload2Shell 漏洞，但与 AI 产品经理学习构建产品无关。",
+        "tags": [
+          "安全漏洞"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "0d4e80d2d2536116f7434e70302545a61437afec88648f811f6741e1f3b58feb": {
       "created_at": "2026-09-21T04:54:15.724552+00:00",
       "model": "deepseek-flash",
@@ -11386,6 +11423,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "179621748ab80ab9ae480a25861fce96fe9d7f3f422e4780642d9942de8c805b": {
+      "created_at": "2026-11-22T06:44:42.562314+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "browser-use-1.0.8",
+        "evidence_status": "first_party",
+        "follow_up": "关注后续版本是否增加更多模型兼容和部署便利性。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "github:release:454174836",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "browser-use",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "browser-use 发布 1.0.8 版本，包含多项实用改进：无 API key 的 SSH 审批、DeepSeek/Qwen 思考模式兼容、密码字段保护等，属于可验证的 Agent 工具迭代，对构建者理解 Agent 落地有直接帮助。",
+        "region": "global",
+        "score": 7.8,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "browser-use 发布 1.0.8 版本，改进了无 API key 的远程审批、思考模式兼容和密码保护，让浏览器 Agent 更易用安全。",
+        "tags": [
+          "Agent",
+          "浏览器自动化",
+          "开源"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "179bddcd4253176d84936ab82e78ec42ee3d4eb754190d67fad9ab88b71f9071": {
       "created_at": "2026-08-20T01:51:27.774968+00:00",
       "model": "deepseek-v4-flash",
@@ -13229,6 +13305,44 @@
           "Claude Code",
           "Agent",
           "开发者工具"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "1a5203c45ea9dac1791010458f39abd519f23f4e03f8d12549bbcb2c1ebe9cb3": {
+      "created_at": "2026-11-22T06:44:42.562229+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "techcrunch-sms-ai-agents-list",
+        "evidence_status": "reported",
+        "follow_up": "关注这些 Agent 的实际用户留存和场景适配效果。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:b0367e9f3d6d961e",
+        "intelligence_type": "product_case",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "TechCrunch 汇总了可驻留短信的 AI Agent 产品列表，覆盖通用助手、家庭、旅行和工作场景，有助于了解产品形态，但缺乏深度分析和用户反馈。",
+        "region": "global",
+        "score": 6.8,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "TechCrunch 列出了多款可集成到短信中的 AI Agent，涵盖通用助手、家庭、旅行和工作场景，展示了 Agent 的产品形态。",
+        "tags": [
+          "AI Agent",
+          "短信助手"
         ],
         "target_user": "",
         "verticals": []
@@ -19595,6 +19709,43 @@
         "tags": [
           "GitHub Copilot",
           "工作流"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "25d7facab44441b81779dbd15f39c4a9a38d8f32384a9b1354477c9f7a0fde27": {
+      "created_at": "2026-11-22T06:44:42.562002+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "inkling-2-mini-analysis",
+        "evidence_status": "reported",
+        "follow_up": "查看完整评测是否包含可迁移的产品能力对比。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "public_web:sitemap:f4aa7e73ff18e43d05bc",
+        "intelligence_type": "model_capability",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Inkling 2 Mini",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Artificial Analysis 的模型评测更新，但内容仅为标题和一句泛泛描述，没有具体能力数据、产品体验或构建过程，对初学者理解产品价值有限。",
+        "region": "global",
+        "score": 5.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Artificial Analysis 发布了 Inkling 2 Mini 的评测文章，但未提供具体能力细节，难以判断其产品价值。",
+        "tags": [
+          "模型评测"
         ],
         "target_user": "",
         "verticals": []
@@ -27166,6 +27317,41 @@
       },
       "stage": "candidate_analysis"
     },
+    "36583e688eb24e848807a9c353374d2e294ea23dd2f9520d19ae92154b110d85": {
+      "created_at": "2026-11-22T06:45:57.718178+00:00",
+      "model": "kimi-k2.6",
+      "prompt_version": "deep-v3-beginner",
+      "result": {
+        "ai_role": "AI 负责\"看\"网页内容、决定下一步点哪里/输什么，并执行操作；遇到不确定时暂停等待人类批准",
+        "evidence_status": "verified",
+        "hands_on_exercise": "30 分钟练习：本地安装 browser-use 1.0.8，写一段代码让 AI 自动打开 GitHub 登录页，输入假用户名和假密码（观察密码是否被打印），然后触发远程审批流程，用手机访问终端显示的链接体验审批过程。注意需要自备大模型 API key。",
+        "implementation_idea": "框架把网页截图或 HTML 传给大模型，模型返回\"点击搜索框\"\"输入关键词\"等指令，框架再用 Playwright（一个浏览器自动化工具）实际执行。这次更新加了\"审批网关\"——AI 执行敏感操作前必须等人点链接确认，不用把 API 密钥存在服务器上。",
+        "learning_points": [
+          "Agent：不是一问一答的聊天机器人，而是能循环\"观察-思考-行动\"、自主完成多步骤任务的 AI 系统",
+          "Function Calling（工具调用）：大模型输出结构化指令（如 click、type）让外部程序执行，而不是只返回文字",
+          "Headless 环境：没有屏幕的服务器，需要特殊方式让人类远程监督和干预 AI 行为"
+        ],
+        "limitations_or_uncertainties": "Browser Use gateway 的信用额度预留机制（16,384 tokens）具体如何计费未公开详细文档；SSH 审批链接的有效期和安全性实现细节未公开；judge 缓存机制是否完全避免重复计费依赖 provider 实现，未公开验证方式",
+        "product_name": "browser-use",
+        "sources": [
+          "https://github.com/browser-use/browser-use/releases/tag/1.0.8",
+          "https://github.com/browser-use/browser-use/pull/6489",
+          "https://github.com/browser-use/browser-use/pull/6504",
+          "https://browser-use.com/"
+        ],
+        "target_users": "需要让 AI 自动操作网页的开发者，比如做数据抓取、自动填表、网页测试的人",
+        "title_zh": "browser-use 1.0.8：让浏览器 Agent 更安全、更易远程协作",
+        "usage_flow": [
+          "pip install 指定版本，用 Python 代码描述要让 AI 做的网页任务",
+          "Agent 自动打开浏览器、分析页面、点击输入，像人一样操作网页",
+          "需要人工确认时，终端显示链接和验证码，用户在手机或另一台电脑上批准",
+          "任务完成后获取 AI 返回的结果或数据"
+        ],
+        "user_problem": "1）在服务器或无图形界面的机器上运行 Agent 时，没法安全审批 AI 的操作；2）DeepSeek/Qwen 等国产模型在\"思考模式\"下会拒绝强制结束，导致任务卡死；3）AI 可能在日志里泄露用户输入的密码；4）远程调试浏览器时总打开空白新标签，而不是继续用已有页面",
+        "what_it_is": "一个开源 Python 框架，让 AI Agent（能自主执行任务的 AI 程序）像真人一样控制浏览器、自动完成网页操作。"
+      },
+      "stage": "deep_analysis"
+    },
     "366f05bcf3cb0cbebad5e8359c9a941420fc736fc0d86c12e1700c868d8298a1": {
       "created_at": "2026-09-24T04:48:35.418784+00:00",
       "model": "deepseek-flash",
@@ -30108,6 +30294,45 @@
           "科研",
           "材料科学",
           "垂直应用"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "3bde86c866a1c787b17a2797151b71d2e0de09beac58bf8c08ddfc70d97b0d22": {
+      "created_at": "2026-11-22T06:44:42.562279+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "anthropic-ipo-safety-podcast",
+        "evidence_status": "reported",
+        "follow_up": "关注 Anthropic 上市后的产品策略调整。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:631bba564082fc69",
+        "intelligence_type": "business_policy",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Anthropic",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "The Verge 播客讨论 Anthropic IPO 与安全优先的平衡，涉及公司战略和行业格局，但非产品构建或模型能力的一手信息，对产品经理直接价值有限。",
+        "region": "global",
+        "score": 5.8,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "The Verge 播客探讨 Anthropic 上市后能否坚持安全优先，分析其商业与安全的平衡。",
+        "tags": [
+          "Anthropic",
+          "AI安全",
+          "IPO"
         ],
         "target_user": "",
         "verticals": []
@@ -35490,6 +35715,44 @@
           "AI 插件",
           "隐私",
           "开发者工具"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "45669a96101ea8cdc03554c2147e6bad88edff1207bdd2f3e3f41162024000b8": {
+      "created_at": "2026-11-22T06:44:42.562188+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "ms-foundry-hosted-agents-vnet",
+        "evidence_status": "first_party",
+        "follow_up": "关注 Agent 部署最佳实践是否形成标准化产品能力。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:devblogs.microsoft.com_foundry_feed_:ed2ba09f60b969fe",
+        "intelligence_type": "builder_insight",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Microsoft Foundry",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "微软官方博客关于托管 Agent 在私有网络中的五个常见问题排查，属于技术运维文档，对产品经理理解 Agent 部署有参考，但非产品创新或构建思路。",
+        "region": "global",
+        "score": 6.0,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "微软 Foundry 博客解答了托管 Agent 在虚拟网络中部署时的五个常见问题，帮助团队排查网络配置。",
+        "tags": [
+          "Agent",
+          "部署运维"
         ],
         "target_user": "",
         "verticals": []
@@ -60751,6 +61014,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "75680573a2e24935a4895db8356b652344d429b675fc4ff0592bdf6417a3359f": {
+      "created_at": "2026-11-22T06:44:42.562089+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openrouter-rankings-top5",
+        "evidence_status": "reported",
+        "follow_up": "关注这些模型在具体产品中的落地案例。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "public_web:ranking:b0ab1ec5ca2d10da9cfa",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenRouter 模型热度榜展示了当前热门模型（如 Hy4 flash、DeepSeek V4.1 Flash、GLM 5.3 Flash、GPT-6 Luna），能反映开发者使用趋势，但缺乏产品案例和用户反馈，属于行业观察。",
+        "region": "global",
+        "score": 6.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "OpenRouter 更新了模型热度 Top 5，显示腾讯、DeepSeek、Z.ai 和 OpenAI 的轻量模型受开发者欢迎，可观察模型选型趋势。",
+        "tags": [
+          "模型趋势",
+          "开发者生态"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "75893abdef2bf42e7de6bf141c6400e524774b39f15acf87b2b7d68a2bcae780": {
       "created_at": "2026-08-07T03:15:20.883365+00:00",
       "model": "deepseek-v4-flash",
@@ -62998,6 +63299,45 @@
           "模型能力",
           "辟谣",
           "Qwen"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "7a2fcedae667d7ca43aa54ee84fb520ec81c79ccf051ddca21670129e66a3899": {
+      "created_at": "2026-11-22T06:44:52.864603+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openrouter-data-processing-incidents",
+        "evidence_status": "reported",
+        "follow_up": "关注 OpenRouter 后续的提供商审计与零数据留存政策。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:50595554",
+        "intelligence_type": "business_policy",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "OpenRouter",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenRouter 披露推理提供商数据处理事件，涉及数据留存与转发问题，对构建 AI 产品有合规参考价值，但非产品案例或构建实践，给 6.5 分。",
+        "region": "global",
+        "score": 6.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "OpenRouter 公布部分推理提供商的数据处理事故，提醒开发者关注数据留存与转发风险，对做 AI 产品有合规参考。",
+        "tags": [
+          "数据隐私",
+          "推理服务",
+          "合规"
         ],
         "target_user": "",
         "verticals": []
@@ -66879,6 +67219,44 @@
         "tags": [
           "行业评论",
           "AI产品价值"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "81b3f9daa16e4d0348c313ecc5218c0ece1f12f7ad38e8ee55a95f24ebb63320": {
+      "created_at": "2026-11-22T06:44:52.864827+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "leonida-gta6-recompilation",
+        "evidence_status": "reported",
+        "follow_up": "无",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:50595168",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "游戏重编译项目，涉及泄露内容，与 AI 产品构建无关，属于噪音。",
+        "region": "global",
+        "score": 4.0,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "有人尝试将 Xbox 版 GTA 6 重编译到 PC，与 AI 产品学习无关。",
+        "tags": [
+          "游戏",
+          "重编译"
         ],
         "target_user": "",
         "verticals": []
@@ -83248,6 +83626,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "9d185e0477c74a5374021ba2b7b826a2ed2c5c53103e5b8f02c7d40efe198c43": {
+      "created_at": "2026-11-22T06:44:52.864854+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "lean-riemann-verification",
+        "evidence_status": "verified",
+        "follow_up": "观察 AI 辅助形式化验证的工具化进展。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:50590441",
+        "intelligence_type": "model_capability",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "数学证明验证文件，涉及 Lean 和 AI 辅助证明，但属于学术验证，对产品经理直接价值低，给 5 分。",
+        "region": "global",
+        "score": 5.0,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "MIT 发布黎曼假设 Lean 证明的验证文件，社区讨论 AI 在数学证明中的角色，但与产品构建距离较远。",
+        "tags": [
+          "Lean",
+          "数学证明",
+          "AI辅助"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "9d56671c6ad3d81abc4995a47da725773534450f434170def1a82699658a8784": {
       "created_at": "2026-11-20T07:12:51.689011+00:00",
       "model": "deepseek-flash",
@@ -87470,6 +87887,45 @@
           "Codex",
           "开源",
           "版本发布"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "a43c177cba60c65319f6c1d0479dab9f6ddd614d0db771c5479c4996a1806bcf": {
+      "created_at": "2026-11-22T06:44:52.864661+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "pcapanalyzer-launch",
+        "evidence_status": "first_party",
+        "follow_up": "观察是否集成 LLM 辅助诊断以及用户采用情况。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:50594132",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "PcapAnalyzer",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "自托管 pcap 分析器，含 27 个问题检测器，有 GitHub 仓库和讨论，属于可迁移的垂直工具产品案例，但 AI 角色不突出，给 7.2 分。",
+        "region": "global",
+        "score": 7.2,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "开发者发布自托管网络包分析工具 PcapAnalyzer，内置 27 个问题检测器，帮助排查网络故障，可作为垂直工具产品参考。",
+        "tags": [
+          "网络分析",
+          "自托管",
+          "开发者工具"
         ],
         "target_user": "",
         "verticals": []
@@ -92751,6 +93207,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "aeaaa6249b78a45d31db95cf4580f040983b0a30bc65058701bb5e4093137e65": {
+      "created_at": "2026-11-22T06:44:58.069456+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "free-ai-quota-trend",
+        "evidence_status": "reported",
+        "follow_up": "无",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "google_news:article:21717f680722ba07",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": false,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "风闻聚合评论讨论免费AI限额趋势，无具体产品案例或一手证据，信噪比低，按规则低于7分。",
+        "region": "china",
+        "score": 5.5,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "风闻讨论多家免费AI服务收紧限额的现象，但缺乏可验证的产品细节，对构建者增量有限。",
+        "tags": [
+          "免费AI",
+          "限额"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "aeb8dc50e6184f133dbfbb786ece703e7bae020fc53de9383f3671379b4b524a": {
       "created_at": "2026-08-14T02:45:44.146483+00:00",
       "model": "deepseek-v4-flash",
@@ -94538,6 +95032,45 @@
           "Anthropic",
           "企业合作",
           "评估"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "b16b621cadfdaa77d76b1cbc7e8a2271e2ee6b0bce9ed15275221803022e4bf7": {
+      "created_at": "2026-11-22T06:44:58.069529+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "deepseek-harness-agent-orchestration",
+        "evidence_status": "reported",
+        "follow_up": "查找GitHub仓库和官方文档验证功能",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "google_news:article:b86beb0f85f8ce55",
+        "intelligence_type": "product_case",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "DeepSeek Harness",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "介绍DeepSeek Harness的TypeScript原生Agent编排中枢，属于可迁移的技术产品案例，但来源为CSDN转载，缺乏一手代码或Demo验证，按规则给7.2分。",
+        "region": "china",
+        "score": 7.2,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "CSDN介绍DeepSeek Harness这一TypeScript原生Agent编排工具，解决Agent开发中的编排问题，对构建者有参考价值。",
+        "tags": [
+          "Agent",
+          "TypeScript",
+          "DeepSeek"
         ],
         "target_user": "",
         "verticals": []
@@ -103941,6 +104474,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "c3aa3d1db1e4b14ccf82b6dec90393b42bf07b29aa64a88ab43c2ffeaf61f739": {
+      "created_at": "2026-11-22T06:44:42.562210+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "signal-screenshot-restriction",
+        "evidence_status": "reported",
+        "follow_up": "观察其他通讯产品是否跟进类似隐私保护措施。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:f9e10a6144e6c3a1",
+        "intelligence_type": "product_case",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Signal",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Signal 限制移动端截图以应对 AI 监控威胁，属于产品功能更新，但与 AI 产品构建、模型能力或垂直应用关联较弱，对目标读者价值有限。",
+        "region": "global",
+        "score": 5.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Signal 在 Android 和 iOS 应用中限制截图功能，以应对 AI 监控带来的生存威胁。",
+        "tags": [
+          "隐私",
+          "AI监控"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "c3b761b75008d8fdefc17bb4d458499d1ea387d83840fd9380e075c7a914b281": {
       "created_at": "2026-10-16T04:30:52.730485+00:00",
       "model": "deepseek-flash",
@@ -104399,6 +104970,38 @@
         "verticals": []
       },
       "stage": "candidate_analysis"
+    },
+    "c45e58abdcf1060b76ee5bec43a127297e554a49a2b0aace4d1b8bd682791990": {
+      "created_at": "2026-11-22T06:45:34.533503+00:00",
+      "model": "kimi-k2.6",
+      "prompt_version": "deep-v3-beginner",
+      "result": {
+        "ai_role": "AI 作为'调用方'，通过 MCP 协议向 Pandex 发起查询，把拿到的官方法条整合进回答里。",
+        "evidence_status": "verified",
+        "hands_on_exercise": "30 分钟动手：如果你有 Claude Desktop，按官方命令添加 Pandex MCP，然后分别问'德国 GDPR 最新罚款规定是什么'和'法国劳动法关于远程工作的条款'，对比开启/关闭 Pandex 时回答的差异，观察 AI 是否引用具体法条编号。",
+        "implementation_idea": "核心思路是'给 AI 装一个外接硬盘'——Pandex 每晚爬取/同步各国法律数据库，保留每个法条的所有历史版本；当 AI 需要时，通过 MCP 这个通用插头实时检索，而不是让 AI 靠记忆背诵。",
+        "learning_points": [
+          "MCP（Model Context Protocol）：一种让 AI 模型和外部工具/数据库'说同一种语言'的开放协议，类似 USB-C 接口，插上去就能用",
+          "RAG（检索增强生成）：AI 不凭记忆回答，而是先查资料再回答，Pandex 相当于给法律场景做了专门的 RAG 数据源",
+          "AI 幻觉（Hallucination）：模型自信地编造不存在的信息，在法律这种要求高准确度的领域尤其危险"
+        ],
+        "limitations_or_uncertainties": "内部技术细节未公开（是否为纯 RAG、有无多轮验证、成本如何）；社区讨论提到法律查询通常需要多轮检索和校验，Pandex 是否满足高可靠性要求尚缺用户深度验证；覆盖范围是否包含最新修订存在时间差风险（虽宣称每晚更新）。",
+        "product_name": "Pandex",
+        "sources": [
+          "https://www.pandex.io/"
+        ],
+        "target_users": "需要处理欧洲法律问题的 AI 开发者、法律科技产品团队、使用 Claude 等支持 MCP 的 AI 代理的用户",
+        "title_zh": "Pandex：用 MCP 把欧洲官方法律文本喂给 AI Agent",
+        "usage_flow": [
+          "用户在支持 MCP 的 AI 客户端（如 Claude）里添加 Pandex 服务：claude mcp add --transport http pandex https://api.pandex.io/mcp",
+          "用户向 AI 提出涉及欧洲法律的问题",
+          "AI 自动通过 MCP 调用 Pandex，获取对应国家的官方法律原文",
+          "AI 基于真实法条回答用户，而非依赖训练记忆中的过时信息"
+        ],
+        "user_problem": "AI 模型经常把欧洲法律搞错——引用过期版本、编造不存在的法条，导致法律建议不可靠。",
+        "what_it_is": "一个把欧洲多国官方法律文本做成标准化接口（MCP 服务）的产品，让 AI 代理能直接查询真实法条，而不是靠模型自己编造。"
+      },
+      "stage": "deep_analysis"
     },
     "c47d97246a6eec5680e59b011eca4cff4dc2e16e3237246454a8195cae9ddb2d": {
       "created_at": "2026-09-18T04:42:02.172015+00:00",
@@ -107667,6 +108270,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "ca8bbbce7056b170a1e1d34352acab18a04309c078785dcc2a5b6b4c25c26ab7": {
+      "created_at": "2026-11-22T06:44:58.069420+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "deepseek-funding-strategy",
+        "evidence_status": "reported",
+        "follow_up": "无",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "google_news:article:8ce8578b901ede61",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": false,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "DeepSeek",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "标题聚焦融资和战略评论，无产品、代码或用户反馈证据，属于泛行业评论，按规则低于7分且接近噪音。",
+        "region": "china",
+        "score": 4.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "手机新浪网评论DeepSeek融资后的战略方向，但缺乏一手事实和产品增量，参考价值有限。",
+        "tags": [
+          "DeepSeek",
+          "融资"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "cadf247354ede939f327d5ea4211594bab131bbf3097e81fcd6cfa7dabe8c90c": {
       "created_at": "2026-09-02T04:32:24.335960+00:00",
       "model": "deepseek-v4-flash",
@@ -109297,6 +109938,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "cde542d4703656e2b790f08e170fdb85ad7a54fd1165dde35fc4c3b23e9939b7": {
+      "created_at": "2026-11-22T06:44:52.864764+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "pandex-mcp-eu-law",
+        "evidence_status": "first_party",
+        "follow_up": "观察其法律数据更新机制和实际用户使用反馈。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:50593481",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Pandex",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Pandex 通过 MCP 提供欧洲法律官方文本，解决模型引用旧法或编造法律的问题，有明确产品形态和创建者说明，属于可迁移的垂直 AI 产品案例，给 8.2 分。",
+        "region": "global",
+        "score": 8.2,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Pandex 把欧洲多国法律官方文本做成 MCP 服务，让 AI 代理引用准确法条，解决模型编造法律的问题，值得垂直产品参考。",
+        "tags": [
+          "法律AI",
+          "MCP",
+          "垂直产品"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "ce03a49021bf9aa9d428c186e3589cdcece37c9f198b478dcbadc0b834d3b7c8": {
       "created_at": "2026-08-02T03:52:32.504219+00:00",
       "model": "deepseek-v4-flash",
@@ -109793,6 +110473,45 @@
           "Agent",
           "企业安全",
           "合规"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "cfa84cbf4ce7c323802ad1a5473d6e7e9e6195e94adc617bac2aaf91fa6de8e0": {
+      "created_at": "2026-11-22T06:44:52.864899+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "outpost-racer-ps1-game",
+        "evidence_status": "first_party",
+        "follow_up": "观察作者是否公开开发过程和 AI 使用细节。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:50589184",
+        "intelligence_type": "builder_insight",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Outpost Racer",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "用 ChatGPT 辅助开发的 PS1 风格赛车游戏，有真实用户反馈和可玩 Demo，属于构建者实践，但 AI 角色较浅，给 6.8 分。",
+        "region": "global",
+        "score": 6.8,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "开发者借助 ChatGPT 做了一款 PS1 风格赛车游戏，获得用户试玩反馈，可作为 AI 辅助个人产品开发的轻量案例。",
+        "tags": [
+          "游戏",
+          "ChatGPT",
+          "个人产品"
         ],
         "target_user": "",
         "verticals": []
@@ -116874,6 +117593,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "dde8c85d0505ef16c967ce6af2f31577467909a8d070494bdc810c88428e989c": {
+      "created_at": "2026-11-22T06:44:42.562159+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "lenny-community-wisdom-2026-11",
+        "evidence_status": "reported",
+        "follow_up": "关注其中提到的具体工具和方法是否可复现。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "newsletter:feed:00463851c0c232e2b1e7",
+        "intelligence_type": "builder_insight",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Lenny Newsletter 的社区智慧合集，涉及多智能体上下文切换、AI 设计反馈、让 AI 少说 AI 腔等实践话题，对产品经理有可迁移经验，但内容为社区讨论汇总，非一手构建过程。",
+        "region": "global",
+        "score": 7.2,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "Lenny Newsletter 汇总了社区关于多智能体协作、AI 设计反馈和提示词优化的讨论，为 AI 产品经理提供实践参考。",
+        "tags": [
+          "AI产品经理",
+          "多智能体",
+          "提示词"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "ddef21915c498f4f07cd5f935329608624694e471b3e276e799f358d7f7d5196": {
       "created_at": "2026-08-16T01:57:37.338041+00:00",
       "model": "deepseek-v4-flash",
@@ -117140,6 +117898,45 @@
         "what_it_is": "Meta 官方发布的一套开源固件和 SDK，让开发者能用现成的 ESP32 开发板或树莓派，自己组装硬件并接入 Meta 的 Muse AI Agent。"
       },
       "stage": "deep_analysis"
+    },
+    "de6537a29b69e174e56d55ba0bc258ddef1c0fc1c5587f66fd300fbf29bedabe": {
+      "created_at": "2026-11-22T06:44:58.069362+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "deepseek-free-quota-api-expansion",
+        "evidence_status": "reported",
+        "follow_up": "观察官方公告和用户对额度调整的反馈",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "google_news:article:a5f5de11d2d2694b",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "DeepSeek",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "DeepSeek调整免费额度和付费API，属于产品定价与商业模式变化，对AI产品经理有参考价值，但来源为转载媒体，缺乏一手细节和用户反馈，按规则低于7分。",
+        "region": "china",
+        "score": 6.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "DeepSeek收紧免费聊天额度并扩充付费API服务，解决免费模式成本压力问题，值得关注AI产品商业化路径。",
+        "tags": [
+          "DeepSeek",
+          "定价",
+          "API"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
     },
     "de69c1a43e3e1ce6eb7f66502ce9f931d27127098df91491caeb5a7c62d9c81b": {
       "created_at": "2026-09-08T04:33:57.304378+00:00",
@@ -126057,6 +126854,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "ef94f2d3e8c28ced61e1b586477e51e7151bf3e431e1fa9d5595c89242fb9a5e": {
+      "created_at": "2026-11-22T06:44:42.562252+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "microdrama-ai-face-license",
+        "evidence_status": "reported",
+        "follow_up": "关注该模式在中国市场的实际应用和用户接受度。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:4bc83d39abbca7b2",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "报道了演员将面部授权给微短剧初创公司的案例，涉及 AI 生成内容与娱乐产业结合，但缺乏产品细节和用户反馈，属于趋势报道。",
+        "region": "global",
+        "score": 6.2,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "一家微短剧初创公司获得演员面部授权，用 AI 生成内容，引发对好莱坞未来影响的讨论。",
+        "tags": [
+          "AI生成内容",
+          "微短剧"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "efbe8067a7bdf567876c693efd49ea8ee401474ce3b63affa938ca8ff3ed6e59": {
       "created_at": "2026-09-20T04:53:04.056665+00:00",
       "model": "deepseek-flash",
@@ -126625,6 +127460,45 @@
         "tags": [
           "AI SDK",
           "工程实践"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "f0d8ba21db15db2e77f190b20c80e8c795be0a2bb7167b5fd2dca41930e1a9e1": {
+      "created_at": "2026-11-22T06:44:52.864493+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "inkling-2-mini-quant-repo",
+        "evidence_status": "reported",
+        "follow_up": "观察是否有可复现的基准测试和真实用户反馈。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:50591853",
+        "intelligence_type": "model_capability",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Inkling-2-Mini",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "随机 GitHub 仓库声称将大模型塞进 5.4GB 内存，评论区指出标题指标不适用于该模型、README 混乱，属于底层量化优化且缺乏可信产品证据，低于 7 分。",
+        "region": "global",
+        "score": 5.5,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "有人发布仓库声称在 5.4GB 内存运行 Inkling-2-Mini，但社区质疑其指标与文档质量，对产品经理参考价值有限。",
+        "tags": [
+          "量化",
+          "本地模型",
+          "开源"
         ],
         "target_user": "",
         "verticals": []
@@ -128366,6 +129240,45 @@
           "融资",
           "企业AI",
           "Thrive"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "f4078cea42ee05ccf2cb084717bc1484853f274f0a182c34c5010b870d2cff4d": {
+      "created_at": "2026-11-22T06:44:58.069500+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "ai-weekly-anthropic-ipo-deepseek-funding",
+        "evidence_status": "reported",
+        "follow_up": "无",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "google_news:article:080e3072508529b2",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "数智周报汇总融资、IPO和算力政策，属于泛行业新闻聚合，无产品实践或构建过程，按规则低于7分。",
+        "region": "global",
+        "score": 4.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "钛媒体周报汇总Anthropic IPO、美国算力限制和DeepSeek融资，但均为宏观新闻，对AI产品经理直接帮助小。",
+        "tags": [
+          "周报",
+          "融资",
+          "算力"
         ],
         "target_user": "",
         "verticals": []
@@ -131517,6 +132430,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "f8eda4a4adb94d345298392090b112c20a4b4d3e82654889a0dd30b308f5aaae": {
+      "created_at": "2026-11-22T06:44:52.864915+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "agent-mcts-claude-code",
+        "evidence_status": "first_party",
+        "follow_up": "观察项目 README 和实际使用案例。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:50589235",
+        "intelligence_type": "builder_insight",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "agent-mcts",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "在 Claude Code 上实现蒙特卡洛树搜索的 agent 项目，有 GitHub 仓库但无正文和讨论，信息不足，给 6 分。",
+        "region": "global",
+        "score": 6.0,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "开发者发布 agent-mcts 项目，在 Claude Code 上叠加蒙特卡洛树搜索，但缺少详细说明和反馈。",
+        "tags": [
+          "Agent",
+          "MCTS",
+          "Claude Code"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "f8f1b12fab27366fdd35fd11fdcb924393115452c908b83bae0af4a8940eab8b": {
       "created_at": "2026-08-12T02:43:58.737722+00:00",
       "model": "deepseek-v4-flash",
@@ -132316,6 +133268,44 @@
         "tags": [
           "模型发布",
           "行业动态"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "fa221cbc524ceb9d873872d4829672d75cb2e2e9365777324e9a7829e56eee0c": {
+      "created_at": "2026-11-22T06:44:42.562362+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "lean-riemann-hypothesis",
+        "evidence_status": "reported",
+        "follow_up": "无",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:50589618",
+        "intelligence_type": "model_capability",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Lean 验证黎曼猜想属于数学形式化领域，与 AI 产品经理和 LLM 产品构建关联极弱，尽管评论提到 Claude 参与形式化，但非产品能力或构建实践。",
+        "region": "global",
+        "score": 4.5,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "Lean 社区博客讨论黎曼猜想的机器验证，评论提及 Claude 参与形式化大量数学内容，但与 AI 产品无关。",
+        "tags": [
+          "数学形式化",
+          "Lean"
         ],
         "target_user": "",
         "verticals": []
@@ -134125,6 +135115,45 @@
         "summary_zh": "一篇标题为'Why Fortune Favors the Focused in the Age of AI'的文章，但内容为空，无实质信息。",
         "tags": [
           "观点"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "fd47f03a39a4c6720601751ce901243ced3cfeb23c59dcf21394bcf5a96d6813": {
+      "created_at": "2026-11-22T06:44:52.864948+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "deepseek-rate-limit-migration-guide",
+        "evidence_status": "reported",
+        "follow_up": "关注 DeepSeek 官方限额政策及开发者迁移去向。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "google_news:article:58437397d570b593",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "DeepSeek",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "36氪报道 DeepSeek 开始限额并提供迁移手册，属于行业动态，对产品选型有参考但非一手产品案例，给 6.5 分。",
+        "region": "china",
+        "score": 6.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "36氪报道 DeepSeek 开始限额，并整理迁移指南，帮助开发者转向其他模型服务。",
+        "tags": [
+          "DeepSeek",
+          "API限额",
+          "模型迁移"
         ],
         "target_user": "",
         "verticals": []

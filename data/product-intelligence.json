@@ -1,7 +1,326 @@
 {
   "version": 1,
-  "updated_at": "2026-11-21T07:06:34.107253+00:00",
+  "updated_at": "2026-11-22T06:45:57.753343+00:00",
   "products": [
+    {
+      "product_id": "product-c7a7c9ce78f2cc11",
+      "product_name": "Pandex",
+      "builder_name": "vasie",
+      "first_seen": "2026-11-22",
+      "last_seen": "2026-11-22",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "verified",
+      "target_user": "需要处理欧洲法律问题的 AI 开发者、法律科技产品团队、使用 Claude 等支持 MCP 的 AI 代理的用户",
+      "user_problem": "AI 模型经常把欧洲法律搞错——引用过期版本、编造不存在的法条，导致法律建议不可靠。",
+      "what_it_is": "一个把欧洲多国官方法律文本做成标准化接口（MCP 服务）的产品，让 AI 代理能直接查询真实法条，而不是靠模型自己编造。",
+      "ai_role": "AI 作为'调用方'，通过 MCP 协议向 Pandex 发起查询，把拿到的官方法条整合进回答里。",
+      "implementation_idea": "核心思路是'给 AI 装一个外接硬盘'——Pandex 每晚爬取/同步各国法律数据库，保留每个法条的所有历史版本；当 AI 需要时，通过 MCP 这个通用插头实时检索，而不是让 AI 靠记忆背诵。",
+      "hands_on_exercise": "30 分钟动手：如果你有 Claude Desktop，按官方命令添加 Pandex MCP，然后分别问'德国 GDPR 最新罚款规定是什么'和'法国劳动法关于远程工作的条款'，对比开启/关闭 Pandex 时回答的差异，观察 AI 是否引用具体法条编号。",
+      "limitations_or_uncertainties": "内部技术细节未公开（是否为纯 RAG、有无多轮验证、成本如何）；社区讨论提到法律查询通常需要多轮检索和校验，Pandex 是否满足高可靠性要求尚缺用户深度验证；覆盖范围是否包含最新修订存在时间差风险（虽宣称每晚更新）。",
+      "region": "global",
+      "score": 8.2,
+      "summary": "Pandex 把欧洲多国法律官方文本做成 MCP 服务，让 AI 代理引用准确法条，解决模型编造法律的问题，值得垂直产品参考。",
+      "title": "Pandex：用 MCP 把欧洲官方法律文本喂给 AI Agent",
+      "url": "https://www.pandex.io/",
+      "sources": [
+        {
+          "url": "https://www.pandex.io/",
+          "title": "Pandex – Official European Law for AI Agents, over MCP",
+          "source_type": "hackernews",
+          "published_at": "2026-11-21T20:47:41+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "pandex-mcp-eu-law",
+          "date": "2026-11-22",
+          "title": "Pandex：用 MCP 把欧洲官方法律文本喂给 AI Agent",
+          "summary": "Pandex 把欧洲多国法律官方文本做成 MCP 服务，让 AI 代理引用准确法条，解决模型编造法律的问题，值得垂直产品参考。",
+          "score": 8.2,
+          "url": "https://www.pandex.io/"
+        }
+      ],
+      "usage_flow": [
+        "用户在支持 MCP 的 AI 客户端（如 Claude）里添加 Pandex 服务：claude mcp add --transport http pandex https://api.pandex.io/mcp",
+        "用户向 AI 提出涉及欧洲法律的问题",
+        "AI 自动通过 MCP 调用 Pandex，获取对应国家的官方法律原文",
+        "AI 基于真实法条回答用户，而非依赖训练记忆中的过时信息"
+      ],
+      "learning_points": [
+        "MCP（Model Context Protocol）：一种让 AI 模型和外部工具/数据库'说同一种语言'的开放协议，类似 USB-C 接口，插上去就能用",
+        "RAG（检索增强生成）：AI 不凭记忆回答，而是先查资料再回答，Pandex 相当于给法律场景做了专门的 RAG 数据源",
+        "AI 幻觉（Hallucination）：模型自信地编造不存在的信息，在法律这种要求高准确度的领域尤其危险"
+      ],
+      "verticals": [],
+      "tags": [
+        "法律AI",
+        "MCP",
+        "垂直产品"
+      ]
+    },
+    {
+      "product_id": "product-74fa894c1b640ab0",
+      "product_name": "browser-use",
+      "builder_name": "gregpr07",
+      "first_seen": "2026-08-17",
+      "last_seen": "2026-11-22",
+      "occurrence_count": 6,
+      "intelligence_type": "product_case",
+      "evidence_status": "verified",
+      "target_user": "需要让 AI 自动操作网页的开发者，比如做数据抓取、自动填表、网页测试的人",
+      "user_problem": "1）在服务器或无图形界面的机器上运行 Agent 时，没法安全审批 AI 的操作；2）DeepSeek/Qwen 等国产模型在\"思考模式\"下会拒绝强制结束，导致任务卡死；3）AI 可能在日志里泄露用户输入的密码；4）远程调试浏览器时总打开空白新标签，而不是继续用已有页面",
+      "what_it_is": "一个开源 Python 框架，让 AI Agent（能自主执行任务的 AI 程序）像真人一样控制浏览器、自动完成网页操作。",
+      "ai_role": "AI 负责\"看\"网页内容、决定下一步点哪里/输什么，并执行操作；遇到不确定时暂停等待人类批准",
+      "implementation_idea": "框架把网页截图或 HTML 传给大模型，模型返回\"点击搜索框\"\"输入关键词\"等指令，框架再用 Playwright（一个浏览器自动化工具）实际执行。这次更新加了\"审批网关\"——AI 执行敏感操作前必须等人点链接确认，不用把 API 密钥存在服务器上。",
+      "hands_on_exercise": "30 分钟练习：本地安装 browser-use 1.0.8，写一段代码让 AI 自动打开 GitHub 登录页，输入假用户名和假密码（观察密码是否被打印），然后触发远程审批流程，用手机访问终端显示的链接体验审批过程。注意需要自备大模型 API key。",
+      "limitations_or_uncertainties": "Browser Use gateway 的信用额度预留机制（16,384 tokens）具体如何计费未公开详细文档；SSH 审批链接的有效期和安全性实现细节未公开；judge 缓存机制是否完全避免重复计费依赖 provider 实现，未公开验证方式",
+      "region": "global",
+      "score": 7.8,
+      "summary": "browser-use 发布 1.0.8 版本，改进了无 API key 的远程审批、思考模式兼容和密码保护，让浏览器 Agent 更易用安全。",
+      "title": "browser-use 1.0.8：让浏览器 Agent 更安全、更易远程协作",
+      "url": "https://github.com/browser-use/browser-use/releases/tag/1.0.8",
+      "sources": [
+        {
+          "url": "https://github.com/browser-use/browser-use/releases/tag/0.13.8",
+          "title": "browser-use/browser-use released 0.13.8",
+          "source_type": "github",
+          "published_at": "2026-08-16T18:48:54+00:00"
+        },
+        {
+          "url": "https://github.com/browser-use/browser-use/releases/tag/1.0.0",
+          "title": "browser-use/browser-use released 1.0.0",
+          "source_type": "github",
+          "published_at": "2026-11-10T02:04:48+00:00"
+        },
+        {
+          "url": "https://browser-use.com/",
+          "title": "Browser Use : Browser Agents and Cloud Browsers",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://github.com/browser-use/browser-use/releases/tag/1.0.3rc1",
+          "title": "browser-use/browser-use released 1.0.3rc1",
+          "source_type": "github",
+          "published_at": "2026-11-12T02:11:28+00:00"
+        },
+        {
+          "url": "https://github.com/browser-use/browser-use/releases/tag/1.0.4",
+          "title": "browser-use/browser-use released 1.0.4",
+          "source_type": "github",
+          "published_at": "2026-11-13T20:50:13+00:00"
+        },
+        {
+          "url": "https://github.com/browser-use/browser-use/releases/tag/1.0.8rc1",
+          "title": "browser-use/browser-use released 1.0.8rc1",
+          "source_type": "github",
+          "published_at": "2026-11-20T22:48:28+00:00"
+        },
+        {
+          "url": "https://grokipedia.com/page/Browser_Use",
+          "title": "Browser Use",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://github.com/browser-use/browser-use/releases/tag/1.0.8",
+          "title": "browser-use/browser-use released 1.0.8",
+          "source_type": "github",
+          "published_at": "2026-11-22T03:30:41+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "browser-use-release-0.13.8",
+          "date": "2026-08-17",
+          "title": "browser-use/browser-use released 0.13.8",
+          "summary": "browser-use 发布 0.13.8，修复了多个 Agent 和 DOM 处理问题，并更新了 Cerebras 模型支持。",
+          "score": 7.5,
+          "url": "https://github.com/browser-use/browser-use/releases/tag/0.13.8"
+        },
+        {
+          "update_id": "browser-use-1.0.0",
+          "date": "2026-11-10",
+          "title": "browser-use 1.0.0 发布：AI 浏览器代理重写引擎，代码砍掉 80%",
+          "summary": "browser-use 发布 1.0.0 正式版，重写引擎让 AI 代理在持久 REPL 中直接写 Python 控制 Chrome，代码减少 80%，性能提升最高 33 分，成本降低 2.7-5.2 倍。",
+          "score": 8.5,
+          "url": "https://github.com/browser-use/browser-use/releases/tag/1.0.0"
+        },
+        {
+          "update_id": "browser-use-1.0.3rc1",
+          "date": "2026-11-12",
+          "title": "browser-use/browser-use released 1.0.3rc1",
+          "summary": "Browser-use 发布了 1.0.3 候选版，修复了 CLI 和容器中浏览器连接等问题，让开发者更容易构建浏览器自动化 Agent。",
+          "score": 7.2,
+          "url": "https://github.com/browser-use/browser-use/releases/tag/1.0.3rc1"
+        },
+        {
+          "update_id": "browser-use-1-0-4",
+          "date": "2026-11-14",
+          "title": "browser-use/browser-use released 1.0.4",
+          "summary": "browser-use 发布 1.0.4，通过批量清理旧截图保住模型缓存，在基准分数不变的情况下把单任务成本从 0.434 美元降到 0.208 美元，做浏览器 Agent 的人可以直接借鉴这个省钱做法。",
+          "score": 7.6,
+          "url": "https://github.com/browser-use/browser-use/releases/tag/1.0.4"
+        },
+        {
+          "update_id": "browser-use-1.0.8rc1",
+          "date": "2026-11-21",
+          "title": "browser-use 发布 1.0.8rc1：无头设备扫码授权、国产模型兼容修复、密码脱敏",
+          "summary": "浏览器 Agent 工具 browser-use 发布候选版，支持在无头机器上扫码授权、修复国产模型思考模式下的卡死，并避免泄露密码，让自动化浏览更可靠。",
+          "score": 7.4,
+          "url": "https://github.com/browser-use/browser-use/releases/tag/1.0.8rc1"
+        },
+        {
+          "update_id": "browser-use-1.0.8",
+          "date": "2026-11-22",
+          "title": "browser-use 1.0.8：让浏览器 Agent 更安全、更易远程协作",
+          "summary": "browser-use 发布 1.0.8 版本，改进了无 API key 的远程审批、思考模式兼容和密码保护，让浏览器 Agent 更易用安全。",
+          "score": 7.8,
+          "url": "https://github.com/browser-use/browser-use/releases/tag/1.0.8"
+        }
+      ],
+      "usage_flow": [
+        "安装：`uv add 'browser-use==1.0.0'` 并设置 API key",
+        "写 Python 脚本创建 Agent 并描述任务，如 `'Find the number of stars of the browser-use repo'`",
+        "Agent 在持久 REPL（交互式执行环境：可以一行行运行代码并保留状态的地方）里写 Python 代码，通过 Chrome DevTools Protocol 直接控制浏览器",
+        "获取最终结果：`agent.run_sync().final_result()`",
+        "pip install 'browser-use==1.0.8rc1' 安装候选版",
+        "写 Python 脚本让 AI Agent 执行网页任务（如填表、抓取数据）",
+        "若在无头机器运行，终端会打印授权链接和验证码，用手机扫码或输入确认",
+        "Agent 自动完成浏览任务，日志中密码字段会被脱敏",
+        "pip install 指定版本，用 Python 代码描述要让 AI 做的网页任务",
+        "Agent 自动打开浏览器、分析页面、点击输入，像人一样操作网页",
+        "需要人工确认时，终端显示链接和验证码，用户在手机或另一台电脑上批准",
+        "任务完成后获取 AI 返回的结果或数据"
+      ],
+      "learning_points": [
+        "Agent：不只是问答，而是能循环执行'思考-行动-观察'多轮直到任务完成的程序",
+        "REPL：交互式执行环境，代码一行行跑、变量状态保留，适合 AI 边写边试边改",
+        "Function Calling：让 AI 输出结构化指令去调用工具，这里扩展成让 AI 直接写完整代码来'调用'浏览器",
+        "Agent：不只是回答问题的 AI，而是能自己决定调用工具、执行多步操作的系统",
+        "无头浏览器（Headless）：没有图形界面的浏览器，适合跑在服务器上，但遇到需要人机交互的环节就要想办法绕过",
+        "Function Calling（函数调用）：LLM 输出结构化指令让程序执行特定操作，本项目里就是让模型决定「点击哪个元素」「输入什么文字」",
+        "Agent：不是一问一答的聊天机器人，而是能循环\"观察-思考-行动\"、自主完成多步骤任务的 AI 系统",
+        "Function Calling（工具调用）：大模型输出结构化指令（如 click、type）让外部程序执行，而不是只返回文字",
+        "Headless 环境：没有屏幕的服务器，需要特殊方式让人类远程监督和干预 AI 行为"
+      ],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "开源",
+        "浏览器自动化",
+        "AI Agent",
+        "Browser-use",
+        "Browser Agent",
+        "成本优化",
+        "浏览器Agent",
+        "DeepSeek",
+        "Qwen"
+      ]
+    },
+    {
+      "product_id": "product-e26d07ae938466d4",
+      "product_name": "PcapAnalyzer",
+      "builder_name": "sebaandrada",
+      "first_seen": "2026-11-22",
+      "last_seen": "2026-11-22",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "开发者发布自托管网络包分析工具 PcapAnalyzer，内置 27 个问题检测器，帮助排查网络故障，可作为垂直工具产品参考。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.2,
+      "summary": "开发者发布自托管网络包分析工具 PcapAnalyzer，内置 27 个问题检测器，帮助排查网络故障，可作为垂直工具产品参考。",
+      "title": "PcapAnalyzer – self-hosted pcap analyzer with 27 problem detectors",
+      "url": "https://github.com/sebaandrada-cell/PcapAnalyzer",
+      "sources": [
+        {
+          "url": "https://github.com/sebaandrada-cell/PcapAnalyzer",
+          "title": "PcapAnalyzer – self-hosted pcap analyzer with 27 problem detectors",
+          "source_type": "hackernews",
+          "published_at": "2026-11-21T22:09:58+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "pcapanalyzer-launch",
+          "date": "2026-11-22",
+          "title": "PcapAnalyzer – self-hosted pcap analyzer with 27 problem detectors",
+          "summary": "开发者发布自托管网络包分析工具 PcapAnalyzer，内置 27 个问题检测器，帮助排查网络故障，可作为垂直工具产品参考。",
+          "score": 7.2,
+          "url": "https://github.com/sebaandrada-cell/PcapAnalyzer"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "网络分析",
+        "自托管",
+        "开发者工具"
+      ]
+    },
+    {
+      "product_id": "product-0597f79ea4ad2221",
+      "product_name": "DeepSeek Harness",
+      "builder_name": "CSDN",
+      "first_seen": "2026-11-22",
+      "last_seen": "2026-11-22",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "CSDN介绍DeepSeek Harness这一TypeScript原生Agent编排工具，解决Agent开发中的编排问题，对构建者有参考价值。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "china",
+      "score": 7.2,
+      "summary": "CSDN介绍DeepSeek Harness这一TypeScript原生Agent编排工具，解决Agent开发中的编排问题，对构建者有参考价值。",
+      "title": "Deepseek Harness：TypeScript原生的Agent编排中枢 - CSDN",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1ZZUwzMk82dVNMX3pRbVM3Wm8xLU14WWdtR0QtR2FLdTdTUEV0VjhyTVhXZkRwV2xJYmxIVVlveGQ4R2pfV3d2c29vM1VTczRCTXVuTm9jazh3ZDFoMnVJ?oc=5",
+      "sources": [
+        {
+          "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1ZZUwzMk82dVNMX3pRbVM3Wm8xLU14WWdtR0QtR2FLdTdTUEV0VjhyTVhXZkRwV2xJYmxIVVlveGQ4R2pfV3d2c29vM1VTczRCTXVuTm9jazh3ZDFoMnVJ?oc=5",
+          "title": "Deepseek Harness：TypeScript原生的Agent编排中枢 - CSDN",
+          "source_type": "google_news",
+          "published_at": "2026-11-21T15:06:40+00:00"
+        },
+        {
+          "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE4wd0JWNXNkT3NmUy1UV09ldm1iSXY3dTllQ1o1ZFg5MFZPS1BRY3RCTUJLc05UYWJTb1R6VHhoT0NXM3hJQU5xLQ?oc=5",
+          "title": "V4全系列模型上线后，DeepSeek Harness开发者预览版开放测试 - 财联社",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "deepseek-harness-agent-orchestration",
+          "date": "2026-11-22",
+          "title": "Deepseek Harness：TypeScript原生的Agent编排中枢 - CSDN",
+          "summary": "CSDN介绍DeepSeek Harness这一TypeScript原生Agent编排工具，解决Agent开发中的编排问题，对构建者有参考价值。",
+          "score": 7.2,
+          "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1ZZUwzMk82dVNMX3pRbVM3Wm8xLU14WWdtR0QtR2FLdTdTUEV0VjhyTVhXZkRwV2xJYmxIVVlveGQ4R2pfV3d2c29vM1VTczRCTXVuTm9jazh3ZDFoMnVJ?oc=5"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Agent",
+        "TypeScript",
+        "DeepSeek"
+      ]
+    },
     {
       "product_id": "product-61e05d3a740816a5",
       "product_name": "Inkling 2 Mini",
@@ -191,145 +510,6 @@
         "语音",
         "Codex",
         "开发者工具"
-      ]
-    },
-    {
-      "product_id": "product-74fa894c1b640ab0",
-      "product_name": "browser-use",
-      "builder_name": "gregpr07",
-      "first_seen": "2026-08-17",
-      "last_seen": "2026-11-21",
-      "occurrence_count": 5,
-      "intelligence_type": "product_case",
-      "evidence_status": "first_party",
-      "target_user": "需要让 AI 自动操作网页的开发者、做浏览器自动化产品的构建者",
-      "user_problem": "1) 在无显示器的服务器/SSH 环境里，没法扫码或输入密码授权 AI 操作浏览器；2) DeepSeek、Qwen 等国产模型在「思考模式」下会拒绝强制结束调用，导致任务卡死；3) AI 日志里可能意外打印出用户填的密码；4) 小余额账户调用云端浏览器时，因预留 token 过多而被拒绝",
-      "what_it_is": "一个开源的浏览器 Agent 框架，让 AI 能自动操控网页浏览器完成任务。",
-      "ai_role": "AI 作为 Agent（智能体，能自主决策并执行多步操作的 AI）负责理解任务、决定点击/输入/滚动等浏览器操作，并通过 Playwright 实际执行",
-      "implementation_idea": "框架把「用户给的任务」拆成一步步浏览器操作，每步让 LLM 决定下一步做什么，再通过 Playwright 驱动真实浏览器执行。本次更新加了：设备码授权流程（类似 CLI 登录 GitHub 时的体验）、对模型「思考模式」的兼容重试、以及自动识别 password 输入框并替换为星号再传给 LLM。",
-      "hands_on_exercise": "30 分钟练习：本地安装 browser-use 1.0.8rc1，用 DeepSeek API 写一个小脚本让 AI 自动登录某个测试网站（用假密码），检查终端日志里密码是否显示为星号，并尝试在另一台手机或电脑上完成授权流程",
-      "limitations_or_uncertainties": "候选版本（rc1）非正式稳定版，生产环境需谨慎；Gateway 的 token 预留策略调整是否完全解决小余额问题，需用户实际验证；未公开具体支持哪些国产模型的「思考模式」版本",
-      "region": "global",
-      "score": 7.4,
-      "summary": "浏览器 Agent 工具 browser-use 发布候选版，支持在无头机器上扫码授权、修复国产模型思考模式下的卡死，并避免泄露密码，让自动化浏览更可靠。",
-      "title": "browser-use 发布 1.0.8rc1：无头设备扫码授权、国产模型兼容修复、密码脱敏",
-      "url": "https://github.com/browser-use/browser-use/releases/tag/1.0.8rc1",
-      "sources": [
-        {
-          "url": "https://github.com/browser-use/browser-use/releases/tag/0.13.8",
-          "title": "browser-use/browser-use released 0.13.8",
-          "source_type": "github",
-          "published_at": "2026-08-16T18:48:54+00:00"
-        },
-        {
-          "url": "https://github.com/browser-use/browser-use/releases/tag/1.0.0",
-          "title": "browser-use/browser-use released 1.0.0",
-          "source_type": "github",
-          "published_at": "2026-11-10T02:04:48+00:00"
-        },
-        {
-          "url": "https://browser-use.com/",
-          "title": "Browser Use : Browser Agents and Cloud Browsers",
-          "source_type": "supplemental",
-          "published_at": ""
-        },
-        {
-          "url": "https://github.com/browser-use/browser-use/releases/tag/1.0.3rc1",
-          "title": "browser-use/browser-use released 1.0.3rc1",
-          "source_type": "github",
-          "published_at": "2026-11-12T02:11:28+00:00"
-        },
-        {
-          "url": "https://github.com/browser-use/browser-use/releases/tag/1.0.4",
-          "title": "browser-use/browser-use released 1.0.4",
-          "source_type": "github",
-          "published_at": "2026-11-13T20:50:13+00:00"
-        },
-        {
-          "url": "https://github.com/browser-use/browser-use/releases/tag/1.0.8rc1",
-          "title": "browser-use/browser-use released 1.0.8rc1",
-          "source_type": "github",
-          "published_at": "2026-11-20T22:48:28+00:00"
-        },
-        {
-          "url": "https://grokipedia.com/page/Browser_Use",
-          "title": "Browser Use",
-          "source_type": "supplemental",
-          "published_at": ""
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "browser-use-release-0.13.8",
-          "date": "2026-08-17",
-          "title": "browser-use/browser-use released 0.13.8",
-          "summary": "browser-use 发布 0.13.8，修复了多个 Agent 和 DOM 处理问题，并更新了 Cerebras 模型支持。",
-          "score": 7.5,
-          "url": "https://github.com/browser-use/browser-use/releases/tag/0.13.8"
-        },
-        {
-          "update_id": "browser-use-1.0.0",
-          "date": "2026-11-10",
-          "title": "browser-use 1.0.0 发布：AI 浏览器代理重写引擎，代码砍掉 80%",
-          "summary": "browser-use 发布 1.0.0 正式版，重写引擎让 AI 代理在持久 REPL 中直接写 Python 控制 Chrome，代码减少 80%，性能提升最高 33 分，成本降低 2.7-5.2 倍。",
-          "score": 8.5,
-          "url": "https://github.com/browser-use/browser-use/releases/tag/1.0.0"
-        },
-        {
-          "update_id": "browser-use-1.0.3rc1",
-          "date": "2026-11-12",
-          "title": "browser-use/browser-use released 1.0.3rc1",
-          "summary": "Browser-use 发布了 1.0.3 候选版，修复了 CLI 和容器中浏览器连接等问题，让开发者更容易构建浏览器自动化 Agent。",
-          "score": 7.2,
-          "url": "https://github.com/browser-use/browser-use/releases/tag/1.0.3rc1"
-        },
-        {
-          "update_id": "browser-use-1-0-4",
-          "date": "2026-11-14",
-          "title": "browser-use/browser-use released 1.0.4",
-          "summary": "browser-use 发布 1.0.4，通过批量清理旧截图保住模型缓存，在基准分数不变的情况下把单任务成本从 0.434 美元降到 0.208 美元，做浏览器 Agent 的人可以直接借鉴这个省钱做法。",
-          "score": 7.6,
-          "url": "https://github.com/browser-use/browser-use/releases/tag/1.0.4"
-        },
-        {
-          "update_id": "browser-use-1.0.8rc1",
-          "date": "2026-11-21",
-          "title": "browser-use 发布 1.0.8rc1：无头设备扫码授权、国产模型兼容修复、密码脱敏",
-          "summary": "浏览器 Agent 工具 browser-use 发布候选版，支持在无头机器上扫码授权、修复国产模型思考模式下的卡死，并避免泄露密码，让自动化浏览更可靠。",
-          "score": 7.4,
-          "url": "https://github.com/browser-use/browser-use/releases/tag/1.0.8rc1"
-        }
-      ],
-      "usage_flow": [
-        "安装：`uv add 'browser-use==1.0.0'` 并设置 API key",
-        "写 Python 脚本创建 Agent 并描述任务，如 `'Find the number of stars of the browser-use repo'`",
-        "Agent 在持久 REPL（交互式执行环境：可以一行行运行代码并保留状态的地方）里写 Python 代码，通过 Chrome DevTools Protocol 直接控制浏览器",
-        "获取最终结果：`agent.run_sync().final_result()`",
-        "pip install 'browser-use==1.0.8rc1' 安装候选版",
-        "写 Python 脚本让 AI Agent 执行网页任务（如填表、抓取数据）",
-        "若在无头机器运行，终端会打印授权链接和验证码，用手机扫码或输入确认",
-        "Agent 自动完成浏览任务，日志中密码字段会被脱敏"
-      ],
-      "learning_points": [
-        "Agent：不只是问答，而是能循环执行'思考-行动-观察'多轮直到任务完成的程序",
-        "REPL：交互式执行环境，代码一行行跑、变量状态保留，适合 AI 边写边试边改",
-        "Function Calling：让 AI 输出结构化指令去调用工具，这里扩展成让 AI 直接写完整代码来'调用'浏览器",
-        "Agent：不只是回答问题的 AI，而是能自己决定调用工具、执行多步操作的系统",
-        "无头浏览器（Headless）：没有图形界面的浏览器，适合跑在服务器上，但遇到需要人机交互的环节就要想办法绕过",
-        "Function Calling（函数调用）：LLM 输出结构化指令让程序执行特定操作，本项目里就是让模型决定「点击哪个元素」「输入什么文字」"
-      ],
-      "verticals": [],
-      "tags": [
-        "Agent",
-        "开源",
-        "浏览器自动化",
-        "AI Agent",
-        "Browser-use",
-        "Browser Agent",
-        "成本优化",
-        "浏览器Agent",
-        "DeepSeek",
-        "Qwen"
       ]
     },
     {
