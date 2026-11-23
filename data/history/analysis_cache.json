@@ -10806,6 +10806,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "15f0b5c8d823bb4ccf0b4c1088a0b58bd5b2bb544ad22e59b691d88707cfb035": {
+      "created_at": "2026-11-23T07:34:47.730303+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "gall-inkling2mini-24gb-m2",
+        "evidence_status": "first_party",
+        "follow_up": "关注项目后续优化和社区反馈。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:50604195",
+        "intelligence_type": "builder_insight",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Gall",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "构建者发布自定义推理引擎，在 24GB M2 上运行 Inkling 2 Mini，包含内存优化和本地代理实践，属于一手构建经验，对理解本地模型部署有参考价值。",
+        "region": "global",
+        "score": 7.5,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "开发者自建推理引擎 Gall，让 Inkling 2 Mini 在 24GB M2 上运行，通过缓存和卸载降低内存占用，适合本地代理场景。",
+        "tags": [
+          "本地推理",
+          "模型部署"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "1600c4a095f0a699b21a925eb4ba84cddee30ef57edfbce2f64e5620aba480f7": {
       "created_at": "2026-08-25T01:52:33.712595+00:00",
       "model": "deepseek-v4-flash",
@@ -17263,6 +17301,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "21d29a1a1a2c1fc2f4b854c4c24c5e2c543062558e1111eaf8ec37675b59844f": {
+      "created_at": "2026-11-23T07:34:47.729823+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-perplexity-intelligence-post",
+        "evidence_status": "first_party",
+        "follow_up": "关注 OpenAI 是否将困惑度指标用于产品功能或模型选择。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:50601525",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI 官方文章讨论困惑度与模型智能的关系，属于模型能力观察，但内容偏理论，对产品经理的直接可迁移增量有限，且评论区指出文章未定义 perplexity，信息密度一般。",
+        "region": "global",
+        "score": 6.5,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "OpenAI 发文讨论困惑度与智能的关系，但未给出产品化路径，对初学者理解模型能力有帮助但不够直接。",
+        "tags": [
+          "模型能力",
+          "评估指标"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "21d88477e2fda8c4ecaa2114445a5b2820c1526f40c58ba6d590dd55abb0465f": {
       "created_at": "2026-09-25T04:56:21.900517+00:00",
       "model": "deepseek-flash",
@@ -21324,6 +21400,45 @@
           "AI编程",
           "个人产品",
           "游戏"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "290f0c7a4ce89b871d102810bf03cbd9edd76a21d39dd1dc8e3a7629717ba5c9": {
+      "created_at": "2026-11-23T07:34:31.725198+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "riemann-lean-proof-treemap",
+        "evidence_status": "reported",
+        "follow_up": "关注 AI 形式化证明是否催生数学数据工具",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:50606499",
+        "intelligence_type": "model_capability",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "对黎曼猜想 Lean 证明做树状图可视化，属模型能力衍生的有趣展示，但偏学术与可视化，对产品构建迁移价值有限，5.8 分。",
+        "region": "global",
+        "score": 5.8,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "有人把 1700 万行的黎曼猜想 Lean 证明做成树状图，直观展示证明体量主要来自已有定理的形式化。",
+        "tags": [
+          "Lean",
+          "可视化",
+          "AI数学"
         ],
         "target_user": "",
         "verticals": []
@@ -30643,6 +30758,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "3c5d80c18dc2074eefffbd16adfabee6e37bfa5783429fe0d7ebcda90c1eb56b": {
+      "created_at": "2026-11-23T07:34:31.725123+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "smallsf-miniature-sf-live-map",
+        "evidence_status": "reported",
+        "follow_up": "关注评论区提到的 AI 生成 3D 模型工作流是否开源",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:50603589",
+        "intelligence_type": "product_case",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "smallsf.com",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "带实时公交飞机船只的旧金山微缩 3D 地图，评论区有构建者分享用 LLM/Claude Code 约 3 小时复刻同类项目的经验，具备一定构建过程参考，但主体非 AI 产品且被指出缩放后数据缺失，6.8 分。",
+        "region": "global",
+        "score": 6.8,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "有人做了带实时公交、飞机和船只的旧金山微缩 3D 地图，评论区多位构建者分享用 LLM 快速复刻同类地图的做法。",
+        "tags": [
+          "3D地图",
+          "Claude Code",
+          "Side Project"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "3ca3c37d0493d82220d3da3fd3978d08fdb0783a181028c09d17935d50b6c417": {
       "created_at": "2026-07-26T04:07:17.345915+00:00",
       "model": "deepseek-v4-flash",
@@ -32383,6 +32537,44 @@
           "Anthropic",
           "收入",
           "市场信号"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "3f98dac9b02ea56dc2574b308d197d36ff620d6304d80571ac7573ae34b22374": {
+      "created_at": "2026-11-23T07:34:47.730191+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "trix-terminal-workspace-launch",
+        "evidence_status": "first_party",
+        "follow_up": "观察用户反馈和实际使用案例。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:50605218",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Trix",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Show HN 发布终端工作区产品，解决多编码代理状态监控问题，属于 AI 产品案例，但互动极少，缺乏用户反馈证据。",
+        "region": "global",
+        "score": 7.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Trix 发布终端工作区，帮助用户查看哪个编码代理需要介入，是 AI 代理管理工具的新尝试。",
+        "tags": [
+          "AI Agent",
+          "开发者工具"
         ],
         "target_user": "",
         "verticals": []
@@ -36607,6 +36799,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "46dba8023f1b7f212d22a3a00a3e7daf23f9889a4f3f0d108e05a8aa9ba73321": {
+      "created_at": "2026-11-23T07:34:31.724625+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-chief-scientist-ai-speed-limit",
+        "evidence_status": "reported",
+        "follow_up": "关注是否形成可量化的模型能力评估标准",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:ce1e937d25728ecb",
+        "intelligence_type": "model_capability",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "模型公司核心人物关于限制 AI 发展速度的观点，属一手动态但偏治理讨论，未解锁新产品体验，信息量有限，处于 5–6.9 区间。",
+        "region": "global",
+        "score": 5.6,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "OpenAI 首席科学家讨论如何给 AI 发展设速度上限，核心难点是先就衡量速度的指标达成一致。",
+        "tags": [
+          "OpenAI",
+          "AI治理"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "46e003500d835314253a27beb087ec0def1b58f492186637818d7e8b5e4668ab": {
       "created_at": "2026-08-30T05:24:30.077949+00:00",
       "model": "kimi-k2.6",
@@ -38936,6 +39166,44 @@
           "Codex",
           "工程实践",
           "性能优化"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "4b9f36d3fccbe9eed98cee3c394747997f3d340df008618780ecfe2c3e5ba82d": {
+      "created_at": "2026-11-23T07:34:47.730442+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "deepseek-boyfriend-roleplay-quota",
+        "evidence_status": "reported",
+        "follow_up": "无",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "google_news:article:5d27dee8e4b839ec",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "DeepSeek",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "36氪报道 DeepSeek 角色扮演用户因限额受影响，属于用户行为观察，但缺乏产品构建或模型能力增量，标题有煽情色彩。",
+        "region": "china",
+        "score": 5.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "DeepSeek 免费男友角色扮演用户因限额集体失恋，反映情感陪伴场景的算力成本问题。",
+        "tags": [
+          "角色扮演",
+          "用户行为"
         ],
         "target_user": "",
         "verticals": []
@@ -42638,6 +42906,85 @@
       },
       "stage": "candidate_analysis"
     },
+    "520cc39478730574779b55168e5aa24de23cafeb7a3b3926194b2e88591d1acd": {
+      "created_at": "2026-11-23T07:35:42.290739+00:00",
+      "model": "kimi-k2.6",
+      "prompt_version": "deep-v3-beginner",
+      "result": {
+        "ai_role": "未直接参与用户交互流程；本文是 Sherif 作为 Atlassian AI 产品战略负责人，分享他如何带领团队将 AI 融入 Jira、Confluence 等产品的方法论",
+        "evidence_status": "reported",
+        "hands_on_exercise": "30 分钟：打开你常用的一个产品（如 Notion、飞书、或 Jira），列出 3 个 AI 可以辅助的功能场景；再用 Sherif 的'三种 PM'框架判断：如果你是该产品的 PM，你更偏向艺术家/科学家/总经理哪种类型？写下你的优势盲区和需要补的能力",
+        "implementation_idea": "这不是一个可安装的产品，而是一套判断框架：把 PM 的核心工作抽象为'建立共享大脑'（让团队对问题和解法有统一认知），再按个人特质匹配三种发展路径——艺术家重体验直觉、科学家重数据实验、总经理重资源整合与决策",
+        "learning_points": [
+          "第一性原理思维：回到问题本质而非套用现有解决方案，类似 LLM 训练中的'去噪自编码'思路——先理解原始信号再重建",
+          "AI 时代 PM 角色反而扩张：因为 LLM 降低了执行门槛，更需要有人定义'做什么对'和'为什么做'",
+          "Embedding（嵌入）：把文字/概念转成数字向量的技术，Atlassian 用这类技术让 Jira/Confluence 内容可被 AI 理解和关联——你可以理解为给每个文档一个'语义邮编'"
+        ],
+        "limitations_or_uncertainties": "访谈未透露 Atlassian AI 功能的具体技术架构、用户数据或商业化指标；'共享大脑'等概念缺乏可量化的验证标准；文中提到的'Atlassian 比以往招更多初级 PM'未说明具体招聘规模或时间范围",
+        "product_name": "未公开",
+        "sources": [
+          "https://www.lennysnewsletter.com/p/first-principles-what-it-takes-to",
+          "https://youtu.be/hRtmV1mCBSE",
+          "https://open.spotify.com/episode/6z86oeMly6EMwueyyg7xS7",
+          "https://podcasts.apple.com/us/podcast/first-principles-what-it-takes-to-be-a-great/id1627920305?i=1000803422868",
+          "https://x.com/sherifmansour",
+          "https://www.linkedin.com/in/sherifmansour",
+          "https://sherifmansour.medium.com",
+          "https://www.youtube.com/@sherifmansour8057",
+          "https://www.atlassian.com",
+          "https://www.atlassian.com/software/jira",
+          "https://www.atlassian.com/software/confluence"
+        ],
+        "target_users": "正在转型或深耕 AI 领域的产品经理、技术团队管理者",
+        "title_zh": "AI 时代优秀产品经理的第一性原理：Atlassian 资深产品负责人访谈",
+        "usage_flow": [
+          "阅读/收听访谈内容（文字、YouTube、播客三端可选）",
+          "对照 Sherif 提出的三种 PM 类型（艺术家、科学家、总经理）自我定位",
+          "理解'共享大脑'作为 PM 首要职责的具体含义",
+          "将框架应用到自己的团队或求职准备中"
+        ],
+        "user_problem": "AI 技术变化太快，PM 不清楚自己的核心价值是否会被替代，也不知道该培养哪些可迁移能力",
+        "what_it_is": "一篇 Lenny Newsletter 对 Atlassian AI 与产品工艺负责人 Sherif Mansour 的深度访谈，讨论 AI 时代 PM 的核心能力与角色演变"
+      },
+      "stage": "deep_analysis"
+    },
+    "5239bfc57a407fc8bbf0b5b502b93e1c2d1510bfa4cca9adff512ab20067ae82": {
+      "created_at": "2026-11-23T07:34:47.730085+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "lean-formalization-masullo-manuscript",
+        "evidence_status": "reported",
+        "follow_up": "无",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:50605045",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "数学形式化项目进展，涉及 AI 辅助证明但非产品案例，且讨论指出证明本身存疑，对 AI 产品经理参考价值有限。",
+        "region": "global",
+        "score": 5.5,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "数学家使用 Lean 形式化手稿，但证明可靠性存疑，与 AI 产品构建无直接关系。",
+        "tags": [
+          "AI辅助证明"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "52454ea5a97e86c3985632d5242dac8a2203d6542484939a31d2388e611141f3": {
       "created_at": "2026-08-16T01:57:21.976476+00:00",
       "model": "deepseek-v4-flash",
@@ -46044,6 +46391,44 @@
         "tags": [
           "Meta",
           "汇总"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "5939a91ac04c40f1398151ae01d188135aae888ea8e49676a9517204644543d0": {
+      "created_at": "2026-11-23T07:34:47.730484+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "deepseek-weekly-token-65t",
+        "evidence_status": "reported",
+        "follow_up": "关注调用量增长是否带来产品功能或定价变化。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "google_news:article:2d16b73776812677",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "DeepSeek",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "DeepSeek 周调用量达 65 万亿 Token 连续五周霸榜，属于市场数据信号，但缺乏产品构建细节，对产品经理直接启发有限。",
+        "region": "china",
+        "score": 6.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "DeepSeek 周调用量达 65 万亿 Token 连续五周第一，显示其市场热度持续。",
+        "tags": [
+          "调用量",
+          "市场数据"
         ],
         "target_user": "",
         "verticals": []
@@ -53737,6 +54122,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "67056cb9b6c259008121993aa517cd77e02c8420f87b54711adb43b162e20bcd": {
+      "created_at": "2026-11-23T07:34:47.730356+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "six-models-replicate-deepseek-web",
+        "evidence_status": "reported",
+        "follow_up": "关注是否有开源复刻项目或详细评测。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "google_news:article:d97ff454aa383598",
+        "intelligence_type": "model_capability",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "媒体实测六款模型复刻 DeepSeek 网页端，属于模型能力对比，但缺乏一手产品构建细节，且标题有营销色彩。",
+        "region": "china",
+        "score": 6.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "虎嗅实测六款大模型复刻 DeepSeek 网页端，比较还原度和产品改进能力，但未提供可复现代码或用户反馈。",
+        "tags": [
+          "模型对比",
+          "产品复刻"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "670ba4e2aaedba2512db2a942d58583a06d2d641101f4b9d88670f8b68965434": {
       "created_at": "2026-11-16T06:25:27.847755+00:00",
       "model": "deepseek-flash",
@@ -54155,6 +54578,44 @@
         "tags": [
           "Codex",
           "CLI"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "67b36edf20560986aab4fd7c8776ab21d2f6eeea38c231d1e2bc1ce131960c80": {
+      "created_at": "2026-11-23T07:34:31.724911+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "masullo-riemann-hypothesis",
+        "evidence_status": "reported",
+        "follow_up": "不追踪",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:50598441",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": false,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "数学证明争议讨论，与 AI 产品构建弱相关，评论区仅泛泛提及 AI 辅助证明，无产品增量，噪音区间。",
+        "region": "global",
+        "score": 4.5,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "博客讨论 Masullo 关于黎曼猜想的证明尝试，评论区延伸到 AI 辅助数学证明的价值争议。",
+        "tags": [
+          "数学",
+          "AI辅助证明"
         ],
         "target_user": "",
         "verticals": []
@@ -66922,6 +67383,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "80a0d29545144a80a6da6cdba5afe61275716f8a1d50d53871f08438be5d102a": {
+      "created_at": "2026-11-23T07:34:54.101135+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "huaweicloud-deepseek-v4-1-flash-price-cut",
+        "evidence_status": "reported",
+        "follow_up": "降价后是否有开发者分享成本敏感型产品案例。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "google_news:article:f3a4f198f2c91e9b",
+        "intelligence_type": "business_policy",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "DeepSeek-V4.1-Flash-1017",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "华为云发布 DeepSeek-V4.1-Flash-1017 降价通知，属于云厂商定价调整，对开发者成本有实际影响，但非产品体验或模型能力突破，且来源为媒体转述官方通知，信息量有限。",
+        "region": "china",
+        "score": 6.8,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "华为云宣布 DeepSeek-V4.1-Flash-1017 降价，开发者调用成本降低，但未涉及新能力或产品体验变化。",
+        "tags": [
+          "DeepSeek",
+          "华为云",
+          "定价"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "80cc0ed2e3a739c871b2177a8806f89cc65d53c2a08738a0b66ea50af3b585a5": {
       "created_at": "2026-09-20T04:52:54.155971+00:00",
       "model": "deepseek-flash",
@@ -68369,6 +68869,38 @@
         "verticals": []
       },
       "stage": "candidate_analysis"
+    },
+    "83a9fcd12f57c279c70501dd6c8b32724991e310f141e200e87b894d1fdd964c": {
+      "created_at": "2026-11-23T07:35:14.636685+00:00",
+      "model": "kimi-k2.6",
+      "prompt_version": "deep-v3-beginner",
+      "result": {
+        "ai_role": "AI 编码代理（Agent，即自动执行任务的 AI 程序）负责实际写代码、调试等任务；Trix 本身不执行编码，只负责聚合和展示这些 Agent 的状态。",
+        "evidence_status": "early_signal",
+        "hands_on_exercise": "30 分钟练习：打开两个终端窗口，左边运行一个开源编码 Agent（如 aider 或 OpenHands），右边再开一个。观察它们同时运行时的混乱感——没有统一视图，你得来回切换。这就是 Trix 想解决的问题。",
+        "implementation_idea": "未公开。推测是在终端里建一个仪表板，通过 API 或本地进程通信，轮询或接收各 Agent 的心跳/状态事件，类似 tmux 的多窗格管理，但专门给 AI Agent 用。",
+        "learning_points": [
+          "Agent：能自主执行多步骤任务的 AI 程序，不只是聊天，还能调用工具、读写文件",
+          "终端 UI（TUI）：不用浏览器，直接在命令行窗口里用键盘操作的图形界面，开发者常用",
+          "多 Agent 编排：当多个 AI 同时干活时，需要协调和监控，避免它们互相冲突或全部卡住等人"
+        ],
+        "limitations_or_uncertainties": "产品刚在 Show HN 发布，社区讨论极少（仅 2 条简短评论，无实质反馈），未公开技术细节、定价、支持哪些 Agent 类型、是否开源。目前无用户验证的实际使用证据。",
+        "product_name": "Trix",
+        "sources": [
+          "https://trixapp.ai/"
+        ],
+        "target_users": "需要同时运行多个 AI 编码代理的开发者",
+        "title_zh": "Trix：终端工作区，帮你盯紧哪个编码 Agent 需要你",
+        "usage_flow": [
+          "在终端启动 Trix 工作区",
+          "连接多个正在运行的编码 Agent",
+          "Trix 实时显示各 Agent 状态（运行中/等待/报错）",
+          "收到提示后，点击介入需要处理的 Agent"
+        ],
+        "user_problem": "开发者让多个 AI Agent 并行写代码时，不知道哪个卡住了、出错了或需要确认，得逐个窗口检查，效率低。",
+        "what_it_is": "一个在终端里运行的开发者工具，用来同时监控多个 AI 编码代理（Agent）的状态，告诉你哪个需要人工介入。"
+      },
+      "stage": "deep_analysis"
     },
     "83ab504507fcd6ec70553ad7070307c2e3ca08c4fbfc46d9738622107bf7d89d": {
       "created_at": "2026-08-13T02:46:56.534047+00:00",
@@ -70159,6 +70691,44 @@
           "独立开发",
           "产品灵感",
           "AskHN"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "86e90db07da75e16aba7962f555c59b7d5aa928669689092cc2a474bbb51a1c7": {
+      "created_at": "2026-11-23T07:34:47.730402+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "deepseek-free-user-quota",
+        "evidence_status": "reported",
+        "follow_up": "观察限额具体规则和用户反应。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "google_news:article:d8b4b54b59a38d51",
+        "intelligence_type": "business_policy",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "DeepSeek",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "DeepSeek 对免费用户限额，反映调用量增长下的商业策略调整，属于产品运营信号，对理解 AI 产品免费模式有参考价值。",
+        "region": "china",
+        "score": 7.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "DeepSeek 因调用量全球第一开始对免费用户限额，显示免费模式面临算力成本压力。",
+        "tags": [
+          "免费模式",
+          "商业策略"
         ],
         "target_user": "",
         "verticals": []
@@ -79956,6 +80526,43 @@
           "OpenAI",
           "ChatGPT",
           "image generation"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "965359ad0f3533bc1607c5f1151efdb009df8e255e07f25a0c26b07e8e19683d": {
+      "created_at": "2026-11-23T07:34:47.729920+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "deflock-facebook-group-suspended",
+        "evidence_status": "reported",
+        "follow_up": "无",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:50607498",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "社交媒体平台内容审核事件，与 AI 产品、模型能力或构建实践无关，属于弱相关噪音。",
+        "region": "global",
+        "score": 3.0,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "Facebook 群组被暂停，讨论平台审核争议，与 AI 产品无关。",
+        "tags": [
+          "平台治理"
         ],
         "target_user": "",
         "verticals": []
@@ -92062,6 +92669,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "ac352f0e5f86b09eba642874e20fa5588776613524620ffe1d29f2d4f029761c": {
+      "created_at": "2026-11-23T07:34:31.725319+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "assume-people-not-interested-blog-post",
+        "evidence_status": "reported",
+        "follow_up": "不追踪",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:50603143",
+        "intelligence_type": "builder_insight",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "写作与传播经验分享，与 AI 产品构建弱相关，评论区仅零星提到 LLM 爬虫，无产品增量，5.2 分。",
+        "region": "global",
+        "score": 5.2,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "一篇博客主张写作者应假设读者对你的文章不感兴趣，评论区讨论写作动机与 LLM 爬虫对内容分发的影响。",
+        "tags": [
+          "写作",
+          "内容分发"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "ac38ab8dbe8f0b26a92b2a2d94a338f2324546703dbfc43004e0606a00192567": {
       "created_at": "2026-08-15T01:49:36.491896+00:00",
       "model": "deepseek-v4-flash",
@@ -98681,6 +99326,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "b791e2c6ce891d0d2d1392c12305d21790afe0a5ec85d9b0dff3c7bb41607f39": {
+      "created_at": "2026-11-23T07:34:31.724663+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "binding-of-isaac-ai-music-removed",
+        "evidence_status": "reported",
+        "follow_up": "关注 AI 生成内容在消费产品中的披露与用户接受度",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:ec635478f8484194",
+        "intelligence_type": "product_case",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "The Binding of Isaac: Repentance Plus",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "真实用户反馈驱动的产品事件：玩家发现游戏使用 Suno 生成音乐后差评轰炸，开发者移除 AI 音乐。对做 AI 生成内容产品的人有用户接受度警示价值，但非构建过程或新能力，6 分档。",
+        "region": "global",
+        "score": 6.4,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "《以撒的结合》资料片被玩家发现使用 Suno 生成的 AI 音乐后遭差评轰炸，开发者已移除相关曲目。",
+        "tags": [
+          "AI音乐",
+          "用户反馈",
+          "游戏"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "b798665df7cdaf876d562613cdfff127a53397819f1efc6ec0a72aed43f84ed2": {
       "created_at": "2026-10-03T05:17:15.276710+00:00",
       "model": "deepseek-flash",
@@ -99134,6 +99818,46 @@
           "Agent",
           "安全",
           "OpenAI"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "b82c6df8af7282bc632b95a3f8683e23b31b8cd6e4be3632fc8ba1ad11f774e3": {
+      "created_at": "2026-11-23T07:34:31.725011+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "local-ai-beginner-guide-inkling-qwen-unsloth",
+        "evidence_status": "reported",
+        "follow_up": "关注本地小模型在消费级硬件上的可用性进展",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:50603845",
+        "intelligence_type": "builder_insight",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "面向初学者的本地 AI 入门指南，评论区给出真实硬件成本与可运行模型经验（P40、Qwen 量化、llama.cpp），对想动手跑模型的初学者有可操作增量，但属教程聚合非一手产品，7.2 分。",
+        "region": "global",
+        "score": 7.2,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "一篇面向初学者的本地 AI 指南介绍 Inkling、Qwen 和 Unsloth，评论区补充了低成本显卡和量化模型的真实运行经验。",
+        "tags": [
+          "本地部署",
+          "Qwen",
+          "Unsloth",
+          "初学者"
         ],
         "target_user": "",
         "verticals": []
@@ -104435,6 +105159,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "c389172e66d742f00553c9d953dd543130cea17cbf8587bb1a4c27410f29038f": {
+      "created_at": "2026-11-23T07:34:31.724760+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "simonwillison-select-styling-tool",
+        "evidence_status": "first_party",
+        "follow_up": "关注其后续是否沉淀为可复用前端工具",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:simonwillison.net_atom_everything_:b0c1b6250591975f",
+        "intelligence_type": "builder_insight",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Select Styling Specimens",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "构建者一手记录：Simon Willison 用 Claude 生成一个展示 select 框样式的工具页，完整展示“遇到小问题—写提示词—得到可用页面”的过程，对初学者理解 AI 在构建中的角色有直接迁移价值，但体量小，7.6 分。",
+        "region": "global",
+        "score": 7.6,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Simon Willison 嫌浏览器 select 框样式不统一，让 Claude 生成一个展示各种样式的工具页并挑出自己喜欢的 CSS。",
+        "tags": [
+          "Claude",
+          "Vibe Coding",
+          "小工具"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "c38eb4b437f6b4242623701e94509e8b3840fcaf761b38b1eb9ef88b06b4dd15": {
       "created_at": "2026-08-18T01:50:29.176239+00:00",
       "model": "deepseek-v4-flash",
@@ -106468,6 +107231,43 @@
           "RSI",
           "AI安全",
           "行业观察"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "c7543857dc4927d046e0f52556e1a587ac9edca1a46d9a0245fef29cfc608b9a": {
+      "created_at": "2026-11-23T07:34:47.730162+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "hammerspoon-2-beta1",
+        "evidence_status": "first_party",
+        "follow_up": "无",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:50606408",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Hammerspoon 2",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Hammerspoon 2 重写发布，属于开发者工具更新，但非 AI 产品，与 LLM 产品经理兴趣优先级不匹配。",
+        "region": "global",
+        "score": 6.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Hammerspoon 2 用 JavaScript 重写并发布 Beta，是 macOS 自动化工具更新，与 AI 无关。",
+        "tags": [
+          "开发者工具"
         ],
         "target_user": "",
         "verticals": []
@@ -109247,6 +110047,44 @@
           "医药AI",
           "AI Agent",
           "药物发现"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "cc7e1302e6789f3180c4cfa261a5ba7e6da31fca595707c045a19f44e46b538d": {
+      "created_at": "2026-11-23T07:34:31.724583+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "anthropic-investors-pre-ipo",
+        "evidence_status": "reported",
+        "follow_up": "无产品侧后续，不追踪",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:ab103ac1c3f3fcea",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "纯融资/投资方视角报道，无产品、模型能力或构建过程增量，按规则低于 7 分且属噪音区间。",
+        "region": "global",
+        "score": 3.2,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "TechCrunch 报道 Notable Capital、GIC、Baillie Gifford 在 Anthropic IPO 前大额下注的理由，属纯资本侧信息。",
+        "tags": [
+          "融资",
+          "Anthropic"
         ],
         "target_user": "",
         "verticals": []
@@ -124627,6 +125465,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "eb3f4953786a0ae836641663064d680c257880c6af85df90a8af136f26b86be6": {
+      "created_at": "2026-11-23T07:34:31.724525+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "lenny-pm-ai-era-sherif-mansour",
+        "evidence_status": "reported",
+        "follow_up": "关注文中是否给出具体 AI 产品案例与可操作清单",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "newsletter:feed:650345130914650f6fe5",
+        "intelligence_type": "builder_insight",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Lenny Newsletter 访谈 Sherif Mansour 谈 AI 时代 PM 的第一性原理，属于高信噪比行业观察，对转型 AI 产品经理的读者有可迁移的方法论增量，但缺少具体产品案例与可验证实践证据，未达 8 分。",
+        "region": "global",
+        "score": 7.8,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "Lenny 访谈资深产品人 Sherif Mansour，讨论 AI 时代优秀产品经理需要哪些第一性原理，适合转型者建立判断框架。",
+        "tags": [
+          "AI产品经理",
+          "方法论",
+          "Newsletter"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "eb552baa086935a04af06103b31add810e3a86ed78a2316622e99e48aed1bb11": {
       "created_at": "2026-08-20T01:51:47.748707+00:00",
       "model": "deepseek-v4-flash",
@@ -126424,6 +127301,44 @@
         "tags": [
           "n8n",
           "beta"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "ee9c8e062f9a449f33b5e248da62d404745f28d71dea02fae208ce7f4443c724": {
+      "created_at": "2026-11-23T07:34:54.101091+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "deepseek-funding-9-brokers",
+        "evidence_status": "reported",
+        "follow_up": "融资后是否影响产品路线或模型发布节奏。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "google_news:article:5e1c26af8d14e15c",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "DeepSeek",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "纯融资类信息，9 家券商参投超 95 亿，属于资本层面动态，不涉及产品、模型能力或构建实践，按规则低于 7 分且接近噪音。",
+        "region": "china",
+        "score": 3.5,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "9 家券商参投 DeepSeek 超 95 亿元，属于融资动态，与产品构建和模型能力无直接关系。",
+        "tags": [
+          "DeepSeek",
+          "融资"
         ],
         "target_user": "",
         "verticals": []
@@ -136290,6 +137205,45 @@
         "tags": [
           "搜索",
           "产品功能"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "fff614a8d27651b174433a941ff75db63942757079711c8a84c2216dd2978148": {
+      "created_at": "2026-11-23T07:34:54.101001+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "deepseek-harness-nodejs-guide",
+        "evidence_status": "reported",
+        "follow_up": "是否有开发者基于此教程做出可验证 Demo 或反馈。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "google_news:article:fa3e95473f646461",
+        "intelligence_type": "builder_insight",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "DeepSeek Harness",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "CSDN 教程类内容，讲 Node.js 应用接入 DeepSeek API 的实操方法，对初学者有参考价值，但属于聚合平台转载，无一手产品反馈或构建者经验，信息增量有限。",
+        "region": "china",
+        "score": 6.2,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "CSDN 发布教程，讲 Node.js 应用如何零改造接入 DeepSeek API，适合初学者了解接入流程，但非一手实践反馈。",
+        "tags": [
+          "DeepSeek",
+          "API接入",
+          "教程"
         ],
         "target_user": "",
         "verticals": []
