@@ -9651,6 +9651,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "13f5805b17f6ecc2897155ce244c98b6fe2f2b405574f00fb47370ea3ee6fcb0": {
+      "created_at": "2026-11-24T09:52:45.002974+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "vercel-ai-sdk-xai-5.0.49",
+        "evidence_status": "first_party",
+        "follow_up": "无需特别跟进。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "github:release:456002496",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Vercel AI SDK",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Vercel AI SDK 的 xAI 适配补丁，只修复 MCP 和搜索工具调用参数被置空的问题，属于底层库小修复，对产品思路无增量。",
+        "region": "global",
+        "score": 4.5,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "Vercel 的 AI SDK 修复 xAI 工具调用参数丢失的小问题，让 MCP 和搜索调用能正确带上输入参数。",
+        "tags": [
+          "SDK",
+          "工具调用"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "13fa683e2ae97b6b9392fbd6649b9b9cb7a98af87c19e96e27fa39638cd0ddc0": {
       "created_at": "2026-07-28T03:48:25.674729+00:00",
       "model": "deepseek-v4-flash",
@@ -13304,6 +13342,45 @@
         "tags": [
           "OpenAI",
           "社区投资"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "1a2614927e6d082ec8472b1d862c37468cedd81fb33ec5cce3555fb79a539c5a": {
+      "created_at": "2026-11-24T09:52:32.550888+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "ainews-jensen-openai-pretraining-curve",
+        "evidence_status": "reported",
+        "follow_up": "查找 OpenAI 预训练曲线的官方原文和 Nvidia 人事变动的原始公告。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:www.latent.space_feed:fe73aebd8458fc20",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "AINews 聚合摘要，涉及 Nvidia 创始人回归、OpenAI 公开预训练损失曲线等，但内容为二手汇总，缺乏一手细节和产品可迁移增量，按规则聚合来源降分。",
+        "region": "global",
+        "score": 5.8,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "AINews 汇总 11 月 23 日动态：Nvidia 恢复其创始人职位，OpenAI 公开内部损失曲线并提出共享训练上限；信息为聚合摘要，缺少一手细节。",
+        "tags": [
+          "Nvidia",
+          "OpenAI",
+          "行业观察"
         ],
         "target_user": "",
         "verticals": []
@@ -24352,6 +24429,39 @@
       },
       "stage": "candidate_analysis"
     },
+    "30098ee5bd63a19ee7b1459d11da8cc14c4e28379d615429de1facc8546419db": {
+      "created_at": "2026-11-24T09:53:08.537995+00:00",
+      "model": "kimi-k2.6",
+      "prompt_version": "deep-v3-beginner",
+      "result": {
+        "ai_role": "AI 在流程中同时担任'审查员'（发现代码问题）、'修复者'（自动修改代码）和'批准者'（通过审查后批准合并）三个角色",
+        "evidence_status": "first_party",
+        "hands_on_exercise": "在 Claude 中尝试输入 /ship 命令（需确认账号权限），或对比体验：先用 Claude 生成一段代码，再让它'假装'是评审员审查这段代码，观察它能发现哪些问题；最后思考：你愿意让 AI 自动合并代码吗？什么条件下愿意/不愿意？",
+        "implementation_idea": "Claude Ship 以'技能（Skill）'形式内置在 Claude 中，通过 /ship 命令触发；它会读取代码变更、分析潜在问题、生成修复补丁，最终做出合并决策——类似把原本需要多人协作的代码评审流程，打包成一个自动化的 Agent 工作流",
+        "learning_points": [
+          "Agent：不只是回答问题，而是能自主执行多步骤任务的 AI 系统，这里 Claude 自己完成'审-修-批'完整闭环",
+          "代码评审自动化：把人类工程师的审查逻辑（查 bug、看规范、评可读性）转化为 AI 可执行的检查清单和修复动作",
+          "技能冲突：当平台内置技能与用户自定义技能同名时会产生覆盖问题，这是 AI 工具集成到现有工作流时的常见摩擦点"
+        ],
+        "limitations_or_uncertainties": "Claude Ship 的具体技术架构（如何与 Git 平台集成、支持哪些代码托管服务）、定价模式、企业级权限控制细节均未公开；社区反馈显示它强制覆盖用户的 /ship 自定义技能，且无法单独禁用该内置技能",
+        "product_name": "Claude Ship",
+        "sources": [
+          "https://claude.com/resources/articles/introducing-claude-ship",
+          "https://www.anthropic.com/news/claude-corps"
+        ],
+        "target_users": "使用 Claude 进行 AI 辅助编程的软件工程师和开发团队",
+        "title_zh": "Claude Ship：让 AI Agent 自动审查、修复并批准代码变更",
+        "usage_flow": [
+          "工程师提交代码变更（PR）",
+          "Claude Ship 自动审查代码，发现潜在问题",
+          "Claude 自动修复问题并更新 PR",
+          "Claude 批准通过审查的代码，完成合并"
+        ],
+        "user_problem": "AI 生成代码量激增后，人工代码评审成为瓶颈，堆积的 PR（Pull Request，合并请求）拖慢上线速度",
+        "what_it_is": "Anthropic 官方推出的编码 Agent 功能，让 Claude 自动完成代码审查、修复问题并批准合并请求，解决 AI 生成代码堆积后的评审瓶颈"
+      },
+      "stage": "deep_analysis"
+    },
     "3017c5bb3e567b6a9a7032431a1270cf25c7ef17a2344b7e23f60417bb5fce36": {
       "created_at": "2026-08-11T02:27:37.869708+00:00",
       "model": "deepseek-v4-flash",
@@ -30178,6 +30288,44 @@
         "tags": [
           "大模型",
           "市场排名"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "3b763beaf349d5ce5db9f110afdc626f44241675cc36272e9229c1285d25adca": {
+      "created_at": "2026-11-24T09:52:19.455316+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "viktor-code-producthunt-launch",
+        "evidence_status": "early_signal",
+        "follow_up": "等产品页放出 demo 或真实用户案例后再评估。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:www.producthunt.com_feed:9eb65dc7da30f6db",
+        "intelligence_type": "early_signal",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": true,
+        "market_signal": "",
+        "product_name": "Viktor Code",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Product Hunt 发布页只有一句定位“编码 agent 懂你的仓库，Viktor 懂你的公司”，没有 demo、用户反馈或具体用法，属于营销式预告，信息不足以判断产品价值。",
+        "region": "global",
+        "score": 6.2,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "Viktor Code 在 Product Hunt 上线，定位是比普通编码 agent 更懂公司上下文的编程助手，但目前只有一句宣传语，没有可验证的演示或用户反馈。",
+        "tags": [
+          "编码Agent",
+          "ProductHunt"
         ],
         "target_user": "",
         "verticals": []
@@ -38285,6 +38433,46 @@
         "tags": [
           "企业AI",
           "合作"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "49d4ba7e15013db174b7ec01fa7ce6be584e5614171d5898b8bece9ae7ffd940": {
+      "created_at": "2026-11-24T09:52:19.455286+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "deepmind-quantum-algorithms-agents-formal-verification",
+        "evidence_status": "first_party",
+        "follow_up": "关注该方法是否开源或转化为可复用的 agent 工具链。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:deepmind.google_blog_rss.xml:3ffa5c39e01e3431",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "DeepMind 官方博客，用 agent 团队加形式化验证改进聚变和化学领域的量子算法，属于研究能力动态，离产品体验和初学者可迁移实践较远，且正文信息量极少。",
+        "region": "global",
+        "score": 5.2,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Google DeepMind 用 agent 团队加形式化验证来寻找更快的量子算法，目标是改进聚变和化学计算；这是研究侧进展，暂不直接对应可上手的产品。",
+        "tags": [
+          "Agent",
+          "量子计算",
+          "DeepMind",
+          "研究"
         ],
         "target_user": "",
         "verticals": []
@@ -50964,6 +51152,46 @@
       },
       "stage": "candidate_analysis"
     },
+    "619d959397bf8de0a760c1f0ee6e3c9cc49de0286fe2be2fe615e38f120fcad5": {
+      "created_at": "2026-11-24T09:52:32.550850+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "glm-5-4-loop-transformer",
+        "evidence_status": "verified",
+        "follow_up": "关注 GLM-5.4 是否开放权重、编程基准表现和实际代理编程体验。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:simonwillison.net_atom_everything_:2f3ef0ead000ffc6",
+        "intelligence_type": "model_capability",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "GLM-5.4",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "智谱 Z.ai 发布 GLM-5.4，首次采用循环 Transformer 架构，面向通用编程能力，属于模型公司核心能力动态；Simon Willison 一手试用并引用官方博客，但非官方直接发布，给 8.3。",
+        "region": "china",
+        "score": 8.3,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "中国 AI 公司 Z.ai 发布 GLM-5.4，首次用循环 Transformer 架构在不增加参数量的情况下加深网络，主打通用编程能力；Simon Willison 已上手试用，值得关注新架构对编程代理体验的影响。",
+        "tags": [
+          "GLM",
+          "循环 Transformer",
+          "AI 编程",
+          "智谱"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "61a1bdf5c23fc03e67fcc6bc4878c4adbf293cc08f093b270f27ea6057ce2f8a": {
       "created_at": "2026-10-01T05:50:27.162395+00:00",
       "model": "deepseek-flash",
@@ -55591,6 +55819,46 @@
       },
       "stage": "candidate_analysis"
     },
+    "69714d6b85e8340ea081bbf931121fbaaa04ce026d7c184c97d35ec8a2837916": {
+      "created_at": "2026-11-24T09:52:19.455490+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "claude-ship-launch",
+        "evidence_status": "first_party",
+        "follow_up": "关注 Claude Ship 是否支持只禁用单个内置技能，以及跨模型审查（如用 OpenAI 模型写、Claude 审）的实际采用情况。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:50618513",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Claude Ship",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Anthropic 官方发布 Claude Ship，让 agent 审查、修复并批准代码变更，HN 上有真实用户反馈（覆盖自定义 /ship skill 的冲突、与自建流程高度相似、跨模型审查的分工思路），属于有产品、有反馈的一手案例，对理解 AI 在代码评审环节的作用很有价值。",
+        "region": "global",
+        "score": 8.2,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Anthropic 发布 Claude Ship，让 AI agent 自动审查、修复并批准代码变更，解决 AI 生成代码堆积后的评审瓶颈；HN 用户反馈它和自建流程很像，但会覆盖自定义的 /ship 技能。",
+        "tags": [
+          "编码Agent",
+          "代码评审",
+          "Anthropic",
+          "Claude"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "697801b29164e4c19863315946d01bf0c6a46fa3146196e4e3ae3a94857eae71": {
       "created_at": "2026-09-23T04:44:03.691760+00:00",
       "model": "deepseek-flash",
@@ -56170,6 +56438,46 @@
           "群聊协作",
           "权限隔离",
           "产品设计"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "6b2607806662555c8b34635020feda7876ad539de988e1cb526987fd46ed7fdc": {
+      "created_at": "2026-11-24T09:52:19.455544+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "claude-ship-launch",
+        "evidence_status": "reported",
+        "follow_up": "与官方发布页和 HN 用户反馈对照，确认功能边界和定价。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:bb964c7b302c4e7e",
+        "intelligence_type": "product_case",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Claude Ship",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "TechCrunch 对 Claude Ship 的报道，与 HN 上的官方发布属同一事件，提供媒体视角但信息增量有限；作为权威媒体补充可读，但不如一手发布页和用户反馈有价值。",
+        "region": "global",
+        "score": 7.4,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "TechCrunch 报道 Anthropic 推出 Claude Ship，让 AI agent 审查、修复并批准代码变更，目的是消除 AI 生成代码堆积后的审批瓶颈。",
+        "tags": [
+          "编码Agent",
+          "代码评审",
+          "Anthropic",
+          "Claude"
         ],
         "target_user": "",
         "verticals": []
@@ -61615,6 +61923,45 @@
         "summary_zh": "AI新闻汇总，标题提及多家公司签署放缓AI发展公开信，但正文无细节。",
         "tags": [
           "Newsletter"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "75c7465d018c7c2423939dc7f86d3486e81a22e24823527b669d41fe6153df43": {
+      "created_at": "2026-11-24T09:52:45.004316+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "n8n-2.50.0",
+        "evidence_status": "first_party",
+        "follow_up": "观察 AI Builder 的可用性改进是否带来用户反馈。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "github:release:456531067",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "n8n",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "n8n 正式版更新，修复 AI Agent 节点空内容记忆、AI Builder 字段校验和单节点运行时长等问题，属于低代码 Agent 工作流工具的迭代，对做自动化产品有间接参考，但内容偏 bug 修复，增量有限。",
+        "region": "global",
+        "score": 6.8,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "n8n 发布 2.50.0，修好 AI Agent 节点记忆和 AI Builder 的若干问题，并允许助手单节点运行最长 10 分钟，让自动化工作流更稳。",
+        "tags": [
+          "Agent",
+          "工作流",
+          "低代码"
         ],
         "target_user": "",
         "verticals": []
@@ -67422,6 +67769,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "80b8b049582151d4083ae737e53d33da2a11d39101587735734133e189ac0717": {
+      "created_at": "2026-11-24T09:52:45.002933+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "anthropic-claude-code-v2.1.331",
+        "evidence_status": "first_party",
+        "follow_up": "关注 Code Mode 在多云平台的实际可用性和企业采用反馈。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "github:release:455828330",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Claude Code",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Claude Code 正式版本更新，新增多云平台 Code Mode、API 连通性诊断、语音听写超时提示和 LLM 请求追踪字段，属于 Agent 编码工具的可观测性与企业接入能力增量，对产品经理理解 Agent 产品运维有参考，但偏工程细节。",
+        "region": "global",
+        "score": 7.0,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "Anthropic 更新 Claude Code，让它在更多云平台上支持 Code Mode，并加入 API 连通诊断和请求用量追踪，方便企业排查和监控编码 Agent。",
+        "tags": [
+          "Agent",
+          "Coding",
+          "可观测性"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "80cc0ed2e3a739c871b2177a8806f89cc65d53c2a08738a0b66ea50af3b585a5": {
       "created_at": "2026-09-20T04:52:54.155971+00:00",
       "model": "deepseek-flash",
@@ -68258,6 +68644,45 @@
         "tags": [
           "coding-agent",
           "版本发布"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "824ed27cdca6247d3bfa6d9be6660d085ac19ac14bf34d7edf1f4e084f18e6fb": {
+      "created_at": "2026-11-24T09:52:32.551277+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-agents-python-v0-26-0",
+        "evidence_status": "first_party",
+        "follow_up": "关注后续版本是否引入新的代理编排能力。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "github:release:456262919",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "OpenAI Agents SDK",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI Agents SDK 常规版本更新，主要是 GPT-Live demo 升级和若干 bug 修复，属于开发者工具维护性发布，对产品经理的可迁移增量有限。",
+        "region": "global",
+        "score": 6.5,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "OpenAI 发布 Agents SDK v0.26.0，把 GPT-Live demo 升级到 1.1 并修复若干 bug；这是常规维护版本，没有新的产品能力突破。",
+        "tags": [
+          "OpenAI",
+          "Agents SDK",
+          "开发者工具"
         ],
         "target_user": "",
         "verticals": []
@@ -74515,6 +74940,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "8cb1a36884ae99e12bdcb663bb94d696112951d6314c8df23e2e6b9465a1d6e8": {
+      "created_at": "2026-11-24T09:52:32.550641+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "datasette-charts-0-2a0",
+        "evidence_status": "first_party",
+        "follow_up": "试用 agent.datasette.io 的图表生成流程，观察图表建议与生成工具的具体分工。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:simonwillison.net_atom_everything_:bfe39e5b176c7b57",
+        "intelligence_type": "builder_insight",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "datasette-charts",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Simon Willison 一手发布 datasette-charts 0.2a0，接入 Datasette Agent 后用户可用聊天生成图表，有 Demo 视频和可试用入口，是构建者公开的产品实践；但属于小版本迭代，增量有限。",
+        "region": "global",
+        "score": 7.6,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Simon Willison 发布 datasette-charts 0.2a0，接入 Datasette Agent 后用户直接聊天就能生成图表，并提供了可登录试用的 Demo 视频；这是构建者展示 AI 如何嵌入数据工具的一手案例。",
+        "tags": [
+          "Datasette",
+          "AI 图表",
+          "构建者实践"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "8cc0998f584c17892a01b59f42b89f834e02c4440dd7f3a561447322c0e48741": {
       "created_at": "2026-09-03T04:22:41.978806+00:00",
       "model": "deepseek-v4-flash",
@@ -75715,6 +76179,45 @@
           "Agent",
           "提示注入",
           "OpenAI"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "8e5a30d9b4451c7d8cdeafafc8816f9bf3f33d51a6071fc00834ea8ee572c7fd": {
+      "created_at": "2026-11-24T09:52:19.455394+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "tday-com-producthunt-launch",
+        "evidence_status": "early_signal",
+        "follow_up": "关注是否放出真实功能演示视频和用户反馈。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:www.producthunt.com_feed:17648f4e1f3fda37",
+        "intelligence_type": "early_signal",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": true,
+        "market_signal": "",
+        "product_name": "tday.com",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Product Hunt 发布页只有一句“让编码 agent 给任意功能生成带解说的 demo”，概念对产品经理有吸引力，但缺少演示、反馈和实现细节，只能算早期信号。",
+        "region": "global",
+        "score": 6.4,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "tday.com 在 Product Hunt 上线，让编码 agent 为任意功能生成带解说的演示视频，解决功能展示费时的问题，但目前只有一句介绍，没有可验证的样例。",
+        "tags": [
+          "编码Agent",
+          "Demo生成",
+          "ProductHunt"
         ],
         "target_user": "",
         "verticals": []
@@ -78281,6 +78784,44 @@
         "tags": [
           "语音",
           "编码代理"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "92497b25fd04c29a27fc54f26c4c908c4fb98ba1dc86d9394cbaeceedb42b4de": {
+      "created_at": "2026-11-24T09:52:32.550510+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "ai-datacenters-cop31",
+        "evidence_status": "reported",
+        "follow_up": "无需跟进，除非出现直接影响 AI 产品部署成本的政策变化。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:51168f5ee7eb53cf",
+        "intelligence_type": "business_policy",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "AI 数据中心能耗与气候谈判的泛行业评论，不涉及产品、构建过程或新模型能力，对目标读者无直接可迁移增量。",
+        "region": "global",
+        "score": 3.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "The Verge 报道 AI 数据中心用电激增给联合国气候谈判 COP31 增加压力；这是能源与政策议题，不涉及 AI 产品实践。",
+        "tags": [
+          "数据中心",
+          "气候政策"
         ],
         "target_user": "",
         "verticals": []
@@ -87231,6 +87772,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "a235a531055000b62faf3d038cc13571e757bd011739f4b36a4fc81bab025ff6": {
+      "created_at": "2026-11-24T09:52:19.455517+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "fleetify-producthunt-launch",
+        "evidence_status": "early_signal",
+        "follow_up": "找到 GitHub 仓库后评估其调度能力和实际使用反馈。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:www.producthunt.com_feed:bc13619c84612dec",
+        "intelligence_type": "early_signal",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": true,
+        "market_signal": "",
+        "product_name": "Fleetify",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Product Hunt 发布页只有一句“开源的多 AI 编码 agent 指挥中心”，开源属性对构建者有吸引力，但缺少仓库链接、演示和反馈，信息量有限。",
+        "region": "global",
+        "score": 6.6,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "Fleetify 在 Product Hunt 上线，想做管理多个 AI 编码 agent 的开源指挥中心，解决同时跑多个 agent 时难以统一调度的问题，但目前只有一句介绍，没有仓库或演示。",
+        "tags": [
+          "编码Agent",
+          "开源",
+          "ProductHunt"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "a241ac13555b0f9c00b2cb23ce0d795c7e352adef56651fc7d510f9976704c69": {
       "created_at": "2026-08-21T01:57:24.801438+00:00",
       "model": "deepseek-v4-flash",
@@ -90813,6 +91393,46 @@
       },
       "stage": "candidate_analysis"
     },
+    "a822219ff96df395720bd46a95274397ec747892a1527e15bd37946aa7d89d2f": {
+      "created_at": "2026-11-24T09:52:19.455125+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "openclaw-ankit-maheshwari-jarvis-workflow",
+        "evidence_status": "first_party",
+        "follow_up": "关注他后续是否公开 soul files 模板、子 agent 拆分方式，以及 GLM 5.3 Flash 与 Anthropic 月费的成本对比结论。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "newsletter:feed:0fdd3b5be4ad5d7c5800",
+        "intelligence_type": "builder_insight",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "OpenClaw",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "构建者一手长访谈，详细拆解 OpenClaw 个人助理从审批瓶颈到订餐、打电话、谈判订位的真实使用过程，并公开 soul files、guardrails、子 agent 拆分和模型成本对比，属于可迁移的构建实践，对初学者理解 AI 在具体步骤中如何发挥作用很有价值。",
+        "region": "global",
+        "score": 8.6,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "Innovaccer CTO Ankit Maheshwari 在 Lenny 播客里拆解自己用 OpenClaw 搭的 Jarvis 助理，从替自己处理审批开始，扩展到订午餐、催 Slack 同事、订餐厅和开空调，并讲了让系统可信的 soul files 与护栏设计。",
+        "tags": [
+          "Agent",
+          "个人助理",
+          "构建实践",
+          "OpenClaw"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "a882cc4d1e46da858b7b27c50197ff04e70fa1c020ae5acb66408d6056ed369b": {
       "created_at": "2026-08-02T03:52:32.504168+00:00",
       "model": "deepseek-v4-flash",
@@ -93813,6 +94433,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "ae319de9fefc1414db1cbbdb04d519cca55158cfb65fbb9c4ac1910042a31224": {
+      "created_at": "2026-11-24T09:52:32.550703+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "datasette-agent-0-7a1",
+        "evidence_status": "first_party",
+        "follow_up": "无需单独跟进，可结合 datasette-charts 0.2a0 一起观察。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:simonwillison.net_atom_everything_:cde2e4331c947b3b",
+        "intelligence_type": "builder_insight",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "datasette-agent",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "datasette-agent 0.7a1 是小型技术改进，修复 iframe 侧栏导航以配合 datasette-charts，属于构建过程细节，对初学者可迁移增量有限。",
+        "region": "global",
+        "score": 6.8,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Simon Willison 发布 datasette-agent 0.7a1，改进聊天会话侧栏的页面导航，主要是为了修复 datasette-charts 的 bug；这是构建者公开的小步迭代记录。",
+        "tags": [
+          "Datasette",
+          "Agent",
+          "构建者实践"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "ae5b389a61ce0a49164a85fc07b028b26b15cd1f9ad8efdfd1e0dbe32705fbca": {
       "created_at": "2026-10-02T05:35:11.268219+00:00",
       "model": "deepseek-flash",
@@ -95376,6 +96035,46 @@
           "ChatGPT",
           "插件",
           "Apple"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "b0d9ef5a6545a7cb6b9f78bf8a098e7d8376ddbc293df16899259bc7e4de1f70": {
+      "created_at": "2026-11-24T09:52:32.551560+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-agents-python-v1-0-0-alpha-2",
+        "evidence_status": "first_party",
+        "follow_up": "关注正式版发布和持久化状态格式的迁移说明。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "github:release:455938272",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "OpenAI Agents SDK",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Agents SDK v1.0.0-alpha.2 引入跨 worker 恢复对话、Codex 审批恢复、工具执行钩子和追踪脱敏等，是代理产品构建的重要能力增量；但仍是 alpha 预览，给 7.4。",
+        "region": "global",
+        "score": 7.4,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "OpenAI 发布 Agents SDK v1.0.0-alpha.2，支持跨 worker 恢复对话和待审批操作、恢复 Codex 命令审批、配置工具执行钩子；这是构建可恢复、可审计 AI 代理的重要一步。",
+        "tags": [
+          "OpenAI",
+          "Agents SDK",
+          "Codex",
+          "Agent"
         ],
         "target_user": "",
         "verticals": []
@@ -101708,6 +102407,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "bc32c0634ca751ab2c9ec04e4e509c6d0bd825d5ff9f58a901d7a34ebda3a86a": {
+      "created_at": "2026-11-24T09:52:19.455343+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "frwrd-to-producthunt-launch",
+        "evidence_status": "early_signal",
+        "follow_up": "观察是否有 demo 或用户使用反馈。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:www.producthunt.com_feed:66f6c0a310cf1dd8",
+        "intelligence_type": "early_signal",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": true,
+        "market_signal": "",
+        "product_name": "frwrd.to",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Product Hunt 发布页只有一句“一条消息让 AI 帮你整理 link in bio”，没有演示、反馈或具体机制，属于低信息量营销页。",
+        "region": "global",
+        "score": 5.8,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "frwrd.to 在 Product Hunt 上线，主打用一条消息让 AI 整理个人主页链接，但目前只有一句介绍，缺少可验证的产品细节。",
+        "tags": [
+          "AI工具",
+          "ProductHunt"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "bc34d3cb893f3e348da199b0f5f37d8abefe425f8d011072a83cbef48e0fd6ec": {
       "created_at": "2026-11-10T07:15:16.239450+00:00",
       "model": "deepseek-flash",
@@ -103246,6 +103983,40 @@
         "verticals": []
       },
       "stage": "candidate_analysis"
+    },
+    "bf3b85cffdb69f9686e648c8193852daf2032f778600b3eed6340ab5d9b14233": {
+      "created_at": "2026-11-24T09:53:34.096635+00:00",
+      "model": "kimi-k2.6",
+      "prompt_version": "deep-v3-beginner",
+      "result": {
+        "ai_role": "作为编码 Agent 理解任务、生成代码，并在需要时调用 MCP 工具（比如查文档、跑测试），同时遵守用户设置的权限审批规则",
+        "evidence_status": "first_party",
+        "hands_on_exercise": "30 分钟动手：安装 Codex CLI（需 OpenAI 账号），启动后创建一个新任务让它写个 Python 脚本，故意中断对话，然后用 thread link 功能找回刚才的会话继续；接着试一条 /mcp 命令，按 Tab 看参数补全；最后找一个简单 MCP 工具（如 fetch 网页内容），观察第一次调用时服务器的启动延迟。",
+        "implementation_idea": "核心是在终端界面（TUI）里加了一层对话索引和链接跳转，类似网页书签但用在命令行；Tab 补全靠预定义命令模板匹配；MCP 按需启动用的是'懒加载'思路——工具列表先缓存，真正调用时才 fork 进程；审批人机制则是在执行工具前插一道权限检查，没通过就挂起等人工点确认。",
+        "learning_points": [
+          "Agent：能自主规划步骤、调用工具完成任务的 AI，不只是单次问答",
+          "MCP（Model Context Protocol）：AI 和外部工具/数据源之间的'通用插头'，让 Agent 能查数据库、调 API 等",
+          "Function Calling：LLM 识别'现在该调用某个工具了'并生成参数的能力，是 Agent 动手干活的基础"
+        ],
+        "limitations_or_uncertainties": "GPT-6.2 Astra 和 Sol 的文档更新已出现在内置技能里，但这两个模型是否已全面可用未公开；Amazon Bedrock Runtime 的支持具体覆盖哪些区域未公开；Guardian 审批的同步/异步模式具体延迟表现未公开；该版本为常规迭代，无突破性架构变更。",
+        "product_name": "OpenAI Codex CLI",
+        "sources": [
+          "https://github.com/openai/codex/releases/tag/rust-v0.172.0",
+          "https://github.com/openai/codex/compare/rust-v0.171.0...rust-v0.172.0",
+          "https://en.wikipedia.org/wiki/OpenAI_Codex"
+        ],
+        "target_users": "习惯在终端工作的软件开发者，需要让 AI 代理（Agent）自动写代码、改 bug 并调用外部工具的人",
+        "title_zh": "OpenAI Codex 终端版 0.172.0：会话跳转、命令补全与 MCP 按需启动",
+        "usage_flow": [
+          "在终端运行 codex，用搜索或链接跳转到之前保存的某轮对话",
+          "输入 / 开头的 slash 命令时按 Tab 自动补全参数，比如 /mcp lo 补成 /mcp login",
+          "AI 需要调用外部工具时，MCP 服务器第一次被用到才会启动，不用一直挂着",
+          "在 config.toml 里给特定工具指定审批人，敏感操作得等人确认才执行"
+        ],
+        "user_problem": "以前终端里找历史会话麻烦、打 slash 命令容易输错参数、MCP 外部工具常驻后台浪费资源，而且多 Agent 对话一多就难切换",
+        "what_it_is": "OpenAI Codex 的命令行工具（CLI）的一个常规版本更新，让开发者在终端里更方便地管理多轮 AI 对话和外部工具。"
+      },
+      "stage": "deep_analysis"
     },
     "bf5d325e71cb51018f8bc9f6811d3cbc5e52efa15316d225180a1f057dd14898": {
       "created_at": "2026-09-03T04:22:15.553240+00:00",
@@ -109108,6 +109879,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "cad98f5519a183960067c60deca9e4332c8542ca6efbd72bb8d0ba873837e54a": {
+      "created_at": "2026-11-24T09:52:45.001856+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-codex-rust-0.172.0",
+        "evidence_status": "first_party",
+        "follow_up": "观察后续版本是否把审批人配置和 MCP 按需启动做成产品化默认能力。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "github:release:456141969",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "OpenAI Codex",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI Codex 官方正式版本发布，包含终端内跳转会话、slash 命令参数补全、MCP 服务器按需启动、单工具审批人等具体功能增量，属于可迁移的 Agent 产品交互与权限设计细节，对做 AI 产品有参考价值，但为常规迭代，非突破性能力。",
+        "region": "global",
+        "score": 7.2,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "OpenAI 发布 Codex 0.172.0，让终端里能跳转历史会话、补全命令参数并按需启动 MCP 工具，方便开发者更顺地管理多 Agent 对话。",
+        "tags": [
+          "Agent",
+          "Coding",
+          "MCP"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "cadf247354ede939f327d5ea4211594bab131bbf3097e81fcd6cfa7dabe8c90c": {
       "created_at": "2026-09-02T04:32:24.335960+00:00",
       "model": "deepseek-v4-flash",
@@ -109793,6 +110603,44 @@
           "游戏开发",
           "AI 编程",
           "Demo"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "cbbe6b335a8e4b150ee08c262f2bd8d66cb2ba1a144f1c16a2b5355dadf08d11": {
+      "created_at": "2026-11-24T09:52:32.551584+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-codex-rust-v0-174-0-alpha-1",
+        "evidence_status": "first_party",
+        "follow_up": "等待有实质说明的正式版本发布。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "github:release:456208912",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Codex",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Codex 的 alpha 版本发布，正文只有版本号，没有任何功能说明或可验证增量，属于低信息量发布。",
+        "region": "global",
+        "score": 4.0,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "OpenAI Codex 发布 rust-v0.174.0-alpha.1，但发布说明只有版本号，没有可读的功能变化；信息量过低。",
+        "tags": [
+          "OpenAI",
+          "Codex"
         ],
         "target_user": "",
         "verticals": []
@@ -111543,6 +112391,45 @@
           "Codex",
           "OpenAI",
           "Agent"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "d028b28b20c1f988fe2773471e11a9c76155ab26cbd7de9f166b056e3d9cd6cd": {
+      "created_at": "2026-11-24T09:52:32.550551+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "anthropic-claude-ship-pull-requests",
+        "evidence_status": "reported",
+        "follow_up": "查看 Anthropic 官方公告和 Claude Ship 的实际权限边界、人工审核机制与定价。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:3adef6833c7850f7",
+        "intelligence_type": "model_capability",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Claude Ship",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Anthropic 推出 Claude Ship，让 Claude 自主审查、修复并批准 pull request，属于模型公司核心产品能力更新，能直接启发 AI 编程产品设计；但来源为媒体报道而非官方一手，扣分至 8.1。",
+        "region": "global",
+        "score": 8.1,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Anthropic 发布 Claude Ship，Claude 现在能自己审查、修复并批准代码合并请求，帮工程师更快交付代码；这是 AI 编程代理从辅助走向自主执行的重要一步。",
+        "tags": [
+          "AI 编程",
+          "Agent",
+          "Anthropic"
         ],
         "target_user": "",
         "verticals": []
@@ -114198,6 +115085,45 @@
         "summary_zh": "OpenRouter 列出当前热度最高的五个 AI 模型，但缺乏产品使用细节。",
         "tags": [
           "模型排行"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "d592c0ba9e068ae2c17c8388ab872de566389b47802715d24d35e12994dbf405": {
+      "created_at": "2026-11-24T09:52:19.455369+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "juncts-producthunt-launch",
+        "evidence_status": "early_signal",
+        "follow_up": "等产品放出实际分诊和起草效果的演示。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:www.producthunt.com_feed:2daec35e540a9c85",
+        "intelligence_type": "early_signal",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": true,
+        "market_signal": "",
+        "product_name": "Juncts",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Product Hunt 发布页只有一句“DM 版的 Superhuman，AI 帮你分诊和起草”，没有演示或反馈，属于营销式发布，信息量不足以支撑更高分。",
+        "region": "global",
+        "score": 6.0,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "Juncts 在 Product Hunt 上线，想做私信版的 Superhuman，用 AI 对消息分诊并起草回复，但目前只有一句定位，缺少可验证细节。",
+        "tags": [
+          "AI助手",
+          "私信管理",
+          "ProductHunt"
         ],
         "target_user": "",
         "verticals": []
@@ -119782,6 +120708,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "e030480e5d195e2281456f32a9b00c6e8dc80afe7257596b537eeb4e771ed090": {
+      "created_at": "2026-11-24T09:52:45.001899+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-codex-rust-0.173.0-alpha.5",
+        "evidence_status": "first_party",
+        "follow_up": "等正式版发布说明再评估。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "github:release:456394826",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "OpenAI Codex",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "仅有一行版本号的 alpha 预发布，无任何功能说明或可验证内容，信息量极低。",
+        "region": "global",
+        "score": 3.0,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "OpenAI Codex 发布 0.173.0-alpha.5 预版本，但没有写任何改动内容，无法判断价值。",
+        "tags": [
+          "Agent",
+          "Coding"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "e0321221401a66133279e18d9a99da35a358a784cf148ad9c6fb169d6251f3c8": {
       "created_at": "2026-08-09T02:28:36.839370+00:00",
       "model": "deepseek-v4-flash",
@@ -123477,6 +124441,46 @@
           "Codex",
           "OpenAI",
           "版本发布"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "e7773be4165c330d1fee4b82a6952a10bacb9dfa7be1d2fae47642d90d52075d": {
+      "created_at": "2026-11-24T09:52:19.455253+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-cisco-shirudo-launch",
+        "evidence_status": "first_party",
+        "follow_up": "观察 Shirudo 是否形成订阅式补丁服务，以及社区对权限和长期维护风险的反馈。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:50619630",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Shirudo",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "OpenAI 与 Cisco 官方发布开源运行时 Shirudo，用于给未打补丁的 Linux 系统加防护，属于安全基础设施而非产品构建案例；HN 讨论提供了真实反馈（权限、长期不修补的隐患、订阅化担忧），但对 AI 产品经理的迁移价值有限，且偏底层安全。",
+        "region": "global",
+        "score": 6.8,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "OpenAI 和 Cisco 发布开源运行时 Shirudo，给还没打补丁的 Linux 系统临时加防护，解决漏洞窗口期的安全问题；HN 评论担心它会让团队更懒得长期修补。",
+        "tags": [
+          "安全",
+          "开源",
+          "OpenAI",
+          "Cisco"
         ],
         "target_user": "",
         "verticals": []
@@ -130579,6 +131583,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "f4a593ee95c389c2fffc89bdebbddb45fbe6be85b1ac50c4d190f15842a67ff4": {
+      "created_at": "2026-11-24T09:52:45.005640+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "n8n-beta-2.50.0",
+        "evidence_status": "first_party",
+        "follow_up": "无需跟进。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "github:release:456531131",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": false,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "n8n",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "beta 标签发布内容与 2.50.0 正式版完全重复，属于同一事件的重复条目，无新增信息。",
+        "region": "global",
+        "score": 3.5,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "n8n 的 beta 发布内容与 2.50.0 正式版相同，没有额外新信息。",
+        "tags": [
+          "Agent",
+          "工作流"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "f4b294904e53c95e723ebabdd904cee9e98021704e0d23821129a5b64884694e": {
       "created_at": "2026-10-13T06:47:01.228561+00:00",
       "model": "deepseek-flash",
@@ -131574,6 +132616,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "f660ae05c435f1b35349cc4ccfde6e6422825ec8fa1bebb3021c5520c631d7bd": {
+      "created_at": "2026-11-24T09:52:45.005761+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "ny-ban-car-subscription-fees",
+        "evidence_status": "reported",
+        "follow_up": "观察其他州是否跟进立法，以及车企软件订阅收入模式如何调整。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:50622774",
+        "intelligence_type": "business_policy",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "纽约州立法禁止汽车订阅和后购费用，属于商业政策信号，讨论中涉及软件功能付费解锁的商业模式争议，对做软件订阅产品有间接启发，但与 AI 产品无直接关系，且非一手构建案例。",
+        "region": "global",
+        "score": 5.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "纽约州签署法案禁止车企对已装车功能收订阅费，引发对软件功能后付费模式的讨论，对设计订阅制产品有参考。",
+        "tags": [
+          "订阅制",
+          "商业政策"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "f660c4217aa34d0a65ba116e0f7a50f79274483faa01f3ba7f764b48a2be4fc2": {
       "created_at": "2026-10-22T04:41:53.441783+00:00",
       "model": "deepseek-flash",
@@ -131799,6 +132879,45 @@
           "AI助手",
           "Meta",
           "生成式UI"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "f68bd7beba65897e2352dfbaf3ff3d28ea8e98ec60ecea87466906fa2d1a9042": {
+      "created_at": "2026-11-24T09:52:32.550452+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "supertake-funding-20m",
+        "evidence_status": "reported",
+        "follow_up": "关注 Supertake 是否公开产品 Demo、用户案例和 AI 代理选股的具体工作流。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:techcrunch.com_category_artificial-intelligence_feed_:d256e72cb263fe64",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Supertake",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "融资新闻为主，产品细节仅一句描述，缺乏用户反馈、Demo 或构建过程证据；对 AI 产品经理的可迁移增量有限，按规则纯融资低于 7 分。",
+        "region": "global",
+        "score": 6.2,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Supertake 融资 2000 万美元，让 AI 代理把用户的市场判断变成股票组合，用户不用自己选股；但报道只有融资和一句产品描述，缺少真实使用证据。",
+        "tags": [
+          "AI Agent",
+          "金融科技",
+          "融资"
         ],
         "target_user": "",
         "verticals": []
