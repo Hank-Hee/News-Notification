@@ -1,7 +1,364 @@
 {
   "version": 1,
-  "updated_at": "2026-11-27T08:28:03.788049+00:00",
+  "updated_at": "2026-11-28T07:46:38.004064+00:00",
   "products": [
+    {
+      "product_id": "product-079759eb44953975",
+      "product_name": "DeepSeek Harness",
+      "builder_name": "财联社",
+      "first_seen": "2026-08-16",
+      "last_seen": "2026-11-28",
+      "occurrence_count": 2,
+      "intelligence_type": "model_capability",
+      "evidence_status": "reported",
+      "target_user": "AI 应用开发者、需要编排多模型/多工具流程的技术团队",
+      "user_problem": "开发者想快速搭建能调用多种工具、多步骤协作的 AI 应用时，常要自己写大量胶水代码，重复造轮子",
+      "what_it_is": "DeepSeek 在 V4 全系列模型上线后开放了 Harness 开发者预览版测试，为开发者提供新的模型调用与编排入口。",
+      "ai_role": "DeepSeek 大模型作为「大脑」理解任务、决策调用哪个插件，并生成最终回复",
+      "implementation_idea": "把每个功能（搜索、计算器、文件读取等）都做成独立插件，Harness 作为总调度器，根据用户输入让模型判断该激活哪些插件、按什么顺序执行，再把结果传回模型继续下一步",
+      "hands_on_exercise": "30 分钟：访问 DeepSeek Harness 官网，按文档安装桌面版；尝试运行一个内置示例（如「搜索网页并总结」），观察模型何时触发搜索插件、如何把搜索结果融入最终回答",
+      "limitations_or_uncertainties": "「V4 全系列模型上线」这一说法在提供的原始链接和搜索结果中均未找到官方直接确认，仅见于财联社新闻标题；Harness 与 V4 模型的具体兼容细节、预览版功能边界未公开",
+      "region": "china",
+      "score": 7.8,
+      "summary": "DeepSeek 在 V4 全系列模型上线后开放了 Harness 开发者预览版测试，为开发者提供新的模型调用与编排入口。",
+      "title": "V4全系列模型上线后，DeepSeek Harness开发者预览版开放测试 - 财联社",
+      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE4wd0JWNXNkT3NmUy1UV09ldm1iSXY3dTllQ1o1ZFg5MFZPS1BRY3RCTUJLc05UYWJTb1R6VHhoT0NXM3hJQU5xLQ?oc=5",
+      "sources": [
+        {
+          "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE4wd0JWNXNkT3NmUy1UV09ldm1iSXY3dTllQ1o1ZFg5MFZPS1BRY3RCTUJLc05UYWJTb1R6VHhoT0NXM3hJQU5xLQ?oc=5",
+          "title": "V4全系列模型上线后，DeepSeek Harness开发者预览版开放测试 - 财联社",
+          "source_type": "google_news",
+          "published_at": "2026-08-15T17:50:46+00:00"
+        },
+        {
+          "url": "https://www.deepseek.com/en/harness/",
+          "title": "DeepSeek Harness | Explore the limits of intelligence",
+          "source_type": "supplemental",
+          "published_at": ""
+        },
+        {
+          "url": "https://github.com/deepseek-ai/deepseek-harness",
+          "title": "GitHub - deepseek -ai/ deepseek - harness : DeepSeek Harness ...",
+          "source_type": "supplemental",
+          "published_at": ""
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "deepseek-harness-preview",
+          "date": "2026-08-16",
+          "title": "V4全系列模型上线后，DeepSeek Harness开发者预览版开放测试 - 财联社",
+          "summary": "DeepSeek 在 V4 全系列模型上线后开放 Harness 开发者预览版测试，值得关注其智能体框架能力。",
+          "score": 8.0,
+          "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE4wd0JWNXNkT3NmUy1UV09ldm1iSXY3dTllQ1o1ZFg5MFZPS1BRY3RCTUJLc05UYWJTb1R6VHhoT0NXM3hJQU5xLQ?oc=5"
+        },
+        {
+          "update_id": "deepseek-v4-harness-preview",
+          "date": "2026-10-11",
+          "title": "V4全系列模型上线后，DeepSeek Harness开发者预览版开放测试 - 财联社",
+          "summary": "DeepSeek 在 V4 全系列模型上线后开放了 Harness 开发者预览版测试，为开发者提供新的模型调用与编排入口。",
+          "score": 7.8,
+          "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE4wd0JWNXNkT3NmUy1UV09ldm1iSXY3dTllQ1o1ZFg5MFZPS1BRY3RCTUJLc05UYWJTb1R6VHhoT0NXM3hJQU5xLQ?oc=5"
+        }
+      ],
+      "usage_flow": [
+        "安装 Harness 桌面端或从代码启动 Web 界面",
+        "按需选择/开发插件（如搜索、代码执行、数据库连接等）",
+        "用 Harness 编排插件与 DeepSeek 模型的交互流程",
+        "运行并调试 Agent 任务，观察多步骤执行结果"
+      ],
+      "learning_points": [
+        "Agent：让 AI 不仅能聊天，还能自主决定「用什么工具、分几步完成」的系统",
+        "Function Calling（工具调用）：模型识别用户意图后，输出结构化指令去调用外部 API 或插件，而非直接生成答案",
+        "插件化架构：把复杂系统拆成可插拔的小模块，方便复用和扩展"
+      ],
+      "verticals": [],
+      "tags": [
+        "DeepSeek",
+        "智能体",
+        "开发者预览",
+        "模型能力",
+        "开发者工具"
+      ]
+    },
+    {
+      "product_id": "product-f71d3252273f0cee",
+      "product_name": "datasette-charts",
+      "builder_name": "Simon Willison",
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-28",
+      "occurrence_count": 2,
+      "intelligence_type": "builder_insight",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "Simon Willison 发布 datasette-charts 0.4a0，他先让 Claude 写一个实验插件来测试新钩子，发现设计摩擦后改进接口并补上教程网站，展示了用 AI 快速验证产品设计的具体做法。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.8,
+      "summary": "Simon Willison 发布 datasette-charts 0.4a0，他先让 Claude 写一个实验插件来测试新钩子，发现设计摩擦后改进接口并补上教程网站，展示了用 AI 快速验证产品设计的具体做法。",
+      "title": "datasette-charts 0.4a0",
+      "url": "https://simonwillison.net/2026/Nov/27/datasette-charts/",
+      "sources": [
+        {
+          "url": "https://simonwillison.net/2026/Nov/24/datasette-charts/",
+          "title": "datasette-charts 0.2a0",
+          "source_type": "rss",
+          "published_at": "2026-11-24T04:24:29+00:00"
+        },
+        {
+          "url": "https://simonwillison.net/2026/Nov/27/datasette-charts/",
+          "title": "datasette-charts 0.4a0",
+          "source_type": "rss",
+          "published_at": "2026-11-27T23:57:17+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "datasette-charts-0-2a0",
+          "date": "2026-11-24",
+          "title": "datasette-charts 0.2a0",
+          "summary": "Simon Willison 发布 datasette-charts 0.2a0，接入 Datasette Agent 后用户直接聊天就能生成图表，并提供了可登录试用的 Demo 视频；这是构建者展示 AI 如何嵌入数据工具的一手案例。",
+          "score": 7.6,
+          "url": "https://simonwillison.net/2026/Nov/24/datasette-charts/"
+        },
+        {
+          "update_id": "datasette-charts-0.4a0",
+          "date": "2026-11-28",
+          "title": "datasette-charts 0.4a0",
+          "summary": "Simon Willison 发布 datasette-charts 0.4a0，他先让 Claude 写一个实验插件来测试新钩子，发现设计摩擦后改进接口并补上教程网站，展示了用 AI 快速验证产品设计的具体做法。",
+          "score": 7.8,
+          "url": "https://simonwillison.net/2026/Nov/27/datasette-charts/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "Datasette",
+        "AI 图表",
+        "构建者实践",
+        "Claude",
+        "AI 辅助开发",
+        "开源工具",
+        "插件设计"
+      ]
+    },
+    {
+      "product_id": "product-703984a0af1048c7",
+      "product_name": "Android Intelligence / Create my widget（Gemini 驱动）",
+      "builder_name": "Allison Johnson",
+      "first_seen": "2026-11-28",
+      "last_seen": "2026-11-28",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "reported",
+      "target_user": "不想折腾代码、但想快速解决个人小问题的普通 Android 用户，比如通勤族",
+      "user_problem": "记者每天等公交时，需要点开特定 App、找到对应站点、查看实时到站，步骤繁琐，容易错过车",
+      "what_it_is": "Android 手机的一项功能，让用户用自然语言描述需求，由 Gemini AI 直接生成可放在桌面的自定义小组件",
+      "ai_role": "把用户的自然语言需求翻译成可运行的小组件，包括理解意图、调用数据接口、生成界面",
+      "implementation_idea": "用户说话 → Gemini 解析出'要做什么+数据来源+怎么展示' → 自动生成一个轻量级桌面组件。本质是把'写代码做 App'变成'说话出结果'，类似用 AI 当翻译，把你的需求转成机器能执行的界面。",
+      "hands_on_exercise": "打开你手机的 Gemini 或类似 AI 助手，尝试用一句话描述一个你日常的小需求（如'显示今天天气'或'倒计时到周末'），观察 AI 能否直接生成结果或给出可执行的步骤。记录它理解了什么、哪里出错。",
+      "limitations_or_uncertainties": "未公开具体支持的数据源范围、小组件能否长期稳定运行、是否需要特定 Android 版本或 Google 服务；The Verge 为媒体体验，非开发者的一手技术拆解",
+      "region": "global",
+      "score": 7.6,
+      "summary": "The Verge 记者用 Android 的 Gemini 生成自定义小组件来查公交到站，展示了普通用户如何让 AI 直接做出解决自己小问题的工具，值得看它把 AI 能力落到具体生活场景的方式。",
+      "title": "Android 用 Gemini 让用户说话就能做小组件：等公交不用翻 App 了",
+      "url": "https://www.theverge.com/tech/1041801/android-intelligence-create-my-widget-gemini",
+      "sources": [
+        {
+          "url": "https://www.theverge.com/tech/1041801/android-intelligence-create-my-widget-gemini",
+          "title": "Android’s DIY widgets are a bit of vibe-coding fun",
+          "source_type": "rss",
+          "published_at": "2026-11-27T14:00:00+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "android-create-my-widget-gemini",
+          "date": "2026-11-28",
+          "title": "Android 用 Gemini 让用户说话就能做小组件：等公交不用翻 App 了",
+          "summary": "The Verge 记者用 Android 的 Gemini 生成自定义小组件来查公交到站，展示了普通用户如何让 AI 直接做出解决自己小问题的工具，值得看它把 AI 能力落到具体生活场景的方式。",
+          "score": 7.6,
+          "url": "https://www.theverge.com/tech/1041801/android-intelligence-create-my-widget-gemini"
+        }
+      ],
+      "usage_flow": [
+        "用户用口语告诉 Gemini 想要什么小组件，例如'显示我家附近公交站的实时到站'",
+        "Gemini 理解意图并生成对应的小组件",
+        "用户把小组件放到手机桌面",
+        "之后直接在桌面看到实时信息，无需再打开 App"
+      ],
+      "learning_points": [
+        "Function Calling（函数调用）：AI 听懂人话后，去调用外部工具（如公交 API）拿数据的白话解释",
+        "Agent（智能体）：AI 不只是聊天，还能动手帮你完成多步骤任务的白话解释",
+        "RAG（检索增强生成）：AI 可能需要实时查公交数据，而不是只靠训练时的旧知识"
+      ],
+      "verticals": [],
+      "tags": [
+        "Gemini",
+        "Android",
+        "AI 生成应用",
+        "用户体验"
+      ]
+    },
+    {
+      "product_id": "product-b08f81f397972f01",
+      "product_name": "Convex",
+      "builder_name": "MickyTheMouse",
+      "first_seen": "2026-11-28",
+      "last_seen": "2026-11-28",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "需要快速搭建全栈应用的开发者，尤其是使用 AI 辅助编程（vibe coding）的人",
+      "user_problem": "用户以为自己在本地 IDE 里随便试想法，结果插件悄悄把 prompt 发到 Convex 服务器，用户事前没看到明确提示，担心隐私泄露和创意被收集",
+      "what_it_is": "Convex 是一个帮开发者构建和托管全栈应用的平台（数据库+服务器端函数+实时同步），其 AI 编程插件被发现会把用户在本地输入的应用想法自动传到远程服务器",
+      "ai_role": "AI 负责把用户的自然语言描述转成可运行的 Convex 项目代码和配置，属于'代码生成'环节",
+      "implementation_idea": "插件端捕获用户的文本输入，通过 API 发到云端，云端用 LLM 生成对应数据库 schema、服务器函数和前端代码，再打包返回给用户。关键点在于这个网络请求没有显式弹窗确认，被用户误认为纯本地操作。",
+      "hands_on_exercise": "30 分钟验证：打开 Chrome DevTools 的网络面板（或 VS Code 的 Output > Extension Host），安装任意一个 AI 编程插件（如 Convex、Copilot、Claude Code），输入一个假想的应用想法，观察 Network 标签里有没有出现未预期的出站请求，记录域名和请求体大小，判断哪些数据离开了你的电脑",
+      "limitations_or_uncertainties": "未公开：该上传行为具体发生在哪个插件版本、是否有开关可以关闭、上传数据是否被用于模型训练、Convex Chef 关停的具体用户量数据；CEO 称是 quickstart 功能所需，但未展示该功能的产品内提示文案截图",
+      "region": "global",
+      "score": 7.2,
+      "summary": "Convex 的 AI 编程插件被用户发现会把应用想法悄悄传到远程服务器，CEO 在 GitHub issue 里回应称这是 quickstart 功能所需，并提到前身产品 Convex Chef 已关停，提醒做 AI 编程产品的人注意数据边界。",
+      "title": "Convex AI 插件被曝未经告知上传用户应用想法，CEO 回应系 quickstart 功能所需",
+      "url": "https://github.com/convex/convex-backend-skill/issues/64",
+      "sources": [
+        {
+          "url": "https://github.com/convex/convex-backend-skill/issues/64",
+          "title": "Convex skills send the user's app idea to a remote server without telling them",
+          "source_type": "hackernews",
+          "published_at": "2026-11-27T18:02:45+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "convex-skill-prompt-upload-privacy",
+          "date": "2026-11-28",
+          "title": "Convex AI 插件被曝未经告知上传用户应用想法，CEO 回应系 quickstart 功能所需",
+          "summary": "Convex 的 AI 编程插件被用户发现会把应用想法悄悄传到远程服务器，CEO 在 GitHub issue 里回应称这是 quickstart 功能所需，并提到前身产品 Convex Chef 已关停，提醒做 AI 编程产品的人注意数据边界。",
+          "score": 7.2,
+          "url": "https://github.com/convex/convex-backend-skill/issues/64"
+        }
+      ],
+      "usage_flow": [
+        "用户在编辑器里安装 Convex 的 AI 编程插件（如 VS Code 扩展）",
+        "用户输入自然语言描述想做的应用（例如'做一个带实时聊天的 todo 列表'）",
+        "插件自动将这段描述发到 Convex 远程服务器，生成可运行的项目骨架（quickstart）",
+        "用户在本地获得生成的代码，但可能没意识到自己的原始想法已上传"
+      ],
+      "learning_points": [
+        "Function Calling（函数调用）：LLM 不只是聊天，还能触发外部工具——这里 LLM 生成代码后，插件自动调用 Convex 的远程 API 来创建项目",
+        "Embedding（嵌入）：未确认 Convex 是否用了，但 AI 编程产品常把用户 prompt 转成向量存起来做检索或分析，是隐私敏感点",
+        "数据边界：AI 产品的'本地感'不等于'本地算'，用户输入可能经过多个服务器，需要看清隐私政策里的数据流向"
+      ],
+      "verticals": [],
+      "tags": [
+        "Convex",
+        "AI 编程",
+        "隐私",
+        "vibe coding"
+      ]
+    },
+    {
+      "product_id": "product-e7fa40f78c2cb020",
+      "product_name": "Tesseracted LLM OS",
+      "builder_name": "kkm",
+      "first_seen": "2026-11-28",
+      "last_seen": "2026-11-28",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "first_party",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "开发者发布52KB WebAssembly引擎，可在浏览器标签页运行Qwen3.5-2B模型；展示轻量端侧LLM部署可能性，值得关注产品化场景。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "global",
+      "score": 7.2,
+      "summary": "开发者发布52KB WebAssembly引擎，可在浏览器标签页运行Qwen3.5-2B模型；展示轻量端侧LLM部署可能性，值得关注产品化场景。",
+      "title": "Show HN: A 52 KB WebAssembly engine that runs Qwen3.5-2B in a browser tab",
+      "url": "https://tesseracted.com/experiments-llm-os/",
+      "sources": [
+        {
+          "url": "https://tesseracted.com/experiments-llm-os/",
+          "title": "Show HN: A 52 KB WebAssembly engine that runs Qwen3.5-2B in a browser tab",
+          "source_type": "hackernews",
+          "published_at": "2026-11-28T00:16:59+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "wasm-engine-qwen-browser",
+          "date": "2026-11-28",
+          "title": "Show HN: A 52 KB WebAssembly engine that runs Qwen3.5-2B in a browser tab",
+          "summary": "开发者发布52KB WebAssembly引擎，可在浏览器标签页运行Qwen3.5-2B模型；展示轻量端侧LLM部署可能性，值得关注产品化场景。",
+          "score": 7.2,
+          "url": "https://tesseracted.com/experiments-llm-os/"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "WebAssembly",
+        "端侧LLM",
+        "浏览器"
+      ]
+    },
+    {
+      "product_id": "product-fd17f54885935dc5",
+      "product_name": "DeepSeek",
+      "builder_name": "虎嗅网",
+      "first_seen": "2026-11-28",
+      "last_seen": "2026-11-28",
+      "occurrence_count": 1,
+      "intelligence_type": "product_case",
+      "evidence_status": "reported",
+      "target_user": "未公开",
+      "user_problem": "未公开",
+      "what_it_is": "虎嗅网报道DeepSeek安卓端新增对话Token计费统计，免费额度收紧引发付费模式猜测，值得关注AI产品如何量化使用成本。",
+      "ai_role": "未公开",
+      "implementation_idea": "未公开",
+      "hands_on_exercise": "未公开",
+      "limitations_or_uncertainties": "未公开",
+      "region": "china",
+      "score": 7.0,
+      "summary": "虎嗅网报道DeepSeek安卓端新增对话Token计费统计，免费额度收紧引发付费模式猜测，值得关注AI产品如何量化使用成本。",
+      "title": "DeepSeek安卓端新增对话Token计费统计，免费额度收紧引付费模式猜测 - 虎嗅网",
+      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBwMC1PWFdqaGIzdS1lVXMxc3czYWdoYjJicl92d29leGhQR0NIUlY5d0ppN0lrZE16SDdqMDVGWGJmRmY3LXAzUlY1WkYxNlZlVlBIWA?oc=5",
+      "sources": [
+        {
+          "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBwMC1PWFdqaGIzdS1lVXMxc3czYWdoYjJicl92d29leGhQR0NIUlY5d0ppN0lrZE16SDdqMDVGWGJmRmY3LXAzUlY1WkYxNlZlVlBIWA?oc=5",
+          "title": "DeepSeek安卓端新增对话Token计费统计，免费额度收紧引付费模式猜测 - 虎嗅网",
+          "source_type": "google_news",
+          "published_at": "2026-11-27T10:36:44+00:00"
+        }
+      ],
+      "updates": [
+        {
+          "update_id": "deepseek-android-token-billing",
+          "date": "2026-11-28",
+          "title": "DeepSeek安卓端新增对话Token计费统计，免费额度收紧引付费模式猜测 - 虎嗅网",
+          "summary": "虎嗅网报道DeepSeek安卓端新增对话Token计费统计，免费额度收紧引发付费模式猜测，值得关注AI产品如何量化使用成本。",
+          "score": 7.0,
+          "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBwMC1PWFdqaGIzdS1lVXMxc3czYWdoYjJicl92d29leGhQR0NIUlY5d0ppN0lrZE16SDdqMDVGWGJmRmY3LXAzUlY1WkYxNlZlVlBIWA?oc=5"
+        }
+      ],
+      "usage_flow": [],
+      "learning_points": [],
+      "verticals": [],
+      "tags": [
+        "AI产品",
+        "Token计费",
+        "安卓端"
+      ]
+    },
     {
       "product_id": "product-e6aec095528a422e",
       "product_name": "Browser Use",
@@ -110,85 +467,6 @@
         "GTM Agent",
         "构建者访谈",
         "Clay"
-      ]
-    },
-    {
-      "product_id": "product-079759eb44953975",
-      "product_name": "DeepSeek Harness",
-      "builder_name": "财联社",
-      "first_seen": "2026-08-16",
-      "last_seen": "2026-11-27",
-      "occurrence_count": 2,
-      "intelligence_type": "model_capability",
-      "evidence_status": "reported",
-      "target_user": "AI 应用开发者、需要编排多模型/多工具流程的技术团队",
-      "user_problem": "开发者想快速搭建能调用多种工具、多步骤协作的 AI 应用时，常要自己写大量胶水代码，重复造轮子",
-      "what_it_is": "DeepSeek 在 V4 全系列模型上线后开放了 Harness 开发者预览版测试，为开发者提供新的模型调用与编排入口。",
-      "ai_role": "DeepSeek 大模型作为「大脑」理解任务、决策调用哪个插件，并生成最终回复",
-      "implementation_idea": "把每个功能（搜索、计算器、文件读取等）都做成独立插件，Harness 作为总调度器，根据用户输入让模型判断该激活哪些插件、按什么顺序执行，再把结果传回模型继续下一步",
-      "hands_on_exercise": "30 分钟：访问 DeepSeek Harness 官网，按文档安装桌面版；尝试运行一个内置示例（如「搜索网页并总结」），观察模型何时触发搜索插件、如何把搜索结果融入最终回答",
-      "limitations_or_uncertainties": "「V4 全系列模型上线」这一说法在提供的原始链接和搜索结果中均未找到官方直接确认，仅见于财联社新闻标题；Harness 与 V4 模型的具体兼容细节、预览版功能边界未公开",
-      "region": "china",
-      "score": 7.8,
-      "summary": "DeepSeek 在 V4 全系列模型上线后开放了 Harness 开发者预览版测试，为开发者提供新的模型调用与编排入口。",
-      "title": "V4全系列模型上线后，DeepSeek Harness开发者预览版开放测试 - 财联社",
-      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE4wd0JWNXNkT3NmUy1UV09ldm1iSXY3dTllQ1o1ZFg5MFZPS1BRY3RCTUJLc05UYWJTb1R6VHhoT0NXM3hJQU5xLQ?oc=5",
-      "sources": [
-        {
-          "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE4wd0JWNXNkT3NmUy1UV09ldm1iSXY3dTllQ1o1ZFg5MFZPS1BRY3RCTUJLc05UYWJTb1R6VHhoT0NXM3hJQU5xLQ?oc=5",
-          "title": "V4全系列模型上线后，DeepSeek Harness开发者预览版开放测试 - 财联社",
-          "source_type": "google_news",
-          "published_at": "2026-08-15T17:50:46+00:00"
-        },
-        {
-          "url": "https://www.deepseek.com/en/harness/",
-          "title": "DeepSeek Harness | Explore the limits of intelligence",
-          "source_type": "supplemental",
-          "published_at": ""
-        },
-        {
-          "url": "https://github.com/deepseek-ai/deepseek-harness",
-          "title": "GitHub - deepseek -ai/ deepseek - harness : DeepSeek Harness ...",
-          "source_type": "supplemental",
-          "published_at": ""
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "deepseek-harness-preview",
-          "date": "2026-08-16",
-          "title": "V4全系列模型上线后，DeepSeek Harness开发者预览版开放测试 - 财联社",
-          "summary": "DeepSeek 在 V4 全系列模型上线后开放 Harness 开发者预览版测试，值得关注其智能体框架能力。",
-          "score": 8.0,
-          "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE4wd0JWNXNkT3NmUy1UV09ldm1iSXY3dTllQ1o1ZFg5MFZPS1BRY3RCTUJLc05UYWJTb1R6VHhoT0NXM3hJQU5xLQ?oc=5"
-        },
-        {
-          "update_id": "deepseek-v4-harness-preview",
-          "date": "2026-10-11",
-          "title": "V4全系列模型上线后，DeepSeek Harness开发者预览版开放测试 - 财联社",
-          "summary": "DeepSeek 在 V4 全系列模型上线后开放了 Harness 开发者预览版测试，为开发者提供新的模型调用与编排入口。",
-          "score": 7.8,
-          "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE4wd0JWNXNkT3NmUy1UV09ldm1iSXY3dTllQ1o1ZFg5MFZPS1BRY3RCTUJLc05UYWJTb1R6VHhoT0NXM3hJQU5xLQ?oc=5"
-        }
-      ],
-      "usage_flow": [
-        "安装 Harness 桌面端或从代码启动 Web 界面",
-        "按需选择/开发插件（如搜索、代码执行、数据库连接等）",
-        "用 Harness 编排插件与 DeepSeek 模型的交互流程",
-        "运行并调试 Agent 任务，观察多步骤执行结果"
-      ],
-      "learning_points": [
-        "Agent：让 AI 不仅能聊天，还能自主决定「用什么工具、分几步完成」的系统",
-        "Function Calling（工具调用）：模型识别用户意图后，输出结构化指令去调用外部 API 或插件，而非直接生成答案",
-        "插件化架构：把复杂系统拆成可插拔的小模块，方便复用和扩展"
-      ],
-      "verticals": [],
-      "tags": [
-        "DeepSeek",
-        "智能体",
-        "开发者预览",
-        "模型能力",
-        "开发者工具"
       ]
     },
     {
@@ -1310,54 +1588,6 @@
         "代码评审",
         "Anthropic",
         "Claude"
-      ]
-    },
-    {
-      "product_id": "product-f71d3252273f0cee",
-      "product_name": "datasette-charts",
-      "builder_name": "Simon Willison",
-      "first_seen": "2026-11-24",
-      "last_seen": "2026-11-24",
-      "occurrence_count": 1,
-      "intelligence_type": "builder_insight",
-      "evidence_status": "first_party",
-      "target_user": "未公开",
-      "user_problem": "未公开",
-      "what_it_is": "Simon Willison 发布 datasette-charts 0.2a0，接入 Datasette Agent 后用户直接聊天就能生成图表，并提供了可登录试用的 Demo 视频；这是构建者展示 AI 如何嵌入数据工具的一手案例。",
-      "ai_role": "未公开",
-      "implementation_idea": "未公开",
-      "hands_on_exercise": "未公开",
-      "limitations_or_uncertainties": "未公开",
-      "region": "global",
-      "score": 7.6,
-      "summary": "Simon Willison 发布 datasette-charts 0.2a0，接入 Datasette Agent 后用户直接聊天就能生成图表，并提供了可登录试用的 Demo 视频；这是构建者展示 AI 如何嵌入数据工具的一手案例。",
-      "title": "datasette-charts 0.2a0",
-      "url": "https://simonwillison.net/2026/Nov/24/datasette-charts/",
-      "sources": [
-        {
-          "url": "https://simonwillison.net/2026/Nov/24/datasette-charts/",
-          "title": "datasette-charts 0.2a0",
-          "source_type": "rss",
-          "published_at": "2026-11-24T04:24:29+00:00"
-        }
-      ],
-      "updates": [
-        {
-          "update_id": "datasette-charts-0-2a0",
-          "date": "2026-11-24",
-          "title": "datasette-charts 0.2a0",
-          "summary": "Simon Willison 发布 datasette-charts 0.2a0，接入 Datasette Agent 后用户直接聊天就能生成图表，并提供了可登录试用的 Demo 视频；这是构建者展示 AI 如何嵌入数据工具的一手案例。",
-          "score": 7.6,
-          "url": "https://simonwillison.net/2026/Nov/24/datasette-charts/"
-        }
-      ],
-      "usage_flow": [],
-      "learning_points": [],
-      "verticals": [],
-      "tags": [
-        "Datasette",
-        "AI 图表",
-        "构建者实践"
       ]
     },
     {

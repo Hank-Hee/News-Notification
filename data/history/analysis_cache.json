@@ -2383,6 +2383,46 @@
       },
       "stage": "candidate_analysis"
     },
+    "05a109afb79e1cda05e8a43a592aaaab5e0f5a2e81bc2920388900deafa6f613": {
+      "created_at": "2026-11-28T07:45:33.056661+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "convex-skill-prompt-upload-privacy",
+        "evidence_status": "first_party",
+        "follow_up": "关注 Convex 是否修改插件默认行为、补充隐私说明，以及社区对 quickstart 数据用途的后续追问。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:50669765",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Convex",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Convex 的 AI 编程插件被指未经告知把用户应用想法上传到远程服务器，CEO 在 issue 中亲自回应并说明该上传服务于 quickstart 功能、前身 Convex Chef 已关停；这是有当事人一手回应的产品隐私争议，对做 AI 编程产品的人有直接警示价值。",
+        "region": "global",
+        "score": 7.2,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Convex 的 AI 编程插件被用户发现会把应用想法悄悄传到远程服务器，CEO 在 GitHub issue 里回应称这是 quickstart 功能所需，并提到前身产品 Convex Chef 已关停，提醒做 AI 编程产品的人注意数据边界。",
+        "tags": [
+          "Convex",
+          "AI 编程",
+          "隐私",
+          "vibe coding"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "05aae6f8deb5f984a0371068777df9acf123ea2a215c018e61a6b0b6936a525d": {
       "created_at": "2026-10-16T04:30:52.730679+00:00",
       "model": "deepseek-flash",
@@ -2918,6 +2958,44 @@
         "tags": [
           "方法论",
           "思维模型"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "066b1f2ab853cfa1d7c6da26cde16ad08b2472be9ac6fe2090377903d9c86e4c": {
+      "created_at": "2026-11-28T07:45:51.391350+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "deepseek-valuation-wealth",
+        "evidence_status": "reported",
+        "follow_up": "无",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "google_news:article:7f915a3433d9a021",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "DeepSeek",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "纯财富和估值报道，无产品、技术或构建过程增量，属于噪音。",
+        "region": "china",
+        "score": 3.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "手机新浪网报道梁文锋财富一年翻39倍、DeepSeek估值涨55倍，属于资本层面旧闻，对产品学习无帮助。",
+        "tags": [
+          "估值",
+          "财富"
         ],
         "target_user": "",
         "verticals": []
@@ -5750,6 +5828,45 @@
           "Google",
           "月度汇总",
           "宣传"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "0b79dfcfc31978daa42f9dcf6f4769fa0dd1275e82a8ddd4ebff6ad0c863bdd8": {
+      "created_at": "2026-11-28T07:45:33.056756+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "bouncemarket-show-hn",
+        "evidence_status": "first_party",
+        "follow_up": "观察作者是否根据“下注太快”“忽略球只买便宜份额”等反馈调整机制。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:50667726",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "bouncemarket",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Show HN 的弹球预测市场小游戏，作者公开服务端模拟、SSE 推流和简单规则 AI 交易者的实现细节，有真实用户反馈；但 AI 只是陪玩机器人，不是核心产品价值，与 LLM 产品经理转型关联弱。",
+        "region": "global",
+        "score": 6.2,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "开发者发布 bouncemarket 小游戏，让玩家对弹球落点下注，作者公开了服务端确定性模拟和简单规则 AI 交易者的做法，有真实玩家反馈，但 AI 只用于陪玩，对 LLM 产品启发有限。",
+        "tags": [
+          "Show HN",
+          "小游戏",
+          "AI 交易者"
         ],
         "target_user": "",
         "verticals": []
@@ -11032,6 +11149,45 @@
           "英伟达",
           "硬件",
           "DeepSeek"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "1612049d44643df026a2572e29cbf970dd5fe91812919ec8a1a81907672c910b": {
+      "created_at": "2026-11-28T07:45:43.030144+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "deepseek-v4-tree-speculative-decoding",
+        "evidence_status": "reported",
+        "follow_up": "无",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "google_news:article:12037450bbed9d72",
+        "intelligence_type": "model_capability",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "DeepSeek-V4",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "树形投机解码属底层推理优化，无产品体验或构建思路，对AI产品经理初学者价值低。",
+        "region": "china",
+        "score": 3.5,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "OSCHINA报道DeepSeek-V4的树形投机解码优化；属底层推理技术，不直接催生产品。",
+        "tags": [
+          "DeepSeek",
+          "推理优化",
+          "投机解码"
         ],
         "target_user": "",
         "verticals": []
@@ -18032,6 +18188,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "2230376a4d44a50bb95614d34ccc089cfeb426d3d1ab37dad33bb91a9822c184": {
+      "created_at": "2026-11-28T07:45:51.391316+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "deepseek-paid-model-rumor",
+        "evidence_status": "early_signal",
+        "follow_up": "等待DeepSeek官方公告确认付费模式细节。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "google_news:article:d93e42314efa909d",
+        "intelligence_type": "early_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "DeepSeek",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "21财经报道DeepSeek或将推出付费模式，属于产品商业化早期信号，但仅为推测性报道，无官方确认，证据等级为early_signal。",
+        "region": "china",
+        "score": 6.8,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "21财经报道DeepSeek可能推出付费模式，反映AI大模型免费时代可能结束，值得关注产品商业化路径。",
+        "tags": [
+          "AI产品",
+          "付费模式",
+          "商业化"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "22317f6abcf62608c445b26272982fef913daa9406aecd933bfbfd2bc169be9c": {
       "created_at": "2026-09-01T06:13:58.226487+00:00",
       "model": "deepseek-v4-flash",
@@ -20515,6 +20710,45 @@
         "tags": [
           "金融",
           "安全"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "26524460c500e5990ce4f90ec2e94353da4b0cb0f28015600270d12cd6f57df3": {
+      "created_at": "2026-11-28T07:45:43.029888+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "wasm-engine-qwen-browser",
+        "evidence_status": "first_party",
+        "follow_up": "观察该引擎的GitHub仓库、性能数据和实际应用案例。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:50673018",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Tesseracted LLM OS",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Show HN展示可运行Qwen3.5-2B的52KB WebAssembly引擎，有可验证Demo和代码，属于产品案例，能让初学者理解浏览器端LLM部署，但互动少、技术偏底层，对产品经理迁移价值中等。",
+        "region": "global",
+        "score": 7.2,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "开发者发布52KB WebAssembly引擎，可在浏览器标签页运行Qwen3.5-2B模型；展示轻量端侧LLM部署可能性，值得关注产品化场景。",
+        "tags": [
+          "WebAssembly",
+          "端侧LLM",
+          "浏览器"
         ],
         "target_user": "",
         "verticals": []
@@ -25653,6 +25887,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "316b9888b2e1f1fae3142bdaff5eef326e4fe9a2594d12827305daaacf070fc8": {
+      "created_at": "2026-11-28T07:45:33.056591+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "webrtc-credit-card-skimmer-shopping-sites",
+        "evidence_status": "reported",
+        "follow_up": "无。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:50668145",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "电商网站信用卡盗刷脚本安全事件，与 AI 产品构建无直接关系，属安全新闻噪音。",
+        "region": "global",
+        "score": 2.5,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "有报道称热门购物网站出现利用 WebRTC 的信用卡盗刷脚本，这是安全事件，和 AI 产品构建没有直接关系。",
+        "tags": [
+          "安全",
+          "WebRTC"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "31749fffff5fd9d07e6f5cc2302686b6a8f37a5fc4a0a39d03bb8e30a394f906": {
       "created_at": "2026-08-30T05:23:30.473807+00:00",
       "model": "deepseek-v4-flash",
@@ -25724,6 +25996,46 @@
           "Codex",
           "Agent",
           "alpha"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "31b73e98e9b1c6cfb3a5f6cc0553bc3bcdd086bbc9104ba41fd065fd1927bea9": {
+      "created_at": "2026-11-28T07:45:33.056334+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "datasette-charts-0.4a0",
+        "evidence_status": "first_party",
+        "follow_up": "观察后续是否有第三方基于该钩子做出图表插件，以及 Claude 生成代码在真实项目中的返工比例。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:simonwillison.net_atom_everything_:bedee2e9acb0a56a",
+        "intelligence_type": "builder_insight",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "datasette-charts",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Simon Willison 一手发布 datasette-charts 0.4a0，明确记录用 Claude Opus 5.5 先写实验插件来检验插件钩子设计、再据摩擦点改进 API 的过程，是“用 AI 辅助开发并反哺产品设计”的可迁移实践；但属小版本迭代，影响面有限。",
+        "region": "global",
+        "score": 7.8,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Simon Willison 发布 datasette-charts 0.4a0，他先让 Claude 写一个实验插件来测试新钩子，发现设计摩擦后改进接口并补上教程网站，展示了用 AI 快速验证产品设计的具体做法。",
+        "tags": [
+          "Claude",
+          "AI 辅助开发",
+          "开源工具",
+          "插件设计"
         ],
         "target_user": "",
         "verticals": []
@@ -27653,6 +27965,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "3571a6d3fe5e3a6509b5cca65b67728784b03273be77190410eceb69ba9145a4": {
+      "created_at": "2026-11-28T07:45:51.391645+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "deepseek-quota-gray-test",
+        "evidence_status": "early_signal",
+        "follow_up": "关注DeepSeek官方更新及用户额度使用反馈。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "google_news:article:27bb0ec0c59cddb4",
+        "intelligence_type": "early_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "DeepSeek",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "报道DeepSeek灰度测试消耗额度，属于产品功能变化早期信号，但信息简略且混杂无关广告禁令，证据等级为early_signal。",
+        "region": "china",
+        "score": 6.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "Sohu报道DeepSeek灰度测试消耗额度功能，暗示免费额度可能收紧，值得关注产品计费策略变化。",
+        "tags": [
+          "AI产品",
+          "灰度测试",
+          "额度"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "35760503bb9c75a03ba3dc467b97b73dfe8bc324289cf1474f6ffbe43a293de5": {
       "created_at": "2026-09-27T05:17:22.318771+00:00",
       "model": "deepseek-flash",
@@ -28270,6 +28621,38 @@
         "verticals": []
       },
       "stage": "candidate_analysis"
+    },
+    "3688338046a26da0f02d59a4b689087eb17433d385ecd83156d96984115aa211": {
+      "created_at": "2026-11-28T07:46:15.190140+00:00",
+      "model": "kimi-k2.6",
+      "prompt_version": "deep-v3-beginner",
+      "result": {
+        "ai_role": "把用户的自然语言需求翻译成可运行的小组件，包括理解意图、调用数据接口、生成界面",
+        "evidence_status": "reported",
+        "hands_on_exercise": "打开你手机的 Gemini 或类似 AI 助手，尝试用一句话描述一个你日常的小需求（如'显示今天天气'或'倒计时到周末'），观察 AI 能否直接生成结果或给出可执行的步骤。记录它理解了什么、哪里出错。",
+        "implementation_idea": "用户说话 → Gemini 解析出'要做什么+数据来源+怎么展示' → 自动生成一个轻量级桌面组件。本质是把'写代码做 App'变成'说话出结果'，类似用 AI 当翻译，把你的需求转成机器能执行的界面。",
+        "learning_points": [
+          "Function Calling（函数调用）：AI 听懂人话后，去调用外部工具（如公交 API）拿数据的白话解释",
+          "Agent（智能体）：AI 不只是聊天，还能动手帮你完成多步骤任务的白话解释",
+          "RAG（检索增强生成）：AI 可能需要实时查公交数据，而不是只靠训练时的旧知识"
+        ],
+        "limitations_or_uncertainties": "未公开具体支持的数据源范围、小组件能否长期稳定运行、是否需要特定 Android 版本或 Google 服务；The Verge 为媒体体验，非开发者的一手技术拆解",
+        "product_name": "Android Intelligence / Create my widget（Gemini 驱动）",
+        "sources": [
+          "https://www.theverge.com/tech/1041801/android-intelligence-create-my-widget-gemini"
+        ],
+        "target_users": "不想折腾代码、但想快速解决个人小问题的普通 Android 用户，比如通勤族",
+        "title_zh": "Android 用 Gemini 让用户说话就能做小组件：等公交不用翻 App 了",
+        "usage_flow": [
+          "用户用口语告诉 Gemini 想要什么小组件，例如'显示我家附近公交站的实时到站'",
+          "Gemini 理解意图并生成对应的小组件",
+          "用户把小组件放到手机桌面",
+          "之后直接在桌面看到实时信息，无需再打开 App"
+        ],
+        "user_problem": "记者每天等公交时，需要点开特定 App、找到对应站点、查看实时到站，步骤繁琐，容易错过车",
+        "what_it_is": "Android 手机的一项功能，让用户用自然语言描述需求，由 Gemini AI 直接生成可放在桌面的自定义小组件"
+      },
+      "stage": "deep_analysis"
     },
     "369df2c132c9caa582ac0c8e9aff14a56420d6cab1aaab51c6c6fdb53531375c": {
       "created_at": "2026-10-14T04:51:33.144665+00:00",
@@ -29964,6 +30347,46 @@
           "隐私",
           "AI代理",
           "开源"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "396bb2ca3f9c4c531f278dd08862a1f45fa6b131cf1fd32403734f483f3c4589": {
+      "created_at": "2026-11-28T07:45:33.056046+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "android-create-my-widget-gemini",
+        "evidence_status": "reported",
+        "follow_up": "关注该功能是否向更多机型/地区开放，以及用户自建小组件的实际留存与失败案例。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "rss:www.theverge.com_rss_ai-artificial-intelligence_index.xml:72d33607459a6191",
+        "intelligence_type": "product_case",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Android Create My Widget (Gemini)",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "The Verge 记者亲测 Android 用 Gemini 生成自定义小组件，属于有真实使用反馈的 AI 产品案例，能让初学者理解“用户提需求—AI 生成小组件—解决具体生活问题”的链路；但为媒体体验文而非一手构建过程，深度有限。",
+        "region": "global",
+        "score": 7.6,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "The Verge 记者用 Android 的 Gemini 生成自定义小组件来查公交到站，展示了普通用户如何让 AI 直接做出解决自己小问题的工具，值得看它把 AI 能力落到具体生活场景的方式。",
+        "tags": [
+          "Gemini",
+          "Android",
+          "AI 生成应用",
+          "用户体验"
         ],
         "target_user": "",
         "verticals": []
@@ -31706,6 +32129,44 @@
           "3D地图",
           "Claude Code",
           "Side Project"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "3c962ebf13fc08be02a0fc51a4cf46e559a6a2f0a01773920fb379c2e6ffa0fb": {
+      "created_at": "2026-11-28T07:45:51.391503+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "deepseek-harness-remote-connection",
+        "evidence_status": "reported",
+        "follow_up": "查看官方文档或GitHub仓库验证方案细节。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "google_news:article:ca39db11dc146bdb",
+        "intelligence_type": "model_capability",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "DeepSeek Harness",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "CSDN介绍DeepSeek Harness远程连接方案，属于技术接入教程，对初学者理解LLM服务接入有参考价值，但信源为聚合社区，非一手。",
+        "region": "china",
+        "score": 6.0,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "CSDN发布DeepSeek Harness远程连接方案，帮助开发者标准化接入LLM服务，适合初学者了解技术集成。",
+        "tags": [
+          "LLM接入",
+          "技术教程"
         ],
         "target_user": "",
         "verticals": []
@@ -39053,6 +39514,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "495884e8fbcc3863b5b226f999334541875b967482f87a72c6409b5cc415d17b": {
+      "created_at": "2026-11-28T07:45:43.029863+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "atari-homebrew-awards-cancelled",
+        "evidence_status": "reported",
+        "follow_up": "无",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:50673688",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "复古游戏社区活动取消，与AI产品构建无直接关系，讨论虽涉及AI对创意社区影响，但无具体产品、代码或可迁移实践。",
+        "region": "global",
+        "score": 3.5,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "Atari自制游戏奖因社区环境变化取消，评论讨论AI对业余编程社区的影响；与AI产品经理学习无直接关联。",
+        "tags": [
+          "社区",
+          "AI影响"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "495a2a68b796566b45849810d194a7f3bef345f5d823034f323f466b2d136e80": {
       "created_at": "2026-10-18T04:30:40.807939+00:00",
       "model": "deepseek-flash",
@@ -42477,6 +42976,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "4ffa3c2ce4087f594de8ed94a7f625aebfdf5c81e6b581446c5361a152898f0f": {
+      "created_at": "2026-11-28T07:45:53.180789+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "deepseek-personal-cost-display-gray",
+        "evidence_status": "reported",
+        "follow_up": "关注DeepSeek官方是否正式公布成本显示功能及是否影响免费策略。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "google_news:article:56f2265cce8865d1",
+        "intelligence_type": "product_case",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "DeepSeek",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "转载自低权威站点，非官方公告；灰度显示单轮对话成本是产品体验变化，但官方仍免费，无定价或功能实质更新，对产品经理有参考价值但证据弱。",
+        "region": "china",
+        "score": 6.5,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "DeepSeek在个人端灰度显示单轮对话成本，官方暂仍免费；这透露了模型公司对成本透明化的尝试，但尚无正式发布。",
+        "tags": [
+          "DeepSeek",
+          "成本透明",
+          "灰度测试"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "50024a7fc54668d3c5542afedef1434635ae323c2de6e179668304485c036a59": {
       "created_at": "2026-11-20T07:12:51.688832+00:00",
       "model": "deepseek-flash",
@@ -45706,6 +46244,45 @@
           "身份认证",
           "政策",
           "用户体验"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "5543d90a0e0ce429aab0ff98e708104526019b64a8bde3239a5d08b350b8fa92": {
+      "created_at": "2026-11-28T07:45:33.056500+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "google-deepcrossattention-residual-connections",
+        "evidence_status": "first_party",
+        "follow_up": "观察该技术是否进入 Gemini 正式模型并带来可感知的速度或成本变化。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:50672565",
+        "intelligence_type": "model_capability",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Google Research 提出 DeepCrossAttention 改进 Transformer 残差连接，宣称同等质量下最高快 3 倍，属底层模型架构与训练效率研究，按规则低于 7 分，除非明确解锁新体验；评论中有人提到 Gemini Neon 便宜快速，但无产品证据。",
+        "region": "global",
+        "score": 5.4,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "Google Research 发布 DeepCrossAttention，通过跨层注意力改造残差连接，宣称在模型质量相当的情况下训练最高快 3 倍，属于底层效率研究，对产品经理的直接启发有限。",
+        "tags": [
+          "Google Research",
+          "模型架构",
+          "训练效率"
         ],
         "target_user": "",
         "verticals": []
@@ -51575,6 +52152,45 @@
           "Stripe",
           "OpenRouter",
           "AI网关"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "5fc5bf34730849e31701c55b1b89d4441df436d0b67281014cc183ed8dc3d015": {
+      "created_at": "2026-11-28T07:45:33.056867+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "rayshader-1-0",
+        "evidence_status": "first_party",
+        "follow_up": "关注评论中提到的用 LLM 建模建筑的项目是否公开可验证的流程。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:50667371",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "rayshader",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "R 包 rayshader 发布 1.0，是数据可视化与 3D 渲染工具的重要版本，但非 AI 产品；评论中有人提到用 LLM 建模建筑，仅一笔带过，无实践证据。",
+        "region": "global",
+        "score": 5.0,
+        "skill_signals": [],
+        "source_tier": 1,
+        "summary": null,
+        "summary_zh": "R 语言 3D 渲染包 rayshader 发布 1.0 版本，作者写了详细长文，属于可视化工具的重要更新，但与 LLM 产品构建关联较弱。",
+        "tags": [
+          "R",
+          "数据可视化",
+          "开源"
         ],
         "target_user": "",
         "verticals": []
@@ -60508,6 +61124,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "70589593af2de4b02a582bea973c69b7c2d557c1d4ff4bd001b912de31d6455f": {
+      "created_at": "2026-11-28T07:45:51.391549+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "deepseek-pricing-shift",
+        "evidence_status": "reported",
+        "follow_up": "关注DeepSeek官方定价页面及用户付费意愿反馈。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "google_news:article:de0315393b79f719",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "DeepSeek",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "报道DeepSeek开始精细计费，标志免费换流量时代收尾，对AI产品商业化有观察价值，但缺乏一手数据和用户反馈。",
+        "region": "china",
+        "score": 6.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "手机新浪网报道DeepSeek开始算细账，AI大模型免费换流量时代正在收尾，值得关注产品定价策略转变。",
+        "tags": [
+          "AI产品",
+          "定价",
+          "商业化"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "706e5c58eab159248286c7a4ff36f28d438a869b073278c6a151c3f808aa2e14": {
       "created_at": "2026-10-21T04:44:19.634899+00:00",
       "model": "deepseek-flash",
@@ -67467,6 +68122,38 @@
       },
       "stage": "candidate_analysis"
     },
+    "7cde3587028eafe3c7da37011d0bd6ae610f450eeadad66ae47477b0db717834": {
+      "created_at": "2026-11-28T07:46:37.967382+00:00",
+      "model": "kimi-k2.6",
+      "prompt_version": "deep-v3-beginner",
+      "result": {
+        "ai_role": "AI 负责把用户的自然语言描述转成可运行的 Convex 项目代码和配置，属于'代码生成'环节",
+        "evidence_status": "first_party",
+        "hands_on_exercise": "30 分钟验证：打开 Chrome DevTools 的网络面板（或 VS Code 的 Output > Extension Host），安装任意一个 AI 编程插件（如 Convex、Copilot、Claude Code），输入一个假想的应用想法，观察 Network 标签里有没有出现未预期的出站请求，记录域名和请求体大小，判断哪些数据离开了你的电脑",
+        "implementation_idea": "插件端捕获用户的文本输入，通过 API 发到云端，云端用 LLM 生成对应数据库 schema、服务器函数和前端代码，再打包返回给用户。关键点在于这个网络请求没有显式弹窗确认，被用户误认为纯本地操作。",
+        "learning_points": [
+          "Function Calling（函数调用）：LLM 不只是聊天，还能触发外部工具——这里 LLM 生成代码后，插件自动调用 Convex 的远程 API 来创建项目",
+          "Embedding（嵌入）：未确认 Convex 是否用了，但 AI 编程产品常把用户 prompt 转成向量存起来做检索或分析，是隐私敏感点",
+          "数据边界：AI 产品的'本地感'不等于'本地算'，用户输入可能经过多个服务器，需要看清隐私政策里的数据流向"
+        ],
+        "limitations_or_uncertainties": "未公开：该上传行为具体发生在哪个插件版本、是否有开关可以关闭、上传数据是否被用于模型训练、Convex Chef 关停的具体用户量数据；CEO 称是 quickstart 功能所需，但未展示该功能的产品内提示文案截图",
+        "product_name": "Convex",
+        "sources": [
+          "https://github.com/convex/convex-backend-skill/issues/64"
+        ],
+        "target_users": "需要快速搭建全栈应用的开发者，尤其是使用 AI 辅助编程（vibe coding）的人",
+        "title_zh": "Convex AI 插件被曝未经告知上传用户应用想法，CEO 回应系 quickstart 功能所需",
+        "usage_flow": [
+          "用户在编辑器里安装 Convex 的 AI 编程插件（如 VS Code 扩展）",
+          "用户输入自然语言描述想做的应用（例如'做一个带实时聊天的 todo 列表'）",
+          "插件自动将这段描述发到 Convex 远程服务器，生成可运行的项目骨架（quickstart）",
+          "用户在本地获得生成的代码，但可能没意识到自己的原始想法已上传"
+        ],
+        "user_problem": "用户以为自己在本地 IDE 里随便试想法，结果插件悄悄把 prompt 发到 Convex 服务器，用户事前没看到明确提示，担心隐私泄露和创意被收集",
+        "what_it_is": "Convex 是一个帮开发者构建和托管全栈应用的平台（数据库+服务器端函数+实时同步），其 AI 编程插件被发现会把用户在本地输入的应用想法自动传到远程服务器"
+      },
+      "stage": "deep_analysis"
+    },
     "7ce1a810466e96d582f34b498c3e881f7bfa72c944e2b487eb4d17bb5d9ab374": {
       "created_at": "2026-08-26T01:58:41.401726+00:00",
       "model": "deepseek-v4-flash",
@@ -72012,6 +72699,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "84f34ad96be466b2a5b27d6312fe044395f6cf7a0c775cb3b1b18706fcc17a6c": {
+      "created_at": "2026-11-28T07:45:51.391463+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "deepseek-celebrity-circle",
+        "evidence_status": "reported",
+        "follow_up": "无",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "google_news:article:a00c9506a0cf68fa",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": false,
+        "is_promotional": true,
+        "market_signal": "",
+        "product_name": "DeepSeek",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "标题党式报道DeepSeek大佬圈，无实质产品信息，属于低质量营销内容。",
+        "region": "china",
+        "score": 4.0,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "Sohu报道DeepSeek付费前夜的大佬圈包括黄仁勋，内容偏向八卦和营销，缺乏产品增量。",
+        "tags": [
+          "八卦",
+          "营销"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "851cfbcd36b6a9c197214c96b2234cf352e504243d3e5223a619d8e4383e70c2": {
       "created_at": "2026-11-14T06:19:26.555678+00:00",
       "model": "deepseek-flash",
@@ -75497,6 +76222,45 @@
           "MCP",
           "Agent",
           "反馈"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "8a7da0e8ea5d73e5dcedd7f312e10c1b05fafc3c74a8b9d1c86e1b09493459de": {
+      "created_at": "2026-11-28T07:45:43.030112+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "zhihu-deepseek-content-partnership",
+        "evidence_status": "reported",
+        "follow_up": "关注知乎与DeepSeek合作的具体产品形态。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "google_news:article:f19186546d2bf745",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "AI早报汇总知乎与DeepSeek内容合作及SAP裁员转型，属行业动态，无产品构建细节或用户反馈，对产品经理迁移价值有限。",
+        "region": "china",
+        "score": 5.0,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "界面新闻AI早报称知乎与DeepSeek展开内容合作，SAP计划裁减至少1万岗位推动AI转型；属行业合作与组织变动，无产品实践细节。",
+        "tags": [
+          "知乎",
+          "DeepSeek",
+          "行业动态"
         ],
         "target_user": "",
         "verticals": []
@@ -79239,6 +80003,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "8f9791340fe4df2ecb865dbc86f188f0322eb48b3f0d263f2ce16843f91fcd99": {
+      "created_at": "2026-11-28T07:45:33.056372+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "latent-space-ai-training-data-market-g2i",
+        "evidence_status": "reported",
+        "follow_up": "关注该访谈是否披露具体定价区间和中小数据供应商的进入门槛。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "rss:www.latent.space_feed:15ef9e6e89f3c88d",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "Latent.Space 访谈 G2i 创始人谈 AI 训练数据市场的独家授权与折扣定价机制，属于行业观察，对做产品有背景价值，但不直接催生新产品体验，且为播客摘要、证据偏薄。",
+        "region": "global",
+        "score": 6.8,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "G2i 创始人 Gabe Greenberg 在 Latent.Space 讲前沿实验室如何为训练数据付独家高价或买可共享的折扣数据，帮助理解 AI 数据供应链的商业逻辑，但对产品构建的直接启发有限。",
+        "tags": [
+          "训练数据",
+          "数据市场",
+          "行业观察"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "8f9bc27a48e689e2944c15442eeabcba55b144516b2136d83d3eec1248ac00dd": {
       "created_at": "2026-11-13T06:42:40.216304+00:00",
       "model": "deepseek-flash",
@@ -79841,6 +80644,45 @@
         "tags": [
           "Smart Ring",
           "AI Gadget"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "90950394d7ba548a0a07b57e7977a7bb75ea75dc758b014369b3954f72ac47ea": {
+      "created_at": "2026-11-28T07:45:43.029937+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "deepseek-app-billing-signal",
+        "evidence_status": "early_signal",
+        "follow_up": "等待DeepSeek官方公告或APP内实际计费页面。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "google_news:article:6a8da8bc16f9ceea",
+        "intelligence_type": "early_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "DeepSeek APP",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "标题暗示DeepSeek APP开始计费，但内容仅为转载标题，无具体定价、功能细节或官方确认，属早期信号且证据弱，对产品经理参考价值有限。",
+        "region": "china",
+        "score": 5.5,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "新浪转载称DeepSeek APP开始算账，可能为收费前兆；但无官方细节，仅能作为早期信号观察。",
+        "tags": [
+          "DeepSeek",
+          "定价",
+          "早期信号"
         ],
         "target_user": "",
         "verticals": []
@@ -103469,6 +104311,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "b8c9646642c54fc60d3c983425feb4bf932187758249a2f79f883500401fbd31": {
+      "created_at": "2026-11-28T07:45:43.030065+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "deepseek-app-token-cost-query",
+        "evidence_status": "reported",
+        "follow_up": "观察该功能是否导向正式收费及用户反馈。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "google_news:article:e7438b14e1600b07",
+        "intelligence_type": "product_case",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "DeepSeek APP",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "虎嗅报道DeepSeek新增对话资费查询功能，展示免费服务Token消耗价格；属产品功能更新，能让用户感知成本，但来源为媒体转载，非官方一手。",
+        "region": "china",
+        "score": 6.5,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "虎嗅报道DeepSeek APP新增对话资费查询功能，展示免费服务的Token消耗价格；帮助用户理解使用成本，是产品透明化的小更新。",
+        "tags": [
+          "DeepSeek",
+          "产品功能",
+          "Token计费"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "b8d295e997f3833b6b7b4be83f739fef090084dea8fa39fdbb5b62d9e979a514": {
       "created_at": "2026-08-23T01:59:35.259742+00:00",
       "model": "deepseek-v4-flash",
@@ -105074,6 +105955,45 @@
         "tags": [
           "Codex",
           "Alpha"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "bc15d8f816c2d1c07a0e3477e7aec3cd4e74e8e47f18eddd645df46aac827b32": {
+      "created_at": "2026-11-28T07:45:43.030026+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "deepseek-api-price-cut-local-deploy",
+        "evidence_status": "reported",
+        "follow_up": "核对DeepSeek官方API定价页面和部署文档。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "google_news:article:9cb050e6f3dd6e3f",
+        "intelligence_type": "model_capability",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "DeepSeek",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "CSDN教程类文章，涉及DeepSeek新模型API降价和本地部署实战，有可操作信息但来源为聚合社区、质量一般，对产品经理有参考但非一手。",
+        "region": "china",
+        "score": 6.0,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "CSDN文章解析DeepSeek新模型API降价、本地部署与接入实战；提供降价和部署信息，但属教程转载，需核实官方定价。",
+        "tags": [
+          "DeepSeek",
+          "API降价",
+          "本地部署"
         ],
         "target_user": "",
         "verticals": []
@@ -109435,6 +110355,45 @@
           "OpenRouter",
           "国产模型",
           "模型热度"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "c4b36b20bfc81b9b550c02a82d920825056b08dd64781606dd413a946961259f": {
+      "created_at": "2026-11-28T07:45:33.056810+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "tabernetes-browser-tab-k8s",
+        "evidence_status": "reported",
+        "follow_up": "无。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "hackernews:story:50672521",
+        "intelligence_type": "product_case",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Tabernetes",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "把 Kubernetes 节点跑在浏览器标签页里的技术玩具，与 AI 产品无关，属技术猎奇。",
+        "region": "global",
+        "score": 4.8,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "有人做了 Tabernetes，把 Kubernetes 集群节点放进浏览器标签页里运行，是技术猎奇项目，和 AI 产品构建没有直接关系。",
+        "tags": [
+          "Kubernetes",
+          "浏览器",
+          "技术玩具"
         ],
         "target_user": "",
         "verticals": []
@@ -114077,6 +115036,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "ccf6b6a43f479e626412325b469b47c5c31f1f52d69f20e3973d6217efffe317": {
+      "created_at": "2026-11-28T07:45:51.391415+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "zhihu-deepseek-investment-content",
+        "evidence_status": "reported",
+        "follow_up": "关注合作具体形式及对知乎内容生态的影响。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "google_news:article:6af9965655867a03",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "DeepSeek",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "报道知乎间接投资DeepSeek并达成内容合作，涉及AI搜索冲击下的内容资产商业化，对产品经理有行业参考价值，但缺乏产品细节和用户反馈。",
+        "region": "china",
+        "score": 6.2,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "虎嗅网报道知乎间接投资DeepSeek并达成内容合作，探索AI搜索时代内容资产如何变现，值得关注平台与模型公司的合作模式。",
+        "tags": [
+          "内容合作",
+          "AI搜索",
+          "商业化"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "cd04fb7a0c5e002188ff4cf8b9f4421ee8f9f59b26cbabc97372b0061f119d1f": {
       "created_at": "2026-07-29T01:53:11.237030+00:00",
       "model": "deepseek-v4-flash",
@@ -118609,6 +119607,45 @@
         "tags": [
           "Agent",
           "security"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "d643c60cb53769ed4994c9aaea65ef5ef1785792bea7e68b37791252bae159a2": {
+      "created_at": "2026-11-28T07:45:43.029984+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "deepseek-ascend-flashmla",
+        "evidence_status": "reported",
+        "follow_up": "无",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "google_news:article:dd2ffbfd598b8b26",
+        "intelligence_type": "model_capability",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "DeepSeek",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "底层推理优化与硬件适配新闻，属GPU/算力优化范畴，无产品体验或构建思路，对AI产品经理初学者价值低。",
+        "region": "china",
+        "score": 4.0,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "东方财富报道DeepSeek与昇腾950适配，FlashMLA稀疏注意力算子Prefill达98.5%硬件峰值；属底层推理优化，不直接催生产品。",
+        "tags": [
+          "DeepSeek",
+          "昇腾",
+          "推理优化"
         ],
         "target_user": "",
         "verticals": []
@@ -125230,6 +126267,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "e369b2a69b0b22b4dbedbe52c13e32eb7de8dfdb724bdf74371069bc8df297cc": {
+      "created_at": "2026-11-28T07:45:43.029675+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "grok-state-lawsuit-csam",
+        "evidence_status": "reported",
+        "follow_up": "关注诉讼进展及Grok是否调整内容审核策略。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "hackernews:story:50670855",
+        "intelligence_type": "business_policy",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "Grok",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "法律诉讼与AI产品安全边界相关，但无产品构建、用户反馈或可迁移的产品思路，对初学者产品经理价值低，且属政策/法律事件而非产品案例。",
+        "region": "global",
+        "score": 4.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "美国多州起诉SpaceX，要求阻止Grok生成儿童性虐待图像和报复性色情内容；这反映AI产品内容安全合规风险，但无产品构建增量。",
+        "tags": [
+          "AI安全",
+          "内容合规",
+          "法律诉讼"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "e36cde836b65f41eca3e12e5a16065021e35ba07f237f061b1031658ac9f78b9": {
       "created_at": "2026-07-27T04:16:13.824145+00:00",
       "model": "kimi-k2.6",
@@ -129990,6 +131066,44 @@
       },
       "stage": "candidate_analysis"
     },
+    "eb5270c430302e84540db85fa8ed7c17cc7d84a6a337c8526bbfb0cca73b18c9": {
+      "created_at": "2026-11-28T07:45:33.056392+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "openai-codex-rust-v0.174.0-alpha.9",
+        "evidence_status": "first_party",
+        "follow_up": "等待正式版 changelog 或 release notes 出现实质功能变化。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "github:release:460863367",
+        "intelligence_type": "product_case",
+        "is_first_party": true,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "OpenAI Codex",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "openai/codex 的 alpha 版本发布，正文只有版本号、无任何变更说明，无法判断增量，属于低信息量自动发布。",
+        "region": "global",
+        "score": 3.2,
+        "skill_signals": [],
+        "source_tier": 2,
+        "summary": null,
+        "summary_zh": "OpenAI 的 codex 仓库发布 rust-v0.174.0-alpha.9，但没有任何更新说明，暂时看不出对使用者有什么实际变化。",
+        "tags": [
+          "Codex",
+          "开源发布"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "eb552baa086935a04af06103b31add810e3a86ed78a2316622e99e48aed1bb11": {
       "created_at": "2026-08-20T01:51:47.748707+00:00",
       "model": "deepseek-v4-flash",
@@ -131126,6 +132240,44 @@
           "模型",
           "开源",
           "Qwen"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "ed7d13a01f8e2512a441d29a37c2d4a1a70904a7ce0338ab0ffb33cae118f0de": {
+      "created_at": "2026-11-28T07:45:51.391601+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "deepseek-brokerage-investment",
+        "evidence_status": "reported",
+        "follow_up": "无",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "google_news:article:db5d83b45d5595c1",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": true,
+        "market_signal": "",
+        "product_name": "DeepSeek",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "标题夸张的融资报道，九大券商参投95亿元，属于纯融资新闻，无产品实践证据，且信源为手机新浪网转载。",
+        "region": "china",
+        "score": 3.0,
+        "skill_signals": [],
+        "source_tier": 5,
+        "summary": null,
+        "summary_zh": "手机新浪网报道九大券商集体参投DeepSeek 95亿元，属于融资旧闻，对产品学习无直接价值。",
+        "tags": [
+          "融资",
+          "券商"
         ],
         "target_user": "",
         "verticals": []
@@ -134679,6 +135831,45 @@
           "SDK",
           "Vercel",
           "Amazon Bedrock"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "f3f31c2cca25aed4334114546413a92fdadfb15bc82094598c8f19b3a18f50a1": {
+      "created_at": "2026-11-28T07:45:51.391685+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "deepseek-android-token-billing",
+        "evidence_status": "reported",
+        "follow_up": "关注DeepSeek官方是否正式推出付费模式及用户反馈。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "google_news:article:f68cdc7834059b2f",
+        "intelligence_type": "product_case",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "DeepSeek",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "虎嗅报道DeepSeek安卓端新增对话Token计费统计，免费额度收紧引发付费猜测，属于具体产品功能变化，对理解AI产品商业化有迁移价值，但缺乏官方确认和用户反馈。",
+        "region": "china",
+        "score": 7.0,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "虎嗅网报道DeepSeek安卓端新增对话Token计费统计，免费额度收紧引发付费模式猜测，值得关注AI产品如何量化使用成本。",
+        "tags": [
+          "AI产品",
+          "Token计费",
+          "安卓端"
         ],
         "target_user": "",
         "verticals": []
@@ -139290,6 +140481,45 @@
       },
       "stage": "candidate_analysis"
     },
+    "fa689396748a6dc10f178b16710991c87a1060c0b7fc5e10cd0656d42b55ea13": {
+      "created_at": "2026-11-28T07:45:51.391268+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "product",
+        "event_key": "deepseek-pricing-transparency",
+        "evidence_status": "reported",
+        "follow_up": "关注DeepSeek官方是否发布正式计费说明及用户实际反馈。",
+        "github_project": null,
+        "has_substantive_update": true,
+        "id": "google_news:article:b5a14829aa1f3a8a",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "DeepSeek",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "报道DeepSeek公开聊天计费明细，属于产品定价透明度变化，对理解AI产品商业化有参考价值，但缺乏一手细节和用户反馈，信源为转载媒体。",
+        "region": "china",
+        "score": 6.5,
+        "skill_signals": [],
+        "source_tier": 3,
+        "summary": null,
+        "summary_zh": "新浪新闻报道DeepSeek公开聊天计费账本，让用户看清每次对话花多少钱，值得关注AI产品如何从免费转向透明计费。",
+        "tags": [
+          "AI产品",
+          "定价",
+          "商业化"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
     "fa731c39c50842c43cb4a699435e29181cd0c78ce98adb881883c049ab80bc96": {
       "created_at": "2026-10-03T05:17:31.496132+00:00",
       "model": "deepseek-flash",
@@ -140368,6 +141598,44 @@
           "财经",
           "DeepSeek",
           "汇总"
+        ],
+        "target_user": "",
+        "verticals": []
+      },
+      "stage": "candidate_analysis"
+    },
+    "fc0be357f0d7b0ac3439c2e9bd850f35cf25081442c491d3630aca775e09db3c": {
+      "created_at": "2026-11-28T07:45:43.030170+00:00",
+      "model": "deepseek-flash",
+      "prompt_version": "candidate-v2",
+      "result": {
+        "builder_insight": "",
+        "builder_name": "",
+        "category": "tech",
+        "event_key": "liang-wenfeng-quant-chat",
+        "evidence_status": "reported",
+        "follow_up": "核实文章内容是否包含产品思路或公司动态。",
+        "github_project": null,
+        "has_substantive_update": false,
+        "id": "google_news:article:079c7ff08fad1a35",
+        "intelligence_type": "market_signal",
+        "is_first_party": false,
+        "is_new_event": true,
+        "is_promotional": false,
+        "market_signal": "",
+        "product_name": "",
+        "product_signal": "",
+        "product_stage": "not_applicable",
+        "reason": "标题模糊，内容未知，可能为人物报道或闲聊，无产品、代码或明确构建过程，证据不足。",
+        "region": "china",
+        "score": 4.0,
+        "skill_signals": [],
+        "source_tier": 4,
+        "summary": null,
+        "summary_zh": "凤凰网科技发布标题为“梁文锋‘量化’聊天”的文章，内容未知；无明确产品增量，暂不收录。",
+        "tags": [
+          "梁文锋",
+          "DeepSeek"
         ],
         "target_user": "",
         "verticals": []
